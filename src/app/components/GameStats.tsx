@@ -56,12 +56,62 @@ export const GameStats = () => {
 
     // Oyun bittiyse oyunun son ekranını göster
     if (gameOver) {
-        return (
-            <div className="text-center p-4 bg-white rounded-lg">
-                <h1>Oyun Bitti!</h1>
-                <p>Bir stat sıfırın altına düştü, oyunu kaybettiniz!</p>
-            </div>
-        );
+        if (publicOpinion <= 1) {
+            return (
+                <div className="text-center p-4 bg-white rounded-lg">
+                    <h1>Oyun Bitti!</h1>
+                    <p>Toplumun desteği</p>
+                </div>
+            );
+        }
+        else if (internalSecurity <= 1) {
+            return (
+                <div className="text-center p-4 bg-white rounded-lg">
+                    <h1>Oyun Bitti!</h1>
+                    <p>Ülke güvenliği zafiyeti</p>
+                </div>
+            );
+        }
+        else if (international <= 1) {
+            return (
+                <div className="text-center p-4 bg-white rounded-lg">
+                    <h1>Oyun Bitti!</h1>
+                    <p>Uluslararası ilişkiler</p>
+                </div>
+            );
+        }
+        else if (budget <= 1) {
+            return (
+                <div className="text-center p-4 bg-white rounded-lg">
+                    <h1>Oyun Bitti!</h1>
+                    <p>Bütçe</p>
+                </div>
+            );
+        }
+        else if (education <= 1) {
+            return (
+                <div className="text-center p-4 bg-white rounded-lg">
+                    <h1>Oyun Bitti!</h1>
+                    <p>Eğitim kalitesi</p>
+                </div>
+            );
+        }
+        else if (infrastructure <= 1) {
+            return (
+                <div className="text-center p-4 bg-white rounded-lg">
+                    <h1>Oyun Bitti!</h1>
+                    <p>Altyapı ve çevre</p>
+                </div>
+            );
+        }
+        else if (agriculture <= 1) {
+            return (
+                <div className="text-center p-4 bg-white rounded-lg">
+                    <h1>Oyun Bitti!</h1>
+                    <p>Tarım üretimi</p>
+                </div>
+            );
+        }
     }
 
     return (
@@ -79,19 +129,21 @@ export const GameStats = () => {
             {/* Question display */}
             {currentQuestion ? (
                 <div className="text-center p-4 bg-white rounded-lg">
-                    <p>{currentQuestion.question}</p>
+                    <div>
+                        <p>{currentQuestion.question}</p>
+                    </div>
 
-                    {/* Render the current minister's photo and title */}
+
                     {currentQuestion.photo && currentQuestion.title && (
-                        <div className="flex flex-col items-center mt-4 justify-center">
+                        <div className="flex flex-col items-center mt-4 gap-4 justify-center">
                             <Image
                                 src={currentQuestion.photo.src}
                                 alt={currentQuestion.title}
-                                width={80}
-                                height={80}
+                                width={1200}
+                                height={620}
                                 className="w-2/3 h-[26rem]"
                             />
-                            <p className="mt-2">{currentQuestion.title}</p>
+                            <p className="mt-2 font-medium text-2xl">{currentQuestion.title}</p>
                         </div>
                     )}
                 </div>

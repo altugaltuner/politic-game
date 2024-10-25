@@ -1,4 +1,4 @@
-import aileBakanı from "../../public/ministers/aile.png";
+import aileBakanı from "../../public/ministers/aile-bakani.png";
 
 export const aileQuestions = [
     {

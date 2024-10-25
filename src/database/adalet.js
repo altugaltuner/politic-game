@@ -1,4 +1,4 @@
-import adaletBakanı from "../../public/ministers/adalet.png";
+import adaletBakanı from "../../public/ministers/adalet-bakani.png";
 
 export const adaletQuestions = [
     {

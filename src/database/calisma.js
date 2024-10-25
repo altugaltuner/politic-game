@@ -1,4 +1,4 @@
-import calismaBakani from "../../public/ministers/calisma.png";
+import calismaBakani from "../../public/ministers/calisma-bakani.png";
 
 export const calismaQuestions = [
     {
@@ -6,21 +6,19 @@ export const calismaQuestions = [
         question: "Sayın Cumhurbaşkanım, işsizlik oranı artıyor ve gençler iş bulmakta zorlanıyor. Gençlere iş bulma programları başlatalım mı, yoksa işverenlere vergi indirimleri yaparak işe alımlarını teşvik edelim mi?",
         answers: [
             {
-                text: "Gençlere iş bulma programları başlatın, genç işsizliği önleyelim.",
+                text: "Genç işsizliği önleyelim.",
                 effect: {
-                    publicSupport: +15,  // Gençler ve aileleri memnun olur
-                    budget: -20,  // Programların maliyeti yüksek olabilir
-                    internalSecurity: +5,  // İşsizliğin azalması güvenliği artırır
-                    educationQuality: +5  // Gençler iş gücü piyasasına daha iyi hazırlanır
+                    publicSupport: +10,
+                    budget: -10,
+                    educationQuality: +15
                 }
             },
             {
-                text: "İşverenlere vergi indirimleri yapın, işe alımları teşvik edelim.",
+                text: "İşverenlere vergi indirimleri yapın.",
                 effect: {
-                    publicSupport: +10,  // İş dünyası memnun olur
-                    budget: -15,  // Vergi indirimleri bütçeyi etkiler
-                    internalSecurity: +5,  // İşsizlik azaldığı için güvenlik artar
-                    agriculturalProduction: +5  // İş gücü artışı tarımsal üretimi de artırır
+                    publicSupport: -20,
+                    budget: -20,
+                    educationQuality: -15,
                 }
             }
         ],
@@ -32,21 +30,21 @@ export const calismaQuestions = [
         question: "Sayın Cumhurbaşkanım, işçilerin maaşlarının düşük olduğunu söylüyorlar. Asgari ücreti artırmamız gerekir, ancak bu, işverenler üzerinde mali baskı oluşturabilir. Ne yapalım?",
         answers: [
             {
-                text: "Asgari ücreti artırın, işçilerin refahını sağlayalım.",
+                text: "Asgari ücreti artırın.",
                 effect: {
-                    publicSupport: +20,  // İşçiler ve aileleri büyük memnuniyet duyar
-                    budget: 0,  // Asgari ücret artışı bütçeyi direkt etkilemez
-                    internalSecurity: +10,  // Gelir artışıyla birlikte toplumsal huzur artar
-                    agriculturalProduction: -10,  // İş gücü maliyetleri artabilir, tarımsal üretim olumsuz etkilenir
+                    publicSupport: +20,
+                    budget: -10,
+                    internalSecurity: +10,
+                    agriculturalProduction: -10,
                 }
             },
             {
                 text: "Asgari ücreti aynı bırakın, işverenleri mali olarak zorlamayalım.",
                 effect: {
-                    publicSupport: -10,  // İşçiler memnuniyetsiz olur
-                    budget: 0,  // Bütçeye doğrudan etkisi olmaz
-                    internalSecurity: -5,  // Toplumsal huzursuzluk artar
-                    agriculturalProduction: +5,  // İş gücü maliyeti değişmediği için tarımsal üretim korunur
+                    publicSupport: -20,
+                    budget: +10,
+                    internalSecurity: -10,
+                    agriculturalProduction: +10,
                 }
             }
         ],
@@ -60,19 +58,19 @@ export const calismaQuestions = [
             {
                 text: "İş güvenliği önlemlerini artırın, işçilerin sağlığını koruyalım.",
                 effect: {
-                    publicSupport: +15,  // İşçiler güvenli ortamlarda çalışmaktan memnun olur
-                    budget: -10,  // İş güvenliği önlemlerinin maliyeti
-                    internalSecurity: +10,  // İş kazalarının azalması güvenlik sağlar
-                    internationalRelations: +5  // Uluslararası alanda olumlu bir imaj oluşur
+                    publicSupport: +5,
+                    budget: -10,
+                    internalSecurity: +10,
+                    internationalRelations: +10
                 }
             },
             {
                 text: "Mevcut önlemler yeterli, işverenlerin mali yükünü artırmayalım.",
                 effect: {
-                    publicSupport: -5,  // İşçiler memnuniyetsiz olur
-                    budget: 0,  // Bütçeye doğrudan etkisi olmaz
-                    internalSecurity: -10,  // İş kazaları ve güvenlik sorunları devam eder
-                    internationalRelations: 0  // Uluslararası ilişkilerde etkisi olmaz
+                    publicSupport: -5,
+                    budget: +10,
+                    internalSecurity: -10,
+                    internationalRelations: -10
                 }
             }
         ],
@@ -84,21 +82,19 @@ export const calismaQuestions = [
         question: "Sayın Cumhurbaşkanım, kırsal kesimdeki iş gücü azalıyor ve bu, tarımsal üretimi olumsuz etkiliyor. Kırsal kesimde iş fırsatları yaratmak için tarım teşvikleri mi verelim, yoksa bu işçileri sanayi sektörüne mi yönlendirelim?",
         answers: [
             {
-                text: "Tarım teşvikleri verin, kırsal kesimde iş gücünü artırın.",
+                text: "Tarım teşvikleri verin.",
                 effect: {
-                    publicSupport: +10,  // Kırsal kesim ve tarım sektörü memnun olur
-                    budget: -15,  // Teşvikler bütçeyi zorlar
-                    agriculturalProduction: +20,  // Tarımsal üretim canlanır
-                    internalSecurity: +5  // Kırsal bölgelerde güvenlik ve refah artar
+                    publicSupport: +10,
+                    budget: -10,
+                    agriculturalProduction: +20,
                 }
             },
             {
-                text: "İşçileri sanayi sektörüne yönlendirin, sanayi üretimini artırın.",
+                text: "Sanayi üretimini artırın.",
                 effect: {
-                    publicSupport: -5,  // Kırsal kesim iş gücü kaybeder, memnuniyetsiz olur
-                    budget: 0,  // Yönlendirme maliyeti düşük
-                    agriculturalProduction: -15,  // Tarımsal üretim düşer
-                    internalSecurity: +10  // Sanayi sektöründe güvenlik ve istikrar artar
+                    publicSupport: -5,
+                    budget: -10,
+                    agriculturalProduction: -15,
                 }
             }
         ],
@@ -112,19 +108,17 @@ export const calismaQuestions = [
             {
                 text: "Sosyal güvenlik reformu yapın ve maaşları düşürün.",
                 effect: {
-                    publicSupport: -20,  // Emekliler ve çalışanlar memnuniyetsiz olur
-                    budget: +15,  // Bütçe dengesi sağlanır
-                    internalSecurity: -10,  // Toplumda huzursuzluk ve protestolar artabilir
-                    educationQuality: 0  // Eğitim sistemine etkisi olmaz
+                    publicSupport: -10,
+                    budget: +15,
+                    internalSecurity: -15,
                 }
             },
             {
                 text: "Vergileri artırın, sosyal güvenliği koruyalım.",
                 effect: {
-                    publicSupport: -10,  // Vergi artışları halk arasında rahatsızlık yaratır
-                    budget: +20,  // Bütçe dengesi daha sağlam olur
-                    internalSecurity: -5,  // Halkın tepkisiyle güvenlik sorunları artabilir
-                    educationQuality: 0  // Eğitim sistemine etkisi olmaz
+                    publicSupport: -10,
+                    budget: +20,
+                    internalSecurity: +15,
                 }
             }
         ],

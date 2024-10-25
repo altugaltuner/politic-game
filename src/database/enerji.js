@@ -1,4 +1,4 @@
-import enerjiBakani from "../../public/ministers/enerji.png";
+import enerjiBakani from "../../public/ministers/enerji-bakani.png";
 
 export const enerjiQuestions = [
     {
@@ -6,21 +6,21 @@ export const enerjiQuestions = [
         question: "Sayın Cumhurbaşkanım, fosil yakıtlara bağımlılığımız devam ediyor, ancak yenilenebilir enerjiye yatırım yaparsak uzun vadede daha sürdürülebilir bir enerji politikası izleyebiliriz. Ne yapalım?",
         answers: [
             {
-                text: "Yenilenebilir enerjiye yatırım yapın, sürdürülebilirlik önemli.",
+                text: "Yenilenebilir enerjiye yatırım yapın.",
                 effect: {
-                    publicSupport: +15,  // Halk çevre dostu politikadan memnun olur
-                    budget: -20,  // Yenilenebilir enerji projeleri maliyetlidir
-                    infrastructureAndEnvironment: +25,  // Çevresel sürdürülebilirlik sağlanır
-                    internationalRelations: +10,  // Çevreci politikalar uluslararası alanda olumlu karşılanır
+
+                    budget: -10,
+                    infrastructureAndEnvironment: +25,
+                    internationalRelations: +10,
                 }
             },
             {
-                text: "Fosil yakıtlara odaklanın, enerji güvenliğini sağlayalım.",
+                text: "Fosil yakıtlara odaklanın.",
                 effect: {
-                    publicSupport: +5,  // Kısa vadede enerji sorununun çözümü halkı memnun eder
-                    budget: -10,  // Fosil yakıt yatırımları maliyetli olabilir
-                    infrastructureAndEnvironment: -20,  // Çevresel sorunlar artabilir
-                    internationalRelations: 0  // Uluslararası ilişkilerde etkisi olmaz
+
+                    budget: +10,
+                    infrastructureAndEnvironment: -20,
+                    internationalRelations: -10
                 }
             }
         ],
@@ -32,21 +32,19 @@ export const enerjiQuestions = [
         question: "Sayın Cumhurbaşkanım, yerli enerji kaynaklarını keşfetmek için geniş çaplı arama çalışmaları başlatabiliriz. Ancak bu, ciddi bir maliyet getirebilir. Ne yapalım?",
         answers: [
             {
-                text: "Yerli enerji aramalarına başlayın, enerji bağımsızlığını artırın.",
+                text: "Yerli enerji aramalarına başlayın.",
                 effect: {
-                    publicSupport: +10,  // Halk enerji bağımsızlığı fikrini destekler
-                    budget: -25,  // Geniş çaplı arama çalışmaları maliyetlidir
-                    infrastructureAndEnvironment: +10,  // Yerli kaynak kullanımı çevreyi olumlu etkileyebilir
-                    internationalRelations: +5,  // Uluslararası arenada enerji bağımsızlığı olumlu karşılanır
+                    budget: -25,
+                    infrastructureAndEnvironment: +10,
+                    internationalRelations: +5,
                 }
             },
             {
-                text: "Bu çalışmaları erteleyin, şu an maliyet çok yüksek.",
+                text: "Erteleyin, şu an maliyet çok yüksek.",
                 effect: {
-                    publicSupport: -5,  // Halk enerji konusunda endişe duyabilir
-                    budget: +10,  // Bütçe tasarrufu sağlanır
-                    infrastructureAndEnvironment: 0,  // Çevreye doğrudan etkisi olmaz
-                    internationalRelations: 0  // Uluslararası ilişkilerde etkisi olmaz
+                    budget: +25,
+                    infrastructureAndEnvironment: -10,
+                    internationalRelations: -10
                 }
             }
         ],
@@ -58,21 +56,21 @@ export const enerjiQuestions = [
         question: "Sayın Cumhurbaşkanım, enerji tüketimi hızla artıyor. Enerji tasarrufu için halkı bilinçlendirme kampanyaları başlatalım mı, yoksa enerji arzını artırmak için yeni enerji santralleri mi inşa edelim?",
         answers: [
             {
-                text: "Enerji tasarrufu kampanyası başlatın, halkı bilinçlendirelim.",
+                text: "Enerji tasarrufu kampanyası başlatın.",
                 effect: {
-                    publicSupport: +10,  // Halk tasarruf politikalarını destekler
-                    budget: -10,  // Kampanyalar maliyetli olabilir
-                    infrastructureAndEnvironment: +15,  // Enerji tasarrufu çevreye olumlu etki yapar
-                    internationalRelations: +5,  // Uluslararası arenada çevreci politika olumlu karşılanır
+                    publicSupport: +10,
+                    budget: +20,
+                    infrastructureAndEnvironment: +15,
+                    internationalRelations: +15,
                 }
             },
             {
-                text: "Yeni enerji santralleri inşa edin, enerji arzını artırın.",
+                text: "Yeni enerji santralleri inşa edin.",
                 effect: {
-                    publicSupport: +5,  // Kısa vadede enerji sorununun çözümü halkı memnun eder
-                    budget: -20,  // Santrallerin inşası maliyetlidir
-                    infrastructureAndEnvironment: -10,  // Yeni santraller çevreye zarar verebilir
-                    internationalRelations: 0  // Uluslararası ilişkilerde etkisi olmaz
+                    publicSupport: -10,
+                    budget: -20,
+                    infrastructureAndEnvironment: -15,
+                    internationalRelations: -15
                 }
             }
         ],
@@ -84,21 +82,21 @@ export const enerjiQuestions = [
         question: "Sayın Cumhurbaşkanım, komşu ülkelerle doğal gaz anlaşmaları yapabiliriz, bu enerji açığımızı kapatabilir. Ancak bu, yerli enerji sektörünü olumsuz etkileyebilir. Ne yapalım?",
         answers: [
             {
-                text: "Doğal gaz anlaşmalarını imzalayın, enerji açığını kapatalım.",
+                text: "Doğal gaz anlaşmalarını imzalayın.",
                 effect: {
-                    publicSupport: +10,  // Halk enerji arzının artmasından memnun olur
-                    budget: +15,  // Doğal gaz ithalatı ekonomiye katkı sağlar
-                    internationalRelations: +20,  // Komşu ülkelerle ilişkiler güçlenir
-                    infrastructureAndEnvironment: -10,  // Doğal gaz kullanımı çevresel sorunlar yaratabilir
+                    publicSupport: +10,
+                    budget: +15,
+                    internationalRelations: +20,
+                    infrastructureAndEnvironment: -10,
                 }
             },
             {
-                text: "Yerli enerji sektörüne öncelik verin, doğal gaz anlaşmalarını bekletin.",
+                text: "Yerli enerji sektörüne öncelik verin.",
                 effect: {
-                    publicSupport: -5,  // Halk kısa vadede enerji sorunlarından rahatsız olabilir
-                    budget: -10,  // Yerli enerji sektörü için daha fazla yatırım gerekebilir
-                    internationalRelations: -10,  // Komşu ülkelerle ilişkiler olumsuz etkilenebilir
-                    infrastructureAndEnvironment: +10,  // Yerli enerji üretimi çevresel sürdürülebilirliği artırabilir
+                    publicSupport: +10,
+                    budget: +15,
+                    internationalRelations: -20,
+                    infrastructureAndEnvironment: +10,
                 }
             }
         ],
@@ -110,21 +108,21 @@ export const enerjiQuestions = [
         question: "Sayın Cumhurbaşkanım, nükleer enerji santrali kurma fırsatımız var. Bu, uzun vadede enerji ihtiyacımızı karşılayabilir, ancak çevresel ve uluslararası alanda büyük tepki çekebilir. Ne yapalım?",
         answers: [
             {
-                text: "Nükleer enerji santrali kurun, enerji ihtiyacımızı karşılayalım.",
+                text: "Nükleer enerji santrali kurun.",
                 effect: {
-                    publicSupport: +5,  // Halkın bir kısmı uzun vadeli çözümü destekler
-                    budget: -30,  // Nükleer santrallerin maliyeti çok yüksektir
-                    infrastructureAndEnvironment: -20,  // Çevresel ve güvenlik endişeleri artar
-                    internationalRelations: -15,  // Uluslararası arenada tepki çekebilir
+                    publicSupport: -25,
+                    budget: -25,
+                    infrastructureAndEnvironment: +40,
+                    internationalRelations: -15,
                 }
             },
             {
-                text: "Nükleer enerjiye karşı çıkın, çevresel riskleri göze almayın.",
+                text: "Nükleer enerjiye karşı çıkın.",
                 effect: {
-                    publicSupport: +15,  // Halk çevreyi koruma politikalarından memnun olur
-                    budget: 0,  // Nükleer santrale yatırım yapılmaz, bütçe etkilenmez
-                    infrastructureAndEnvironment: +20,  // Çevre korunur, sürdürülebilirlik artar
-                    internationalRelations: +10,  // Uluslararası arenada olumlu karşılanır
+                    publicSupport: +25,
+                    budget: +25,
+                    infrastructureAndEnvironment: -40,
+                    internationalRelations: +15,
                 }
             }
         ],

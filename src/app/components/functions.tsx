@@ -120,14 +120,22 @@ export const updateStats = (
 };
 
 // Function to check if the game is over
-export const checkGameOver = (publicSupport: number, internalSecurity: number, internationalRelations: number, budget: number, educationQuality: number, infrastructureAndEnvironment: number, agriculturalProduction: number) => {
-    if (publicSupport <= 1 || internalSecurity <= 1 || internationalRelations <= 1 || budget <= 1 || educationQuality <= 1 || infrastructureAndEnvironment <= 1 || agriculturalProduction <= 1) {
-        return (
-            <div>
-                <h1>Game Over</h1>
-                <p>You have lost the public support!</p>
-            </div>
-        );
-    }
-    return null;
+export const checkGameOver = (
+    publicSupport: number,
+    internalSecurity: number,
+    internationalRelations: number,
+    budget: number,
+    educationQuality: number,
+    infrastructureAndEnvironment: number,
+    agriculturalProduction: number
+) => {
+    return (
+        publicSupport <= 1 ||
+        internalSecurity <= 1 ||
+        internationalRelations <= 1 ||
+        budget <= 1 ||
+        educationQuality <= 1 ||
+        infrastructureAndEnvironment <= 1 ||
+        agriculturalProduction <= 1
+    );
 };
