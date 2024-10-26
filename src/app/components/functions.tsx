@@ -1,4 +1,5 @@
 // components/functions.ts
+import { StaticImageData } from "next/image";
 import { adaletQuestions } from "../../database/adalet";
 import { aileQuestions } from "../../database/aile";
 import { calismaQuestions } from "../../database/calisma";
@@ -12,7 +13,6 @@ import { saglikQuestions } from "../../database/saglik";
 import { sanayiQuestions } from "../../database/sanayi";
 import { tarimQuestions } from "../../database/tarim";
 import { ticaretQuestions } from "../../database/ticaret";
-// Add imports for other question categories as needed...
 
 type SetFunctions = {
     setAgriculture: React.Dispatch<React.SetStateAction<number>>;
@@ -24,9 +24,8 @@ type SetFunctions = {
 };
 
 type Question = {
-    photo: any;
-    title: any;
-    ministerId: string;
+    photo: string | File | StaticImageData;
+    title: string;
     id: number;
     question: string;
     answers: {
@@ -44,21 +43,32 @@ type Question = {
     }[];
 };
 
+const convertPhotoToString = (questions: Question[]): Question[] => {
+    return questions.map(question => ({
+        ...question,
+        photo: (typeof question.photo === 'object' && 'src' in question.photo)
+            ? question.photo.src // StaticImageData'yı string'e dönüştürüyoruz
+            : question.photo
+    }));
+};
+
+
 export const allQuestions: Question[] = [
-    ...adaletQuestions,
-    ...aileQuestions,
-    ...calismaQuestions,
-    ...cevreQuestions,
-    ...disisleriQuestions,
-    ...enerjiQuestions,
-    ...genclikQuestions,
-    ...hazineQuestions,
-    ...icisleriQuestions,
-    ...saglikQuestions,
-    ...sanayiQuestions,
-    ...tarimQuestions,
-    ...ticaretQuestions,
+    ...convertPhotoToString(adaletQuestions),
+    ...convertPhotoToString(aileQuestions),
+    ...convertPhotoToString(calismaQuestions),
+    ...convertPhotoToString(cevreQuestions),
+    ...convertPhotoToString(disisleriQuestions),
+    ...convertPhotoToString(enerjiQuestions),
+    ...convertPhotoToString(genclikQuestions),
+    ...convertPhotoToString(hazineQuestions),
+    ...convertPhotoToString(icisleriQuestions),
+    ...convertPhotoToString(saglikQuestions),
+    ...convertPhotoToString(sanayiQuestions),
+    ...convertPhotoToString(tarimQuestions),
+    ...convertPhotoToString(ticaretQuestions),
 ].filter((question): question is Question => 'id' in question && question.id !== undefined);
+
 
 // Function to select a random question
 export const getRandomQuestion = (usedQuestions: number[]) => {
@@ -108,7 +118,6 @@ export const updateStats = (
     }
 };
 
-// Function to check if the game is over
 export const checkGameOver = (
     publicSupport: number,
     internalSecurity: number,

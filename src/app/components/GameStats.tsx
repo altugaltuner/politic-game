@@ -126,7 +126,13 @@ export const GameStats = () => {
                     {currentQuestion.photo && currentQuestion.title && (
                         <div className="flex flex-col items-center mt-4 gap-4 justify-center">
                             <Image
-                                src={currentQuestion.photo.src}
+                                src={
+                                    currentQuestion.photo instanceof File
+                                        ? URL.createObjectURL(currentQuestion.photo)
+                                        : typeof currentQuestion.photo === 'object' && 'src' in currentQuestion.photo
+                                            ? currentQuestion.photo.src
+                                            : currentQuestion.photo
+                                }
                                 alt={currentQuestion.title}
                                 width={1000}
                                 height={500}

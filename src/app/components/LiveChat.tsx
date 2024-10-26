@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 import { supabase } from '../../supabaseClient';
 
-const db = supabase.from('users');
+// const db = supabase.from('users');
 
 const socket = io("http://localhost:3001");
 
