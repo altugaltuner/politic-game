@@ -37,7 +37,6 @@ type Question = {
             agriculturalProduction?: number;
             infrastructureAndEnvironment?: number;
             internationalRelations?: number;
-
             [key: string]: number | undefined;
         };
     }[];

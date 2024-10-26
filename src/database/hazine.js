@@ -3,7 +3,7 @@ import hazineBakani from "../../public/ministers/hazine-bakani.png";
 export const hazineQuestions = [
     {
         id: 110,
-        question: "Sayın Cumhurbaşkanım, enflasyon hızla yükseliyor ve halkın alım gücü düşüyor. Merkezi faiz oranını artırarak enflasyonu düşürebiliriz, ancak bu, ekonomik büyümeyi yavaşlatacaktır. Ne yapalım?",
+        question: "Enflasyon hızla yükseliyor ve halkın alım gücü düşüyor. Merkezi faiz oranını artırarak enflasyonu düşürebiliriz, ancak bu, ekonomik büyümeyi yavaşlatacaktır.",
         answers: [
             {
                 text: "Faiz oranlarını artırın, enflasyonu düşürelim.",
@@ -27,20 +27,22 @@ export const hazineQuestions = [
     },
     {
         id: 111,
-        question: "Sosyal Güvenlik Uzmanı: 'Sayın Cumhurbaşkanım, EYT konusu hala gündemde. Yaş haddinden emekli olamayan milyonlarca insan çözüm bekliyor. Ancak bu, bütçeye ciddi bir yük getirebilir.'",
+        question: "Sayın Cumhurbaşkanım, EYT konusu hala gündemde. Yaş haddinden emekli olamayan milyonlarca insan çözüm bekliyor. Ancak bu, bütçeye ciddi bir yük getirebilir.",
         answers: [
             {
-                text: "EYT yasasını hemen çıkaralım. İnsanlar hak ettikleri emekliliği almalı.",
+                text: "İnsanlar hak ettikleri emekliliği almalı.",
                 effect: {
-                    publicSupport: +10,  // Halkın büyük kısmı memnun olur
-                    budget: -20,  // Bütçe zorlanır
+                    publicSupport: +10,
+                    budget: -20,
+                    internalSecurity: +10,
                 }
             },
             {
-                text: "Bu yasa şu an mali olarak sürdürülemez. Erteleyelim.",
+                text: "Bu yasa şu an mali olarak sürdürülemez.",
                 effect: {
-                    publicSupport: -10,  // Halkın bir kesimi hayal kırıklığına uğrar
-                    budget: +20,  // Bütçe rahatlar
+                    publicSupport: -10,
+                    budget: +20,
+                    internalSecurity: -10,
                 }
             }
         ],
@@ -49,46 +51,20 @@ export const hazineQuestions = [
     },
     {
         id: 112,
-        question: "Sayın Cumhurbaşkanım, ülkemizde kamu borcu artıyor. Borcu azaltmak için vergileri artırabiliriz, ancak bu halk arasında rahatsızlık yaratabilir. Ne yapalım?",
+        question: "Sayın Cumhurbaşkanım, ülkemizde kamu borcu artıyor. Borcu azaltmak için vergileri artırabiliriz, ancak bu halk arasında rahatsızlık yaratabilir.",
         answers: [
             {
                 text: "Vergileri artırın, kamu borcunu azaltalım.",
                 effect: {
-                    publicSupport: -20,
-                    budget: +25,
+                    publicSupport: -30,
+                    budget: +30,
                 }
             },
             {
-                text: "Vergileri artırmayın.",
+                text: "Zaten yeterince artırdık.",
                 effect: {
-                    publicSupport: +20,
-                    budget: -25,
-                }
-            }
-        ],
-        title: "Hazine ve Maliye Bakanı",
-        photo: hazineBakani,
-    },
-    {
-        id: 113,
-        question: "Sayın Cumhurbaşkanım, ekonomik büyümeyi desteklemek için büyük altyapı projelerine yatırım yapmayı düşünüyoruz. Ancak bu, kısa vadede bütçeyi zorlayabilir. Ne yapalım?",
-        answers: [
-            {
-                text: "Altyapı projelerine yatırım yapın.",
-                effect: {
-
-                    budget: -20,
-                    infrastructureAndEnvironment: +25,
-                    internationalRelations: +10,
-                }
-            },
-            {
-                text: "Altyapı projelerini erteleyin.",
-                effect: {
-
-                    budget: +10,
-                    infrastructureAndEnvironment: -20,
-                    internationalRelations: -10,
+                    publicSupport: +30,
+                    budget: -30,
                 }
             }
         ],

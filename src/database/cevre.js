@@ -3,24 +3,26 @@ import cevreBakani from "../../public/ministers/cevre-bakani.png";
 export const cevreQuestions = [
     {
         id: 30,
-        question: "Sayın Cumhurbaşkanım, şehirleşme hızla artıyor ve yeşil alanlar azalıyor. Yeni konut projelerine mi odaklanalım, yoksa şehirlerdeki yeşil alanları korumaya mı öncelik verelim?",
+        question: "Şehirleşme hızla artıyor ve yeşil alanlar azalıyor. Yeni konut projelerine mi odaklanalım, yoksa yeşil alanları mı koruyalım?",
         answers: [
             {
-                text: "Şehirleşmeyi hızlandırın.",
+                text: "Şehirleşmeyi hızlandırmalıyız.",
                 effect: {
-                    publicSupport: +5,
+                    publicSupport: -15,
+                    agriculture: -20,
                     budget: -15,
-                    infrastructureAndEnvironment: -10,
+                    infrastructureAndEnvironment: +10,
                     internalSecurity: -15,
                 }
             },
             {
-                text: "Yeşil alanları koruyun.",
+                text: "Bir Gezi Parkı daha istemiyorum.",
                 effect: {
                     publicSupport: +15,
                     budget: +15,
-                    infrastructureAndEnvironment: +10,
-                    internalSecurity: +15
+                    agriculture: +20,
+                    infrastructureAndEnvironment: -10,
+                    internalSecurity: +15,
                 }
             }
         ],
@@ -29,15 +31,15 @@ export const cevreQuestions = [
     },
     {
         id: 31,
-        question: "Sayın Cumhurbaşkanım, şehirlerdeki altyapı eskimiş durumda ve sürekli sorunlar yaşanıyor. Altyapıyı yenileyelim mi, yoksa bu bütçeyi yeni çevre projelerine mi aktaralım?",
+        question: "Sayın Cumhurbaşkanım, şehirlerdeki altyapı eskimiş durumda. Altyapının yenilenmesi gerekiyor. Ancak yeni çevre projeleri de gündemde. Öneriniz nedir?",
         answers: [
             {
                 text: "Altyapıyı yenileyin, şehirlerdeki sorunları çözün.",
                 effect: {
-                    publicSupport: +10,  // Halk hizmet kalitesinin artmasından memnun olur
-                    budget: -20,  // Altyapı yenileme maliyetlidir
-                    infrastructureAndEnvironment: +20,  // Altyapı gelişimi çevreyi olumlu etkiler
-                    internalSecurity: +5,  // Altyapı sorunlarının azalması güvenliği artırır
+                    publicSupport: +10,
+                    budget: -20,
+                    infrastructureAndEnvironment: +20,
+                    internalSecurity: +5,
                 }
             },
             {
@@ -54,14 +56,14 @@ export const cevreQuestions = [
     },
     {
         id: 32,
-        question: "Sayın Cumhurbaşkanım, bazı bölgelerde hava kirliliği kritik seviyelere ulaştı. Hava kirliliğiyle mücadele için ciddi önlemler mi alalım, yoksa bu bütçeyi sanayiye mi yatırıp büyümeyi destekleyelim?",
+        question: "Bazı bölgelerde hava kirliliği kritik seviyelerde. Hava kirliliğiyle mücadele için ciddi önlemler almalıyız. Ya da bu bütçeyi sanayiye yatırıp büyümeyi destekleyebiliriz?",
         answers: [
             {
-                text: "Hava kirliliğiyle mücadele için önlem alın.",
+                text: "Temiz bir atmosfer daha önemli.",
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    infrastructureAndEnvironment: +20,
+                    infrastructureAndEnvironment: -20,
                     agriculturalProduction: +15,
                 }
             },
@@ -69,8 +71,8 @@ export const cevreQuestions = [
                 text: "Sanayi yatırımlarına öncelik verin.",
                 effect: {
                     publicSupport: -10,
-                    budget: -10,
-                    infrastructureAndEnvironment: -20,
+                    budget: +10,
+                    infrastructureAndEnvironment: +20,
                     agriculturalProduction: -15,
                 }
             }
@@ -80,23 +82,23 @@ export const cevreQuestions = [
     },
     {
         id: 33,
-        question: "Sayın Cumhurbaşkanım, şehirlerde enerji tüketimi hızla artıyor. Yenilenebilir enerji projelerine mi yatırım yapalım, yoksa mevcut enerji altyapısını genişletmeye mi odaklanalım?",
+        question: "Sayın Cumhurbaşkanım, şehirlerde enerji tüketimi hızla artıyor. Yenilenebilir enerji projelerine yatırım yapabiliriz. Ya da mevcut enerji altyapısını genişletebiliriz.",
         answers: [
             {
-                text: "Yenilenebilir enerji projelerine yatırım yapın.",
+                text: "Yenilenebilir enerjiye yatırım yapın.",
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    infrastructureAndEnvironment: +25,
+                    infrastructureAndEnvironment: +15,
                     internationalRelations: +10,
                 }
             },
             {
-                text: "Mevcut enerji altyapısını genişletin.",
+                text: "Mevcut altyapıyı güçlendirin.",
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    infrastructureAndEnvironment: -25,
+                    infrastructureAndEnvironment: +10,
                     internationalRelations: -10
                 }
             }
@@ -106,10 +108,10 @@ export const cevreQuestions = [
     },
     {
         id: 34,
-        question: "Sayın Cumhurbaşkanım, kıyı bölgelerinde turizm hızla gelişiyor ancak bu durum deniz ekosistemini tehdit ediyor. Turizm yatırımlarına mı devam edelim, yoksa kıyı bölgelerini koruma altına alalım?",
+        question: "Turizm kıyılarda hızla gelişiyor, ancak deniz ekosistemi tehdit altında. Turizme devam mı edelim yoksa kıyıları koruma altına mı alalım?",
         answers: [
             {
-                text: "Turizm yatırımlarına devam edin.",
+                text: "Turizme öncelik vermeliyiz.",
                 effect: {
                     publicSupport: +15,
                     budget: +10,
@@ -118,7 +120,7 @@ export const cevreQuestions = [
                 }
             },
             {
-                text: "Kıyı bölgelerini koruma altına alın, ekosistemi koruyalım.",
+                text: "Kıyı bölgelerini koruma altına alın.",
                 effect: {
                     publicSupport: -15,
                     budget: -10,

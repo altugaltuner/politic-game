@@ -3,10 +3,10 @@ import tarimBakani from "../../public/ministers/tarim-bakani.png";
 export const tarimQuestions = [
     {
         id: 70,
-        question: "Tarım Bakanı: 'Sayın Cumhurbaşkanım, son yıllarda kuraklık artıyor ve tarımsal üretim ciddi şekilde düşüyor. Tarıma büyük bir teşvik ve su kaynaklarına yatırım yapmamız gerek.'",
+        question: "Sayın Cumhurbaşkanım, son yıllarda kuraklık artıyor ve tarımsal üretim ciddi şekilde düşüyor. Tarıma büyük bir teşvik ve su kaynaklarına yatırım yapmamız gerek.",
         answers: [
             {
-                text: "Tarım sektörüne teşvik verin, yeni sulama projelerine başlayın.",
+                text: "Yeni sulama projeleri gerekiyor.",
                 effect: {
                     agriculturalProduction: +25,  // Tarımsal üretim canlanır
                     budget: -15,  // Büyük bütçe ayrılması gerekir
@@ -14,14 +14,14 @@ export const tarimQuestions = [
                 }
             },
             {
-                text: "Şu an başka önceliklerimiz var, bu krizi düşük maliyetli çözümlerle yönetelim.",
+                text: "Şu an başka önceliklerimiz var,erteleyin.",
                 effect: {
                     agriculturalProduction: +25,  // Tarımsal üretim canlanır
                     budget: -15,  // Büyük bütçe ayrılması gerekir
                 }
             }
         ],
-        title: "Milli Savunma Bakanı",
+        title: "Tarım Bakanı",
         photo: tarimBakani,
     },
 

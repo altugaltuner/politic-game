@@ -1,4 +1,5 @@
 import adaletBakanı from "../../public/ministers/adalet-bakani.png";
+import mainPic from "../../public/ministers/main.png";
 
 export const adaletQuestions = [
     {
@@ -11,32 +12,32 @@ export const adaletQuestions = [
                 }
             },
             {
-                text: "Hadi Başlayalım",
+                text: "Yolla Gelsin!",
                 effect: {
                 }
             }
         ],
-        title: "Altuğ",
-        photo: adaletBakanı
+        title: "Kreatör",
+        photo: mainPic
     },
     {
         id: 2,
-        question: "Sayın Cumhurbaşkanım, uyuşturucu ve para aklama suçlarına karışan insanlar yakalanıyor, ancak kısa süre sonra serbest bırakılıyor. Bu suçlarla daha etkin mücadele etmemiz gerekiyor. Ne yapalım?",
+        question: "Sayın Cumhurbaşkanım, uyuşturucu ve kara para aklama suçluları yakalanıyor ancak serbest bırakılıyor. Daha etkili bir mücadele için ne yapmalıyız?",
         answers: [
             {
                 text: "Ağır cezalar getirin.",
                 effect: {
                     internalSecurity: +10,
-                    publicSupport: +10,
+                    publicSupport: +15,
                     budget: -10,
                 }
             },
             {
-                text: "Mevcut yasalarla devam edin.",
+                text: "Suçlularla işbirliğine gidin.",
                 effect: {
-                    internalSecurity: -10,
-                    publicSupport: -10,
-                    budget: +10,
+                    internalSecurity: -20,
+                    publicSupport: -15,
+                    budget: +20,
                 }
             }
         ],
@@ -45,7 +46,7 @@ export const adaletQuestions = [
     },
     {
         id: 3,
-        question: "Sayın Cumhurbaşkanım, kadınlar eski eşlerinden, sevgililerinden veya diğer yakınlarından korunamıyor ve kadın cinayetleri artıyor. Kadınların korunması için ne yapalım?",
+        question: "Ülkedeki kadınlar eski eşlerinden, sevgililerinden veya yakınlarından korunamıyor ve kadın cinayetleri artıyor. Nasıl bir adım atmalıyız?",
         answers: [
             {
                 text: "Kadın koruma yasalarını güçlendirin.",
@@ -69,18 +70,18 @@ export const adaletQuestions = [
     },
     {
         id: 4,
-        question: "Sayın Cumhurbaşkanım, bazı bölgelerde suç oranları artıyor. Daha fazla yargı mensubu atayıp bu bölgelerde güvenliği artırabiliriz, ancak bu adım bütçemize ek yük getirebilir.",
+        question: "Bazı bölgelerde suç oranları artıyor. Daha fazla yargı mensubu atayıp bu bölgelerde güvenliği artırabiliriz, ancak bu adım bütçemize ek yük getirebilir.",
         answers: [
             {
-                text: "Daha fazla yargı mensubu atayın ve güvenliği artırın.",
+                text: "Daha fazla yargı mensubu atayın.",
                 effect: {
-                    internalSecurity: +20,
+                    internalSecurity: +10,
                     publicSupport: +5,
-                    budget: -15,
+                    budget: -10,
                 }
             },
             {
-                text: "Bütçeyi korumak için şu anda yargı mensubu atamayın.",
+                text: "Şimdilik takip etmemiz yeterli.",
                 effect: {
                     internalSecurity: -10,
                     publicSupport: -10,
@@ -101,14 +102,16 @@ export const adaletQuestions = [
                     internalSecurity: +10,
                     budget: -10,
                     publicSupport: +5,
+                    infrastructure: +10,
                 }
             },
             {
                 text: "Cezaevleri yerine alternatif cezalar üzerine çalışın.",
                 effect: {
                     internalSecurity: +5,
-                    budget: -10,
-                    publicSupport: 0,
+                    budget: +10,
+                    publicSupport: -5,
+                    infrastructure: -10,
                 }
             }
         ],

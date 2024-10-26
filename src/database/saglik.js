@@ -3,22 +3,22 @@ import saglikBakani from "../../public/ministers/saglik-bakani.png";
 export const saglikQuestions = [
     {
         id: 140,
-        question: "Sayın Cumhurbaşkanım, şehir hastanelerindeki hasta yoğunluğu artıyor ve sağlık hizmetleri yavaşlıyor. Yeni hastaneler mi inşa edelim, yoksa mevcut hastanelerin kapasitesini mi artırmaya çalışalım?",
+        question: "Sayın Cumhurbaşkanım, şehir hastanelerindeki hasta yoğunluğu artıyor ve sağlık hizmetleri yavaşlıyor.",
         answers: [
             {
-                text: "Yeni hastaneler inşa edin, sağlık hizmetlerini genişletelim.",
+                text: "Yeni hastaneler inşa edin.",
                 effect: {
-                    publicSupport: +15,  // Halk yeni hastanelerden memnun olur
-                    budget: -25,  // Yeni hastane inşası maliyetlidir
-                    infrastructureAndEnvironment: +10,  // Yeni sağlık altyapıları gelişir
+                    publicSupport: +15,
+                    budget: -30,
+                    infrastructureAndEnvironment: +30,
                 }
             },
             {
-                text: "Mevcut hastanelerin kapasitesini artırın, maliyeti düşük tutalım.",
+                text: "Mevcut hastane kapasitelerini artırın.",
                 effect: {
-                    publicSupport: +10,  // Halk sağlık hizmetlerinin iyileştirilmesinden memnun olur
-                    budget: -10,  // Kapasite artırımı yeni inşaattan daha az maliyetlidir
-                    infrastructureAndEnvironment: +5,  // Mevcut altyapının iyileştirilmesi sağlanır
+                    publicSupport: +10,
+                    budget: +20,
+                    infrastructureAndEnvironment: +15,
                 }
             }
         ],
@@ -27,22 +27,22 @@ export const saglikQuestions = [
     },
     {
         id: 142,
-        question: "Sayın Cumhurbaşkanım, doktorlar ve hemşireler yetersiz çalışma koşullarından şikayet ediyor. Sağlık çalışanlarına maaş artışı mı yapalım, yoksa yeni sağlık personeli mi alalım?",
+        question: "Sayın Cumhurbaşkanım, doktorlar ve hemşireler yetersiz çalışma koşullarından şikayet ediyor.",
         answers: [
             {
-                text: "Sağlık çalışanlarının maaşlarını artırın, çalışma koşullarını iyileştirin.",
+                text: "Çalışanların koşullarını iyileştirin",
                 effect: {
-                    publicSupport: +10,  // Sağlık çalışanları ve aileleri memnun olur
-                    budget: -20,  // Maaş artışları bütçeyi zorlayabilir
-                    internalSecurity: +5,  // Sağlık çalışanlarının memnuniyeti sosyal huzuru artırır
+                    publicSupport: +10,
+                    budget: -20,
+                    internalSecurity: +5,
                 }
             },
             {
-                text: "Yeni sağlık personeli alın, iş yükünü hafifletin.",
+                text: "Yeni sağlık personelleri alın",
                 effect: {
-                    publicSupport: +5,  // Halk sağlık hizmetlerinin hızlanmasından memnun olur
-                    budget: -15,  // Yeni personel alımları bütçeyi etkiler
-                    internalSecurity: +5,  // Sağlık sektöründe iş yükünün azalması sosyal huzuru artırır
+                    publicSupport: +5,
+                    budget: -15,
+                    internalSecurity: +5,
                 }
             }
         ],
@@ -51,20 +51,22 @@ export const saglikQuestions = [
     },
     {
         id: 144,
-        question: "Sayın Cumhurbaşkanım, Türkiye’de psikolojik sağlık sorunları giderek artıyor. Psikolojik destek hizmetlerini mi yaygınlaştıralım, yoksa bu sorunu okullarda rehberlik hizmetleriyle mi çözmeye çalışalım?",
+        question: "Sayın Cumhurbaşkanım, Türkiye’de psikolojik sağlık sorunları giderek artıyor.",
         answers: [
             {
-                text: "Psikolojik destek hizmetlerini yaygınlaştırın, toplum sağlığını güçlendirelim.",
+                text: "Psikolojik destek hizmetlerini yaygınlaştırın",
                 effect: {
+                    publicSupport: +30,
                     internalSecurity: +10,  // Toplumsal huzur artar, sosyal problemler azalır
                     budget: -10,  // Psikolojik destek hizmetlerinin genişletilmesi maliyetlidir
                 }
             },
             {
-                text: "Okullarda rehberlik hizmetlerini genişletin, genç nesilleri destekleyelim.",
+                text: "Daha fazla ilaç ithal edin.",
                 effect: {
+                    publicSupport: -10,  // Halk yerli ürünleri tercih eder
                     internalSecurity: -10,
-                    budget: -10,  // Rehberlik hizmetlerinin genişletilmesi maliyetlidir
+                    budget: -30,  // Rehberlik hizmetlerinin genişletilmesi maliyetlidir
                 }
             }
         ],

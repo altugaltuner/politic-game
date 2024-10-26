@@ -3,24 +3,24 @@ import sanayiBakani from "../../public/ministers/sanayi-bakani.png";
 export const sanayiQuestions = [
     {
         id: 150,
-        question: "Sayın Cumhurbaşkanım, sanayimizin teknoloji altyapısı zayıf. Teknoloji yatırımlarını artırarak sanayimizi modernize edelim mi, yoksa geleneksel üretim yöntemlerine mi odaklanalım?",
+        question: "Sayın Cumhurbaşkanım, sanayimizin teknoloji altyapısı zayıf. Teknoloji yatırımlarını artırabiliriz.",
         answers: [
             {
-                text: "Teknoloji yatırımlarını artırın, sanayimizi modernize edelim.",
+                text: "Yatırımları artırın.",
                 effect: {
-                    publicSupport: +15,  // Halk teknolojiye yapılan yatırımları olumlu karşılar
-                    budget: -25,  // Teknolojik altyapı yatırımları maliyetlidir
-                    industrialProduction: +20,  // Sanayinin verimliliği ve üretim kapasitesi artar
-                    internationalRelations: +10,  // Teknolojik gelişmeler uluslararası arenada olumlu karşılanır
+                    publicSupport: +15,
+                    budget: -25,
+                    industrialProduction: +20,
+                    internationalRelations: +10,
                 }
             },
             {
                 text: "Geleneksel üretim yöntemlerine odaklanın, daha düşük maliyetli çözümler bulun.",
                 effect: {
-                    publicSupport: +5,  // Halkın bir kısmı düşük maliyetli çözümleri olumlu karşılar
-                    budget: -10,  // Geleneksel yöntemlerin maliyeti daha düşüktür
-                    industrialProduction: +5,  // Sanayi büyümesi devam eder ancak daha yavaş olur
-                    internationalRelations: 0  // Uluslararası ilişkilerde doğrudan etkisi olmaz
+                    publicSupport: +5,
+                    budget: +20,
+                    industrialProduction: +5,
+                    internationalRelations: -10
                 }
             }
         ],

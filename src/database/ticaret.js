@@ -3,22 +3,22 @@ import ticaretBakani from "../../public/ministers/ticaret-bakani.png";
 export const ticaretQuestions = [
     {
         id: 80,
-        question: "Sayın Cumhurbaşkanım, ihracatımız son dönemde artıyor ancak rekabet edebilmemiz için ihracat yapan şirketlere daha fazla teşvik vermemiz gerekiyor. İhracat teşviklerini artırmalı mıyız, yoksa mevcut bütçeyi koruyalım mı?",
+        question: "Sayın Cumhurbaşkanım, ihracatımız son dönemde artıyor ancak rekabet edebilmemiz için ihracat yapan şirketlere daha fazla teşvik vermemiz gerekiyor.",
         answers: [
             {
-                text: "İhracat teşviklerini artırın, şirketlerin rekabet gücünü artırın.",
+                text: "İhracat teşviklerini artırın, rekabet gücünü artırın.",
                 effect: {
-                    publicSupport: +10,  // İhracatçılar ve iş dünyası memnun olur
-                    budget: -20,  // Teşviklerin artması bütçeyi zorlayabilir
-                    internationalRelations: +10,  // Uluslararası ticaret ilişkileri gelişir
+                    publicSupport: +10,
+                    budget: -20,
+                    internationalRelations: +20,
                 }
             },
             {
                 text: "Bütçeyi koruyun, mevcut teşviklerle devam edin.",
                 effect: {
-                    publicSupport: 0,  // Halk üzerinde doğrudan bir etkisi olmaz
-                    budget: +10,  // Bütçe rahatlar
-                    internationalRelations: 0  // Uluslararası ticarette büyük bir değişiklik olmaz
+                    publicSupport: -10,
+                    budget: +20,
+                    internationalRelations: -20,
                 }
             }
         ],

@@ -3,24 +3,24 @@ import ulastirmaBakani from "../../public/ministers/ulastirma-bakani.png";
 export const ulastirmaQuestions = [
     {
         id: 90,
-        question: "Sayın Cumhurbaşkanım, büyük şehirlerde trafik sorunu giderek artıyor. Şehir içi ulaşım altyapısını genişletmek için metro projelerine mi yatırım yapalım, yoksa mevcut yolları mı iyileştirelim?",
+        question: "Sayın Cumhurbaşkanım, büyük şehirlerde trafik sorunu giderek artıyor. Şehir içi ulaşım altyapısını iyileştirmemiz gerekiyor.",
         answers: [
             {
-                text: "Metro projelerine yatırım yapın, uzun vadede trafik sorununu çözün.",
+                text: "Metro projelerine yatırım yapın",
                 effect: {
                     publicSupport: +20,  // Halk toplu taşımanın geliştirilmesinden memnun olur
                     budget: -10,  // Metro projeleri maliyetlidir
                     infrastructureAndEnvironment: +25,  // Altyapı ve çevre olumlu yönde etkilenir
-                    internalSecurity: +5,  // Toplu taşıma hizmetlerinin gelişmesi güvenliği artırır
+                    internalSecurity: +15,  // Toplu taşıma hizmetlerinin gelişmesi güvenliği artırır
                 }
             },
             {
-                text: "Mevcut yolları iyileştirin, daha kısa vadede çözüm sağlayın.",
+                text: "Mevcut yolları iyileştirin.",
                 effect: {
                     publicSupport: +10,  // Kısa vadede yolların iyileştirilmesi halkı memnun eder
                     budget: -15,  // Yol iyileştirme projeleri daha az maliyetlidir
                     infrastructureAndEnvironment: +10,  // Mevcut yolların iyileştirilmesi altyapıyı geliştirir
-                    internalSecurity: +5,  // Trafik güvenliği artar
+                    internalSecurity: +15,  // Trafik güvenliği artar
                 }
             }
         ],

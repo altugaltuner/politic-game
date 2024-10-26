@@ -27,17 +27,17 @@ export const genclikQuestions = [
     },
     {
         id: 123,
-        question: "Sayın Cumhurbaşkanım, ülkemizde gençlerin sporcu olma hayalleri düşük. Gençleri spora teşvik etmek için kampanyalar mı başlatalım, yoksa sadece profesyonel sporculara odaklanalım mı?",
+        question: "Sayın Cumhurbaşkanım, gençlerin sporcu olma hayalleri düşük. Spora teşvik için kampanyalar mı başlatalım yoksa sadece profesyonel sporculara mı odaklanalım ?",
         answers: [
             {
-                text: "Gençleri spora teşvik edecek geniş çaplı kampanyalar başlatın.",
+                text: "Gençleri spora yönlendirmeliyiz.",
                 effect: {
                     publicSupport: +20,
                     budget: -15,
                 }
             },
             {
-                text: "Sadece profesyonel sporculara odaklanın, kaynakları verimli kullanın.",
+                text: "Profesyonel sporculara odaklanın, kaynakları verimli kullanın.",
                 effect: {
                     publicSupport: -25,
                     budget: +25,

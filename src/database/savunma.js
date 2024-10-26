@@ -6,21 +6,21 @@ export const savunmaQuestions = [
         question: "Sayın Cumhurbaşkanım, askerlik süresinin uzunluğu konusunda halktan şikayetler geliyor. Askerlik süresini kısaltalım mı, yoksa profesyonel orduya geçiş mi yapalım?",
         answers: [
             {
-                text: "Askerlik süresini kısaltın, gençlerin memnuniyetini artırın.",
+                text: "Askerlik süresini kısaltın.",
                 effect: {
-                    publicSupport: +20,  // Gençler ve aileleri memnun olur
-                    budget: -10,  // Kısalan süre ile eğitim maliyetleri düşebilir
-                    internalSecurity: -5,  // Ordu kapasitesi kısa vadede azalabilir
-                    internationalRelations: 0  // Uluslararası ilişkilerde etkisi olmaz
+                    publicSupport: +20,
+                    budget: -10,
+                    internalSecurity: -25,
+                    internationalRelations: -20
                 }
             },
             {
-                text: "Profesyonel orduya geçiş yapın, askerlik süresini kademeli olarak azaltın.",
+                text: "Profesyonel orduya geçiş yapın.",
                 effect: {
-                    publicSupport: +10,  // Profesyonel ordu fikri halk tarafından desteklenir
-                    budget: -15,  // Profesyonel ordu daha maliyetli olabilir
-                    internalSecurity: +10,  // Ordu kapasitesi profesyonellikle güçlenir
-                    internationalRelations: +5,  // Uluslararası alanda olumlu karşılanır
+                    publicSupport: +10,
+                    budget: -15,
+                    internalSecurity: +25,
+                    internationalRelations: +25,
                 }
             }
         ],

@@ -3,20 +3,23 @@ import aileBakanı from "../../public/ministers/aile-bakani.png";
 export const aileQuestions = [
     {
         id: 10,
-        question: "Sayın Cumhurbaşkanım, yaşlı bakım evleri dolup taşıyor. Yaşlılarımız için yeni bakım evleri yapmamız gerekiyor. Ancak aynı zamanda, çocuk koruma hizmetlerine de bütçe ayırmamız lazım. Ne yapalım?",
+        question: "Efendim, Yaşlı bakım evleri dolup taşıyor. Yeni bakım evleri yapmamız gerekiyor. Ancak aynı zamanda, köprü inşaatımız da devam ediyor.",
         answers: [
             {
-                text: "Yaşlı bakım evleri yapın.",
+                text: "Bakım evleri yapın.",
                 effect: {
                     publicSupport: +10,
-                    budget: -10,
+                    budget: -5,
+                    infrastructureAndEnvironment: -10
+
                 }
             },
             {
-                text: "Çocuk koruma hizmetlerine bütçe ayırın.",
+                text: "Köprü inşaatına devam edin.",
                 effect: {
-                    publicSupport: +10,
+                    publicSupport: -10,
                     budget: -10,
+                    infrastructureAndEnvironment: +10
                 }
             }
         ],
@@ -25,13 +28,13 @@ export const aileQuestions = [
     },
     {
         id: 11,
-        question: "Sayın Cumhurbaşkanım, düşük gelirli ailelere doğrudan nakit yardımı yapmayı öneriyorum. Ancak bu, kamu bütçesini zorlayabilir ve altyapı yatırımlarını azaltabilir. Ne yapalım?",
+        question: "Düşük gelirli ailelere doğrudan nakit yardımı yapmayı öneriyorum. Ancak bu, kamu bütçesini zorlayabilir ve altyapı yatırımlarını azaltabilir.",
         answers: [
             {
                 text: "Ailelere nakit yardımı yapın.",
                 effect: {
                     publicSupport: +20,
-                    budget: -25,
+                    budget: -20,
                     internalSecurity: +5,
                     infrastructureAndEnvironment: -10
                 }
@@ -41,31 +44,7 @@ export const aileQuestions = [
                 effect: {
                     publicSupport: -20,
                     budget: -15,
-                    infrastructureAndEnvironment: +10
-                }
-            }
-        ],
-        title: "Aile ve Sosyal Hizmetler Bakanı",
-        photo: aileBakanı,
-    },
-    {
-        id: 12,
-        question: "Sayın Cumhurbaşkanım, aile içi şiddet vakaları giderek artıyor. Kadın ve çocukların korunması için sığınma evleri açmamız gerekiyor. Ancak, aynı bütçeyle engelli bireyler için de destek hizmetleri artırılabilir. Hangisini önceliklendirelim?",
-        answers: [
-            {
-                text: "Kadın ve çocuklar için sığınma evleri açın.",
-                effect: {
-                    publicSupport: +15,
-                    budget: -10,
-                    internalSecurity: +10,
-                }
-            },
-            {
-                text: "Engelli bireyler için destek hizmetlerini artırın.",
-                effect: {
-                    publicSupport: +5,
-                    budget: -5,
-                    internalSecurity: -10,
+                    infrastructureAndEnvironment: +15
                 }
             }
         ],
@@ -74,49 +53,26 @@ export const aileQuestions = [
     },
     {
         id: 13,
-        question: "Sayın Cumhurbaşkanım, çocuk işçiliğiyle mücadelede yeni düzenlemeler yapmamız gerekiyor, ancak bu düzenlemeler iş gücü maliyetlerini artırabilir ve tarım üretimini düşürebilir. Ne yapalım?",
+        question: "Çocuk işçiliğiyle mücadelede yeni düzenlemeler gerekiyor, ancak bu iş gücü maliyetlerini artırabilir ve tarım üretimini düşürebilir.",
         answers: [
             {
-                text: "Çocuk işçiliğine karşı düzenlemeleri yapın.",
+                text: "Çocuk işçiliğini bitireceğiz.",
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    agriculturalProduction: -10,
+                    agriculture: -10,
                 }
             },
             {
-                text: "Tarım sektörünü koruyalım.",
+                text: "Tarımı önceliklendirin.",
                 effect: {
-                    publicSupport: -10,
+                    publicSupport: +5,
                     budget: +10,
-                    agriculturalProduction: +10,
+                    agriculture: +10,
                 }
             }
         ],
         title: "Aile ve Sosyal Hizmetler Bakanı",
         photo: aileBakanı,
     },
-    {
-        id: 14,
-        question: "Sayın Cumhurbaşkanım, genç aileler için daha fazla kreş ve çocuk bakım merkezi açmamız gerekiyor. Ancak aynı bütçeyle, düşük gelirli aileler için gıda yardımı programını da genişletebiliriz. Ne yapalım?",
-        answers: [
-            {
-                text: "Kreş ve çocuk bakım merkezleri açın.",
-                effect: {
-                    publicSupport: +10,
-                    budget: -10,
-                }
-            },
-            {
-                text: "Düşük gelirli ailelere destek olun.",
-                effect: {
-                    publicSupport: +10,
-                    budget: -10,
-                    internalSecurity: +10,
-                }
-            }
-        ],
-        title: "Aile ve Sosyal Hizmetler Bakanı",
-        photo: aileBakanı,
-    }
 ];
