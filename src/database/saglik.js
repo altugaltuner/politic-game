@@ -34,7 +34,6 @@ export const saglikQuestions = [
                 effect: {
                     publicSupport: +10,  // Sağlık çalışanları ve aileleri memnun olur
                     budget: -20,  // Maaş artışları bütçeyi zorlayabilir
-                    educationQuality: +15,  // Sağlık çalışanlarının motivasyonu artar, hizmet kalitesi iyileşir
                     internalSecurity: +5,  // Sağlık çalışanlarının memnuniyeti sosyal huzuru artırır
                 }
             },
@@ -43,7 +42,6 @@ export const saglikQuestions = [
                 effect: {
                     publicSupport: +5,  // Halk sağlık hizmetlerinin hızlanmasından memnun olur
                     budget: -15,  // Yeni personel alımları bütçeyi etkiler
-                    educationQuality: +20,  // Daha fazla personel ile sağlık hizmetleri hızlanır
                     internalSecurity: +5,  // Sağlık sektöründe iş yükünün azalması sosyal huzuru artırır
                 }
             }
@@ -59,12 +57,14 @@ export const saglikQuestions = [
                 text: "Psikolojik destek hizmetlerini yaygınlaştırın, toplum sağlığını güçlendirelim.",
                 effect: {
                     internalSecurity: +10,  // Toplumsal huzur artar, sosyal problemler azalır
+                    budget: -10,  // Psikolojik destek hizmetlerinin genişletilmesi maliyetlidir
                 }
             },
             {
                 text: "Okullarda rehberlik hizmetlerini genişletin, genç nesilleri destekleyelim.",
                 effect: {
-                    educationQuality: +10,  // Rehberlik hizmetleri eğitim kalitesine olumlu katkı sağlar
+                    internalSecurity: -10,
+                    budget: -10,  // Rehberlik hizmetlerinin genişletilmesi maliyetlidir
                 }
             }
         ],

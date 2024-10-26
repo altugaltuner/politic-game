@@ -10,7 +10,6 @@ export const calismaQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    educationQuality: +15
                 }
             },
             {
@@ -18,7 +17,6 @@ export const calismaQuestions = [
                 effect: {
                     publicSupport: -20,
                     budget: -20,
-                    educationQuality: -15,
                 }
             }
         ],

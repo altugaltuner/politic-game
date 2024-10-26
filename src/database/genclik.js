@@ -10,7 +10,6 @@ export const genclikQuestions = [
                 effect: {
                     publicSupport: +15,
                     budget: -15,
-                    educationQuality: +25,
                     infrastructureAndEnvironment: +15,
                 }
             },
@@ -19,7 +18,6 @@ export const genclikQuestions = [
                 effect: {
                     publicSupport: -10,
                     budget: +15,
-                    educationQuality: +5,
                     infrastructureAndEnvironment: +10,
                 }
             }
@@ -36,7 +34,6 @@ export const genclikQuestions = [
                 effect: {
                     publicSupport: +20,
                     budget: -15,
-                    educationQuality: +25,
                 }
             },
             {
@@ -44,7 +41,6 @@ export const genclikQuestions = [
                 effect: {
                     publicSupport: -25,
                     budget: +25,
-                    educationQuality: -20,
                 }
             }
         ],

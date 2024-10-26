@@ -4,7 +4,6 @@ import { aileQuestions } from "../../database/aile";
 import { calismaQuestions } from "../../database/calisma";
 import { cevreQuestions } from "../../database/cevre";
 import { disisleriQuestions } from "../../database/disisleri";
-import { egitimQuestions } from "../../database/egitim";
 import { enerjiQuestions } from "../../database/enerji";
 import { genclikQuestions } from "../../database/genclik";
 import { hazineQuestions } from "../../database/hazine";
@@ -13,14 +12,10 @@ import { saglikQuestions } from "../../database/saglik";
 import { sanayiQuestions } from "../../database/sanayi";
 import { tarimQuestions } from "../../database/tarim";
 import { ticaretQuestions } from "../../database/ticaret";
-import { ulastirmaQuestions } from "../../database/ulastirma";
-import { ministers } from "@/database/ministers";
-import { parameters } from "../../database/parameters";
 // Add imports for other question categories as needed...
 
 type SetFunctions = {
     setAgriculture: React.Dispatch<React.SetStateAction<number>>;
-    setEducation: React.Dispatch<React.SetStateAction<number>>;
     setInfrastructure: React.Dispatch<React.SetStateAction<number>>;
     setInternalSecurity: React.Dispatch<React.SetStateAction<number>>;
     setInternational: React.Dispatch<React.SetStateAction<number>>;
@@ -40,7 +35,6 @@ type Question = {
             publicSupport?: number;
             budget?: number;
             internalSecurity?: number;
-            educationQuality?: number;
             agriculturalProduction?: number;
             infrastructureAndEnvironment?: number;
             internationalRelations?: number;
@@ -56,7 +50,6 @@ export const allQuestions: Question[] = [
     ...calismaQuestions,
     ...cevreQuestions,
     ...disisleriQuestions,
-    ...egitimQuestions,
     ...enerjiQuestions,
     ...genclikQuestions,
     ...hazineQuestions,
@@ -88,7 +81,6 @@ export const updateStats = (
         publicSupport?: number;
         budget?: number;
         internalSecurity?: number;
-        educationQuality?: number;
         agriculturalProduction?: number;
         infrastructureAndEnvironment?: number;
         internationalRelations?: number;
@@ -108,9 +100,6 @@ export const updateStats = (
     if (typeof effect.budget === "number") {
         setFunctions.setBudget((prev) => Math.max(0, prev + (effect.budget ?? 0)));
     }
-    if (typeof effect.educationQuality === "number") {
-        setFunctions.setEducation((prev) => Math.max(0, prev + (effect.educationQuality ?? 0)));
-    }
     if (typeof effect.infrastructureAndEnvironment === "number") {
         setFunctions.setInfrastructure((prev) => Math.max(0, prev + (effect.infrastructureAndEnvironment ?? 0)));
     }
@@ -125,7 +114,6 @@ export const checkGameOver = (
     internalSecurity: number,
     internationalRelations: number,
     budget: number,
-    educationQuality: number,
     infrastructureAndEnvironment: number,
     agriculturalProduction: number
 ) => {
@@ -134,7 +122,6 @@ export const checkGameOver = (
         internalSecurity <= 1 ||
         internationalRelations <= 1 ||
         budget <= 1 ||
-        educationQuality <= 1 ||
         infrastructureAndEnvironment <= 1 ||
         agriculturalProduction <= 1
     );

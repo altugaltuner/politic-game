@@ -10,7 +10,6 @@ export const aileQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    educationQuality: -10
                 }
             },
             {
@@ -18,7 +17,6 @@ export const aileQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    educationQuality: +10
                 }
             }
         ],
@@ -84,7 +82,6 @@ export const aileQuestions = [
                     publicSupport: +10,
                     budget: -10,
                     agriculturalProduction: -10,
-                    educationQuality: +15
                 }
             },
             {
@@ -93,7 +90,6 @@ export const aileQuestions = [
                     publicSupport: -10,
                     budget: +10,
                     agriculturalProduction: +10,
-                    educationQuality: -15
                 }
             }
         ],
@@ -109,7 +105,6 @@ export const aileQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    educationQuality: +5
                 }
             },
             {
@@ -118,7 +113,6 @@ export const aileQuestions = [
                     publicSupport: +10,
                     budget: -10,
                     internalSecurity: +10,
-                    educationQuality: -5
                 }
             }
         ],

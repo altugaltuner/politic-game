@@ -10,14 +10,12 @@ export const egitimQuestions = [
                 effect: {
                     publicSupport: +15,
                     budget: -25,
-                    educationQuality: +10,
                 }
             },
             {
                 text: "Eğitim kalitesini artırın.",
                 effect: {
                     publicSupport: +10,
-                    educationQuality: +10,
                 }
             }
         ],
@@ -33,7 +31,6 @@ export const egitimQuestions = [
                 effect: {
                     publicSupport: +20,  // Öğrenciler ve aileler büyük memnuniyet duyar
                     budget: -15,  // Eğitim reformu bütçeyi etkileyebilir
-                    educationQuality: +25,  // Öğrencilerin yaratıcılık ve düşünme becerileri gelişir
                     internalSecurity: +15,  // Eğitim kaynaklı stres azalır, sosyal huzur artar
                 }
             },
@@ -42,7 +39,6 @@ export const egitimQuestions = [
                 effect: {
                     publicSupport: -10,  // Halkın bir kısmı bu kararı olumsuz karşılar
                     budget: +20,  // Bütçeye doğrudan etkisi olmaz
-                    educationQuality: -5,  // Öğrenciler üzerindeki baskı devam eder
                     internalSecurity: -5  // İç güvenlik üzerinde etkisi olmaz
                 }
             }
@@ -59,7 +55,6 @@ export const egitimQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    educationQuality: -10,
                     infrastructureAndEnvironment: +10,
                 }
             },
@@ -68,7 +63,6 @@ export const egitimQuestions = [
                 effect: {
                     publicSupport: -10,
                     budget: +10,
-                    educationQuality: +10,
                     infrastructureAndEnvironment: +10,
                 }
             }
@@ -85,7 +79,6 @@ export const egitimQuestions = [
                 effect: {
                     publicSupport: +20,  // Halk eğitimde eşitlik çabasını destekler
                     budget: -10,  // Devlet okullarını iyileştirmek maliyetlidir
-                    educationQuality: +20,  // Daha fazla öğrenci kaliteli eğitim alır
                 }
             },
             {
@@ -93,7 +86,6 @@ export const egitimQuestions = [
                 effect: {
                     publicSupport: -20,  // Özel okullara giden aileler memnun olur
                     budget: -20,  // Özel okullara yapılan yatırımlar daha az maliyetlidir
-                    educationQuality: +10,  // Özel okullar sayesinde eğitim kalitesi yükselir
                 }
             }
         ],
@@ -108,7 +100,6 @@ export const egitimQuestions = [
                 text: "Mesleki eğitim için teşvik programları başlatın.",
                 effect: {
                     budget: -10,  // Teşvik programları maliyetlidir
-                    educationQuality: -10,  // Mesleki eğitim ile iş gücü daha kalifiye hale gelir
                     agriculturalProduction: +15,  // Mesleki eğitim tarımsal üretimi de olumlu etkileyebilir
                 }
             },
@@ -116,7 +107,6 @@ export const egitimQuestions = [
                 text: "Akademik eğitimi destekleyin.",
                 effect: {
                     budget: -10,  // Akademik eğitim desteği de bütçeyi etkileyebilir
-                    educationQuality: +15,  // Akademik başarı uzun vadede artar
                     agriculturalProduction: -15  // Tarım sektörüne doğrudan etkisi olmaz
                 }
             }

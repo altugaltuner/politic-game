@@ -7,7 +7,6 @@ import { allQuestions, getRandomQuestion, updateStats, checkGameOver } from "./f
 // Component for Game Stats
 export const GameStats = () => {
     const [agriculture, setAgriculture] = useState(50);
-    const [education, setEducation] = useState(50);
     const [infrastructure, setInfrastructure] = useState(50);
     const [internalSecurity, setInternalSecurity] = useState(50);
     const [international, setInternational] = useState(50);
@@ -22,12 +21,12 @@ export const GameStats = () => {
 
     // Statlar güncellendiğinde oyunun bitip bitmediğini kontrol eden useEffect
     useEffect(() => {
-        const isGameOver = checkGameOver(publicOpinion, internalSecurity, international, budget, education, infrastructure, agriculture);
+        const isGameOver = checkGameOver(publicOpinion, internalSecurity, international, budget, infrastructure, agriculture);
 
         if (isGameOver) {
             setGameOver(true); // Eğer stat sıfırın altına düştüyse oyunu bitir
         }
-    }, [publicOpinion, internalSecurity, international, budget, education, infrastructure, agriculture]);
+    }, [publicOpinion, internalSecurity, international, budget, infrastructure, agriculture]);
 
     // Function to handle answer selection
     const answerQuestion = (direction: "left" | "right") => {
@@ -38,7 +37,6 @@ export const GameStats = () => {
 
         updateStats(answer.effect, {
             setAgriculture,
-            setEducation,
             setInfrastructure,
             setInternalSecurity,
             setInternational,
@@ -88,14 +86,6 @@ export const GameStats = () => {
                 </div>
             );
         }
-        else if (education <= 1) {
-            return (
-                <div className="text-center p-4 bg-white rounded-lg">
-                    <h1>Oyun Bitti!</h1>
-                    <p>Eğitim kalitesi</p>
-                </div>
-            );
-        }
         else if (infrastructure <= 1) {
             return (
                 <div className="text-center p-4 bg-white rounded-lg">
@@ -115,10 +105,9 @@ export const GameStats = () => {
     }
 
     return (
-        <div className="flex flex-col gap-[35px] w-full">
+        <div className="flex flex-col gap-2 w-full justify-center items-center border-[1px] border-gray-400 p-3">
             <StatUpdater
                 agriculture={agriculture}
-                education={education}
                 infrastructure={infrastructure}
                 internalSecurity={internalSecurity}
                 international={international}
@@ -128,7 +117,7 @@ export const GameStats = () => {
 
             {/* Question display */}
             {currentQuestion ? (
-                <div className="text-center p-4 bg-white rounded-lg">
+                <div className="text-center bg-white rounded-lg">
                     <div>
                         <p>{currentQuestion.question}</p>
                     </div>
@@ -139,16 +128,16 @@ export const GameStats = () => {
                             <Image
                                 src={currentQuestion.photo.src}
                                 alt={currentQuestion.title}
-                                width={1200}
-                                height={620}
-                                className="w-2/3 h-[26rem]"
+                                width={1000}
+                                height={500}
+                                className="w-full h-[20rem]"
                             />
                             <p className="mt-2 font-medium text-2xl">{currentQuestion.title}</p>
                         </div>
                     )}
                 </div>
             ) : (
-                <div className="text-center p-4 bg-white rounded-lg">All questions answered!</div>
+                <div className="text-center bg-white rounded-lg">All questions answered!</div>
             )}
 
             {/* Answer buttons */}
