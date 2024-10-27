@@ -27,17 +27,15 @@ export const adaletQuestions = [
             {
                 text: "Ağır cezalar getirin.",
                 effect: {
-                    internalSecurity: +10,
-                    publicSupport: +15,
-                    budget: -10,
+                    internalSecurity: +20,
+                    publicSupport: +20,
                 }
             },
             {
                 text: "Suçlularla işbirliğine gidin.",
                 effect: {
                     internalSecurity: -20,
-                    publicSupport: -15,
-                    budget: +20,
+                    publicSupport: -20,
                 }
             }
         ],
@@ -51,17 +49,17 @@ export const adaletQuestions = [
             {
                 text: "Kadın koruma yasalarını güçlendirin.",
                 effect: {
-                    internalSecurity: +10,
-                    publicSupport: +10,
-                    budget: -15,
+                    internalSecurity: +20,
+                    publicSupport: +20,
+                    budget: -20,
                 }
             },
             {
                 text: "Mevcut yasalarla devam edin.",
                 effect: {
-                    internalSecurity: -10,
-                    publicSupport: -10,
-                    budget: +15,
+                    internalSecurity: -20,
+                    publicSupport: -20,
+                    budget: +20,
                 }
             }
         ],
@@ -75,17 +73,17 @@ export const adaletQuestions = [
             {
                 text: "Daha fazla yargı mensubu atayın.",
                 effect: {
-                    internalSecurity: +10,
-                    publicSupport: +5,
-                    budget: -10,
+                    internalSecurity: +20,
+                    publicSupport: +20,
+                    budget: -20,
                 }
             },
             {
                 text: "Şimdilik takip etmemiz yeterli.",
                 effect: {
-                    internalSecurity: -10,
-                    publicSupport: -10,
-                    budget: +10,
+                    internalSecurity: -20,
+                    publicSupport: -20,
+                    budget: +20,
                 }
             }
         ],
@@ -94,24 +92,24 @@ export const adaletQuestions = [
     },
     {
         id: 5,
-        question: "Sayın Cumhurbaşkanım, hapishaneler dolup taşıyor ve cezaevi şartları giderek kötüleşiyor. Yeni cezaevleri inşa edelim mi?",
+        question: "Sayın Cumhurbaşkanım, hapishaneler dolup taşıyor ve cezaevi şartları giderek kötüleşiyor.",
         answers: [
             {
-                text: "Yeni cezaevleri inşa edin, mahkumların şartları iyileştirilmeli.",
+                text: "Yeni cezaevleri inşa edin",
                 effect: {
-                    internalSecurity: +10,
-                    budget: -10,
-                    publicSupport: +5,
-                    infrastructure: +10,
+                    internalSecurity: +20,
+                    budget: -20,
+                    publicSupport: +20,
+                    infrastructureAndEnvironment: +20,
                 }
             },
             {
-                text: "Cezaevleri yerine alternatif cezalar üzerine çalışın.",
+                text: "Alternatif cezalar üzerine çalışın",
                 effect: {
-                    internalSecurity: +5,
-                    budget: +10,
-                    publicSupport: -5,
-                    infrastructure: -10,
+                    internalSecurity: +20,
+                    budget: +20,
+                    publicSupport: -20,
+                    infrastructureAndEnvironment: -20,
                 }
             }
         ],

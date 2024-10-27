@@ -8,18 +8,18 @@ export const aileQuestions = [
             {
                 text: "Bakım evleri yapın.",
                 effect: {
-                    publicSupport: +10,
-                    budget: -5,
-                    infrastructureAndEnvironment: -10
+                    publicSupport: +20,
+                    budget: -20,
+                    infrastructureAndEnvironment: -20
 
                 }
             },
             {
                 text: "Köprü inşaatına devam edin.",
                 effect: {
-                    publicSupport: -10,
-                    budget: -10,
-                    infrastructureAndEnvironment: +10
+                    publicSupport: -20,
+                    budget: -20,
+                    infrastructureAndEnvironment: +20
                 }
             }
         ],
@@ -35,16 +35,16 @@ export const aileQuestions = [
                 effect: {
                     publicSupport: +20,
                     budget: -20,
-                    internalSecurity: +5,
-                    infrastructureAndEnvironment: -10
+                    internalSecurity: +20,
+                    infrastructureAndEnvironment: -20
                 }
             },
             {
                 text: "Bütçeyi altyapı projelerine ayıralım.",
                 effect: {
                     publicSupport: -20,
-                    budget: -15,
-                    infrastructureAndEnvironment: +15
+                    budget: -20,
+                    infrastructureAndEnvironment: +20
                 }
             }
         ],
@@ -58,17 +58,17 @@ export const aileQuestions = [
             {
                 text: "Çocuk işçiliğini bitireceğiz.",
                 effect: {
-                    publicSupport: +10,
-                    budget: -10,
-                    agriculture: -10,
+                    publicSupport: +20,
+                    budget: -20,
+                    agriculturalProduction: -20,
                 }
             },
             {
                 text: "Tarımı önceliklendirin.",
                 effect: {
-                    publicSupport: +5,
-                    budget: +10,
-                    agriculture: +10,
+                    publicSupport: +20,
+                    budget: +20,
+                    agriculturalProduction: +20,
                 }
             }
         ],

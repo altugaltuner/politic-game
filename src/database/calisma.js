@@ -8,9 +8,9 @@ export const calismaQuestions = [
             {
                 text: "Genç işsizliği önlemeliyiz.",
                 effect: {
-                    publicSupport: +10,
-                    budget: -10,
-                    internalSecurity: +5,
+                    publicSupport: +20,
+                    budget: -20,
+                    internalSecurity: +10,
                 }
             },
             {
@@ -27,7 +27,7 @@ export const calismaQuestions = [
     },
     {
         id: 21,
-        question: "Sayın Cumhurbaşkanım, çalışan maaşları çok düşük. Asgari ücreti artırmamız gerekir, ancak bu, işverenler üzerinde mali baskı oluşturabilir. Ne yapmalıyız?",
+        question: "Çalışan maaşları çok düşük. Asgari ücreti artırmamız gerekir, ancak bu, işverenler üzerinde mali baskı oluşturabilir. Ne yapmalıyız?",
         answers: [
             {
                 text: "Asgari ücrete zam yapalım.",
@@ -60,7 +60,7 @@ export const calismaQuestions = [
                 effect: {
                     budget: -10,
                     agriculturalProduction: +20,
-                    infrastructure: -20,
+                    infrastructureAndEnvironment: -20,
                 }
             },
             {
@@ -68,7 +68,7 @@ export const calismaQuestions = [
                 effect: {
                     budget: -10,
                     agriculturalProduction: -20,
-                    infrastructure: +20
+                    infrastructureAndEnvironment: +20
                 }
             }
         ],
@@ -83,8 +83,8 @@ export const calismaQuestions = [
                 text: "Reformu yapın ve maaşları düşürün.",
                 effect: {
                     publicSupport: -10,
-                    budget: +15,
-                    internalSecurity: -15,
+                    budget: +20,
+                    internalSecurity: -20,
                 }
             },
             {
@@ -92,7 +92,7 @@ export const calismaQuestions = [
                 effect: {
                     publicSupport: -10,
                     budget: +20,
-                    internalSecurity: +15,
+                    internalSecurity: +20,
                 }
             }
         ],

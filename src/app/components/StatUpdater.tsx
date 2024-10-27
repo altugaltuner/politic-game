@@ -31,7 +31,7 @@ const StatUpdater: React.FC<Props> = ({
         infrastructure: "#ff9800", // Altyapı için turuncu
         internalSecurity: "#f44336", // İç güvenlik için kırmızı
         international: "#9c27b0", // Uluslararası ilişkiler için mor
-        currency: "#ffc107", // Bütçe için sarı
+        currency: "#27a2b7", // Bütçe için mavi
         publicSupport: "#3f51b5", // Halk desteği için koyu mavi
     }
 
@@ -42,11 +42,11 @@ const StatUpdater: React.FC<Props> = ({
     });
 
     return (
-        <div className="flex gap-7 rounded-t-lg justify-center p-4 border-gray-400 border-[1px] rounded-xl">
+        <div className="flex gap-7 rounded-t-lg justify-center p-4 border-gray-400 bg-white border-[1px] rounded-xl">
 
-            <div className="relative flex flex-col items-center justify-between p-2 border-gray-400 border-[1px] rounded-xl w-[13%] text-center">
+            <div className="relative flex flex-col items-center justify-between p-2 border-gray-400 border-[1px] rounded-xl w-[13%] text-center bg-[rgb(220,255,222)]">
                 <span>Tarım</span>
-                <div className="flex w-full h-20 border-[1px] border-gray-400 relative overflow-hidden mt-2 rounded justify-center items-center">
+                <div className="flex w-full h-20 border-[1px] border-gray-400 relative overflow-hidden mt-2 rounded justify-center items-center bg-white">
                     <div className="absolute bottom-0 left-0 w-full"
                         style={getBarStyle(agriculture, statColors.agriculture)}
                     />
@@ -54,9 +54,9 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className="relative flex flex-col items-center justify-between p-2 border-gray-400 border-[1px] rounded-xl w-[13%] text-center">
+            <div className="relative flex flex-col items-center justify-between p-2 border-gray-400 border-[1px] rounded-xl w-[13%] text-center bg-[rgb(255,243,224)]">
                 <span>Altyapı</span>
-                <div className="flex w-full h-20 border-[1px] border-gray-400 relative overflow-hidden mt-2 rounded justify-center items-center">
+                <div className="flex w-full h-20 border-[1px] border-gray-400 relative overflow-hidden mt-2 rounded justify-center items-center bg-white">
                     <div className="absolute bottom-0 left-0 w-full"
                         style={getBarStyle(infrastructure, statColors.infrastructure)}
                     />
@@ -64,9 +64,9 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className="relative flex flex-col items-center justify-between p-2 border-gray-400 border-[1px] rounded-xl w-[13%] text-center">
+            <div className="relative flex flex-col items-center justify-between p-2 border-gray-400 border-[1px] rounded-xl w-[13%] text-center bg-[#ffe3e0]">
                 <span>İç Güvenlik</span>
-                <div className="flex w-full h-20 border-[1px] border-gray-400 relative overflow-hidden mt-2 rounded justify-center items-center">
+                <div className="flex w-full h-20 border-[1px] border-gray-400 relative overflow-hidden mt-2 rounded justify-center items-center bg-white">
                     <div className="absolute bottom-0 left-0 w-full"
                         style={getBarStyle(internalSecurity, statColors.internalSecurity)}
                     />
@@ -74,9 +74,9 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className="relative flex flex-col items-center justify-between p-2 border-gray-400 border-[1px] rounded-xl w-[13%] text-center">
+            <div className="relative flex flex-col items-center justify-between p-2 border-gray-400 border-[1px] rounded-xl w-[13%] text-center bg-[#faddff]">
                 <span>Uluslararası İlişkiler</span>
-                <div className="flex w-full h-20 border-[1px] border-gray-400 relative overflow-hidden mt-2 rounded justify-center items-center">
+                <div className="flex w-full h-20 border-[1px] border-gray-400 relative overflow-hidden mt-2 rounded justify-center items-center bg-white">
                     <div className="absolute bottom-0 left-0 w-full"
                         style={getBarStyle(international, statColors.international)}
                     />
@@ -84,9 +84,9 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className="relative flex flex-col items-center justify-between p-2 border-gray-400 border-[1px] rounded-xl w-[13%] text-center">
+            <div className="relative flex flex-col items-center justify-between p-2 border-gray-400 border-[1px] rounded-xl w-[13%] text-center bg-[#d5f9ff]">
                 <span>Bütçe</span>
-                <div className="flex w-full h-20 border-[1px] border-gray-400 relative overflow-hidden mt-2 rounded justify-center items-center">
+                <div className="flex w-full h-20 border-[1px] border-gray-400 relative overflow-hidden mt-2 rounded justify-center items-center bg-white">
                     <div className="absolute bottom-0 left-0 w-full"
                         style={getBarStyle(currency, statColors.currency)}
                     />
@@ -94,9 +94,9 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className="relative flex flex-col items-center justify-between p-2 border-gray-400 border-[1px] rounded-xl w-[13%] text-center">
+            <div className="relative flex flex-col items-center justify-between p-2 border-gray-400 border-[1px] rounded-xl w-[13%] text-center bg-[#d9dfff]">
                 <span>Halkın Desteği</span>
-                <div className="flex w-full h-20 border-[1px] border-gray-400 relative overflow-hidden mt-2 rounded justify-center items-center">
+                <div className="flex w-full h-20 border-[1px] border-gray-400 relative overflow-hidden mt-2 rounded justify-center items-center bg-white">
                     <div className="absolute bottom-0 left-0 w-full"
                         style={getBarStyle(publicSupport, statColors.publicSupport)}
                     />

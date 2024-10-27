@@ -5,6 +5,7 @@ import { allQuestions, getRandomQuestion, updateStats, checkGameOver } from "./f
 import { Button } from "@/components/ui/button"
 import Image from "next/image";
 import deathIcon from "../../../public/ministers/skulls.jpg";
+import victoryImg from "../../../public/ministers/victory.png";
 
 // Component for Game Stats
 export const GameStats = () => {
@@ -26,12 +27,12 @@ export const GameStats = () => {
         const isGameOver = checkGameOver(publicOpinion, internalSecurity, international, budget, infrastructure, agriculture);
         if (isGameOver) {
             setGameOver(true);
-            if (publicOpinion <= 1) setGameOverReason("Toplumun desteği");
-            else if (internalSecurity <= 1) setGameOverReason("Ülke güvenliği zafiyeti");
-            else if (international <= 1) setGameOverReason("Uluslararası ilişkiler");
-            else if (budget <= 1) setGameOverReason("Bütçe");
-            else if (infrastructure <= 1) setGameOverReason("Altyapı ve çevre");
-            else if (agriculture <= 1) setGameOverReason("Tarım üretimi");
+            if (publicOpinion <= 1) setGameOverReason("Halkın güvenini kaybettiniz. Muhalefetin de erken seçim talebine boyun eğerek seçimlere gitmek zorunda kaldınız. Seçimleri kaybettiniz!");
+            else if (internalSecurity <= 1) setGameOverReason("İç güvenlik zafiyeti nedeniyle ülke kaosa sürüklendi. Güvenlik olmadan istikrar sağlanamadı!");
+            else if (international <= 1) setGameOverReason("Dış politikayı yönetemediniz. Ülkenin küresel arenadaki itibarı sıfırlandı!");
+            else if (budget <= 1) setGameOverReason("Bütçe kaynakları tükendi ve ekonomik kriz kaçınılmaz oldu. Mali dengeyi sağlayamadığınız için yönetim sona erdi!");
+            else if (infrastructure <= 1) setGameOverReason("Altyapı ve çevre sorunları çözülemedi ve temel hizmetler sağlanamaz hale geldi!");
+            else if (agriculture <= 1) setGameOverReason("Tarım üretimi azaldı ve gıda krizi ortaya çıktı. Ülke halkının ihtiyaçlarını karşılayamıyorsunuz!");
         }
     }, [publicOpinion, internalSecurity, international, budget, infrastructure, agriculture]);
 
@@ -75,18 +76,48 @@ export const GameStats = () => {
     // Oyun bittiyse oyunun son ekranını göster
     if (gameOver) {
         return (
-            <div className="text-center p-4 bg-white rounded-lg">
-                <h1>Oyun Bitti!</h1>
-                <Image src={deathIcon} alt="Oyun Bitti" className="my-4 h-[20rem] w-[710px]" />
-                <Button className="w-80 h-auto" onClick={restartGame}>
+            <div className="flex flex-col gap-2 w-full justify-center items-center rounded-md p-3">
+                <StatUpdater
+                    agriculture={agriculture}
+                    infrastructure={infrastructure}
+                    internalSecurity={internalSecurity}
+                    international={international}
+                    currency={budget}
+                    publicSupport={publicOpinion}
+                />
+                <div className="text-center bg-white p-2 rounded-lg border-gray-400 border-[1px] flex items-center flex-col">
+                    <h1 className="text-xl w-[880px] h-[70px]">{gameOverReason}</h1>
+                    <Image src={deathIcon} alt="Oyun Bitti" className=" my-4 w-[710px] border-[1px] border-gray-400 max-h-[20rem] rounded" />
+                </div>
+                <Button className="w-80 h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800" onClick={restartGame}>
                     Tekrar Oyna
                 </Button>
             </div>
         )
     };
 
+    if (allQuestions.length === usedQuestions.length) {
+        return (
+            <div className="flex flex-col items-center text-center p-4 bg-white rounded-lg">
+                <StatUpdater
+                    agriculture={agriculture}
+                    infrastructure={infrastructure}
+                    internalSecurity={internalSecurity}
+                    international={international}
+                    currency={budget}
+                    publicSupport={publicOpinion}
+                />
+                <h1 className="text-xl w-[880px] h-[70px]">Oyun Bitti! Tüm soruları yanıtladınız!</h1>
+                <Image src={victoryImg} alt="Oyun Bitti" className="my-4 h-[20rem] w-[710px]" />
+                <Button className="w-80 h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800" onClick={restartGame}>
+                    Tekrar Oyna
+                </Button>
+            </div>
+        )
+    }
+
     return (
-        <div className="flex flex-col gap-2 w-full justify-center items-center border-[1px] border-gray-400 rounded-md p-3">
+        <div className="flex flex-col gap-2 w-full justify-center items-center rounded-md p-3">
             <StatUpdater
                 agriculture={agriculture}
                 infrastructure={infrastructure}
@@ -98,11 +129,10 @@ export const GameStats = () => {
 
             {/* Question display */}
             {currentQuestion ? (
-                <div className="text-center bg-white p-2 rounded-lg border-gray-400 border-[1px]">
-                    <div>
-                        <p className="text-xl w-[880px]">{currentQuestion.question}</p>
+                <div className=" text-center bg-white pb-4 pt-4 pr-10 pl-10 rounded-lg border-gray-400 border-[1px] 2xl:w-[905px]">
+                    <div className="flex justify-center">
+                        <p className="text-xl min-h-[110px] flex flex-col justify-center w-5/6">{currentQuestion.question}</p>
                     </div>
-
 
                     {currentQuestion.photo && currentQuestion.title && (
                         <div className="flex flex-col items-center mt-4 gap-4 justify-center">
@@ -115,7 +145,7 @@ export const GameStats = () => {
                                             : currentQuestion.photo
                                 }
                                 alt={currentQuestion.title}
-                                className="border-[1px] border-gray-400 h-[20rem] rounded"
+                                className="border-[1px] border-gray-400 max-h-[20rem] rounded"
                             />
                             <p className="font-medium text-xl">{currentQuestion.title}</p>
                         </div>
@@ -127,15 +157,16 @@ export const GameStats = () => {
 
             {/* Answer buttons */}
             {currentQuestion && (
-                <div className="flex justify-center w-full p-2.5 gap-3">
+                <div className="flex justify-center w-full gap-5 p-2.5">
                     <Button
-                        className="w-80 h-auto"
+                        className="w-80 h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800"
                         onClick={() => answerQuestion("left")}
                     >
                         {currentQuestion.answers[0].text}
                     </Button>
+
                     <Button
-                        className="w-80 h-auto"
+                        className="w-80 h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800"
                         onClick={() => answerQuestion("right")}
                     >
                         {currentQuestion.answers[1].text}

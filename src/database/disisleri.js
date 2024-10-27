@@ -27,20 +27,20 @@ export const disisleriQuestions = [
     },
     {
         id: 41,
-        question: "Sayın Cumhurbaşkanım, uluslararası bir örgüte katılmamız gündemde. Bu, ülkemizin uluslararası arenadaki gücünü artıracak, ancak bazı ulusal bağımsızlık kararlarını sınırlayabilir.",
+        question: "Uluslararası bir örgüte katılmamız gündemde. Bu, ülkemizin uluslararası arenadaki gücünü artıracak, ancak bazı ulusal bağımsızlık kararlarını sınırlayabilir.",
         answers: [
             {
                 text: "Uluslararası örgüte katılın.",
                 effect: {
-                    internationalRelations: +25,  // Uluslararası arenada güçlü bir pozisyon kazanılır
-                    internalSecurity: -15,  // Ulusal bağımsızlık kısıtlamaları iç güvenlik üzerinde etkili olabilir
+                    internationalRelations: +20,
+                    internalSecurity: -10,
                 }
             },
             {
                 text: "Ulusal bağımsızlık daha önemli, katılmayın.",
                 effect: {
-                    internationalRelations: -25,  // Uluslararası arenada zayıf bir duruş olarak algılanır
-                    internalSecurity: +15,  // Ulusal bağımsızlık korunur, iç güvenlik artar
+                    internationalRelations: -20,
+                    internalSecurity: +10,
                 }
             }
         ],
@@ -49,7 +49,7 @@ export const disisleriQuestions = [
     },
     {
         id: 42,
-        question: "Sayın Cumhurbaşkanım, müttefik ülkeler savunma harcamalarımızı artırmamızı istiyor. Ancak bu, bütçemizi zorlayabilir ve sosyal harcamalardan kesintiler yapılmasına neden olabilir.",
+        question: "Müttefik ülkeler savunma harcamalarımızı artırmamızı istiyor. Ancak bu, bütçemizi zorlayabilir ve sosyal harcamalardan kesintiler yapılmasına neden olabilir.",
         answers: [
             {
                 text: "Savunma harcamalarını artırın.",
@@ -79,7 +79,7 @@ export const disisleriQuestions = [
                 text: "Onlar bizim kardeşimiz.",
                 effect: {
                     publicSupport: -30,
-                    internationalRelations: +30,
+                    internationalRelations: +20,
                     budget: -30,
                     internalSecurity: -30,
                 }
@@ -88,8 +88,8 @@ export const disisleriQuestions = [
                 text: "Sınırları koruyun.",
                 effect: {
                     publicSupport: +30,
-                    internationalRelations: -30,
-                    budget: +40,
+                    internationalRelations: -20,
+                    budget: +30,
                     internalSecurity: +30,
                 }
             }

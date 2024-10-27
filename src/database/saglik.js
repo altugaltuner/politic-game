@@ -8,41 +8,15 @@ export const saglikQuestions = [
             {
                 text: "Yeni hastaneler inşa edin.",
                 effect: {
-                    publicSupport: +15,
-                    budget: -30,
+                    budget: -20,
                     infrastructureAndEnvironment: +30,
                 }
             },
             {
                 text: "Mevcut hastane kapasitelerini artırın.",
                 effect: {
-                    publicSupport: +10,
-                    budget: +20,
-                    infrastructureAndEnvironment: +15,
-                }
-            }
-        ],
-        title: "Sağlık Bakanı",
-        photo: saglikBakani,
-    },
-    {
-        id: 142,
-        question: "Sayın Cumhurbaşkanım, doktorlar ve hemşireler yetersiz çalışma koşullarından şikayet ediyor.",
-        answers: [
-            {
-                text: "Çalışanların koşullarını iyileştirin",
-                effect: {
-                    publicSupport: +10,
-                    budget: -20,
-                    internalSecurity: +5,
-                }
-            },
-            {
-                text: "Yeni sağlık personelleri alın",
-                effect: {
-                    publicSupport: +5,
-                    budget: -15,
-                    internalSecurity: +5,
+                    budget: +10,
+                    infrastructureAndEnvironment: +10,
                 }
             }
         ],
@@ -56,17 +30,17 @@ export const saglikQuestions = [
             {
                 text: "Psikolojik destek hizmetlerini yaygınlaştırın",
                 effect: {
-                    publicSupport: +30,
-                    internalSecurity: +10,  // Toplumsal huzur artar, sosyal problemler azalır
-                    budget: -10,  // Psikolojik destek hizmetlerinin genişletilmesi maliyetlidir
+                    publicSupport: +20,
+                    internalSecurity: +10,
+                    budget: -10,
                 }
             },
             {
                 text: "Daha fazla ilaç ithal edin.",
                 effect: {
-                    publicSupport: -10,  // Halk yerli ürünleri tercih eder
+                    publicSupport: -20,
                     internalSecurity: -10,
-                    budget: -30,  // Rehberlik hizmetlerinin genişletilmesi maliyetlidir
+                    budget: -20,
                 }
             }
         ],

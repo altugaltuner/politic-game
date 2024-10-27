@@ -8,21 +8,21 @@ export const cevreQuestions = [
             {
                 text: "Şehirleşmeyi hızlandırmalıyız.",
                 effect: {
-                    publicSupport: -15,
-                    agriculture: -20,
-                    budget: -15,
+                    publicSupport: -20,
+                    agriculturalProduction: -20,
+                    budget: -20,
                     infrastructureAndEnvironment: +10,
-                    internalSecurity: -15,
+                    internalSecurity: -10,
                 }
             },
             {
                 text: "Bir Gezi Parkı daha istemiyorum.",
                 effect: {
-                    publicSupport: +15,
-                    budget: +15,
-                    agriculture: +20,
+                    publicSupport: +20,
+                    budget: +20,
+                    agriculturalProduction: +20,
                     infrastructureAndEnvironment: -10,
-                    internalSecurity: +15,
+                    internalSecurity: +10,
                 }
             }
         ],
@@ -36,18 +36,17 @@ export const cevreQuestions = [
             {
                 text: "Altyapıyı yenileyin, şehirlerdeki sorunları çözün.",
                 effect: {
-                    publicSupport: +10,
+                    publicSupport: +20,
                     budget: -20,
                     infrastructureAndEnvironment: +20,
-                    internalSecurity: +5,
                 }
             },
             {
                 text: "Bütçeyi çevre projelerine aktarın.",
                 effect: {
-                    publicSupport: -10,  // Şehirdeki halk altyapı sorunlarının devam etmesinden memnun olmaz
-                    budget: -10,  // Çevre projeleri daha az maliyetli
-                    infrastructureAndEnvironment: +10,  // Çevresel projeler doğrudan çevreye olumlu etki yapar
+                    publicSupport: -10,
+                    budget: -10,
+                    infrastructureAndEnvironment: +10,
                 }
             }
         ],

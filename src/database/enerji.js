@@ -3,13 +3,13 @@ import enerjiBakani from "../../public/ministers/enerji-bakani.png";
 export const enerjiQuestions = [
     {
         id: 130,
-        question: "Sayın Cumhurbaşkanım, fosil yakıtlara bağımlılığımız devam ediyor, ancak yenilenebilir enerjiye yatırım yaparsak uzun vadede daha sürdürülebilir bir enerji politikası izleyebiliriz.",
+        question: "Sayın Cumhurbaşkanım, fosil yakıtlara bağımlılığımız devam ediyor, ancak yenilenebilir enerjiye yatırım yapabiliriz.",
         answers: [
             {
                 text: "Yenilenebilir enerjiye yatırım yapın.",
                 effect: {
                     budget: -10,
-                    agriculture: +20,
+                    agriculturalProduction: +20,
                     infrastructureAndEnvironment: +25,
                     internationalRelations: +10,
                 }
@@ -18,7 +18,7 @@ export const enerjiQuestions = [
                 text: "Fosil yakıtlardan devam edeceğiz.",
                 effect: {
                     budget: +10,
-                    agriculture: -20,
+                    agriculturalProduction: -20,
                     infrastructureAndEnvironment: -20,
                     internationalRelations: -10
                 }
@@ -29,7 +29,7 @@ export const enerjiQuestions = [
     },
     {
         id: 131,
-        question: "Sayın Cumhurbaşkanım, yerli enerji kaynaklarını keşfetmek için geniş çaplı arama çalışmaları başlatabiliriz. Ancak bu, ciddi bir maliyet getirebilir.",
+        question: "Yerli enerji kaynaklarını keşfetmek için geniş çaplı arama çalışmaları başlatabiliriz. Ancak bu, ciddi bir maliyet getirebilir.",
         answers: [
             {
                 text: "Yerli enerji aramalarına başlayın.",
@@ -79,7 +79,7 @@ export const enerjiQuestions = [
     },
     {
         id: 133,
-        question: "Sayın Cumhurbaşkanım, komşu ülkelerle doğal gaz anlaşmaları yapabiliriz, bu enerji açığımızı kapatabilir. Ancak bu, yerli enerji sektörünü olumsuz etkileyebilir.",
+        question: "Komşu ülkelerle doğal gaz anlaşmaları yapabiliriz, bu enerji açığımızı kapatabilir. Ancak bu, yerli enerji sektörünü olumsuz etkileyebilir.",
         answers: [
             {
                 text: "Doğal gaz anlaşmalarını imzalayın.",
@@ -105,24 +105,24 @@ export const enerjiQuestions = [
     },
     {
         id: 134,
-        question: "Sayın Cumhurbaşkanım, nükleer enerji santrali kurma fırsatımız var. Bu, uzun vadede enerji ihtiyacımızı karşılayabilir, ancak çevresel ve uluslararası alanda büyük tepki çekebilir. Ne yapalım?",
+        question: "Nükleer enerji santrali kurma fırsatımız var. Bu, uzun vadede enerji ihtiyacımızı karşılayabilir, ancak çevresel ve uluslararası alanda büyük tepki çekebilir.",
         answers: [
             {
                 text: "Nükleer enerji santrali kuracağız.",
                 effect: {
-                    publicSupport: -25,
-                    budget: -25,
-                    infrastructureAndEnvironment: +40,
-                    internationalRelations: -15,
+                    publicSupport: -20,
+                    budget: -20,
+                    infrastructureAndEnvironment: +20,
+                    internationalRelations: -10
                 }
             },
             {
-                text: "Tepki görecek durumumuz yok.",
+                text: "Tepki görmeye tahammülüm yok.",
                 effect: {
-                    publicSupport: +25,
-                    budget: +25,
-                    infrastructureAndEnvironment: -40,
-                    internationalRelations: +15,
+                    publicSupport: +20,
+                    budget: +20,
+                    infrastructureAndEnvironment: -20,
+                    internationalRelations: +10,
                 }
             }
         ],

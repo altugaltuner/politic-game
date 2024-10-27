@@ -58,8 +58,8 @@ export const egitimQuestions = [
                 effect: {
                     budget: -10,
                     agriculture: +15,
-                    infrastructure: +10,
-                    international: -15,
+                    infrastructureAndEnvironment: +10,
+                    internationalRelations: -15,
                 }
             },
             {
@@ -67,7 +67,7 @@ export const egitimQuestions = [
                 effect: {
                     budget: -10,
                     agriculturalProduction: -15,
-                    international: +15,
+                    internationalRelations: +15,
                 }
             }
         ],

@@ -8,17 +8,17 @@ export const hazineQuestions = [
             {
                 text: "Faiz oranlarını artırın, enflasyonu düşürelim.",
                 effect: {
-                    publicSupport: +30,  // Faiz artışı halk arasında hoş karşılanmayabilir
-                    budget: +30,  // Enflasyon kontrol altına alınır, mali istikrar sağlanır
-                    infrastructureAndEnvironment: -20,  // Ekonomik büyüme yavaşlar, altyapı yatırımları azalır
+                    publicSupport: +20,
+                    budget: +20,
+                    infrastructureAndEnvironment: +10,
                 }
             },
             {
                 text: "Faiz oranlarını artırmayın, büyümeyi destekleyelim.",
                 effect: {
-                    publicSupport: -30,
+                    publicSupport: -20,
                     budget: -20,
-                    infrastructureAndEnvironment: -20,
+                    infrastructureAndEnvironment: -10,
                 }
             }
         ],
@@ -27,7 +27,7 @@ export const hazineQuestions = [
     },
     {
         id: 111,
-        question: "Sayın Cumhurbaşkanım, EYT konusu hala gündemde. Yaş haddinden emekli olamayan milyonlarca insan çözüm bekliyor. Ancak bu, bütçeye ciddi bir yük getirebilir.",
+        question: "EYT konusu hala gündemde. Yaş haddinden emekli olamayan milyonlarca insan çözüm bekliyor. Ancak bu, bütçeye ciddi bir yük getirebilir.",
         answers: [
             {
                 text: "İnsanlar hak ettikleri emekliliği almalı.",
@@ -56,15 +56,15 @@ export const hazineQuestions = [
             {
                 text: "Vergileri artırın, kamu borcunu azaltalım.",
                 effect: {
-                    publicSupport: -30,
-                    budget: +30,
+                    publicSupport: -20,
+                    budget: +20,
                 }
             },
             {
                 text: "Zaten yeterince artırdık.",
                 effect: {
-                    publicSupport: +30,
-                    budget: -30,
+                    publicSupport: +20,
+                    budget: -20,
                 }
             }
         ],
