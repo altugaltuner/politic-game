@@ -16,6 +16,65 @@ export const GameStats = () => {
     const [budget, setBudget] = useState(50);
     const [publicOpinion, setPublicSupport] = useState(50);
     const [isVisible, setIsVisible] = useState(true);
+    const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+
+    const soundFiles = [
+        "/sound-effects/malecrowd-1.mp3",
+        "/sound-effects/malecrowd-2.mp3",
+        "/sound-effects/malecrowd-3.mp3",
+        "/sound-effects/malecrowd-4.mp3",
+        "/sound-effects/malecrowd-5.mp3",
+        "/sound-effects/malecrowd-6.mp3",
+        "/sound-effects/malecrowd-7.mp3",
+        "/sound-effects/malecrowd-8.mp3",
+        "/sound-effects/malecrowd-9.mp3",
+        "/sound-effects/malecrowd-10.mp3",
+        "/sound-effects/malecrowd-11.mp3",
+        "/sound-effects/malecrowd-12.mp3",
+    ];
+
+
+    const getRandomSound = () => {
+        const randomIndex = Math.floor(Math.random() * soundFiles.length);
+        return soundFiles[randomIndex];
+    }
+
+    const playSoundEffect = () => {
+        const randomSound = getRandomSound();
+        const newAudio = new Audio(randomSound);
+        setAudio(newAudio);
+        newAudio.play();
+
+        // Sesin 3 saniye boyunca çalması
+        setTimeout(() => {
+            // Fade out efekti başlat
+            fadeOut(newAudio);
+        }, 2000); // 2 saniye sonra fade out başlat
+
+        setTimeout(() => {
+            newAudio.pause();
+            setAudio(null);
+        }, 3000);
+    };
+
+    // Fade out fonksiyonu
+    const fadeOut = (audio: HTMLAudioElement) => {
+        let volume = 1.0; // Başlangıç sesi
+        const fadeDuration = 1000; // Fade out süresi (ms)
+        const fadeInterval = 50; // Her adımın süresi (ms)
+        const fadeStep = volume / (fadeDuration / fadeInterval); // Her adımda azaltılacak ses
+
+        const fade = setInterval(() => {
+            if (volume > 0) {
+                volume = Math.max(0, volume - fadeStep); // Sesi azalt
+                audio.volume = volume;
+            } else {
+                clearInterval(fade); // Fade out tamamlandı
+                audio.pause(); // Sesi durdur
+                setAudio(null);
+            }
+        }, fadeInterval);
+    };
 
 
     // Set the first question as fixed
@@ -63,7 +122,11 @@ export const GameStats = () => {
                 setCurrentQuestion(nextQuestion);
                 setUsedQuestions((prev) => [...prev, nextQuestion.id]);
                 setIsVisible(true); // Soru görünümünü göster
-            }, 500); // 1 saniye bekleyin
+            }, 500); // 0.5 saniye bekleyin
+
+            setTimeout(() => {
+                playSoundEffect();
+            }, 1000); // 1 saniye bekleyin
         }
     };
 
@@ -92,7 +155,7 @@ export const GameStats = () => {
                     currency={budget}
                     publicSupport={publicOpinion}
                 />
-                <div className="text-center gap-[30px] bg-white p-2 rounded-lg w-full border-gray-400 border-[1px] flex items-center flex-col sm:min-h-[547px] h-[430px]">
+                <div className="question-container visible text-center gap-[30px] bg-white p-2 rounded-lg w-full border-gray-400 border-[1px] flex items-center flex-col sm:min-h-[547px] h-[430px]">
                     <h1 className="md:text-xl sm:text-base text-sm min-h-[110px] flex flex-col justify-center w-5/6">{gameOverReason}</h1>
                     <Image src={deathIcon} width={500} alt="Oyun Bitti" className="border-[1px] border-gray-400 max-h-[13rem] rounded" />
                 </div>
@@ -146,7 +209,8 @@ export const GameStats = () => {
 
                     {currentQuestion.photo && currentQuestion.title && (
                         <div className="flex flex-col items-center mt-4 gap-4 justify-center">
-                            <img
+                            <Image
+                                width={567} height={320}
                                 src={
                                     currentQuestion.photo instanceof File
                                         ? URL.createObjectURL(currentQuestion.photo)
