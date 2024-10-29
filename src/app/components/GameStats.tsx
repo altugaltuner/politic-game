@@ -15,6 +15,8 @@ export const GameStats = () => {
     const [international, setInternational] = useState(50);
     const [budget, setBudget] = useState(50);
     const [publicOpinion, setPublicSupport] = useState(50);
+    const [isVisible, setIsVisible] = useState(true);
+
 
     // Set the first question as fixed
     const [usedQuestions, setUsedQuestions] = useState<number[]>([allQuestions[0].id]);
@@ -52,11 +54,16 @@ export const GameStats = () => {
             setBudget
         });
 
+        setIsVisible(false);
+
         // Get a random next question that hasn't been used
         const nextQuestion = getRandomQuestion(usedQuestions);
         if (!gameOver && nextQuestion) {
-            setCurrentQuestion(nextQuestion);
-            setUsedQuestions((prev) => [...prev, nextQuestion.id]);
+            setTimeout(() => {
+                setCurrentQuestion(nextQuestion);
+                setUsedQuestions((prev) => [...prev, nextQuestion.id]);
+                setIsVisible(true); // Soru görünümünü göster
+            }, 500); // 1 saniye bekleyin
         }
     };
 
@@ -132,7 +139,7 @@ export const GameStats = () => {
 
             {/* Question display */}
             {currentQuestion ? (
-                <div className=" text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[560px] h-[430px] border-gray-400 border-[1px] lg:w-[905px]">
+                <div className={`question-container ${isVisible ? 'visible' : ''} text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[560px] h-[430px] border-gray-400 border-[1px] lg:w-[905px]`}>
                     <div className="flex justify-center">
                         <p className="font-aldrich md:text-xl sm:text-base text-sm min-h-[110px] flex flex-col justify-center w-5/6">{currentQuestion.question}</p>
                     </div>

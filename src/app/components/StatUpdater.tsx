@@ -38,7 +38,7 @@ const StatUpdater: React.FC<Props> = ({
     const getBarStyle = (value: number, color: string) => ({
         height: `${value}%`,
         backgroundColor: color,
-        transition: "height 0.5s ease",
+        transition: "height 1s ease",
     });
 
     return (

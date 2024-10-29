@@ -6,19 +6,19 @@ export const saglikQuestions = [
         question: "Sayın Cumhurbaşkanım, şehir hastanelerindeki hasta yoğunluğu artıyor ve sağlık hizmetleri yavaşlıyor.",
         answers: [
             {
+                text: "Mevcut hastane kapasitelerini artırın.",
+                effect: {
+                    budget: +10,
+                    infrastructureAndEnvironment: +10,
+                }
+            },
+            {
                 text: "Yeni hastaneler inşa edin.",
                 effect: {
                     budget: -20,
                     infrastructureAndEnvironment: +30,
                 }
             },
-            {
-                text: "Mevcut hastane kapasitelerini artırın.",
-                effect: {
-                    budget: +10,
-                    infrastructureAndEnvironment: +10,
-                }
-            }
         ],
         title: "Sağlık Bakanı",
         photo: saglikBakani,
@@ -28,6 +28,14 @@ export const saglikQuestions = [
         question: "Sayın Cumhurbaşkanım, Türkiye’de psikolojik sağlık sorunları giderek artıyor.",
         answers: [
             {
+                text: "Daha fazla ilaç ithal edin.",
+                effect: {
+                    publicSupport: -20,
+                    internalSecurity: -10,
+                    budget: -20,
+                }
+            },
+            {
                 text: "Psikolojik destek hizmetlerini yaygınlaştırın",
                 effect: {
                     publicSupport: +20,
@@ -35,16 +43,30 @@ export const saglikQuestions = [
                     budget: -10,
                 }
             },
+        ],
+        title: "Sağlık Bakanı",
+        photo: saglikBakani,
+    },
+    {
+        id: 140,
+        question: "Günahsız bebekleri öldürerek SGK'yı toplamda 1 milyar TL'nin üzerinde dolandırmışlar. Mecliste bunun araştırılma önergesi verilmiş. Ne yapmalıyız?",
+        answers: [
             {
-                text: "Daha fazla ilaç ithal edin.",
+                text: "Hayır oyu vermelerini tembihle.",
                 effect: {
-                    publicSupport: -20,
-                    internalSecurity: -10,
                     budget: -20,
+                    infrastructureAndEnvironment: +30,
+                }
+            },
+            {
+                text: "Derhal araştırılsın.",
+                effect: {
+                    budget: +10,
+                    infrastructureAndEnvironment: +10,
                 }
             }
         ],
         title: "Sağlık Bakanı",
         photo: saglikBakani,
-    }
+    },
 ];

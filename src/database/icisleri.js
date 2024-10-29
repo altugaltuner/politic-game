@@ -125,4 +125,28 @@ export const icisleriQuestions = [
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
     },
+    {
+        id: 105,
+        question: "Cumhurbaşkanım, ülkede terör örgütleri faaliyetlerini artırıyor. Büyük şehirler çok büyük risk altında?",
+        answers: [
+            {
+                text: "Uluslararası işbirliğiyle teröristleri etkisiz hale getirelim.",
+                effect: {
+                    internalSecurity: -20,
+                    internationalRelations: +20,
+                    budget: -30,
+                }
+            },
+            {
+                text: "Şehirlerde sıkı denetimler başlatın. Göz açtırmayacağız.",
+                effect: {
+                    internalSecurity: +10,
+                    internationalRelations: -20,
+                    budget: -10,
+                }
+            },
+        ],
+        title: "İçişleri Bakanı",
+        photo: icisleriBakani,
+    },
 ];

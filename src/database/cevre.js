@@ -34,7 +34,7 @@ export const cevreQuestions = [
         question: "Sayın Cumhurbaşkanım, şehirlerdeki altyapı eskimiş durumda. Altyapının yenilenmesi gerekiyor. Ancak yeni çevre projeleri de gündemde. Öneriniz nedir?",
         answers: [
             {
-                text: "Altyapıyı yenileyin, şehirlerdeki sorunları çözün.",
+                text: "Şehirlerdeki sorunları çözün.",
                 effect: {
                     publicSupport: +20,
                     budget: -20,
