@@ -3,7 +3,7 @@ import { GameStats } from "../app/components/GameStats";
 
 export default function HomePage() {
   return (
-    <div className="container mx-auto p-5">
+    <div className="container mx-auto sm:p-5 p-2">
       <GameStats />
       {/* <LiveChat /> */}
     </div>

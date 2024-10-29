@@ -17,7 +17,7 @@ export const adaletQuestions = [
                 }
             }
         ],
-        title: "Kreatör",
+        title: "Altuğ",
         photo: mainPic
     },
     {

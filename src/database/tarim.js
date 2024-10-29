@@ -15,7 +15,7 @@ export const tarimQuestions = [
             {
                 text: "Şu an başka önceliklerimiz var,erteleyin.",
                 effect: {
-                    agriculturalProduction: +25,
+                    agriculturalProduction: -25,
                     budget: -15,
                 }
             }
@@ -29,7 +29,7 @@ export const tarimQuestions = [
         question: "Sayın Cumhurbaşkanım, kuraklık nedeniyle su kaynakları azalıyor ve tarımsal üretim tehlikeye giriyor.",
         answers: [
             {
-                text: "Yeni sulama projelerine yatırım yapın, su kaynaklarını daha verimli kullanalım.",
+                text: "Yeni sulama projelerine yatırım yapın",
                 effect: {
                     publicSupport: +15,
                     budget: -25,
@@ -38,11 +38,11 @@ export const tarimQuestions = [
                 }
             },
             {
-                text: "Çiftçilere su tasarrufu eğitimi verin, daha az maliyetli bir çözüm sağlayalım.",
+                text: "Çiftçilere su tasarrufu eğitimi verin",
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    agriculturalProduction: +10,
+                    agriculturalProduction: -20,
                     infrastructureAndEnvironment: +5,
                 }
             }
@@ -57,7 +57,7 @@ export const tarimQuestions = [
             {
                 text: "Yerli üretimi artırmak için çiftçilere teşvik verin.",
                 effect: {
-                    publicSupport: +20,
+                    publicSupport: +10,
                     budget: -20,
                     agriculturalProduction: +25,
                     internationalRelations: +10,
@@ -87,15 +87,17 @@ export const tarimQuestions = [
                     budget: -20,
                     infrastructureAndEnvironment: +20,
                     internalSecurity: +10,
+                    agriculturalProduction: +20,
                 }
             },
             {
                 text: "Orman köylülerine yangın eğitimi verin.",
                 effect: {
-                    publicSupport: +10,
+                    publicSupport: -20,
                     budget: +10,
                     infrastructureAndEnvironment: +10,
                     internalSecurity: +5,
+                    agriculturalProduction: -20,
                 }
             }
         ],

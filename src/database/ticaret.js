@@ -6,7 +6,7 @@ export const ticaretQuestions = [
         question: "Sayın Cumhurbaşkanım, ihracatımız son dönemde artıyor ancak rekabet edebilmemiz için ihracat yapan şirketlere daha fazla teşvik vermemiz gerekiyor.",
         answers: [
             {
-                text: "İhracat teşviklerini artırın, rekabet gücünü artırın.",
+                text: "İhracat teşviklerini artırın.",
                 effect: {
                     publicSupport: +10,
                     budget: -20,
@@ -14,7 +14,7 @@ export const ticaretQuestions = [
                 }
             },
             {
-                text: "Bütçeyi koruyun, mevcut teşviklerle devam edin.",
+                text: "Mevcut teşviklerle devam edin.",
                 effect: {
                     publicSupport: -10,
                     budget: +20,
@@ -111,7 +111,7 @@ export const ticaretQuestions = [
                 }
             },
             {
-                text: "İhracatçı şirketlere daha fazla destek sağlayın",
+                text: "İhracatçı şirketlere daha fazla destek!",
                 effect: {
                     publicSupport: +5,
                     budget: -15,

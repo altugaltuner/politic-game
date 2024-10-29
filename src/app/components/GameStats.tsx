@@ -76,7 +76,7 @@ export const GameStats = () => {
     // Oyun bittiyse oyunun son ekranını göster
     if (gameOver) {
         return (
-            <div className="flex flex-col gap-2 w-full justify-center items-center rounded-md p-3">
+            <div className="flex flex-col gap-2 w-full justify-center items-center rounded-md">
                 <StatUpdater
                     agriculture={agriculture}
                     infrastructure={infrastructure}
@@ -85,11 +85,11 @@ export const GameStats = () => {
                     currency={budget}
                     publicSupport={publicOpinion}
                 />
-                <div className="text-center bg-white p-2 rounded-lg border-gray-400 border-[1px] flex items-center flex-col">
-                    <h1 className="text-xl w-[880px] h-[70px]">{gameOverReason}</h1>
-                    <Image src={deathIcon} alt="Oyun Bitti" className=" my-4 w-[710px] border-[1px] border-gray-400 max-h-[20rem] rounded" />
+                <div className="text-center gap-[30px] bg-white p-2 rounded-lg w-full border-gray-400 border-[1px] flex items-center flex-col sm:min-h-[547px] h-[430px]">
+                    <h1 className="md:text-xl sm:text-base text-sm min-h-[110px] flex flex-col justify-center w-5/6">{gameOverReason}</h1>
+                    <Image src={deathIcon} width={500} alt="Oyun Bitti" className="border-[1px] border-gray-400 max-h-[13rem] rounded" />
                 </div>
-                <Button className="w-80 h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800" onClick={restartGame}>
+                <Button className="w-auto h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800" onClick={restartGame}>
                     Tekrar Oyna
                 </Button>
             </div>
@@ -98,7 +98,7 @@ export const GameStats = () => {
 
     if (allQuestions.length === usedQuestions.length) {
         return (
-            <div className="flex flex-col items-center text-center p-4 bg-white rounded-lg">
+            <div className="flex flex-col gap-2 w-full justify-center items-center rounded-md">
                 <StatUpdater
                     agriculture={agriculture}
                     infrastructure={infrastructure}
@@ -107,17 +107,20 @@ export const GameStats = () => {
                     currency={budget}
                     publicSupport={publicOpinion}
                 />
-                <h1 className="text-xl w-[880px] h-[70px]">Oyun Bitti! Tüm soruları yanıtladınız!</h1>
-                <Image src={victoryImg} alt="Oyun Bitti" className="my-4 h-[20rem] w-[710px]" />
-                <Button className="w-80 h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800" onClick={restartGame}>
-                    Tekrar Oyna
-                </Button>
+                <div className="flex flex-col items-center text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[547px] h-[430px] border-gray-400 border-[1px] lg:w-[905px]">
+                    <h1 className="md:text-xl sm:text-base text-sm min-h-[110px] flex flex-col justify-center w-5/6">Başardın! Türkiyeyi son nefesine kadar yönetebildin. Huzur içinde ölebilirsin.</h1>
+                    <Image src={victoryImg} alt="Oyun Bitti" className="my-4 h-[15rem] sm:w-[567px] w-[355px]" />
+                    <Button className=" h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800" onClick={restartGame}>
+                        Tekrar Oyna
+                    </Button>
+                </div>
+
             </div>
         )
     }
 
     return (
-        <div className="flex flex-col gap-2 w-full justify-center items-center rounded-md p-3">
+        <div className="flex flex-col gap-2 w-full justify-center items-center rounded-md">
             <StatUpdater
                 agriculture={agriculture}
                 infrastructure={infrastructure}
@@ -129,9 +132,9 @@ export const GameStats = () => {
 
             {/* Question display */}
             {currentQuestion ? (
-                <div className=" text-center bg-white pb-4 pt-4 pr-10 pl-10 rounded-lg border-gray-400 border-[1px] 2xl:w-[905px]">
+                <div className=" text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[560px] h-[430px] border-gray-400 border-[1px] lg:w-[905px]">
                     <div className="flex justify-center">
-                        <p className="text-xl min-h-[110px] flex flex-col justify-center w-5/6">{currentQuestion.question}</p>
+                        <p className="font-aldrich md:text-xl sm:text-base text-sm min-h-[110px] flex flex-col justify-center w-5/6">{currentQuestion.question}</p>
                     </div>
 
                     {currentQuestion.photo && currentQuestion.title && (
@@ -145,9 +148,9 @@ export const GameStats = () => {
                                             : currentQuestion.photo
                                 }
                                 alt={currentQuestion.title}
-                                className="border-[1px] border-gray-400 max-h-[20rem] rounded"
+                                className="border-[1px] border-gray-400 sm:max-h-[16rem] max-h-[11rem] rounded"
                             />
-                            <p className="font-medium text-xl">{currentQuestion.title}</p>
+                            <p className="font-medium md:text-xl text-sm">{currentQuestion.title}</p>
                         </div>
                     )}
                 </div>
@@ -157,16 +160,16 @@ export const GameStats = () => {
 
             {/* Answer buttons */}
             {currentQuestion && (
-                <div className="flex justify-center w-full gap-5 p-2.5">
+                <div className="flex sm:flex-row flex-col justify-center rounded-lg bg-white border-gray-400 border-[1px] lg:w-[905px] w-full sm:gap-5 gap-2 p-2.5 items-center">
                     <Button
-                        className="w-80 h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800"
+                        className="sm:w-80 w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800 md:text-sm text-xs"
                         onClick={() => answerQuestion("left")}
                     >
                         {currentQuestion.answers[0].text}
                     </Button>
 
                     <Button
-                        className="w-80 h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800"
+                        className="sm:w-80 w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800 md:text-sm text-xs"
                         onClick={() => answerQuestion("right")}
                     >
                         {currentQuestion.answers[1].text}
