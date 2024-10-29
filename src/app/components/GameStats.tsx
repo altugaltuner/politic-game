@@ -16,7 +16,7 @@ export const GameStats = () => {
     const [budget, setBudget] = useState(50);
     const [publicOpinion, setPublicSupport] = useState(50);
     const [isVisible, setIsVisible] = useState(true);
-    const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+    const [, setAudio] = useState<HTMLAudioElement | null>(null);
 
     const soundFiles = [
         "/sound-effects/malecrowd-1.mp3",
