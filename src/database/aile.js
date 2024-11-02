@@ -6,7 +6,7 @@ export const aileQuestions = [
         question: "Efendim, Yaşlı bakım evleri dolup taşıyor. Yeni bakım evleri yapmamız gerekiyor. Ancak aynı zamanda, köprü inşaatımız da devam ediyor.",
         answers: [
             {
-                text: "Bakım evleri yapın.",
+                text: "Bu ülkenin emektarlarına hizmet vatana hizmettir.",
                 effect: {
                     publicSupport: +20,
                     budget: -20,
@@ -15,7 +15,7 @@ export const aileQuestions = [
                 }
             },
             {
-                text: "Köprü inşaatına devam edin.",
+                text: "Önce altyapı halledilecek.",
                 effect: {
                     publicSupport: -20,
                     budget: -20,
@@ -28,10 +28,10 @@ export const aileQuestions = [
     },
     {
         id: 11,
-        question: "Düşük gelirli ailelere doğrudan nakit yardımı yapmayı öneriyorum. Ancak bu, kamu bütçesini zorlayabilir ve altyapı yatırımlarını azaltabilir.",
+        question: "Düşük gelirli ailelere doğrudan sosyal yardımı yapmayı öneriyorum. Ancak bu, kamu bütçesini zorlayabilir ve altyapı yatırımlarını azaltabilir.",
         answers: [
             {
-                text: "Ailelere nakit yardımı yapın.",
+                text: "Yardımı yapacağız, diyanetin bütçesinden kısarız.",
                 effect: {
                     publicSupport: +20,
                     budget: -20,
@@ -40,7 +40,7 @@ export const aileQuestions = [
                 }
             },
             {
-                text: "Bütçeyi altyapı projelerine ayıralım.",
+                text: "Daha yeni vergiler türetemedik, beklesinler.",
                 effect: {
                     publicSupport: -20,
                     budget: -20,
@@ -53,10 +53,10 @@ export const aileQuestions = [
     },
     {
         id: 13,
-        question: "Çocuk işçiliğiyle mücadelede yeni düzenlemeler gerekiyor, ancak bu iş gücü maliyetlerini artırabilir ve tarım üretimini düşürebilir.",
+        question: "Suriyeden gelen mülteciler çocuk yaşta çalıştırılıyor ve tarım sektöründe ucuz işgücü olarak kullanılıyor.",
         answers: [
             {
-                text: "Çocuk işçiliğini bitireceğiz.",
+                text: "Çocuk işçiliğini bitireceğiz. Denetim şart!",
                 effect: {
                     publicSupport: +20,
                     budget: -20,
@@ -64,7 +64,7 @@ export const aileQuestions = [
                 }
             },
             {
-                text: "Tarımı önceliklendirin.",
+                text: "Vatana faydaları var işte, daha ne istiyorsun?",
                 effect: {
                     publicSupport: +20,
                     budget: +20,

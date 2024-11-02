@@ -3,10 +3,10 @@ import calismaBakani from "../../public/ministers/calisma-bakani.png";
 export const calismaQuestions = [
     {
         id: 20,
-        question: "İşsizlik oranı artıyor ve gençler iş bulmakta zorlanıyor. İş bulma programları mı başlatalım yoksa işverenlere vergi indirimleri mi yapalım?",
+        question: "İşsizlik oranı artıyor ve gençler iş bulmakta zorlanıyor. Ne yapmalıyız?",
         answers: [
             {
-                text: "Genç işsizliği önlemeliyiz.",
+                text: "Devlet destekli iş bulma programları başlatın.",
                 effect: {
                     publicSupport: +20,
                     budget: -20,
@@ -14,7 +14,7 @@ export const calismaQuestions = [
                 }
             },
             {
-                text: "İşverenlere canımızdır.",
+                text: "işverenlere vergi indirimleri yapacağız.",
                 effect: {
                     publicSupport: -20,
                     budget: +20,
@@ -30,7 +30,7 @@ export const calismaQuestions = [
         question: "Çalışan maaşları çok düşük. Asgari ücreti artırmamız gerekir, ancak bu, işverenler üzerinde mali baskı oluşturabilir. Ne yapmalıyız?",
         answers: [
             {
-                text: "Asgari ücrete zam yapalım.",
+                text: "Çalışanları refaha kavuşturacağız.",
                 effect: {
                     publicSupport: +20,
                     budget: -10,
@@ -39,7 +39,7 @@ export const calismaQuestions = [
                 }
             },
             {
-                text: "İşverenleri zorlamaya gerek yok henüz.",
+                text: "İşverenler zor günlerden geçiyor.",
                 effect: {
                     publicSupport: -20,
                     budget: +10,
@@ -53,10 +53,10 @@ export const calismaQuestions = [
     },
     {
         id: 23,
-        question: "Kırsaldaki iş gücü azalıyor ve üretim etkileniyor. Tarım teşvikleri verelim mi yoksa işçileri sanayiye mi yönlendirelim?",
+        question: "Şehirleşme günden güne hızlanıyor. Kırsaldaki iş gücü azalıyor ve tarım sektörü zayıflıyor. Halk sizden bir aksiyon bekliyor.",
         answers: [
             {
-                text: "Tarım teşvikleri verin.",
+                text: "Tarım teşvikleri verip köylüyü koruyun.",
                 effect: {
                     budget: -10,
                     agriculturalProduction: +20,
@@ -64,7 +64,7 @@ export const calismaQuestions = [
                 }
             },
             {
-                text: "Sanayi üretimini artırın.",
+                text: "Popülasyonu sanayi üretimine yönlendirin.",
                 effect: {
                     budget: -10,
                     agriculturalProduction: -20,
@@ -75,28 +75,4 @@ export const calismaQuestions = [
         title: "Çalışma ve Sosyal Güvenlik Bakanı",
         photo: calismaBakani,
     },
-    {
-        id: 24,
-        question: "Sosyal güvenlik bütçesi azalıyor, emekli maaşları riskte. Maaşları düşürmek için reform mu yapalım yoksa vergileri artırarak bütçeyi mi dengeleyelim?",
-        answers: [
-            {
-                text: "Reformu yapın ve maaşları düşürün.",
-                effect: {
-                    publicSupport: -10,
-                    budget: +20,
-                    internalSecurity: -20,
-                }
-            },
-            {
-                text: "Vergileri artırın, sosyal güvenlik korunmalı.",
-                effect: {
-                    publicSupport: -10,
-                    budget: +20,
-                    internalSecurity: +20,
-                }
-            }
-        ],
-        title: "Çalışma ve Sosyal Güvenlik Bakanı",
-        photo: calismaBakani,
-    }
 ];

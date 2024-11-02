@@ -22,17 +22,17 @@ export const adaletQuestions = [
     },
     {
         id: 2,
-        question: "Sayın Cumhurbaşkanım, uyuşturucu ve kara para aklama suçluları yakalanıyor ancak serbest bırakılıyor. Daha etkili bir mücadele için ne yapmalıyız?",
+        question: "Kara para aklayan sosyal medya ünlüleri yakalandı ve aylardır içeride tutuluyorlar. Bazılarının güzellik merkezleri varmış. Ancak hakim daha dün serbest bıraktı!",
         answers: [
             {
-                text: "Ağır cezalar getirin.",
+                text: "Doğru karar, adli makamlardan kimsenin şüphesi olmasın!",
                 effect: {
                     internalSecurity: +20,
                     publicSupport: +20,
                 }
             },
             {
-                text: "Suçlularla işbirliğine gidin.",
+                text: "Yoksa birileri rüşvet mi aldı? Derhal araştırın!",
                 effect: {
                     internalSecurity: -20,
                     publicSupport: -20,
@@ -44,10 +44,10 @@ export const adaletQuestions = [
     },
     {
         id: 3,
-        question: "Ülkedeki kadınlar eski eşlerinden, sevgililerinden veya yakınlarından korunamıyor ve kadın cinayetleri artıyor. Nasıl bir adım atmalıyız?",
+        question: "İstanbul Sözleşmesi ülke gündemine oturdu. Bazı kesimler kadınları korumak adına bu sözleşmeyi desteklerken, bazıları ise aile yapısını bozduğunu iddia ediyor.",
         answers: [
             {
-                text: "Kadın koruma yasalarını güçlendirin.",
+                text: "Biz Osmanlı torunuyuz. Elin gavurunun sözleşmesinden bize ne?",
                 effect: {
                     internalSecurity: +20,
                     publicSupport: +20,
@@ -55,7 +55,7 @@ export const adaletQuestions = [
                 }
             },
             {
-                text: "Mevcut yasalarla devam edin.",
+                text: "Kadınlarımızın haklarını korumak adına bu sözleşmeyi destekleyeceğiz!",
                 effect: {
                     internalSecurity: -20,
                     publicSupport: -20,
@@ -68,10 +68,10 @@ export const adaletQuestions = [
     },
     {
         id: 4,
-        question: "Bazı bölgelerde suç oranları artıyor. Daha fazla yargı mensubu atayıp bu bölgelerde güvenliği artırabiliriz, ancak bu adım bütçemize ek yük getirebilir.",
+        question: "İstanbul,Ankara gibi büyük şehirlerde suç oranları artıyor. Halk güvenliğinden endişe ediyor.",
         answers: [
             {
-                text: "Daha fazla yargı mensubu atayın.",
+                text: "Polis teşkilatını güçlendirin ve suçlulara sert cezalar verin.",
                 effect: {
                     internalSecurity: +20,
                     publicSupport: +20,
@@ -79,7 +79,7 @@ export const adaletQuestions = [
                 }
             },
             {
-                text: "Şimdilik takip etmemiz yeterli.",
+                text: "Sosyal projeler üzerine çalışın ve suç oranlarını düşürün.",
                 effect: {
                     internalSecurity: -20,
                     publicSupport: -20,
@@ -95,7 +95,7 @@ export const adaletQuestions = [
         question: "Sayın Cumhurbaşkanım, hapishaneler dolup taşıyor ve cezaevi şartları giderek kötüleşiyor.",
         answers: [
             {
-                text: "Yeni cezaevleri inşa edin",
+                text: "En iyi bildiğimiz şeyi yapalım. İNŞAAT!",
                 effect: {
                     internalSecurity: +20,
                     budget: -20,
@@ -104,7 +104,7 @@ export const adaletQuestions = [
                 }
             },
             {
-                text: "Alternatif cezalar üzerine çalışın",
+                text: "Şu an bütçemiz kaldırmaz. Hem o kadar suçlu yoktur.",
                 effect: {
                     internalSecurity: +20,
                     budget: +20,

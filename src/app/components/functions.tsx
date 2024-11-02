@@ -5,14 +5,17 @@ import { aileQuestions } from "../../database/aile";
 import { calismaQuestions } from "../../database/calisma";
 import { cevreQuestions } from "../../database/cevre";
 import { disisleriQuestions } from "../../database/disisleri";
+import { egitimQuestions } from "../../database/egitim";
 import { enerjiQuestions } from "../../database/enerji";
 import { genclikQuestions } from "../../database/genclik";
 import { hazineQuestions } from "../../database/hazine";
 import { icisleriQuestions } from "../../database/icisleri";
 import { saglikQuestions } from "../../database/saglik";
 import { sanayiQuestions } from "../../database/sanayi";
+import { savunmaQuestions } from "../../database/savunma";
 import { tarimQuestions } from "../../database/tarim";
 import { ticaretQuestions } from "../../database/ticaret";
+import { ulastirmaQuestions } from "../../database/ulastirma";
 
 type SetFunctions = {
     setAgriculture: React.Dispatch<React.SetStateAction<number>>;
@@ -58,14 +61,17 @@ export const allQuestions: Question[] = [
     ...convertPhotoToString(calismaQuestions),
     ...convertPhotoToString(cevreQuestions),
     ...convertPhotoToString(disisleriQuestions),
+    ...convertPhotoToString(egitimQuestions),
     ...convertPhotoToString(enerjiQuestions),
     ...convertPhotoToString(genclikQuestions),
     ...convertPhotoToString(hazineQuestions),
     ...convertPhotoToString(icisleriQuestions),
     ...convertPhotoToString(saglikQuestions),
     ...convertPhotoToString(sanayiQuestions),
+    ...convertPhotoToString(savunmaQuestions),
     ...convertPhotoToString(tarimQuestions),
     ...convertPhotoToString(ticaretQuestions),
+    ...convertPhotoToString(ulastirmaQuestions),
 ].filter((question): question is Question => 'id' in question && question.id !== undefined);
 
 
