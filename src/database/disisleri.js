@@ -96,5 +96,6 @@ export const disisleriQuestions = [
         ],
         title: "Dışişleri Bakanı",
         photo: disisleriBakani,
+        link: "https://www.youtube.com/watch?v=AgA6HrJcjzA"
     }
 ];

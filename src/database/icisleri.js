@@ -6,12 +6,12 @@ export const icisleriQuestions = [
         question: "Sayın Cumhurbaşkanım, ülkedeki Suriyeli mülteci sayısı toplumsal tansiyonu artırıyor. Bazı kesimler, mültecilerin geri gönderilmesini istiyor.",
         answers: [
             {
-                text: "Mültecileri geri gönderme süreci başlatılsın",
+                text: "Tansiyonu polis güçleriyle düşürebiliriz.",
                 effect: {
-                    publicSupport: +30,
-                    budget: +30,
-                    internationalRelations: -30,
-                    internalSecurity: +30
+                    publicSupport: -20,
+                    budget: -10,
+                    internationalRelations: +10,
+                    internalSecurity: -20
                 }
             },
             {
@@ -26,6 +26,7 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
+        link: "https://www.meb.gov.tr/suriyeli-cocuklarin-turk-egitim-sistemine-entegrasyonunun-desteklenmesi-projesi/haber/12824/tr"
     },
     {
         id: 101,
@@ -50,6 +51,7 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
+        link: "https://www.youtube.com/watch?v=97Bm8nFEtg8"
     },
     {
         id: 103,
@@ -76,10 +78,11 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
+        link: "https://www.youtube.com/watch?v=j757MUWN3uk"
     },
     {
         id: 104,
-        question: "Sayın Cumhurbaşkanım, bazı şehirlerdeki protestolar şiddete dönüşüyor.Önerileriniz nelerdir?",
+        question: "Bazı şehirlerdeki sokak köpekleri hakkında çıkarılacak yasa için protestolar şiddete dönüşüyor.Önerileriniz nelerdir?",
         answers: [
             {
                 text: "Polis müdahalesini sertleştirin, düzeni sağlayın.",
@@ -100,6 +103,7 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
+        link: "https://www.gazeteduvar.com.tr/hayvanlari-oldurme-teklifine-tepki-kopekleri-bu-hale-biz-getirdik-haber-1698821"
     },
     {
         id: 105,
@@ -124,10 +128,11 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
+        link: "https://www.bbc.com/turkce/articles/c51j7xw5n3po"
     },
     {
         id: 105,
-        question: "Cumhurbaşkanım, ülkede terör örgütleri faaliyetlerini artırıyor. Büyük şehirler çok büyük risk altında?",
+        question: "Cumhurbaşkanım, ülkede terör örgütleri faaliyetlerini artırıyor. Büyük şehirler çok büyük risk altında!",
         answers: [
             {
                 text: "Uluslararası işbirliğiyle teröristleri etkisiz hale getirelim.",
@@ -148,5 +153,6 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
+        link: "https://tr.wikipedia.org/wiki/2022_%C4%B0stanbul_sald%C4%B1r%C4%B1s%C4%B1"
     },
 ];

@@ -15,7 +15,7 @@ export const egitimQuestions = [
                 }
             },
             {
-                text: "Mevcut okulları onarsanız yeterli.",
+                text: "Köy okullarını kapatmaya devam edeceğiz.",
                 effect: {
                     publicSupport: -10,
                     budget: +10,
@@ -26,6 +26,7 @@ export const egitimQuestions = [
         ],
         title: "Milli Eğitim Bakanı",
         photo: egitimBakani,
+        link: "https://10haber.net/gundem/koy-okullari-kapatildi-servisler-kaldirildi-cocuklar-nasil-okuyacak-517307/"
     },
     {
         id: 54,
@@ -48,6 +49,7 @@ export const egitimQuestions = [
         ],
         title: "Milli Eğitim Bakanı",
         photo: egitimBakani,
+        link: "https://dergipark.org.tr/tr/pub/iuhayefd/issue/8801/110031"
     },
     {
         id: 55,
@@ -73,5 +75,6 @@ export const egitimQuestions = [
         ],
         title: "Milli Eğitim Bakanı",
         photo: egitimBakani,
+        link: "https://www.milliyet.com.tr/egitim/mesleki-egitimde-2025-reformlari-7223945"
     }
 ];

@@ -22,6 +22,7 @@ export const tarimQuestions = [
         ],
         title: "Tarım Bakanı",
         photo: tarimBakani,
+        link: "https://www.bbc.com/turkce/articles/c0j8n48qwe8o#:~:text=2023'te%20d%C3%BCnyan%C4%B1n%20yakla%C5%9F%C4%B1k%20y%C3%BCzde,ne%20kadar%20h%C4%B1zland%C4%B1%C4%9F%C4%B1n%C4%B1%20ortaya%20koyuyor."
     },
 
     {
@@ -49,6 +50,7 @@ export const tarimQuestions = [
         ],
         title: "Milli Savunma Bakanı",
         photo: tarimBakani,
+        link: "https://www.greenpeace.org/turkey/blog/yagislar-azaliyor-kuraklik-tehdidi-artiyor/"
     },
     {
         id: 72,
@@ -75,6 +77,7 @@ export const tarimQuestions = [
         ],
         title: "Milli Savunma Bakanı",
         photo: tarimBakani,
+        link: "https://www.birgun.net/haber/turkiye-tarimda-neden-ithalata-bagimli-hale-geldi-259690"
     },
     {
         id: 73,
@@ -103,6 +106,7 @@ export const tarimQuestions = [
         ],
         title: "Milli Savunma Bakanı",
         photo: tarimBakani,
+        link: "https://www.aa.com.tr/tr/gundem/turkiyede-orman-yanginlari-gecen-yila-gore-yuzde-78-artti/3307498"
     },
     {
         id: 74,
@@ -129,6 +133,7 @@ export const tarimQuestions = [
         ],
         title: "Milli Savunma Bakanı",
         photo: tarimBakani,
+        link: "https://www.anadoluizlenimleri.com/gencler-neden-tarimsal-uretime-katilmak-istemiyor"
     },
     {
         id: 75,
@@ -155,5 +160,6 @@ export const tarimQuestions = [
         ],
         title: "Milli Savunma Bakanı",
         photo: tarimBakani,
+        link: "https://dergipark.org.tr/tr/download/article-file/253316"
     }
 ];

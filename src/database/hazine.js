@@ -14,7 +14,7 @@ export const hazineQuestions = [
                 }
             },
             {
-                text: "Faiz oranlarını artırmayın, büyümeyi destekleyelim.",
+                text: "Faiz sebep, enflasyon neticedir.",
                 effect: {
                     publicSupport: -20,
                     budget: -20,
@@ -24,6 +24,7 @@ export const hazineQuestions = [
         ],
         title: "Hazine ve Maliye Bakanı",
         photo: hazineBakani,
+        link: "https://www.youtube.com/watch?v=NdNtitt401M"
     },
     {
         id: 111,
@@ -48,27 +49,6 @@ export const hazineQuestions = [
         ],
         title: "Hazine ve Maliye Bakanı",
         photo: hazineBakani,
-    },
-    {
-        id: 112,
-        question: "Sayın Cumhurbaşkanım, ülkemizde kamu borcu artıyor. Borcu azaltmak için vergileri artırabiliriz, ancak bu halk arasında rahatsızlık yaratabilir.",
-        answers: [
-            {
-                text: "Vergileri artırın, kamu borcunu azaltalım.",
-                effect: {
-                    publicSupport: -20,
-                    budget: +20,
-                }
-            },
-            {
-                text: "Zaten yeterince artırdık.",
-                effect: {
-                    publicSupport: +20,
-                    budget: -20,
-                }
-            }
-        ],
-        title: "Hazine ve Maliye Bakanı",
-        photo: hazineBakani,
+        link: "https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogan-eyt-duzenlemesini-acikladi/2774692"
     },
 ];

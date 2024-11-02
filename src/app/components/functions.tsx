@@ -31,6 +31,7 @@ type Question = {
     title: string;
     id: number;
     question: string;
+    link?: string;
     answers: {
         text: string;
         effect: {

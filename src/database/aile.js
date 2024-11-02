@@ -74,5 +74,6 @@ export const aileQuestions = [
         ],
         title: "Aile ve Sosyal Hizmetler Bakanı",
         photo: aileBakanı,
+        link: "https://dergipark.org.tr/tr/download/article-file/3223060"
     },
 ];

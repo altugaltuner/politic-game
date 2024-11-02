@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image";
 import deathIcon from "../../../public/ministers/skulls.jpg";
 import victoryImg from "../../../public/ministers/victory.png";
+import { FiAlertCircle } from "react-icons/fi";
+import { ReactTyped } from "react-typed";
 
 // Component for Game Stats
 export const GameStats = () => {
@@ -17,6 +19,14 @@ export const GameStats = () => {
     const [publicOpinion, setPublicSupport] = useState(50);
     const [isVisible, setIsVisible] = useState(true);
     const [, setAudio] = useState<HTMLAudioElement | null>(null);
+
+    // Set the first question as fixed
+    const [usedQuestions, setUsedQuestions] = useState<number[]>([allQuestions[0].id]);
+    const [currentQuestion, setCurrentQuestion] = useState(allQuestions[0]);
+    const [gameOver, setGameOver] = useState(false);
+    const [gameOverReason, setGameOverReason] = useState("");
+
+    const [score, setScore] = useState(0);
 
     const soundFiles = [
         "/sound-effects/malecrowd-1.mp3",
@@ -76,13 +86,6 @@ export const GameStats = () => {
         }, fadeInterval);
     };
 
-
-    // Set the first question as fixed
-    const [usedQuestions, setUsedQuestions] = useState<number[]>([allQuestions[0].id]);
-    const [currentQuestion, setCurrentQuestion] = useState(allQuestions[0]);
-    const [gameOver, setGameOver] = useState(false);
-    const [gameOverReason, setGameOverReason] = useState("");
-
     // Statlar güncellendiğinde oyunun bitip bitmediğini kontrol eden useEffect
     useEffect(() => {
         const isGameOver = checkGameOver(publicOpinion, internalSecurity, international, budget, infrastructure, agriculture);
@@ -95,7 +98,7 @@ export const GameStats = () => {
             else if (infrastructure <= 1) setGameOverReason("Altyapı ve çevre sorunları çözülemedi ve temel hizmetler sağlanamaz hale geldi!");
             else if (agriculture <= 1) setGameOverReason("Tarım üretimi azaldı ve gıda krizi ortaya çıktı. Ülke halkının ihtiyaçlarını karşılayamıyorsunuz!");
         }
-    }, [publicOpinion, internalSecurity, international, budget, infrastructure, agriculture]);
+    }, [publicOpinion, internalSecurity, international, budget, infrastructure, agriculture, score]);
 
     // Function to handle answer selection
     const answerQuestion = (direction: "left" | "right") => {
@@ -118,6 +121,9 @@ export const GameStats = () => {
         // Get a random next question that hasn't been used
         const nextQuestion = getRandomQuestion(usedQuestions);
         if (!gameOver && nextQuestion) {
+
+            setScore((prev) => prev + 1);
+
             setTimeout(() => {
                 setCurrentQuestion(nextQuestion);
                 setUsedQuestions((prev) => [...prev, nextQuestion.id]);
@@ -141,6 +147,7 @@ export const GameStats = () => {
         setCurrentQuestion(allQuestions[0]);
         setGameOver(false);
         setGameOverReason("");
+        setScore(0);
     };
 
     // Oyun bittiyse oyunun son ekranını göster
@@ -154,6 +161,8 @@ export const GameStats = () => {
                     international={international}
                     currency={budget}
                     publicSupport={publicOpinion}
+                    score={score}
+
                 />
                 <div className="question-container visible text-center gap-[30px] bg-white p-2 rounded-lg w-full border-gray-400 border-[1px] flex items-center flex-col sm:min-h-[547px] h-[430px]">
                     <h1 className="md:text-xl sm:text-base text-sm min-h-[110px] flex flex-col justify-center w-5/6">{gameOverReason}</h1>
@@ -176,8 +185,9 @@ export const GameStats = () => {
                     international={international}
                     currency={budget}
                     publicSupport={publicOpinion}
+                    score={score}
                 />
-                <div className="flex flex-col items-center text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[547px] h-[430px] border-gray-400 border-[1px] lg:w-[905px]">
+                <div className="flex flex-col items-center text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[547px] h-[430px] border-gray-400 border-[1px] lg:w-[1060px]">
                     <h1 className="md:text-xl sm:text-base text-sm min-h-[110px] flex flex-col justify-center w-5/6">Başardın! Türkiyeyi son nefesine kadar yönetebildin. Huzur içinde ölebilirsin.</h1>
                     <Image src={victoryImg} alt="Oyun Bitti" className="my-4 h-[15rem] sm:w-[567px] w-[355px]" />
                     <Button className=" h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800" onClick={restartGame}>
@@ -190,7 +200,7 @@ export const GameStats = () => {
     }
 
     return (
-        <div className="flex flex-col gap-2 w-full justify-center items-center rounded-md">
+        <div className="flex flex-col gap-2 w-full justify-center items-center rounded-md relative">
             <StatUpdater
                 agriculture={agriculture}
                 infrastructure={infrastructure}
@@ -198,13 +208,32 @@ export const GameStats = () => {
                 international={international}
                 currency={budget}
                 publicSupport={publicOpinion}
+                score={score}
             />
+
+            {/* link ekle */}
+            {currentQuestion && currentQuestion.link ? (
+                <button
+                    className="absolute top-3 right-3"
+                    onClick={() => window.open(currentQuestion.link, '_blank')}
+                    style={{ cursor: 'pointer' }}
+                    aria-label="Open link"
+                    title="Open link"
+                >
+                    <FiAlertCircle className="w-7 h-7" />
+                </button>
+            ) : null}
 
             {/* Question display */}
             {currentQuestion ? (
-                <div className={`question-container ${isVisible ? 'visible' : ''} text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[560px] h-[430px] border-gray-400 border-[1px] lg:w-[905px]`}>
-                    <div className="flex justify-center">
-                        <p className="font-aldrich md:text-xl sm:text-base text-sm min-h-[110px] flex flex-col justify-center w-5/6">{currentQuestion.question}</p>
+                <div className={`question-container ${isVisible ? 'visible' : ''} text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[560px] h-[430px] border-gray-400 border-[1px] lg:w-[1060px] flex flex-col justify-center items-center`}>
+                    <div className="flex justify-center items-center font-aldrich md:text-xl sm:text-base text-sm min-h-[110px] flex-col w-5/6">
+                        <ReactTyped
+                            strings={[currentQuestion.question]}
+                            typeSpeed={10}
+                            showCursor={false}
+                            loop={false}
+                        />
                     </div>
 
                     {currentQuestion.photo && currentQuestion.title && (
@@ -231,19 +260,29 @@ export const GameStats = () => {
 
             {/* Answer buttons */}
             {currentQuestion && (
-                <div className="flex sm:flex-row flex-col justify-center rounded-lg bg-white border-gray-400 border-[1px] lg:w-[905px] w-full sm:gap-5 gap-2 p-2.5 items-center">
+                <div className="flex sm:flex-row flex-col justify-center rounded-lg bg-white border-gray-400 border-[1px] lg:w-[1060px] w-full sm:gap-5 gap-2 p-2.5 items-center">
                     <Button
                         className="sm:w-80 w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800 md:text-sm text-xs"
                         onClick={() => answerQuestion("left")}
                     >
-                        {currentQuestion.answers[0].text}
+                        <ReactTyped
+                            strings={[currentQuestion.answers[0].text]}
+                            typeSpeed={40}
+                            showCursor={false}
+                            loop={false}
+                        />
                     </Button>
 
                     <Button
                         className="sm:w-80 w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800 md:text-sm text-xs"
                         onClick={() => answerQuestion("right")}
                     >
-                        {currentQuestion.answers[1].text}
+                        <ReactTyped
+                            strings={[currentQuestion.answers[1].text]}
+                            typeSpeed={40}
+                            showCursor={false}
+                            loop={false}
+                        />
                     </Button>
                 </div>
             )}

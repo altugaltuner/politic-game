@@ -28,6 +28,7 @@ export const cevreQuestions = [
         ],
         title: "Çevre ve Şehircilik Bakanı",
         photo: cevreBakani,
+        link: "https://tr.wikipedia.org/wiki/Gezi_Park%C4%B1_olaylar%C4%B1"
     },
     {
         id: 31,
@@ -52,6 +53,7 @@ export const cevreQuestions = [
         ],
         title: "Çevre ve Şehircilik Bakanı",
         photo: cevreBakani,
+        link: "https://www.youtube.com/watch?v=HyMRdv-RycM"
     },
     {
         id: 32,
@@ -78,6 +80,7 @@ export const cevreQuestions = [
         ],
         title: "Çevre ve Şehircilik Bakanı",
         photo: cevreBakani,
+        link: "https://www.temizhavahakki.org/kararapor2022/"
     },
     {
         id: 33,
@@ -104,6 +107,7 @@ export const cevreQuestions = [
         ],
         title: "Çevre ve Şehircilik Bakanı",
         photo: cevreBakani,
+        link: "https://enerji.gov.tr/"
     },
     {
         id: 34,
@@ -130,5 +134,6 @@ export const cevreQuestions = [
         ],
         title: "Çevre ve Şehircilik Bakanı",
         photo: cevreBakani,
+        link: "https://www.turizm.gov.tr/"
     }
 ];

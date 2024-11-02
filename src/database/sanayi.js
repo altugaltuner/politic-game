@@ -53,6 +53,7 @@ export const sanayiQuestions = [
         ],
         title: "Sanayi ve Teknoloji Bakanı",
         photo: sanayiBakani,
+        link: "https://tr.wikipedia.org/wiki/Togg"
     },
     {
         id: 152,
@@ -79,53 +80,6 @@ export const sanayiQuestions = [
         ],
         title: "Sanayi ve Teknoloji Bakanı",
         photo: sanayiBakani,
+        link: "https://bilisimvadisi.com.tr/"
     },
-    {
-        id: 153,
-        question: "Sayın Cumhurbaşkanım, çevre dostu sanayi projelerine geçiş yapmayı öneriyorum. Ancak bu projeler maliyetli olabilir ve sanayi üretimini yavaşlatabilir. Ne yapalım?",
-        answers: [
-            {
-                text: "Çevre dostu sanayi projelerine geçiş yapın",
-                effect: {
-                    publicSupport: +20,
-                    budget: -20,
-                    infrastructureAndEnvironment: +20,
-                }
-            },
-            {
-                text: "Mevcut sanayi projelerine devam edin",
-                effect: {
-                    publicSupport: +5,
-                    budget: -10,
-                    infrastructureAndEnvironment: -10,
-                }
-            }
-        ],
-        title: "Sanayi ve Teknoloji Bakanı",
-        photo: sanayiBakani,
-    },
-    {
-        id: 154,
-        question: "Sayın Cumhurbaşkanım, sanayide enerji verimliliği düşüyor. Yenilenebilir enerji kaynaklarına mı yatırım yapalım, yoksa mevcut enerji altyapısını mı güçlendirelim?",
-        answers: [
-            {
-                text: "Yenilenebilir kaynaklara yatırım yapın",
-                effect: {
-                    publicSupport: +20,
-                    budget: -25,
-                    infrastructureAndEnvironment: +20,
-                }
-            },
-            {
-                text: "Kısa vadeli çözümler düşünün",
-                effect: {
-                    publicSupport: +5,
-                    budget: -15,
-                    infrastructureAndEnvironment: -20,
-                }
-            }
-        ],
-        title: "Sanayi ve Teknoloji Bakanı",
-        photo: sanayiBakani,
-    }
 ];

@@ -26,33 +26,7 @@ export const ulastirmaQuestions = [
         ],
         title: "Ulaştırma Bakanı",
         photo: ulastirmaBakani,
-    },
-
-    {
-        id: 91,
-        question: "Sayın Cumhurbaşkanım, kırsal bölgelerde ulaşım altyapısı yetersiz. Yeni yollar mı inşa edelim yoksa mevcut yolları mı onaralım?",
-        answers: [
-            {
-                text: "Yeni yollar inşa edin, kırsal bölgeleri birbirine bağlayın.",
-                effect: {
-                    publicSupport: +15,
-                    budget: -25,
-                    infrastructureAndEnvironment: +20,
-                    internalSecurity: +10,
-                }
-            },
-            {
-                text: "Mevcut yolları onarın, maliyetleri düşük tutalım.",
-                effect: {
-                    publicSupport: +10,
-                    budget: -10,
-                    infrastructureAndEnvironment: +10,
-                    internalSecurity: +5,
-                }
-            }
-        ],
-        title: "Ulaştırma Bakanı",
-        photo: ulastirmaBakani,
+        link: "https://www.youtube.com/watch?v=AkHkTCZMPlU"
     },
     {
         id: 92,
@@ -77,30 +51,7 @@ export const ulastirmaQuestions = [
         ],
         title: "Ulaştırma Bakanı",
         photo: ulastirmaBakani,
-    },
-    {
-        id: 93,
-        question: "Sayın Cumhurbaşkanım, limanlarımızda kapasite sorunları yaşanıyor. Yeni limanlar mı inşa edelim, yoksa mevcut limanları mı genişletelim?",
-        answers: [
-            {
-                text: "Yeni limanlar inşa edin, deniz ticaretini geliştirelim.",
-                effect: {
-                    publicSupport: +15,
-                    budget: -30,
-                    infrastructureAndEnvironment: +25,
-                }
-            },
-            {
-                text: "Mevcut limanları genişletin, daha düşük maliyetle kapasiteyi artırın.",
-                effect: {
-                    publicSupport: +10,
-                    budget: -15,
-                    infrastructureAndEnvironment: +15,
-                }
-            }
-        ],
-        title: "Ulaştırma Bakanı",
-        photo: ulastirmaBakani,
+        link: "https://www.tcdd.gov.tr/projeler"
     },
     {
         id: 94,
@@ -125,5 +76,6 @@ export const ulastirmaQuestions = [
         ],
         title: "Ulaştırma Bakanı",
         photo: ulastirmaBakani,
+        link: "https://www.ekonomim.com/sektorler/teknoloji/en-yavas-internette-iki-yildir-oecd-lideriyiz-haberi-763792#:~:text=T%C3%BCrkiye%2C%20son%20iki%20y%C4%B1ld%C4%B1r%20Ekonomik,te%2030%2C2%20mbps%20oldu."
     }
 ];

@@ -26,6 +26,7 @@ export const enerjiQuestions = [
         ],
         title: "Enerji ve Tabii Kaynaklar Bakanı",
         photo: enerjiBakani,
+        link: "https://www.aa.com.tr/tr/ekonomi/turkiye-gelecek-yil-yenilenebilir-enerji-yatirimlarinda-vites-yukseltecek/3381264"
     },
     {
         id: 131,
@@ -50,6 +51,7 @@ export const enerjiQuestions = [
         ],
         title: "Enerji ve Tabii Kaynaklar Bakanı",
         photo: enerjiBakani,
+        link: "https://www.youtube.com/watch?v=eLU0BmTuZPg"
     },
     {
         id: 132,
@@ -76,6 +78,7 @@ export const enerjiQuestions = [
         ],
         title: "Enerji ve Tabii Kaynaklar Bakanı",
         photo: enerjiBakani,
+        link: "https://www.yirmidort.tv/ekonomi/bakan-bayraktar-enerjiden-yillik-720-milyon-lira-tasarruf-saglayacagiz-189415"
     },
     {
         id: 133,
@@ -102,6 +105,7 @@ export const enerjiQuestions = [
         ],
         title: "Enerji ve Tabii Kaynaklar Bakanı",
         photo: enerjiBakani,
+        link: "https://www.botas.gov.tr/Icerik/botastan-romanyaya-dogal-gaz/841"
     },
     {
         id: 134,
@@ -128,5 +132,6 @@ export const enerjiQuestions = [
         ],
         title: "Enerji ve Tabii Kaynaklar Bakanı",
         photo: enerjiBakani,
+        link: "https://yesilgazete.org/halk-nukleeri-de-fuarini-da-istemiyor-nukleer-fuar-zirvasindan-vazgecin/"
     }
 ];

@@ -24,6 +24,7 @@ export const calismaQuestions = [
         ],
         title: "Çalışma ve Sosyal Güvenlik Bakanı",
         photo: calismaBakani,
+        link: "https://www.pigenclikdernegi.org/tr/kurumsal-haberler/turkiyede-issizlik-orani-temmuzda-yillik-bazda-yuzde-134-oldu/"
     },
     {
         id: 21,
@@ -50,6 +51,7 @@ export const calismaQuestions = [
         ],
         title: "Çalışma ve Sosyal Güvenlik Bakanı",
         photo: calismaBakani,
+        link: "https://tr.wikipedia.org/wiki/T%C3%BCrkiye%27de_asgari_%C3%BCcret"
     },
     {
         id: 23,
@@ -74,5 +76,6 @@ export const calismaQuestions = [
         ],
         title: "Çalışma ve Sosyal Güvenlik Bakanı",
         photo: calismaBakani,
+        link: "https://data.tuik.gov.tr/Bulten/Index?p=Ic-Goc-Istatistikleri-2021-45869"
     },
 ];

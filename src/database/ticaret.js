@@ -2,36 +2,11 @@ import ticaretBakani from "../../public/ministers/ticaret-bakani.png";
 
 export const ticaretQuestions = [
     {
-        id: 80,
-        question: "Sayın Cumhurbaşkanım, ihracatımız son dönemde artıyor ancak rekabet edebilmemiz için ihracat yapan şirketlere daha fazla teşvik vermemiz gerekiyor.",
-        answers: [
-            {
-                text: "İhracat teşviklerini artırın.",
-                effect: {
-                    publicSupport: +10,
-                    budget: -20,
-                    internationalRelations: +20,
-                }
-            },
-            {
-                text: "Mevcut teşviklerle devam edin.",
-                effect: {
-                    publicSupport: -10,
-                    budget: +20,
-                    internationalRelations: -20,
-                }
-            }
-        ],
-        title: "Ticaret Bakanı",
-        photo: ticaretBakani,
-    },
-
-    {
         id: 81,
-        question: "Sayın Cumhurbaşkanım, yerel esnaf büyük perakende zincirleri tarafından zor durumda bırakılıyor.",
+        question: "Sayın Cumhurbaşkanım, büyük perakende zincirleri doları bahane ederek ekstra zamlar yapıyor.",
         answers: [
             {
-                text: "Yerel esnafı koruyacağız",
+                text: "Marketleri denetleyin",
                 effect: {
                     publicSupport: +10,
                     budget: +20,
@@ -39,7 +14,7 @@ export const ticaretQuestions = [
                 }
             },
             {
-                text: "Büyük zincirlerin büyümesini engellemeyin",
+                text: "Büyük zincirlerin büyümesini engellememeliyiz",
                 effect: {
                     publicSupport: -10,
                     budget: -20,
@@ -49,6 +24,7 @@ export const ticaretQuestions = [
         ],
         title: "Ticaret Bakanı",
         photo: ticaretBakani,
+        link: "https://www.bloomberght.com/rekabet-kurumu-zincir-marketlere-ceza-yagdirdi-2291000"
     },
     {
         id: 82,
@@ -97,6 +73,7 @@ export const ticaretQuestions = [
         ],
         title: "Ticaret Bakanı",
         photo: ticaretBakani,
+        link: "https://www.tarimdunyasi.net/2024/08/08/gida-fiyatlari-neden-dusmuyor/"
     },
     {
         id: 84,
@@ -121,5 +98,6 @@ export const ticaretQuestions = [
         ],
         title: "Ticaret Bakanı",
         photo: ticaretBakani,
+        link: "https://www.bloomberght.com/dokuz-ayin-en-yuksek-dis-ticaret-acigi-2353873"
     }
 ];

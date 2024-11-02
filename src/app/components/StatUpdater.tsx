@@ -15,6 +15,7 @@ type Props = {
     international: number;
     currency: number;
     publicSupport: number;
+    score: number;
 };
 
 const StatUpdater: React.FC<Props> = ({
@@ -24,6 +25,7 @@ const StatUpdater: React.FC<Props> = ({
     international,
     currency,
     publicSupport,
+    score
 }) => {
 
     const statColors = {
@@ -42,7 +44,7 @@ const StatUpdater: React.FC<Props> = ({
     });
 
     return (
-        <div className="flex w-full md:gap-7 gap-2 sm:rounded-t-lg justify-center p-2 border-gray-400 bg-white border-[1px] sm:rounded-xl rounded lg:w-[905px]">
+        <div className="flex w-full md:gap-7 gap-2 sm:rounded-t-lg justify-center p-2 border-gray-400 bg-white border-[1px] sm:rounded-xl rounded lg:w-[1060px]">
 
             <div className="relative flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl md:w-[13%] w-[15%] text-center bg-[rgb(220,255,222)] sm:h-auto h-[80px]">
                 <span className="md:text-base sm:text-xs sm:block hidden">Tarım</span>
@@ -103,6 +105,15 @@ const StatUpdater: React.FC<Props> = ({
                     <Image src={publicSupportIcon} alt="Public Opinion" width={65} height={65} className="z-50 sm:w-[60px] sm:h-[60px] w-8 h-8" />
                 </div>
             </div>
+
+            <div className="relative flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl md:w-[13%] w-[15%] text-center bg-[rgb(255,243,224)] sm:h-auto h-[80px]">
+                <span className="md:text-base sm:text-xs sm:block hidden">Yönetilen Gün</span>
+                <div className="flex w-full h-20 sm:border-[1px] border-gray-400 relative overflow-hidden sm:mt-2 sm:rounded justify-center items-center bg-white">
+                    <div className="absolute bottom-0 left-0 w-full" />
+                    <span className="z-50 sm:w-[60px] sm:h-[60px] w-8 h-8 flex items-center justify-center">{score}</span>
+                </div>
+            </div>
+
         </div>
     );
 };
