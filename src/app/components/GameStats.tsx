@@ -25,7 +25,7 @@ export const GameStats = () => {
     const [currentQuestion, setCurrentQuestion] = useState(allQuestions[0]);
     const [gameOver, setGameOver] = useState(false);
     const [gameOverReason, setGameOverReason] = useState("");
-
+    const [deathStat, setDeathStat] = useState<string | null>(null); // Sıfırlanan stat adı
     const [score, setScore] = useState(0);
 
     const soundFiles = [
@@ -91,12 +91,30 @@ export const GameStats = () => {
         const isGameOver = checkGameOver(publicOpinion, internalSecurity, international, budget, infrastructure, agriculture);
         if (isGameOver) {
             setGameOver(true);
-            if (publicOpinion <= 1) setGameOverReason("Halkın güvenini kaybettiniz. Muhalefetin de erken seçim talebine boyun eğerek seçimlere gitmek zorunda kaldınız. Seçimleri kaybettiniz!");
-            else if (internalSecurity <= 1) setGameOverReason("İç güvenlik zafiyeti nedeniyle ülke kaosa sürüklendi. Güvenlik olmadan istikrar sağlanamadı!");
-            else if (international <= 1) setGameOverReason("Dış politikayı yönetemediniz. Ülkenin küresel arenadaki itibarı sıfırlandı!");
-            else if (budget <= 1) setGameOverReason("Bütçe kaynakları tükendi ve ekonomik kriz kaçınılmaz oldu. Mali dengeyi sağlayamadığınız için yönetim sona erdi!");
-            else if (infrastructure <= 1) setGameOverReason("Altyapı ve çevre sorunları çözülemedi ve temel hizmetler sağlanamaz hale geldi!");
-            else if (agriculture <= 1) setGameOverReason("Tarım üretimi azaldı ve gıda krizi ortaya çıktı. Ülke halkının ihtiyaçlarını karşılayamıyorsunuz!");
+            if (publicOpinion <= 1) {
+                setDeathStat("publicOpinion");
+                setGameOverReason("Halkın güvenini kaybettiniz. Muhalefetin de erken seçim talebine boyun eğerek seçimlere gitmek zorunda kaldınız. Seçimleri kaybettiniz!");
+            }
+            else if (internalSecurity <= 1) {
+                setDeathStat("internalSecurity");
+                setGameOverReason("İç güvenlik zafiyeti nedeniyle ülke kaosa sürüklendi. Güvenlik olmadan istikrar sağlanamadı!");
+            }
+            else if (international <= 1) {
+                setDeathStat("international");
+                setGameOverReason("Dış politikayı yönetemediniz. Ülkenin küresel arenadaki itibarı sıfırlandı!");
+            }
+            else if (budget <= 1) {
+                setDeathStat("budget");
+                setGameOverReason("Bütçe kaynakları tükendi ve ekonomik kriz kaçınılmaz oldu. Mali dengeyi sağlayamadığınız için yönetim sona erdi!");
+            }
+            else if (infrastructure <= 1) {
+                setDeathStat("infrastructure");
+                setGameOverReason("Altyapı ve çevre sorunları çözülemedi ve temel hizmetler sağlanamaz hale geldi!");
+            }
+            else if (agriculture <= 1) {
+                setDeathStat("agriculture");
+                setGameOverReason("Tarım üretimi azaldı ve gıda krizi ortaya çıktı. Ülke halkının ihtiyaçlarını karşılayamıyorsunuz!");
+            }
         }
     }, [publicOpinion, internalSecurity, international, budget, infrastructure, agriculture, score]);
 
@@ -148,6 +166,7 @@ export const GameStats = () => {
         setGameOver(false);
         setGameOverReason("");
         setScore(0);
+        setDeathStat(null);
     };
 
     // Oyun bittiyse oyunun son ekranını göster
@@ -162,7 +181,7 @@ export const GameStats = () => {
                     currency={budget}
                     publicSupport={publicOpinion}
                     score={score}
-
+                    deathLayerStat={deathStat}
                 />
                 <div className="question-container visible text-center gap-[30px] bg-white p-2 rounded-lg w-full border-gray-400 border-[1px] flex items-center flex-col sm:min-h-[547px] h-[430px]">
                     <h1 className="md:text-xl sm:text-base text-sm min-h-[110px] flex flex-col justify-center w-5/6">{gameOverReason}</h1>
@@ -186,6 +205,7 @@ export const GameStats = () => {
                     currency={budget}
                     publicSupport={publicOpinion}
                     score={score}
+                    deathLayerStat={null}
                 />
                 <div className="flex flex-col items-center text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[547px] h-[430px] border-gray-400 border-[1px] lg:w-[1060px]">
                     <h1 className="md:text-xl sm:text-base text-sm min-h-[110px] flex flex-col justify-center w-5/6">Başardın! Türkiyeyi son nefesine kadar yönetebildin. Huzur içinde ölebilirsin.</h1>
@@ -209,6 +229,7 @@ export const GameStats = () => {
                 currency={budget}
                 publicSupport={publicOpinion}
                 score={score}
+                deathLayerStat={null}
             />
 
             {/* link ekle */}
