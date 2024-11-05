@@ -233,7 +233,7 @@ export const GameStats = () => {
             />
 
             {/* link ekle */}
-            {currentQuestion && currentQuestion.link ? (
+            {currentQuestion?.link ? (
                 <button
                     className="absolute top-3 right-3"
                     onClick={() => window.open(currentQuestion.link, '_blank')}
@@ -247,8 +247,8 @@ export const GameStats = () => {
 
             {/* Question display */}
             {currentQuestion ? (
-                <div className={`question-container ${isVisible ? 'visible' : ''} text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[560px] h-[430px] border-gray-400 border-[1px] lg:w-[1060px] flex flex-col justify-center items-center`}>
-                    <div className="flex justify-center items-center font-aldrich md:text-xl sm:text-base text-sm min-h-[110px] flex-col w-5/6">
+                <div className={`question-container ${isVisible ? 'visible' : ''} text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[430px] border-gray-400 border-[1px] lg:w-[1060px] flex flex-col justify-start items-center`}>
+                    <div className="flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs">
                         <ReactTyped
                             strings={[currentQuestion.question]}
                             typeSpeed={10}
@@ -258,7 +258,7 @@ export const GameStats = () => {
                     </div>
 
                     {currentQuestion.photo && currentQuestion.title && (
-                        <div className="flex flex-col items-center mt-4 gap-4 justify-center">
+                        <div className="flex flex-col items-center mt-2 gap-2 justify-center">
                             <Image
                                 width={567} height={320}
                                 src={
@@ -283,7 +283,7 @@ export const GameStats = () => {
             {currentQuestion && (
                 <div className="flex sm:flex-row flex-col justify-center rounded-lg bg-white border-gray-400 border-[1px] lg:w-[1060px] w-full sm:gap-5 gap-2 p-2.5 items-center">
                     <Button
-                        className="sm:w-80 w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800 md:text-sm text-xs"
+                        className="sm:w-[26rem] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800 md:text-sm text-xs"
                         onClick={() => answerQuestion("left")}
                     >
                         <ReactTyped
@@ -295,7 +295,7 @@ export const GameStats = () => {
                     </Button>
 
                     <Button
-                        className="sm:w-80 w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800 md:text-sm text-xs"
+                        className="sm:w-[26rem] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800 md:text-sm text-xs"
                         onClick={() => answerQuestion("right")}
                     >
                         <ReactTyped

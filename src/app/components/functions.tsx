@@ -105,22 +105,22 @@ export const updateStats = (
     setFunctions: SetFunctions
 ) => {
     if (typeof effect.publicSupport === "number") {
-        setFunctions.setPublicSupport((prev) => Math.max(0, prev + (effect.publicSupport ?? 0)));
+        setFunctions.setPublicSupport((prev) => Math.min(100, Math.max(0, prev + (effect.publicSupport ?? 0))));
     }
     if (typeof effect.internalSecurity === "number") {
-        setFunctions.setInternalSecurity((prev) => Math.max(0, prev + (effect.internalSecurity ?? 0)));
+        setFunctions.setInternalSecurity((prev) => Math.min(100, Math.max(0, prev + (effect.internalSecurity ?? 0))));
     }
     if (typeof effect.internationalRelations === "number") {
-        setFunctions.setInternational((prev) => Math.max(0, prev + (effect.internationalRelations ?? 0)));
+        setFunctions.setInternational((prev) => Math.min(100, Math.max(0, prev + (effect.internationalRelations ?? 0))));
     }
     if (typeof effect.budget === "number") {
-        setFunctions.setBudget((prev) => Math.max(0, prev + (effect.budget ?? 0)));
+        setFunctions.setBudget((prev) => Math.min(100, Math.max(0, prev + (effect.budget ?? 0))));
     }
     if (typeof effect.infrastructureAndEnvironment === "number") {
-        setFunctions.setInfrastructure((prev) => Math.max(0, prev + (effect.infrastructureAndEnvironment ?? 0)));
+        setFunctions.setInfrastructure((prev) => Math.min(100, Math.max(0, prev + (effect.infrastructureAndEnvironment ?? 0))));
     }
     if (typeof effect.agriculturalProduction === "number") {
-        setFunctions.setAgriculture((prev) => Math.max(0, prev + (effect.agriculturalProduction ?? 0)));
+        setFunctions.setAgriculture((prev) => Math.min(100, Math.max(0, prev + (effect.agriculturalProduction ?? 0))));
     }
 };
 

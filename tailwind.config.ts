@@ -11,6 +11,7 @@ const config: Config = {
 		extend: {
 			fontFamily: {
 				aldrich: ["Aldrich", "sans-serif"],
+				times: ['Times New Roman', 'sans-serif'],
 			},
 			colors: {
 				background: 'hsl(var(--background))',

@@ -4,10 +4,10 @@ import mainPic from "../../public/ministers/main.png";
 export const adaletQuestions = [
     {
         id: 1,
-        question: "Türkiye Simülasyonu başlıyor. Hazır Mısın ?",
+        question: "Son seçimlerde %51 ile sen seçildin! Yönetmeye hazır mısın?",
         answers: [
             {
-                text: "Hadi Başlayalım",
+                text: "Hadi Başlayalım!",
                 effect: {
                 }
             },
@@ -27,15 +27,16 @@ export const adaletQuestions = [
             {
                 text: "Doğru karar, adli makamlardan kimsenin şüphesi olmasın!",
                 effect: {
-                    internalSecurity: +20,
-                    publicSupport: +20,
-                }
+                    internalSecurity: -20,
+                    publicSupport: -20,
+                },
+                hoverImg: mainPic,
             },
             {
                 text: "Yoksa birileri rüşvet mi aldı? Derhal araştırın!",
                 effect: {
-                    internalSecurity: -20,
-                    publicSupport: -20,
+                    internalSecurity: +20,
+                    publicSupport: +20,
                 }
             }
         ],
@@ -48,19 +49,19 @@ export const adaletQuestions = [
         question: "İstanbul Sözleşmesi ülke gündemine oturdu. Bazı kesimler kadınları korumak adına bu sözleşmeyi desteklerken, bazıları ise aile yapısını bozduğunu iddia ediyor.",
         answers: [
             {
-                text: "Biz Osmanlı torunuyuz. Elin gavurunun sözleşmesinden bize ne?",
+                text: "Biz Osmanlı torunuyuz. Gavurun sözleşmesinden bize ne?",
                 effect: {
-                    internalSecurity: +20,
-                    publicSupport: +20,
-                    budget: -20,
+                    internalSecurity: -20,
+                    publicSupport: -20,
+                    budget: +20,
                 }
             },
             {
                 text: "Kadınlarımızın haklarını korumak adına bu sözleşmeyi destekleyeceğiz!",
                 effect: {
-                    internalSecurity: -20,
-                    publicSupport: -20,
-                    budget: +20,
+                    internalSecurity: +20,
+                    publicSupport: +20,
+                    budget: -20,
                 }
             }
         ],
@@ -70,7 +71,7 @@ export const adaletQuestions = [
     },
     {
         id: 4,
-        question: "İstanbul,Ankara gibi büyük şehirlerde suç oranları artıyor. Halk güvenliğinden endişe ediyor.",
+        question: "İstanbul,Ankara gibi büyük şehirlerde suç oranları artıyor. Halk güvenliğinden endişeli.",
         answers: [
             {
                 text: "Polis teşkilatını güçlendirin ve suçlulara sert cezalar verin.",
@@ -81,11 +82,11 @@ export const adaletQuestions = [
                 }
             },
             {
-                text: "Sosyal projeler üzerine çalışın ve suç oranlarını düşürün.",
+                text: "Hangi ilçeler bize oy vermişti?",
                 effect: {
-                    internalSecurity: -20,
-                    publicSupport: -20,
-                    budget: +20,
+                    internalSecurity: -10,
+                    publicSupport: -10,
+                    budget: -10,
                 }
             }
         ],
@@ -100,18 +101,16 @@ export const adaletQuestions = [
             {
                 text: "En iyi bildiğimiz şeyi yapalım. İNŞAAT!",
                 effect: {
-                    internalSecurity: +20,
+                    internalSecurity: +10,
                     budget: -20,
-                    publicSupport: +20,
                     infrastructureAndEnvironment: +20,
                 }
             },
             {
-                text: "Şu an bütçemiz kaldırmaz. Hem o kadar suçlu yoktur.",
+                text: "Şu an bütçemiz kaldırmaz.",
                 effect: {
-                    internalSecurity: +20,
+                    internalSecurity: -20,
                     budget: +20,
-                    publicSupport: -20,
                     infrastructureAndEnvironment: -20,
                 }
             }
@@ -120,5 +119,4 @@ export const adaletQuestions = [
         photo: adaletBakanı,
         link: "https://tr.euronews.com/2023/05/28/turkiye-avrupada-nufusa-gore-cezaevlerindeki-mahpus-oraninda-ilk-sirada"
     },
-
 ];

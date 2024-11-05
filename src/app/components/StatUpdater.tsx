@@ -1,3 +1,4 @@
+import { animated, useSpring } from "@react-spring/web";
 import agricultureIcon from "../../../public/stats-logo/agriculture-icon-removebg-preview.png";
 import infrastructureIcon from "../../../public/stats-logo/infrastructure-icon.png";
 import internalSecurityIcon from "../../../public/stats-logo/internal-security-icon.png";
@@ -43,12 +44,21 @@ const StatUpdater: React.FC<Props> = ({
         transition: "height 1s ease",
     });
 
-    return (
-        <div className="flex w-full md:gap-7 gap-2 sm:rounded-t-lg justify-center p-2 border-gray-400 bg-white border-[1px] sm:rounded-xl rounded lg:w-[1060px]">
+    const animatedAgriculture = useSpring({ number: agriculture, config: { duration: 1000 } });
+    const animatedInfrastructure = useSpring({ number: infrastructure, config: { duration: 1000 } });
+    const animatedInternalSecurity = useSpring({ number: internalSecurity, config: { duration: 1000 } });
+    const animatedInternational = useSpring({ number: international, config: { duration: 1000 } });
+    const animatedCurrency = useSpring({ number: currency, config: { duration: 1000 } });
+    const animatedPublicSupport = useSpring({ number: publicSupport, config: { duration: 1000 } });
+    const animatedScore = useSpring({ number: score, config: { duration: 1000 } });
 
-            <div className="flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl md:w-[13%] w-[15%] text-center bg-[rgb(220,255,222)] sm:h-auto h-[80px]">
-                <span className="md:text-base sm:text-xs sm:block hidden">Tarım</span>
+    return (
+        <div className="flex w-full md:gap-2 gap-2 sm:rounded-t-lg justify-center p-2 border-gray-400 bg-white border-[1px] sm:rounded-xl rounded lg:w-[1060px]">
+
+            <div className="flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl w-[15%] text-center bg-[rgb(220,255,222)] sm:h-[150px] h-[80px]">
+                <span className="md:text-sm sm:text-xs sm:block hidden">Tarım</span>
                 <div className="flex w-full h-20 relative overflow-hidden sm:mt-2 sm:rounded justify-center items-center bg-white">
+                    <animated.p className="absolute z-10 bottom-0 right-[2px]">{animatedAgriculture.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "agriculture" && (
                         <Image src="/stats-logo/red-cross.png" alt="red-cross" width={100} height={100} className="absolute z-50" />
                     )}
@@ -59,9 +69,11 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className="flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl md:w-[13%] w-[15%] text-center bg-[rgb(255,243,224)] sm:h-auto h-[80px]">
-                <span className="md:text-base sm:text-xs sm:block hidden">Altyapı</span>
+            <div className="flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl w-[15%] text-center bg-[rgb(255,243,224)] sm:h-[150px] h-[80px]">
+                <span className="md:text-sm sm:text-xs sm:block hidden">Altyapı</span>
                 <div className="flex w-full h-20 sm:border-[1px] border-gray-400 relative overflow-hidden sm:mt-2 sm:rounded justify-center items-center bg-white">
+
+                    <animated.p className="absolute z-10 bottom-0 right-[2px]">{animatedInfrastructure.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "infrastructure" && (
                         <Image src="/stats-logo/red-cross.png" alt="red-cross" width={100} height={100} className="absolute z-50" />
                     )}
@@ -72,14 +84,13 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className=" flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl md:w-[13%] w-[15%] text-center bg-[#ffe3e0] sm:h-auto h-[80px]">
-                <span className="md:text-base sm:text-xs sm:block hidden">İç Güvenlik</span>
+            <div className=" flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl w-[15%] text-center bg-[#ffe3e0] sm:h-[150px] h-[80px]">
+                <span className="md:text-sm sm:text-xs sm:block hidden">İç Güvenlik</span>
                 <div className="flex w-full h-20 sm:border-[1px] border-gray-400 relative overflow-hidden sm:mt-2 sm:rounded justify-center items-center bg-white">
-
+                    <animated.p className="absolute z-10 bottom-0 right-[2px]">{animatedInternalSecurity.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "internalSecurity" && (
                         <Image src="/stats-logo/red-cross.png" alt="red-cross" width={100} height={100} className="absolute z-50" />
                     )}
-
                     <div className="absolute bottom-0 left-0 w-full"
                         style={getBarStyle(internalSecurity, statColors.internalSecurity)}
                     />
@@ -87,14 +98,13 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className=" flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl md:w-[13%] w-[15%] text-center bg-[#faddff] sm:h-auto h-[80px]">
-                <span className="md:text-base sm:text-xs sm:block hidden">Dış Politika</span>
+            <div className=" flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl w-[15%] text-center bg-[#faddff] sm:h-[150px] h-[80px]">
+                <span className="md:text-sm sm:text-xs sm:block hidden">Dış Politika</span>
                 <div className="flex w-full h-20 sm:border-[1px] border-gray-400 relative overflow-hidden sm:mt-2 sm:rounded justify-center items-center bg-white">
-
+                    <animated.p className="absolute z-10 bottom-0 right-[2px]">{animatedInternational.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "international" && (
                         <Image src="/stats-logo/red-cross.png" alt="red-cross" width={100} height={100} className="absolute z-50" />
                     )}
-
                     <div className="absolute bottom-0 left-0 w-full"
                         style={getBarStyle(international, statColors.international)}
                     />
@@ -102,16 +112,13 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className=" flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl md:w-[13%] w-[15%] text-center bg-[#d5f9ff] sm:h-auto h-[80px]">
-                <span className="md:text-base sm:text-xs sm:block hidden">Bütçe</span>
+            <div className=" flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl w-[15%] text-center bg-[#d5f9ff] sm:h-[150px] h-[80px]">
+                <span className="md:text-sm sm:text-xs sm:block hidden">Bütçe</span>
                 <div className="flex w-full h-20 sm:border-[1px] border-gray-400 relative overflow-hidden sm:mt-2 sm:rounded justify-center items-center bg-white">
-
-                    {/* {deathLayer && <div className="w-full h-full absolute z-50">
-                        <Image className="z-999 relative" src="/stats-logo/red-cross.png" alt="red-cross" width={100} height={100} /></div>} */}
+                    <animated.p className="absolute z-10 bottom-0 right-[2px]">{animatedCurrency.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "budget" && (
                         <Image src="/stats-logo/red-cross.png" alt="red-cross" width={100} height={100} className="absolute z-50" />
                     )}
-
                     <div className="absolute bottom-0 left-0 w-full"
                         style={getBarStyle(currency, statColors.currency)}
                     />
@@ -119,14 +126,13 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className=" flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl md:w-[13%] w-[15%] text-center bg-[#d9dfff] sm:h-auto h-[80px]">
-                <span className="md:text-base sm:text-xs sm:block hidden">Halk Desteği</span>
+            <div className=" flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl w-[15%] text-center bg-[#d9dfff] sm:h-[150px] h-[80px]">
+                <span className="md:text-sm sm:text-xs sm:block hidden">Halk Desteği</span>
                 <div className="flex w-full h-20 sm:border-[1px] border-gray-400 relative overflow-hidden sm:mt-2 sm:rounded justify-center items-center bg-white">
-
+                    <animated.p className="absolute z-10 bottom-0 right-[2px]">{animatedPublicSupport.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "publicOpinion" && (
                         <Image src="/stats-logo/red-cross.png" alt="red-cross" width={100} height={100} className="absolute z-50" />
                     )}
-
                     <div className="absolute bottom-0 left-0 w-full z-0"
                         style={getBarStyle(publicSupport, statColors.publicSupport)}
                     />
@@ -134,14 +140,13 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className=" flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl md:w-[13%] w-[15%] text-center bg-[rgb(255,243,224)] sm:h-auto h-[80px]">
-                <span className="md:text-base sm:text-xs sm:block hidden">Yönetilen Gün</span>
+            <div className=" flex flex-col items-center justify-between sm:p-2 border-gray-400 border-[1px] sm:rounded-xl w-[15%] text-center bg-[rgb(255,243,224)] sm:h-[150px] h-[80px]">
+                <span className="md:text-sm sm:text-xs sm:block hidden">Gün Sayısı</span>
                 <div className="flex w-full h-20 sm:border-[1px] border-gray-400 relative overflow-hidden sm:mt-2 sm:rounded justify-center items-center bg-white">
                     <div className="absolute bottom-0 left-0 w-full" />
-                    <span className="z-50 sm:w-[60px] sm:h-[60px] w-8 h-8 flex items-center justify-center">{score}</span>
+                    <animated.p className="z-50 sm:w-[60px] sm:h-[60px] w-8 h-8 flex items-center justify-center">{animatedScore.number.to(n => n.toFixed(0))}</animated.p>
                 </div>
             </div>
-
         </div>
     );
 };

@@ -3,21 +3,21 @@ import calismaBakani from "../../public/ministers/calisma-bakani.png";
 export const calismaQuestions = [
     {
         id: 20,
-        question: "İşsizlik oranı artıyor ve gençler iş bulmakta zorlanıyor. Ne yapmalıyız?",
+        question: "İşsizlik oranları artıyor ve gençler iş bulmakta zorlanıyor. Ülkenin parlak beyinleri yurtdışına gitmek için birbirini yiyecek hale gelmiş. Ne yapmalıyız?",
         answers: [
             {
                 text: "Devlet destekli iş bulma programları başlatın.",
                 effect: {
                     publicSupport: +20,
-                    budget: -20,
+                    budget: +10,
                     internalSecurity: +10,
                 }
             },
             {
-                text: "işverenlere vergi indirimleri yapacağız.",
+                text: "işverenlere vergi indirimleri yapın.",
                 effect: {
                     publicSupport: -20,
-                    budget: +20,
+                    budget: -20,
                     internalSecurity: -10,
                 }
             }
