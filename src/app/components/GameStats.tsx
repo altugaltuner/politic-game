@@ -5,7 +5,7 @@ import { allQuestions, getRandomQuestion, updateStats, checkGameOver } from "./f
 import { Button } from "@/components/ui/button"
 import Image from "next/image";
 import deathIcon from "../../../public/ministers/skulls-bones.png";
-import victoryImg from "../../../public/ministers/victory.png";
+import victoryImg from "../../../public/images/victory.png";
 import { FiAlertCircle } from "react-icons/fi";
 import { ReactTyped } from "react-typed";
 
@@ -183,9 +183,11 @@ export const GameStats = () => {
                     score={score}
                     deathLayerStat={deathStat}
                 />
-                <div className="question-container visible text-center gap-[30px] bg-white p-2 rounded-lg w-full border-black border-[3px] flex items-center flex-col sm:min-h-[547px] h-[350px]">
-                    <h1 className="md:text-xl sm:text-base text-sm min-h-[110px] flex flex-col justify-center w-5/6">{gameOverReason}</h1>
-                    <Image src={deathIcon} width={500} alt="Oyun Bitti" className="border-[1px] border-black max-h-[13rem] rounded" />
+                <div className="question-container visible text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[350px] border-black border-[5px] lg:w-[1060px] flex flex-col justify-start items-center">
+                    <div className="flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs">
+                        <h1 className="bg-primary text-white py-1 px-2 rounded-2xl ">{gameOverReason}</h1>
+                    </div>
+                    <Image src={deathIcon} width={500} alt="Oyun Bitti" className="w-full lg:h-[22rem] rounded-lg" />
                 </div>
                 <Button className="w-auto h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800" onClick={restartGame}>
                     Tekrar Oyna
@@ -208,7 +210,7 @@ export const GameStats = () => {
                     deathLayerStat={null}
                 />
                 <div className="flex flex-col items-center text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[547px] h350px] border-black border-[1px] lg:w-[1060px]">
-                    <h1 className="md:text-xl sm:text-base text-sm min-h-[110px] flex flex-col justify-center w-5/6">Başardın! Türkiyeyi son nefesine kadar yönetebildin. Huzur içinde ölebilirsin.</h1>
+                    <h1 className=" bg-primary text-white py-1 px-2 rounded-2xl">Başardın! Türkiyeyi son nefesine kadar yönetebildin. Huzur içinde ölebilirsin.</h1>
                     <Image src={victoryImg} alt="Oyun Bitti" className="my-4 h-[15rem] sm:w-[567px] w-[355px]" />
                     <Button className=" h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800" onClick={restartGame}>
                         Tekrar Oyna
@@ -247,7 +249,7 @@ export const GameStats = () => {
 
             {/* Question display */}
             {currentQuestion ? (
-                <div className={`question-container ${isVisible ? 'visible' : ''} text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[350px] border-black border-[3px] lg:w-[1060px] flex flex-col justify-start items-center`}>
+                <div className={`question-container ${isVisible ? 'visible' : ''} text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[350px] border-black border-[5px] lg:w-[1060px] flex flex-col justify-start items-center`}>
                     <div className="flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs">
                         <ReactTyped
                             strings={[currentQuestion.question]}
@@ -284,7 +286,7 @@ export const GameStats = () => {
             {currentQuestion && (
                 <div className="flex sm:flex-row flex-col justify-center rounded-lg bg-white border-black border-[1px] lg:w-[1060px] w-full sm:gap-5 gap-2 p-2.5 items-center">
                     <Button
-                        className="sm:w-[26rem] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800 md:text-sm text-xs"
+                        className="sm:w-[26rem] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs"
                         onClick={() => answerQuestion("left")}
                     >
                         <ReactTyped
@@ -296,7 +298,7 @@ export const GameStats = () => {
                     </Button>
 
                     <Button
-                        className="sm:w-[26rem] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800 md:text-sm text-xs"
+                        className="sm:w-[26rem] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs"
                         onClick={() => answerQuestion("right")}
                     >
                         <ReactTyped

@@ -48,7 +48,7 @@ export const adaletQuestions = [
         question: "İstanbul Sözleşmesi ülke gündemine oturdu. Bazı kesimler kadınları korumak adına bu sözleşmeyi desteklerken, bazıları ise aile yapısını bozduğunu iddia ediyor.",
         answers: [
             {
-                text: "Biz Osmanlı torunuyuz. Gavurun sözleşmesinden bize ne?",
+                text: "Biz Osmanlı torunuyuz.Aile yapısını bozar bu.",
                 effect: {
                     internalSecurity: -20,
                     publicSupport: -20,
@@ -56,7 +56,7 @@ export const adaletQuestions = [
                 }
             },
             {
-                text: "Kadınlarımızın haklarını korumak adına bu sözleşmeyi destekleyeceğiz!",
+                text: "Kadınlarımızın haklarını korumak için sözleşmeyi destekleyeceğiz!",
                 effect: {
                     internalSecurity: +20,
                     publicSupport: +20,
