@@ -1,5 +1,5 @@
 import adaletBakanı from "../../public/ministers/adalet-bakani.png";
-import mainPic from "../../public/ministers/main.png";
+import altug from "../../public/ministers/altug.png";
 
 export const adaletQuestions = [
     {
@@ -18,7 +18,7 @@ export const adaletQuestions = [
             }
         ],
         title: "Altuğ",
-        photo: mainPic,
+        photo: altug,
     },
     {
         id: 2,
@@ -30,7 +30,6 @@ export const adaletQuestions = [
                     internalSecurity: -20,
                     publicSupport: -20,
                 },
-                hoverImg: mainPic,
             },
             {
                 text: "Yoksa birileri rüşvet mi aldı? Derhal araştırın!",

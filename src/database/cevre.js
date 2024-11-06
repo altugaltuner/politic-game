@@ -1,4 +1,4 @@
-import cevreBakani from "../../public/ministers/cevre-bakani.png";
+import cevreBakani from "../../public/ministers/cevre-sehir-bakani.png";
 
 export const cevreQuestions = [
     {
