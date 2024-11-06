@@ -9,7 +9,7 @@ export default function HomePage() {
     <div className="flex flex-col w-full justify-center items-center text-center h-[100vh] sm:p-3 p-2 relative">
       <div className="md:h-1/2 w-4/5 flex flex-col gap-3 justify-center items-center">
         <h1 className="font-bold text-[60px]">Cumhurbaşkanı Simulator</h1>
-        <p>Hiç, "Ülkenin başında ben olsaydım nasıl yönetirdim acaba" diye düşündüğünüz oldu mu ? <br />
+        <p>Hiç, &quot;Ülkenin başında ben olsaydım nasıl yönetirdim acaba&quot; diye düşündüğünüz oldu mu ? <br />
           Eğer cevabınız evetse bu simülasyon tam size göre ! <br />
         </p>
         <Button className="w-44" type="button" onClick={() => router.push('/game')}>
