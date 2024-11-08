@@ -8,6 +8,8 @@ import deathIcon from "../../../public/ministers/skulls-bones.png";
 import victoryImg from "../../../public/images/victory.png";
 import { FiAlertCircle } from "react-icons/fi";
 import { ReactTyped } from "react-typed";
+import { events } from "../../database/events";
+import { EventModal } from "./eventModal";
 
 // Component for Game Stats
 export const GameStats = () => {
@@ -20,13 +22,56 @@ export const GameStats = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [, setAudio] = useState<HTMLAudioElement | null>(null);
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const closeModal = () => setIsModalOpen(false);
+
+
+    const getRandomEventIndex = () => {
+        return Math.floor(Math.random() * events.length);
+    };
+    const [currentEvent, setCurrentEvent] = useState(events[getRandomEventIndex()]);
+    const [usedEvents, setUsedEvents] = useState<number[]>([]);
+
     // Set the first question as fixed
     const [usedQuestions, setUsedQuestions] = useState<number[]>([allQuestions[0].id]);
     const [currentQuestion, setCurrentQuestion] = useState(allQuestions[0]);
     const [gameOver, setGameOver] = useState(false);
     const [gameOverReason, setGameOverReason] = useState("");
-    const [deathStat, setDeathStat] = useState<string | null>(null); // Sıfırlanan stat adı
+    const [deathStat, setDeathStat] = useState<string | null>(null);
     const [score, setScore] = useState(0);
+
+    const getRandomEvent = (usedEvents: number[]) => {
+        if (usedQuestions.length > 4 && gameOver === false) {
+            const availableEvents = events.filter(
+                (event) => event.id !== undefined && !usedEvents.includes(event.id)
+            );
+
+            if (availableEvents.length === 0) {
+                return null;
+            }
+
+            const randomIndex = Math.floor(Math.random() * availableEvents.length);
+            return availableEvents[randomIndex];
+        }
+    };
+
+    const oneInTenChance = () => {
+        const boolean = Math.random() < 0.2;
+        return boolean;
+    };
+
+    useEffect(() => {
+        if (oneInTenChance()) {
+            const nextEvent = getRandomEvent(usedEvents);
+            if (nextEvent) {
+                setCurrentEvent(nextEvent);
+                setUsedEvents((prev) => [...prev, nextEvent.id]);
+                setIsModalOpen(true);
+            }
+        }
+    }, [agriculture, infrastructure, internalSecurity, international, budget, publicOpinion]);
+
+
 
     const soundFiles = [
         "/sound-effects/malecrowd-1.mp3",
@@ -183,11 +228,21 @@ export const GameStats = () => {
                     score={score}
                     deathLayerStat={deathStat}
                 />
-                <div className="question-container visible text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[350px] border-black border-[5px] lg:w-[1060px] flex flex-col justify-start items-center">
+                <div className="question-container visible text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[350px] border-black border-[3px] lg:w-[1100px] flex flex-col justify-start items-center">
                     <div className="flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs">
                         <h1 className="bg-primary text-white py-1 px-2 rounded-2xl ">{gameOverReason}</h1>
                     </div>
-                    <Image src={deathIcon} width={500} alt="Oyun Bitti" className="w-full lg:h-[22rem] rounded-lg" />
+                    <div className="flex flex-col items-center mt-2 gap-2 justify-center">
+                        {deathStat && (
+                            <Image
+                                src={`/images/${deathStat}.png`}
+                                width={1820}
+                                height={1024}
+                                alt="Oyun Bitti"
+                                className="w-full lg:h-[22rem] rounded-lg"
+                            />
+                        )}
+                    </div>
                 </div>
                 <Button className="w-auto h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800" onClick={restartGame}>
                     Tekrar Oyna
@@ -209,7 +264,7 @@ export const GameStats = () => {
                     score={score}
                     deathLayerStat={null}
                 />
-                <div className="flex flex-col items-center text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[547px] h350px] border-black border-[1px] lg:w-[1060px]">
+                <div className="flex flex-col items-center text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[547px] h350px] border-black border-[1px] lg:w-[1100px]">
                     <h1 className=" bg-primary text-white py-1 px-2 rounded-2xl">Başardın! Türkiyeyi son nefesine kadar yönetebildin. Huzur içinde ölebilirsin.</h1>
                     <Image src={victoryImg} alt="Oyun Bitti" className="my-4 h-[15rem] sm:w-[567px] w-[355px]" />
                     <Button className=" h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800" onClick={restartGame}>
@@ -223,6 +278,12 @@ export const GameStats = () => {
 
     return (
         <div className="flex flex-col gap-2 w-full justify-center items-center rounded-md relative">
+
+            {isModalOpen && currentEvent && (
+                <EventModal event={currentEvent} onClose={closeModal} />
+            )}
+
+
             <StatUpdater
                 agriculture={agriculture}
                 infrastructure={infrastructure}
@@ -249,7 +310,7 @@ export const GameStats = () => {
 
             {/* Question display */}
             {currentQuestion ? (
-                <div className={`question-container ${isVisible ? 'visible' : ''} text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[350px] border-black border-[5px] lg:w-[1060px] flex flex-col justify-start items-center`}>
+                <div className={`question-container ${isVisible ? 'visible' : ''} text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[350px] border-black border-[3px] lg:w-[1100px] flex flex-col justify-start items-center`}>
                     <div className="flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs">
                         <ReactTyped
                             strings={[currentQuestion.question]}
@@ -284,7 +345,7 @@ export const GameStats = () => {
 
             {/* Answer buttons */}
             {currentQuestion && (
-                <div className="flex sm:flex-row flex-col justify-center rounded-lg bg-white border-black border-[1px] lg:w-[1060px] w-full sm:gap-5 gap-2 p-2.5 items-center">
+                <div className="flex sm:flex-row flex-col justify-center rounded-lg bg-white border-black border-[3px] lg:w-[1100px] w-full sm:gap-5 gap-2 p-2.5 items-center">
                     <Button
                         className="sm:w-[26rem] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs"
                         onClick={() => answerQuestion("left")}
