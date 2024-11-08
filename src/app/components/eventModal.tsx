@@ -1,6 +1,15 @@
 import { Button } from "@/components/ui/button";
 
-export const EventModal = ({ event, onClose }: { event: any, onClose: () => void }) => {
+type Event = {
+    id: number;
+    title: string;
+    description: string;
+    photo: {
+        src: string;
+    };
+};
+
+export const EventModal = ({ event, onClose }: { event: Event, onClose: () => void }) => {
     if (!event) return null;
 
     return (
@@ -9,7 +18,7 @@ export const EventModal = ({ event, onClose }: { event: any, onClose: () => void
                 <h2 className="text-xl font-bold mb-4 text-primary">{event.title}</h2>
                 <img src={event.photo.src} alt="event-photo" />
                 <p className="text-gray-700">{event.description}</p>
-                <p className="mb-4 text-gray-700">Etkisi : {event.effects}</p>
+                {/* <p className="mb-4 text-gray-700">Etkisi : {event}</p> */}
                 <Button
                     onClick={onClose}
                     className=" text-white px-4 py-2 rounded-lg ransition"

@@ -4,7 +4,6 @@ import StatUpdater from "./StatUpdater";
 import { allQuestions, getRandomQuestion, updateStats, checkGameOver } from "./functions";
 import { Button } from "@/components/ui/button"
 import Image from "next/image";
-import deathIcon from "../../../public/ministers/skulls-bones.png";
 import victoryImg from "../../../public/images/victory.png";
 import { FiAlertCircle } from "react-icons/fi";
 import { ReactTyped } from "react-typed";
