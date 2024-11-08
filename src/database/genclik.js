@@ -3,10 +3,10 @@ import genclikBakani from "../../public/ministers/genclik-bakani.png";
 export const genclikQuestions = [
     {
         id: 120,
-        question: "Sayın Cumhurbaşkanım, gençlerin spor yapma olanakları kısıtlı. Yeni spor tesisleri inşa edebiliriz.",
+        question: "Sayın Cumhurbaşkanım, gençlerin spor yapma olanakları kısıtlı. Belediyelerden çok fazla talep ve şikayet alıyoruz. Ancak ilçe yollarının bakımı da bekliyor",
         answers: [
             {
-                text: "Tesis yapımına başlayın",
+                text: "Gereken yerlere tesis yapımına başlayın",
                 effect: {
                     publicSupport: +15,
                     budget: -15,
@@ -14,7 +14,7 @@ export const genclikQuestions = [
                 }
             },
             {
-                text: "Mevcut tesisleri onarın",
+                text: "Önce yollarımızı onarmalıyız",
                 effect: {
                     publicSupport: -10,
                     budget: +15,
@@ -28,17 +28,17 @@ export const genclikQuestions = [
     },
     {
         id: 123,
-        question: "Sayın Cumhurbaşkanım, gençlerin sporcu olma hayalleri düşük. Spora teşvik için kampanyalar mı başlatalım yoksa sadece profesyonel sporculara mı odaklanalım ?",
+        question: "Sayın Cumhurbaşkanım, gençlerin sporcu olma hayalleri düşük. Yeterince teşvik olmadığından şikayet ediyorlar",
         answers: [
             {
-                text: "Gençleri spora yönlendirmeliyiz",
+                text: "İlkokullarda spor faaliyetlerini yaygınlaştırın",
                 effect: {
                     publicSupport: +20,
                     budget: -15,
                 }
             },
             {
-                text: "Profesyonel sporculara odaklanın",
+                text: "Profesyonel sporculara ek imkanlar sağlayın",
                 effect: {
                     publicSupport: -25,
                     budget: +25,

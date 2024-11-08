@@ -3,7 +3,7 @@ import cevreBakani from "../../public/ministers/cevre-sehir-bakani.png";
 export const cevreQuestions = [
     {
         id: 30,
-        question: "Şehirleşme hızla artıyor ve yeşil alanlar azalıyor. Yeni konut projelerine mi odaklanalım, yoksa yeşil alanları mı koruyalım?",
+        question: "Şehirleşme hızla artıyor ve yeşil alanlar azalıyor. Şehirlerdeki nüfus artışı ve şehirleşme hakkında ne düşünüyorsunuz?",
         answers: [
             {
                 text: "Şehirleşmeyi hızlandırmalıyız.",
@@ -16,7 +16,7 @@ export const cevreQuestions = [
                 }
             },
             {
-                text: "Bir Gezi Parkı daha istemiyorum.",
+                text: "Yeşil alanları koruyacağız, halkımız nefes alacak",
                 effect: {
                     publicSupport: +20,
                     budget: +20,
@@ -35,7 +35,7 @@ export const cevreQuestions = [
         question: "Sayın Cumhurbaşkanım, şehirlerdeki altyapı eskimiş durumda. Altyapının yenilenmesi gerekiyor. Ancak yeni çevre projeleri de gündemde. Öneriniz nedir?",
         answers: [
             {
-                text: "Şehirlerdeki sorunları çözün.",
+                text: "Şehir sorunlarını hemen çözün",
                 effect: {
                     publicSupport: +20,
                     budget: -20,
@@ -57,10 +57,10 @@ export const cevreQuestions = [
     },
     {
         id: 32,
-        question: "Bazı bölgelerde hava kirliliği kritik seviyelerde. Hava kirliliğiyle mücadele için ciddi önlemler almalıyız. Ya da bu bütçeyi sanayiye yatırıp büyümeyi destekleyebiliriz?",
+        question: "Bazı bölgelerde hava kirliliği kritik seviyelerde. Hava kirliliğiyle mücadele için ciddi önlemler alabiliriz...",
         answers: [
             {
-                text: "Temiz bir atmosfer daha önemli.",
+                text: "Temiz hava için mücadelemiz sürecek",
                 effect: {
                     publicSupport: +10,
                     budget: -10,
@@ -69,7 +69,7 @@ export const cevreQuestions = [
                 }
             },
             {
-                text: "Sanayi yatırımlarına öncelik verin.",
+                text: "SSanayiye yatırım, ekonomik büyüme devam etmeli",
                 effect: {
                     publicSupport: -10,
                     budget: +10,
@@ -87,7 +87,7 @@ export const cevreQuestions = [
         question: "Sayın Cumhurbaşkanım, şehirlerde enerji tüketimi hızla artıyor. Yenilenebilir enerji projelerine yatırım yapabiliriz. Ya da mevcut enerji altyapısını genişletebiliriz.",
         answers: [
             {
-                text: "Yenilenebilir enerjiye yatırım yapın.",
+                text: "Yenilenebilir enerjiye geleceğimiz",
                 effect: {
                     publicSupport: +10,
                     budget: -10,
@@ -96,7 +96,7 @@ export const cevreQuestions = [
                 }
             },
             {
-                text: "Mevcut altyapıyı güçlendirin.",
+                text: "Mevcut altyapıyı güçlendirmek daha mantıklı.",
                 effect: {
                     publicSupport: +10,
                     budget: -10,
@@ -111,10 +111,10 @@ export const cevreQuestions = [
     },
     {
         id: 34,
-        question: "Turizm kıyılarda hızla gelişiyor, ancak deniz ekosistemi tehdit altında. Turizme devam mı edelim yoksa kıyıları koruma altına mı alalım?",
+        question: "Turizm kıyılarda hızla gelişiyor, ancak yoğun turist akımı sebebiyle deniz ekosistemi tehdit altında. ",
         answers: [
             {
-                text: "Turizme öncelik vermeliyiz.",
+                text: "Turizmi destekleyeceğiz, ekonomiye katkısı yadsınamaz",
                 effect: {
                     publicSupport: +15,
                     budget: +10,
@@ -123,7 +123,7 @@ export const cevreQuestions = [
                 }
             },
             {
-                text: "Kıyı bölgelerini koruma altına alın.",
+                text: "Kıyıları koruma altına alacağız, çevremiz önceliğimiz",
                 effect: {
                     publicSupport: -15,
                     budget: -10,

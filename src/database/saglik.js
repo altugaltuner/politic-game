@@ -6,14 +6,14 @@ export const saglikQuestions = [
         question: "Sayın Cumhurbaşkanım, şehir hastanelerindeki hasta yoğunluğu artıyor ve sağlık hizmetleri yavaşlıyor.",
         answers: [
             {
-                text: "Mevcut hastane kapasitelerini artırın.",
+                text: "Mevcut hastane kapasitelerini artırmalıyız",
                 effect: {
                     budget: +10,
                     infrastructureAndEnvironment: +10,
                 }
             },
             {
-                text: "Yeni hastaneler inşa edin.",
+                text: "Yeni hastanelerin inşasına başlansın",
                 effect: {
                     budget: -20,
                     infrastructureAndEnvironment: +30,
@@ -26,10 +26,10 @@ export const saglikQuestions = [
     },
     {
         id: 144,
-        question: "Sayın Cumhurbaşkanım, Türkiye’de psikolojik sağlık sorunları giderek artıyor.",
+        question: "Sayın Cumhurbaşkanım, Türkiye’de psikolojik sağlık sorunları giderek artıyor. Bunun önüne geçmeliyiz yoksa toplum sağlığımız büyük risk altında",
         answers: [
             {
-                text: "Daha fazla ilaç ithal edin.",
+                text: "Daha fazla ilaç ithal etmeliyiz",
                 effect: {
                     publicSupport: -20,
                     internalSecurity: -10,
@@ -54,14 +54,14 @@ export const saglikQuestions = [
         question: "Günahsız bebekleri öldürerek SGK'yı toplamda 1 milyar TL'nin üzerinde dolandırmışlar. Mecliste bunun araştırılma önergesi verilmiş. Ne yapmalıyız?",
         answers: [
             {
-                text: "Hayır oyu vermelerini tembihle.",
+                text: "Elebaşı doktorları yargı önüne çıkarın",
                 effect: {
                     budget: -20,
                     infrastructureAndEnvironment: +30,
                 }
             },
             {
-                text: "Derhal araştırılsın.",
+                text: "Bu rezillik daha eskiye dayanıyor, araştırılsın",
                 effect: {
                     budget: +10,
                     infrastructureAndEnvironment: +10,

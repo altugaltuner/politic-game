@@ -6,18 +6,18 @@ export const ticaretQuestions = [
         question: "Sayın Cumhurbaşkanım, büyük perakende zincirleri doları bahane ederek ekstra zamlar yapıyor.",
         answers: [
             {
-                text: "Marketleri denetleyin",
+                text: "Marketlere ağır cezalar yazmalıyız",
                 effect: {
                     publicSupport: +10,
-                    budget: +20,
+                    budget: +10,
                     internalSecurity: +10,
                 }
             },
             {
-                text: "Büyük zincirlerin büyümesini engellememeliyiz",
+                text: "Ürün fiyatlarını tl endeksli hale getireceğiz",
                 effect: {
                     publicSupport: -10,
-                    budget: -20,
+                    budget: -10,
                     internalSecurity: -10,
                 }
             }
@@ -88,7 +88,7 @@ export const ticaretQuestions = [
                 }
             },
             {
-                text: "İhracatçı şirketlere daha fazla destek!",
+                text: "İhracatçı şirketlere destek vermeliyiz",
                 effect: {
                     publicSupport: +5,
                     budget: -15,

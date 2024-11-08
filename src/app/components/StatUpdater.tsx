@@ -53,7 +53,7 @@ const StatUpdater: React.FC<Props> = ({
     const animatedScore = useSpring({ number: score, config: { duration: 1000 } });
 
     return (
-        <div className="flex w-full md:gap-2 gap-2 sm:rounded-t-lg justify-center p-2 border-black bg-white border-[3px] sm:rounded-xl rounded lg:w-[1100px]">
+        <div className="flex w-full md:gap-2 gap-2 sm:rounded-t-lg justify-center p-2 border-black bg-white border-[3px] sm:rounded-xl rounded lg:w-[1150px]">
 
             <div className="flex flex-col items-center justify-between sm:p-2 border-black border-[2px] sm:rounded-xl w-[15%] text-center bg-[rgb(220,255,222)] sm:h-[150px] h-[80px]">
                 <span className="md:text-sm sm:text-xs sm:block hidden">Gıda</span>

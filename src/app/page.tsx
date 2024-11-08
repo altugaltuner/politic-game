@@ -5,10 +5,11 @@ import Image from "next/image";
 
 export default function HomePage() {
   const router = useRouter()
+
   return (
-    <div className="flex flex-col w-full justify-center items-center text-center h-[100vh] sm:p-3 p-2 relative">
-      <div className="md:h-1/2 w-4/5 flex flex-col gap-3 justify-center items-center">
-        <h1 className="font-bold text-[60px]">Cumhurbaşkanı Simulator</h1>
+    <div className="w-full flex flex-col justify-center items-center text-center h-[100vh] sm:p-3 p-2 relative">
+      <div className="md:h-2/5 h-1/2 w-4/5 flex flex-col gap-3 justify-center items-center bg-white p-5 rounded-3xl border-[5px] border-black">
+        <h1 className="font-bold xl:text-[60px] lg:text-[45px] text-[32px]">Cumhurbaşkanı Simulator</h1>
         <p>Hiç, &quot;Ülkenin başında ben olsaydım nasıl yönetirdim acaba&quot; diye düşündüğünüz oldu mu ? <br />
           Eğer cevabınız evetse bu simülasyon tam size göre ! <br />
         </p>
@@ -30,13 +31,6 @@ export default function HomePage() {
           </a>
         </div>
       </footer>
-      <Image src="/images/trump.png" alt="Cumhurbaşkanı Simulator" className="absolute top-[5%] left-[5%] rotate-45" width={200} height={200} />
-
-      <Image src="/images/putinpng.png" alt="Cumhurbaşkanı Simulator" className="absolute top-[60%] left-[75%] rotate-45" width={200} height={200} />
-
-      <Image src="/images/vote.png" alt="Cumhurbaşkanı Simulator" className="absolute top-[10%] left-[85%] overflow-hidden rotate-[-90deg]" width={200} height={200} />
-
-      <Image src="/images/hand-people.png" alt="Cumhurbaşkanı Simulator" className="absolute top-[70%] left-[2%]" width={400} height={400} />
     </div>
   );
 }

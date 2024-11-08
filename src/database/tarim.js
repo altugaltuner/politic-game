@@ -6,17 +6,17 @@ export const tarimQuestions = [
         question: "Sayın Cumhurbaşkanım, son yıllarda kuraklık artıyor ve tarımsal üretim ciddi şekilde düşüyor. Tarıma büyük bir teşvik ve su kaynaklarına yatırım yapmamız gerek.",
         answers: [
             {
-                text: "Yeni sulama projeleri gerekiyor.",
+                text: "Yeni sulama projeleri geliştireceğiz",
                 effect: {
-                    agriculturalProduction: +25,
+                    agriculturalProduction: +10,
                     budget: -15,
                 }
             },
             {
-                text: "Şu an başka önceliklerimiz var,erteleyin.",
+                text: "Şu an başka önceliklerimiz var, erteleyin",
                 effect: {
-                    agriculturalProduction: -25,
-                    budget: -15,
+                    agriculturalProduction: -10,
+                    budget: +15,
                 }
             }
         ],
@@ -30,7 +30,7 @@ export const tarimQuestions = [
         question: "Sayın Cumhurbaşkanım, kuraklık nedeniyle su kaynakları azalıyor ve tarımsal üretim tehlikeye giriyor.",
         answers: [
             {
-                text: "Yeni sulama projelerine yatırım yapın",
+                text: "Barajların doluluk oranı raporları nerede ?",
                 effect: {
                     publicSupport: +15,
                     budget: -25,
@@ -39,7 +39,7 @@ export const tarimQuestions = [
                 }
             },
             {
-                text: "Çiftçilere su tasarrufu eğitimi verin",
+                text: "Çiftçilere su tasarrufu eğitimi verilebilir",
                 effect: {
                     publicSupport: +10,
                     budget: -10,
@@ -57,7 +57,7 @@ export const tarimQuestions = [
         question: "Sayın Cumhurbaşkanım, tarımsal üretim ithalata bağımlı hale geliyor.Bunun önüne geçmeliyiz",
         answers: [
             {
-                text: "Yerli üretimi artırmak için çiftçilere teşvik verin.",
+                text: "Çiftçilere vergi indirimleri yapılsın",
                 effect: {
                     publicSupport: +10,
                     budget: -20,
@@ -66,7 +66,7 @@ export const tarimQuestions = [
                 }
             },
             {
-                text: "İthalat vergilerini artırın, yerli üreticiyi koruyun.",
+                text: "İthal ürünlerden ek vergi alacağız",
                 effect: {
                     publicSupport: +10,
                     budget: +5,
@@ -84,7 +84,7 @@ export const tarimQuestions = [
         question: "Sayın Cumhurbaşkanım, orman yangınları her yıl artıyor ve ciddi kayıplar yaşanıyor.",
         answers: [
             {
-                text: "Sulama için hava araçları alın",
+                text: "Yeni yangın söndürme sistemleri satın almalıyız",
                 effect: {
                     publicSupport: +20,
                     budget: -20,
@@ -94,7 +94,7 @@ export const tarimQuestions = [
                 }
             },
             {
-                text: "Orman köylülerine yangın eğitimi verin.",
+                text: "Yeşil alanlardaki denetimleri artırın",
                 effect: {
                     publicSupport: -20,
                     budget: +10,
@@ -113,7 +113,7 @@ export const tarimQuestions = [
         question: "Sayın Cumhurbaşkanım, tarımda genç iş gücü eksikliği yaşanıyor.",
         answers: [
             {
-                text: "Gençleri tarıma teşvik edecek projeler başlatın.",
+                text: "Gençleri tarıma teşvik edecek projeler başlatın",
                 effect: {
                     publicSupport: +20,
                     budget: +20,
@@ -122,7 +122,7 @@ export const tarimQuestions = [
                 }
             },
             {
-                text: "Tarım iş gücü açığını göçmen işçilerle doldurun.",
+                text: "Tarım iş gücü açığını göçmen işçilerle doldurabiliriz",
                 effect: {
                     publicSupport: -10,
                     budget: -20,
@@ -140,7 +140,7 @@ export const tarimQuestions = [
         question: "Sayın Cumhurbaşkanım, organik tarım ve sürdürülebilir üretim yöntemlerine geçiş yapmak istiyoruz.",
         answers: [
             {
-                text: "Geçişe onay veriyorum",
+                text: "Kademeli olarak bu mümkündür",
                 effect: {
                     publicSupport: +20,
                     budget: -20,
@@ -149,7 +149,7 @@ export const tarimQuestions = [
                 }
             },
             {
-                text: "Mevcut tarım yöntemlerine devam edin",
+                text: "Mevcut tarım yöntemleri gayet yeterlidir",
                 effect: {
                     publicSupport: +5,
                     budget: +10,

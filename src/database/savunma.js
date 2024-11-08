@@ -3,10 +3,10 @@ import savunmaBakani from "../../public/ministers/savunma-bakani.png";
 export const savunmaQuestions = [
     {
         id: 62,
-        question: "Sayın Cumhurbaşkanım, yerli savunma sanayii projelerini hızlandırmak istiyoruz. Bu, uzun vadede askeri gücümüzü artırır, ancak kısa vadede bütçeyi zorlayabilir. Ne yapalım?",
+        question: "Sayın Cumhurbaşkanım, yerli savunma sanayi projelerini hızlandırmak istiyoruz. Bu, uzun vadede askeri gücümüzü artırır, ancak kısa vadede bütçeyi zorlayabilir. Ne yapalım?",
         answers: [
             {
-                text: "Yerli savunma sanayisine yatırım yapın, askeri gücümüzü artırın.",
+                text: "Yatırımları yapmamız elzemdir",
                 effect: {
                     budget: -20,
                     internalSecurity: +20,
@@ -14,7 +14,7 @@ export const savunmaQuestions = [
                 }
             },
             {
-                text: "Savunma sanayisini yavaşlatın, bütçeyi koruyalım.",
+                text: "Bütçemiz şu durumda bunu kaldıramaz",
                 effect: {
                     budget: +20,
                     internalSecurity: -20,

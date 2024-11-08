@@ -6,7 +6,7 @@ export const hazineQuestions = [
         question: "Enflasyon hızla yükseliyor ve halkın alım gücü düşüyor. Merkezi faiz oranını artırarak enflasyonu düşürebiliriz, ancak bu, ekonomik büyümeyi yavaşlatacaktır.",
         answers: [
             {
-                text: "Faiz oranlarını artırın, enflasyonu düşürelim.",
+                text: "Ekonomistleri toplayın, bunun tartışılması gerek",
                 effect: {
                     publicSupport: +20,
                     budget: +20,
@@ -14,7 +14,7 @@ export const hazineQuestions = [
                 }
             },
             {
-                text: "Faiz sebep, enflasyon neticedir.",
+                text: "Faiz sebep, enflasyon neticedir!",
                 effect: {
                     publicSupport: -20,
                     budget: -20,

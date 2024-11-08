@@ -6,7 +6,7 @@ export const aileQuestions = [
         question: "Düşük gelirli ailelere doğrudan sosyal yardımı yapmayı öneriyorum. Ancak bu, kamu bütçesini zorlayabilir ve altyapı yatırımlarını azaltabilir.",
         answers: [
             {
-                text: "Yardımı yapacağız, diyanetin bütçesinden kısarız.",
+                text: "Yardımı yapacağız,halkımızı ezdirmeyeceğiz",
                 effect: {
                     publicSupport: +20,
                     budget: -20,
@@ -15,7 +15,7 @@ export const aileQuestions = [
                 }
             },
             {
-                text: "Daha yeni vergiler türetemedik, beklesinler.",
+                text: "Şu an bütçemiz yok, ertelemek zorundayız",
                 effect: {
                     publicSupport: -20,
                     budget: +20,
@@ -29,10 +29,10 @@ export const aileQuestions = [
     },
     {
         id: 13,
-        question: "Suriyeden gelen mülteciler çocuk yaşta çalıştırılıyor ve tarım sektöründe ucuz işgücü olarak kullanılıyor.",
+        question: "Sayın Cumhurbaşkanım, Suriyeden gelen mülteciler kaçak ve sigortasız çalıştırılıyor, tarım sektöründe ucuz işgücü olarak kullanılıyor.",
         answers: [
             {
-                text: "Çocuk işçiliğini bitireceğiz. Denetim şart!",
+                text: "Kaçak işçiliği bitireceğiz!",
                 effect: {
                     publicSupport: +20,
                     budget: -10,
@@ -40,7 +40,7 @@ export const aileQuestions = [
                 }
             },
             {
-                text: "Vatana faydaları var işte, daha ne istiyorsun?",
+                text: "Tarıma katkıları var, şimdilik devam etsinler",
                 effect: {
                     publicSupport: -20,
                     budget: +10,

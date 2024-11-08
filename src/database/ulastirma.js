@@ -15,7 +15,7 @@ export const ulastirmaQuestions = [
                 }
             },
             {
-                text: "Mevcut yolları iyileştirin.",
+                text: "Mevcut yolları iyileştirin",
                 effect: {
                     publicSupport: +10,
                     budget: -15,
@@ -30,10 +30,10 @@ export const ulastirmaQuestions = [
     },
     {
         id: 92,
-        question: "Sayın Cumhurbaşkanım, hızlı tren projeleri ülke genelinde büyük ilgi görüyor. Hızlı tren hatlarını genişletelim mi, yoksa bu bütçeyi karayolu projelerine mi ayıralım?",
+        question: "Sayın Cumhurbaşkanım, hızlı tren projeleri ülke genelinde büyük ilgi görüyor. Ancak karayollarındaki ücretli geçişlerden şikayetler alıyoruz",
         answers: [
             {
-                text: "Hızlı tren hatlarını genişletin, şehirler arası ulaşımı hızlandırın.",
+                text: "Hızlı tren hatlarını genişletin",
                 effect: {
                     publicSupport: +25,
                     budget: -30,
@@ -41,7 +41,7 @@ export const ulastirmaQuestions = [
                 }
             },
             {
-                text: "Karayolu projelerine bütçe ayırın, ulaşımı karadan çözün.",
+                text: "Karayolu geçiş ücretlerinde indirime gidin",
                 effect: {
                     publicSupport: +10,
                     budget: -15,
@@ -55,10 +55,10 @@ export const ulastirmaQuestions = [
     },
     {
         id: 94,
-        question: "Sayın Cumhurbaşkanım, ülkemizde internet altyapısı yetersiz. Fiber internet altyapısına mı yatırım yapalım, yoksa mevcut altyapıyı mı iyileştirelim?",
+        question: "Sayın Cumhurbaşkanım, ülkemizde internet altyapısı yetersiz",
         answers: [
             {
-                text: "Fiber internet altyapısına yatırım yapın.",
+                text: "Fiber altyapısına yatırım yapılmalıdır",
                 effect: {
                     publicSupport: +20,
                     budget: -25,
@@ -66,7 +66,7 @@ export const ulastirmaQuestions = [
                 }
             },
             {
-                text: "Mevcut internet altyapısını iyileştirin.",
+                text: "Telekom firmalarının inisiyatifine bırakın",
                 effect: {
                     publicSupport: +10,
                     budget: -15,

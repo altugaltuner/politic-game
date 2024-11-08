@@ -17,6 +17,7 @@ export default function RootLayout({
       </head>
       <body
         className="bg-[#f5f5f5]"
+        style={{ backgroundImage: 'url(/images/background.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
       >
         {children}
       </body>

@@ -7,12 +7,12 @@ export const adaletQuestions = [
         question: "Son seçimlerde %51 ile sen seçildin! Yönetmeye hazır mısın?",
         answers: [
             {
-                text: "Hadi Başlayalım!",
+                text: "Hazırız, milletimize hizmet için buradayız",
                 effect: {
                 }
             },
             {
-                text: "Yolla Gelsin!",
+                text: "Her şey milletimizin emrinde, birlikte başaracağız",
                 effect: {
                 }
             }
@@ -22,17 +22,17 @@ export const adaletQuestions = [
     },
     {
         id: 2,
-        question: "Kara para aklayan sosyal medya ünlüleri yakalandı ve aylardır içeride tutuluyorlar. Bazılarının güzellik merkezleri varmış. Ancak hakim daha dün serbest bıraktı!",
+        question: "Kara para aklayan sosyal medya ünlüleri serbest bırakıldı. Düşünceniz nedir?",
         answers: [
             {
-                text: "Doğru karar, adli makamlardan kimsenin şüphesi olmasın!",
+                text: "Yargının kararına saygı duyarız; hukuk işler",
                 effect: {
                     internalSecurity: -20,
                     publicSupport: -20,
                 },
             },
             {
-                text: "Yoksa birileri rüşvet mi aldı? Derhal araştırın!",
+                text: "Hukuksuzluk mevcut olabilir, gereken inceleme yapılacak",
                 effect: {
                     internalSecurity: +20,
                     publicSupport: +20,
@@ -45,10 +45,10 @@ export const adaletQuestions = [
     },
     {
         id: 3,
-        question: "İstanbul Sözleşmesi ülke gündemine oturdu. Bazı kesimler kadınları korumak adına bu sözleşmeyi desteklerken, bazıları ise aile yapısını bozduğunu iddia ediyor.",
+        question: "İstanbul Sözleşmesi konusunda tartışmalar devam ediyor. Ne düşünüyorsunuz?",
         answers: [
             {
-                text: "Biz Osmanlı torunuyuz.Aile yapısını bozar bu.",
+                text: "Aile yapımızı koruyacağız, hassasiyetimiz yüksek",
                 effect: {
                     internalSecurity: -20,
                     publicSupport: -20,
@@ -56,7 +56,7 @@ export const adaletQuestions = [
                 }
             },
             {
-                text: "Kadınlarımızın haklarını korumak için sözleşmeyi destekleyeceğiz!",
+                text: "Kadınlarımızın haklarını korumak önceliğimizdir",
                 effect: {
                     internalSecurity: +20,
                     publicSupport: +20,
@@ -70,10 +70,10 @@ export const adaletQuestions = [
     },
     {
         id: 4,
-        question: "İstanbul,Ankara gibi büyük şehirlerde suç oranları artıyor. Halk güvenliğinden endişeli.",
+        question: "İstanbul ve Ankara’da suç oranları arttı, halk güvenlikten endişeli...",
         answers: [
             {
-                text: "Polis teşkilatını güçlendirin ve suçlulara sert cezalar verin.",
+                text: "Polis güçlendirilecek, suçlulara en ağır ceza verilecek",
                 effect: {
                     internalSecurity: +20,
                     publicSupport: +20,
@@ -81,7 +81,7 @@ export const adaletQuestions = [
                 }
             },
             {
-                text: "Hangi ilçeler bize oy vermişti?",
+                text: "Sosyal projelerle gençleri suça yönelmekten uzaklaştıracağız",
                 effect: {
                     internalSecurity: -10,
                     publicSupport: -10,
@@ -95,10 +95,10 @@ export const adaletQuestions = [
     },
     {
         id: 5,
-        question: "Sayın Cumhurbaşkanım, hapishaneler dolup taşıyor ve cezaevi şartları giderek kötüleşiyor.",
+        question: "Sayın Cumhurbaşkanım, cezaevleri dolup taşıyor, yeni yatırımlar planlıyor musunuz ?",
         answers: [
             {
-                text: "En iyi bildiğimiz şeyi yapalım. İNŞAAT!",
+                text: "İnşaat projeleriyle kapasiteyi artıracağız",
                 effect: {
                     internalSecurity: +10,
                     budget: -20,
@@ -106,7 +106,7 @@ export const adaletQuestions = [
                 }
             },
             {
-                text: "Şu an bütçemiz kaldırmaz.",
+                text: "Bütçemizi ve halkın vergilerini korumalıyız",
                 effect: {
                     internalSecurity: -20,
                     budget: +20,

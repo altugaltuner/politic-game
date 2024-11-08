@@ -3,10 +3,10 @@ import egitimBakani from "../../public/ministers/egitim-bakani.png";
 export const egitimQuestions = [
     {
         id: 53,
-        question: "Sayın Cumhurbaşkanım, kırsal kesimdeki okullar fiziki açıdan çok kötü durumda. Yeni okullar inşa edebiliriz.",
+        question: "Sayın Cumhurbaşkanım, kırsal kesimdeki okulların fiziki durumu çok kötü. Yeni okulların inşaası gündemde...",
         answers: [
             {
-                text: "Derhal beton dökmeye başlayın.",
+                text: "Derhal inşaata başlayın, eğitim şart",
                 effect: {
                     publicSupport: +10,
                     budget: -10,
@@ -15,7 +15,7 @@ export const egitimQuestions = [
                 }
             },
             {
-                text: "Köy okullarını kapatmaya devam edeceğiz.",
+                text: "Köy okullarını kapatın, şehirdekiler kafi",
                 effect: {
                     publicSupport: -10,
                     budget: +10,
@@ -30,17 +30,17 @@ export const egitimQuestions = [
     },
     {
         id: 54,
-        question: "Sayın Cumhurbaşkanım, Türkiye’de özel okullarla devlet okulları arasındaki eğitim farkı giderek açılıyor. Öneriniz nedir?",
+        question: "Türkiye’de özel okullarla devlet okulları arasındaki eğitim farkı açılıyor. Çözüm öneriniz nedir?",
         answers: [
             {
-                text: "Devlet okullarına iyileştirme gerek.",
+                text: "Devlet okullarını iyileştirmemiz gerek",
                 effect: {
                     publicSupport: +20,
                     budget: -10,
                 }
             },
             {
-                text: "Özel okullara yatırım yapacağız.",
+                text: "Özel okullara yatırımı artıracağız",
                 effect: {
                     publicSupport: -10,
                     budget: -20,
@@ -53,10 +53,10 @@ export const egitimQuestions = [
     },
     {
         id: 55,
-        question: "Sayın Cumhurbaşkanım, mesleki eğitime olan ilgi azaldı. Gençleri akademik mi yoksa mesleki eğitime mi yönlendirmeliyiz?",
+        question: "Mesleki eğitime olan ilgi azaldı. Gençleri akademik eğitime mi yoksa mesleki eğitime mi yönlendirelim?",
         answers: [
             {
-                text: "Mesleki eğitim için teşvik programları başlatın.",
+                text: "Mesleki eğitimi teşvik edeceğiz",
                 effect: {
                     budget: -10,
                     agriculture: +15,
@@ -65,7 +65,7 @@ export const egitimQuestions = [
                 }
             },
             {
-                text: "Akademik eğitimi destekleyin.",
+                text: "Akademik eğitimi destekleyin, ilim önemli",
                 effect: {
                     budget: -10,
                     agriculturalProduction: -15,

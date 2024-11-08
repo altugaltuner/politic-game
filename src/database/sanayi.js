@@ -3,10 +3,10 @@ import sanayiBakani from "../../public/ministers/sanayi-bakani.png";
 export const sanayiQuestions = [
     {
         id: 150,
-        question: "Sayın Cumhurbaşkanım, sanayimizin teknoloji altyapısı zayıf. Teknoloji yatırımlarını artırabiliriz.",
+        question: "Sayın Cumhurbaşkanım, sanayimizin teknoloji altyapısı zayıf. Teknoloji yatırımlarını arttırmayı öneriyorum",
         answers: [
             {
-                text: "Yatırımları artırın",
+                text: "Teknolojik altyapıyı geliştireceğiz",
                 effect: {
                     publicSupport: +10,
                     budget: -20,
@@ -15,7 +15,7 @@ export const sanayiQuestions = [
                 }
             },
             {
-                text: "Geleneksel üretim yöntemlerine odaklanın",
+                text: "Büyük teknoloji şirketlerine baskı yapın",
                 effect: {
                     publicSupport: -10,
                     budget: +20,
@@ -30,10 +30,10 @@ export const sanayiQuestions = [
 
     {
         id: 151,
-        question: "Sayın Cumhurbaşkanım, yerli otomobil üretimi projesi büyük ilgi görüyor. Projeyi hızlandıralım mı, yoksa başka sanayi alanlarına mı öncelik verelim?",
+        question: "Sayın Cumhurbaşkanım, yerli otomobil üretimi projesi büyük ilgi görüyor. Nasıl bir politika izlemeliyiz?",
         answers: [
             {
-                text: "Yerli otomobil projesini hızlandırın",
+                text: "Fiyatları belirleyin ve satışa çıkarın",
                 effect: {
                     publicSupport: +20,
                     budget: -20,
@@ -42,7 +42,7 @@ export const sanayiQuestions = [
                 }
             },
             {
-                text: "Başka sanayi alanlarına öncelik verin",
+                text: "Eksiklerine odaklanın ve geliştirmeye devam edin",
                 effect: {
                     publicSupport: -10,
                     budget: +10,

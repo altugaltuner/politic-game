@@ -228,7 +228,8 @@ export const GameStats = () => {
                     score={score}
                     deathLayerStat={deathStat}
                 />
-                <div className="question-container visible text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[350px] border-black border-[3px] lg:w-[1100px] flex flex-col justify-start items-center">
+                <div className="question-container visible text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[350px] border-black border-[3px] lg:w-[1150px] flex flex-col justify-start items-center">
+
                     <div className="flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs">
                         <h1 className="bg-primary text-white py-1 px-2 rounded-2xl ">{gameOverReason}</h1>
                     </div>
@@ -264,7 +265,7 @@ export const GameStats = () => {
                     score={score}
                     deathLayerStat={null}
                 />
-                <div className="flex flex-col items-center text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[547px] h350px] border-black border-[1px] lg:w-[1100px]">
+                <div className="flex flex-col items-center text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[547px] h350px] border-black border-[1px] lg:w-[1150px]">
                     <h1 className=" bg-primary text-white py-1 px-2 rounded-2xl">Başardın! Türkiyeyi son nefesine kadar yönetebildin. Huzur içinde ölebilirsin.</h1>
                     <Image src={victoryImg} alt="Oyun Bitti" className="my-4 h-[15rem] sm:w-[567px] w-[355px]" />
                     <Button className=" h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800" onClick={restartGame}>
@@ -295,22 +296,22 @@ export const GameStats = () => {
                 deathLayerStat={null}
             />
 
-            {/* link ekle */}
-            {currentQuestion?.link ? (
-                <button
-                    className="absolute top-3 right-3"
-                    onClick={() => window.open(currentQuestion.link, '_blank')}
-                    style={{ cursor: 'pointer' }}
-                    aria-label="Open link"
-                    title="Open link"
-                >
-                    <FiAlertCircle className="w-7 h-7" />
-                </button>
-            ) : null}
-
             {/* Question display */}
             {currentQuestion ? (
-                <div className={`question-container ${isVisible ? 'visible' : ''} text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[350px] border-black border-[3px] lg:w-[1100px] flex flex-col justify-start items-center`}>
+                <div className={`question-container ${isVisible ? 'visible' : ''} text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[350px] relative border-black border-[3px] lg:w-[1150px] flex flex-col justify-start items-center`}>
+
+                    {currentQuestion?.link ? (
+                        <button
+                            className="absolute top-5 right-3"
+                            onClick={() => window.open(currentQuestion.link, '_blank')}
+                            style={{ cursor: 'pointer' }}
+                            aria-label="Open link"
+                            title="Open link"
+                        >
+                            <FiAlertCircle className="w-7 h-7" />
+                        </button>
+                    ) : null}
+
                     <div className="flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs">
                         <ReactTyped
                             strings={[currentQuestion.question]}
@@ -335,7 +336,7 @@ export const GameStats = () => {
                                 alt={currentQuestion.title}
                                 className="w-full lg:h-[22rem] rounded-lg"
                             />
-                            <p className="font-medium md:text-xl text-sm bg-primary text-white px-2 rounded-2xl">{currentQuestion.title}</p>
+                            <p className="font-medium md:text-xl text-sm bg-primary text-white px-2 rounded-lg">{currentQuestion.title}</p>
                         </div>
                     )}
                 </div>
@@ -345,9 +346,9 @@ export const GameStats = () => {
 
             {/* Answer buttons */}
             {currentQuestion && (
-                <div className="flex sm:flex-row flex-col justify-center rounded-lg bg-white border-black border-[3px] lg:w-[1100px] w-full sm:gap-5 gap-2 p-2.5 items-center">
+                <div className="flex sm:flex-row flex-col justify-center rounded-lg bg-white border-black border-[3px] lg:w-[1150px] w-full sm:gap-5 gap-2 p-2.5 items-center">
                     <Button
-                        className="sm:w-[26rem] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs"
+                        className="sm:w-[27rem] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs"
                         onClick={() => answerQuestion("left")}
                     >
                         <ReactTyped
@@ -359,7 +360,7 @@ export const GameStats = () => {
                     </Button>
 
                     <Button
-                        className="sm:w-[26rem] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs"
+                        className="sm:w-[27rem] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs"
                         onClick={() => answerQuestion("right")}
                     >
                         <ReactTyped
