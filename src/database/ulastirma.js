@@ -38,7 +38,8 @@ export const ulastirmaQuestions = [
                     publicSupport: +25,
                     budget: -30,
                     infrastructureAndEnvironment: +30,
-                }
+                },
+                listID: "ulastirma1",
             },
             {
                 text: "Karayolu geçiş ücretlerinde indirime gidin",
@@ -71,7 +72,8 @@ export const ulastirmaQuestions = [
                     publicSupport: +10,
                     budget: -15,
                     infrastructureAndEnvironment: +15,
-                }
+                },
+                listID: "ulastirma2",
             }
         ],
         title: "Ulaştırma Bakanı",

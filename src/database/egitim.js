@@ -30,29 +30,6 @@ export const egitimQuestions = [
     },
     {
         id: 54,
-        question: "Türkiye’de özel okullarla devlet okulları arasındaki eğitim farkı açılıyor. Çözüm öneriniz nedir?",
-        answers: [
-            {
-                text: "Devlet okullarını iyileştirmemiz gerek",
-                effect: {
-                    publicSupport: +20,
-                    budget: -10,
-                }
-            },
-            {
-                text: "Özel okullara yatırımı artıracağız",
-                effect: {
-                    publicSupport: -10,
-                    budget: -20,
-                }
-            }
-        ],
-        title: "Milli Eğitim Bakanı",
-        photo: egitimBakani,
-        link: "https://dergipark.org.tr/tr/pub/iuhayefd/issue/8801/110031"
-    },
-    {
-        id: 55,
         question: "Mesleki eğitime olan ilgi azaldı. Gençleri akademik eğitime mi yoksa mesleki eğitime mi yönlendirelim?",
         answers: [
             {
@@ -60,9 +37,9 @@ export const egitimQuestions = [
                 effect: {
                     budget: -10,
                     agriculture: +15,
-                    infrastructureAndEnvironment: +10,
                     internationalRelations: -15,
-                }
+                },
+                listID: "egitim1",
             },
             {
                 text: "Akademik eğitimi destekleyin, ilim önemli",

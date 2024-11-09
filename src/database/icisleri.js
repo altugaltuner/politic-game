@@ -21,7 +21,8 @@ export const icisleriQuestions = [
                     budget: -30,
                     internationalRelations: +30,
                     internalSecurity: -30
-                }
+                },
+                listID: "icisleri1",
             }
         ],
         title: "İçişleri Bakanı",
@@ -41,12 +42,13 @@ export const icisleriQuestions = [
                 }
             },
             {
-                text: "Şu an kaynaklarımız kısıtlı",
+                text: "Şu an kaynaklarımız kısıtlı,erteleyin",
                 effect: {
                     budget: +20,
                     internalSecurity: -20,
                     infrastructureAndEnvironment: -20
-                }
+                },
+                listID: "icisleri2",
             }
         ],
         title: "İçişleri Bakanı",
@@ -90,7 +92,8 @@ export const icisleriQuestions = [
                     publicSupport: -10,
                     internalSecurity: +10,
                     internationalRelations: -10,
-                }
+                },
+                listID: "icisleri3",
             },
             {
                 text: "Diyalog yoluyla çözüm bulacağız",
@@ -148,7 +151,8 @@ export const icisleriQuestions = [
                     internalSecurity: +10,
                     internationalRelations: -20,
                     budget: -10,
-                }
+                },
+                listID: "icisleri4",
             },
         ],
         title: "İçişleri Bakanı",

@@ -11,7 +11,8 @@ export const enerjiQuestions = [
                     budget: -25,
                     infrastructureAndEnvironment: +20,
                     internationalRelations: -15,
-                }
+                },
+                listID: "enerji1",
             },
             {
                 text: "Erteleyin, şu an maliyet çok yüksek",
@@ -64,7 +65,8 @@ export const enerjiQuestions = [
                     budget: +15,
                     internationalRelations: +20,
                     infrastructureAndEnvironment: -10,
-                }
+                },
+                listID: "enerji2",
             },
             {
                 text: "Yerli üreticilerimizi koruyacağız.",
@@ -91,10 +93,11 @@ export const enerjiQuestions = [
                     budget: -20,
                     infrastructureAndEnvironment: +20,
                     internationalRelations: -10
-                }
+                },
+                listID: "enerji3",
             },
             {
-                text: "Yenilenebilir enerji kaynaklarına yöneleceğiz",
+                text: "Yenilenebilir enerji geleceğimiz",
                 effect: {
                     publicSupport: +20,
                     budget: +20,

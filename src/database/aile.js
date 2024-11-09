@@ -12,7 +12,7 @@ export const aileQuestions = [
                     budget: -20,
                     internalSecurity: +10,
                     infrastructureAndEnvironment: -20
-                }
+                },
             },
             {
                 text: "Şu an bütçemiz yok, ertelemek zorundayız",
@@ -21,7 +21,7 @@ export const aileQuestions = [
                     budget: +20,
                     infrastructureAndEnvironment: +20,
                     internalSecurity: -10,
-                }
+                },
             }
         ],
         title: "Aile ve Sosyal Hizmetler Bakanı",
@@ -37,15 +37,16 @@ export const aileQuestions = [
                     publicSupport: +20,
                     budget: -10,
                     agriculturalProduction: -10,
-                }
+                },
             },
             {
                 text: "Tarıma katkıları var, şimdilik devam etsinler",
                 effect: {
-                    publicSupport: -20,
+                    publicSupport: -30,
                     budget: +10,
                     agriculturalProduction: +10,
-                }
+                },
+                listID: "aile1",
             }
         ],
         title: "Aile ve Sosyal Hizmetler Bakanı",

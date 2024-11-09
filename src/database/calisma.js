@@ -63,7 +63,8 @@ export const calismaQuestions = [
                     budget: -10,
                     agriculturalProduction: +20,
                     infrastructureAndEnvironment: -20,
-                }
+                },
+                listID: "calisma1",
             },
             {
                 text: "Sanayiye yönelerek üretim kapasitesini artıracağız",
@@ -71,7 +72,8 @@ export const calismaQuestions = [
                     budget: -10,
                     agriculturalProduction: -20,
                     infrastructureAndEnvironment: +20
-                }
+                },
+                listID: "calisma2",
             }
         ],
         title: "Çalışma ve Sosyal Güvenlik Bakanı",

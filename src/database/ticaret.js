@@ -11,7 +11,8 @@ export const ticaretQuestions = [
                     publicSupport: +10,
                     budget: +10,
                     internalSecurity: +10,
-                }
+                },
+                listID: "ticaret1",
             },
             {
                 text: "Ürün fiyatlarını tl endeksli hale getireceğiz",

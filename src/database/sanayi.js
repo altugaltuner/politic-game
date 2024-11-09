@@ -39,7 +39,8 @@ export const sanayiQuestions = [
                     budget: -20,
                     infrastructureAndEnvironment: +25,
                     internationalRelations: +10,
-                }
+                },
+                listID: "sanayi1",
             },
             {
                 text: "Eksiklerine odaklanın ve geliştirmeye devam edin",

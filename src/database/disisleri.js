@@ -11,7 +11,8 @@ export const disisleriQuestions = [
                     budget: -20,
                     internationalRelations: +20,
                     agriculturalProduction: -10,
-                }
+                },
+                listID: "disisleri1",
             },
             {
                 text: "Yerel üreticilerimizi koruyacağız, anlaşmayı bekletin",
@@ -57,7 +58,8 @@ export const disisleriQuestions = [
                     internationalRelations: +20,
                     internalSecurity: +20,
                     budget: -20,
-                }
+                },
+                listID: "disisleri2",
             },
             {
                 text: "Sosyal harcamalara yatırım yapın",
@@ -82,7 +84,8 @@ export const disisleriQuestions = [
                     internationalRelations: +20,
                     budget: -30,
                     internalSecurity: -30,
-                }
+                },
+                listID: "disisleri3",
             },
             {
                 text: "Ülke sınırlarını koruyun",
@@ -91,7 +94,8 @@ export const disisleriQuestions = [
                     internationalRelations: -20,
                     budget: +30,
                     internalSecurity: +30,
-                }
+                },
+                listID: "disisleri4",
             }
         ],
         title: "Dışişleri Bakanı",

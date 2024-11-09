@@ -8,16 +8,17 @@ export const genclikQuestions = [
             {
                 text: "Gereken yerlere tesis yapımına başlayın",
                 effect: {
-                    publicSupport: +15,
+                    publicSupport: +10,
                     budget: -15,
-                    infrastructureAndEnvironment: +15,
-                }
+                    infrastructureAndEnvironment: +20,
+                },
+                listID: "genclik1",
             },
             {
                 text: "Önce yollarımızı onarmalıyız",
                 effect: {
                     publicSupport: -10,
-                    budget: +15,
+                    budget: +10,
                     infrastructureAndEnvironment: +10,
                 }
             }
@@ -42,7 +43,8 @@ export const genclikQuestions = [
                 effect: {
                     publicSupport: -25,
                     budget: +25,
-                }
+                },
+                listID: "genclik2",
             }
         ],
         title: "Gençlik ve Spor Bakanı",

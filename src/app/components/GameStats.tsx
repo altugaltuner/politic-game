@@ -216,7 +216,7 @@ export const GameStats = () => {
     // Oyun bittiyse oyunun son ekranını göster
     if (gameOver) {
         return (
-            <div className="flex flex-col gap-2 w-full justify-center items-center rounded-md">
+            <div className="flex flex-col gap-2 w-[75%] justify-center items-center rounded-md">
                 <StatUpdater
                     agriculture={agriculture}
                     infrastructure={infrastructure}
@@ -253,7 +253,7 @@ export const GameStats = () => {
 
     if (allQuestions.length === usedQuestions.length) {
         return (
-            <div className="flex flex-col gap-2 w-full justify-center items-center rounded-md">
+            <div className="flex flex-col gap-2 w-[75%] justify-center items-center rounded-md">
                 <StatUpdater
                     agriculture={agriculture}
                     infrastructure={infrastructure}
@@ -277,7 +277,7 @@ export const GameStats = () => {
     }
 
     return (
-        <div className="flex flex-col gap-2 w-full justify-center items-center rounded-md relative">
+        <div className="flex flex-col gap-2 w-[75%] justify-center items-center rounded-md relative">
 
             {isModalOpen && currentEvent && (
                 <EventModal event={currentEvent} onClose={closeModal} />

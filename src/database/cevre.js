@@ -23,7 +23,8 @@ export const cevreQuestions = [
                     agriculturalProduction: +20,
                     infrastructureAndEnvironment: -10,
                     internalSecurity: +10,
-                }
+                },
+                listID: "cevre1",
             }
         ],
         title: "Çevre ve Şehircilik Bakanı",
@@ -40,7 +41,8 @@ export const cevreQuestions = [
                     publicSupport: +20,
                     budget: -20,
                     infrastructureAndEnvironment: +20,
-                }
+                },
+                listID: "cevre2",
             },
             {
                 text: "Bütçeyi çevre projelerine aktarın.",
@@ -69,7 +71,7 @@ export const cevreQuestions = [
                 }
             },
             {
-                text: "SSanayiye yatırım, ekonomik büyüme devam etmeli",
+                text: "Sanayiye yatırım, ekonomik büyüme devam etmeli",
                 effect: {
                     publicSupport: -10,
                     budget: +10,
@@ -93,7 +95,8 @@ export const cevreQuestions = [
                     budget: -10,
                     infrastructureAndEnvironment: +15,
                     internationalRelations: +10,
-                }
+                },
+                listID: "cevre3",
             },
             {
                 text: "Mevcut altyapıyı güçlendirmek daha mantıklı.",
@@ -120,7 +123,8 @@ export const cevreQuestions = [
                     budget: +10,
                     infrastructureAndEnvironment: -20,
                     internationalRelations: +15,
-                }
+                },
+                listID: "cevre4",
             },
             {
                 text: "Kıyıları koruma altına alacağız, çevremiz önceliğimiz",

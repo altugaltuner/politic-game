@@ -11,7 +11,8 @@ export const hazineQuestions = [
                     publicSupport: +20,
                     budget: +20,
                     infrastructureAndEnvironment: +10,
-                }
+                },
+                listID: "hazine1",
             },
             {
                 text: "Faiz sebep, enflasyon neticedir!",
@@ -19,7 +20,8 @@ export const hazineQuestions = [
                     publicSupport: -20,
                     budget: -20,
                     infrastructureAndEnvironment: -10,
-                }
+                },
+                listID: "hazine2",
             }
         ],
         title: "Hazine ve Maliye Bakanı",
@@ -36,7 +38,8 @@ export const hazineQuestions = [
                     publicSupport: +10,
                     budget: -20,
                     internalSecurity: +10,
-                }
+                },
+                listID: "hazine3",
             },
             {
                 text: "Bu yasa şu an mali olarak sürdürülemez.",

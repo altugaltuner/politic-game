@@ -63,7 +63,8 @@ export const tarimQuestions = [
                     budget: -20,
                     agriculturalProduction: +25,
                     internationalRelations: +10,
-                }
+                },
+                listID: "tarim1",
             },
             {
                 text: "İthal ürünlerden ek vergi alacağız",
@@ -72,7 +73,8 @@ export const tarimQuestions = [
                     budget: +5,
                     agriculturalProduction: +15,
                     internationalRelations: -10,
-                }
+                },
+                listID: "tarim2",
             }
         ],
         title: "Tarım Bakanı",
@@ -122,13 +124,14 @@ export const tarimQuestions = [
                 }
             },
             {
-                text: "Tarım iş gücü açığını göçmen işçilerle doldurabiliriz",
+                text: "İş gücü açığını göçmen işçilerle dolduracağız",
                 effect: {
                     publicSupport: -10,
                     budget: -20,
                     agriculturalProduction: +15,
                     internalSecurity: -5,
-                }
+                },
+                listID: "tarim3",
             }
         ],
         title: "Tarım Bakanı",

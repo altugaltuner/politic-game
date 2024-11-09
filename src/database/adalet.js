@@ -17,7 +17,7 @@ export const adaletQuestions = [
                 }
             }
         ],
-        title: "Altuğ",
+        title: "Altuğ Altuner",
         photo: altug,
     },
     {
@@ -25,11 +25,12 @@ export const adaletQuestions = [
         question: "Kara para aklayan sosyal medya ünlüleri serbest bırakıldı. Düşünceniz nedir?",
         answers: [
             {
-                text: "Yargının kararına saygı duyarız; hukuk işler",
+                text: "Yargının kararına saygı duyacağız",
                 effect: {
                     internalSecurity: -20,
                     publicSupport: -20,
                 },
+                listID: "adalet1",
             },
             {
                 text: "Hukuksuzluk mevcut olabilir, gereken inceleme yapılacak",
@@ -48,12 +49,12 @@ export const adaletQuestions = [
         question: "İstanbul Sözleşmesi konusunda tartışmalar devam ediyor. Ne düşünüyorsunuz?",
         answers: [
             {
-                text: "Aile yapımızı koruyacağız, hassasiyetimiz yüksek",
+                text: "Aile yapımızı koruyacağız, hassasiyetlerimiz var",
                 effect: {
                     internalSecurity: -20,
                     publicSupport: -20,
                     budget: +20,
-                }
+                },
             },
             {
                 text: "Kadınlarımızın haklarını korumak önceliğimizdir",
@@ -111,7 +112,8 @@ export const adaletQuestions = [
                     internalSecurity: -20,
                     budget: +20,
                     infrastructureAndEnvironment: -20,
-                }
+                },
+                listID: "adalet2",
             }
         ],
         title: "Adalet Bakanı",

@@ -56,16 +56,19 @@ export const saglikQuestions = [
             {
                 text: "Elebaşı doktorları yargı önüne çıkarın",
                 effect: {
-                    budget: -20,
-                    infrastructureAndEnvironment: +30,
+                    budget: +10,
+                    internalSecurity: +10,
+                    publicSupport: +10,
                 }
             },
             {
                 text: "Bu rezillik daha eskiye dayanıyor, araştırılsın",
                 effect: {
-                    budget: +10,
-                    infrastructureAndEnvironment: +10,
-                }
+                    budget: -20,
+                    internalSecurity: +30,
+                    publicSupport: +30,
+                },
+                listID: "saglik1",
             }
         ],
         title: "Sağlık Bakanı",
