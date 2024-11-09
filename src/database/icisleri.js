@@ -93,7 +93,6 @@ export const icisleriQuestions = [
                     internalSecurity: +10,
                     internationalRelations: -10,
                 },
-                listID: "icisleri3",
             },
             {
                 text: "Diyalog yoluyla çözüm bulacağız",
@@ -152,7 +151,7 @@ export const icisleriQuestions = [
                     internationalRelations: -20,
                     budget: -10,
                 },
-                listID: "icisleri4",
+                listID: "icisleri3",
             },
         ],
         title: "İçişleri Bakanı",

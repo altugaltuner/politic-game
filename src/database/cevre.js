@@ -42,7 +42,6 @@ export const cevreQuestions = [
                     budget: -20,
                     infrastructureAndEnvironment: +20,
                 },
-                listID: "cevre2",
             },
             {
                 text: "Bütçeyi çevre projelerine aktarın.",
@@ -96,7 +95,7 @@ export const cevreQuestions = [
                     infrastructureAndEnvironment: +15,
                     internationalRelations: +10,
                 },
-                listID: "cevre3",
+                listID: "cevre2",
             },
             {
                 text: "Mevcut altyapıyı güçlendirmek daha mantıklı.",
@@ -124,7 +123,7 @@ export const cevreQuestions = [
                     infrastructureAndEnvironment: -20,
                     internationalRelations: +15,
                 },
-                listID: "cevre4",
+                listID: "cevre3",
             },
             {
                 text: "Kıyıları koruma altına alacağız, çevremiz önceliğimiz",

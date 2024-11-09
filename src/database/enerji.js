@@ -100,7 +100,7 @@ export const enerjiQuestions = [
                 text: "Yenilenebilir enerji geleceğimiz",
                 effect: {
                     publicSupport: +20,
-                    budget: +20,
+                    budget: -10,
                     infrastructureAndEnvironment: -20,
                     internationalRelations: +10,
                 }

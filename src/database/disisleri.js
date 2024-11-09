@@ -88,7 +88,7 @@ export const disisleriQuestions = [
                 listID: "disisleri3",
             },
             {
-                text: "Ülke sınırlarını koruyun",
+                text: "Ülke sınırlarını koruyacağız",
                 effect: {
                     publicSupport: +30,
                     internationalRelations: -20,

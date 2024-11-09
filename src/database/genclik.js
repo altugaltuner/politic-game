@@ -44,7 +44,6 @@ export const genclikQuestions = [
                     publicSupport: -25,
                     budget: +25,
                 },
-                listID: "genclik2",
             }
         ],
         title: "Gençlik ve Spor Bakanı",

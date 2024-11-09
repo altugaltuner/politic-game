@@ -73,7 +73,6 @@ export const calismaQuestions = [
                     agriculturalProduction: -20,
                     infrastructureAndEnvironment: +20
                 },
-                listID: "calisma2",
             }
         ],
         title: "Çalışma ve Sosyal Güvenlik Bakanı",
