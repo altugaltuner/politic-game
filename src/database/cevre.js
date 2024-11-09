@@ -138,5 +138,5 @@ export const cevreQuestions = [
         title: "Çevre ve Şehircilik Bakanı",
         photo: cevreBakani,
         link: "https://www.turizm.gov.tr/"
-    }
+    },
 ];

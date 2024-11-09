@@ -1,19 +1,14 @@
-import borderProtect from "../../public/list-photos/border-protect.png";
-import dogsMurdered from "../../public/list-photos/dogs-murdered.png";
 import greeningWorks from "../../public/list-photos/greening-works.png";
 import newFootballField from "../../public/list-photos/new-football-field.png";
-import policeForce from "../../public/list-photos/police-force.png";
 import refugeePass from "../../public/list-photos/refugee-pass.png";
 import renewableEnergy from "../../public/list-photos/renewable-energy.png";
 import supermarketPenalty from "../../public/list-photos/supermarket-penalty.png";
-import techStartup from "../../public/list-photos/tech-startup.png";
 import tourismAttack from "../../public/list-photos/tourism-attack.png";
 import turkishLiraLose from "../../public/list-photos/turkish-lira-lose.png";
 import dilanPolat from "../../public/list-photos/dilan-polat.png";
 import prisonFull from "../../public/list-photos/prison-full.png";
 import happFarmer from "../../public/list-photos/happy-farmer.png";
 import illegalWorkers from "../../public/list-photos/illegal-workers.png";
-import greenPark from "../../public/list-photos/green-park.png";
 import tradeAgreement from "../../public/list-photos/trade-agreement.png";
 import defenceTech from "../../public/list-photos/defence-tech.png";
 import protectBorder from "../../public/list-photos/protect-border.png";
@@ -22,6 +17,11 @@ import gasExploration from "../../public/list-photos/gas-exploration.png";
 import greatAgreement from "../../public/list-photos/great-agreement.png";
 import nuclearThesis from "../../public/list-photos/nuclear-thesis.png";
 import refugeeCrisis from "../../public/list-photos/refugee-crisis.png";
+import istanbulQuake from "../../public/list-photos/istanbul-earthquake.png";
+import polices from "../../public/list-photos/polices.png";
+import babiesIncubator from "../../public/list-photos/babies-in-incubator.png";
+import toggIntroduced from "../../public/list-photos/togg-introduced.png";
+import fastTrain from "../../public/list-photos/super-fast-train.png";
 
 
 
@@ -73,7 +73,7 @@ export const elements = [
     {
         id: 604,
         title: "Şehirler Nefes Alıyor",
-        photo: greenPark,
+        photo: greeningWorks,
         description: "Şehirler Nefes Alıyor",
         listID: "cevre1",
         lastingEffect: {
@@ -227,9 +227,75 @@ export const elements = [
     {
         id: 617,
         title: "Büyük İstanbul Depremi!!!",
-        photo: refugeeCrisis,
+        photo: istanbulQuake,
         description: "Beklenen İstanbul Depremi dün sabah saatlerinde 7.3 şiddetinde gerçekleşti. Şehir panik içinde, halk yetkililerden yardım bekliyor.",
         listID: "icisleri2",
+        lastingEffect: {
+            internalSecurity: -5,
+            publicSupport: -5,
+        },
+    },
+    {
+        id: 617,
+        title: "Teröristler Kıskıvrak Yakalandı",
+        photo: polices,
+        description: "Teröristler Kıskıvrak Yakalandı.",
+        listID: "icisleri3",
+        lastingEffect: {
+            internalSecurity: -5,
+            publicSupport: -5,
+        },
+    },
+    {
+        id: 617,
+        title: "Bebek Çetesinin Geçmişi",
+        photo: babiesIncubator,
+        description: "Bebek Çetesinin Geçmişi",
+        listID: "saglik1",
+        lastingEffect: {
+            internalSecurity: -5,
+            publicSupport: -5,
+        },
+    },
+    {
+        id: 617,
+        title: "Togg'un Fiyatı Çok Bulundu",
+        photo: toggIntroduced,
+        description: "Togg'un fiyatı çok bulundu.",
+        listID: "sanayi1",
+        lastingEffect: {
+            internalSecurity: -5,
+            publicSupport: -5,
+        },
+    },
+    {
+        id: 617,
+        title: "Togg'un Fiyatı Çok Bulundu",
+        photo: toggIntroduced,
+        description: "Togg'un fiyatı çok bulundu.",
+        listID: "sanayi1",
+        lastingEffect: {
+            internalSecurity: -5,
+            publicSupport: -5,
+        },
+    },
+    {
+        id: 617,
+        title: "Zincir Marketlere Ağır Cezalar",
+        photo: supermarketPenalty,
+        description: "Zincir Marketlere Ağır Cezalar.",
+        listID: "ticaret1",
+        lastingEffect: {
+            internalSecurity: -5,
+            publicSupport: -5,
+        },
+    },
+    {
+        id: 617,
+        title: "Hızlı Tren Açıldı",
+        photo: fastTrain,
+        description: "Hızlı Tren Açıldı",
+        listID: "ulastirma1",
         lastingEffect: {
             internalSecurity: -5,
             publicSupport: -5,

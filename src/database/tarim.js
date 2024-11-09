@@ -64,7 +64,6 @@ export const tarimQuestions = [
                     agriculturalProduction: +25,
                     internationalRelations: +10,
                 },
-                listID: "tarim1",
             },
             {
                 text: "İthal ürünlerden ek vergi alacağız",
@@ -74,7 +73,6 @@ export const tarimQuestions = [
                     agriculturalProduction: +15,
                     internationalRelations: -10,
                 },
-                listID: "tarim2",
             }
         ],
         title: "Tarım Bakanı",
@@ -131,7 +129,6 @@ export const tarimQuestions = [
                     agriculturalProduction: +15,
                     internalSecurity: -5,
                 },
-                listID: "tarim3",
             }
         ],
         title: "Tarım Bakanı",
