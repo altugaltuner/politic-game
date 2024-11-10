@@ -236,7 +236,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                     <div className="flex flex-col items-center mt-2 gap-2 justify-center">
                         {deathStat && (
                             <Image
-                                src={`/images/${deathStat}.png`}
+                                src={`/images/${deathStat}.webp`}
                                 width={1820}
                                 height={1024}
                                 alt="Oyun Bitti"
