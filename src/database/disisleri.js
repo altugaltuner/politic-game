@@ -1,4 +1,4 @@
-import disisleriBakani from "../../public/ministers/disisleri-bakani.png";
+import disisleriBakani from "../../public/ministers/disisleri-bakani.webp";
 
 export const disisleriQuestions = [
     {

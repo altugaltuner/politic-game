@@ -1,10 +1,10 @@
 import { animated, useSpring } from "@react-spring/web";
-import agricultureIcon from "../../../public/stats-logo/agriculture.png";
-import infrastructureIcon from "../../../public/stats-logo/infrastructure-icon.png";
-import internalSecurityIcon from "../../../public/stats-logo/internal-security-icon.png";
-import internationalIcon from "../../../public/stats-logo/international.png";
-import currencyIcon from "../../../public/stats-logo/money.png";
-import publicSupportIcon from "../../../public/stats-logo/public-icon.png";
+import agricultureIcon from "../../../public/stats-logo/agriculture.webp";
+import infrastructureIcon from "../../../public/stats-logo/infrastructure-icon.webp";
+import internalSecurityIcon from "../../../public/stats-logo/internal-security-icon.webp";
+import internationalIcon from "../../../public/stats-logo/international.webp";
+import currencyIcon from "../../../public/stats-logo/money.webp";
+import publicSupportIcon from "../../../public/stats-logo/public-icon.webp";
 import Image from "next/image";
 
 type Props = {
@@ -144,7 +144,7 @@ const StatUpdater: React.FC<Props> = ({
                 <span className="md:text-sm sm:text-xs sm:block hidden">Yönetim</span>
                 <div className="flex w-full h-20 sm:border-[1px] border-black relative overflow-hidden sm:mt-2 sm:rounded justify-center items-center bg-black">
                     <div className="absolute bottom-0 left-0 w-full" />
-                    <animated.p className="z-50 sm:w-[55px] sm:h-[55px] w-8 h-8 flex items-center justify-center text-white text-4xl">{animatedScore.number.to(n => n.toFixed(0))}</animated.p>
+                    <animated.p className="z-10 sm:w-[55px] sm:h-[55px] w-8 h-8 flex items-center justify-center text-white text-4xl">{animatedScore.number.to(n => n.toFixed(0))}</animated.p>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import ulastirmaBakani from "../../public/ministers/ulasim-bakani.png";
+import ulastirmaBakani from "../../public/ministers/ulasim-bakani.webp";
 
 export const ulastirmaQuestions = [
     {

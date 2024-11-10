@@ -1,4 +1,4 @@
-import enerjiBakani from "../../public/ministers/enerji-bakani.png";
+import enerjiBakani from "../../public/ministers/enerji-bakani.webp";
 
 export const enerjiQuestions = [
     {

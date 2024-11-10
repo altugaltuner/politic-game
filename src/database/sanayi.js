@@ -1,4 +1,4 @@
-import sanayiBakani from "../../public/ministers/sanayi-bakani.png";
+import sanayiBakani from "../../public/ministers/sanayi-bakani.webp";
 
 export const sanayiQuestions = [
     {

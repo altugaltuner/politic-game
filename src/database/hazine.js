@@ -1,4 +1,4 @@
-import hazineBakani from "../../public/ministers/hazine-bakani.png";
+import hazineBakani from "../../public/ministers/hazine-bakani.webp";
 
 export const hazineQuestions = [
     {

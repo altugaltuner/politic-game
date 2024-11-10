@@ -1,4 +1,4 @@
-import genclikBakani from "../../public/ministers/genclik-bakani.png";
+import genclikBakani from "../../public/ministers/genclik-bakani.webp";
 
 export const genclikQuestions = [
     {

@@ -1,4 +1,4 @@
-import egitimBakani from "../../public/ministers/egitim-bakani.png";
+import egitimBakani from "../../public/ministers/egitim-bakani.webp";
 
 export const egitimQuestions = [
     {

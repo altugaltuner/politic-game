@@ -1,5 +1,5 @@
-import adaletBakanı from "../../public/ministers/adalet-bakani.png";
-import altug from "../../public/ministers/altug.png";
+import adaletBakanı from "../../public/ministers/adalet-bakani.webp";
+import altug from "../../public/ministers/altug.webp";
 
 export const adaletQuestions = [
     {

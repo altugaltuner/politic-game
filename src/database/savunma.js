@@ -1,4 +1,4 @@
-import savunmaBakani from "../../public/ministers/savunma-bakani.png";
+import savunmaBakani from "../../public/ministers/savunma-bakani.webp";
 
 export const savunmaQuestions = [
     {

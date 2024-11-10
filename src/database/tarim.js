@@ -1,4 +1,4 @@
-import tarimBakani from "../../public/ministers/tarim-bakani.png";
+import tarimBakani from "../../public/ministers/tarim-bakani.webp";
 
 export const tarimQuestions = [
     {

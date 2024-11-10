@@ -1,4 +1,4 @@
-import ticaretBakani from "../../public/ministers/ticaret-bakani.png";
+import ticaretBakani from "../../public/ministers/ticaret-bakani.webp";
 
 export const ticaretQuestions = [
     {

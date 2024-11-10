@@ -1,4 +1,4 @@
-import saglikBakani from "../../public/ministers/saglik-bakani.png";
+import saglikBakani from "../../public/ministers/saglik-bakani.webp";
 
 export const saglikQuestions = [
     {

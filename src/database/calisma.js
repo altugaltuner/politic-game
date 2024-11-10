@@ -1,4 +1,4 @@
-import calismaBakani from "../../public/ministers/calisma-bakani.png";
+import calismaBakani from "../../public/ministers/calisma-bakani.webp";
 
 export const calismaQuestions = [
     {

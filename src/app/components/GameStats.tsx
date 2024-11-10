@@ -4,7 +4,7 @@ import StatUpdater from "./StatUpdater";
 import { allQuestions, getRandomQuestion, updateStats, checkGameOver } from "./functions";
 import { Button } from "@/components/ui/button"
 import Image from "next/image";
-import victoryImg from "../../../public/images/victory.png";
+import victoryImg from "../../../public/images/victory.webp";
 import { FiAlertCircle } from "react-icons/fi";
 import { ReactTyped } from "react-typed";
 import { events } from "../../database/events";
@@ -80,16 +80,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     const soundFiles = [
         "/sound-effects/malecrowd-1.mp3",
         "/sound-effects/malecrowd-2.mp3",
-        "/sound-effects/malecrowd-3.mp3",
-        "/sound-effects/malecrowd-4.mp3",
-        "/sound-effects/malecrowd-5.mp3",
-        "/sound-effects/malecrowd-6.mp3",
-        "/sound-effects/malecrowd-7.mp3",
-        "/sound-effects/malecrowd-8.mp3",
-        "/sound-effects/malecrowd-9.mp3",
-        "/sound-effects/malecrowd-10.mp3",
-        "/sound-effects/malecrowd-11.mp3",
-        "/sound-effects/malecrowd-12.mp3",
     ];
 
 
