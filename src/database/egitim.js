@@ -35,8 +35,8 @@ export const egitimQuestions = [
             {
                 text: "Mesleki eğitimi teşvik edeceğiz",
                 effect: {
-                    budget: -10,
-                    agriculture: +15,
+                    budget: +10,
+                    agriculturalProduction: +15,
                     internationalRelations: -15,
                 },
                 listID: "egitim1",

@@ -23,8 +23,6 @@ import babiesIncubator from "../../public/list-photos/babies-in-incubator.png";
 import toggIntroduced from "../../public/list-photos/togg-introduced.png";
 import fastTrain from "../../public/list-photos/super-fast-train.png";
 
-
-
 export const elements = [
     {
         id: 600,
@@ -32,10 +30,6 @@ export const elements = [
         photo: dilanPolat,
         description: "Bu karardan güç alan başka suçlular peydahlandı.Serbest kalanlar da uslanmayacak",
         listID: "adalet1",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 601,
@@ -43,10 +37,6 @@ export const elements = [
         photo: prisonFull,
         description: "Hapishane doluluk oranlarından şikayet eden hakimler, suçluları serbest bırakmak zorunda olduklarını iddia ediyorlar.",
         listID: "adalet2",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 602,
@@ -54,10 +44,6 @@ export const elements = [
         photo: illegalWorkers,
         description: "Kaçakların ucuza ve sigortasız çalışması, işverenleri mutlu ederken iş arayan Türk halkının hakettiğinden daha aza boyun bükmesini zorunlu kılıyor. Halk bundan rahatsız!",
         listID: "aile1",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 603,
@@ -65,10 +51,6 @@ export const elements = [
         photo: happFarmer,
         description: "Tarımın desteklenmesi köylünün yüzünü güldürdü. Verilen teşvikler ve vergi indirimleri sayesinde gıda krizinin önüne kısa vadede geçilmiş oldu.",
         listID: "calisma1",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 604,
@@ -76,10 +58,6 @@ export const elements = [
         photo: greeningWorks,
         description: "Şehirler Nefes Alıyor",
         listID: "cevre1",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 605,
@@ -87,10 +65,6 @@ export const elements = [
         photo: renewableEnergy,
         description: "Solar Paneller Kuruldu",
         listID: "cevre2",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 606,
@@ -98,10 +72,6 @@ export const elements = [
         photo: tourismAttack,
         description: "Rus Turistler Akın Ediyor",
         listID: "cevre3",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 607,
@@ -109,10 +79,6 @@ export const elements = [
         photo: tradeAgreement,
         description: "Ticaret Anlaşması İmzalandı",
         listID: "disisleri1",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 608,
@@ -120,10 +86,6 @@ export const elements = [
         photo: defenceTech,
         description: "Savunma Sektörüne Büyük Yatırım",
         listID: "disisleri2",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 609,
@@ -131,10 +93,6 @@ export const elements = [
         photo: refugeePass,
         description: "Mülteciler sınırdan geçiyor",
         listID: "disisleri3",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 610,
@@ -142,10 +100,6 @@ export const elements = [
         photo: protectBorder,
         description: "Türk askeri sınırını kaçaklara karşı koruyor.",
         listID: "disisleri4",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 611,
@@ -153,10 +107,6 @@ export const elements = [
         photo: woodenJob,
         description: "Mesleki eğitime talep artıyor.",
         listID: "egitim1",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 612,
@@ -164,10 +114,6 @@ export const elements = [
         photo: gasExploration,
         description: "DoğalGaz Arama Çalışmaları",
         listID: "enerji1",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 613,
@@ -175,10 +121,6 @@ export const elements = [
         photo: greatAgreement,
         description: "Yüzyılın Enerji Ortaklığı",
         listID: "enerji2",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 614,
@@ -186,10 +128,6 @@ export const elements = [
         photo: nuclearThesis,
         description: "Nükleer Tesise Başlandı",
         listID: "enerji3",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 615,
@@ -197,10 +135,6 @@ export const elements = [
         photo: newFootballField,
         description: "Yeni Spor Sahaları Yapılacak",
         listID: "genclik1",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 616,
@@ -208,10 +142,6 @@ export const elements = [
         photo: turkishLiraLose,
         description: "Yeni Faiz Kararları Şaşırttı.Cumhurbaşkanının son kararından sonra Türk lirası ciddi değer kaybına uğradı.",
         listID: "hazine1",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 617,
@@ -219,10 +149,6 @@ export const elements = [
         photo: refugeeCrisis,
         description: "Sığınmacılar adapte olmak istemiyor. Bugün sabah saatlerinde sığınmacı suriyeliler ile halk arasında arbede yaşandı. Çok sayıda yaralı var.",
         listID: "icisleri1",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 618,
@@ -230,10 +156,6 @@ export const elements = [
         photo: istanbulQuake,
         description: "Beklenen İstanbul Depremi dün sabah saatlerinde 7.3 şiddetinde gerçekleşti. Şehir panik içinde, halk yetkililerden yardım bekliyor.",
         listID: "icisleri2",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 619,
@@ -241,10 +163,6 @@ export const elements = [
         photo: polices,
         description: "Teröristler Kıskıvrak Yakalandı.",
         listID: "icisleri3",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 620,
@@ -252,10 +170,6 @@ export const elements = [
         photo: babiesIncubator,
         description: "Bebek Çetesinin Geçmişi",
         listID: "saglik1",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 621,
@@ -263,42 +177,19 @@ export const elements = [
         photo: toggIntroduced,
         description: "Togg'un fiyatı çok bulundu.",
         listID: "sanayi1",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
         id: 622,
-        title: "Togg'un Fiyatı Çok Bulundu",
-        photo: toggIntroduced,
-        description: "Togg'un fiyatı çok bulundu.",
-        listID: "sanayi1",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
-    },
-    {
-        id: 623,
         title: "Zincir Marketlere Ağır Cezalar",
         photo: supermarketPenalty,
         description: "Zincir Marketlere Ağır Cezalar.",
         listID: "ticaret1",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
     {
-        id: 624,
+        id: 623,
         title: "Hızlı Tren Açıldı",
         photo: fastTrain,
         description: "Hızlı Tren Açıldı",
         listID: "ulastirma1",
-        lastingEffect: {
-            internalSecurity: -5,
-            publicSupport: -5,
-        },
     },
 ];
