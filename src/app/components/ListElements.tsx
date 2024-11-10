@@ -28,7 +28,7 @@ const ListElements: React.FC<ListElementsProps> = ({ selectedListIDs }) => {
             {/* <p>Toplam Etkiler : </p> */}
             <ScrollArea className=" w-full rounded-md p-2 max-h-[800px] overflow-y-auto">
                 {filteredElements.map(element => (
-                    <div key={element.id} className="p-2 border-[2px] rounded-xl border-black bg-white mb-3">
+                    <div key={element.id} className="flex flex-col gap-2 p-2 border-[2px] rounded-xl border-black bg-white mb-3">
                         <h3 className="text-base font-bold">{element.title}</h3>
                         <Image
                             width={1820} height={1024}

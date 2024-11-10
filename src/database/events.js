@@ -1,4 +1,3 @@
-import alienInvasion from "../../public/events/alien-invasion.png";
 import arabMoney from "../../public/events/arab-money.png";
 import dataHack from "../../public/events/data-hack.png";
 import electricalShortcut from "../../public/events/electrical-shortcut.png";
@@ -18,7 +17,6 @@ import terroristBusted from "../../public/events/terrorists-busted.png";
 import tosuncuk from "../../public/events/tosuncuk.png";
 import waterPipesExploded from "../../public/events/water-pipes-exploded.png";
 import womenAbuseOnstreet from "../../public/events/women-abuse-onstreet.png";
-import togg from "../../public/events/togg-introduced.png";
 import syriaIntervene from "../../public/events/syria-intervention.png";
 import tbmmVote from "../../public/events/tbmm-vote.png";
 import tbmmFight from "../../public/events/tbmm-fight.png";
