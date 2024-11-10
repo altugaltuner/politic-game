@@ -5,16 +5,16 @@ import renewableEnergy from "../../public/list-photos/renewable-energy.webp";
 import supermarketPenalty from "../../public/list-photos/supermarket-penalty.webp";
 import tourismAttack from "../../public/list-photos/tourism-attack.webp";
 import turkishLiraLose from "../../public/list-photos/turkish-lira-lose.webp";
-import dilanPolat from "../../public/list-photos/dilan-polat.webp";
+import karaPara from "../../public/list-photos/kara-para.webp";
 import prisonFull from "../../public/list-photos/prison-full.webp";
 import happFarmer from "../../public/list-photos/happy-farmer.webp";
 import illegalWorkers from "../../public/list-photos/illegal-workers.webp";
-import tradeAgreement from "../../public/list-photos/trade-agreement.webp";
 import defenceTech from "../../public/list-photos/defence-tech.webp";
 import protectBorder from "../../public/list-photos/protect-border.webp";
 import woodenJob from "../../public/list-photos/wooden-job.webp";
 import gasExploration from "../../public/list-photos/gas-exploration.webp";
 import greatAgreement from "../../public/list-photos/great-agreement.webp";
+import tradeAgreement from "../../public/list-photos/trade-agreement.webp";
 import nuclearThesis from "../../public/list-photos/nuclear-thesis.webp";
 import refugeeCrisis from "../../public/list-photos/refugee-crisis.webp";
 import istanbulQuake from "../../public/list-photos/istanbul-earthquake.webp";
@@ -27,7 +27,7 @@ export const elements = [
     {
         id: 600,
         title: "Suçlulara Yeşil Işık",
-        photo: dilanPolat,
+        photo: karaPara,
         description: "Yüzsüzce paylaşımlarıyla yakayı ele veren sosyal medya ünlüleri serbest bırakıldı. Bu karardan cesaretlenecek yeni suçluların peydahlanması gündemde.",
         listID: "adalet1",
     },
