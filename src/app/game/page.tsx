@@ -15,9 +15,12 @@ export default function HomePage() {
         );
     };
 
+    // Function to reset selectedListIDs
+    const resetSelectedListIDs = () => setSelectedListIDs([]);
+
     return (
         <div className="container mx-auto p-2 flex gap-5 w-full items-start">
-            <GameStats setSelectedListIDs={handleSetSelectedListID} />
+            <GameStats setSelectedListIDs={handleSetSelectedListID} resetSelectedListIDs={resetSelectedListIDs} />
             <ListElements selectedListIDs={selectedListIDs} />
         </div>
     );

@@ -12,10 +12,11 @@ import { EventModal } from "./eventModal";
 
 type GameStatsProps = {
     setSelectedListIDs: (newListID: string) => void;
+    resetSelectedListIDs: () => void;
 };
 
 // Component for Game Stats
-export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs }) => {
+export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetSelectedListIDs }) => {
 
     const [agriculture, setAgriculture] = useState(50);
     const [infrastructure, setInfrastructure] = useState(50);
@@ -219,6 +220,8 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs }) => {
         setGameOverReason("");
         setScore(0);
         setDeathStat(null);
+
+        resetSelectedListIDs(); // Clear the filteredElements in ListElements
     };
 
     // Oyun bittiyse oyunun son ekranını göster
@@ -305,11 +308,11 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs }) => {
 
             {/* Question display */}
             {currentQuestion ? (
-                <div className={`question-container ${isVisible ? 'visible' : ''} text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[350px] relative border-black border-[3px] lg:w-[1150px] flex flex-col justify-start items-center`}>
+                <div className="text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[350px] relative border-black border-[3px] lg:w-[1150px] flex flex-col justify-start items-center">
 
                     {currentQuestion?.link ? (
                         <button
-                            className="absolute top-5 right-3"
+                            className={`question-container ${isVisible ? 'visible' : ''} absolute top-5 right-3`}
                             onClick={() => window.open(currentQuestion.link, '_blank')}
                             style={{ cursor: 'pointer' }}
                             aria-label="Open link"
@@ -319,7 +322,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs }) => {
                         </button>
                     ) : null}
 
-                    <div className="flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs">
+                    <div className={`question-container ${isVisible ? 'visible' : ''}  flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs`}>
                         <ReactTyped
                             strings={[currentQuestion.question]}
                             typeSpeed={10}
@@ -330,7 +333,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs }) => {
                     </div>
 
                     {currentQuestion.photo && currentQuestion.title && (
-                        <div className="flex flex-col items-center mt-2 gap-2 justify-center">
+                        <div className={`question-container ${isVisible ? 'visible' : ''} flex flex-col items-center mt-2 gap-2 justify-center`}>
                             <Image
                                 width={1820} height={1024}
                                 src={
@@ -353,7 +356,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs }) => {
 
             {/* Answer buttons */}
             {currentQuestion && (
-                <div className="flex sm:flex-row flex-col justify-center rounded-lg bg-white border-black border-[3px] lg:w-[1150px] w-full sm:gap-5 gap-2 p-2.5 items-center">
+                <div className=" flex sm:flex-row flex-col justify-center rounded-lg bg-white border-black border-[3px] lg:w-[1150px] w-full sm:gap-5 gap-2 p-2.5 items-center ">
                     <Button
                         className="sm:w-[27rem] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs"
                         onClick={() => answerQuestion("left")}

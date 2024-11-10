@@ -225,7 +225,7 @@ export const elements = [
         },
     },
     {
-        id: 617,
+        id: 618,
         title: "Büyük İstanbul Depremi!!!",
         photo: istanbulQuake,
         description: "Beklenen İstanbul Depremi dün sabah saatlerinde 7.3 şiddetinde gerçekleşti. Şehir panik içinde, halk yetkililerden yardım bekliyor.",
@@ -236,7 +236,7 @@ export const elements = [
         },
     },
     {
-        id: 617,
+        id: 619,
         title: "Teröristler Kıskıvrak Yakalandı",
         photo: polices,
         description: "Teröristler Kıskıvrak Yakalandı.",
@@ -247,7 +247,7 @@ export const elements = [
         },
     },
     {
-        id: 617,
+        id: 620,
         title: "Bebek Çetesinin Geçmişi",
         photo: babiesIncubator,
         description: "Bebek Çetesinin Geçmişi",
@@ -258,7 +258,7 @@ export const elements = [
         },
     },
     {
-        id: 617,
+        id: 621,
         title: "Togg'un Fiyatı Çok Bulundu",
         photo: toggIntroduced,
         description: "Togg'un fiyatı çok bulundu.",
@@ -269,7 +269,7 @@ export const elements = [
         },
     },
     {
-        id: 617,
+        id: 622,
         title: "Togg'un Fiyatı Çok Bulundu",
         photo: toggIntroduced,
         description: "Togg'un fiyatı çok bulundu.",
@@ -280,7 +280,7 @@ export const elements = [
         },
     },
     {
-        id: 617,
+        id: 623,
         title: "Zincir Marketlere Ağır Cezalar",
         photo: supermarketPenalty,
         description: "Zincir Marketlere Ağır Cezalar.",
@@ -291,7 +291,7 @@ export const elements = [
         },
     },
     {
-        id: 617,
+        id: 624,
         title: "Hızlı Tren Açıldı",
         photo: fastTrain,
         description: "Hızlı Tren Açıldı",
