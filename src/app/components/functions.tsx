@@ -33,6 +33,7 @@ type Question = {
     question: string;
     link?: string;
     answers: {
+        listID?: string | null;
         text: string;
         effect: {
             publicSupport?: number;

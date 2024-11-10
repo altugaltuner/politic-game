@@ -10,8 +10,13 @@ import { ReactTyped } from "react-typed";
 import { events } from "../../database/events";
 import { EventModal } from "./eventModal";
 
+type GameStatsProps = {
+    setSelectedListIDs: (newListID: string) => void;
+};
+
 // Component for Game Stats
-export const GameStats = () => {
+export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs }) => {
+
     const [agriculture, setAgriculture] = useState(50);
     const [infrastructure, setInfrastructure] = useState(50);
     const [internalSecurity, setInternalSecurity] = useState(50);
@@ -23,7 +28,6 @@ export const GameStats = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const closeModal = () => setIsModalOpen(false);
-
 
     const getRandomEventIndex = () => {
         return Math.floor(Math.random() * events.length);
@@ -62,7 +66,7 @@ export const GameStats = () => {
     useEffect(() => {
         if (oneInTenChance()) {
             const nextEvent = getRandomEvent(usedEvents);
-            if (nextEvent) {
+            if (nextEvent && !gameOver) {
                 setCurrentEvent(nextEvent);
                 setUsedEvents((prev) => [...prev, nextEvent.id]);
                 setIsModalOpen(true);
@@ -177,6 +181,10 @@ export const GameStats = () => {
             setPublicSupport,
             setBudget
         });
+
+        if (answer.listID) {
+            setSelectedListIDs(answer.listID); // Add new listID to the array
+        }
 
         setIsVisible(false);
 
