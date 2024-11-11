@@ -9,7 +9,7 @@ interface SettingsAreaProps {
 const SettingsArea: React.FC<SettingsAreaProps> = ({ handleOpenModal, modalOpen }) => {
 
     return (
-        <div className="text-start relative border-[3px] md:order-1 order-2 border-black rounded-lg p-3 w-[100%] min-h-[172px] bg-white">
+        <div className="text-start relative border-[3px] xl:order-1 order-2 border-black rounded-lg p-3 sm:w-[350px] min-h-[172px] bg-white">
             <h2 className="text-xl font-semibold mb-4">Profilim</h2>
             <div className='flex gap-2'>
                 <CircleUserRound size={75} />

@@ -217,7 +217,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     // Oyun bittiyse oyunun son ekranını göster
     if (gameOver) {
         return (
-            <div className="flex flex-col gap-2 w-[75%] justify-center items-center rounded-md">
+            <div className="flex flex-col gap-3 xl:w-[70%] w-full justify-center items-center rounded-md relative">
                 <StatUpdater
                     agriculture={agriculture}
                     infrastructure={infrastructure}
@@ -228,10 +228,10 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                     score={score}
                     deathLayerStat={deathStat}
                 />
-                <div className="question-container visible text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[350px] border-black border-[3px] lg:w-[1150px] flex flex-col justify-start items-center">
+                <div className="question-container visible text-center bg-white sm:p-2 p-2 rounded-lg border-black border-[3px] w-full flex flex-col justify-start items-center">
 
                     <div className="flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs">
-                        <h1 className="bg-primary text-white py-1 px-2 rounded-2xl ">{gameOverReason}</h1>
+                        <h1 className="bg-primary text-white py-1 px-2 rounded-md ">{gameOverReason}</h1>
                     </div>
                     <div className="flex flex-col items-center mt-2 gap-2 justify-center">
                         {deathStat && (
@@ -244,17 +244,17 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                             />
                         )}
                     </div>
+                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs mt-5" onClick={restartGame}>
+                        Tekrar Oyna
+                    </Button>
                 </div>
-                <Button className="w-auto h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800" onClick={restartGame}>
-                    Tekrar Oyna
-                </Button>
             </div>
         )
     };
 
     if (allQuestions.length === usedQuestions.length) {
         return (
-            <div className="flex flex-col gap-2 w-[75%] justify-center items-center rounded-md">
+            <div className="flex flex-col gap-3 xl:w-[70%] w-full justify-center items-center rounded-md relative">
                 <StatUpdater
                     agriculture={agriculture}
                     infrastructure={infrastructure}
@@ -266,9 +266,9 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                     deathLayerStat={null}
                 />
                 <div className="flex flex-col items-center text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[547px] h350px] border-black border-[1px] lg:w-[1150px]">
-                    <h1 className=" bg-primary text-white py-1 px-2 rounded-2xl w-[90%]">Başardın! Türkiyeyi son nefesine kadar yönetebildin. Huzur içinde ölebilirsin.</h1>
+                    <h1 className=" bg-primary text-white py-1 px-2 rounded-md w-[90%]">Başardın! Türkiyeyi son nefesine kadar yönetebildin. Huzur içinde ölebilirsin.</h1>
                     <Image src={victoryImg} alt="Oyun Bitti" className="my-4 h-[15rem] sm:w-[567px] w-[355px]" />
-                    <Button className=" h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800" onClick={restartGame}>
+                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:scale-105hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs" onClick={restartGame}>
                         Tekrar Oyna
                     </Button>
                 </div>
@@ -278,7 +278,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     }
 
     return (
-        <div className="flex flex-col gap-3 md:w-[75%] w-full justify-center items-center rounded-md relative">
+        <div className="flex flex-col gap-3 xl:w-[70%] w-full justify-center items-center rounded-md relative">
 
             {isModalOpen && currentEvent && (
                 <EventModal event={currentEvent} onClose={closeModal} />
@@ -318,7 +318,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                             typeSpeed={10}
                             showCursor={false}
                             loop={false}
-                            className=" bg-primary text-white py-1 px-2 rounded-2xl w-[90%]"
+                            className=" bg-primary text-white py-1 px-2 rounded-md w-[90%]"
                         />
                     </div>
 

@@ -17,7 +17,10 @@ export default function RootLayout({
       </head>
       <body
         className="bg-[#f5f5f5]"
-        style={{ backgroundImage: 'url(/images/background.webp)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}
+        style={{
+          backgroundImage: 'url(/images/background.webp)', backgroundSize: 'cover',
+          backgroundRepeat: 'repeat'
+        }}
       >
         {children}
       </body>
