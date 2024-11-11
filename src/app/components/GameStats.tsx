@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import StatUpdater from "./StatUpdater";
 import { allQuestions, getRandomQuestion, updateStats, checkGameOver } from "./functions";
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import victoryImg from "../../../public/images/victory.webp";
 import { FiAlertCircle } from "react-icons/fi";
@@ -266,7 +266,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                     deathLayerStat={null}
                 />
                 <div className="flex flex-col items-center text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[547px] h350px] border-black border-[1px] lg:w-[1150px]">
-                    <h1 className=" bg-primary text-white py-1 px-2 rounded-2xl">Başardın! Türkiyeyi son nefesine kadar yönetebildin. Huzur içinde ölebilirsin.</h1>
+                    <h1 className=" bg-primary text-white py-1 px-2 rounded-2xl w-[90%]">Başardın! Türkiyeyi son nefesine kadar yönetebildin. Huzur içinde ölebilirsin.</h1>
                     <Image src={victoryImg} alt="Oyun Bitti" className="my-4 h-[15rem] sm:w-[567px] w-[355px]" />
                     <Button className=" h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-blue-600 active:scale-95 active:bg-blue-800" onClick={restartGame}>
                         Tekrar Oyna
@@ -278,7 +278,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     }
 
     return (
-        <div className="flex flex-col gap-2 w-[75%] justify-center items-center rounded-md relative">
+        <div className="flex flex-col gap-3 md:w-[75%] w-full justify-center items-center rounded-md relative">
 
             {isModalOpen && currentEvent && (
                 <EventModal event={currentEvent} onClose={closeModal} />
@@ -298,18 +298,18 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
             {/* Question display */}
             {currentQuestion ? (
-                <div className="text-center bg-white sm:p-2 p-2 rounded-lg sm:min-h-[620px] h-[350px] relative border-black border-[3px] lg:w-[1150px] flex flex-col justify-start items-center">
+                <div className="text-center bg-white sm:p-2 p-2 rounded-lg relative border-black border-[3px] flex flex-col justify-start items-center w-full">
 
                     {currentQuestion?.link ? (
-                        <button
-                            className={`question-container ${isVisible ? 'visible' : ''} absolute top-5 right-3`}
+                        <Button
+                            className={`question-container absolute top-1 right-1 rounded-full ${isVisible ? 'visible' : ''} w-10 h-10`}
                             onClick={() => window.open(currentQuestion.link, '_blank')}
                             style={{ cursor: 'pointer' }}
                             aria-label="Open link"
-                            title="Open link"
+                            title="İlgili Haber"
                         >
                             <FiAlertCircle className="w-7 h-7" />
-                        </button>
+                        </Button>
                     ) : null}
 
                     <div className={`question-container ${isVisible ? 'visible' : ''}  flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs`}>
@@ -318,7 +318,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                             typeSpeed={10}
                             showCursor={false}
                             loop={false}
-                            className=" bg-primary text-white py-1 px-2 rounded-2xl"
+                            className=" bg-primary text-white py-1 px-2 rounded-2xl w-[90%]"
                         />
                     </div>
 
@@ -346,9 +346,9 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
             {/* Answer buttons */}
             {currentQuestion && (
-                <div className=" flex sm:flex-row flex-col justify-center rounded-lg bg-white border-black border-[3px] lg:w-[1150px] w-full sm:gap-5 gap-2 p-2.5 items-center ">
+                <div className=" flex xl:flex-row flex-col justify-center rounded-lg bg-white border-black border-[3px] w-full xl:gap-5 gap-2 p-2.5 items-center ">
                     <Button
-                        className="sm:w-[27rem] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs"
+                        className="xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs"
                         onClick={() => answerQuestion("left")}
                     >
                         <ReactTyped
@@ -360,7 +360,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                     </Button>
 
                     <Button
-                        className="sm:w-[27rem] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs"
+                        className="xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs"
                         onClick={() => answerQuestion("right")}
                     >
                         <ReactTyped
