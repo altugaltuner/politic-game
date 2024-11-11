@@ -85,7 +85,7 @@ const StatUpdater: React.FC<Props> = ({
             </div>
 
             <div className="flex flex-col items-center justify-between md:p-2 border-black md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center bg-[#eaeaea] md:h-[146px] h-[55px]">
-                <span className="md:text-xs xl:text-sm md:block hidden">İç Güvenlik</span>
+                <span className="md:text-xs xl:text-sm md:block hidden">Güvenlik</span>
                 <div className="flex w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center bg-[rgb(150,150,150)] border-black border-[1px] rounded-sm">
                     <animated.p className="md:block hidden absolute z-10 bottom-0 right-0 text-white bg-black p-[2px] rounded border-[1px] white lg:text-base md:text-sm">{animatedInternalSecurity.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "internalSecurity" && (
@@ -99,7 +99,7 @@ const StatUpdater: React.FC<Props> = ({
             </div>
 
             <div className="flex flex-col items-center justify-between md:p-2 border-black md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center bg-[#eaeaea] md:h-[146px] h-[55px]">
-                <span className="md:text-xs xl:text-sm md:block hidden">Dış Politika</span>
+                <span className="md:text-xs xl:text-sm md:block hidden">Politika</span>
                 <div className="flex w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center bg-[rgb(150,150,150)] border-black border-[1px] rounded-sm">
                     <animated.p className="md:block hidden absolute z-10 bottom-0 right-0 text-white bg-black p-[2px] rounded border-[1px] white lg:text-base md:text-sm">{animatedInternational.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "international" && (
@@ -127,7 +127,7 @@ const StatUpdater: React.FC<Props> = ({
             </div>
 
             <div className="flex flex-col items-center justify-between md:p-2 border-black md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center bg-[#eaeaea] md:h-[146px] h-[55px]">
-                <span className="md:text-xs xl:text-sm md:block hidden">Halk Desteği</span>
+                <span className="md:text-xs xl:text-sm md:block hidden">Güven</span>
                 <div className="flex w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center bg-[rgb(150,150,150)] border-black border-[1px] rounded-sm">
                     <animated.p className="md:block hidden absolute z-10 bottom-0 right-0 text-white bg-black p-[2px] rounded border-[1px] white lg:text-base md:text-sm">{animatedPublicSupport.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "publicOpinion" && (
