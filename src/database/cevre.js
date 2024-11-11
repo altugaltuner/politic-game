@@ -70,7 +70,7 @@ export const cevreQuestions = [
                 }
             },
             {
-                text: "Sanayiye yatırım, ekonomik büyüme devam etmeli",
+                text: "Ekonomik büyüme devam etmeli",
                 effect: {
                     publicSupport: -10,
                     budget: +10,

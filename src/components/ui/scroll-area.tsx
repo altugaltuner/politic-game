@@ -17,7 +17,7 @@ const ScrollArea = React.forwardRef<
     <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
       <div
         data-radix-scroll-area-content
-        className="flex xl:flex-col flex-row xl:gap-0 gap-5"
+        className="flex xl:flex-col flex-row xl:gap-0 gap-2 w-full"
       >
         {children}
       </div>
@@ -45,7 +45,7 @@ const ScrollBar = React.forwardRef<
     )}
     {...props}
   >
-    <ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-gray-500 hover:bg-gray-700" />
+    <ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-gray-300 hover:bg-gray-400" />
   </ScrollAreaPrimitive.ScrollAreaScrollbar>
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName

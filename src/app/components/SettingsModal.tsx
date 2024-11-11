@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ToggleLeft, Volume2, VolumeX, Music } from "lucide-react";
+import { ToggleLeft, Volume2, Music } from "lucide-react";
 
 interface SettingsModalProps {
     modalOpen: boolean;

@@ -12,17 +12,17 @@ export const adaletQuestions = [
                 }
             },
             {
-                text: "Her şey milletimizin emrinde, birlikte başaracağız",
+                text: "Bu ülke için elimizden geleni yapacağız",
                 effect: {
                 }
             }
         ],
-        title: "Altuğ Altuner",
+        title: "Kreatör",
         photo: altug,
     },
     {
         id: 2,
-        question: "Kara para aklayan sosyal medya ünlüleri serbest bırakıldı. Düşünceniz nedir?",
+        question: "Sayın Cumhurbaşkanım. Kara para aklayan sosyal medya ünlülerinin serbest bırakılacağı gündemde. Düşünceniz nedir?",
         answers: [
             {
                 text: "Yargının kararına saygı duyacağız",
@@ -33,7 +33,7 @@ export const adaletQuestions = [
                 listID: "adalet1",
             },
             {
-                text: "Hukuksuzluk mevcut olabilir, gereken inceleme yapılacak",
+                text: "Hukuksuzluk mevcut olabilir",
                 effect: {
                     internalSecurity: +20,
                     publicSupport: +20,
@@ -49,7 +49,7 @@ export const adaletQuestions = [
         question: "İstanbul Sözleşmesi konusunda tartışmalar devam ediyor. Ne düşünüyorsunuz?",
         answers: [
             {
-                text: "Aile yapımızı koruyacağız, hassasiyetlerimiz var",
+                text: "Ailevi hassasiyetlerimizi korumalıyız",
                 effect: {
                     internalSecurity: -20,
                     publicSupport: -20,
@@ -57,7 +57,7 @@ export const adaletQuestions = [
                 },
             },
             {
-                text: "Kadınlarımızın haklarını korumak önceliğimizdir",
+                text: "Kadın haklarını korumak önceliğimiz",
                 effect: {
                     internalSecurity: +20,
                     publicSupport: +20,
@@ -74,7 +74,7 @@ export const adaletQuestions = [
         question: "İstanbul ve Ankara’da suç oranları arttı, halk güvenlikten endişeli...",
         answers: [
             {
-                text: "Polis güçlendirilecek, suçlulara en ağır ceza verilecek",
+                text: "Polis ekipleri güçlendirilecek",
                 effect: {
                     internalSecurity: +20,
                     publicSupport: +20,
@@ -82,7 +82,7 @@ export const adaletQuestions = [
                 }
             },
             {
-                text: "Sosyal projelerle gençleri suça yönelmekten uzaklaştıracağız",
+                text: "Sosyal projelerle suç oranlarını düşüreceğiz",
                 effect: {
                     internalSecurity: -10,
                     publicSupport: -10,

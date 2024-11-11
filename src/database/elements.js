@@ -28,7 +28,7 @@ export const elements = [
         id: 600,
         title: "Suçlulara Yeşil Işık",
         photo: karaPara,
-        description: "Yüzsüzce paylaşımlarıyla yakayı ele veren sosyal medya ünlüleri serbest bırakıldı. Bu karardan cesaretlenecek yeni suçluların peydahlanması gündemde.",
+        description: "Kara para aklama suçundan tutuklanan sosyal medya ünlüleri serbest bırakıldı. Halk bu karardan memnun değil.",
         listID: "adalet1",
     },
     {

@@ -132,27 +132,27 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             setGameOver(true);
             if (publicOpinion <= 1) {
                 setDeathStat("publicOpinion");
-                setGameOverReason("Halkın güvenini kaybettiniz. Muhalefetin de erken seçim talebine boyun eğerek seçimlere gitmek zorunda kaldınız. Seçimleri kaybettiniz!");
+                setGameOverReason("Halkın desteğini kaybettin ve ilk fırsatta erken seçimle görevinden alındın. Yönetimin sona erdi!");
             }
             else if (internalSecurity <= 1) {
                 setDeathStat("internalSecurity");
-                setGameOverReason("İç güvenlik zafiyeti nedeniyle ülke kaosa sürüklendi. Güvenlik olmadan istikrar sağlanamadı!");
+                setGameOverReason("İç güvenlik sorunları kontrol altına alınamadı ve ülkeyi kaosa sürükledin. Yönetimin sona erdi!");
             }
             else if (international <= 1) {
                 setDeathStat("international");
-                setGameOverReason("Dış politikayı yönetemediniz. Ülkenin küresel arenadaki itibarı sıfırlandı!");
+                setGameOverReason("Dış politikada yapılan hatalar ülkeyi yalnızlığa sürükledi. Uluslararası arenada söz hakkını kaybettin. Yönetimin sona erdi!");
             }
             else if (budget <= 1) {
                 setDeathStat("budget");
-                setGameOverReason("Bütçe kaynakları tükendi ve ekonomik kriz kaçınılmaz oldu. Mali dengeyi sağlayamadığınız için yönetim sona erdi!");
+                setGameOverReason("Kontrolsüz harcamalar ve hatalı yönetim ülkeyi felakete sürükledi. Devletin hazinesini tamamen tükettin. Yönetim sona erdi!");
             }
             else if (infrastructure <= 1) {
                 setDeathStat("infrastructure");
-                setGameOverReason("Altyapı ve çevre sorunları çözülemedi ve temel hizmetler sağlanamaz hale geldi!");
+                setGameOverReason("Altyapı sorunlarına kayıtsız kalman, ülkeyi çöküşe sürükledi. Yollar, köprüler, şehirler harabeye döndü. İhmalin bedeli ağır oldu. Yönetimin sona erdi!");
             }
             else if (agriculture <= 1) {
                 setDeathStat("agriculture");
-                setGameOverReason("Tarım üretimi azaldı ve gıda krizi ortaya çıktı. Ülke halkının ihtiyaçlarını karşılayamıyorsunuz!");
+                setGameOverReason("Üretimi ihmal ettiğin için gıda krizi toplumda kaosa yol açtı. Halkın en temel ihtiyaçlarını bile karşılayamadın. Yönetimin sona erdi!");
             }
         }
     }, [publicOpinion, internalSecurity, international, budget, infrastructure, agriculture, score]);
@@ -217,7 +217,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     // Oyun bittiyse oyunun son ekranını göster
     if (gameOver) {
         return (
-            <div className="flex flex-col gap-3 xl:w-[70%] w-full justify-center items-center rounded-md relative">
+            <div className="flex flex-col gap-3 xl:w-[72%] w-full justify-center items-center rounded-md relative">
                 <StatUpdater
                     agriculture={agriculture}
                     infrastructure={infrastructure}
@@ -230,8 +230,9 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                 />
                 <div className="question-container visible text-center bg-white sm:p-2 p-2 rounded-lg border-black border-[3px] w-full flex flex-col justify-start items-center">
 
-                    <div className="flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs">
+                    <div className="flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs gap-2">
                         <h1 className="bg-primary text-white py-1 px-2 rounded-md ">{gameOverReason}</h1>
+                        <p className="bg-primary text-white py-1 px-2 rounded-md ">Skorun : <span>{usedQuestions.length - 1}</span> </p>
                     </div>
                     <div className="flex flex-col items-center mt-2 gap-2 justify-center">
                         {deathStat && (
@@ -254,7 +255,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
     if (allQuestions.length === usedQuestions.length) {
         return (
-            <div className="flex flex-col gap-3 xl:w-[70%] w-full justify-center items-center rounded-md relative">
+            <div className="flex flex-col gap-3 xl:w-[72%] w-full justify-center items-center rounded-md relative">
                 <StatUpdater
                     agriculture={agriculture}
                     infrastructure={infrastructure}
@@ -278,7 +279,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     }
 
     return (
-        <div className="flex flex-col gap-3 xl:w-[70%] w-full justify-center items-center rounded-md relative">
+        <div className="flex flex-col gap-3 xl:w-[72%] w-full justify-center items-center rounded-md relative">
 
             {isModalOpen && currentEvent && (
                 <EventModal event={currentEvent} onClose={closeModal} />
@@ -302,7 +303,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
                     {currentQuestion?.link ? (
                         <Button
-                            className={`question-container absolute top-1 right-1 rounded-full ${isVisible ? 'visible' : ''} w-10 h-10`}
+                            className={`question-container absolute top-1 right-1 rounded-full ${isVisible ? 'visible' : ''} sm:w-10 sm:h-10 w-6 h-6 p-2`}
                             onClick={() => window.open(currentQuestion.link, '_blank')}
                             style={{ cursor: 'pointer' }}
                             aria-label="Open link"

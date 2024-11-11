@@ -6,7 +6,7 @@ export const icisleriQuestions = [
         question: "Sayın Cumhurbaşkanım, ülkedeki Suriyeli mülteci sayısı toplumsal tansiyonu artırıyor. Bazı kesimler, mültecilerin geri gönderilmesini istiyor.",
         answers: [
             {
-                text: "Kademeli olarak gönderme söylemlerini yayın",
+                text: "Kademeli olarak göndereceğiz",
                 effect: {
                     publicSupport: -20,
                     budget: -10,
@@ -42,7 +42,7 @@ export const icisleriQuestions = [
                 }
             },
             {
-                text: "Şu an kaynaklarımız kısıtlı,erteleyin",
+                text: "Şu an kaynaklarımız kısıtlı, erteleyin",
                 effect: {
                     budget: +20,
                     internalSecurity: -20,
@@ -145,7 +145,7 @@ export const icisleriQuestions = [
                 }
             },
             {
-                text: "Derhal operasyona başlayın. Göz açtırmayacağız",
+                text: "Onlara göz açtırmayacağız",
                 effect: {
                     internalSecurity: +10,
                     internationalRelations: -20,

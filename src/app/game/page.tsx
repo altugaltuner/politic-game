@@ -29,7 +29,7 @@ export default function HomePage() {
     return (
         <div className="p-2 flex xl:flex-row flex-col 2xl:gap-5 gap-3 w-full items-start justify-center">
             <GameStats setSelectedListIDs={handleSetSelectedListID} resetSelectedListIDs={resetSelectedListIDs} />
-            <div className="flex flex-col gap-3 xl:w-[28%] w-full">
+            <div className="flex flex-col gap-3 xl:w-[25%] w-full">
                 <SettingsArea handleOpenModal={handleOpenModal} modalOpen={modalOpen} />
                 <ListElements selectedListIDs={selectedListIDs} />
                 <SettingsModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
