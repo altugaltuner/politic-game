@@ -13,10 +13,11 @@ import { EventModal } from "./eventModal";
 type GameStatsProps = {
     setSelectedListIDs: (newListID: string) => void;
     resetSelectedListIDs: () => void;
+    handleSelectedOptionModalOpen: () => void;
 };
 
 // Component for Game Stats
-export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetSelectedListIDs }) => {
+export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetSelectedListIDs, handleSelectedOptionModalOpen }) => {
 
     const [agriculture, setAgriculture] = useState(50);
     const [infrastructure, setInfrastructure] = useState(50);
@@ -132,19 +133,19 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             setGameOver(true);
             if (publicOpinion <= 1) {
                 setDeathStat("publicOpinion");
-                setGameOverReason("Halkın desteğini kaybettin ve ilk fırsatta erken seçimle görevinden alındın. Yönetimin sona erdi!");
+                setGameOverReason("Halkın sana olan güvenini ve desteğini kaybettin. İlk fırsatta erken seçimle görevinden alındın. Yönetimin sona erdi!");
             }
             else if (internalSecurity <= 1) {
                 setDeathStat("internalSecurity");
-                setGameOverReason("İç güvenlik sorunları kontrol altına alınamadı ve ülkeyi kaosa sürükledin. Yönetimin sona erdi!");
+                setGameOverReason("Aldığın yanlış kararlar yüzünden halkın güvenliğini sağlayamadın ve ülkeyi kaosa sürükledin. Yönetimin sona erdi!");
             }
             else if (international <= 1) {
                 setDeathStat("international");
-                setGameOverReason("Dış politikada yapılan hatalar ülkeyi yalnızlığa sürükledi. Uluslararası arenada söz hakkını kaybettin. Yönetimin sona erdi!");
+                setGameOverReason("Dış politikada yaptığın hatalar ülkeyi dış politikada yalnızlaştırdı. Uluslararası arenada söz hakkını kaybettin. Yönetimin sona erdi!");
             }
             else if (budget <= 1) {
                 setDeathStat("budget");
-                setGameOverReason("Kontrolsüz harcamalar ve hatalı yönetim ülkeyi felakete sürükledi. Devletin hazinesini tamamen tükettin. Yönetim sona erdi!");
+                setGameOverReason("Kontrolsüz harcamaların ve hatalı yönetimin ülkeyi felakete sürükledi. Devletin hazinesini tamamen tükettin. Yönetimin sona erdi!");
             }
             else if (infrastructure <= 1) {
                 setDeathStat("infrastructure");
@@ -152,7 +153,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             }
             else if (agriculture <= 1) {
                 setDeathStat("agriculture");
-                setGameOverReason("Üretimi ihmal ettiğin için gıda krizi toplumda kaosa yol açtı. Halkın en temel ihtiyaçlarını bile karşılayamadın. Yönetimin sona erdi!");
+                setGameOverReason("Üretimi ihmal ettiğin için ülkende gıda krizine sebep oldun. Halkın en temel ihtiyaçlarını dahi karşılayamadın. Yönetimin sona erdi!");
             }
         }
     }, [publicOpinion, internalSecurity, international, budget, infrastructure, agriculture, score]);
@@ -175,6 +176,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
         if (answer.listID) {
             setSelectedListIDs(answer.listID); // Add new listID to the array
+            handleSelectedOptionModalOpen(); // Open the selected option modal
         }
 
         setIsVisible(false);
@@ -232,7 +234,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
                     <div className="flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs gap-2">
                         <h1 className="bg-primary text-white py-1 px-2 rounded-md ">{gameOverReason}</h1>
-                        <p className="bg-primary text-white py-1 px-2 rounded-md ">Skorun : <span>{usedQuestions.length - 1}</span> </p>
+                        <p className="bg-primary text-white py-1 px-2 rounded-md ">Yönetiminde Geçen Gün : <span>{usedQuestions.length - 1}</span> </p>
                     </div>
                     <div className="flex flex-col items-center mt-2 gap-2 justify-center">
                         {deathStat && (

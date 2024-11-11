@@ -144,7 +144,7 @@ const StatUpdater: React.FC<Props> = ({
                 <span className="md:text-xs xl:text-sm md:block hidden">Yönetim</span>
                 <div className="flex w-full h-20 md:border-[1px] border-black relative overflow-hidden md:mt-2 md:rounded justify-center items-center bg-black rounded-sm">
                     <div className="absolute bottom-0 left-0 w-full" />
-                    <animated.p className="z-10 md:w-[110px] md:h-[55px] w-8 h-8 flex items-center justify-center text-white lg:text-2xl md:text-base text-sm">{animatedScore.number.to(n => `${n.toFixed(0)} / 50`)}</animated.p>
+                    <animated.p className="z-10 md:w-[110px] md:h-[55px] w-8 h-8 flex items-center justify-center text-white lg:text-2xl md:text-base text-sm">{animatedScore.number.to(n => `${n.toFixed(0)} / 54`)}</animated.p>
                 </div>
             </div>
         </div>
