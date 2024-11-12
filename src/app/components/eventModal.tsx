@@ -24,7 +24,7 @@ type Event = {
     effects: Effects;
 };
 
-export const EventModal = ({ event, onClose }: { event: Event, onClose: (parameters: any) => void }) => {
+export const EventModal = ({ event, onClose }: { event: Event, onClose: (parameters: object) => void }) => {
     if (!event) return null;
 
     // Define custom labels for specific keys

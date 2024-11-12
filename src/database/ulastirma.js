@@ -3,7 +3,7 @@ import ulastirmaBakani from "../../public/ministers/ulasim-bakani.webp";
 export const ulastirmaQuestions = [
     {
         id: 90,
-        question: "Sayın Cumhurbaşkanım, büyük şehirlerde trafik sorunu giderek artıyor. Şehir içi ulaşım altyapısını iyileştirmemiz gerekiyor.",
+        question: "Büyük şehirlerde trafik sorunu giderek artıyor. Şehir içi ulaşım altyapısını iyileştirmemiz gerekiyor.",
         answers: [
             {
                 text: "Metrolara yatırım yapın",
@@ -30,7 +30,7 @@ export const ulastirmaQuestions = [
     },
     {
         id: 92,
-        question: "Sayın Cumhurbaşkanım, hızlı tren projeleri ülke genelinde büyük ilgi görüyor. Ancak karayollarındaki ücretli geçişlerden şikayetler alıyoruz",
+        question: "Hızlı tren projeleri ülke genelinde büyük ilgi görüyor. Ancak karayollarındaki ücretli geçişlerden şikayetler alıyoruz",
         answers: [
             {
                 text: "Hızlı tren hatlarını genişletin",
@@ -56,7 +56,7 @@ export const ulastirmaQuestions = [
     },
     {
         id: 94,
-        question: "Sayın Cumhurbaşkanım, ülkemizde internet altyapısı yetersiz",
+        question: "Sayın Cumhurbaşkanım, ülkemizde internet altyapısı yetersiz. Gençler internet hızının yavaşlığından şikayetçi.",
         answers: [
             {
                 text: "Fiber altyapıyı geliştirin",

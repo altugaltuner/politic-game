@@ -3,7 +3,7 @@ import icisleriBakani from "../../public/ministers/icisleri-bakani.webp";
 export const icisleriQuestions = [
     {
         id: 100,
-        question: "Sayın Cumhurbaşkanım, ülkedeki Suriyeli mülteci sayısı toplumsal tansiyonu artırıyor. Bazı kesimler, mültecilerin geri gönderilmesini istiyor.",
+        question: "Ülkedeki Suriyeli mülteci sayısı toplumsal tansiyonu artırıyor. Bazı kesimler, mültecilerin geri gönderilmesini istiyor.",
         answers: [
             {
                 text: "Kademeli olarak göndermeye başlayın",
@@ -69,7 +69,7 @@ export const icisleriQuestions = [
                 }
             },
             {
-                text: "KOmşu ülkeyle toplantı ayarlayın",
+                text: "Komşu ülkeyle toplantı ayarlayın",
                 effect: {
                     publicSupport: -20,
                     budget: +10,
@@ -84,7 +84,7 @@ export const icisleriQuestions = [
     },
     {
         id: 105,
-        question: "Sayın Cumhurbaşkanım, büyük şehirlerde trafik sorunları giderek artıyor.",
+        question: "Büyük şehirlerde trafik sorunları giderek artıyor. Halk bu durumdan çok rahatsız",
         answers: [
             {
                 text: "Yeni yollar yapın",

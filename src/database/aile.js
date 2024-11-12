@@ -29,7 +29,7 @@ export const aileQuestions = [
     },
     {
         id: 13,
-        question: "Sayın Cumhurbaşkanım, Suriyeden gelen mülteciler kaçak ve sigortasız çalıştırılıyor, tarım sektöründe ucuz işgücü olarak kullanılıyor.",
+        question: "Suriyeden gelen mülteciler kaçak ve sigortasız çalıştırılıyor, tarım sektöründe ucuz işgücü olarak kullanılıyor.",
         answers: [
             {
                 text: "Kaçak işçiliği bitireceğiz!",

@@ -67,7 +67,7 @@ export const calismaQuestions = [
                 listID: "calisma1",
             },
             {
-                text: "Sanayii üretime odaklanın",
+                text: "Sanayi üretimine odaklanın",
                 effect: {
                     budget: -10,
                     agriculturalProduction: -20,

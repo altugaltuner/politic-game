@@ -22,7 +22,7 @@ export const adaletQuestions = [
     },
     {
         id: 2,
-        question: "Sayın Cumhurbaşkanım. Kara para aklayan sosyal medya ünlülerinin serbest bırakılacağı gündemde. Düşünceniz nedir?",
+        question: "Kara para aklayan sosyal medya ünlülerinin serbest bırakılacağı gündemde. Düşünceniz nedir?",
         answers: [
             {
                 text: "Yargı kararına saygı duyacağız",
@@ -33,7 +33,7 @@ export const adaletQuestions = [
                 listID: "adalet1",
             },
             {
-                text: "Hukuksuzluk mevcut olabilir",
+                text: "Araştırmaya devam edin",
                 effect: {
                     internalSecurity: +20,
                     publicSupport: +20,
@@ -96,10 +96,10 @@ export const adaletQuestions = [
     },
     {
         id: 5,
-        question: "Sayın Cumhurbaşkanım, cezaevleri dolup taşıyor, yeni yatırımlar planlıyor musunuz ?",
+        question: "Sayın Cumhurbaşkanım, cezaevleri dolup taşıyor. Gündeminizde yeni yatırımlar yer alıyor mu ?",
         answers: [
             {
-                text: "İnşaat projeleriyle kapasiteyi artıracağız",
+                text: "Kapasiteyi artırmalıyız",
                 effect: {
                     internalSecurity: +10,
                     budget: -20,
@@ -107,7 +107,7 @@ export const adaletQuestions = [
                 }
             },
             {
-                text: "Bütçemizi ve halkın vergilerini korumalıyız",
+                text: "Bütçemizi korumalıyız",
                 effect: {
                     internalSecurity: -20,
                     budget: +20,

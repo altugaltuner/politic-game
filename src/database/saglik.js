@@ -3,7 +3,7 @@ import saglikBakani from "../../public/ministers/saglik-bakani.webp";
 export const saglikQuestions = [
     {
         id: 140,
-        question: "Sayın Cumhurbaşkanım, şehir hastanelerindeki hasta yoğunluğu artıyor ve sağlık hizmetleri yavaşlıyor.",
+        question: "Şehir hastanelerindeki hasta yoğunluğu artıyor ve sağlık hizmetleri yavaşlıyor.",
         answers: [
             {
                 text: "Mevcut kapasiteyi artırın",
@@ -26,7 +26,7 @@ export const saglikQuestions = [
     },
     {
         id: 144,
-        question: "Sayın Cumhurbaşkanım, Türkiye’de psikolojik sağlık sorunları giderek artıyor. Bunun önüne geçmeliyiz yoksa toplum sağlığımız büyük risk altında",
+        question: "Ülkemizde psikolojik sağlık sorunları giderek artıyor. Bunun önüne geçmeliyiz yoksa toplum sağlığımız büyük risk altında",
         answers: [
             {
                 text: "Konserler düzenleyin",

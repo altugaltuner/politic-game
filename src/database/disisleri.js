@@ -75,7 +75,7 @@ export const disisleriQuestions = [
     },
     {
         id: 44,
-        question: "Sayın Cumhurbaşkanım, mülteciler konusunda uluslararası bir kriz yaşanıyor. Yüzbinlerce Afgan ve Suriyeli sınırlarımıza dayanmış durumda...",
+        question: "Mülteciler konusunda uluslararası bir kriz yaşanıyor. Yüzbinlerce Afgan ve Suriyeli sınırlarımıza dayanmış durumda...",
         answers: [
             {
                 text: "Sınır kapılarını açın",

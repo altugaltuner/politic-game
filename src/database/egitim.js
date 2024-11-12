@@ -3,7 +3,7 @@ import egitimBakani from "../../public/ministers/egitim-bakani.webp";
 export const egitimQuestions = [
     {
         id: 53,
-        question: "Sayın Cumhurbaşkanım, kırsal kesimdeki okulların fiziki durumu çok kötü. Yeni okulların inşaası gündemde...",
+        question: "Kırsal kesimdeki okulların fiziki durumu çok kötü. Yeni okulların inşası gündemde...",
         answers: [
             {
                 text: "Köy okulları inşa edin",

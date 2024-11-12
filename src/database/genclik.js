@@ -3,7 +3,7 @@ import genclikBakani from "../../public/ministers/genclik-bakani.webp";
 export const genclikQuestions = [
     {
         id: 120,
-        question: "Sayın Cumhurbaşkanım, gençlerin spor yapma olanakları kısıtlı. Belediyelerden çok fazla talep ve şikayet alıyoruz. Ancak ilçe yollarının bakımı da bekliyor",
+        question: "Gençlerin spor yapma olanakları kısıtlı. Belediyelerden çok fazla talep ve şikayet alıyoruz. Ancak ilçe yollarının bakımı da bekliyor",
         answers: [
             {
                 text: "Tesis yapımına başlayın",
@@ -29,7 +29,7 @@ export const genclikQuestions = [
     },
     {
         id: 123,
-        question: "Sayın Cumhurbaşkanım, gençlerin sporcu olma hayalleri düşük. Yeterince teşvik olmadığından şikayet ediyorlar",
+        question: "Gençlerin sporcu olma hayalleri düşük. Yeterince teşvik olmadığından şikayet ediyorlar",
         answers: [
             {
                 text: "Okullarda spor faaliyetlerini artırın",

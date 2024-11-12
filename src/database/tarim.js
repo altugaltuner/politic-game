@@ -78,7 +78,7 @@ export const tarimQuestions = [
     },
     {
         id: 74,
-        question: "Sayın Cumhurbaşkanım, tarımda genç iş gücü eksikliği yaşanıyor.",
+        question: "Sayın Cumhurbaşkanım, tarımda genç iş gücü eksikliği yaşanıyor. Kırsal nüfus şehirlere göç ediyor.",
         answers: [
             {
                 text: "Tarıma teşvik projeleri başlatın",
@@ -103,7 +103,7 @@ export const tarimQuestions = [
     },
     {
         id: 75,
-        question: "Sayın Cumhurbaşkanım, organik tarım ve sürdürülebilir üretim yöntemlerine geçiş yapmak istiyoruz.",
+        question: "Organik tarım ve sürdürülebilir üretim yöntemlerine geçiş yapmak istiyoruz. Bunun için sizden onay bekliyoruz",
         answers: [
             {
                 text: "Kademeli geçişe başlayın",

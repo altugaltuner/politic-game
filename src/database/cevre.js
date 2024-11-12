@@ -33,7 +33,7 @@ export const cevreQuestions = [
     },
     {
         id: 31,
-        question: "Sayın Cumhurbaşkanım, şehirlerdeki altyapı eskimiş durumda. Altyapının yenilenmesi gerekiyor. Ancak yeni çevre projeleri de gündemde. Öneriniz nedir?",
+        question: "Şehirlerdeki altyapı eskimiş durumda. Altyapının yenilenmesi gerekiyor. Ancak yeni çevre projeleri de gündemde. Öneriniz nedir?",
         answers: [
             {
                 text: "Önce şehir sorunlarını çözün",
@@ -85,7 +85,7 @@ export const cevreQuestions = [
     },
     {
         id: 33,
-        question: "Sayın Cumhurbaşkanım, şehirlerde enerji tüketimi hızla artıyor. Yenilenebilir enerji projelerine yatırım yapabiliriz. Ya da mevcut enerji altyapısını genişletebiliriz.",
+        question: "Şehirlerde enerji tüketimi hızla artıyor. Yenilenebilir enerji projelerine yatırım yapabiliriz. Ya da mevcut enerji altyapısını genişletebiliriz.",
         answers: [
             {
                 text: "Yenilenebilir enerjiye geleceğimiz",

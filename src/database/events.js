@@ -21,7 +21,6 @@ import tosuncuk from "../../public/events/tosuncuk.webp";
 import waterPipesExploded from "../../public/events/water-pipes-exploded.webp";
 import womenAbuseOnstreet from "../../public/events/women-abuse-onstreet.webp";
 import syriaIntervene from "../../public/events/syria-intervention.webp";
-import tbmmVote from "../../public/events/tbmm-vote.webp";
 import tbmmFight from "../../public/events/tbmm-fight.webp";
 import peopleLeavingCountry from "../../public/events/people-leaving-country.webp";
 import droughtLake from "../../public/events/drought-lake.webp";
@@ -37,8 +36,8 @@ export const events = [
     {
         id: 501,
         photo: arabMoney,
-        title: "Arap Ülkelerinden Beklenmedik Servet!",
-        description: "Arap ülkelerinden gelen ani para akışı ekonomik toparlanma umutlarını yeşertti. Bu zenginlik nasıl kullanılacak, kimler en çok fayda sağlayacak?",
+        title: "Ortadoğu Ülkelerinden Beklenmedik Yatırım!",
+        description: "Ortadoğu ülkelerinden gelen ani para akışı ekonomik toparlanma umutlarını yeşertti. Bu zenginlik nasıl kullanılacak, kimler en çok fayda sağlayacak?",
         effects: {
             budget: +15,
         },
@@ -116,7 +115,7 @@ export const events = [
         id: 509,
         photo: peopleOverjoyed,
         title: "Halk Coşkuyla Sokaklarda!",
-        description: "Umut dolu haberler sonrası halk sokaklarda mutluluğunu kutluyor. Bu coşku ülkeye yayılırken, herkesin yüzü gülüyor.",
+        description: "Umut dolu haberler sonrası halk sokaklarda kutlama yapıyor. Bu coşku ülkeye yayılırken, herkesin yüzü gülüyor.",
         effects: {
             publicSupport: +20,
         },
@@ -135,7 +134,7 @@ export const events = [
         id: 511,
         photo: shakiraConcert,
         title: "Stadyumda Shakira Coşkusu!",
-        description: "Shakira İstanbulda unutulmaz bir konser veriyor! Hayranlar coşkuyla eğlenirken, etkinlik tüm ülkenin gündeminde.",
+        description: "Shakira İstanbul'da unutulmaz bir konser veriyor! Hayranlar coşkuyla eğlenirken, etkinlik tüm ülkenin gündeminde.",
         effects: {
             publicSupport: +10,
             internationalRelations: +5,
@@ -165,8 +164,8 @@ export const events = [
     {
         id: 514,
         photo: tosuncuk,
-        title: "Çiftlik Bank Skandalı: Halk Dolandırıldı!",
-        description: "Çiftlik Bank sahibi halkı dolandırdı, birçok insan birikimlerini kaybetti. Skandal ülke gündeminde büyük yankı uyandırıyor.",
+        title: "Tarımlı Bank Skandalı: Halk Dolandırıldı!",
+        description: "Tarımlı Bank sahibi halkı dolandırdı, birçok insan birikimlerini kaybetti. Skandal ülke gündeminde büyük yankı uyandırıyor.",
         effects: {
             internalSecurity: -10,
             publicSupport: -10,
@@ -216,8 +215,8 @@ export const events = [
     {
         id: 519,
         photo: politiciansEating,
-        title: "TBMM’de Sudan Ucuz Ziyafet!",
-        description: "Milletvekillerine TBMM'de çok daha ucuza sunulan yemekler halkın tepkisini çekiyor. İsraf tartışmaları yeniden alevleniyor.",
+        title: "Mecliste Sudan Ucuz Ziyafet!",
+        description: "Milletvekillerine mecliste, halktan daha ucuza sunulan yemekler halkın tepkisini çekiyor. İsraf tartışmaları yeniden alevleniyor.",
         effects: {
             budget: -10,
             publicSupport: -10,
@@ -287,7 +286,7 @@ export const events = [
         id: 527,
         photo: forestFire,
         title: "Orman Yangını Felaketi!",
-        description: "Ege ve Akdeniz bölgelerinde büyük orman yangınları çıktı. Hava sıcaklığı ve rüzgar nedeniyle alevler kontrol altına alınamıyor, yerleşim yerleri tehdit altında!",
+        description: "Kıyı bölgelerinde büyük orman yangınları çıktı. Hava sıcaklığı ve rüzgar nedeniyle alevler kontrol altına alınamıyor, yerleşim yerleri tehdit altında!",
         effects: {
             agriculturalProduction: -20,
             publicSupport: -10,
@@ -314,20 +313,10 @@ export const events = [
         },
     },
     {
-        id: 530,
-        photo: tbmmVote,
-        title: "Narin Cinayetinin soruşturma önergesi AKP ve MHP oylarıyla reddedildi!",
-        description: "Türkiye Büyük Millet Meclisi’nde CHP’li vekillerin, İstanbul’da 8 yaşındaki Narin Cinayetinin soruşturulması için verdiği araştırma önergesi AKP ve MHP oylarıyla reddedildi. CHP’li vekiller, oylama sonrası Meclis’i terk etti.",
-        effects: {
-            internalSecurity: -15,
-            publicSupport: -15,
-        },
-    },
-    {
         id: 531,
         photo: tbmmFight,
-        title: "TBMM Birbirine Girdi!",
-        description: "TBMM’deki oturumda iktidar ve muhalefet milletvekilleri arasında kavga çıktı. Meclis Başkanı olaya müdahale etmeye çalışırken, halk bu duruma tepki gösteriyor.",
+        title: "Meclis Birbirine Girdi!",
+        description: "Meclisteki oturumda iktidar ve muhalefet milletvekilleri arasında kavga çıktı. Meclis Başkanı olaya müdahale etmeye çalışırken, halk bu duruma tepki gösteriyor.",
         effects: {
             publicSupport: -10,
         },
@@ -336,7 +325,7 @@ export const events = [
         id: 532,
         photo: angryPolitician,
         title: "Milletvekili Kürsüyü Yıktı!",
-        description: "Bir milletvekili, TBMM’deki oturumda kürsüyü yıktı! Olayın ardından hükümet ve muhalefet arasındaki gerilim tırmanıyor.",
+        description: "Bir milletvekili, meclisteki oturumda kürsüyü yıktı! Olayın ardından hükümet ve muhalefet arasındaki gerilim tırmanıyor.",
         effects: {
             publicSupport: -10,
         },

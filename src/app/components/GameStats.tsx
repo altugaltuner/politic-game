@@ -303,8 +303,8 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                 />
                 <div className="text-center bg-white sm:p-2 p-2 rounded-lg relative border-black border-[3px] flex flex-col justify-start items-center w-full gap-3">
                     <h1 className=" bg-primary text-white py-1 px-2 rounded-md w-[90%] text-sm sm:text-base">Başardın! Ülkemizin içinde bulunduğu durumlar ne kadar zor olsa da doğru kararları vererek finale ulaştın.
-                        Gazi Mustafa Kemal Atatürk'ün de dediği gibi :<br />
-                        "Umutsuz durumlar yoktur umutsuz insanlar vardır, ben hiçbir zaman umudumu yitirmedim."
+                        Gazi Mustafa Kemal Atatürkün de dediği gibi :<br />
+                        &quot;Umutsuz durumlar yoktur umutsuz insanlar vardır, ben hiçbir zaman umudumu yitirmedim.&quot;
                     </h1>
                     <div className="question-container visible flex flex-col items-center mt-2 gap-2 justify-center">
                         <Image src={ataturk} alt="Oyun Bitti" className="w-full lg:h-[22rem] rounded-lg" />

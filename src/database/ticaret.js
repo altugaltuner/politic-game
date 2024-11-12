@@ -3,7 +3,7 @@ import ticaretBakani from "../../public/ministers/ticaret-bakani.webp";
 export const ticaretQuestions = [
     {
         id: 81,
-        question: "Sayın Cumhurbaşkanım, büyük perakende zincirleri doları bahane ederek ekstra zamlar yapıyor.",
+        question: "Sayın Cumhurbaşkanım, büyük perakende zincirleri dolar kurunu bahane ederek ekstra zamlar yapıyor.",
         answers: [
             {
                 text: "Marketlere ceza yazın",
@@ -27,7 +27,7 @@ export const ticaretQuestions = [
     },
     {
         id: 82,
-        question: "Sayın Cumhurbaşkanım, ülkemizde dijital ticaret hızla büyüyor, ancak küçük işletmeler dijital dönüşüme ayak uyduramıyor.",
+        question: "Ülkemizde dijital ticaret hızla büyüyor, ancak küçük işletmeler dijital dönüşüme ayak uyduramıyor.",
         answers: [
             {
                 text: "Küçük işletmelere destek verin.",
@@ -51,7 +51,7 @@ export const ticaretQuestions = [
     },
     {
         id: 83,
-        question: "Sayın Cumhurbaşkanım, gıda fiyatlarındaki dalgalanmalar ve spekülasyonlar artıyor.",
+        question: "Gıda fiyatlarındaki dalgalanmalar ve spekülasyonlar artıyor.",
         answers: [
             {
                 text: "Fiyatları kontrol altına alın",
