@@ -12,7 +12,6 @@ import nuclearThesisExplosion from "../../public/events/nuclear-thesis-explosion
 import oilSpill from "../../public/events/oil-spill.webp";
 import peopleOverjoyed from "../../public/events/people-overjoyed.webp";
 import politicianMercedes from "../../public/events/politicians-mercedes.webp";
-import politiciansEating from "../../public/events/politicians-eating.webp";
 import peopleProtesting from "../../public/events/people-protesting.webp";
 import shakiraConcert from "../../public/events/shakira-concert.webp";
 import streetElectricalDeath from "../../public/events/street-electrical-death.webp";
@@ -209,16 +208,6 @@ export const events = [
         description: "Politikacılar için milyon dolarlık lüks makam araçları satın alındı. Halk bu harcamaları sorguluyor.",
         effects: {
             budget: -15,
-            publicSupport: -10,
-        },
-    },
-    {
-        id: 519,
-        photo: politiciansEating,
-        title: "Mecliste Sudan Ucuz Ziyafet!",
-        description: "Milletvekillerine mecliste, halktan daha ucuza sunulan yemekler halkın tepkisini çekiyor. İsraf tartışmaları yeniden alevleniyor.",
-        effects: {
-            budget: -10,
             publicSupport: -10,
         },
     },
