@@ -280,7 +280,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                             />
                         )}
                     </div>
-                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs mt-5" onClick={restartGame}>
+                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black md:text-sm text-xs mt-5" onClick={restartGame}>
                         Tekrar Oyna
                     </Button>
                 </div>
@@ -310,7 +310,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                         <Image src={ataturk} alt="Oyun Bitti" className="w-full lg:h-[22rem] rounded-lg" />
                     </div>
 
-                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:scale-105hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs mt-5" onClick={restartGame}>
+                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black md:text-sm text-xs mt-5" onClick={restartGame}>
                         Tekrar Oyna
                     </Button>
                 </div>
@@ -341,18 +341,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             {currentQuestion ? (
                 <div className="text-center bg-white sm:p-2 p-2 rounded-lg relative border-black border-[3px] flex flex-col justify-start items-center w-full">
 
-                    {currentQuestion?.link ? (
-                        <Button
-                            className={`question-container absolute top-1 right-1 rounded-full ${isVisible ? 'visible' : ''} sm:w-10 sm:h-10 w-6 h-6 p-2`}
-                            onClick={() => window.open(currentQuestion.link, '_blank')}
-                            style={{ cursor: 'pointer' }}
-                            aria-label="Open link"
-                            title="İlgili Haber"
-                        >
-                            <FiAlertCircle className="w-7 h-7" />
-                        </Button>
-                    ) : null}
-
                     <div className={`question-container ${isVisible ? 'visible' : ''}  flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs`}>
                         <ReactTyped
                             strings={[currentQuestion.question]}
@@ -375,7 +363,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                                             : currentQuestion.photo
                                 }
                                 alt={currentQuestion.title}
-                                className="w-full lg:h-[22rem] rounded-lg"
+                                className="lg:w-full sm:w-[70%] w-[90%] lg:h-[22rem] rounded-lg"
                             />
                             <p className="font-medium md:text-xl text-sm bg-primary text-white px-2 rounded-lg">{currentQuestion.title}</p>
                         </div>
@@ -387,9 +375,9 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
             {/* Answer buttons */}
             {currentQuestion && (
-                <div className=" flex xl:flex-row flex-col justify-center rounded-lg bg-white border-black border-[3px] w-full xl:gap-5 gap-2 p-2.5 items-center ">
+                <div className=" flex lg:flex-row flex-col justify-center rounded-lg bg-white border-black border-[3px] w-full xl:gap-5 gap-2 p-2.5 items-center lg:min-h-16 min-h-28 ">
                     <Button
-                        className="xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs"
+                        className="xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black md:text-sm text-xs min-h-[44px]"
                         onClick={() => answerQuestion("left")}
                     >
                         <ReactTyped
@@ -401,7 +389,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                     </Button>
 
                     <Button
-                        className="xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out hover:scale-105 hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs"
+                        className="xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black md:text-sm text-xs min-h-[44px]"
                         onClick={() => answerQuestion("right")}
                     >
                         <ReactTyped

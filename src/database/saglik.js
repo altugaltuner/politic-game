@@ -22,7 +22,6 @@ export const saglikQuestions = [
         ],
         title: "Sağlık Bakanı",
         photo: saglikBakani,
-        link: "https://dergipark.org.tr/tr/download/article-file/1284209"
     },
     {
         id: 144,
@@ -47,7 +46,6 @@ export const saglikQuestions = [
         ],
         title: "Sağlık Bakanı",
         photo: saglikBakani,
-        link: "https://www.gazeteduvar.com.tr/ipsostan-ruh-sagligi-raporu-turkiye-ikinci-sirada-haber-1675866"
     },
     {
         id: 140,
@@ -73,6 +71,5 @@ export const saglikQuestions = [
         ],
         title: "Sağlık Bakanı",
         photo: saglikBakani,
-        link: "https://www.sozcu.com.tr/yenidogan-cetesi-onerisi-akp-ve-mhp-oylariyla-reddetti-p96878"
     },
 ];

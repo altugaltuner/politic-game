@@ -50,7 +50,6 @@ export const sanayiQuestions = [
         ],
         title: "Sanayi ve Teknoloji Bakanı",
         photo: sanayiBakani,
-        link: "https://tr.wikipedia.org/wiki/Togg"
     },
     {
         id: 152,
@@ -77,6 +76,5 @@ export const sanayiQuestions = [
         ],
         title: "Sanayi ve Teknoloji Bakanı",
         photo: sanayiBakani,
-        link: "https://bilisimvadisi.com.tr/"
     },
 ];

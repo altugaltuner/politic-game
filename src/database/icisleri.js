@@ -27,7 +27,6 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
-        link: "https://www.meb.gov.tr/suriyeli-cocuklarin-turk-egitim-sistemine-entegrasyonunun-desteklenmesi-projesi/haber/12824/tr"
     },
     {
         id: 101,
@@ -53,7 +52,6 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
-        link: "https://www.youtube.com/watch?v=97Bm8nFEtg8"
     },
     {
         id: 103,
@@ -80,7 +78,6 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
-        link: "https://www.youtube.com/watch?v=j757MUWN3uk"
     },
     {
         id: 105,
@@ -105,7 +102,6 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
-        link: "https://www.bbc.com/turkce/articles/c51j7xw5n3po"
     },
     {
         id: 105,
@@ -131,6 +127,5 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
-        link: "https://tr.wikipedia.org/wiki/2022_%C4%B0stanbul_sald%C4%B1r%C4%B1s%C4%B1"
     },
 ];

@@ -25,7 +25,6 @@ export const hazineQuestions = [
         ],
         title: "Hazine ve Maliye Bakanı",
         photo: hazineBakani,
-        link: "https://www.youtube.com/watch?v=NdNtitt401M"
     },
     {
         id: 111,
@@ -50,6 +49,5 @@ export const hazineQuestions = [
         ],
         title: "Hazine ve Maliye Bakanı",
         photo: hazineBakani,
-        link: "https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogan-eyt-duzenlemesini-acikladi/2774692"
     },
 ];

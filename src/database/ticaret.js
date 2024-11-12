@@ -23,7 +23,6 @@ export const ticaretQuestions = [
         ],
         title: "Ticaret Bakanı",
         photo: ticaretBakani,
-        link: "https://www.bloomberght.com/rekabet-kurumu-zincir-marketlere-ceza-yagdirdi-2291000"
     },
     {
         id: 82,
@@ -72,6 +71,5 @@ export const ticaretQuestions = [
         ],
         title: "Ticaret Bakanı",
         photo: ticaretBakani,
-        link: "https://www.tarimdunyasi.net/2024/08/08/gida-fiyatlari-neden-dusmuyor/"
     },
 ];

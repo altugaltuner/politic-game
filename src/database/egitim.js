@@ -26,7 +26,6 @@ export const egitimQuestions = [
         ],
         title: "Milli Eğitim Bakanı",
         photo: egitimBakani,
-        link: "https://10haber.net/gundem/koy-okullari-kapatildi-servisler-kaldirildi-cocuklar-nasil-okuyacak-517307/"
     },
     {
         id: 54,
@@ -52,6 +51,5 @@ export const egitimQuestions = [
         ],
         title: "Milli Eğitim Bakanı",
         photo: egitimBakani,
-        link: "https://www.milliyet.com.tr/egitim/mesleki-egitimde-2025-reformlari-7223945"
     }
 ];

@@ -26,7 +26,6 @@ export const ulastirmaQuestions = [
         ],
         title: "Ulaştırma Bakanı",
         photo: ulastirmaBakani,
-        link: "https://www.youtube.com/watch?v=AkHkTCZMPlU"
     },
     {
         id: 92,
@@ -52,7 +51,6 @@ export const ulastirmaQuestions = [
         ],
         title: "Ulaştırma Bakanı",
         photo: ulastirmaBakani,
-        link: "https://www.tcdd.gov.tr/projeler"
     },
     {
         id: 94,
@@ -78,6 +76,5 @@ export const ulastirmaQuestions = [
         ],
         title: "Ulaştırma Bakanı",
         photo: ulastirmaBakani,
-        link: "https://www.ekonomim.com/sektorler/teknoloji/en-yavas-internette-iki-yildir-oecd-lideriyiz-haberi-763792#:~:text=T%C3%BCrkiye%2C%20son%20iki%20y%C4%B1ld%C4%B1r%20Ekonomik,te%2030%2C2%20mbps%20oldu."
     }
 ];

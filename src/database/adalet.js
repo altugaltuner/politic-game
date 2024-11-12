@@ -42,7 +42,6 @@ export const adaletQuestions = [
         ],
         title: "Adalet Bakanı",
         photo: adaletBakanı,
-        link: "https://www.youtube.com/watch?v=0lpHLEIkT8E"
     },
     {
         id: 3,
@@ -67,7 +66,6 @@ export const adaletQuestions = [
         ],
         title: "Adalet Bakanı",
         photo: adaletBakanı,
-        link: "https://www.bbc.com/turkce/haberler-turkiye-56465013"
     },
     {
         id: 4,
@@ -92,7 +90,6 @@ export const adaletQuestions = [
         ],
         title: "Adalet Bakanı",
         photo: adaletBakanı,
-        link: "https://www.numbeo.com/crime/in/Istanbul"
     },
     {
         id: 5,
@@ -118,6 +115,5 @@ export const adaletQuestions = [
         ],
         title: "Adalet Bakanı",
         photo: adaletBakanı,
-        link: "https://tr.euronews.com/2023/05/28/turkiye-avrupada-nufusa-gore-cezaevlerindeki-mahpus-oraninda-ilk-sirada"
     },
 ];

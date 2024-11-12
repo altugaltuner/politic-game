@@ -25,7 +25,6 @@ export const genclikQuestions = [
         ],
         title: "Gençlik ve Spor Bakanı",
         photo: genclikBakani,
-        link: "https://tr.euronews.com/saglik/2022/11/14/turkiyede-spor-yapanlarin-orani-kac-avrupa-ulkeleri-arasinda-en-dusuk-oran-turkiyede"
     },
     {
         id: 123,
@@ -48,6 +47,5 @@ export const genclikQuestions = [
         ],
         title: "Gençlik ve Spor Bakanı",
         photo: genclikBakani,
-        link: "https://www.gsb.gov.tr/haber-detay.html/821"
     },
 ];
