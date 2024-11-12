@@ -5,7 +5,6 @@ import { allQuestions, getRandomQuestion, updateStats, checkGameOver } from "./f
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import ataturk from "../../../public/images/ataturk.webp";
-import { FiAlertCircle } from "react-icons/fi";
 import { ReactTyped } from "react-typed";
 import { events } from "../../database/events";
 import { EventModal } from "./eventModal";
