@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { UserProvider } from "@/contexts/usernameContext";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 export const metadata: Metadata = {
   title: "Cumhurbaşkanı Simulator",
@@ -22,7 +24,12 @@ export default function RootLayout({
           backgroundRepeat: 'repeat'
         }}
       >
-        {children}
+        <ThemeProvider>
+          <UserProvider>
+            {children}
+          </UserProvider>
+        </ThemeProvider>
+
       </body>
     </html>
   );

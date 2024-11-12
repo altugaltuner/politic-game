@@ -24,7 +24,7 @@ const ListElements: React.FC<ListElementsProps> = ({ selectedListIDs }) => {
 
     return (
         <div ref={scrollRef} className=" text-center border-[3px] xl:order-2 order-1 border-black rounded-lg sm:p-3 p-2 w-[100%] max-h-[900px] bg-white">
-            <h2 className="md:text-xl text-lg font-semibold md:mb-4 mb-2">Millet Postası</h2>
+            <h2 className="md:text-xl text-lg font-semibold md:mb-4 mb-2">Ulus Gazetesi</h2>
             {/* <p>Toplam Etkiler : </p> */}
             <ScrollArea className="w-full rounded-md md:p-2 p-0 max-h-[615px] overflow-y-auto xl:flex xl:flex-row xl:gap-5">
                 {filteredElements.length > 0 ? (

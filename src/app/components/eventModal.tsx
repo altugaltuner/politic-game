@@ -24,7 +24,7 @@ type Event = {
     effects: Effects;
 };
 
-export const EventModal = ({ event, onClose }: { event: Event, onClose: () => void }) => {
+export const EventModal = ({ event, onClose }: { event: Event, onClose: (parameters: any) => void }) => {
     if (!event) return null;
 
     // Define custom labels for specific keys
@@ -55,7 +55,7 @@ export const EventModal = ({ event, onClose }: { event: Event, onClose: () => vo
                     </ul>
                 </div>
                 <Button
-                    onClick={onClose}
+                    onClick={() => onClose(event.effects)} // Pass the effects as parameters
                     className=" text-white px-4 py-2 rounded-lg ransition"
                 >
                     Kapat

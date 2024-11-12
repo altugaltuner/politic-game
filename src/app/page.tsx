@@ -6,9 +6,11 @@ import choices from "../../public/images/choice-make.webp";
 import skulls from "../../public/images/skulls-bones.webp";
 import stats from "../../public/images/stats.webp";
 import Image from 'next/image';
+import { useUser } from "@/contexts/usernameContext";
 
 export default function HomePage() {
-  const router = useRouter()
+  const router = useRouter();
+  const { username, setUsername } = useUser();
 
   return (
     <div className="w-full flex flex-col justify-center items-center text-center h-[100vh] sm:p-3 p-2 relative">
@@ -33,14 +35,23 @@ export default function HomePage() {
             <p className="text-sm">Seçtiğin her karar, tarım, altyapı, ekonomi gibi kaynakların seviyesini artırır ya da azaltır. Bu değerleri sıfırın üstünde tutmaya çalışmalısın, aksi takdirde oyun sona erer</p>
           </div>
           <div className="flex flex-col gap-2 justify-center items-center text-start border-2 border-black p-2 rounded-xl">
-            <h3>Oyunun Son</h3>
+            <h3>Oyunun Sonu</h3>
             <Image src={skulls} alt={"skulls"} width={200} height={200} className="border-[2px] rounded-md border-black" />
             <p className="text-sm">Eğer bir alanın değeri sıfıra düşerse, oyunun sonu gelir ve yönetim başarısız olur. Bu durumlarda oyunun sonucunu ve yaptığın hataları yansıtan bir son mesajı ekranda gösterilir.</p>
           </div>
         </div>
-        <Button className="w-44" type="button" onClick={() => router.push('/game')}>
-          Şimdi Başla
-        </Button>
+        <form className="flex gap-3" onSubmit={(e) => {
+          e.preventDefault();
+          if (username.trim() !== "") {
+            router.push("/game");
+          }
+        }}>
+          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Kullanıcı Adın" className="w-[270px] h-10 border-2 border-black rounded-lg pl-2" />
+
+          <Button className="w-44" type="submit" disabled={username.trim() === ""}>
+            Şimdi Başla
+          </Button>
+        </form>
       </div>
       <footer className="absolute bottom-0 w-full bg-black text-white text-center p-2 text-sm">
         <p>© 2024 Cumhurbaşkanı Simulator. Tüm hakları saklıdır.</p>

@@ -7,7 +7,7 @@ import SettingsArea from "../components/SettingsArea";
 import SettingsModal from "../components/SettingsModal";
 import SelectedOptionModal from "../components/selectedOptionModal";
 
-export default function HomePage() {
+export default function GamePage() {
 
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedOptionModalOpen, setSelectedOptionModalOpen] = useState(false);

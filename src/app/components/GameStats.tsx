@@ -4,7 +4,7 @@ import StatUpdater from "./StatUpdater";
 import { allQuestions, getRandomQuestion, updateStats, checkGameOver } from "./functions";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import victoryImg from "../../../public/images/victory.webp";
+import ataturk from "../../../public/images/ataturk.webp";
 import { FiAlertCircle } from "react-icons/fi";
 import { ReactTyped } from "react-typed";
 import { events } from "../../database/events";
@@ -16,9 +16,17 @@ type GameStatsProps = {
     handleSelectedOptionModalOpen: () => void;
 };
 
+interface Effects {
+    agriculturalProduction?: number;
+    infrastructureAndEnvironment?: number;
+    internalSecurity?: number;
+    publicSupport?: number;
+    budget?: number;
+    internationalRelations?: number;
+}
+
 // Component for Game Stats
 export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetSelectedListIDs, handleSelectedOptionModalOpen }) => {
-
     const [agriculture, setAgriculture] = useState(50);
     const [infrastructure, setInfrastructure] = useState(50);
     const [internalSecurity, setInternalSecurity] = useState(50);
@@ -29,7 +37,32 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     const [, setAudio] = useState<HTMLAudioElement | null>(null);
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const closeModal = () => setIsModalOpen(false);
+
+    function closeModal(effects: Effects) {
+        setIsModalOpen(false);
+
+        if (effects) {
+            if (effects.agriculturalProduction !== undefined) {
+                setAgriculture((prev) => prev + (effects.agriculturalProduction ?? 0));
+            }
+            if (effects.infrastructureAndEnvironment !== undefined) {
+                setInfrastructure((prev) => prev + (effects.infrastructureAndEnvironment ?? 0));
+            }
+            if (effects.internalSecurity !== undefined) {
+                setInternalSecurity((prev) => prev + (effects.internalSecurity ?? 0));
+            }
+            if (effects.publicSupport !== undefined) {
+                setPublicSupport((prev) => prev + (effects.publicSupport ?? 0));
+            }
+            if (effects.budget !== undefined) {
+                setBudget((prev) => prev + (effects.budget ?? 0));
+            }
+            if (effects.internationalRelations !== undefined) {
+                setInternational((prev) => prev + (effects.internationalRelations ?? 0));
+            }
+        }
+    }
+
 
     const getRandomEventIndex = () => {
         return Math.floor(Math.random() * events.length);
@@ -268,14 +301,19 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                     score={score}
                     deathLayerStat={null}
                 />
-                <div className="flex flex-col items-center text-center bg-white sm:p-4 p-2 rounded-lg sm:min-h-[547px] h350px] border-black border-[1px] lg:w-[1150px]">
-                    <h1 className=" bg-primary text-white py-1 px-2 rounded-md w-[90%]">Başardın! Türkiyeyi son nefesine kadar yönetebildin. Huzur içinde ölebilirsin.</h1>
-                    <Image src={victoryImg} alt="Oyun Bitti" className="my-4 h-[15rem] sm:w-[567px] w-[355px]" />
-                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:scale-105hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs" onClick={restartGame}>
+                <div className="text-center bg-white sm:p-2 p-2 rounded-lg relative border-black border-[3px] flex flex-col justify-start items-center w-full gap-3">
+                    <h1 className=" bg-primary text-white py-1 px-2 rounded-md w-[90%] text-sm sm:text-base">Başardın! Ülkemizin içinde bulunduğu durumlar ne kadar zor olsa da doğru kararları vererek finale ulaştın.
+                        Gazi Mustafa Kemal Atatürk'ün de dediği gibi :<br />
+                        "Umutsuz durumlar yoktur umutsuz insanlar vardır, ben hiçbir zaman umudumu yitirmedim."
+                    </h1>
+                    <div className="question-container visible flex flex-col items-center mt-2 gap-2 justify-center">
+                        <Image src={ataturk} alt="Oyun Bitti" className="w-full lg:h-[22rem] rounded-lg" />
+                    </div>
+
+                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:scale-105hover:bg-[#555555] active:scale-100 active:bg-black md:text-sm text-xs mt-5" onClick={restartGame}>
                         Tekrar Oyna
                     </Button>
                 </div>
-
             </div>
         )
     }
