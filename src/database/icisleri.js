@@ -6,7 +6,7 @@ export const icisleriQuestions = [
         question: "Sayın Cumhurbaşkanım, ülkedeki Suriyeli mülteci sayısı toplumsal tansiyonu artırıyor. Bazı kesimler, mültecilerin geri gönderilmesini istiyor.",
         answers: [
             {
-                text: "Kademeli olarak göndereceğiz",
+                text: "Kademeli olarak göndermeye başlayın",
                 effect: {
                     publicSupport: -20,
                     budget: -10,
@@ -15,7 +15,7 @@ export const icisleriQuestions = [
                 }
             },
             {
-                text: "Entegrasyon projesi başlatılsın",
+                text: "Entegrasyon projesini başlatın",
                 effect: {
                     publicSupport: -30,
                     budget: -30,
@@ -34,7 +34,7 @@ export const icisleriQuestions = [
         question: "Türkiye deprem riski taşıyan bir ülke. Şehirlerin altyapılarını güçlendirmek ve yeni kentsel dönüşüm projeleri başlatmak acil durumda, ne yapmalıyız?",
         answers: [
             {
-                text: "Kentsel dönüşüm projelerine kaynak aktarın",
+                text: "Kentsel dönüşümü başlatın",
                 effect: {
                     budget: -20,
                     internalSecurity: +20,
@@ -42,7 +42,7 @@ export const icisleriQuestions = [
                 }
             },
             {
-                text: "Şu an kaynaklarımız kısıtlı, erteleyin",
+                text: "Kaynak yetersiz, erteleyin",
                 effect: {
                     budget: +20,
                     internalSecurity: -20,
@@ -60,7 +60,7 @@ export const icisleriQuestions = [
         question: "Sınır bölgelerimizde kaçakçılık ve insan kaçakçılığı faaliyetleri artıyor. Bu sorunu nasıl çözebiliriz?",
         answers: [
             {
-                text: "Sınır güvenliğini artırın, sorunu yerinde çözün",
+                text: "Sınır güvenliğini artırın",
                 effect: {
                     publicSupport: +20,
                     budget: -10,
@@ -69,12 +69,12 @@ export const icisleriQuestions = [
                 }
             },
             {
-                text: "Gizli bir operasyonla elebaşılarını yakalayacağız",
+                text: "KOmşu ülkeyle toplantı ayarlayın",
                 effect: {
                     publicSupport: -20,
                     budget: +10,
                     internationalRelations: +20,
-                    internalSecurity: -20
+                    internalSecurity: -10
                 }
             }
         ],
@@ -83,48 +83,23 @@ export const icisleriQuestions = [
         link: "https://www.youtube.com/watch?v=j757MUWN3uk"
     },
     {
-        id: 104,
-        question: "Bazı şehirlerdeki sokak köpekleri hakkında çıkarılacak yasa için protestolar şiddete dönüşüyor. Önerileriniz nelerdir?",
-        answers: [
-            {
-                text: "Polis müdahalesini sertleştirin, düzeni sağlayın",
-                effect: {
-                    publicSupport: -10,
-                    internalSecurity: +10,
-                    internationalRelations: -10,
-                },
-            },
-            {
-                text: "Diyalog yoluyla çözüm bulacağız",
-                effect: {
-                    publicSupport: +10,
-                    internalSecurity: +10,
-                    internationalRelations: +10,
-                }
-            }
-        ],
-        title: "İçişleri Bakanı",
-        photo: icisleriBakani,
-        link: "https://www.gazeteduvar.com.tr/hayvanlari-oldurme-teklifine-tepki-kopekleri-bu-hale-biz-getirdik-haber-1698821"
-    },
-    {
         id: 105,
         question: "Sayın Cumhurbaşkanım, büyük şehirlerde trafik sorunları giderek artıyor.",
         answers: [
             {
-                text: "Yeni altyapı projeleriyle trafiği rahatlatmalıyız",
+                text: "Yeni yollar yapın",
                 effect: {
-                    internalSecurity: +10,
                     budget: -10,
-                    infrastructureAndEnvironment: -20
+                    infrastructureAndEnvironment: +10,
+                    publicSupport: +10,
                 }
             },
             {
-                text: "Toplu taşıma kullanımını özendirin",
+                text: "Toplu taşımaya teşvik edin",
                 effect: {
-                    internalSecurity: +20,
-                    budget: -30,
-                    infrastructureAndEnvironment: +20,
+                    budget: +10,
+                    infrastructureAndEnvironment: 0,
+                    publicSupport: -10,
                 }
             }
         ],
@@ -137,19 +112,19 @@ export const icisleriQuestions = [
         question: "Cumhurbaşkanım, ülkede terör örgütleri faaliyetlerini artırıyor. Büyük şehirler çok büyük risk altında!",
         answers: [
             {
-                text: "Uluslararası bir işbirliğine ihtiyacımız var",
+                text: "Uluslararası işbirliğine başvuracağız",
                 effect: {
                     internalSecurity: -20,
                     internationalRelations: +20,
-                    budget: -30,
+                    budget: +10,
                 }
             },
             {
-                text: "Onlara göz açtırmayacağız",
+                text: "Askeri operasyona başlayın",
                 effect: {
                     internalSecurity: +10,
                     internationalRelations: -20,
-                    budget: -10,
+                    budget: -20,
                 },
                 listID: "icisleri3",
             },

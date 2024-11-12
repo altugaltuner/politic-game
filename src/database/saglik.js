@@ -6,14 +6,14 @@ export const saglikQuestions = [
         question: "Sayın Cumhurbaşkanım, şehir hastanelerindeki hasta yoğunluğu artıyor ve sağlık hizmetleri yavaşlıyor.",
         answers: [
             {
-                text: "Mevcut hastane kapasitelerini artırmalıyız",
+                text: "Mevcut kapasiteyi artırın",
                 effect: {
                     budget: +10,
                     infrastructureAndEnvironment: +10,
                 }
             },
             {
-                text: "Yeni hastanelerin inşasına başlansın",
+                text: "Yeni hastaneler inşa edin",
                 effect: {
                     budget: -20,
                     infrastructureAndEnvironment: +30,
@@ -29,15 +29,15 @@ export const saglikQuestions = [
         question: "Sayın Cumhurbaşkanım, Türkiye’de psikolojik sağlık sorunları giderek artıyor. Bunun önüne geçmeliyiz yoksa toplum sağlığımız büyük risk altında",
         answers: [
             {
-                text: "Daha fazla ilaç ithal etmeliyiz",
+                text: "Konserler düzenleyin",
                 effect: {
-                    publicSupport: -20,
-                    internalSecurity: -10,
-                    budget: -20,
+                    publicSupport: +10,
+                    internalSecurity: 0,
+                    budget: -25,
                 }
             },
             {
-                text: "Psikolojik destek hizmetlerini yaygınlaştırın",
+                text: "Psikolojik destek hizmetleri verin",
                 effect: {
                     publicSupport: +20,
                     internalSecurity: +10,
@@ -51,21 +51,21 @@ export const saglikQuestions = [
     },
     {
         id: 140,
-        question: "Günahsız bebekleri öldürerek SGK'yı toplamda 1 milyar TL'nin üzerinde dolandırmışlar. Mecliste bunun araştırılma önergesi verilmiş. Ne yapmalıyız?",
+        question: "Bazı hastanelerin yenidoğan ünitelerinde aşırı bir doluluk yaşanıyor. İnceleme yapalım mı?",
         answers: [
             {
-                text: "Elebaşı doktorları yargı önüne çıkarın",
+                text: "Hastane yetkilileriyle konuşun",
                 effect: {
                     budget: +10,
-                    internalSecurity: +10,
-                    publicSupport: +10,
+                    internalSecurity: -15,
+                    publicSupport: 0,
                 }
             },
             {
-                text: "Bu rezillik daha eskiye dayanıyor, araştırılsın",
+                text: "Denetim yapın",
                 effect: {
                     budget: -20,
-                    internalSecurity: +30,
+                    internalSecurity: +20,
                     publicSupport: +30,
                 },
                 listID: "saglik1",

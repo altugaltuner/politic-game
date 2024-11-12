@@ -6,7 +6,7 @@ export const hazineQuestions = [
         question: "Enflasyon hızla yükseliyor ve halkın alım gücü düşüyor. Merkezi faiz oranını artırarak enflasyonu düşürebiliriz, ancak bu, ekonomik büyümeyi yavaşlatacaktır.",
         answers: [
             {
-                text: "Ekonomistleri toplayın, bunun tartışılması gerek",
+                text: "Ekonomistler ile toplantı ayarlayın",
                 effect: {
                     publicSupport: +20,
                     budget: +20,
@@ -29,10 +29,10 @@ export const hazineQuestions = [
     },
     {
         id: 111,
-        question: "EYT konusu hala gündemde. Yaş haddinden emekli olamayan milyonlarca insan çözüm bekliyor. Ancak bu, bütçeye ciddi bir yük getirebilir.",
+        question: "Erken emeklilik konusu hala gündemde. Yaş haddinden emekli olamayan milyonlarca insan çözüm bekliyor. Ancak bu, bütçeye ciddi bir yük getirebilir.",
         answers: [
             {
-                text: "İnsanlar hak ettikleri emekliliği almalı.",
+                text: "Yasayı geçirin.",
                 effect: {
                     publicSupport: +10,
                     budget: -20,
@@ -40,7 +40,7 @@ export const hazineQuestions = [
                 },
             },
             {
-                text: "Bu yasa şu an mali olarak sürdürülemez.",
+                text: "Askıya alın",
                 effect: {
                     publicSupport: -10,
                     budget: +20,

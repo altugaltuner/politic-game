@@ -25,7 +25,7 @@ export const adaletQuestions = [
         question: "Sayın Cumhurbaşkanım. Kara para aklayan sosyal medya ünlülerinin serbest bırakılacağı gündemde. Düşünceniz nedir?",
         answers: [
             {
-                text: "Yargının kararına saygı duyacağız",
+                text: "Yargı kararına saygı duyacağız",
                 effect: {
                     internalSecurity: -20,
                     publicSupport: -20,
@@ -82,7 +82,7 @@ export const adaletQuestions = [
                 }
             },
             {
-                text: "Sosyal projelerle suç oranlarını düşüreceğiz",
+                text: "Sosyal projeler geliştireceğiz",
                 effect: {
                     internalSecurity: -10,
                     publicSupport: -10,

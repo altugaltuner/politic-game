@@ -6,7 +6,7 @@ export const aileQuestions = [
         question: "Düşük gelirli ailelere doğrudan sosyal yardımı yapmayı öneriyorum. Ancak bu, kamu bütçesini zorlayabilir ve altyapı yatırımlarını azaltabilir.",
         answers: [
             {
-                text: "Yardımı yapacağız,halkımızı ezdirmeyeceğiz",
+                text: "Yardımı yapacağız",
                 effect: {
                     publicSupport: +20,
                     budget: -20,
@@ -15,7 +15,7 @@ export const aileQuestions = [
                 },
             },
             {
-                text: "Şu an bütçemiz yok, ertelemek zorundayız",
+                text: "Şu an bütçemiz yok",
                 effect: {
                     publicSupport: -20,
                     budget: +20,
@@ -40,7 +40,7 @@ export const aileQuestions = [
                 },
             },
             {
-                text: "Tarıma katkıları var, şimdilik devam etsinler",
+                text: "Tarıma katkıları var",
                 effect: {
                     publicSupport: -30,
                     budget: +10,

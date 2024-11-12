@@ -6,7 +6,7 @@ export const cevreQuestions = [
         question: "Şehirleşme hızla artıyor ve yeşil alanlar azalıyor. Şehirlerdeki nüfus artışı ve şehirleşme hakkında ne düşünüyorsunuz?",
         answers: [
             {
-                text: "Şehirleşmeyi hızlandırmalıyız.",
+                text: "Şehirleşmeye devam...",
                 effect: {
                     publicSupport: -20,
                     agriculturalProduction: -20,
@@ -16,7 +16,7 @@ export const cevreQuestions = [
                 }
             },
             {
-                text: "Yeşil alanları koruyacağız, halkımız nefes alacak",
+                text: "Yeşil alanları arttırın",
                 effect: {
                     publicSupport: +20,
                     budget: +20,
@@ -36,7 +36,7 @@ export const cevreQuestions = [
         question: "Sayın Cumhurbaşkanım, şehirlerdeki altyapı eskimiş durumda. Altyapının yenilenmesi gerekiyor. Ancak yeni çevre projeleri de gündemde. Öneriniz nedir?",
         answers: [
             {
-                text: "Şehir sorunlarını hemen çözün",
+                text: "Önce şehir sorunlarını çözün",
                 effect: {
                     publicSupport: +20,
                     budget: -20,
@@ -61,7 +61,7 @@ export const cevreQuestions = [
         question: "Bazı bölgelerde hava kirliliği kritik seviyelerde. Hava kirliliğiyle mücadele için ciddi önlemler alabiliriz...",
         answers: [
             {
-                text: "Temiz hava için mücadelemiz sürecek",
+                text: "Temiz hava sahaları açın",
                 effect: {
                     publicSupport: +10,
                     budget: -10,
@@ -98,7 +98,7 @@ export const cevreQuestions = [
                 listID: "cevre2",
             },
             {
-                text: "Mevcut altyapıyı güçlendirmek daha mantıklı.",
+                text: "Mevcut altyapıyı güçlendirin.",
                 effect: {
                     publicSupport: +10,
                     budget: -10,
@@ -116,7 +116,7 @@ export const cevreQuestions = [
         question: "Turizm kıyılarda hızla gelişiyor, ancak yoğun turist akımı sebebiyle deniz ekosistemi tehdit altında. ",
         answers: [
             {
-                text: "Turizmi destekleyeceğiz, ekonomiye katkısı yadsınamaz",
+                text: "Turizmi destekleyeceğiz",
                 effect: {
                     publicSupport: +15,
                     budget: +10,
@@ -126,7 +126,7 @@ export const cevreQuestions = [
                 listID: "cevre3",
             },
             {
-                text: "Kıyıları koruma altına alacağız, çevremiz önceliğimiz",
+                text: "Kıyıları koruma altına alacağız",
                 effect: {
                     publicSupport: -15,
                     budget: -10,

@@ -3,24 +3,22 @@ import sanayiBakani from "../../public/ministers/sanayi-bakani.webp";
 export const sanayiQuestions = [
     {
         id: 150,
-        question: "Sayın Cumhurbaşkanım, sanayimizin teknoloji altyapısı zayıf. Teknoloji yatırımlarını arttırmayı öneriyorum",
+        question: "Sanayimizin teknoloji altyapısı zayıf. Teknoloji yatırımlarını arttırmayı öneriyorum",
         answers: [
             {
-                text: "Teknolojik altyapıyı geliştireceğiz",
+                text: "Onay veriyorum",
                 effect: {
                     publicSupport: +10,
                     budget: -20,
                     infrastructureAndEnvironment: +20,
-                    internationalRelations: +10,
                 }
             },
             {
-                text: "Büyük teknoloji şirketlerine baskı yapın",
+                text: "Teknoloji şirketlerinin inisiyatifine bırakın",
                 effect: {
                     publicSupport: -10,
                     budget: +20,
                     infrastructureAndEnvironment: -20,
-                    internationalRelations: -10
                 }
             }
         ],
@@ -30,25 +28,23 @@ export const sanayiQuestions = [
 
     {
         id: 151,
-        question: "Sayın Cumhurbaşkanım, yerli otomobil üretimi projesi büyük ilgi görüyor. Nasıl bir politika izlemeliyiz?",
+        question: "Yerli otomobil üretimi projesi büyük ilgi görüyor. Nasıl bir politika izlemeliyiz?",
         answers: [
             {
-                text: "Fiyatları belirleyin ve satışa çıkarın",
+                text: "Bir an önce satışa çıkarın",
                 effect: {
-                    publicSupport: +20,
-                    budget: -20,
-                    infrastructureAndEnvironment: +25,
-                    internationalRelations: +10,
+                    publicSupport: -10,
+                    budget: +20,
+                    infrastructureAndEnvironment: +10,
                 },
                 listID: "sanayi1",
             },
             {
                 text: "Eksiklerine odaklanın ve geliştirmeye devam edin",
                 effect: {
-                    publicSupport: -10,
-                    budget: +10,
+                    publicSupport: +10,
+                    budget: -10,
                     infrastructureAndEnvironment: +10,
-                    internationalRelations: +5,
                 }
             }
         ],
@@ -58,7 +54,7 @@ export const sanayiQuestions = [
     },
     {
         id: 152,
-        question: "Sayın Cumhurbaşkanım, Türkiye'nin dijital dönüşüm süreci hızlanıyor. Bu süreçte hangi alanlara yatırım yapmalıyız?",
+        question: "Türkiye'nin dijital dönüşüm süreci hızlanıyor. Bu süreçte hangi alanlara yatırım yapmalıyız?",
         answers: [
             {
                 text: "Teknoloji startup'larına destek sağlayın",

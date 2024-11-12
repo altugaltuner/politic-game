@@ -6,7 +6,7 @@ export const ulastirmaQuestions = [
         question: "Sayın Cumhurbaşkanım, büyük şehirlerde trafik sorunu giderek artıyor. Şehir içi ulaşım altyapısını iyileştirmemiz gerekiyor.",
         answers: [
             {
-                text: "Metro projelerine yatırım yapın",
+                text: "Metrolara yatırım yapın",
                 effect: {
                     publicSupport: +20,
                     budget: -10,
@@ -15,7 +15,7 @@ export const ulastirmaQuestions = [
                 }
             },
             {
-                text: "Mevcut yolları iyileştirin",
+                text: "Mevcut karayollarını iyileştirin",
                 effect: {
                     publicSupport: +10,
                     budget: -15,
@@ -59,19 +59,19 @@ export const ulastirmaQuestions = [
         question: "Sayın Cumhurbaşkanım, ülkemizde internet altyapısı yetersiz",
         answers: [
             {
-                text: "Fiber altyapısına yatırım yapılmalıdır",
+                text: "Fiber altyapıyı geliştirin",
                 effect: {
                     publicSupport: +20,
-                    budget: -25,
+                    budget: -20,
                     infrastructureAndEnvironment: +30,
                 }
             },
             {
-                text: "Telekom firmalarının inisiyatifine bırakın",
+                text: "Telekom firmalarına devredin",
                 effect: {
-                    publicSupport: +10,
-                    budget: -15,
-                    infrastructureAndEnvironment: +15,
+                    publicSupport: -10,
+                    budget: +10,
+                    infrastructureAndEnvironment: +10,
                 },
                 listID: "ulastirma2",
             }

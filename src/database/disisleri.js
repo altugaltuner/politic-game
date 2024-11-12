@@ -6,7 +6,7 @@ export const disisleriQuestions = [
         question: "Komşu ülkelerle ticaret anlaşmalarını genişletme fırsatımız var. Ancak bazı stratejik sektörlerde yerli üreticiler zorlanabilir.",
         answers: [
             {
-                text: "Ticaret anlaşmalarını imzalayın, bu fırsat önemli",
+                text: "Anlaşmayı imzalayın",
                 effect: {
                     budget: -20,
                     internationalRelations: +20,
@@ -15,7 +15,7 @@ export const disisleriQuestions = [
                 listID: "disisleri1",
             },
             {
-                text: "Yerel üreticilerimizi koruyacağız, anlaşmayı bekletin",
+                text: "Anlaşmayı askıya alın",
                 effect: {
                     budget: +20,
                     internationalRelations: -20,
@@ -31,14 +31,14 @@ export const disisleriQuestions = [
         question: "Uluslararası bir örgüte katılmamız gündemde, ülkemizin gücünü artıracak ama ulusal bağımsızlık kararlarımızı sınırlayabilir. Öneriniz nedir?",
         answers: [
             {
-                text: "Uluslararası arenada yerimizi alacağız",
+                text: "Örgüte katılım sağlayalım",
                 effect: {
                     internationalRelations: +20,
                     internalSecurity: -10,
                 }
             },
             {
-                text: "İçişlerimize müdahale etmelerine müsaade etmeyeceğiz",
+                text: "Başka alternatifler bulun",
                 effect: {
                     internationalRelations: -20,
                     internalSecurity: +10,
@@ -53,7 +53,7 @@ export const disisleriQuestions = [
         question: "Müttefik ülkeler savunma harcamalarımızı artırmamızı istiyor. Bu, sosyal harcamalardan kesinti yapmamızı gerektirebilir. Hangi yolu seçmeliyiz?",
         answers: [
             {
-                text: "Savunmamız güçlü olmalı, harcamaları artırın",
+                text: "Savunma harcamalarını artırın",
                 effect: {
                     internationalRelations: +20,
                     internalSecurity: +20,
@@ -62,7 +62,7 @@ export const disisleriQuestions = [
                 listID: "disisleri2",
             },
             {
-                text: "Sosyal harcamalara yatırım yapın",
+                text: "Sosyal projelere yatırım yapın",
                 effect: {
                     internationalRelations: -20,
                     internalSecurity: -20,
@@ -75,10 +75,10 @@ export const disisleriQuestions = [
     },
     {
         id: 44,
-        question: "Sayın Cumhurbaşkanım, mülteciler konusunda uluslararası bir kriz yaşanıyor. Yüzbinlerce afgan ve suriyeli sınırlarımıza dayanmış durumda...",
+        question: "Sayın Cumhurbaşkanım, mülteciler konusunda uluslararası bir kriz yaşanıyor. Yüzbinlerce Afgan ve Suriyeli sınırlarımıza dayanmış durumda...",
         answers: [
             {
-                text: "Onlar bizim din kardeşimizdir, kapıları açın",
+                text: "Sınır kapılarını açın",
                 effect: {
                     publicSupport: -30,
                     internationalRelations: +20,
@@ -88,7 +88,7 @@ export const disisleriQuestions = [
                 listID: "disisleri3",
             },
             {
-                text: "Ülke sınırlarını koruyacağız",
+                text: "Sınırları koruyun",
                 effect: {
                     publicSupport: +30,
                     internationalRelations: -20,

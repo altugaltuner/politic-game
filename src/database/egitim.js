@@ -6,21 +6,21 @@ export const egitimQuestions = [
         question: "Sayın Cumhurbaşkanım, kırsal kesimdeki okulların fiziki durumu çok kötü. Yeni okulların inşaası gündemde...",
         answers: [
             {
-                text: "Derhal inşaata başlayın, eğitim şart",
+                text: "Köy okulları inşa edin",
                 effect: {
                     publicSupport: +10,
                     budget: -10,
                     internalSecurity: +10,
-                    infrastructureAndEnvironment: +20,
+                    infrastructureAndEnvironment: +10,
                 }
             },
             {
-                text: "Köy okullarını kapatın, şehirdekiler kafi",
+                text: "Köydeki nüfusu şehre taşıyın",
                 effect: {
                     publicSupport: -10,
                     budget: +10,
                     internalSecurity: -10,
-                    infrastructureAndEnvironment: +10,
+                    infrastructureAndEnvironment: -10,
                 }
             }
         ],
@@ -33,7 +33,7 @@ export const egitimQuestions = [
         question: "Mesleki eğitime olan ilgi azaldı. Gençleri akademik eğitime mi yoksa mesleki eğitime mi yönlendirelim?",
         answers: [
             {
-                text: "Mesleki eğitimi teşvik edeceğiz",
+                text: "Mesleki eğitime yönlendirin",
                 effect: {
                     budget: +10,
                     agriculturalProduction: +15,
@@ -42,7 +42,7 @@ export const egitimQuestions = [
                 listID: "egitim1",
             },
             {
-                text: "Akademik eğitimi destekleyin, ilim önemli",
+                text: "Akademik eğitimi destekleyin",
                 effect: {
                     budget: -10,
                     agriculturalProduction: -15,

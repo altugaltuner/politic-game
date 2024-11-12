@@ -6,7 +6,7 @@ export const genclikQuestions = [
         question: "Sayın Cumhurbaşkanım, gençlerin spor yapma olanakları kısıtlı. Belediyelerden çok fazla talep ve şikayet alıyoruz. Ancak ilçe yollarının bakımı da bekliyor",
         answers: [
             {
-                text: "Gereken yerlere tesis yapımına başlayın",
+                text: "Tesis yapımına başlayın",
                 effect: {
                     publicSupport: +10,
                     budget: -15,
@@ -15,7 +15,7 @@ export const genclikQuestions = [
                 listID: "genclik1",
             },
             {
-                text: "Önce yollarımızı onarmalıyız",
+                text: "Önce yolları onarın",
                 effect: {
                     publicSupport: -10,
                     budget: +10,
@@ -32,7 +32,7 @@ export const genclikQuestions = [
         question: "Sayın Cumhurbaşkanım, gençlerin sporcu olma hayalleri düşük. Yeterince teşvik olmadığından şikayet ediyorlar",
         answers: [
             {
-                text: "İlkokullarda spor faaliyetlerini yaygınlaştırın",
+                text: "Okullarda spor faaliyetlerini artırın",
                 effect: {
                     publicSupport: +20,
                     budget: -15,

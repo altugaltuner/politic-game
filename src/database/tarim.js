@@ -3,17 +3,17 @@ import tarimBakani from "../../public/ministers/tarim-bakani.webp";
 export const tarimQuestions = [
     {
         id: 70,
-        question: "Sayın Cumhurbaşkanım, son yıllarda kuraklık artıyor ve tarımsal üretim ciddi şekilde düşüyor. Tarıma büyük bir teşvik ve su kaynaklarına yatırım yapmamız gerek.",
+        question: "Son yıllarda kuraklık artıyor ve tarımsal üretim ciddi şekilde düşüyor. Tarıma büyük bir teşvik ve su kaynaklarına yatırım yapmamız gerek.",
         answers: [
             {
-                text: "Yeni sulama projeleri geliştireceğiz",
+                text: "Yeni barajlar inşa edilmeli",
                 effect: {
                     agriculturalProduction: +10,
                     budget: -15,
                 }
             },
             {
-                text: "Şu an başka önceliklerimiz var, erteleyin",
+                text: "Başka önceliklerimiz var, erteleyin",
                 effect: {
                     agriculturalProduction: -10,
                     budget: +15,
@@ -24,40 +24,12 @@ export const tarimQuestions = [
         photo: tarimBakani,
         link: "https://www.bbc.com/turkce/articles/c0j8n48qwe8o#:~:text=2023'te%20d%C3%BCnyan%C4%B1n%20yakla%C5%9F%C4%B1k%20y%C3%BCzde,ne%20kadar%20h%C4%B1zland%C4%B1%C4%9F%C4%B1n%C4%B1%20ortaya%20koyuyor."
     },
-
-    {
-        id: 71,
-        question: "Sayın Cumhurbaşkanım, kuraklık nedeniyle su kaynakları azalıyor ve tarımsal üretim tehlikeye giriyor.",
-        answers: [
-            {
-                text: "Barajların doluluk oranı raporları nerede ?",
-                effect: {
-                    publicSupport: +15,
-                    budget: -25,
-                    agriculturalProduction: +20,
-                    infrastructureAndEnvironment: +10,
-                }
-            },
-            {
-                text: "Çiftçilere su tasarrufu eğitimi verilebilir",
-                effect: {
-                    publicSupport: +10,
-                    budget: -10,
-                    agriculturalProduction: -20,
-                    infrastructureAndEnvironment: +5,
-                }
-            }
-        ],
-        title: "Tarım Bakanı",
-        photo: tarimBakani,
-        link: "https://www.greenpeace.org/turkey/blog/yagislar-azaliyor-kuraklik-tehdidi-artiyor/"
-    },
     {
         id: 72,
-        question: "Sayın Cumhurbaşkanım, tarımsal üretim ithalata bağımlı hale geliyor.Bunun önüne geçmeliyiz",
+        question: "Tarımsal üretim ithalata bağımlı hale geliyor.Bunun önüne geçmeliyiz",
         answers: [
             {
-                text: "Çiftçilere vergi indirimleri yapılsın",
+                text: "Çiftçiye vergi indirimi yapın",
                 effect: {
                     publicSupport: +10,
                     budget: -20,
@@ -66,7 +38,7 @@ export const tarimQuestions = [
                 },
             },
             {
-                text: "İthal ürünlerden ek vergi alacağız",
+                text: "İthal ürünlerden ek vergi alın",
                 effect: {
                     publicSupport: +10,
                     budget: +5,
@@ -81,26 +53,22 @@ export const tarimQuestions = [
     },
     {
         id: 73,
-        question: "Sayın Cumhurbaşkanım, orman yangınları her yıl artıyor ve ciddi kayıplar yaşanıyor.",
+        question: "Orman yangınları her yıl artıyor ve ciddi kayıplar yaşanıyor. Nasıl önüne geçebiliriz ?",
         answers: [
             {
-                text: "Yeni yangın söndürme sistemleri satın almalıyız",
+                text: "Yangın helikopterleri alacağız",
                 effect: {
-                    publicSupport: +20,
-                    budget: -20,
-                    infrastructureAndEnvironment: +20,
-                    internalSecurity: +10,
+
+                    budget: -10,
                     agriculturalProduction: +20,
                 }
             },
             {
                 text: "Yeşil alanlardaki denetimleri artırın",
                 effect: {
-                    publicSupport: -20,
+
                     budget: +10,
-                    infrastructureAndEnvironment: +10,
-                    internalSecurity: +5,
-                    agriculturalProduction: -20,
+                    agriculturalProduction: +10,
                 }
             }
         ],
@@ -113,21 +81,19 @@ export const tarimQuestions = [
         question: "Sayın Cumhurbaşkanım, tarımda genç iş gücü eksikliği yaşanıyor.",
         answers: [
             {
-                text: "Gençleri tarıma teşvik edecek projeler başlatın",
+                text: "Tarıma teşvik projeleri başlatın",
                 effect: {
                     publicSupport: +20,
                     budget: +20,
-                    agriculturalProduction: +20,
-                    internalSecurity: +10,
+                    agriculturalProduction: +10,
                 }
             },
             {
-                text: "İş gücü açığını göçmen işçilerle dolduracağız",
+                text: "Açığı göçmen işçilerle doldurun",
                 effect: {
-                    publicSupport: -10,
+                    publicSupport: -20,
                     budget: -20,
-                    agriculturalProduction: +15,
-                    internalSecurity: -5,
+                    agriculturalProduction: +25,
                 },
             }
         ],
@@ -140,19 +106,17 @@ export const tarimQuestions = [
         question: "Sayın Cumhurbaşkanım, organik tarım ve sürdürülebilir üretim yöntemlerine geçiş yapmak istiyoruz.",
         answers: [
             {
-                text: "Kademeli olarak bu mümkündür",
+                text: "Kademeli geçişe başlayın",
                 effect: {
-                    publicSupport: +20,
                     budget: -20,
                     agriculturalProduction: +10,
                     infrastructureAndEnvironment: +20,
                 }
             },
             {
-                text: "Mevcut tarım yöntemleri gayet yeterlidir",
+                text: "Mevcut sistemle devam edin",
                 effect: {
-                    publicSupport: +5,
-                    budget: +10,
+                    budget: +20,
                     agriculturalProduction: -10,
                     infrastructureAndEnvironment: -20,
                 }

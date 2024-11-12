@@ -15,7 +15,7 @@ export const enerjiQuestions = [
                 listID: "enerji1",
             },
             {
-                text: "Erteleyin, şu an maliyet çok yüksek",
+                text: "Erteleyin, şimdilik maliyet çok yüksek",
                 effect: {
                     budget: +25,
                     infrastructureAndEnvironment: -20,
@@ -32,21 +32,19 @@ export const enerjiQuestions = [
         question: "Enerji tüketimi hızla artıyor. tasarrufu için halkı bilinçlendirme kampanyaları başlatabilir ya da yeni enerji santralleri inşa edebiliriz?",
         answers: [
             {
-                text: "Kampanyayı derhal başlatın.",
+                text: "Kampanyayı başlatın.",
                 effect: {
-                    publicSupport: +10,
                     budget: +20,
-                    infrastructureAndEnvironment: +15,
-                    internationalRelations: +15,
+                    infrastructureAndEnvironment: -15,
+                    internationalRelations: +10,
                 }
             },
             {
-                text: "Yeni enerji santrallerini önceliklendirin.",
+                text: "Yeni enerji santralleri kurun.",
                 effect: {
-                    publicSupport: -10,
                     budget: -20,
-                    infrastructureAndEnvironment: -15,
-                    internationalRelations: -15
+                    infrastructureAndEnvironment: +15,
+                    internationalRelations: -10,
                 }
             }
         ],
@@ -59,7 +57,7 @@ export const enerjiQuestions = [
         question: "Komşu ülkelerle doğal gaz anlaşmaları yapabiliriz, bu enerji açığımızı kapatabilir. Ancak bu, yerli enerji sektörünü olumsuz etkileyebilir.",
         answers: [
             {
-                text: "Bu anlaşma yüzyılımızın fırsatı.",
+                text: "Bu anlaşma yüzyılın fırsatı.",
                 effect: {
                     publicSupport: +10,
                     budget: +15,
@@ -69,7 +67,7 @@ export const enerjiQuestions = [
                 listID: "enerji2",
             },
             {
-                text: "Yerli üreticilerimizi koruyacağız.",
+                text: "Yerli üreticileri koruyun.",
                 effect: {
                     publicSupport: +10,
                     budget: +15,
@@ -87,7 +85,7 @@ export const enerjiQuestions = [
         question: "Nükleer enerji santrali kurma fırsatımız var. Bu, uzun vadede enerji ihtiyacımızı karşılayabilir, ancak çevresel ve uluslararası alanda büyük tepki çekebilir.",
         answers: [
             {
-                text: "Firmalarla görüşün, santrali kurmaya başlayın",
+                text: "Santrali kurmaya başlayın",
                 effect: {
                     publicSupport: -20,
                     budget: -20,
@@ -97,11 +95,11 @@ export const enerjiQuestions = [
                 listID: "enerji3",
             },
             {
-                text: "Yenilenebilir enerji geleceğimiz",
+                text: "Yeşil enerjiye yatırım yapın",
                 effect: {
                     publicSupport: +20,
                     budget: -10,
-                    infrastructureAndEnvironment: -20,
+                    infrastructureAndEnvironment: +10,
                     internationalRelations: +10,
                 }
             }

@@ -6,20 +6,18 @@ export const ticaretQuestions = [
         question: "Sayın Cumhurbaşkanım, büyük perakende zincirleri doları bahane ederek ekstra zamlar yapıyor.",
         answers: [
             {
-                text: "Marketlere ağır cezalar yazmalıyız",
+                text: "Marketlere ceza yazın",
                 effect: {
-                    publicSupport: +10,
-                    budget: +10,
-                    internalSecurity: +10,
+                    budget: +15,
                 },
                 listID: "ticaret1",
             },
             {
-                text: "Ürün fiyatlarını tl endeksli hale getireceğiz",
+                text: "Ürün fiyatlarını TL'ye endeksleyin",
                 effect: {
-                    publicSupport: -10,
-                    budget: -10,
-                    internalSecurity: -10,
+                    publicSupport: -20,
+                    budget: 0,
+                    internalSecurity: 0,
                 }
             }
         ],
@@ -32,18 +30,18 @@ export const ticaretQuestions = [
         question: "Sayın Cumhurbaşkanım, ülkemizde dijital ticaret hızla büyüyor, ancak küçük işletmeler dijital dönüşüme ayak uyduramıyor.",
         answers: [
             {
-                text: "Küçük işletmelere dijital dönüşüm desteği verin.",
+                text: "Küçük işletmelere destek verin.",
                 effect: {
                     publicSupport: +15,
-                    budget: -15,
-                    internationalRelations: +5,
+                    budget: -10,
+                    internationalRelations: 0,
                 }
             },
             {
                 text: "Büyük e-ticaret şirketlerine odaklanın.",
                 effect: {
                     publicSupport: -15,
-                    budget: -10,
+                    budget: -20,
                     internationalRelations: +10,
                 }
             }
@@ -56,9 +54,9 @@ export const ticaretQuestions = [
         question: "Sayın Cumhurbaşkanım, gıda fiyatlarındaki dalgalanmalar ve spekülasyonlar artıyor.",
         answers: [
             {
-                text: "Gıda fiyatlarını kontrol altına alın",
+                text: "Fiyatları kontrol altına alın",
                 effect: {
-                    publicSupport: +20,
+                    publicSupport: +10,
                     budget: +10,
                     internalSecurity: +10,
                 }
@@ -66,7 +64,7 @@ export const ticaretQuestions = [
             {
                 text: "Serbest piyasa koşullarına bırakın",
                 effect: {
-                    publicSupport: -20,
+                    publicSupport: -10,
                     budget: -10,
                     internalSecurity: -10,
                 }
@@ -76,29 +74,4 @@ export const ticaretQuestions = [
         photo: ticaretBakani,
         link: "https://www.tarimdunyasi.net/2024/08/08/gida-fiyatlari-neden-dusmuyor/"
     },
-    {
-        id: 84,
-        question: "Dış ticaret açığımız giderek artıyor. İthalatı kısıtlayan vergiler mi getirelim, yoksa ihracatçı şirketlere daha fazla destek mi sağlayalım?",
-        answers: [
-            {
-                text: "Yerli üretimi teşvik edeceğiz",
-                effect: {
-                    publicSupport: +10,
-                    budget: +15,
-                    internationalRelations: -10,
-                }
-            },
-            {
-                text: "İhracatçı şirketlere destek vermeliyiz",
-                effect: {
-                    publicSupport: +5,
-                    budget: -15,
-                    internationalRelations: +10,
-                }
-            }
-        ],
-        title: "Ticaret Bakanı",
-        photo: ticaretBakani,
-        link: "https://www.bloomberght.com/dokuz-ayin-en-yuksek-dis-ticaret-acigi-2353873"
-    }
 ];

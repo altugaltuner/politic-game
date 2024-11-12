@@ -6,7 +6,7 @@ export const calismaQuestions = [
         question: "İşsizlik oranları artıyor ve gençler iş bulmakta zorlanıyor. Ülkenin parlak beyinleri yurtdışına gitmek için birbirleriyle yarışıyor.",
         answers: [
             {
-                text: "Devlet destekli iş bulma programları başlatacağız",
+                text: "iş bulma programları başlatın",
                 effect: {
                     publicSupport: +20,
                     budget: +10,
@@ -14,7 +14,7 @@ export const calismaQuestions = [
                 }
             },
             {
-                text: "İşverenlere vergi indirimi yaparak teşvik edeceğiz",
+                text: "İşverenlere vergi indirimi yapın",
                 effect: {
                     publicSupport: -20,
                     budget: -20,
@@ -28,10 +28,10 @@ export const calismaQuestions = [
     },
     {
         id: 21,
-        question: "Cumhurbaşkanım, çalışan maaşları çok düşük.Halk asgari ücret zammı bekliyor ancak bu, işverenler üzerinde mali baskı oluşturabilir.",
+        question: "Cumhurbaşkanım, çalışan maaşları çok düşük. Halk asgari ücret zammı bekliyor ancak bu, işverenler üzerinde mali baskı oluşturabilir.",
         answers: [
             {
-                text: "Çalışanların refahını önceliğimiz yapacağız",
+                text: "50% lik zam yapın",
                 effect: {
                     publicSupport: +20,
                     budget: -10,
@@ -40,7 +40,7 @@ export const calismaQuestions = [
                 }
             },
             {
-                text: "İşverenlerin zorluklarını göz ardı edemeyiz",
+                text: "20% lik zam yapın",
                 effect: {
                     publicSupport: -20,
                     budget: +10,
@@ -58,7 +58,7 @@ export const calismaQuestions = [
         question: "Şehirleşme hızlanıyor. Kırsaldaki iş gücü azalıyor ve tarım sektörü zayıflıyor. Halk sizden bir aksiyon bekliyor",
         answers: [
             {
-                text: "Tarımı destekleyip köylüyü koruyacağız",
+                text: "Tarımı destekleyin",
                 effect: {
                     budget: -10,
                     agriculturalProduction: +20,
@@ -67,7 +67,7 @@ export const calismaQuestions = [
                 listID: "calisma1",
             },
             {
-                text: "Sanayiye yönelerek üretim kapasitesini artıracağız",
+                text: "Sanayii üretime odaklanın",
                 effect: {
                     budget: -10,
                     agriculturalProduction: -20,

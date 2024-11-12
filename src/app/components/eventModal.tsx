@@ -29,12 +29,12 @@ export const EventModal = ({ event, onClose }: { event: Event, onClose: (paramet
 
     // Define custom labels for specific keys
     const keyLabels: KeyLabels = {
-        internalSecurity: "İç Güvenlik",
-        publicSupport: "Halk Desteği",
-        infrastructureAndEnvironment: "Altyapı ve Çevre",
-        internationalRelations: "Uluslararası İlişkiler",
+        internalSecurity: "Güvenlik",
+        publicSupport: "Destek",
+        infrastructureAndEnvironment: "Altyapı",
+        internationalRelations: "Politika",
         budget: "Bütçe",
-        agriculturalProduction: "Tarımsal Üretim",
+        agriculturalProduction: "Tarım",
     };
 
     return (
