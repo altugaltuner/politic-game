@@ -19,9 +19,20 @@ interface SelectedOptionModalProps {
     setSelectedOptionModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+const playNewspaperSound = () => {
+    const audio = new Audio("/sound-effects/newspaper.wav");
+    audio.play();
+};
+
 const SelectedOptionModal: React.FC<SelectedOptionModalProps> = ({ selectedOptionModalOpen, selectedListIDs, setSelectedOptionModalOpen }) => {
 
     const [selectedElement, setSelectedElement] = useState<Element | null>(null);
+
+    useEffect(() => {
+        if (selectedOptionModalOpen) {
+            playNewspaperSound();
+        }
+    }, [selectedOptionModalOpen]);
 
     useEffect(() => {
         if (selectedListIDs.length > 0) {

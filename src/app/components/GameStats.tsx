@@ -31,11 +31,27 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     const [internalSecurity, setInternalSecurity] = useState(50);
     const [international, setInternational] = useState(50);
     const [budget, setBudget] = useState(50);
-    const [publicOpinion, setPublicSupport] = useState(50);
+    const [publicOpinion, setPublicOpinion] = useState(50);
     const [isVisible, setIsVisible] = useState(true);
-    const [, setAudio] = useState<HTMLAudioElement | null>(null);
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const playdeathSound = () => {
+        const audio = new Audio("/sound-effects/defeat.wav");
+        audio.play();
+    }
+
+    const playVictorySound = () => {
+        const audio = new Audio("/sound-effects/victory.wav");
+        audio.onerror = () => console.error("Failed to load victory sound");
+        audio.play();
+    }
+
+    const metalButtonSound = () => {
+        const audio = new Audio("/sound-effects/button-metal.wav");
+        audio.onerror = () => console.error("Failed to load metal sound");
+        audio.play();
+    }
 
     function closeModal(effects: Effects) {
         setIsModalOpen(false);
@@ -51,7 +67,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                 setInternalSecurity((prev) => prev + (effects.internalSecurity ?? 0));
             }
             if (effects.publicSupport !== undefined) {
-                setPublicSupport((prev) => prev + (effects.publicSupport ?? 0));
+                setPublicOpinion((prev) => prev + (effects.publicSupport ?? 0));
             }
             if (effects.budget !== undefined) {
                 setBudget((prev) => prev + (effects.budget ?? 0));
@@ -108,56 +124,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         }
     }, [agriculture, infrastructure, internalSecurity, international, budget, publicOpinion]);
 
-
-
-    const soundFiles = [
-        "/sound-effects/malecrowd-1.mp3",
-        "/sound-effects/malecrowd-2.mp3",
-    ];
-
-
-    const getRandomSound = () => {
-        const randomIndex = Math.floor(Math.random() * soundFiles.length);
-        return soundFiles[randomIndex];
-    }
-
-    const playSoundEffect = () => {
-        const randomSound = getRandomSound();
-        const newAudio = new Audio(randomSound);
-        setAudio(newAudio);
-        newAudio.play();
-
-        // Sesin 3 saniye boyunca çalması
-        setTimeout(() => {
-            // Fade out efekti başlat
-            fadeOut(newAudio);
-        }, 2000); // 2 saniye sonra fade out başlat
-
-        setTimeout(() => {
-            newAudio.pause();
-            setAudio(null);
-        }, 3000);
-    };
-
-    // Fade out fonksiyonu
-    const fadeOut = (audio: HTMLAudioElement) => {
-        let volume = 1.0; // Başlangıç sesi
-        const fadeDuration = 1000; // Fade out süresi (ms)
-        const fadeInterval = 50; // Her adımın süresi (ms)
-        const fadeStep = volume / (fadeDuration / fadeInterval); // Her adımda azaltılacak ses
-
-        const fade = setInterval(() => {
-            if (volume > 0) {
-                volume = Math.max(0, volume - fadeStep); // Sesi azalt
-                audio.volume = volume;
-            } else {
-                clearInterval(fade); // Fade out tamamlandı
-                audio.pause(); // Sesi durdur
-                setAudio(null);
-            }
-        }, fadeInterval);
-    };
-
     // Statlar güncellendiğinde oyunun bitip bitmediğini kontrol eden useEffect
     useEffect(() => {
         const isGameOver = checkGameOver(publicOpinion, internalSecurity, international, budget, infrastructure, agriculture);
@@ -173,7 +139,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             }
             else if (international <= 1) {
                 setDeathStat("international");
-                setGameOverReason("Dış politikada yaptığın hatalar ülkeyi dış politikada yalnızlaştırdı. Uluslararası arenada söz hakkını kaybettin. Yönetimin sona erdi!");
+                setGameOverReason("Dış politikada yaptığın hatalar ülkeyi yalnızlaştırdı. Uluslararası arenada söz hakkını kaybettin. Yönetimin sona erdi!");
             }
             else if (budget <= 1) {
                 setDeathStat("budget");
@@ -192,6 +158,8 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
     // Function to handle answer selection
     const answerQuestion = (direction: "left" | "right") => {
+        metalButtonSound();
+
         const answer =
             direction === "left"
                 ? currentQuestion.answers[0]
@@ -202,7 +170,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             setInfrastructure,
             setInternalSecurity,
             setInternational,
-            setPublicSupport,
+            setPublicOpinion,
             setBudget
         });
 
@@ -226,7 +194,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             }, 500); // 0.5 saniye bekleyin
 
             setTimeout(() => {
-                playSoundEffect();
+
             }, 1000); // 1 saniye bekleyin
         }
     };
@@ -237,16 +205,27 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         setInternalSecurity(50);
         setInternational(50);
         setBudget(50);
-        setPublicSupport(50);
+        setPublicOpinion(50);
         setUsedQuestions([allQuestions[0].id]);
         setCurrentQuestion(allQuestions[0]);
         setGameOver(false);
         setGameOverReason("");
         setScore(0);
         setDeathStat(null);
+        metalButtonSound();
 
         resetSelectedListIDs(); // Clear the filteredElements in ListElements
     };
+
+    useEffect(() => {
+        if (gameOver) {
+            playdeathSound();
+        }
+    }, [gameOver]);
+
+    if (allQuestions.length === usedQuestions.length) {
+        playVictorySound();
+    }
 
     // Oyun bittiyse oyunun son ekranını göster
     if (gameOver) {
@@ -321,7 +300,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         <div className="flex flex-col gap-3 xl:w-[72%] w-full justify-center items-center rounded-md relative">
 
             {isModalOpen && currentEvent && (
-                <EventModal event={currentEvent} onClose={closeModal} />
+                <EventModal event={currentEvent} onClose={closeModal} isModalOpen={isModalOpen} />
             )}
 
 
