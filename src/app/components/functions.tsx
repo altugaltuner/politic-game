@@ -23,7 +23,7 @@ type SetFunctions = {
     setInternalSecurity: React.Dispatch<React.SetStateAction<number>>;
     setInternational: React.Dispatch<React.SetStateAction<number>>;
     setBudget: React.Dispatch<React.SetStateAction<number>>;
-    setPublicSupport: React.Dispatch<React.SetStateAction<number>>;
+    setPublicOpinion: React.Dispatch<React.SetStateAction<number>>;
 };
 
 type Question = {
@@ -106,7 +106,7 @@ export const updateStats = (
     setFunctions: SetFunctions
 ) => {
     if (typeof effect.publicSupport === "number") {
-        setFunctions.setPublicSupport((prev) => Math.min(100, Math.max(0, prev + (effect.publicSupport ?? 0))));
+        setFunctions.setPublicOpinion((prev) => Math.min(100, Math.max(0, prev + (effect.publicSupport ?? 0))));
     }
     if (typeof effect.internalSecurity === "number") {
         setFunctions.setInternalSecurity((prev) => Math.min(100, Math.max(0, prev + (effect.internalSecurity ?? 0))));
