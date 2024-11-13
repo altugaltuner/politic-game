@@ -9,6 +9,7 @@ import { ReactTyped } from "react-typed";
 import { events } from "../../database/events";
 import { EventModal } from "./eventModal";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useVolume } from "@/contexts/VolumeContext";
 
 type GameStatsProps = {
     setSelectedListIDs: (newListID: string) => void;
@@ -42,20 +43,24 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         "/sound-effects/breaking-news2.wav",
         "/sound-effects/important-news.wav",
     ];
+    const { volume } = useVolume();
 
     const playdeathSound = () => {
         const audio = new Audio("/sound-effects/defeat.wav");
+        audio.volume = volume;
         audio.play();
     }
 
     const playVictorySound = () => {
         const audio = new Audio("/sound-effects/victory.wav");
+        audio.volume = volume;
         audio.onerror = () => console.error("Failed to load victory sound");
         audio.play();
     }
 
     const metalButtonSound = () => {
         const audio = new Audio("/sound-effects/button-metal.wav");
+        audio.volume = volume;
         audio.onerror = () => console.error("Failed to load metal sound");
         audio.play();
     }
@@ -64,6 +69,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         const randomSound = sounds[Math.floor(Math.random() * sounds.length)];
         // console.log("Çalınan ses:", randomSound);
         const audio = new Audio(randomSound);
+        audio.volume = volume;
         audio.play();
     };
 

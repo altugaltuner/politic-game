@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { elements } from "../../database/elements.js";
 import Image, { StaticImageData } from "next/image";
 import { Button } from "@/components/ui/button";
+import { useVolume } from "@/contexts/VolumeContext";
 
 type Element = {
     id: number;
@@ -19,15 +20,17 @@ interface SelectedOptionModalProps {
     setSelectedOptionModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const playNewspaperSound = () => {
-    const audio = new Audio("/sound-effects/newspaper.wav");
-    audio.play();
-};
 
 const SelectedOptionModal: React.FC<SelectedOptionModalProps> = ({ selectedOptionModalOpen, selectedListIDs, setSelectedOptionModalOpen }) => {
 
     const [selectedElement, setSelectedElement] = useState<Element | null>(null);
+    const { volume } = useVolume();
+    const playNewspaperSound = () => {
 
+        const audio = new Audio("/sound-effects/newspaper.wav");
+        audio.volume = volume;
+        audio.play();
+    };
     useEffect(() => {
         if (selectedOptionModalOpen) {
             playNewspaperSound();

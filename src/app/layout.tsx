@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { UserProvider } from "@/contexts/usernameContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import { VolumeProvider } from "@/contexts/VolumeContext";
 
 export const metadata: Metadata = {
   title: "Cumhurbaşkanı Simulator",
@@ -24,12 +25,13 @@ export default function RootLayout({
           backgroundRepeat: 'repeat'
         }}
       >
-        <ThemeProvider>
-          <UserProvider>
-            {children}
-          </UserProvider>
-        </ThemeProvider>
-
+        <VolumeProvider>
+          <ThemeProvider>
+            <UserProvider>
+              {children}
+            </UserProvider>
+          </ThemeProvider>
+        </VolumeProvider>
       </body>
     </html>
   );

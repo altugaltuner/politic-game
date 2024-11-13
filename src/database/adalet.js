@@ -4,7 +4,7 @@ import altug from "../../public/ministers/altug.webp";
 export const adaletQuestions = [
     {
         id: 1,
-        question: "Son seçimlerde %51 ile sen seçildin! Bu sorumluluğu üstlenmeye hazır mısın?",
+        question: "Son seçimleri %51 ile sen kazandın! Bu sorumluluğu üstlenmeye hazır mısın?",
         answers: [
             {
                 text: "Hazırız, milletimize hizmet için buradayız",
