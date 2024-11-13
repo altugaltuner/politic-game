@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-
+import Image from 'next/image';
+import { useEffect, useState } from "react";
 type Effects = {
     internalSecurity?: number;
     publicSupport?: number;
@@ -25,7 +26,6 @@ type Event = {
 };
 
 export const EventModal = ({ event, onClose }: { event: Event, onClose: (parameters: object) => void }) => {
-    if (!event) return null;
 
     // Define custom labels for specific keys
     const keyLabels: KeyLabels = {
@@ -37,11 +37,12 @@ export const EventModal = ({ event, onClose }: { event: Event, onClose: (paramet
         agriculturalProduction: "Tarım",
     };
 
+    if (!event) return null;
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
             <div className="flex flex-col bg-white p-5 rounded-lg w-[90%] max-w-lg items-center gap-4 border-[5px] border-black text-center">
                 <h2 className="text-xl font-bold mb-4 text-primary">{event.title}</h2>
-                <img src={event.photo.src} alt="event-photo" />
+                <Image src={event.photo.src} alt="event-photo" width={1820} height={1024} />
                 <p className="text-gray-700">{event.description}</p>
                 {/* Render each effect in the effects object */}
                 <div className="mb-4 text-gray-700">

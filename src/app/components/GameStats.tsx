@@ -35,6 +35,11 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     const [isVisible, setIsVisible] = useState(true);
 
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const sounds = [
+        "/sound-effects/breaking-news1.wav",
+        "/sound-effects/breaking-news2.wav",
+        "/sound-effects/important-news.wav",
+    ];
 
     const playdeathSound = () => {
         const audio = new Audio("/sound-effects/defeat.wav");
@@ -52,6 +57,15 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         audio.onerror = () => console.error("Failed to load metal sound");
         audio.play();
     }
+
+    const playRandomBreakingNewsSound = () => {
+        const randomSound = sounds[Math.floor(Math.random() * sounds.length)];
+        console.log("Çalınan ses:", randomSound);
+        const audio = new Audio(randomSound);
+        audio.play();
+    };
+
+
 
     function closeModal(effects: Effects) {
         setIsModalOpen(false);
@@ -78,12 +92,19 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         }
     }
 
-
     const getRandomEventIndex = () => {
         return Math.floor(Math.random() * events.length);
     };
+
     const [currentEvent, setCurrentEvent] = useState(events[getRandomEventIndex()]);
     const [usedEvents, setUsedEvents] = useState<number[]>([]);
+
+
+    useEffect(() => {
+        if (isModalOpen) {
+            playRandomBreakingNewsSound();
+        }
+    }, [isModalOpen]);
 
     // Set the first question as fixed
     const [usedQuestions, setUsedQuestions] = useState<number[]>([allQuestions[0].id]);
@@ -122,7 +143,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                 setIsModalOpen(true);
             }
         }
-    }, [agriculture, infrastructure, internalSecurity, international, budget, publicOpinion]);
+    }, [currentQuestion]);
 
     // Statlar güncellendiğinde oyunun bitip bitmediğini kontrol eden useEffect
     useEffect(() => {
@@ -300,7 +321,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         <div className="flex flex-col gap-3 xl:w-[72%] w-full justify-center items-center rounded-md relative">
 
             {isModalOpen && currentEvent && (
-                <EventModal event={currentEvent} onClose={closeModal} isModalOpen={isModalOpen} />
+                <EventModal event={currentEvent} onClose={closeModal} />
             )}
 
 
