@@ -6,12 +6,13 @@ import ListElements from "../components/ListElements";
 import SettingsArea from "../components/SettingsArea";
 import SettingsModal from "../components/SettingsModal";
 import SelectedOptionModal from "../components/selectedOptionModal";
+import { useTheme } from '@/contexts/ThemeContext';
 
 export default function GamePage() {
 
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedOptionModalOpen, setSelectedOptionModalOpen] = useState(false);
-
+    const { isDarkMode } = useTheme();
     const handleSelectedOptionModalOpen = () => {
         setSelectedOptionModalOpen(true);
     }
@@ -21,7 +22,6 @@ export default function GamePage() {
     }
 
     const [selectedListIDs, setSelectedListIDs] = useState<string[]>([]);
-
 
     const handleSetSelectedListID = (newListID: string) => {
         setSelectedListIDs((prevListIDs) =>
@@ -33,7 +33,7 @@ export default function GamePage() {
     const resetSelectedListIDs = () => setSelectedListIDs([]);
 
     return (
-        <div className="p-2 flex xl:flex-row flex-col 2xl:gap-5 gap-3 w-full items-start justify-center">
+        <div className={` ${isDarkMode ? 'bg-black  bg-opacity-80' : ''} p-2 flex xl:flex-row flex-col 2xl:gap-5 gap-3 w-full items-start justify-center h-[100vh]`}>
             <GameStats setSelectedListIDs={handleSetSelectedListID} resetSelectedListIDs={resetSelectedListIDs} handleSelectedOptionModalOpen={handleSelectedOptionModalOpen} />
             <div className="flex flex-col gap-2 xl:w-[25%] w-full">
                 <SettingsArea handleOpenModal={handleOpenModal} modalOpen={modalOpen} />

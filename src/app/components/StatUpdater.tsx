@@ -6,6 +6,7 @@ import internationalIcon from "../../../public/stats-logo/international.webp";
 import currencyIcon from "../../../public/stats-logo/money.webp";
 import publicSupportIcon from "../../../public/stats-logo/public-icon.webp";
 import Image from "next/image";
+import { useTheme } from "@/contexts/ThemeContext";
 
 type Props = {
     agriculture: number;
@@ -51,13 +52,18 @@ const StatUpdater: React.FC<Props> = ({
     const animatedCurrency = useSpring({ number: currency, config: { duration: 1000 } });
     const animatedPublicSupport = useSpring({ number: publicSupport, config: { duration: 1000 } });
     const animatedScore = useSpring({ number: score, config: { duration: 1000 } });
+    const { isDarkMode } = useTheme();
 
     return (
-        <div className="flex w-full xl:gap-2 gap-1 md:rounded-t-lg justify-between p-2 border-black bg-white border-[3px] md:rounded-xl rounded">
+        <div className={` ${isDarkMode ? 'bg-[rgb(17,17,17)] border-white' : 'bg-white border-black'} flex w-full xl:gap-2 gap-1 md:rounded-t-lg justify-between p-2  border-[3px] md:rounded-xl rounded`}>
 
-            <div className="flex flex-col items-center justify-between md:p-2 border-black md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center bg-[#eaeaea] md:h-[146px] h-[55px]">
-                <span className="md:text-xs xl:text-sm md:block hidden">Tarım</span>
-                <div className="flex w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center bg-[rgb(150,150,150)] border-black border-[1px] rounded-sm">
+            <div className={` ${isDarkMode ? ' text-white bg-[rgb(17,17,17)] border-white' : ' text-black bg-[#eaeaea] border-black'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[146px] h-[55px]`}>
+
+                <span className={`${isDarkMode ? ' text-white' : ' text-black'}  md:text-xs xl:text-sm md:block hidden`}>Tarım</span>
+
+                <div className={`${isDarkMode ? ' border-white' : ' border-black '} flex bg-[rgb(150,150,150)] w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center   border-[1px] rounded-sm`}>
+
+
                     <animated.p className="md:block hidden absolute z-10 bottom-0 right-0 text-white bg-black p-[2px] rounded border-[1px] white lg:text-base md:text-sm">{animatedAgriculture.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "agriculture" && (
                         <Image src="/stats-logo/skull.webp" alt="skull" width={100} height={100} className="absolute z-50" />
@@ -69,9 +75,9 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className="flex flex-col items-center justify-between md:p-2 border-black md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center bg-[#eaeaea] md:h-[146px] h-[55px]">
-                <span className="md:text-xs xl:text-sm md:block hidden">Altyapı</span>
-                <div className="flex w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center bg-[rgb(150,150,150)] border-black border-[1px] rounded-sm">
+            <div className={` ${isDarkMode ? ' text-white bg-[rgb(17,17,17)] border-white' : ' text-black bg-[#eaeaea] border-black'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[146px] h-[55px]`}>
+                <span className={`${isDarkMode ? ' text-white' : ' text-black'}  md:text-xs xl:text-sm md:block hidden`}>Altyapı</span>
+                <div className={`${isDarkMode ? ' border-white' : ' border-black '} flex bg-[rgb(150,150,150)] w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center   border-[1px] rounded-sm`}>
 
                     <animated.p className="md:block hidden absolute z-10 bottom-0 right-0 text-white bg-black p-[2px] rounded border-[1px] white lg:text-base md:text-sm">{animatedInfrastructure.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "infrastructure" && (
@@ -84,9 +90,9 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className="flex flex-col items-center justify-between md:p-2 border-black md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center bg-[#eaeaea] md:h-[146px] h-[55px]">
-                <span className="md:text-xs xl:text-sm md:block hidden">Güvenlik</span>
-                <div className="flex w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center bg-[rgb(150,150,150)] border-black border-[1px] rounded-sm">
+            <div className={` ${isDarkMode ? ' text-white bg-[rgb(17,17,17)] border-white' : ' text-black bg-[#eaeaea] border-black'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[146px] h-[55px]`}>
+                <span className={`${isDarkMode ? ' text-white' : ' text-black'}  md:text-xs xl:text-sm md:block hidden`}>Güvenlik</span>
+                <div className={`${isDarkMode ? ' border-white' : ' border-black '} flex bg-[rgb(150,150,150)] w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center   border-[1px] rounded-sm`}>
                     <animated.p className="md:block hidden absolute z-10 bottom-0 right-0 text-white bg-black p-[2px] rounded border-[1px] white lg:text-base md:text-sm">{animatedInternalSecurity.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "internalSecurity" && (
                         <Image src="/stats-logo/skull.webp" alt="skull" width={100} height={100} className="absolute z-50" />
@@ -98,9 +104,9 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className="flex flex-col items-center justify-between md:p-2 border-black md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center bg-[#eaeaea] md:h-[146px] h-[55px]">
-                <span className="md:text-xs xl:text-sm md:block hidden">Politika</span>
-                <div className="flex w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center bg-[rgb(150,150,150)] border-black border-[1px] rounded-sm">
+            <div className={` ${isDarkMode ? ' text-white bg-[rgb(17,17,17)] border-white' : ' text-black bg-[#eaeaea] border-black'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[146px] h-[55px]`}>
+                <span className={`${isDarkMode ? ' text-white' : ' text-black'}  md:text-xs xl:text-sm md:block hidden`}>Politika</span>
+                <div className={`${isDarkMode ? ' border-white' : ' border-black '} flex bg-[rgb(150,150,150)] w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center   border-[1px] rounded-sm`}>
                     <animated.p className="md:block hidden absolute z-10 bottom-0 right-0 text-white bg-black p-[2px] rounded border-[1px] white lg:text-base md:text-sm">{animatedInternational.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "international" && (
                         <Image src="/stats-logo/skull.webp" alt="skull" width={100} height={100} className="absolute z-50" />
@@ -112,9 +118,9 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className="flex flex-col items-center justify-between md:p-2 border-black md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center bg-[#eaeaea] md:h-[146px] h-[55px]">
-                <span className="md:text-xs xl:text-sm md:block hidden">Bütçe</span>
-                <div className="flex w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center bg-[rgb(150,150,150)] border-black border-[1px] rounded-sm">
+            <div className={` ${isDarkMode ? ' text-white bg-[rgb(17,17,17)] border-white' : ' text-black bg-[#eaeaea] border-black'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[146px] h-[55px]`}>
+                <span className={`${isDarkMode ? ' text-white' : ' text-black'}  md:text-xs xl:text-sm md:block hidden`}>Bütçe</span>
+                <div className={`${isDarkMode ? ' border-white' : ' border-black '} flex bg-[rgb(150,150,150)] w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center   border-[1px] rounded-sm`}>
                     <animated.p className="md:block hidden absolute z-10 bottom-0 right-0 text-white bg-black p-[2px] rounded border-[1px] white lg:text-base md:text-sm">{animatedCurrency.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "budget" && (
                         <Image src="/stats-logo/skull.webp" alt="skull" width={100} height={100} className="absolute z-50" />
@@ -126,9 +132,9 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className="flex flex-col items-center justify-between md:p-2 border-black md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center bg-[#eaeaea] md:h-[146px] h-[55px]">
-                <span className="md:text-xs xl:text-sm md:block hidden">Destek</span>
-                <div className="flex w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center bg-[rgb(150,150,150)] border-black border-[1px] rounded-sm">
+            <div className={` ${isDarkMode ? ' text-white bg-[rgb(17,17,17)] border-white' : ' text-black bg-[#eaeaea] border-black'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[146px] h-[55px]`}>
+                <span className={`${isDarkMode ? ' text-white' : ' text-black'}  md:text-xs xl:text-sm md:block hidden`}>Destek</span>
+                <div className={`${isDarkMode ? ' border-white' : ' border-black '} flex bg-[rgb(150,150,150)] w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center   border-[1px] rounded-sm`}>
                     <animated.p className="md:block hidden absolute z-10 bottom-0 right-0 text-white bg-black p-[2px] rounded border-[1px] white lg:text-base md:text-sm">{animatedPublicSupport.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "publicOpinion" && (
                         <Image src="/stats-logo/skull.webp" alt="skull" width={100} height={100} className="absolute z-50" />
@@ -140,9 +146,9 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className="flex flex-col items-center justify-between md:p-2 border-black md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center bg-[#eaeaea] md:h-[146px] h-[55px]">
-                <span className="md:text-xs xl:text-sm md:block hidden">Yönetim</span>
-                <div className="flex w-full h-20 md:border-[1px] border-black relative overflow-hidden md:mt-2 md:rounded justify-center items-center bg-black rounded-sm">
+            <div className={` ${isDarkMode ? ' text-white bg-[rgb(17,17,17)] border-white' : ' text-black bg-[#eaeaea] border-black'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[146px] h-[55px]`}>
+                <span className={`${isDarkMode ? ' text-white' : ' text-black'}  md:text-xs xl:text-sm md:block hidden`}>Yönetim</span>
+                <div className={`${isDarkMode ? ' border-white' : ' border-black '} flex bg-[rgb(150,150,150)] w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center   border-[1px] rounded-sm`}>
                     <div className="absolute bottom-0 left-0 w-full" />
                     <animated.p className="z-10 md:w-[110px] md:h-[55px] w-8 h-8 flex items-center justify-center text-white lg:text-2xl md:text-base text-sm">{animatedScore.number.to(n => `${n.toFixed(0)} / 54`)}</animated.p>
                 </div>
