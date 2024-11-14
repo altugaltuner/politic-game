@@ -101,5 +101,27 @@ export const enerjiQuestions = [
         ],
         title: "Enerji ve Tabii Kaynaklar Bakanı",
         photo: enerjiBakani,
-    }
+    },
+    {
+        id: 135,
+        question: "Amerikan ticaret gemisi Doğu Akdenize 450 ton katı atık boşalttı. Bu, deniz ekosistemini tehdit etmekte ancak yanlış bir karar ABD ile ilişkileri baltalayabilir.",
+        answers: [
+            {
+                text: "ABD ile diplomasiyi korumalıyız",
+                effect: {
+                    agriculturalProduction: -30,
+                    internationalRelations: +10
+                },
+            },
+            {
+                text: "Derhal atık temizliğine başlayın",
+                effect: {
+                    agriculturalProduction: +10,
+                    internationalRelations: 0,
+                }
+            }
+        ],
+        title: "Enerji ve Tabii Kaynaklar Bakanı",
+        photo: enerjiBakani,
+    },
 ];

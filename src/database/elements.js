@@ -200,4 +200,11 @@ export const elements = [
         description: "Ankara-İstanbul hızlı tren hattı açıldı. Bu hattın açılmasıyla birlikte ulaşım süresi yarı yarıya kısaldı.",
         listID: "ulastirma1",
     },
+    {
+        id: 625,
+        title: "AVM'de Bombalı Saldırı",
+        photo: fastTrain,
+        description: "PlazarInn AVM'de gerçekleşen bombalı saldırıda çok sayıda ölü ve yaralı var. Güvenlik güçleri ve sağlık ekipleri olay yerine intikal etti. Olayda şüpheli iki kişi gözaltına alındı.",
+        listID: "savunma1",
+    },
 ];

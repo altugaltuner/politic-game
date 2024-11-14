@@ -9,7 +9,7 @@ export const cevreQuestions = [
                 text: "Şehirleşmeye devam...",
                 effect: {
                     publicSupport: -20,
-                    agriculturalProduction: -20,
+                    agriculturalProduction: -25,
                     budget: -20,
                     infrastructureAndEnvironment: +10,
                     internalSecurity: -10,
@@ -126,6 +126,78 @@ export const cevreQuestions = [
                     budget: -10,
                     agriculturalProduction: +10,
                     internationalRelations: -15,
+                }
+            }
+        ],
+        title: "Çevre ve Şehircilik Bakanı",
+        photo: cevreBakani,
+    },
+    {
+        id: 35,
+        question: "Sanayi tesisleri doğaya ciddi zararlar veriyor. Özellikle bazı firmaların kuralları hiçe saydıkları tespit edildi.",
+        answers: [
+            {
+                text: "İhlalleri yapanlara ağır cezalar verilsin",
+                effect: {
+                    budget: +20,
+                    infrastructureAndEnvironment: -10,
+                },
+                listID: "cevre3",
+            },
+            {
+                text: "Kural tanımayan firmalar kapatılsın",
+                effect: {
+
+                    budget: -20,
+                    infrastructureAndEnvironment: -30,
+                }
+            }
+        ],
+        title: "Çevre ve Şehircilik Bakanı",
+        photo: cevreBakani,
+    },
+    {
+        id: 36,
+        question: "Bir maden şirketi ormanlık alanda izinsiz kazı çalışmaları yaparken yakalandı. Bunun için de ormanlık alanda çok sayıda ağaç kesilmiş.",
+        answers: [
+            {
+                text: "Şirkete devlet el koysun",
+                effect: {
+                    infrastructureAndEnvironment: -20,
+                    agriculturalProduction: -25,
+                },
+                listID: "",
+            },
+            {
+                text: "Çıkarılan madenlere el koyulsun ve ağaçlandırma başlasın",
+                effect: {
+                    infrastructureAndEnvironment: -10,
+                    agriculturalProduction: +10,
+                }
+            }
+        ],
+        title: "Çevre ve Şehircilik Bakanı",
+        photo: cevreBakani,
+    },
+    {
+        id: 37,
+        question: "Akdenizde ve Ege kıyılarında çıkan orman yangınlarında çok sayıda ormanlık alan yok oldu. Yangınların sebebi olarak sıcaklar ve bazı kundakçılar tespit edildi. Şimdiki hamlemiz ne olmalı ?",
+        answers: [
+            {
+                text: "Turistik bölgeler için imar planları hazırlansın.",
+                effect: {
+                    agriculturalProduction: -30,
+                    publicSupport: -10,
+                    budget: +30,
+                },
+                listID: "",
+            },
+            {
+                text: "Yeniden ağaçlandırma çalışmalarına başlansın",
+                effect: {
+                    publicSupport: +10,
+                    agriculturalProduction: +10,
+                    budget: -15,
                 }
             }
         ],

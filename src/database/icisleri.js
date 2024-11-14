@@ -9,7 +9,7 @@ export const icisleriQuestions = [
                 text: "Kademeli olarak göndermeye başlayın",
                 effect: {
                     publicSupport: -10,
-                    budget: -15,
+                    budget: -10,
                     internationalRelations: +10,
                     internalSecurity: -10
                 }

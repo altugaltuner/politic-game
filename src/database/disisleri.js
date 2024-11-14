@@ -40,7 +40,7 @@ export const disisleriQuestions = [
             {
                 text: "Başka alternatifler bulun",
                 effect: {
-                    internationalRelations: -15,
+                    internationalRelations: -20,
                     internalSecurity: +10,
                 }
             }
@@ -90,7 +90,7 @@ export const disisleriQuestions = [
                 text: "Sınırları koruyun",
                 effect: {
                     publicSupport: +35,
-                    internationalRelations: -20,
+                    internationalRelations: -25,
                     internalSecurity: +30,
                 },
                 listID: "disisleri4",

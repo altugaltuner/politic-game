@@ -40,7 +40,7 @@ export const saglikQuestions = [
                 effect: {
                     publicSupport: +20,
                     internalSecurity: +10,
-                    budget: -10,
+                    budget: 0,
                 }
             },
         ],
@@ -62,7 +62,7 @@ export const saglikQuestions = [
             {
                 text: "Denetim yapın",
                 effect: {
-                    budget: -20,
+                    budget: -10,
                     internalSecurity: +20,
                     publicSupport: +30,
                 },

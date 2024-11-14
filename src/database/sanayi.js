@@ -9,7 +9,7 @@ export const sanayiQuestions = [
                 text: "Onay veriyorum",
                 effect: {
                     publicSupport: +10,
-                    budget: -20,
+                    budget: -10,
                     infrastructureAndEnvironment: +20,
                 }
             },
@@ -17,7 +17,7 @@ export const sanayiQuestions = [
                 text: "Dev teknoloji şirketlerinin inisiyatifine bırakın",
                 effect: {
                     publicSupport: -20,
-                    budget: +20,
+                    budget: +10,
                     infrastructureAndEnvironment: -20,
                 }
             }

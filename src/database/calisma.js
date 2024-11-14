@@ -9,7 +9,7 @@ export const calismaQuestions = [
                 text: "iş bulma programları başlatın",
                 effect: {
                     publicSupport: +20,
-                    budget: +10,
+                    budget: +20,
                     internalSecurity: 0,
                 }
             },

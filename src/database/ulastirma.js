@@ -76,5 +76,29 @@ export const ulastirmaQuestions = [
         ],
         title: "Ulaştırma Bakanı",
         photo: ulastirmaBakani,
-    }
+    },
+    {
+        id: 95,
+        question: "Sayın Cumhurbaşkanım, Ankara İstanbul arası tren hattında 2 yük treni çarpıştı. Taşınan kimyasallar çevreye yayılırken 12 kişi ağır yaralı durumda. Ne yapmalıyız?",
+        answers: [
+            {
+                text: "Önce yaralıları kurtarın",
+                effect: {
+                    publicSupport: +20,
+                    infrastructureAndEnvironment: -30,
+                }
+            },
+            {
+                text: "Önce kimyasalları temizleyin ve rayları kontrol edin",
+                effect: {
+                    publicSupport: -10,
+                    infrastructureAndEnvironment: -15,
+
+                },
+                listID: "ulastirma2",
+            }
+        ],
+        title: "Ulaştırma Bakanı",
+        photo: ulastirmaBakani,
+    },
 ];
