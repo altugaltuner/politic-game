@@ -15,7 +15,7 @@ export const tarimQuestions = [
             {
                 text: "Başka önceliklerimiz var, erteleyin",
                 effect: {
-                    agriculturalProduction: -10,
+                    agriculturalProduction: -25,
                     budget: +15,
                 }
             }
@@ -32,7 +32,7 @@ export const tarimQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -20,
-                    agriculturalProduction: +25,
+                    agriculturalProduction: +10,
                     internationalRelations: +10,
                 },
             },
@@ -41,7 +41,7 @@ export const tarimQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: +5,
-                    agriculturalProduction: +15,
+                    agriculturalProduction: +5,
                     internationalRelations: -10,
                 },
             }
@@ -56,7 +56,6 @@ export const tarimQuestions = [
             {
                 text: "Yangın helikopterleri alacağız",
                 effect: {
-
                     budget: -10,
                     agriculturalProduction: +20,
                 }
@@ -82,7 +81,7 @@ export const tarimQuestions = [
                 effect: {
                     publicSupport: +20,
                     budget: +20,
-                    agriculturalProduction: +10,
+                    agriculturalProduction: +20,
                 }
             },
             {
@@ -90,7 +89,7 @@ export const tarimQuestions = [
                 effect: {
                     publicSupport: -20,
                     budget: -20,
-                    agriculturalProduction: +25,
+                    agriculturalProduction: +10,
                 },
             }
         ],

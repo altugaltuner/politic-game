@@ -8,7 +8,7 @@ export const enerjiQuestions = [
             {
                 text: "Yerli enerji aramalarına başlayın",
                 effect: {
-                    budget: -25,
+                    budget: -20,
                     infrastructureAndEnvironment: +20,
                     internationalRelations: -15,
                 },
@@ -17,7 +17,7 @@ export const enerjiQuestions = [
             {
                 text: "Erteleyin, şimdilik maliyet çok yüksek",
                 effect: {
-                    budget: +25,
+                    budget: +15,
                     infrastructureAndEnvironment: -20,
                     internationalRelations: +15
                 }
@@ -94,7 +94,7 @@ export const enerjiQuestions = [
             {
                 text: "Yeşil enerjiye yatırım yapın",
                 effect: {
-                    publicSupport: +20,
+                    publicSupport: +10,
                     budget: -10,
                     infrastructureAndEnvironment: +10,
                     internationalRelations: +10,

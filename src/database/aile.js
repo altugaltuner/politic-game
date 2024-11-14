@@ -9,7 +9,7 @@ export const aileQuestions = [
                 text: "Yardımı yapacağız",
                 effect: {
                     publicSupport: +20,
-                    budget: -20,
+                    budget: -10,
                     internalSecurity: +10,
                     infrastructureAndEnvironment: -20
                 },
@@ -19,7 +19,7 @@ export const aileQuestions = [
                 effect: {
                     publicSupport: -20,
                     budget: +20,
-                    infrastructureAndEnvironment: +20,
+                    infrastructureAndEnvironment: +10,
                     internalSecurity: -10,
                 },
             }

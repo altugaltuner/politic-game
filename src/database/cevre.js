@@ -19,8 +19,8 @@ export const cevreQuestions = [
                 text: "Yeşil alanları arttırın",
                 effect: {
                     publicSupport: +20,
-                    budget: +20,
-                    agriculturalProduction: +20,
+                    budget: +10,
+                    agriculturalProduction: +10,
                     infrastructureAndEnvironment: -10,
                     internalSecurity: +10,
                 },
@@ -72,7 +72,7 @@ export const cevreQuestions = [
                 effect: {
                     publicSupport: -10,
                     budget: +10,
-                    infrastructureAndEnvironment: +20,
+                    infrastructureAndEnvironment: +10,
                     agriculturalProduction: -15,
                 }
             }
@@ -89,7 +89,7 @@ export const cevreQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    infrastructureAndEnvironment: +15,
+                    infrastructureAndEnvironment: +10,
                     internationalRelations: +10,
                 },
                 listID: "cevre2",
@@ -99,7 +99,7 @@ export const cevreQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    infrastructureAndEnvironment: +10,
+                    infrastructureAndEnvironment: +5,
                     internationalRelations: -10
                 }
             }
@@ -116,7 +116,7 @@ export const cevreQuestions = [
                 effect: {
                     publicSupport: +15,
                     budget: +10,
-                    infrastructureAndEnvironment: -20,
+                    agriculturalProduction: -10,
                     internationalRelations: +15,
                 },
                 listID: "cevre3",
@@ -126,7 +126,7 @@ export const cevreQuestions = [
                 effect: {
                     publicSupport: -15,
                     budget: -10,
-                    infrastructureAndEnvironment: +20,
+                    agriculturalProduction: +10,
                     internationalRelations: -15,
                 }
             }

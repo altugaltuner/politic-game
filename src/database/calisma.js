@@ -10,7 +10,7 @@ export const calismaQuestions = [
                 effect: {
                     publicSupport: +20,
                     budget: +10,
-                    internalSecurity: +10,
+                    internalSecurity: 0,
                 }
             },
             {
@@ -60,7 +60,7 @@ export const calismaQuestions = [
                 effect: {
                     budget: -10,
                     agriculturalProduction: +20,
-                    infrastructureAndEnvironment: -20,
+                    infrastructureAndEnvironment: -10,
                 },
                 listID: "calisma1",
             },
@@ -68,7 +68,7 @@ export const calismaQuestions = [
                 text: "Sanayi üretimine odaklanın",
                 effect: {
                     budget: -10,
-                    agriculturalProduction: -20,
+                    agriculturalProduction: -10,
                     infrastructureAndEnvironment: +20
                 },
             }

@@ -35,7 +35,7 @@ export const adaletQuestions = [
             {
                 text: "Araştırmaya devam edin",
                 effect: {
-                    internalSecurity: +20,
+                    internalSecurity: +10,
                     publicSupport: +20,
                 }
             }
@@ -48,7 +48,7 @@ export const adaletQuestions = [
         question: "İstanbul Sözleşmesi konusunda tartışmalar devam ediyor. Ne düşünüyorsunuz?",
         answers: [
             {
-                text: "Ailevi hassasiyetlerimizi korumalıyız",
+                text: "Sözleşmeden çekileceğiz",
                 effect: {
                     internalSecurity: -20,
                     publicSupport: -20,
@@ -56,7 +56,7 @@ export const adaletQuestions = [
                 },
             },
             {
-                text: "Kadın haklarını korumak önceliğimiz",
+                text: "Sözleşmeyi imzalayacağız",
                 effect: {
                     internalSecurity: +20,
                     publicSupport: +20,
@@ -74,8 +74,8 @@ export const adaletQuestions = [
             {
                 text: "Polis ekipleri güçlendirilecek",
                 effect: {
-                    internalSecurity: +20,
-                    publicSupport: +20,
+                    internalSecurity: +10,
+                    publicSupport: +10,
                     budget: -20,
                 }
             },
@@ -83,7 +83,7 @@ export const adaletQuestions = [
                 text: "Sosyal projeler geliştireceğiz",
                 effect: {
                     internalSecurity: -10,
-                    publicSupport: -10,
+                    publicSupport: 0,
                     budget: -10,
                 }
             }
@@ -99,15 +99,15 @@ export const adaletQuestions = [
                 text: "Kapasiteyi artırmalıyız",
                 effect: {
                     internalSecurity: +10,
-                    budget: -20,
-                    infrastructureAndEnvironment: +20,
+                    budget: -10,
+                    infrastructureAndEnvironment: +10,
                 }
             },
             {
                 text: "Bütçemizi korumalıyız",
                 effect: {
                     internalSecurity: -20,
-                    budget: +20,
+                    budget: +10,
                     infrastructureAndEnvironment: -20,
                 },
                 listID: "adalet2",

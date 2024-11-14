@@ -16,7 +16,7 @@ export const saglikQuestions = [
                 text: "Yeni hastaneler inşa edin",
                 effect: {
                     budget: -20,
-                    infrastructureAndEnvironment: +30,
+                    infrastructureAndEnvironment: +20,
                 }
             },
         ],
@@ -32,7 +32,7 @@ export const saglikQuestions = [
                 effect: {
                     publicSupport: +10,
                     internalSecurity: 0,
-                    budget: -25,
+                    budget: -15,
                 }
             },
             {
@@ -55,7 +55,7 @@ export const saglikQuestions = [
                 text: "Hastane yetkilileriyle konuşun",
                 effect: {
                     budget: +10,
-                    internalSecurity: -15,
+                    internalSecurity: -25,
                     publicSupport: 0,
                 }
             },

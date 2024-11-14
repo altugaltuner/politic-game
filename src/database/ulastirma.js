@@ -11,7 +11,7 @@ export const ulastirmaQuestions = [
                     publicSupport: +20,
                     budget: -10,
                     infrastructureAndEnvironment: +25,
-                    internalSecurity: +15,
+                    internalSecurity: +10,
                 }
             },
             {
@@ -20,7 +20,7 @@ export const ulastirmaQuestions = [
                     publicSupport: +10,
                     budget: -15,
                     infrastructureAndEnvironment: +10,
-                    internalSecurity: +15,
+                    internalSecurity: +10,
                 }
             }
         ],
@@ -36,7 +36,7 @@ export const ulastirmaQuestions = [
                 effect: {
                     publicSupport: +25,
                     budget: -30,
-                    infrastructureAndEnvironment: +30,
+                    infrastructureAndEnvironment: +15,
                 },
                 listID: "ulastirma1",
             },
@@ -45,7 +45,7 @@ export const ulastirmaQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -15,
-                    infrastructureAndEnvironment: +10,
+                    infrastructureAndEnvironment: 0,
                 }
             }
         ],
@@ -61,7 +61,7 @@ export const ulastirmaQuestions = [
                 effect: {
                     publicSupport: +20,
                     budget: -20,
-                    infrastructureAndEnvironment: +30,
+                    infrastructureAndEnvironment: +10,
                 }
             },
             {
@@ -69,7 +69,7 @@ export const ulastirmaQuestions = [
                 effect: {
                     publicSupport: -10,
                     budget: +10,
-                    infrastructureAndEnvironment: +10,
+                    infrastructureAndEnvironment: 0,
                 },
                 listID: "ulastirma2",
             }

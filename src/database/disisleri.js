@@ -8,7 +8,7 @@ export const disisleriQuestions = [
             {
                 text: "Anlaşmayı imzalayın",
                 effect: {
-                    budget: -20,
+
                     internationalRelations: +20,
                     agriculturalProduction: -10,
                 },
@@ -17,7 +17,7 @@ export const disisleriQuestions = [
             {
                 text: "Anlaşmayı askıya alın",
                 effect: {
-                    budget: +20,
+
                     internationalRelations: -20,
                     agriculturalProduction: +10,
                 }
@@ -40,7 +40,7 @@ export const disisleriQuestions = [
             {
                 text: "Başka alternatifler bulun",
                 effect: {
-                    internationalRelations: -20,
+                    internationalRelations: -10,
                     internalSecurity: +10,
                 }
             }
@@ -65,8 +65,8 @@ export const disisleriQuestions = [
                 text: "Sosyal projelere yatırım yapın",
                 effect: {
                     internationalRelations: -20,
-                    internalSecurity: -20,
-                    budget: +20,
+                    internalSecurity: -10,
+                    budget: +10,
                 }
             }
         ],
@@ -82,17 +82,15 @@ export const disisleriQuestions = [
                 effect: {
                     publicSupport: -30,
                     internationalRelations: +20,
-                    budget: -30,
-                    internalSecurity: -30,
+                    internalSecurity: -25,
                 },
                 listID: "disisleri3",
             },
             {
                 text: "Sınırları koruyun",
                 effect: {
-                    publicSupport: +30,
+                    publicSupport: +35,
                     internationalRelations: -20,
-                    budget: +30,
                     internalSecurity: +30,
                 },
                 listID: "disisleri4",

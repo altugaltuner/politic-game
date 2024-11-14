@@ -22,6 +22,7 @@ import polices from "../../public/list-photos/polices.webp";
 import babiesIncubator from "../../public/list-photos/babies-in-incubator.webp";
 import toggIntroduced from "../../public/list-photos/togg-introduced.webp";
 import fastTrain from "../../public/list-photos/super-fast-train.webp";
+import techStartup from "../../public/list-photos/tech-startup.webp";
 
 export const elements = [
     {
@@ -180,13 +181,20 @@ export const elements = [
     },
     {
         id: 622,
+        title: "Startuplar Büyüme Yolunda",
+        photo: techStartup,
+        description: "Yerli teknoloji startupları yatırımcıların ilgisini çekmeye devam ediyor. Bu startuplar, ülkenin teknolojik gelişimine büyük katkı sağlayacak.",
+        listID: "sanayi2",
+    },
+    {
+        id: 623,
         title: "Zincir Marketlere Ağır Cezalar",
         photo: supermarketPenalty,
         description: "Etiket fiyatlarını her gün güncelleyen dev zincir marketlere ağır cezalar yazıldı. Devletin mücadelesi sürüyor. Zincir marketlerin bundan sonraki aksiyonları merakla bekleniyor.",
         listID: "ticaret1",
     },
     {
-        id: 623,
+        id: 624,
         title: "Hızlı Tren Açıldı",
         photo: fastTrain,
         description: "Ankara-İstanbul hızlı tren hattı açıldı. Bu hattın açılmasıyla birlikte ulaşım süresi yarı yarıya kısaldı.",

@@ -67,7 +67,7 @@ export const events = [
         title: "Gıda Krizi Patlak Verdi!",
         description: "Temel gıda kaynakları hızla tükeniyor, market rafları boş! Halk endişe içinde, yetkililer acil çözümler arıyor.",
         effects: {
-            agriculturalProduction: -20,
+            agriculturalProduction: -30,
             publicSupport: -10,
         },
     },
@@ -96,7 +96,7 @@ export const events = [
         title: "Nükleer Tesiste Korkunç Patlama!",
         description: "Nükleer tesiste büyük bir patlama gerçekleşti! Radyoaktif sızıntı endişesi tüm ülkeye yayılıyor, yetkililer krizle başa çıkmaya çalışıyor.",
         effects: {
-            infrastructureAndEnvironment: -20,
+            infrastructureAndEnvironment: -30,
             publicSupport: -10,
         },
     },
@@ -107,7 +107,7 @@ export const events = [
         description: "Tonlarca petrol denize döküldü, çevre kirliliği korkunç boyutlara ulaşıyor. Deniz yaşamı büyük tehdit altında!",
         effects: {
             infrastructureAndEnvironment: -10,
-            agriculturalProduction: -10,
+            agriculturalProduction: -20,
         },
     },
     {
@@ -278,7 +278,7 @@ export const events = [
         description: "Kıyı bölgelerinde büyük orman yangınları çıktı. Hava sıcaklığı ve rüzgar nedeniyle alevler kontrol altına alınamıyor, yerleşim yerleri tehdit altında!",
         effects: {
             agriculturalProduction: -20,
-            publicSupport: -10,
+            publicSupport: -20,
         },
     },
     {
@@ -298,7 +298,7 @@ export const events = [
         description: "Türkiye, Suriye’deki iç savaşa müdahale ediyor. Devlet kararıyla başlayan operasyonlar, uluslararası arenada tartışma yaratıyor.",
         effects: {
             internationalRelations: -10,
-            budget: -10,
+            budget: -30,
         },
     },
     {
@@ -344,7 +344,7 @@ export const events = [
         title: "Halk İsyan Etti!",
         description: "Hükümetin son dönemlerde aldığı kararlar nedeniyle halk sokaklara döküldü. İşsizlik, yoksulluk ve adaletsizlik karşısında halk isyan etti. Yetkililer çözüm arayışında.",
         effects: {
-            publicSupport: -20,
+            publicSupport: -30,
             budget: -10,
         },
     },

@@ -9,7 +9,7 @@ export const icisleriQuestions = [
                 text: "Kademeli olarak göndermeye başlayın",
                 effect: {
                     publicSupport: -20,
-                    budget: -10,
+                    budget: -15,
                     internationalRelations: +10,
                     internalSecurity: -20
                 }
@@ -44,7 +44,7 @@ export const icisleriQuestions = [
                 text: "Kaynak yetersiz, erteleyin",
                 effect: {
                     budget: +20,
-                    internalSecurity: -20,
+                    internalSecurity: -30,
                     infrastructureAndEnvironment: -20
                 },
                 listID: "icisleri2",

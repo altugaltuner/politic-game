@@ -56,16 +56,17 @@ export const sanayiQuestions = [
         question: "Türkiye'nin dijital dönüşüm süreci hızlanıyor. Bu süreçte hangi alanlara yatırım yapmalıyız?",
         answers: [
             {
-                text: "Teknoloji startup'larına destek sağlayın",
+                text: "Teknoloji startupları",
                 effect: {
                     publicSupport: +20,
                     budget: -20,
                     infrastructureAndEnvironment: +10,
                     internationalRelations: -10,
-                }
+                },
+                listID: "sanayi2",
             },
             {
-                text: "Kaynakları büyük sanayi şirketlerine ayırın",
+                text: "Büyük sanayi şirketleri",
                 effect: {
                     publicSupport: -20,
                     budget: -10,
