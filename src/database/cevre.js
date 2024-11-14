@@ -45,7 +45,7 @@ export const cevreQuestions = [
             {
                 text: "Bütçeyi çevre projelerine aktarın.",
                 effect: {
-                    publicSupport: -10,
+                    publicSupport: +10,
                     budget: -10,
                     infrastructureAndEnvironment: +10,
                 }
@@ -87,7 +87,6 @@ export const cevreQuestions = [
             {
                 text: "Yenilenebilir enerjiye geleceğimiz",
                 effect: {
-                    publicSupport: +10,
                     budget: -10,
                     infrastructureAndEnvironment: +10,
                     internationalRelations: +10,
@@ -97,7 +96,6 @@ export const cevreQuestions = [
             {
                 text: "Mevcut altyapıyı güçlendirin.",
                 effect: {
-                    publicSupport: +10,
                     budget: -10,
                     infrastructureAndEnvironment: +5,
                     internationalRelations: -10

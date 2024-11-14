@@ -57,8 +57,7 @@ export const enerjiQuestions = [
             {
                 text: "Bu anlaşma yüzyılın fırsatı.",
                 effect: {
-                    publicSupport: +10,
-                    budget: +15,
+                    budget: +25,
                     internationalRelations: +20,
                     infrastructureAndEnvironment: -10,
                 },
@@ -67,7 +66,6 @@ export const enerjiQuestions = [
             {
                 text: "Yerli üreticileri koruyun.",
                 effect: {
-                    publicSupport: +10,
                     budget: +15,
                     internationalRelations: -20,
                     infrastructureAndEnvironment: +10,

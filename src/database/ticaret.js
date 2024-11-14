@@ -15,8 +15,8 @@ export const ticaretQuestions = [
             {
                 text: "Ürün fiyatlarını TL'ye endeksleyin",
                 effect: {
-                    publicSupport: -20,
-                    budget: 0,
+                    publicSupport: -30,
+                    budget: -10,
                     internalSecurity: 0,
                 }
             }
@@ -57,7 +57,7 @@ export const ticaretQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: +10,
-                    internalSecurity: +10,
+                    internalSecurity: 0,
                 }
             },
             {

@@ -16,7 +16,7 @@ export const hazineQuestions = [
             {
                 text: "Faiz sebep, enflasyon neticedir!",
                 effect: {
-                    publicSupport: -20,
+                    publicSupport: -35,
                     budget: -20,
                     infrastructureAndEnvironment: -10,
                 },

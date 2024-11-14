@@ -120,7 +120,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     const [score, setScore] = useState(0);
 
     const getRandomEvent = (usedEvents: number[]) => {
-        if (usedQuestions.length > 4 && gameOver === false) {
+        if (usedQuestions.length > 3 && gameOver === false) {
             const availableEvents = events.filter(
                 (event) => event.id !== undefined && !usedEvents.includes(event.id)
             );
@@ -135,7 +135,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     };
 
     const oneInTenChance = () => {
-        const boolean = Math.random() < 0.2;
+        const boolean = Math.random() < 0.4;
         return boolean;
     };
 

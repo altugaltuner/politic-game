@@ -30,6 +30,14 @@ import tourismSeason from "../../public/events/tourism-season.webp";
 import civilSubordinate from "../../public/events/civil-subordinate.webp";
 import mineCollapsed from "../../public/events/mine-collapsed.webp";
 import damWaterShortage from "../../public/events/dam-water-shortage.webp";
+import newFactoryOpening from "../../public/events/new-factory-opening.webp";
+import underSeaCables from "../../public/events/undersea-cables.webp";
+import recycleFactory from "../../public/events/recycle-factory.webp";
+import spaceCenter from "../../public/events/space-center.webp";
+import farm from "../../public/events/farm.webp";
+import farmEducation from "../../public/events/farm-education.webp";
+import agricultureComp from "../../public/events/agriculture-big-comp.webp";
+import scholarship from "../../public/events/scholarship.webp";
 
 export const events = [
     {
@@ -38,7 +46,7 @@ export const events = [
         title: "Ortadoğu Ülkelerinden Beklenmedik Yatırım!",
         description: "Ortadoğu ülkelerinden gelen ani para akışı ekonomik toparlanma umutlarını yeşertti. Bu zenginlik nasıl kullanılacak, kimler en çok fayda sağlayacak?",
         effects: {
-            budget: +15,
+            budget: +25,
         },
     },
     {
@@ -116,7 +124,7 @@ export const events = [
         title: "Halk Coşkuyla Sokaklarda!",
         description: "Umut dolu haberler sonrası halk sokaklarda kutlama yapıyor. Bu coşku ülkeye yayılırken, herkesin yüzü gülüyor.",
         effects: {
-            publicSupport: +20,
+            publicSupport: +25,
         },
     },
     {
@@ -132,10 +140,10 @@ export const events = [
     {
         id: 511,
         photo: shakiraConcert,
-        title: "Stadyumda Shakira Coşkusu!",
-        description: "Shakira İstanbul'da unutulmaz bir konser veriyor! Hayranlar coşkuyla eğlenirken, etkinlik tüm ülkenin gündeminde.",
+        title: "Stadyumda Konser Coşkusu!",
+        description: "İstanbul'da unutulmaz bir konser! Hayranlar coşkuyla eğlenirken, etkinlik tüm ülkenin gündeminde.",
         effects: {
-            publicSupport: +10,
+            publicSupport: +15,
             internationalRelations: +5,
         },
     },
@@ -154,10 +162,10 @@ export const events = [
         id: 513,
         photo: terroristBusted,
         title: "Teröristler Kıskıvrak Yakalandı!",
-        description: "Güvenlik güçleri teröristleri suçüstü yakaladı! Ülke nefes aldı, ancak güvenlik endişeleri devam ediyor.",
+        description: "Güvenlik güçleri teröristleri suçüstü yakaladı! Ancak güvenlik endişeleri devam ediyor.",
         effects: {
-            internalSecurity: +10,
-            publicSupport: +10,
+            internalSecurity: +30,
+            publicSupport: +25,
         },
     },
     {
@@ -228,7 +236,7 @@ export const events = [
         description: "Karadeniz’de büyük bir doğal gaz rezervi bulundu! Ekonomik krizle mücadele eden halk bu keşfi umutla karşıladı, ancak kaynakları kullanmak için gerekli yatırımlar yapılabilecek mi?",
         effects: {
             budget: +20,
-            publicSupport: +15,
+            publicSupport: +10,
         },
     },
     {
@@ -238,7 +246,6 @@ export const events = [
         description: "Yağışların yetersiz olması nedeniyle barajlardaki su seviyesi alarm verici düzeye indi. Su kesintileri gündemde, hükümet acil önlemler almaya hazırlanıyor.",
         effects: {
             agriculturalProduction: -10,
-            publicSupport: -10,
         },
     },
     {
@@ -258,7 +265,7 @@ export const events = [
         description: "Pandemi sonrası turizm sektörü büyük bir patlama yaşadı. Oteller dolup taşarken, esnaflar ekonomideki canlanmayı kutluyor.",
         effects: {
             budget: +20,
-            publicSupport: +20,
+            publicSupport: +30,
         },
     },
     {
@@ -288,7 +295,7 @@ export const events = [
         description: "Yeni bir boğaz projesi olan Kanal İstanbul’un yapımı için ilk adımlar atılıyor. Ancak çevreciler ve bölge halkı, doğal dengeye zarar vereceği gerekçesiyle projeye karşı çıkıyor.",
         effects: {
             infrastructureAndEnvironment: -20,
-            publicSupport: -10,
+            publicSupport: -20,
         },
     },
     {
@@ -299,6 +306,7 @@ export const events = [
         effects: {
             internationalRelations: -10,
             budget: -30,
+            internalSecurity: +20,
         },
     },
     {
@@ -335,7 +343,7 @@ export const events = [
         title: "Anıtkabir’de Büyük Tören!",
         description: "Cumhuriyetin kurucusu Gazi Mustafa Kemal Atatürk’ün anıt mezarı Anıtkabir’de büyük bir tören düzenlendi. Halk, Atatürk’ü saygı ve minnetle andı. Ruhu şad olsun!",
         effects: {
-            publicSupport: +20,
+            publicSupport: +25,
         },
     },
     {
@@ -345,7 +353,92 @@ export const events = [
         description: "Hükümetin son dönemlerde aldığı kararlar nedeniyle halk sokaklara döküldü. İşsizlik, yoksulluk ve adaletsizlik karşısında halk isyan etti. Yetkililer çözüm arayışında.",
         effects: {
             publicSupport: -30,
-            budget: -10,
+            budget: -15,
+        },
+    },
+    {
+        id: 536,
+        photo: civilSubordinate,
+        title: "Çakarlı Araçlara Denetim!",
+        description: "Devlet, usulsüz kullanılan çakarlı araçları trafikten men etti. Birçok araca ceza yazıldı. Emniyet güçleri denetimlerini artırıyor.",
+        effects: {
+            internalSecurity: +15,
+            publicSupport: +10,
+        },
+    },
+    {
+        id: 537,
+        photo: newFactoryOpening,
+        title: "Yeni Fabrika!",
+        description: "Yeni bir fabrikanın açılışı yapıldı. Fabrika, binlerce kişiye iş imkanı sağlayacak. Ekonomiye canlılık getirecek olan fabrika, halk tarafından olumlu karşılandı.",
+        effects: {
+            infrastructureAndEnvironment: +30,
+            publicSupport: +20,
+        },
+    },
+    {
+        id: 538,
+        photo: underSeaCables,
+        title: "Denizaltı İnternet Altyapısı Genişliyor!",
+        description: "Denizaltı internet kabloları sayesinde ülkenin internet altyapısı genişliyor. Hızlı ve güvenilir internet erişimi sağlanacak. Teknolojiye yapılan bu yatırım halkı memnun ediyor.",
+        effects: {
+            infrastructureAndEnvironment: +30,
+            publicSupport: +20,
+        },
+    },
+    {
+        id: 539,
+        photo: recycleFactory,
+        title: "Geri Dönüşümde Büyük Atılım!",
+        description: "Yurtdışından ithal edilen atıkların geri dönüşümü için yeni bir fabrika açıldı. Geri dönüşümde yapılan bu atılım, çevre kirliliğinin azalmasına katkı sağlayacak.",
+        effects: {
+            infrastructureAndEnvironment: +30,
+            publicSupport: +20,
+        },
+    },
+    {
+        id: 540,
+        photo: spaceCenter,
+        title: "İlk Uzay Merkezi Açıldı!",
+        description: "Ülkenin ilk uzay merkezi açıldı. Uzay çalışmaları ve keşifleri için büyük bir adım olan bu merkeze, halkın ilgisi büyük!",
+        effects: {
+            infrastructureAndEnvironment: +40,
+        },
+    },
+    {
+        id: 541,
+        photo: farm,
+        title: "Hayvancılığa Devlet Desteği!",
+        description: "Devlet, hayvancılığı desteklemek amacıyla çiftçilere yeni araçlar ve ekipmanlar sağladı. Hayvancılık sektörüne yapılan bu yatırım, tarım ve hayvancılığın önünü açacak.",
+        effects: {
+            agriculturalProduction: +20,
+        },
+    },
+    {
+        id: 542,
+        photo: farmEducation,
+        title: "Tarımsal Bilgilendirme Programları",
+        description: "Tarım ve hayvancılık sektöründe bilinçli üretim için çiftçilere yönelik eğitim programları düzenleniyor. Tarımsal bilgilendirme programları sayesinde çiftçiler, verimli ve sürdürülebilir tarım yöntemlerini öğreniyor.",
+        effects: {
+            agriculturalProduction: +20,
+        },
+    },
+    {
+        id: 543,
+        photo: agricultureComp,
+        title: "Dev Gıda Şirketi Yurtdışına Açılıyor!",
+        description: "Türkiye'nin önde gelen gıda şirketlerinden biri, yurtdışına açılmaya karar verdi. Şirketin bu atılımı, ülke ekonomisine katkı sağlayacak.",
+        effects: {
+            agriculturalProduction: +30,
+        },
+    },
+    {
+        id: 543,
+        photo: scholarship,
+        title: "Öğrenci Değişim Programı Genişletildi",
+        description: "Üniversite öğrencileri arasında kültürel değişimi teşvik etmek amacıyla öğrenci değişim programı genişletildi. Amerika ve Avrupadaki üniversitelerle yapılan ortaklıklar ile öğrenciler, yurt dışında eğitim alarak farklı kültürleri tanıma fırsatı bulacak.",
+        effects: {
+            internationalRelations: +25,
         },
     },
 ];

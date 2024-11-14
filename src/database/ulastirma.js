@@ -8,7 +8,7 @@ export const ulastirmaQuestions = [
             {
                 text: "Metrolara yatırım yapın",
                 effect: {
-                    publicSupport: +20,
+                    publicSupport: +10,
                     budget: -10,
                     infrastructureAndEnvironment: +25,
                     internalSecurity: +10,
@@ -34,7 +34,7 @@ export const ulastirmaQuestions = [
             {
                 text: "Hızlı tren hatlarını genişletin",
                 effect: {
-                    publicSupport: +25,
+                    publicSupport: +20,
                     budget: -30,
                     infrastructureAndEnvironment: +15,
                 },

@@ -8,17 +8,17 @@ export const icisleriQuestions = [
             {
                 text: "Kademeli olarak göndermeye başlayın",
                 effect: {
-                    publicSupport: -20,
+                    publicSupport: -10,
                     budget: -15,
                     internationalRelations: +10,
-                    internalSecurity: -20
+                    internalSecurity: -10
                 }
             },
             {
                 text: "Entegrasyon projesini başlatın",
                 effect: {
                     publicSupport: -30,
-                    budget: -30,
+                    budget: -20,
                     internationalRelations: +30,
                     internalSecurity: -30
                 },
@@ -96,7 +96,7 @@ export const icisleriQuestions = [
                 effect: {
                     budget: +10,
                     infrastructureAndEnvironment: 0,
-                    publicSupport: -10,
+                    publicSupport: -20,
                 }
             }
         ],
@@ -118,7 +118,7 @@ export const icisleriQuestions = [
             {
                 text: "Askeri operasyona başlayın",
                 effect: {
-                    internalSecurity: +10,
+                    internalSecurity: +20,
                     internationalRelations: -20,
                     budget: -20,
                 },

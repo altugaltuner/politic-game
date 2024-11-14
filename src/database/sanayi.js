@@ -14,9 +14,9 @@ export const sanayiQuestions = [
                 }
             },
             {
-                text: "Teknoloji şirketlerinin inisiyatifine bırakın",
+                text: "Dev teknoloji şirketlerinin inisiyatifine bırakın",
                 effect: {
-                    publicSupport: -10,
+                    publicSupport: -20,
                     budget: +20,
                     infrastructureAndEnvironment: -20,
                 }
