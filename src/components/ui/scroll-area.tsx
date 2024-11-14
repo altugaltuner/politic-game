@@ -17,7 +17,7 @@ const ScrollArea = React.forwardRef<
     <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
       <div
         data-radix-scroll-area-content
-        className="flex xl:flex-col sm:flex-row flex-col xl:gap-0 gap-2 w-full"
+        className="grid xl:grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 xl:gap-0 gap-2 w-full"
       >
         {children}
       </div>

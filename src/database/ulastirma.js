@@ -91,8 +91,8 @@ export const ulastirmaQuestions = [
             {
                 text: "Önce kimyasalları temizleyin ve rayları kontrol edin",
                 effect: {
-                    publicSupport: -10,
-                    infrastructureAndEnvironment: -15,
+                    publicSupport: -20,
+                    infrastructureAndEnvironment: +10,
 
                 },
                 listID: "ulastirma2",

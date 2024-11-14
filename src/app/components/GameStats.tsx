@@ -120,7 +120,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     const [score, setScore] = useState(0);
 
     const getRandomEvent = (usedEvents: number[]) => {
-        if (usedQuestions.length > 3 && gameOver === false) {
+        if (usedQuestions.length > 4 && gameOver === false) {
             const availableEvents = events.filter(
                 (event) => event.id !== undefined && !usedEvents.includes(event.id)
             );
@@ -135,7 +135,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     };
 
     const oneInTenChance = () => {
-        const boolean = Math.random() < 0.4;
+        const boolean = Math.random() < 0.30;
         return boolean;
     };
 
@@ -249,7 +249,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         }
     }, [gameOver]);
 
-    if (allQuestions.length === usedQuestions.length) {
+    if (usedQuestions.length === 30) {
         playVictorySound();
     }
 
@@ -292,7 +292,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         )
     };
 
-    if (allQuestions.length === usedQuestions.length) {
+    if (usedQuestions.length === 30) {
         return (
             <div className="flex flex-col gap-3 xl:w-[72%] w-full justify-center items-center rounded-md relative">
                 <StatUpdater
@@ -324,7 +324,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     }
 
     return (
-        <div className="flex flex-col gap-3 xl:w-[72%] w-full justify-center items-center rounded-md relative">
+        <div className="flex flex-col sm:gap-3 gap-1 xl:w-[72%] w-full justify-center items-center rounded-md relative">
 
             {isModalOpen && currentEvent && (
                 <EventModal event={currentEvent} onClose={closeModal} />
@@ -346,13 +346,13 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             {currentQuestion ? (
                 <div className={` ${isDarkMode ? 'border-white bg-[rgb(17,17,17)]' : 'border-black bg-white'} text-center sm:p-2 p-2 rounded-lg relative border-[3px] flex flex-col justify-start items-center w-full`}>
 
-                    <div className={`question-container ${isVisible ? 'visible' : ''}  flex justify-start items-center font-aldrich md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs`}>
+                    <div className={`question-container ${isVisible ? 'visible' : ''}  flex justify-start items-center font-aldrich md:text-base text-sm min-h-[95px] flex-col w-[90%]`}>
                         <ReactTyped
                             strings={[currentQuestion.question]}
                             typeSpeed={10}
                             showCursor={false}
                             loop={false}
-                            className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-black'} bg-primary py-1 px-2 rounded-md w-[90%] text-sm sm:text-base`}
+                            className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-black'} bg-primary py-1 px-2 rounded-md w-full text-sm`}
                         />
                     </div>
 

@@ -148,24 +148,24 @@ export const nonMinisters = [
     },
     {
         id: 551,
-        question: "",
+        question: "Dün akşam yayınlanan dizideki bazı sahneler aile yapısını bozduğu için diziyi yayından kaldırmak istiyoruz. ",
         answers: [
             {
-                text: "",
+                text: "Yerinde bir karar",
                 effect: {
-                    publicSupport: +20,
-                    budget: -15,
+                    publicSupport: -20,
+
                 }
             },
             {
-                text: "",
+                text: "Önce psiko-sosyal etkilerini araştırmalıyız",
                 effect: {
-                    publicSupport: -25,
-                    budget: +25,
+                    publicSupport: +10,
+
                 },
             }
         ],
-        title: "",
+        title: "RTÜK Başkanı",
         photo: rtukBaskan,
     },
     {
@@ -214,24 +214,24 @@ export const nonMinisters = [
     },
     {
         id: 551,
-        question: "",
+        question: "Sayın Cumhurbaşkanım, ekonomi yönetimi konusunda kendime çok güveniyorum. Bakanla birlikte çalışmamızı ister misiniz?",
         answers: [
             {
-                text: "",
+                text: "Tabi ki isterim. Yardımın dokunabilir.",
                 effect: {
-                    publicSupport: +20,
-                    budget: -15,
+                    publicSupport: -20,
+                    budget: -25,
                 }
             },
             {
-                text: "",
+                text: "Hayır, teşekkürler.",
                 effect: {
-                    publicSupport: -25,
-                    budget: +25,
+                    publicSupport: +10,
+                    budget: 0,
                 },
             }
         ],
-        title: "",
+        title: "Eski Ekonmi Bakanı",
         photo: nebati,
     },
 ];
