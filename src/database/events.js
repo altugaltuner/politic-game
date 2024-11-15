@@ -38,6 +38,9 @@ import farm from "../../public/events/farm.webp";
 import farmEducation from "../../public/events/farm-education.webp";
 import agricultureComp from "../../public/events/agriculture-big-comp.webp";
 import scholarship from "../../public/events/scholarship.webp";
+import bribeMoney from "../../public/events/bribe-money.webp";
+import censor from "../../public/events/journalist-censor.webp";
+import wasteFruit from "../../public/events/waste-fruit.webp";
 
 export const events = [
     {
@@ -46,7 +49,7 @@ export const events = [
         title: "Ortadoğu Ülkelerinden Beklenmedik Yatırım!",
         description: "Ortadoğu ülkelerinden gelen ani para akışı ekonomik toparlanma umutlarını yeşertti. Bu zenginlik nasıl kullanılacak, kimler en çok fayda sağlayacak?",
         effects: {
-            budget: +25,
+            budget: +20,
         },
     },
     {
@@ -55,8 +58,8 @@ export const events = [
         title: "Ulusal Veri Sızıntısı!",
         description: "Ülkenin kimlik sistemi hacklendi! Milyonlarca kişinin hassas verileri siber suçluların elinde. Güvenlik uzmanları hasarı önlemek için seferber halinde.",
         effects: {
-            internalSecurity: -15,
-            publicSupport: -10,
+            internalSecurity: -20,
+            publicSupport: -15,
         },
     },
     {
@@ -65,8 +68,8 @@ export const events = [
         title: "Elektrik Kesintisi Kaosu!",
         description: "Ani bir elektrik kesintisi şehirde hayatı durma noktasına getirdi. Sokaklarda kaos hakim, insanlar temel ihtiyaçlarına ulaşmakta zorlanıyor!",
         effects: {
-            infrastructureAndEnvironment: -10,
-            publicSupport: -10,
+            infrastructureAndEnvironment: -20,
+            publicSupport: -20,
         },
     },
     {
@@ -76,7 +79,7 @@ export const events = [
         description: "Temel gıda kaynakları hızla tükeniyor, market rafları boş! Halk endişe içinde, yetkililer acil çözümler arıyor.",
         effects: {
             agriculturalProduction: -30,
-            publicSupport: -10,
+            publicSupport: -20,
         },
     },
     {
@@ -85,8 +88,8 @@ export const events = [
         title: "Dış güçler bir şeyler karıştırıyor!",
         description: "Dış ülkeler ülkemizin iç işlerine müdahale etmeye başladı, halk bu duruma tepki gösteriyor. Ülkenin egemenliği tehlikede mi?",
         effects: {
-            internationalRelations: -10,
-            publicSupport: -10,
+            internationalRelations: -15,
+            publicSupport: -15,
         },
     },
     {
@@ -124,7 +127,7 @@ export const events = [
         title: "Halk Coşkuyla Sokaklarda!",
         description: "Umut dolu haberler sonrası halk sokaklarda kutlama yapıyor. Bu coşku ülkeye yayılırken, herkesin yüzü gülüyor.",
         effects: {
-            publicSupport: +25,
+            publicSupport: +20,
         },
     },
     {
@@ -133,8 +136,8 @@ export const events = [
         title: "Hükümete Büyük İsyan!",
         description: "Azınlıklar hükümete karşı ayaklanıyor, meydanlarda protestolar büyüyor! Talepler karşılanacak mı?",
         effects: {
-            publicSupport: -10,
-            internalSecurity: -10,
+            publicSupport: -20,
+            internalSecurity: -20,
         },
     },
     {
@@ -143,8 +146,8 @@ export const events = [
         title: "Stadyumda Konser Coşkusu!",
         description: "İstanbul'da unutulmaz bir konser! Hayranlar coşkuyla eğlenirken, etkinlik tüm ülkenin gündeminde.",
         effects: {
-            publicSupport: +15,
-            internationalRelations: +5,
+            publicSupport: +20,
+            internationalRelations: +10,
         },
     },
     {
@@ -153,8 +156,8 @@ export const events = [
         title: "Sokakta Elektrik Kazası: Ölüm!",
         description: "Gündüz vakti sokakta elektrik kaçağı nedeniyle iki kişi hayatını kaybetti. Halk şokta, altyapı ve güvenlik önlemleri sorgulanıyor.",
         effects: {
-            infrastructureAndEnvironment: -10,
-            internalSecurity: -10,
+            infrastructureAndEnvironment: -15,
+            internalSecurity: -15,
             publicSupport: -10,
         },
     },
@@ -164,15 +167,15 @@ export const events = [
         title: "Teröristler Kıskıvrak Yakalandı!",
         description: "Güvenlik güçleri teröristleri suçüstü yakaladı! Ancak güvenlik endişeleri devam ediyor.",
         effects: {
-            internalSecurity: +30,
-            publicSupport: +25,
+            internalSecurity: +20,
+            publicSupport: +20,
         },
     },
     {
         id: 514,
         photo: tosuncuk,
-        title: "Tarımlı Bank Skandalı: Halk Dolandırıldı!",
-        description: "Tarımlı Bank sahibi halkı dolandırdı, birçok insan birikimlerini kaybetti. Skandal ülke gündeminde büyük yankı uyandırıyor.",
+        title: "Gıda Bank Skandalı: Halk Dolandırıldı!",
+        description: "Gıda Bank sahibinin halkın yatırımlarını alarak yurtdışına kaçtığı tespit edildi. Birçok insan birikimlerini kaybetti. Skandal ülke gündeminde büyük yankı uyandırıyor.",
         effects: {
             internalSecurity: -10,
             publicSupport: -10,
@@ -185,18 +188,19 @@ export const events = [
         title: "Patlayan Su Boruları Kaosa Neden Oldu!",
         description: "Şehirdeki su boruları patladı, birçok mahalle susuz kaldı. Sorunun çözülmesi için hummalı çalışmalar sürüyor.",
         effects: {
-            infrastructureAndEnvironment: -10,
+            infrastructureAndEnvironment: -15,
             publicSupport: -10,
+            budget: -10,
         },
     },
     {
         id: 516,
         photo: womenAbuseOnstreet,
         title: "Sokak Ortasında Taciz!",
-        description: "Gündüz vakti sokakta taciz olayı yaşandı, halk bu duruma tepki gösteriyor. Güvenlik önlemleri yeniden gündemde.",
+        description: "Gündüz vakti sokakta bir kadın taciz edildi. Halk bu duruma tepki gösteriyor. Güvenlik önlemleri yeniden gündemde.",
         effects: {
-            internalSecurity: -10,
-            publicSupport: -10,
+            internalSecurity: -15,
+            publicSupport: -15,
         },
     },
     {
@@ -205,7 +209,7 @@ export const events = [
         title: "Sokaklar Çetelere Kaldı!",
         description: "Şehirde çete faaliyetleri artıyor, sokaklar tekinsiz hale geldi. Halk güvenlik endişesi yaşıyor.",
         effects: {
-            internalSecurity: -10,
+            internalSecurity: -20,
             publicSupport: -10,
         },
     },
@@ -216,7 +220,7 @@ export const events = [
         description: "Politikacılar için milyon dolarlık lüks makam araçları satın alındı. Halk bu harcamaları sorguluyor.",
         effects: {
             budget: -15,
-            publicSupport: -10,
+            publicSupport: -15,
         },
     },
     {
@@ -227,6 +231,7 @@ export const events = [
         effects: {
             internationalRelations: -10,
             agriculturalProduction: -10,
+            budget: -15,
         },
     },
     {
@@ -235,7 +240,7 @@ export const events = [
         title: "Kayıp Doğal Gaz Keşfi!",
         description: "Karadeniz’de büyük bir doğal gaz rezervi bulundu! Ekonomik krizle mücadele eden halk bu keşfi umutla karşıladı, ancak kaynakları kullanmak için gerekli yatırımlar yapılabilecek mi?",
         effects: {
-            budget: +20,
+            budget: +15,
             publicSupport: +10,
         },
     },
@@ -245,7 +250,7 @@ export const events = [
         title: "Kuraklık Alarmı: Barajlar Kuruyor!",
         description: "Yağışların yetersiz olması nedeniyle barajlardaki su seviyesi alarm verici düzeye indi. Su kesintileri gündemde, hükümet acil önlemler almaya hazırlanıyor.",
         effects: {
-            agriculturalProduction: -10,
+            agriculturalProduction: -20,
         },
     },
     {
@@ -265,7 +270,7 @@ export const events = [
         description: "Pandemi sonrası turizm sektörü büyük bir patlama yaşadı. Oteller dolup taşarken, esnaflar ekonomideki canlanmayı kutluyor.",
         effects: {
             budget: +20,
-            publicSupport: +30,
+            publicSupport: +20,
         },
     },
     {
@@ -274,7 +279,7 @@ export const events = [
         title: "Uzaydaki ilk Türk Astronot!",
         description: "Türkiye’nin ilk astronotu Alper Gezeravcı oldu! Halk gururla bu anı kutlarken, uzay çalışmaları hız kazanıyor.",
         effects: {
-            internationalRelations: +20,
+            internationalRelations: +10,
             publicSupport: +10,
         },
     },
@@ -296,6 +301,8 @@ export const events = [
         effects: {
             infrastructureAndEnvironment: -20,
             publicSupport: -20,
+            budget: -20,
+            agriculturalProduction: -20,
         },
     },
     {
@@ -304,8 +311,8 @@ export const events = [
         title: "Askeri Müdahale Suriye’ye Genişliyor!",
         description: "Türkiye, Suriye’deki iç savaşa müdahale ediyor. Devlet kararıyla başlayan operasyonlar, uluslararası arenada tartışma yaratıyor.",
         effects: {
-            internationalRelations: -10,
-            budget: -30,
+            internationalRelations: -20,
+            budget: -20,
             internalSecurity: +20,
         },
     },
@@ -316,6 +323,7 @@ export const events = [
         description: "Meclisteki oturumda iktidar ve muhalefet milletvekilleri arasında kavga çıktı. Meclis Başkanı olaya müdahale etmeye çalışırken, halk bu duruma tepki gösteriyor.",
         effects: {
             publicSupport: -10,
+            internalSecurity: -10,
         },
     },
     {
@@ -325,16 +333,17 @@ export const events = [
         description: "Bir milletvekili, meclisteki oturumda kürsüyü yıktı! Olayın ardından hükümet ve muhalefet arasındaki gerilim tırmanıyor.",
         effects: {
             publicSupport: -10,
+            internalSecurity: -10,
         },
     },
     {
         id: 533,
         photo: peopleLeavingCountry,
-        title: "Daha İyi Bir Hayat Arayışı!",
+        title: "Beyin Göçü Artıyor!",
         description: "Ülke ekonomisindeki kötü gidişat nedeniyle birçok vatandaş yurt dışına göç etmeye karar verdi. Göçmenler, daha iyi bir hayat arayışında.",
         effects: {
-            publicSupport: -10,
-            infrastructureAndEnvironment: -10,
+            publicSupport: -15,
+            infrastructureAndEnvironment: -15,
         },
     },
     {
@@ -362,7 +371,7 @@ export const events = [
         title: "Çakarlı Araçlara Denetim!",
         description: "Devlet, usulsüz kullanılan çakarlı araçları trafikten men etti. Birçok araca ceza yazıldı. Emniyet güçleri denetimlerini artırıyor.",
         effects: {
-            internalSecurity: +15,
+            internalSecurity: +10,
             publicSupport: +10,
         },
     },
@@ -372,7 +381,7 @@ export const events = [
         title: "Yeni Fabrika!",
         description: "Yeni bir fabrikanın açılışı yapıldı. Fabrika, binlerce kişiye iş imkanı sağlayacak. Ekonomiye canlılık getirecek olan fabrika, halk tarafından olumlu karşılandı.",
         effects: {
-            infrastructureAndEnvironment: +30,
+            infrastructureAndEnvironment: +20,
             publicSupport: +20,
         },
     },
@@ -382,7 +391,7 @@ export const events = [
         title: "Denizaltı İnternet Altyapısı Genişliyor!",
         description: "Denizaltı internet kabloları sayesinde ülkenin internet altyapısı genişliyor. Hızlı ve güvenilir internet erişimi sağlanacak. Teknolojiye yapılan bu yatırım halkı memnun ediyor.",
         effects: {
-            infrastructureAndEnvironment: +30,
+            infrastructureAndEnvironment: +20,
             publicSupport: +20,
         },
     },
@@ -392,8 +401,8 @@ export const events = [
         title: "Geri Dönüşümde Büyük Atılım!",
         description: "Yurtdışından ithal edilen atıkların geri dönüşümü için yeni bir fabrika açıldı. Geri dönüşümde yapılan bu atılım, çevre kirliliğinin azalmasına katkı sağlayacak.",
         effects: {
-            infrastructureAndEnvironment: +30,
-            publicSupport: +20,
+            infrastructureAndEnvironment: +15,
+            publicSupport: +10,
         },
     },
     {
@@ -402,7 +411,8 @@ export const events = [
         title: "İlk Uzay Merkezi Açıldı!",
         description: "Ülkenin ilk uzay merkezi açıldı. Uzay çalışmaları ve keşifleri için büyük bir adım olan bu merkeze, halkın ilgisi büyük!",
         effects: {
-            infrastructureAndEnvironment: +40,
+            infrastructureAndEnvironment: +20,
+            publicSupport: +10,
         },
     },
     {
@@ -412,6 +422,7 @@ export const events = [
         description: "Devlet, hayvancılığı desteklemek amacıyla çiftçilere yeni araçlar ve ekipmanlar sağladı. Hayvancılık sektörüne yapılan bu yatırım, tarım ve hayvancılığın önünü açacak.",
         effects: {
             agriculturalProduction: +20,
+            publicSupport: +10,
         },
     },
     {
@@ -429,16 +440,48 @@ export const events = [
         title: "Dev Gıda Şirketi Yurtdışına Açılıyor!",
         description: "Türkiye'nin önde gelen gıda şirketlerinden biri, yurtdışına açılmaya karar verdi. Şirketin bu atılımı, ülke ekonomisine katkı sağlayacak.",
         effects: {
-            agriculturalProduction: +30,
+            agriculturalProduction: +20,
+            publicSupport: +10,
         },
     },
     {
-        id: 543,
+        id: 544,
         photo: scholarship,
-        title: "Öğrenci Değişim Programı Genişletildi",
+        title: "Öğrenci Değişim Programı Genişletildi!",
         description: "Üniversite öğrencileri arasında kültürel değişimi teşvik etmek amacıyla öğrenci değişim programı genişletildi. Amerika ve Avrupadaki üniversitelerle yapılan ortaklıklar ile öğrenciler, yurt dışında eğitim alarak farklı kültürleri tanıma fırsatı bulacak.",
         effects: {
-            internationalRelations: +25,
+            internationalRelations: +20,
+            publicSupport: +10,
+        },
+    },
+    {
+        id: 545,
+        photo: bribeMoney,
+        title: "Rüşvet İddiaları Doğru Çıktı!",
+        description: "Ülkemizde ve yurtdışında faaliyet gösteren iki büyük şirketin üst düzey yöneticileri, rüşvet alırken yakalandı. Bu skandal, ülke gündemine bomba gibi düştü.",
+        effects: {
+            internationalRelations: -20,
+            publicSupport: -20,
+        },
+    },
+    {
+        id: 546,
+        photo: censor,
+        title: "Gazeteciliğe Sansür Engeli!",
+        description: "Adrena TV mensubu bir gazetecinin bakana sorduğu soru üzerine gözaltına alınması basın dünyasında büyük bir infial yarattı. Halk ve medya kuruluşları bu karara büyük tepki gösterirken uluslararası medyadan da bu da karara eleştiriler yağıyor.",
+        effects: {
+            internationalRelations: -20,
+            publicSupport: -20,
+        },
+    },
+    {
+        id: 547,
+        photo: wasteFruit,
+        title: "Çiftçinin Ürettiği Elinde Kaldı!",
+        description: "Toptancıların teklif ettiği düşük fiyatlar yüzünden çiftçiler isyan etti. Ürettiklerinin karşılığını alamayan çiftçiler, ürünlerinin bir kısmını halka dağıtırken çoğunu da çöpe dökmek zorunda kaldı.",
+        effects: {
+            agriculturalProduction: -20,
+            budget: -20,
         },
     },
 ];

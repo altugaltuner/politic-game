@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ToggleLeft, ToggleRight, Volume2, Volume1, Music, VolumeOff } from "lucide-react";
 import { useTheme } from "../../contexts/ThemeContext";
 import { useVolume } from '../../contexts/VolumeContext';
-import VisitorCounter from './visitorCounter';
+import VisitorCounter from './VisitorCounter';
+
 
 interface SettingsModalProps {
     modalOpen: boolean;
@@ -32,12 +33,14 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
         }
     };
 
-
     return (
         <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 '>
             <div className={`flex flex-col ${isDarkMode ? 'bg-[rgb(17,17,17)] text-white border-white' : 'bg-white border-black text-black'} sm:p-5 p-3 rounded-lg w-[90%] max-w-lg items-center gap-4 border-[5px]  text-center`}>
                 <h1>Ayarlar</h1>
-                <VisitorCounter />
+                <div className='flex gap-3 items-center'>
+                    <p className='font-semibold'>Oyun Kullanım Sayacı :</p>
+                    <VisitorCounter />
+                </div>
                 <div className='flex sm:gap-6 gap-1 w-full justify-center'>
                     <div className={`flex gap-1 cursor-pointer min-w-[100px] flex-col items-center border-[2px] rounded-lg ${isDarkMode ? 'bg-[rgb(17,17,17)] text-white border-white' : 'bg-white text-black border-black'} p-2`} onClick={toggleTheme} >
                         <p>Mod</p>

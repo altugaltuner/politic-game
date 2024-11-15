@@ -165,6 +165,7 @@ export const cevreQuestions = [
                 effect: {
                     infrastructureAndEnvironment: -20,
                     agriculturalProduction: -25,
+                    budget: +20,
                 },
                 listID: "",
             },
@@ -172,7 +173,8 @@ export const cevreQuestions = [
                 text: "Çıkarılan madenlere el koyulsun ve ağaçlandırma başlasın",
                 effect: {
                     infrastructureAndEnvironment: -10,
-                    agriculturalProduction: +10,
+                    agriculturalProduction: +15,
+                    budget: +10,
                 }
             }
         ],
@@ -188,7 +190,7 @@ export const cevreQuestions = [
                 effect: {
                     agriculturalProduction: -30,
                     publicSupport: -10,
-                    budget: +30,
+                    budget: +25,
                 },
                 listID: "",
             },
@@ -197,7 +199,7 @@ export const cevreQuestions = [
                 effect: {
                     publicSupport: +10,
                     agriculturalProduction: +10,
-                    budget: -15,
+                    budget: -10,
                 }
             }
         ],
