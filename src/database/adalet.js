@@ -21,46 +21,19 @@ export const adaletQuestions = [
         photo: altug,
     },
     {
-        id: 2,
-        question: "Kara para aklayan sosyal medya ünlülerinin serbest bırakılacağı gündemde. Düşünceniz nedir?",
-        answers: [
-            {
-                text: "Yargı kararına saygı duyacağız",
-                effect: {
-                    internalSecurity: -20,
-                    publicSupport: -20,
-                },
-                listID: "adalet1",
-            },
-            {
-                text: "Araştırmaya devam edin",
-                effect: {
-                    internalSecurity: +10,
-                    publicSupport: +20,
-                }
-            }
-        ],
-        title: "Adalet Bakanı",
-        photo: adaletBakanı,
-    },
-    {
         id: 3,
         question: "İstanbul Sözleşmesi konusunda tartışmalar devam ediyor. Ne düşünüyorsunuz?",
         answers: [
             {
                 text: "Sözleşmeden çekileceğiz",
                 effect: {
-                    internalSecurity: -20,
-                    publicSupport: -20,
-                    budget: +20,
+                    internationalRelations: -10,
                 },
             },
             {
                 text: "Sözleşmeyi imzalayacağız",
                 effect: {
-                    internalSecurity: +20,
-                    publicSupport: +20,
-                    budget: -20,
+                    internationalRelations: +10,
                 }
             }
         ],
@@ -75,16 +48,16 @@ export const adaletQuestions = [
                 text: "Polis ekipleri güçlendirilecek",
                 effect: {
                     internalSecurity: +10,
-                    publicSupport: +10,
-                    budget: -20,
+                    infrastructureAndEnvironment: -10,
+                    budget: -10,
                 }
             },
             {
-                text: "Sosyal projeler geliştireceğiz",
+                text: "Her bölgeye yeni karakollar açılacak",
                 effect: {
-                    internalSecurity: -10,
-                    publicSupport: 0,
-                    budget: -10,
+                    internalSecurity: +20,
+                    infrastructureAndEnvironment: +20,
+                    budget: -15,
                 }
             }
         ],
@@ -93,22 +66,22 @@ export const adaletQuestions = [
     },
     {
         id: 5,
-        question: "Sayın Cumhurbaşkanım, cezaevleri dolup taşıyor. Gündeminizde yeni yatırımlar yer alıyor mu ?",
+        question: "Sayın Cumhurbaşkanım, cezaevleri dolup taşıyor. Önerileriniz var mıdır?",
         answers: [
             {
-                text: "Kapasiteyi artırmalıyız",
+                text: "Yeni cezaevleri inşa edilecek",
                 effect: {
                     internalSecurity: +10,
                     budget: -10,
-                    infrastructureAndEnvironment: +10,
+                    infrastructureAndEnvironment: +15,
                 }
             },
             {
-                text: "Bütçemizi korumalıyız",
+                text: "Cezaevlerindeki tutukluların sayısı azaltılacak",
                 effect: {
-                    internalSecurity: -20,
+                    internalSecurity: -15,
                     budget: +10,
-                    infrastructureAndEnvironment: -20,
+                    infrastructureAndEnvironment: -10,
                 },
                 listID: "adalet2",
             }

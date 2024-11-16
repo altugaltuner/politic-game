@@ -9,14 +9,14 @@ export const saglikQuestions = [
                 text: "Mevcut kapasiteyi artırın",
                 effect: {
                     budget: +10,
-                    infrastructureAndEnvironment: +10,
+                    infrastructureAndEnvironment: +5,
                 }
             },
             {
                 text: "Yeni hastaneler inşa edin",
                 effect: {
-                    budget: -20,
-                    infrastructureAndEnvironment: +20,
+                    budget: -15,
+                    infrastructureAndEnvironment: +15,
                 }
             },
         ],
@@ -28,19 +28,19 @@ export const saglikQuestions = [
         question: "Ülkemizde psikolojik sağlık sorunları giderek artıyor. Bunun önüne geçmeliyiz yoksa toplum sağlığımız büyük risk altında",
         answers: [
             {
-                text: "Konserler düzenleyin",
+                text: "Konserler düzenleyip halkı neşelendirin",
                 effect: {
-                    publicSupport: +10,
+                    publicSupport: +5,
                     internalSecurity: 0,
                     budget: -15,
                 }
             },
             {
-                text: "Psikolojik destek hizmetleri verin",
+                text: "Psikolojik destek hizmetleri sağlayalım",
                 effect: {
-                    publicSupport: +20,
-                    internalSecurity: +10,
-                    budget: 0,
+                    publicSupport: +15,
+                    internalSecurity: +5,
+                    budget: -10,
                 }
             },
         ],
@@ -52,19 +52,17 @@ export const saglikQuestions = [
         question: "Bazı hastanelerin yenidoğan ünitelerinde aşırı bir doluluk yaşanıyor. İnceleme yapalım mı?",
         answers: [
             {
-                text: "Hastane yetkilileriyle konuşun",
+                text: "Hastane müdürüyle konuşun",
                 effect: {
-                    budget: +10,
-                    internalSecurity: -25,
-                    publicSupport: 0,
+                    internalSecurity: -20,
+                    publicSupport: -15,
                 }
             },
             {
-                text: "Denetim yapın",
+                text: "Gizli bir denetim yapılsın",
                 effect: {
-                    budget: -10,
                     internalSecurity: +20,
-                    publicSupport: +30,
+                    publicSupport: +15,
                 },
                 listID: "saglik1",
             }

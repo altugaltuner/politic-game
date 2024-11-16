@@ -8,14 +8,14 @@ export const tarimQuestions = [
             {
                 text: "Yeni barajlar inşa edilmeli",
                 effect: {
-                    agriculturalProduction: +10,
-                    budget: -15,
+                    agriculturalProduction: +15,
+                    budget: -10,
                 }
             },
             {
                 text: "Başka önceliklerimiz var, erteleyin",
                 effect: {
-                    agriculturalProduction: -25,
+                    agriculturalProduction: -15,
                     budget: +20,
                 }
             }
@@ -25,22 +25,22 @@ export const tarimQuestions = [
     },
     {
         id: 72,
-        question: "Tarımsal üretim ithalata bağımlı hale geliyor.Bunun önüne geçmeliyiz",
+        question: "Tarımsal üretim ithalata bağımlı hale geliyor. Bunun önüne geçmeliyiz",
         answers: [
             {
-                text: "Çiftçiye vergi indirimi yapın",
+                text: "Çiftçiye vergi indirimi yapılacak",
                 effect: {
                     publicSupport: +10,
-                    budget: -15,
+                    budget: -20,
                     agriculturalProduction: +10,
                     internationalRelations: +10,
                 },
             },
             {
-                text: "İthal ürünlerden ek vergi alın",
+                text: "Tarım ürünlerine gümrük vergisi artırılacak",
                 effect: {
-                    publicSupport: +10,
-                    budget: +5,
+                    publicSupport: -10,
+                    budget: +20,
                     agriculturalProduction: -10,
                     internationalRelations: -10,
                 },
@@ -51,20 +51,19 @@ export const tarimQuestions = [
     },
     {
         id: 73,
-        question: "Orman yangınları her yıl artıyor ve ciddi kayıplar yaşanıyor. Nasıl önüne geçebiliriz ?",
+        question: "Orman yangınları her yıl artıyor ve ciddi kayıplar yaşanıyor. Nasıl bir önlem almalıyız?",
         answers: [
             {
-                text: "Yangın helikopterleri alacağız",
+                text: "Yeni yangın helikopterleri alacağız",
                 effect: {
-                    budget: -10,
+                    budget: -20,
                     agriculturalProduction: +20,
                 }
             },
             {
-                text: "Yeşil alanlardaki denetimleri artırın",
+                text: "Yeşil alanlardaki denetimi artıracağız",
                 effect: {
-
-                    budget: +10,
+                    budget: +15,
                     agriculturalProduction: +10,
                 }
             }
@@ -80,16 +79,15 @@ export const tarimQuestions = [
                 text: "Tarıma teşvik projeleri başlatın",
                 effect: {
                     publicSupport: +20,
-                    budget: +20,
-                    agriculturalProduction: +20,
+                    agriculturalProduction: +10,
                 }
             },
             {
                 text: "Açığı göçmen işçilerle doldurun",
                 effect: {
                     publicSupport: -20,
-                    budget: -20,
                     agriculturalProduction: +10,
+                    internationalRelations: +15,
                 },
             }
         ],
@@ -103,17 +101,17 @@ export const tarimQuestions = [
             {
                 text: "Kademeli geçişe başlayın",
                 effect: {
-                    budget: -20,
-                    agriculturalProduction: +10,
-                    infrastructureAndEnvironment: +20,
+                    budget: -15,
+                    agriculturalProduction: +15,
+                    infrastructureAndEnvironment: +10,
                 }
             },
             {
                 text: "Mevcut sistemle devam edin",
                 effect: {
-                    budget: +20,
+                    budget: +10,
                     agriculturalProduction: -10,
-                    infrastructureAndEnvironment: -20,
+                    infrastructureAndEnvironment: -10,
                 }
             }
         ],

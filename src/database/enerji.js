@@ -8,9 +8,8 @@ export const enerjiQuestions = [
             {
                 text: "Yerli enerji aramalarına başlayın",
                 effect: {
-                    budget: -20,
+                    budget: -15,
                     infrastructureAndEnvironment: +20,
-                    internationalRelations: -15,
                 },
                 listID: "enerji1",
             },
@@ -19,56 +18,6 @@ export const enerjiQuestions = [
                 effect: {
                     budget: +15,
                     infrastructureAndEnvironment: -20,
-                    internationalRelations: +15
-                }
-            }
-        ],
-        title: "Enerji ve Tabii Kaynaklar Bakanı",
-        photo: enerjiBakani,
-    },
-    {
-        id: 132,
-        question: "Enerji tüketimi hızla artıyor. tasarrufu için halkı bilinçlendirme kampanyaları başlatabilir ya da yeni enerji santralleri inşa edebiliriz?",
-        answers: [
-            {
-                text: "Kampanyayı başlatın.",
-                effect: {
-                    budget: +20,
-                    infrastructureAndEnvironment: -15,
-                    internationalRelations: +10,
-                }
-            },
-            {
-                text: "Yeni enerji santralleri kurun.",
-                effect: {
-                    budget: -20,
-                    infrastructureAndEnvironment: +15,
-                    internationalRelations: -10,
-                }
-            }
-        ],
-        title: "Enerji ve Tabii Kaynaklar Bakanı",
-        photo: enerjiBakani,
-    },
-    {
-        id: 133,
-        question: "Komşu ülkelerle doğal gaz anlaşmaları yapabiliriz, bu enerji açığımızı kapatabilir. Ancak bu, yerli enerji sektörünü olumsuz etkileyebilir.",
-        answers: [
-            {
-                text: "Bu anlaşma yüzyılın fırsatı.",
-                effect: {
-                    budget: +25,
-                    internationalRelations: +20,
-                    infrastructureAndEnvironment: -10,
-                },
-                listID: "enerji2",
-            },
-            {
-                text: "Yerli üreticileri koruyun.",
-                effect: {
-                    budget: +15,
-                    internationalRelations: -20,
-                    infrastructureAndEnvironment: +10,
                 }
             }
         ],
@@ -80,44 +29,20 @@ export const enerjiQuestions = [
         question: "Nükleer enerji santrali kurma fırsatımız var. Bu, uzun vadede enerji ihtiyacımızı karşılayabilir, ancak çevresel ve uluslararası alanda büyük tepki çekebilir.",
         answers: [
             {
-                text: "Santrali kurmaya başlayın",
+                text: "Santrali kuracağız",
                 effect: {
-                    publicSupport: -20,
-                    budget: -20,
+                    budget: -15,
                     infrastructureAndEnvironment: +20,
                     internationalRelations: -10
                 },
                 listID: "enerji3",
             },
             {
-                text: "Yeşil enerjiye yatırım yapın",
+                text: "Çevreci kaynaklara yatırım yapacağız",
                 effect: {
-                    publicSupport: +10,
-                    budget: -10,
+                    budget: -5,
                     infrastructureAndEnvironment: +10,
                     internationalRelations: +10,
-                }
-            }
-        ],
-        title: "Enerji ve Tabii Kaynaklar Bakanı",
-        photo: enerjiBakani,
-    },
-    {
-        id: 135,
-        question: "Amerikan ticaret gemisi Doğu Akdenize 450 ton katı atık boşalttı. Bu, deniz ekosistemini tehdit etmekte ancak yanlış bir karar ABD ile ilişkileri baltalayabilir.",
-        answers: [
-            {
-                text: "ABD ile diplomasiyi korumalıyız",
-                effect: {
-                    agriculturalProduction: -30,
-                    internationalRelations: +10
-                },
-            },
-            {
-                text: "Derhal atık temizliğine başlayın",
-                effect: {
-                    agriculturalProduction: +10,
-                    internationalRelations: 0,
                 }
             }
         ],

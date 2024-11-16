@@ -7,43 +7,43 @@
 // import trump from "../../public/non-ministers/trump.webp";
 // import tuik from "../../public/non-ministers/TUIK.webp";
 import nebati from "../../public/non-ministers/nureddin-nebati.webp";
-import rtukBaskan from "../../public/non-ministers/rtuk-baskani.webp";
+//import rtukBaskan from "../../public/non-ministers/rtuk-baskani.webp";
 export const nonMinisters = [
-    {
-        id: 551,
-        question: "Dün akşam yayınlanan dizideki bazı sahneler aile yapısını bozduğu için diziyi yayından kaldırmak istiyoruz. ",
-        answers: [
-            {
-                text: "Yerinde bir karar",
-                effect: {
-                    publicSupport: -20,
-                }
-            },
-            {
-                text: "Önce psiko-sosyal etkilerini araştırmalıyız",
-                effect: {
-                    publicSupport: +10,
-                },
-            }
-        ],
-        title: "RTÜK Başkanı",
-        photo: rtukBaskan,
-    },
+    // {
+    //     id: 551,
+    //     question: "Dün akşam yayınlanan dizideki bazı sahneler aile yapısını bozduğu için diziyi yayından kaldırmak istiyoruz. ",
+    //     answers: [
+    //         {
+    //             text: "Yerinde bir karar",
+    //             effect: {
+    //                 publicSupport: -20,
+    //             }
+    //         },
+    //         {
+    //             text: "Önce psiko-sosyal etkilerini araştırmalıyız",
+    //             effect: {
+    //                 publicSupport: +10,
+    //             },
+    //         }
+    //     ],
+    //     title: "RTÜK Başkanı",
+    //     photo: rtukBaskan,
+    // },
     {
         id: 552,
-        question: "Sayın Cumhurbaşkanım, ekonomi yönetimi konusunda kendime çok güveniyorum. Bakanla birlikte çalışmamızı ister misiniz?",
+        question: "Sayın Cumhurbaşkanım, ekonomi yönetimi konusunda kendime çok güveniyorum. Bakana danışmanlık yapmamı ister miydiniz?",
         answers: [
             {
                 text: "Tabi ki isterim. Yardımın dokunabilir.",
                 effect: {
                     publicSupport: -20,
-                    budget: -25,
+                    budget: -20,
                 }
             },
             {
                 text: "Hayır, teşekkürler.",
                 effect: {
-                    publicSupport: +10,
+                    publicSupport: +15,
                     budget: 0,
                 },
             }

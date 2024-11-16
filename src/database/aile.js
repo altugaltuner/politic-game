@@ -10,17 +10,13 @@ export const aileQuestions = [
                 effect: {
                     publicSupport: +20,
                     budget: -10,
-                    internalSecurity: +10,
-                    infrastructureAndEnvironment: -20
                 },
             },
             {
-                text: "Şu an bütçemiz yok",
+                text: "Şimdilik ertelemek zorundayız",
                 effect: {
-                    publicSupport: -20,
-                    budget: +20,
-                    infrastructureAndEnvironment: +10,
-                    internalSecurity: -10,
+                    publicSupport: -10,
+                    budget: +10,
                 },
             }
         ],
@@ -35,15 +31,13 @@ export const aileQuestions = [
                 text: "Kaçak işçiliği bitireceğiz!",
                 effect: {
                     publicSupport: +20,
-                    budget: -10,
                     agriculturalProduction: -10,
                 },
             },
             {
-                text: "Tarıma katkıları var",
+                text: "Mültecileri ülkemizde istihdam edeceğiz",
                 effect: {
-                    publicSupport: -30,
-                    budget: +10,
+                    publicSupport: -20,
                     agriculturalProduction: +10,
                 },
                 listID: "aile1",

@@ -10,17 +10,15 @@ export const egitimQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    internalSecurity: +10,
-                    infrastructureAndEnvironment: +10,
+                    infrastructureAndEnvironment: +15,
                 }
             },
             {
                 text: "Köydeki nüfusu şehre taşıyın",
                 effect: {
-                    publicSupport: -25,
-                    budget: +10,
-                    internalSecurity: -10,
-                    infrastructureAndEnvironment: -10,
+                    publicSupport: -10,
+                    budget: +15,
+                    internalSecurity: -15,
                 }
             }
         ],
@@ -34,18 +32,16 @@ export const egitimQuestions = [
             {
                 text: "Mesleki eğitime yönlendirin",
                 effect: {
-                    budget: +10,
                     agriculturalProduction: +15,
-                    internationalRelations: -15,
+                    infrastructureAndEnvironment: -15,
                 },
                 listID: "egitim1",
             },
             {
                 text: "Akademik eğitimi destekleyin",
                 effect: {
-                    budget: -10,
                     agriculturalProduction: -15,
-                    internationalRelations: +15,
+                    infrastructureAndEnvironment: +15,
                 }
             }
         ],

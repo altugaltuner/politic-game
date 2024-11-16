@@ -5,7 +5,6 @@ import renewableEnergy from "../../public/list-photos/renewable-energy.webp";
 import supermarketPenalty from "../../public/list-photos/supermarket-penalty.webp";
 import tourismAttack from "../../public/list-photos/tourism-attack.webp";
 import turkishLiraLose from "../../public/list-photos/turkish-lira-lose.webp";
-import karaPara from "../../public/list-photos/kara-para.webp";
 import prisonFull from "../../public/list-photos/prison-full.webp";
 import happFarmer from "../../public/list-photos/happy-farmer.webp";
 import illegalWorkers from "../../public/list-photos/illegal-workers.webp";
@@ -23,15 +22,9 @@ import babiesIncubator from "../../public/list-photos/babies-in-incubator.webp";
 import toggIntroduced from "../../public/list-photos/togg-introduced.webp";
 import fastTrain from "../../public/list-photos/super-fast-train.webp";
 import techStartup from "../../public/list-photos/tech-startup.webp";
+import bombMall from "../../public/list-photos/bomb-mall.webp";
 
 export const elements = [
-    {
-        id: 600,
-        title: "Sosyal Medya Ünlüleri Serbest Bırakıldı",
-        photo: karaPara,
-        description: "Kara para aklama suçundan tutuklanan sosyal medya ünlüleri serbest bırakıldı. Halk bu karardan memnun değil.",
-        listID: "adalet1",
-    },
     {
         id: 601,
         title: "Hapishanelerde Yer Yok",
@@ -50,7 +43,7 @@ export const elements = [
         id: 603,
         title: "Çiftçi Rahat Bir Nefes Aldı",
         photo: happFarmer,
-        description: "Tarımın desteklenmesi köylünün yüzünü güldürdü.Verilen teşvikler ve vergi indirimleri sayesinde gıda krizinin önüne kısa vadede geçilebilir.",
+        description: "Tarımın desteklenmesi köylünün yüzünü güldürdü. Verilen teşvikler ve vergi indirimleri sayesinde gıda krizinin önüne kısa vadede geçilebilir.",
         listID: "calisma1",
     },
     {
@@ -203,7 +196,7 @@ export const elements = [
     {
         id: 625,
         title: "AVM'de Bombalı Saldırı",
-        photo: fastTrain,
+        photo: bombMall,
         description: "PlazarInn AVM'de gerçekleşen bombalı saldırıda çok sayıda ölü ve yaralı var. Güvenlik güçleri ve sağlık ekipleri olay yerine intikal etti. Olayda şüpheli iki kişi gözaltına alındı.",
         listID: "savunma1",
     },

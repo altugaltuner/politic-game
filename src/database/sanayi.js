@@ -10,15 +10,15 @@ export const sanayiQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    infrastructureAndEnvironment: +20,
+                    infrastructureAndEnvironment: +15,
                 }
             },
             {
                 text: "Dev teknoloji şirketlerinin inisiyatifine bırakın",
                 effect: {
-                    publicSupport: -20,
+                    publicSupport: -15,
                     budget: +10,
-                    infrastructureAndEnvironment: -20,
+                    infrastructureAndEnvironment: +5,
                 }
             }
         ],
@@ -35,7 +35,7 @@ export const sanayiQuestions = [
                 effect: {
                     publicSupport: -10,
                     budget: +20,
-                    infrastructureAndEnvironment: +10,
+                    infrastructureAndEnvironment: +5,
                 },
                 listID: "sanayi1",
             },
@@ -44,7 +44,7 @@ export const sanayiQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    infrastructureAndEnvironment: +10,
+                    infrastructureAndEnvironment: +15,
                 }
             }
         ],
@@ -58,20 +58,18 @@ export const sanayiQuestions = [
             {
                 text: "Teknoloji startupları",
                 effect: {
-                    publicSupport: +20,
-                    budget: -20,
+                    publicSupport: +15,
+                    budget: -10,
                     infrastructureAndEnvironment: +10,
-                    internationalRelations: -10,
                 },
                 listID: "sanayi2",
             },
             {
                 text: "Büyük sanayi şirketleri",
                 effect: {
-                    publicSupport: -20,
-                    budget: -10,
+                    publicSupport: +5,
+                    budget: -20,
                     infrastructureAndEnvironment: +20,
-                    internationalRelations: +10,
                 }
             }
         ],

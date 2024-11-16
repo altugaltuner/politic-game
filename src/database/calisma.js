@@ -8,17 +8,14 @@ export const calismaQuestions = [
             {
                 text: "iş bulma programları başlatın",
                 effect: {
-                    publicSupport: +20,
-                    budget: +20,
-                    internalSecurity: 0,
+                    publicSupport: +15,
+                    infrastructureAndEnvironment: +10,
                 }
             },
             {
                 text: "İşverenlere vergi indirimi yapın",
                 effect: {
-                    publicSupport: -20,
-                    budget: -20,
-                    internalSecurity: -10,
+                    publicSupport: -15,
                 }
             }
         ],
@@ -32,7 +29,7 @@ export const calismaQuestions = [
             {
                 text: "50% lik zam yapın",
                 effect: {
-                    publicSupport: +20,
+                    publicSupport: +10,
                     budget: -10,
                     internalSecurity: +10,
                     agriculturalProduction: -10,
@@ -41,7 +38,7 @@ export const calismaQuestions = [
             {
                 text: "20% lik zam yapın",
                 effect: {
-                    publicSupport: -20,
+                    publicSupport: -10,
                     budget: +10,
                     internalSecurity: -10,
                     agriculturalProduction: +10,
@@ -58,18 +55,16 @@ export const calismaQuestions = [
             {
                 text: "Tarımı destekleyin",
                 effect: {
-                    budget: -10,
-                    agriculturalProduction: +20,
+                    agriculturalProduction: +15,
                     infrastructureAndEnvironment: -10,
                 },
                 listID: "calisma1",
             },
             {
-                text: "Sanayi üretimine odaklanın",
+                text: "Sanayii üretime odaklanın",
                 effect: {
-                    budget: -10,
                     agriculturalProduction: -10,
-                    infrastructureAndEnvironment: +20
+                    infrastructureAndEnvironment: +15,
                 },
             }
         ],

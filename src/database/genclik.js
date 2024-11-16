@@ -10,39 +10,17 @@ export const genclikQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -15,
-                    infrastructureAndEnvironment: +20,
+                    infrastructureAndEnvironment: +15,
                 },
                 listID: "genclik1",
             },
             {
                 text: "Önce yolları onarın",
                 effect: {
-                    publicSupport: -10,
-                    budget: +10,
+                    publicSupport: +15,
+                    budget: -10,
                     infrastructureAndEnvironment: +10,
                 }
-            }
-        ],
-        title: "Gençlik ve Spor Bakanı",
-        photo: genclikBakani,
-    },
-    {
-        id: 123,
-        question: "Gençlerin sporcu olma hayalleri düşük. Yeterince teşvik olmadığından şikayet ediyorlar",
-        answers: [
-            {
-                text: "Okullarda spor faaliyetlerini artırın",
-                effect: {
-                    publicSupport: +20,
-                    budget: -15,
-                }
-            },
-            {
-                text: "Profesyonel sporculara ek imkanlar sağlayın",
-                effect: {
-                    publicSupport: -25,
-                    budget: +25,
-                },
             }
         ],
         title: "Gençlik ve Spor Bakanı",

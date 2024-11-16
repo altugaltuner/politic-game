@@ -11,16 +11,15 @@ export const icisleriQuestions = [
                     publicSupport: -10,
                     budget: -10,
                     internationalRelations: +10,
-                    internalSecurity: -10
                 }
             },
             {
                 text: "Entegrasyon projesini başlatın",
                 effect: {
-                    publicSupport: -30,
-                    budget: -20,
-                    internationalRelations: +30,
-                    internalSecurity: -30
+                    publicSupport: -20,
+                    budget: -15,
+                    internationalRelations: +15,
+                    internalSecurity: -15
                 },
                 listID: "icisleri1",
             }
@@ -30,22 +29,22 @@ export const icisleriQuestions = [
     },
     {
         id: 101,
-        question: "Türkiye deprem riski taşıyan bir ülke. Şehirlerin altyapılarını güçlendirmek ve yeni kentsel dönüşüm projeleri başlatmak acil durumda, ne yapmalıyız?",
+        question: "Türkiye deprem riski taşıyan bir ülke. Şehirlerin altyapılarını güçlendirmek ve yeni kentsel dönüşüm projeleri başlatabiliriz. Ancak bu uzun süreli bir süreç olacak ve bütçemizi bir hayli zorlayacak.",
         answers: [
             {
                 text: "Kentsel dönüşümü başlatın",
                 effect: {
                     budget: -20,
-                    internalSecurity: +20,
-                    infrastructureAndEnvironment: +20
+                    internalSecurity: +15,
+                    infrastructureAndEnvironment: +15
                 }
             },
             {
-                text: "Kaynak yetersiz, erteleyin",
+                text: "Şimdilik ertelemek zorundayız",
                 effect: {
-                    budget: +20,
-                    internalSecurity: -30,
-                    infrastructureAndEnvironment: -20
+                    budget: +25,
+                    internalSecurity: -15,
+                    infrastructureAndEnvironment: -15
                 },
                 listID: "icisleri2",
             }
@@ -60,19 +59,16 @@ export const icisleriQuestions = [
             {
                 text: "Sınır güvenliğini artırın",
                 effect: {
-                    publicSupport: +20,
-                    budget: -10,
-                    internationalRelations: -20,
-                    internalSecurity: +20
+                    publicSupport: +10,
+                    budget: -15,
+                    internalSecurity: +10
                 }
             },
             {
                 text: "Komşu ülkeyle toplantı ayarlayın",
                 effect: {
-                    publicSupport: -20,
                     budget: +10,
-                    internationalRelations: +20,
-                    internalSecurity: -10
+                    internationalRelations: +10,
                 }
             }
         ],
@@ -84,7 +80,7 @@ export const icisleriQuestions = [
         question: "Büyük şehirlerde trafik sorunları giderek artıyor. Halk bu durumdan çok rahatsız",
         answers: [
             {
-                text: "Yeni yollar yapın",
+                text: "Yeni yollar inşa edilsin",
                 effect: {
                     budget: -10,
                     infrastructureAndEnvironment: +10,
@@ -95,8 +91,7 @@ export const icisleriQuestions = [
                 text: "Toplu taşımaya teşvik edin",
                 effect: {
                     budget: +10,
-                    infrastructureAndEnvironment: 0,
-                    publicSupport: -20,
+                    publicSupport: -15,
                 }
             }
         ],
@@ -110,17 +105,17 @@ export const icisleriQuestions = [
             {
                 text: "Uluslararası işbirliğine başvuracağız",
                 effect: {
-                    internalSecurity: -20,
-                    internationalRelations: +20,
-                    budget: +10,
+                    internalSecurity: -10,
+                    internationalRelations: +15,
+                    budget: +15,
                 }
             },
             {
                 text: "Askeri operasyona başlayın",
                 effect: {
-                    internalSecurity: +20,
-                    internationalRelations: -20,
-                    budget: -20,
+                    internalSecurity: +10,
+                    internationalRelations: -15,
+                    budget: -15,
                 },
                 listID: "icisleri3",
             },

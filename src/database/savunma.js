@@ -6,11 +6,10 @@ export const savunmaQuestions = [
         question: "Yerli savunma sanayi projelerini hızlandırmak istiyoruz. Bu, uzun vadede askeri gücümüzü artırır, ancak kısa vadede bütçeyi zorlayabilir.",
         answers: [
             {
-                text: "Yatırımları yapacağız",
+                text: "Yatırımlar yapılacak",
                 effect: {
                     budget: -20,
                     internalSecurity: +20,
-                    internationalRelations: -10,
                 }
             },
             {
@@ -18,7 +17,6 @@ export const savunmaQuestions = [
                 effect: {
                     budget: +20,
                     internalSecurity: -20,
-                    internationalRelations: +10,
                 }
             }
         ],
@@ -27,14 +25,14 @@ export const savunmaQuestions = [
     },
     {
         id: 61,
-        question: "Bugün öğlen saat 13.30'da PlazarInn AVM'de bombalı bir eylem gerçekleştirileceği ihbarı var. Emniyet Genel Müdürlüğü'nden gelen bilgilere göre, ihbarın ciddi olduğu düşünülüyor.",
+        question: "İsimsiz bir ihbara göre bugün öğlen saat 13.30'da PlazarInn AVM'de bombalı bir eylem gerçekleştirilecekmiş. Aksiyon almalı mıyız ?",
         answers: [
             {
                 text: "Diğerleri gibi bu da bir aldatmaca olabilir",
                 effect: {
-                    budget: -20,
-                    internalSecurity: -35,
-                    internationalRelations: -10,
+                    budget: 0,
+                    internalSecurity: -20,
+                    internationalRelations: -20,
                 },
                 listID: "savunma1",
             },
@@ -42,8 +40,8 @@ export const savunmaQuestions = [
                 text: "Güvenlik güçlerini bölgeye yönlendirin",
                 effect: {
                     budget: -10,
-                    internalSecurity: +10,
-                    internationalRelations: +10,
+                    internalSecurity: +20,
+                    internationalRelations: +15,
                 }
             }
         ],
