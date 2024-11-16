@@ -18,7 +18,7 @@ const SettingsArea: React.FC<SettingsAreaProps> = ({ handleOpenModal, modalOpen 
             <div className='flex gap-2'>
                 <CircleUserRound size={75} />
                 <div className='flex flex-col text-start'>
-                    <p className='text-base'>{username}</p>
+                    <p className='text-base'>{username || "Misafir"}</p>
                     <p className='text-xs'>Cumhurbaşkanı</p>
                 </div>
             </div>

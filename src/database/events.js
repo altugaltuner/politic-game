@@ -25,7 +25,6 @@ import peopleLeavingCountry from "../../public/events/people-leaving-country.web
 import droughtLake from "../../public/events/drought-lake.webp";
 import forestFire from "../../public/events/forest-fire-disaster.webp";
 import gasDiscovery from "../../public/events/gas-discovery.webp";
-import kanalIstanbul from "../../public/events/kanal-istanbul.webp";
 import tourismSeason from "../../public/events/tourism-season.webp";
 import civilSubordinate from "../../public/events/civil-subordinate.webp";
 import mineCollapsed from "../../public/events/mine-collapsed.webp";
@@ -41,7 +40,6 @@ import scholarship from "../../public/events/scholarship.webp";
 import bribeMoney from "../../public/events/bribe-money.webp";
 import censor from "../../public/events/journalist-censor.webp";
 import wasteFruit from "../../public/events/waste-fruit.webp";
-import { a } from "@react-spring/web";
 
 export const events = [
     {
