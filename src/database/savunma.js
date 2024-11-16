@@ -1,8 +1,8 @@
 import savunmaBakani from "../../public/ministers/savunma-bakani.webp";
-
+// 2 soru var
 export const savunmaQuestions = [
     {
-        id: 60,
+        id: 120,
         question: "Yerli savunma sanayi projelerini hızlandırmak istiyoruz. Bu, uzun vadede askeri gücümüzü artırır, ancak kısa vadede bütçeyi zorlayabilir.",
         answers: [
             {
@@ -24,7 +24,7 @@ export const savunmaQuestions = [
         photo: savunmaBakani,
     },
     {
-        id: 61,
+        id: 121,
         question: "İsimsiz bir ihbara göre bugün öğlen saat 13.30'da PlazarInn AVM'de bombalı bir eylem gerçekleştirilecekmiş. Aksiyon almalı mıyız ?",
         answers: [
             {

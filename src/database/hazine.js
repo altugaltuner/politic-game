@@ -1,8 +1,8 @@
 import hazineBakani from "../../public/ministers/hazine-bakani.webp";
-
+// 2 soru var
 export const hazineQuestions = [
     {
-        id: 110,
+        id: 80,
         question: "Enflasyon hızla yükseliyor ve halkın alım gücü düşüyor. Merkezi faiz oranını artırarak enflasyonu düşürebiliriz, ancak bu, ekonomik büyümeyi yavaşlatacaktır.",
         answers: [
             {
@@ -27,7 +27,7 @@ export const hazineQuestions = [
         photo: hazineBakani,
     },
     {
-        id: 111,
+        id: 81,
         question: "Erken emeklilik konusu hala gündemde. Yaş haddinden emekli olamayan milyonlarca insan çözüm bekliyor. Ancak bu, bütçeye ciddi bir yük getirebilir.",
         answers: [
             {

@@ -1,8 +1,8 @@
 import aileBakanı from "../../public/ministers/aile-bakani.webp";
-
+//2 soru var
 export const aileQuestions = [
     {
-        id: 11,
+        id: 10,
         question: "Düşük gelirli ailelere doğrudan sosyal yardımı yapmayı öneriyorum. Ancak bu, kamu bütçesini zorlayabilir ve altyapı yatırımlarını azaltabilir.",
         answers: [
             {
@@ -24,16 +24,9 @@ export const aileQuestions = [
         photo: aileBakanı,
     },
     {
-        id: 13,
+        id: 11,
         question: "Suriyeden gelen mülteciler kaçak ve sigortasız çalıştırılıyor, tarım sektöründe ucuz işgücü olarak kullanılıyor.",
         answers: [
-            {
-                text: "Kaçak işçiliği bitireceğiz!",
-                effect: {
-                    publicSupport: +20,
-                    agriculturalProduction: -10,
-                },
-            },
             {
                 text: "Mültecileri ülkemizde istihdam edeceğiz",
                 effect: {
@@ -41,6 +34,13 @@ export const aileQuestions = [
                     agriculturalProduction: +10,
                 },
                 listID: "aile1",
+            },
+            {
+                text: "Kaçak işçiliği bitireceğiz!",
+                effect: {
+                    publicSupport: +20,
+                    agriculturalProduction: -10,
+                },
             }
         ],
         title: "Aile ve Sosyal Hizmetler Bakanı",

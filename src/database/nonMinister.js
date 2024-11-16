@@ -8,10 +8,12 @@
 // import tuik from "../../public/non-ministers/TUIK.webp";
 import nebati from "../../public/non-ministers/nureddin-nebati.webp";
 //import rtukBaskan from "../../public/non-ministers/rtuk-baskani.webp";
+
+// 1 soru var
 export const nonMinisters = [
     // {
     //     id: 551,
-    //     question: "Dün akşam yayınlanan dizideki bazı sahneler aile yapısını bozduğu için diziyi yayından kaldırmak istiyoruz. ",
+    //     question: "Dün akşam yayınlanan dizideki bazı sahnelerden ötürü diziyi yayından kaldırmak istiyoruz. ",
     //     answers: [
     //         {
     //             text: "Yerinde bir karar",
@@ -20,7 +22,7 @@ export const nonMinisters = [
     //             }
     //         },
     //         {
-    //             text: "Önce psiko-sosyal etkilerini araştırmalıyız",
+    //             text: "Özgürlükler kısıtlanmamalı",
     //             effect: {
     //                 publicSupport: +10,
     //             },

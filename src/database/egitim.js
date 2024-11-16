@@ -1,8 +1,8 @@
 import egitimBakani from "../../public/ministers/egitim-bakani.webp";
-
+//2 soru var
 export const egitimQuestions = [
     {
-        id: 53,
+        id: 50,
         question: "Kırsal kesimdeki okulların fiziki durumu çok kötü. Yeni okulların inşası gündemde...",
         answers: [
             {
@@ -26,7 +26,7 @@ export const egitimQuestions = [
         photo: egitimBakani,
     },
     {
-        id: 54,
+        id: 51,
         question: "Mesleki eğitime olan ilgi azaldı. Gençleri akademik eğitime mi yoksa mesleki eğitime mi yönlendirelim?",
         answers: [
             {

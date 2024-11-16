@@ -1,8 +1,8 @@
 import enerjiBakani from "../../public/ministers/enerji-bakani.webp";
-
+// 2 soru var
 export const enerjiQuestions = [
     {
-        id: 131,
+        id: 60,
         question: "Yerli enerji kaynaklarını keşfetmek için geniş çaplı arama çalışmaları başlatabiliriz. Ancak bu, ciddi bir maliyet getirebilir.",
         answers: [
             {
@@ -25,7 +25,7 @@ export const enerjiQuestions = [
         photo: enerjiBakani,
     },
     {
-        id: 134,
+        id: 61,
         question: "Nükleer enerji santrali kurma fırsatımız var. Bu, uzun vadede enerji ihtiyacımızı karşılayabilir, ancak çevresel ve uluslararası alanda büyük tepki çekebilir.",
         answers: [
             {
@@ -33,7 +33,8 @@ export const enerjiQuestions = [
                 effect: {
                     budget: -15,
                     infrastructureAndEnvironment: +20,
-                    internationalRelations: -10
+                    internationalRelations: -10,
+                    agriculturalProduction: -15,
                 },
                 listID: "enerji3",
             },
@@ -43,6 +44,7 @@ export const enerjiQuestions = [
                     budget: -5,
                     infrastructureAndEnvironment: +10,
                     internationalRelations: +10,
+                    agriculturalProduction: +15,
                 }
             }
         ],

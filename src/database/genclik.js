@@ -1,8 +1,8 @@
 import genclikBakani from "../../public/ministers/genclik-bakani.webp";
-
+// 1 soru var
 export const genclikQuestions = [
     {
-        id: 120,
+        id: 70,
         question: "Gençlerin spor yapma olanakları kısıtlı. Belediyelerden çok fazla talep ve şikayet alıyoruz. Ancak ilçe yollarının bakımı da bekliyor",
         answers: [
             {

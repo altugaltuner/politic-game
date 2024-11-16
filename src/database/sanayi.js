@@ -1,8 +1,8 @@
 import sanayiBakani from "../../public/ministers/sanayi-bakani.webp";
-
+// 3 soru var
 export const sanayiQuestions = [
     {
-        id: 150,
+        id: 110,
         question: "Sanayimizin teknoloji altyapısı zayıf. Teknoloji yatırımlarını arttırmayı öneriyorum",
         answers: [
             {
@@ -25,13 +25,12 @@ export const sanayiQuestions = [
         title: "Sanayi ve Teknoloji Bakanı",
         photo: sanayiBakani,
     },
-
     {
-        id: 151,
+        id: 111,
         question: "Yerli otomobil üretimi projesi büyük ilgi görüyor. Nasıl bir politika izlemeliyiz?",
         answers: [
             {
-                text: "Bir an önce satışa çıkarın",
+                text: "Bir an önce satışa çıkarılsın",
                 effect: {
                     publicSupport: -10,
                     budget: +20,
@@ -40,7 +39,7 @@ export const sanayiQuestions = [
                 listID: "sanayi1",
             },
             {
-                text: "Eksiklerine odaklanın ve geliştirmeye devam edin",
+                text: "Eksiklerine odaklanılsın ve geliştirmeye devam edilsin",
                 effect: {
                     publicSupport: +10,
                     budget: -10,
@@ -52,11 +51,11 @@ export const sanayiQuestions = [
         photo: sanayiBakani,
     },
     {
-        id: 152,
+        id: 112,
         question: "Türkiye'nin dijital dönüşüm süreci hızlanıyor. Bu süreçte hangi alanlara yatırım yapmalıyız?",
         answers: [
             {
-                text: "Teknoloji startupları",
+                text: "Teknoloji startuplarına",
                 effect: {
                     publicSupport: +15,
                     budget: -10,
@@ -65,7 +64,7 @@ export const sanayiQuestions = [
                 listID: "sanayi2",
             },
             {
-                text: "Büyük sanayi şirketleri",
+                text: "Büyük sanayi şirketlerine",
                 effect: {
                     publicSupport: +5,
                     budget: -20,

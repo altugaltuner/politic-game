@@ -1,25 +1,26 @@
 import icisleriBakani from "../../public/ministers/icisleri-bakani.webp";
-
+// 5 soru var
 export const icisleriQuestions = [
     {
-        id: 100,
+        id: 90,
         question: "Ülkedeki Suriyeli mülteci sayısı toplumsal tansiyonu artırıyor. Bazı kesimler, mültecilerin geri gönderilmesini istiyor.",
         answers: [
             {
                 text: "Kademeli olarak göndermeye başlayın",
                 effect: {
-                    publicSupport: -10,
-                    budget: -10,
-                    internationalRelations: +10,
+                    publicSupport: +15,
+                    budget: +10,
+                    internationalRelations: -15,
+                    internalSecurity: +10
                 }
             },
             {
                 text: "Entegrasyon projesini başlatın",
                 effect: {
-                    publicSupport: -20,
+                    publicSupport: -15,
                     budget: -15,
                     internationalRelations: +15,
-                    internalSecurity: -15
+                    internalSecurity: -10
                 },
                 listID: "icisleri1",
             }
@@ -28,23 +29,23 @@ export const icisleriQuestions = [
         photo: icisleriBakani,
     },
     {
-        id: 101,
+        id: 91,
         question: "Türkiye deprem riski taşıyan bir ülke. Şehirlerin altyapılarını güçlendirmek ve yeni kentsel dönüşüm projeleri başlatabiliriz. Ancak bu uzun süreli bir süreç olacak ve bütçemizi bir hayli zorlayacak.",
         answers: [
             {
                 text: "Kentsel dönüşümü başlatın",
                 effect: {
-                    budget: -20,
-                    internalSecurity: +15,
-                    infrastructureAndEnvironment: +15
+                    budget: -15,
+                    infrastructureAndEnvironment: +15,
+                    publicSupport: +10
                 }
             },
             {
                 text: "Şimdilik ertelemek zorundayız",
                 effect: {
-                    budget: +25,
-                    internalSecurity: -15,
-                    infrastructureAndEnvironment: -15
+                    budget: +15,
+                    infrastructureAndEnvironment: -15,
+                    publicSupport: -10
                 },
                 listID: "icisleri2",
             }
@@ -53,22 +54,23 @@ export const icisleriQuestions = [
         photo: icisleriBakani,
     },
     {
-        id: 103,
+        id: 92,
         question: "Sınır bölgelerimizde kaçakçılık ve insan kaçakçılığı faaliyetleri artıyor. Bu sorunu nasıl çözebiliriz?",
         answers: [
             {
-                text: "Sınır güvenliğini artırın",
+                text: "Sınırdan tüm geçişleri kapatın",
                 effect: {
-                    publicSupport: +10,
+
                     budget: -15,
-                    internalSecurity: +10
+                    internalSecurity: +10,
+                    internationalRelations: -15
                 }
             },
             {
-                text: "Komşu ülkeyle toplantı ayarlayın",
+                text: "Yakalananları sınır dışı edin",
                 effect: {
-                    budget: +10,
-                    internationalRelations: +10,
+                    budget: +15,
+                    internalSecurity: +10,
                 }
             }
         ],
@@ -76,7 +78,7 @@ export const icisleriQuestions = [
         photo: icisleriBakani,
     },
     {
-        id: 105,
+        id: 93,
         question: "Büyük şehirlerde trafik sorunları giderek artıyor. Halk bu durumdan çok rahatsız",
         answers: [
             {
@@ -99,7 +101,7 @@ export const icisleriQuestions = [
         photo: icisleriBakani,
     },
     {
-        id: 105,
+        id: 94,
         question: "Cumhurbaşkanım, ülkede terör örgütleri faaliyetlerini artırıyor. Büyük şehirler çok büyük risk altında!",
         answers: [
             {
@@ -111,9 +113,9 @@ export const icisleriQuestions = [
                 }
             },
             {
-                text: "Askeri operasyona başlayın",
+                text: "Askeri operasyona başlamalıyız",
                 effect: {
-                    internalSecurity: +10,
+                    internalSecurity: +15,
                     internationalRelations: -15,
                     budget: -15,
                 },

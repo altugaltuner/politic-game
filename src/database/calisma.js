@@ -1,5 +1,5 @@
 import calismaBakani from "../../public/ministers/calisma-bakani.webp";
-
+//3 soru var
 export const calismaQuestions = [
     {
         id: 20,
@@ -27,15 +27,6 @@ export const calismaQuestions = [
         question: "Cumhurbaşkanım, çalışan maaşları çok düşük. Halk asgari ücret zammı bekliyor ancak bu, işverenler üzerinde mali baskı oluşturabilir.",
         answers: [
             {
-                text: "50% lik zam yapın",
-                effect: {
-                    publicSupport: +10,
-                    budget: -10,
-                    internalSecurity: +10,
-                    agriculturalProduction: -10,
-                }
-            },
-            {
                 text: "20% lik zam yapın",
                 effect: {
                     publicSupport: -10,
@@ -43,13 +34,22 @@ export const calismaQuestions = [
                     internalSecurity: -10,
                     agriculturalProduction: +10,
                 }
+            },
+            {
+                text: "50% lik zam yapın",
+                effect: {
+                    publicSupport: +10,
+                    budget: -10,
+                    internalSecurity: +10,
+                    agriculturalProduction: -10,
+                }
             }
         ],
         title: "Çalışma ve Sosyal Güvenlik Bakanı",
         photo: calismaBakani,
     },
     {
-        id: 23,
+        id: 22,
         question: "Şehirleşme hızlanıyor. Kırsaldaki iş gücü azalıyor ve tarım sektörü zayıflıyor. Halk sizden bir aksiyon bekliyor",
         answers: [
             {

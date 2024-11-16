@@ -1,8 +1,8 @@
 import tarimBakani from "../../public/ministers/tarim-bakani.webp";
-
+// 5 soru var
 export const tarimQuestions = [
     {
-        id: 70,
+        id: 130,
         question: "Son yıllarda kuraklık artıyor ve tarımsal üretim ciddi şekilde düşüyor. Tarıma büyük bir teşvik ve su kaynaklarına yatırım yapmamız gerek.",
         answers: [
             {
@@ -24,7 +24,7 @@ export const tarimQuestions = [
         photo: tarimBakani,
     },
     {
-        id: 72,
+        id: 131,
         question: "Tarımsal üretim ithalata bağımlı hale geliyor. Bunun önüne geçmeliyiz",
         answers: [
             {
@@ -50,7 +50,7 @@ export const tarimQuestions = [
         photo: tarimBakani,
     },
     {
-        id: 73,
+        id: 132,
         question: "Orman yangınları her yıl artıyor ve ciddi kayıplar yaşanıyor. Nasıl bir önlem almalıyız?",
         answers: [
             {
@@ -72,7 +72,7 @@ export const tarimQuestions = [
         photo: tarimBakani,
     },
     {
-        id: 74,
+        id: 133,
         question: "Sayın Cumhurbaşkanım, tarımda genç iş gücü eksikliği yaşanıyor. Kırsal nüfus şehirlere göç ediyor.",
         answers: [
             {
@@ -95,7 +95,7 @@ export const tarimQuestions = [
         photo: tarimBakani,
     },
     {
-        id: 75,
+        id: 134,
         question: "Organik tarım ve sürdürülebilir üretim yöntemlerine geçiş yapmak istiyoruz. Bunun için sizden onay bekliyoruz",
         answers: [
             {

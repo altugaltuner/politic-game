@@ -1,8 +1,8 @@
 import ulastirmaBakani from "../../public/ministers/ulasim-bakani.webp";
-
+// 2 soru var
 export const ulastirmaQuestions = [
     {
-        id: 92,
+        id: 150,
         question: "Hızlı tren projeleri ülke genelinde büyük ilgi görüyor. Ancak karayollarındaki ücretli geçişlerden şikayetler alıyoruz",
         answers: [
             {
@@ -27,23 +27,23 @@ export const ulastirmaQuestions = [
         photo: ulastirmaBakani,
     },
     {
-        id: 94,
+        id: 151,
         question: "Sayın Cumhurbaşkanım, ülkemizde internet altyapısı yetersiz. Gençler internet hızının yavaşlığından şikayetçi.",
         answers: [
             {
-                text: "Fiber altyapıyı geliştirin",
+                text: "Fiber altyapıyı yatırımları yapılsın",
                 effect: {
                     publicSupport: +15,
-                    budget: -15,
+                    budget: +10,
                     infrastructureAndEnvironment: +15,
                 }
             },
             {
-                text: "Telekom firmalarına devredin",
+                text: "Yurt dışından internet altyapısı satın alınsın",
                 effect: {
-                    publicSupport: -15,
-                    budget: +5,
-                    infrastructureAndEnvironment: 0,
+                    internationalRelations: +15,
+                    budget: -15,
+                    infrastructureAndEnvironment: +5,
                 },
                 listID: "ulastirma2",
             }

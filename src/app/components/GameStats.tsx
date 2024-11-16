@@ -28,12 +28,12 @@ interface Effects {
 
 // Component for Game Stats
 export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetSelectedListIDs, handleSelectedOptionModalOpen }) => {
-    const [agriculture, setAgriculture] = useState(75);
-    const [infrastructure, setInfrastructure] = useState(75);
-    const [internalSecurity, setInternalSecurity] = useState(75);
-    const [international, setInternational] = useState(75);
-    const [budget, setBudget] = useState(75);
-    const [publicOpinion, setPublicOpinion] = useState(75);
+    const [agriculture, setAgriculture] = useState(50);
+    const [infrastructure, setInfrastructure] = useState(50);
+    const [internalSecurity, setInternalSecurity] = useState(50);
+    const [international, setInternational] = useState(50);
+    const [budget, setBudget] = useState(50);
+    const [publicOpinion, setPublicOpinion] = useState(50);
     const [isVisible, setIsVisible] = useState(true);
     const { isDarkMode } = useTheme();
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -135,7 +135,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     };
 
     const oneInTenChance = () => {
-        const boolean = Math.random() < 0.25;
+        const boolean = Math.random() < 0.33;
         return boolean;
     };
 
@@ -226,12 +226,12 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     };
 
     const restartGame = () => {
-        setAgriculture(75);
-        setInfrastructure(75);
-        setInternalSecurity(75);
-        setInternational(75);
-        setBudget(75);
-        setPublicOpinion(75);
+        setAgriculture(50);
+        setInfrastructure(50);
+        setInternalSecurity(50);
+        setInternational(50);
+        setBudget(50);
+        setPublicOpinion(50);
         setUsedQuestions([allQuestions[0].id]);
         setCurrentQuestion(allQuestions[0]);
         setGameOver(false);

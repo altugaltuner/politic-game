@@ -1,5 +1,5 @@
 import cevreBakani from "../../public/ministers/cevre-sehir-bakani.webp";
-
+// 7 soru var
 export const cevreQuestions = [
     {
         id: 30,
@@ -8,21 +8,21 @@ export const cevreQuestions = [
             {
                 text: "Şehirleşmeye devam edilmeli",
                 effect: {
-                    publicSupport: -20,
-                    agriculturalProduction: -25,
-                    budget: -20,
-                    infrastructureAndEnvironment: +10,
-                    internalSecurity: -10,
+                    publicSupport: -10,
+                    agriculturalProduction: -10,
+                    budget: -15,
+                    infrastructureAndEnvironment: +15,
+                    internalSecurity: -5,
                 }
             },
             {
                 text: "Yeşil alanlar korunmalı",
                 effect: {
-                    publicSupport: +20,
-                    budget: +10,
+                    publicSupport: +15,
+                    budget: +15,
                     agriculturalProduction: +10,
-                    infrastructureAndEnvironment: -10,
-                    internalSecurity: +10,
+                    infrastructureAndEnvironment: -15,
+                    internalSecurity: +5,
                 },
                 listID: "cevre1",
             }
@@ -82,6 +82,14 @@ export const cevreQuestions = [
         question: "Şehirlerde enerji tüketimi hızla artıyor. Yenilenebilir enerji projelerine yatırım yapabiliriz. Ya da mevcut enerji altyapısını genişletebiliriz.",
         answers: [
             {
+                text: "Mevcut altyapıyı güçlendirin.",
+                effect: {
+                    budget: -10,
+                    infrastructureAndEnvironment: +15,
+                    internationalRelations: -10
+                }
+            },
+            {
                 text: "Çevre dostu projelere yatırım yapın.",
                 effect: {
                     budget: 0,
@@ -89,14 +97,6 @@ export const cevreQuestions = [
                     internationalRelations: +15,
                 },
                 listID: "cevre2",
-            },
-            {
-                text: "Mevcut altyapıyı güçlendirin.",
-                effect: {
-                    budget: -10,
-                    infrastructureAndEnvironment: +15,
-                    internationalRelations: -10
-                }
             }
         ],
         title: "Çevre ve Şehircilik Bakanı",
@@ -110,7 +110,7 @@ export const cevreQuestions = [
                 text: "Turizmi destekleyeceğiz",
                 effect: {
                     budget: +15,
-                    agriculturalProduction: -10,
+                    agriculturalProduction: -15,
                     internationalRelations: +15,
                 },
                 listID: "cevre3",
@@ -119,7 +119,7 @@ export const cevreQuestions = [
                 text: "Kıyıları koruma altına alacağız",
                 effect: {
                     budget: -15,
-                    agriculturalProduction: +10,
+                    agriculturalProduction: +15,
                     internationalRelations: -15,
                 }
             }
@@ -132,6 +132,13 @@ export const cevreQuestions = [
         question: "Sanayi tesisleri doğaya ciddi zararlar veriyor. Özellikle bazı firmaların kuralları hiçe saydıkları tespit edildi.",
         answers: [
             {
+                text: "Kural tanımayan firmalara el konulsun",
+                effect: {
+                    budget: +20,
+                    infrastructureAndEnvironment: -20,
+                }
+            },
+            {
                 text: "İhlalleri yapanlara ağır cezalar verilsin",
                 effect: {
                     budget: +10,
@@ -140,14 +147,6 @@ export const cevreQuestions = [
                 },
                 listID: "cevre3",
             },
-            {
-                text: "Kural tanımayan firmalar kapatılsın",
-                effect: {
-
-                    budget: -15,
-                    infrastructureAndEnvironment: -20,
-                }
-            }
         ],
         title: "Çevre ve Şehircilik Bakanı",
         photo: cevreBakani,
