@@ -16,14 +16,14 @@ export const nonMinisters = [
         question: "Sayın Cumhurbaşkanım, ekonomi yönetimi konusunda kendime çok güveniyorum. Bakana danışmanlık yapmamı ister miydiniz?",
         answers: [
             {
-                text: "Tabi ki isterim. Yardımın dokunabilir.",
+                text: "Tabi ki isterim. Yardımın dokunabilir",
                 effect: {
                     publicSupport: -20,
                     budget: -20,
                 }
             },
             {
-                text: "Hayır, teşekkürler.",
+                text: "Hayır, teşekkürler",
                 effect: {
                     publicSupport: +5,
                     budget: 0,
@@ -47,7 +47,7 @@ export const nonMinisters = [
                 }
             },
             {
-                text: "Anlaştık. Altyapıyı kurabilirsin.",
+                text: "Anlaştık. Altyapıyı kurabilirsin",
                 effect: {
                     budget: +10,
                     internalSecurity: -15,
@@ -64,21 +64,21 @@ export const nonMinisters = [
         question: "Cumhurbaşkanım, zor günlerden geçiyoruz. Emekli maaşımız yetmiyor, yardım istiyoruz.",
         answers: [
             {
-                text: "Hepimiz zor günlerden geçiyoruz.",
+                text: "Hepimiz zor günlerden geçiyoruz",
                 effect: {
                     budget: +10,
                     publicSupport: -10,
                 }
             },
             {
-                text: "Emeklimizi ezdirmeyiz.",
+                text: "Emeklimizi ezdirmeyiz",
                 effect: {
                     budget: -10,
                     publicSupport: +10,
                 },
             }
         ],
-        title: "Emekli",
+        title: "Emekli Vatandaş",
         photo: emekli,
     },
     {
@@ -86,29 +86,29 @@ export const nonMinisters = [
         question: "Ülkelerimiz arasındaki ticaret hacmini artırmak için yapacağımız bu anlaşma için bir araya gelmemiz iyi oldu. Seninle büyük işler başarabiliriz.",
         answers: [
             {
-                text: "Kesinlikle, işbirliğimiz uzun soluklu olacak.",
+                text: "Kesinlikle, işbirliğimiz uzun soluklu olacak",
                 effect: {
                     budget: +10,
                     internationalRelations: +10,
                 }
             },
             {
-                text: "Tabii ki, müttefik olarak birlikte daha güçlüyüz.",
+                text: "Tabii ki, müttefik olarak daha güçlüyüz",
                 effect: {
                     budget: +10,
                     internationalRelations: +10,
                 },
             }
         ],
-        title: "Trump",
+        title: "Donald Trump",
         photo: trump,
     },
     {
-        id: 553,
-        question: "S400 füzelerini satın alma konusunda kararlı mısınız? Çünkü bu durum sizin ABD ile ilişkilerinizi olumsuz etkileyebilir.",
+        id: 554,
+        question: "S400 füzelerini satın alma konusunda kararlı mısınız? Bizden yana bir problem yoktur ancak bu ticaret sizin ABD ile ilişkilerinizi olumsuz etkileyebilir.",
         answers: [
             {
-                text: "Evet, kararımız kesindir.",
+                text: "Evet, kararımız kesindir",
                 effect: {
                     budget: -15,
                     internationalRelations: +15,
@@ -116,7 +116,7 @@ export const nonMinisters = [
                 }
             },
             {
-                text: "Biraz daha düşüneceğiz.",
+                text: "Biraz daha düşüneceğiz",
                 effect: {
                     budget: +10,
                     internationalRelations: 0,
@@ -124,7 +124,7 @@ export const nonMinisters = [
                 },
             }
         ],
-        title: "Putin",
+        title: "Vladimir Putin",
         photo: putin,
     },
 ];

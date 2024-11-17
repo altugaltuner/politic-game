@@ -90,4 +90,29 @@ export const adaletQuestions = [
         title: "Adalet Bakanı",
         photo: adaletBakanı,
     },
+    {
+        id: 4,
+        question: "Sayın Cumhurbaşkanım, ülkemizde gerçekleşen olaylar toplumu sarsıyor. İnsanların adalete olan güvenini arttırmak için ne yapmalıyız?",
+        answers: [
+            {
+                text: "En büyük Adalet Sarayını inşa edeceğiz",
+                effect: {
+                    internalSecurity: -10,
+                    budget: -10,
+                    infrastructureAndEnvironment: +10,
+                },
+                listID: "adalet2",
+            },
+            {
+                text: "Her ilde adli denetimleri arttıracağız",
+                effect: {
+                    internalSecurity: +10,
+                    budget: +5,
+                    infrastructureAndEnvironment: -10,
+                }
+            }
+        ],
+        title: "Adalet Bakanı",
+        photo: adaletBakanı,
+    },
 ];

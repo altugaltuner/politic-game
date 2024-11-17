@@ -55,7 +55,7 @@ const StatUpdater: React.FC<Props> = ({
     const { isDarkMode } = useTheme();
 
     return (
-        <div className={` ${isDarkMode ? 'bg-[rgb(17,17,17)] border-white' : 'bg-white border-black'} flex w-full xl:gap-2 gap-1 md:rounded-t-lg justify-between p-2  border-[3px] md:rounded-xl rounded`}>
+        <div className={` ${isDarkMode ? 'bg-[rgb(17,17,17)] border-white' : 'bg-white border-black'} flex w-full xl:gap-2 gap-1 md:rounded-t-lg justify-between sm:p-2 p-[2px]  border-[3px] md:rounded-xl rounded`}>
 
             <div className={` ${isDarkMode ? ' text-white bg-[rgb(17,17,17)] border-white' : ' text-black bg-[#eaeaea] border-black'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[146px] h-[55px]`}>
 

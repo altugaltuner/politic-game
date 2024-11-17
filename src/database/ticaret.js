@@ -6,7 +6,7 @@ export const ticaretQuestions = [
         question: "Ülkemizde dijital ticaret hızla büyüyor, ancak küçük işletmeler dijital dönüşüme ayak uyduramıyor. Hangisine destek verilip hangisinden feragat edilmeli?",
         answers: [
             {
-                text: "Küçük işletmelere destek verilecek.",
+                text: "Küçük işletmelere destek verilecek",
                 effect: {
                     publicSupport: +10,
                     budget: -10,
@@ -14,7 +14,7 @@ export const ticaretQuestions = [
                 }
             },
             {
-                text: "Büyük şirketlerin önü açılacak.",
+                text: "Büyük şirketlerin önü açılacak",
                 effect: {
                     publicSupport: -15,
                     budget: +10,

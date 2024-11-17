@@ -34,7 +34,7 @@ export const enerjiQuestions = [
                     budget: -15,
                     infrastructureAndEnvironment: +20,
                     internationalRelations: -10,
-                    agriculturalProduction: -15,
+                    agriculturalProduction: -5,
                 },
                 listID: "enerji3",
             },

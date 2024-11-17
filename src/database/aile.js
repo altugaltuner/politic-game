@@ -36,7 +36,7 @@ export const aileQuestions = [
                 listID: "aile1",
             },
             {
-                text: "Kaçak işçiliği bitireceğiz!",
+                text: "Kaçak işçiliği bitireceğiz",
                 effect: {
                     publicSupport: +15,
                     agriculturalProduction: -10,

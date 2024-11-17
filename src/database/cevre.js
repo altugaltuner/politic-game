@@ -82,7 +82,7 @@ export const cevreQuestions = [
         question: "Şehirlerde enerji tüketimi hızla artıyor. Yenilenebilir enerji projelerine yatırım yapabiliriz. Ya da mevcut enerji altyapısını genişletebiliriz.",
         answers: [
             {
-                text: "Mevcut altyapıyı güçlendirin.",
+                text: "Mevcut altyapıyı güçlendirin",
                 effect: {
                     budget: -10,
                     infrastructureAndEnvironment: +10,
@@ -90,7 +90,7 @@ export const cevreQuestions = [
                 }
             },
             {
-                text: "Çevre dostu projelere yatırım yapın.",
+                text: "Çevre dostu projelere yatırım yapın",
                 effect: {
                     budget: 0,
                     infrastructureAndEnvironment: +5,

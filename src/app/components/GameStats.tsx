@@ -306,7 +306,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                     deathLayerStat={null}
                 />
 
-                <div className={` ${isDarkMode ? 'border-white bg-[rgb(17,17,17)]' : 'border-black bg-white'} text-center sm:p-2 p-2 rounded-lg relative border-[3px] flex flex-col justify-start items-center w-full`}>
+                <div className={` ${isDarkMode ? 'border-white bg-[rgb(17,17,17)]' : 'border-black bg-white'} text-center sm:p-2 p-1 rounded-lg relative border-[3px] flex flex-col justify-start items-center w-full`}>
                     <h1 className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-black'} bg-primary text-white py-1 px-2 rounded-md w-[90%] text-sm sm:text-base`}>Başardın! Ülkemizin içinde bulunduğu durumlar ne kadar zor olsa da doğru kararları vererek finale ulaştın.
                         Gazi Mustafa Kemal Atatürkün de dediği gibi :<br />
                         &quot;Umutsuz durumlar yoktur umutsuz insanlar vardır, ben hiçbir zaman umudumu yitirmedim.&quot;
@@ -344,7 +344,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
             {/* Question display */}
             {currentQuestion ? (
-                <div className={` ${isDarkMode ? 'border-white bg-[rgb(17,17,17)]' : 'border-black bg-white'} text-center sm:p-2 p-2 rounded-lg relative border-[3px] flex flex-col justify-start items-center w-full`}>
+                <div className={` ${isDarkMode ? 'border-white bg-[rgb(17,17,17)]' : 'border-black bg-white'} text-center sm:p-2 p-1 rounded-lg relative border-[3px] flex flex-col justify-start items-center w-full`}>
 
                     <div className={`question-container ${isVisible ? 'visible' : ''}  flex justify-start items-center font-aldrich md:text-base text-sm min-h-[95px] flex-col w-[90%]`}>
                         <ReactTyped
@@ -381,7 +381,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
             {/* Answer buttons */}
             {currentQuestion && (
-                <div className={`${isDarkMode ? ' bg-[rgb(17,17,17)]  border-white' : 'bg-white border-black'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 gap-2 p-2.5 items-center lg:min-h-16 min-h-28 `}>
+                <div className={`${isDarkMode ? ' bg-[rgb(17,17,17)]  border-white' : 'bg-white border-black'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 sm:gap-2 gap-1 sm:p-2.5 p-1 items-center lg:min-h-16 min-h-24 `}>
                     <Button
                         className={`${isDarkMode ? ' bg-white  border-black text-black' : 'hover:bg-[#555555] active:bg-black'} xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out  md:text-sm text-xs min-h-[44px]`}
                         onClick={() => answerQuestion("left")}

@@ -13,8 +13,8 @@ const SettingsArea: React.FC<SettingsAreaProps> = ({ handleOpenModal, modalOpen 
     const { username } = useUser();
 
     return (
-        <div className={` ${isDarkMode ? 'border-white bg-[rgb(17,17,17)] text-white' : 'border-black bg-white text-black'} text-start relative border-[3px] xl:order-1 order-2  rounded-lg p-3 min-h-[172px]  w-full`}>
-            <h2 className="text-xl font-semibold mb-4">Profilim</h2>
+        <div className={` ${isDarkMode ? 'border-white bg-[rgb(17,17,17)] text-white' : 'border-black bg-white text-black'} text-start relative border-[3px] xl:order-1 order-2  rounded-lg sm:p-3 p-2 min-h-[150px]  w-full`}>
+            <h2 className="text-xl font-semibold sm:mb-4 mb-2">Profilim</h2>
             <div className='flex gap-2'>
                 <CircleUserRound size={75} />
                 <div className='flex flex-col text-start'>
