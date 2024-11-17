@@ -17,6 +17,7 @@ import { tarimQuestions } from "../../database/tarim";
 import { ticaretQuestions } from "../../database/ticaret";
 import { ulastirmaQuestions } from "../../database/ulastirma";
 import { nonMinisters } from "../../database/nonMinister.js";
+import { turizmQuestions } from "../../database/turizm";
 
 type SetFunctions = {
     setAgriculture: React.Dispatch<React.SetStateAction<number>>;
@@ -75,6 +76,7 @@ export const allQuestions: Question[] = [
     ...convertPhotoToString(tarimQuestions),
     ...convertPhotoToString(ticaretQuestions),
     ...convertPhotoToString(ulastirmaQuestions),
+    ...convertPhotoToString(turizmQuestions),
     ...convertPhotoToString(nonMinisters),
 
 ].filter((question): question is Question => 'id' in question && question.id !== undefined);

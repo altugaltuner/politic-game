@@ -135,7 +135,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     };
 
     const oneInTenChance = () => {
-        const boolean = Math.random() < 0.33;
+        const boolean = Math.random() < 0.25;
         return boolean;
     };
 
@@ -359,6 +359,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                     {currentQuestion.photo && currentQuestion.title && (
                         <div className={`question-container ${isVisible ? 'visible' : ''} flex flex-col items-center mt-2 gap-2 justify-center`}>
                             <Image
+                                priority
                                 width={1820} height={1024}
                                 src={
                                     currentQuestion.photo instanceof File

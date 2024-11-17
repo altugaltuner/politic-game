@@ -10,7 +10,7 @@ const Header = () => {
                     <p className='2xl:text-[40px] xl:text-[34px] lg:text-[28px] text-[20px]'>Cumhurbaşkanı simülatöre hoşgeldin! Bakanlar ve politikacılarla istişare ederek vereceğin kararlara göre ülkenin kaderini sen belirleyeceksin.</p>
                 </div>
                 <div className='lg:w-[67%] w-full'>
-                    <Image src="/images/main-pic.webp" alt="main" width={3620} height={2036} className='w-[100%] border-[5px] border-black rounded-lg' />
+                    <Image priority src="/images/main-pic.webp" alt="main" width={3620} height={2036} className='w-[100%] border-[5px] border-black rounded-lg' />
                 </div>
             </div>
         </div>
