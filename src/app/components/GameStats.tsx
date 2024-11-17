@@ -26,6 +26,14 @@ interface Effects {
     internationalRelations?: number;
 }
 
+// Resim ön yükleme fonksiyonu
+const preloadImages = (images: string[]) => {
+    images.forEach((src) => {
+        const img = new window.Image();
+        img.src = src;
+    });
+};
+
 // Component for Game Stats
 export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetSelectedListIDs, handleSelectedOptionModalOpen }) => {
     const [agriculture, setAgriculture] = useState(50);
@@ -37,6 +45,14 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     const [isVisible, setIsVisible] = useState(true);
     const { isDarkMode } = useTheme();
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+    // Resimleri önceden yüklemek için useEffect
+    useEffect(() => {
+        const allImagePaths = allQuestions.map((q) =>
+            typeof q.photo === "string" ? q.photo : ""
+        );
+        preloadImages(allImagePaths);
+    }, []);
 
     const sounds = [
         "/sound-effects/breaking-news1.wav",
