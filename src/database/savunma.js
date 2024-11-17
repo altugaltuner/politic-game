@@ -30,9 +30,9 @@ export const savunmaQuestions = [
             {
                 text: "Diğerleri gibi bu da bir aldatmaca olabilir",
                 effect: {
-                    budget: 0,
+                    budget: -15,
                     internalSecurity: -20,
-                    internationalRelations: -20,
+                    internationalRelations: -10,
                 },
                 listID: "savunma1",
             },
@@ -40,9 +40,10 @@ export const savunmaQuestions = [
                 text: "Güvenlik güçlerini bölgeye yönlendirin",
                 effect: {
                     budget: -10,
-                    internalSecurity: +20,
-                    internationalRelations: +15,
-                }
+                    internalSecurity: +15,
+                    internationalRelations: +10,
+                },
+                listID: "savunma2",
             }
         ],
         title: "Milli Savunma Bakanı",

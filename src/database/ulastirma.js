@@ -19,7 +19,7 @@ export const ulastirmaQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    infrastructureAndEnvironment: -15,
+                    infrastructureAndEnvironment: -10,
                 }
             }
         ],
@@ -34,15 +34,15 @@ export const ulastirmaQuestions = [
                 text: "Fiber altyapıyı yatırımları yapılsın",
                 effect: {
                     publicSupport: +15,
-                    budget: +10,
+                    budget: -15,
                     infrastructureAndEnvironment: +15,
                 }
             },
             {
                 text: "Yurt dışından internet altyapısı satın alınsın",
                 effect: {
-                    internationalRelations: +15,
-                    budget: -15,
+                    internationalRelations: +5,
+                    budget: -10,
                     infrastructureAndEnvironment: +5,
                 },
                 listID: "ulastirma2",

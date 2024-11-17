@@ -10,14 +10,14 @@ export const egitimQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    infrastructureAndEnvironment: +15,
+                    infrastructureAndEnvironment: +10,
                 }
             },
             {
                 text: "Köydeki nüfusu şehre taşıyın",
                 effect: {
                     publicSupport: -10,
-                    budget: +15,
+                    budget: +10,
                     internalSecurity: -15,
                 }
             }
@@ -41,7 +41,7 @@ export const egitimQuestions = [
                 text: "Akademik eğitimi destekleyin",
                 effect: {
                     agriculturalProduction: -15,
-                    infrastructureAndEnvironment: +15,
+                    infrastructureAndEnvironment: +10,
                 }
             }
         ],

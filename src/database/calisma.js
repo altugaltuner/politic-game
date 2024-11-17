@@ -8,7 +8,7 @@ export const calismaQuestions = [
             {
                 text: "iş bulma programları başlatın",
                 effect: {
-                    publicSupport: +15,
+                    publicSupport: +10,
                     infrastructureAndEnvironment: +10,
                 }
             },
@@ -40,7 +40,6 @@ export const calismaQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -10,
-                    internalSecurity: +10,
                     agriculturalProduction: -10,
                 }
             }
@@ -55,7 +54,7 @@ export const calismaQuestions = [
             {
                 text: "Tarımı destekleyin",
                 effect: {
-                    agriculturalProduction: +15,
+                    agriculturalProduction: +10,
                     infrastructureAndEnvironment: -10,
                 },
                 listID: "calisma1",
@@ -64,7 +63,7 @@ export const calismaQuestions = [
                 text: "Sanayii üretime odaklanın",
                 effect: {
                     agriculturalProduction: -10,
-                    infrastructureAndEnvironment: +15,
+                    infrastructureAndEnvironment: +10,
                 },
             }
         ],

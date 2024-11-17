@@ -17,7 +17,7 @@ export const ticaretQuestions = [
                 text: "Büyük şirketlerin önü açılacak.",
                 effect: {
                     publicSupport: -15,
-                    budget: +15,
+                    budget: +10,
                     internationalRelations: +10,
                 }
             }

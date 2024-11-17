@@ -36,7 +36,7 @@ export const icisleriQuestions = [
                 text: "Kentsel dönüşümü başlatın",
                 effect: {
                     budget: -15,
-                    infrastructureAndEnvironment: +15,
+                    infrastructureAndEnvironment: +10,
                     publicSupport: +10
                 }
             },
@@ -69,7 +69,7 @@ export const icisleriQuestions = [
             {
                 text: "Yakalananları sınır dışı edin",
                 effect: {
-                    budget: +15,
+                    budget: +10,
                     internalSecurity: +10,
                 }
             }
@@ -108,8 +108,8 @@ export const icisleriQuestions = [
                 text: "Uluslararası işbirliğine başvuracağız",
                 effect: {
                     internalSecurity: -10,
-                    internationalRelations: +15,
-                    budget: +15,
+                    internationalRelations: +10,
+                    budget: +10,
                 }
             },
             {
@@ -117,7 +117,7 @@ export const icisleriQuestions = [
                 effect: {
                     internalSecurity: +15,
                     internationalRelations: -15,
-                    budget: -15,
+                    budget: -20,
                 },
                 listID: "icisleri3",
             },

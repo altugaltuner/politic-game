@@ -8,18 +8,18 @@ export const cevreQuestions = [
             {
                 text: "Şehirleşmeye devam edilmeli",
                 effect: {
-                    publicSupport: -10,
-                    agriculturalProduction: -10,
+                    publicSupport: -5,
+                    agriculturalProduction: -15,
                     budget: -15,
-                    infrastructureAndEnvironment: +15,
-                    internalSecurity: -5,
+                    infrastructureAndEnvironment: +10,
+                    internalSecurity: -10,
                 }
             },
             {
                 text: "Yeşil alanlar korunmalı",
                 effect: {
-                    publicSupport: +15,
-                    budget: +15,
+                    publicSupport: +10,
+                    budget: +10,
                     agriculturalProduction: +10,
                     infrastructureAndEnvironment: -15,
                     internalSecurity: +5,
@@ -37,18 +37,18 @@ export const cevreQuestions = [
             {
                 text: "Önce şehir sorunları çözülmeli",
                 effect: {
-                    publicSupport: +20,
+                    publicSupport: +10,
                     budget: -20,
-                    infrastructureAndEnvironment: +20,
+                    infrastructureAndEnvironment: +10,
                 },
             },
             {
                 text: "Önce çevre projeleri hayata geçirilmeli",
                 effect: {
-                    publicSupport: +10,
+                    publicSupport: +5,
                     budget: -10,
-                    infrastructureAndEnvironment: +10,
-                    agriculturalProduction: +10,
+                    infrastructureAndEnvironment: -10,
+                    agriculturalProduction: +5,
                 }
             }
         ],
@@ -63,13 +63,13 @@ export const cevreQuestions = [
                 text: "Temiz hava sahaları açın",
                 effect: {
                     infrastructureAndEnvironment: -10,
-                    agriculturalProduction: +15,
+                    agriculturalProduction: +10,
                 }
             },
             {
                 text: "Ekonomik büyüme sürdürülmeli",
                 effect: {
-                    infrastructureAndEnvironment: +15,
+                    infrastructureAndEnvironment: +10,
                     agriculturalProduction: -10,
                 }
             }
@@ -85,7 +85,7 @@ export const cevreQuestions = [
                 text: "Mevcut altyapıyı güçlendirin.",
                 effect: {
                     budget: -10,
-                    infrastructureAndEnvironment: +15,
+                    infrastructureAndEnvironment: +10,
                     internationalRelations: -10
                 }
             },
@@ -94,7 +94,7 @@ export const cevreQuestions = [
                 effect: {
                     budget: 0,
                     infrastructureAndEnvironment: +5,
-                    internationalRelations: +15,
+                    internationalRelations: +10,
                 },
                 listID: "cevre2",
             }
@@ -111,7 +111,7 @@ export const cevreQuestions = [
                 effect: {
                     budget: +15,
                     agriculturalProduction: -15,
-                    internationalRelations: +15,
+                    internationalRelations: +10,
                 },
                 listID: "cevre3",
             },
@@ -119,7 +119,7 @@ export const cevreQuestions = [
                 text: "Kıyıları koruma altına alacağız",
                 effect: {
                     budget: -15,
-                    agriculturalProduction: +15,
+                    agriculturalProduction: +10,
                     internationalRelations: -15,
                 }
             }
@@ -161,15 +161,16 @@ export const cevreQuestions = [
                     publicSupport: -10,
                     infrastructureAndEnvironment: -10,
                     agriculturalProduction: -20,
-                    budget: +20,
+                    budget: +15,
                 },
                 listID: "",
             },
             {
                 text: "Çıkarılan madenlere el koyulsun ve ağaçlandırma başlasın",
                 effect: {
-                    agriculturalProduction: +15,
+                    agriculturalProduction: +10,
                     budget: +10,
+                    publicSupport: +10,
                 }
             }
         ],

@@ -9,7 +9,7 @@ export const disisleriQuestions = [
                 text: "Anlaşmayı imzalayın",
                 effect: {
 
-                    internationalRelations: +15,
+                    internationalRelations: +10,
                     agriculturalProduction: -10,
                 },
                 listID: "disisleri1",
@@ -27,12 +27,12 @@ export const disisleriQuestions = [
     },
     {
         id: 41,
-        question: "Uluslararası KATO örgütüne katılım sağlayabiliriz, bu ülkemizin gücünü artıracak ama ulusal bağımsızlık kararlarımızı sınırlayabilir.",
+        question: "Uluslararası PAME örgütüne katılım sağlayabiliriz, bu ülkemizin uluslarası arenada gücünü artıracak ama ulusal bağımsızlık kararlarımızı sınırlayabilir.",
         answers: [
             {
                 text: "Katılma kararı alınmıştır",
                 effect: {
-                    internationalRelations: +15,
+                    internationalRelations: +10,
                     internalSecurity: -15,
                 }
             },
@@ -40,7 +40,7 @@ export const disisleriQuestions = [
                 text: "Katılım sürecini erteleyelim",
                 effect: {
                     internationalRelations: -15,
-                    internalSecurity: +15,
+                    internalSecurity: +10,
                 }
             }
         ],
@@ -55,7 +55,7 @@ export const disisleriQuestions = [
                 text: "Sınır kapılarını açın",
                 effect: {
                     publicSupport: -20,
-                    internationalRelations: +15,
+                    internationalRelations: +10,
                     internalSecurity: -15,
                 },
                 listID: "disisleri3",
@@ -63,7 +63,7 @@ export const disisleriQuestions = [
             {
                 text: "Sınırları koruyun",
                 effect: {
-                    publicSupport: +10,
+                    publicSupport: +15,
                     internationalRelations: -25,
                     internalSecurity: +10,
                 },

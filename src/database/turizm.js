@@ -17,7 +17,7 @@ export const turizmQuestions = [
                 text: "Ağaçlandırma çalışması başlatın",
                 effect: {
                     publicSupport: +10,
-                    agriculturalProduction: +15,
+                    agriculturalProduction: +10,
                     infrastructureAndEnvironment: -15,
                 }
             }

@@ -129,7 +129,7 @@ export const events = [
         description: "Umut dolu haberler sonrası halk sokaklarda kutlama yapıyor. Bu coşku ülkeye yayılırken, hükümetin popülerliği artıyor.",
         effects: {
             publicSupport: +15,
-            internalSecurity: +15,
+            internalSecurity: +10,
         },
     },
     {
@@ -273,7 +273,7 @@ export const events = [
         description: "Pandemi sonrası turizm sektörü büyük bir patlama yaşadı. Oteller dolup taşarken, esnaflar ekonomideki canlanmayı kutluyor.",
         effects: {
             budget: +15,
-            publicSupport: +15,
+            publicSupport: +10,
         },
     },
     {
@@ -373,7 +373,7 @@ export const events = [
         description: "Ülkenin en büyük fabrikası açıldı! Fabrika, binlerce kişiye iş imkanı sağlayacak. Halk, bu yatırımı memnuniyetle karşılıyor.",
         effects: {
             infrastructureAndEnvironment: +15,
-            publicSupport: +15,
+            publicSupport: +10,
         },
     },
     {
@@ -383,7 +383,7 @@ export const events = [
         description: "Denizaltı internet kabloları sayesinde ülkenin internet altyapısı genişliyor. Hızlı ve güvenilir internet erişimi sağlanacak. Teknolojiye yapılan bu yatırım halkı memnun ediyor.",
         effects: {
             infrastructureAndEnvironment: +15,
-            publicSupport: +15,
+            publicSupport: +10,
         },
     },
     {
@@ -392,8 +392,8 @@ export const events = [
         title: "Geri Dönüşümde Büyük Atılım!",
         description: "Yurtdışından ithal edilen atıkların geri dönüşümü için yeni bir fabrika açıldı. Geri dönüşümde yapılan bu atılım, çevre kirliliğinin azalmasına katkı sağlayacak.",
         effects: {
-            infrastructureAndEnvironment: +15,
-            budget: +15,
+            infrastructureAndEnvironment: +10,
+            budget: +10,
         },
     },
     {
@@ -431,7 +431,7 @@ export const events = [
         title: "Dev Gıda Şirketi Yurtdışına Açılıyor!",
         description: "Türkiye'nin önde gelen gıda şirketlerinden biri, yurtdışına açılmaya karar verdi. Şirketin bu atılımı, ülke ekonomisine katkı sağlayacak.",
         effects: {
-            agriculturalProduction: +15,
+            agriculturalProduction: +10,
             publicSupport: +10,
         },
     },
@@ -441,7 +441,7 @@ export const events = [
         title: "Öğrenci Değişim Programı Genişletildi!",
         description: "Üniversite öğrencileri arasında kültürel değişimi teşvik etmek amacıyla öğrenci değişim programı genişletildi. Amerika ve Avrupadaki üniversitelerle yapılan ortaklıklar ile öğrenciler, yurt dışında eğitim alarak farklı kültürleri tanıma fırsatı bulacak.",
         effects: {
-            internationalRelations: +15,
+            internationalRelations: +10,
             publicSupport: +10,
         },
     },

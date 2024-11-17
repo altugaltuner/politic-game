@@ -43,8 +43,8 @@ export const enerjiQuestions = [
                 effect: {
                     budget: -5,
                     infrastructureAndEnvironment: +10,
-                    internationalRelations: +10,
-                    agriculturalProduction: +15,
+                    internationalRelations: +5,
+                    agriculturalProduction: +10,
                 }
             }
         ],

@@ -8,7 +8,7 @@ export const aileQuestions = [
             {
                 text: "Yardımı yapacağız",
                 effect: {
-                    publicSupport: +20,
+                    publicSupport: +10,
                     budget: -10,
                 },
             },
@@ -38,7 +38,7 @@ export const aileQuestions = [
             {
                 text: "Kaçak işçiliği bitireceğiz!",
                 effect: {
-                    publicSupport: +20,
+                    publicSupport: +15,
                     agriculturalProduction: -10,
                 },
             }

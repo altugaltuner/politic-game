@@ -33,7 +33,7 @@ export const adaletQuestions = [
             {
                 text: "Sözleşmeyi imzalayacağız",
                 effect: {
-                    internationalRelations: +15,
+                    internationalRelations: +10,
                 }
             }
         ],
@@ -48,8 +48,8 @@ export const adaletQuestions = [
             {
                 text: "Her bölgeye yeni karakollar açılacak",
                 effect: {
-                    internalSecurity: +20,
-                    infrastructureAndEnvironment: +20,
+                    internalSecurity: +10,
+                    infrastructureAndEnvironment: +10,
                     budget: -15,
                 }
             },
@@ -83,7 +83,7 @@ export const adaletQuestions = [
                 effect: {
                     internalSecurity: +10,
                     budget: -10,
-                    infrastructureAndEnvironment: +15,
+                    infrastructureAndEnvironment: +10,
                 }
             }
         ],

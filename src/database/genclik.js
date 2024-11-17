@@ -10,14 +10,14 @@ export const genclikQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -15,
-                    infrastructureAndEnvironment: +15,
+                    infrastructureAndEnvironment: +10,
                 },
                 listID: "genclik1",
             },
             {
                 text: "Önce yolları onarın",
                 effect: {
-                    publicSupport: +15,
+                    publicSupport: +10,
                     budget: -10,
                     infrastructureAndEnvironment: +10,
                 }

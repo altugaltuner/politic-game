@@ -16,7 +16,7 @@ export const tarimQuestions = [
                 text: "Başka önceliklerimiz var, erteleyin",
                 effect: {
                     agriculturalProduction: -15,
-                    budget: +20,
+                    budget: +15,
                 }
             }
         ],
@@ -39,9 +39,9 @@ export const tarimQuestions = [
             {
                 text: "Tarım ürünlerine gümrük vergisi artırılacak",
                 effect: {
-                    publicSupport: -10,
+                    publicSupport: -15,
                     budget: +20,
-                    agriculturalProduction: -10,
+                    agriculturalProduction: -15,
                     internationalRelations: -10,
                 },
             }
@@ -57,7 +57,7 @@ export const tarimQuestions = [
                 text: "Yeni yangın helikopterleri alacağız",
                 effect: {
                     budget: -20,
-                    agriculturalProduction: +20,
+                    agriculturalProduction: +15,
                 }
             },
             {
@@ -78,8 +78,8 @@ export const tarimQuestions = [
             {
                 text: "Tarıma teşvik projeleri başlatın",
                 effect: {
-                    publicSupport: +20,
-                    agriculturalProduction: +10,
+                    publicSupport: +10,
+                    agriculturalProduction: +15,
                 }
             },
             {
@@ -87,7 +87,7 @@ export const tarimQuestions = [
                 effect: {
                     publicSupport: -20,
                     agriculturalProduction: +10,
-                    internationalRelations: +15,
+                    internationalRelations: +10,
                 },
             }
         ],
@@ -109,9 +109,9 @@ export const tarimQuestions = [
             {
                 text: "Mevcut sistemle devam edin",
                 effect: {
-                    budget: +10,
+                    budget: +15,
                     agriculturalProduction: -10,
-                    infrastructureAndEnvironment: -10,
+                    infrastructureAndEnvironment: -5,
                 }
             }
         ],

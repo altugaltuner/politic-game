@@ -38,7 +38,7 @@ export const saglikQuestions = [
             {
                 text: "Psikolojik destek hizmetleri sağlayın",
                 effect: {
-                    publicSupport: +15,
+                    publicSupport: +10,
                     internalSecurity: +5,
                     budget: -10,
                 }
@@ -61,7 +61,7 @@ export const saglikQuestions = [
             {
                 text: "Gizli bir denetim yapılsın",
                 effect: {
-                    internalSecurity: +20,
+                    internalSecurity: +15,
                     publicSupport: +15,
                 },
                 listID: "saglik1",

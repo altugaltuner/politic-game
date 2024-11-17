@@ -23,6 +23,7 @@ import toggIntroduced from "../../public/list-photos/togg-introduced.webp";
 import fastTrain from "../../public/list-photos/super-fast-train.webp";
 import techStartup from "../../public/list-photos/tech-startup.webp";
 import bombMall from "../../public/list-photos/bomb-mall.webp";
+import disabledBomb from "../../public/list-photos/bomb-disabled.webp";
 
 export const elements = [
     {
@@ -199,5 +200,12 @@ export const elements = [
         photo: bombMall,
         description: "PlazarInn AVM'de gerçekleşen bombalı saldırıda çok sayıda ölü ve yaralı var. Güvenlik güçleri ve sağlık ekipleri olay yerine intikal etti. Olayda şüpheli iki kişi gözaltına alındı.",
         listID: "savunma1",
+    },
+    {
+        id: 626,
+        title: "Bomba Etkisiz Hale Getirildi",
+        photo: disabledBomb,
+        description: "PlazarInn AVM'de gerçekleşmesi planlanan bombalı terör saldırısı önceden tespit edilerek bomba etkisiz hale getirildi. Güvenlik güçleri olayla ilgili soruşturma başlattı.",
+        listID: "savunma2",
     },
 ];
