@@ -10,7 +10,6 @@ import { events } from "../../database/events";
 import { EventModal } from "./eventModal";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useVolume } from "@/contexts/VolumeContext";
-import { elements } from "../../database/elements";
 
 type GameStatsProps = {
     setSelectedListIDs: (newListID: string) => void;
