@@ -57,18 +57,26 @@ export default function HomePage() {
 
         <h2 className="font-bold xl:text-[45px] lg:text-[32px] text-[30px]">Hemen Başla</h2>
 
-        <form className="flex gap-3 sm:flex-row flex-col items-center" onSubmit={(e) => {
+        <form className="flex gap-3 sm:flex-row flex-col items-center pb-3" onSubmit={(e) => {
           e.preventDefault();
           if (username.trim() !== "") {
             router.push("/game");
           }
         }}>
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Kullanıcı Adın" className="w-[270px] h-10 border-2 border-black rounded-lg pl-2" />
+          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Kullanıcı Adın" className="h-10 border-2 border-black rounded-lg pl-2" />
 
-          <Button onClick={handleSound} className="w-44" type="submit" disabled={username.trim() === ""}>
+          <Button onClick={handleSound} className="md:w-40 w-full" type="submit" disabled={username.trim() === ""}>
             Başla
           </Button>
+          <Button className="md:w-40 w-full" onClick={() => {
+            handleSound();
+            router.push("/contact");
+          }}>
+            İletişim
+          </Button>
         </form>
+
+
       </div>
       <footer className="absolute bottom-0 w-full bg-black text-white text-center sm:p-2 p-1 text-xs sm:text-sm">
         <p>© 2024 Cumhurbaşkanı Simulator. Tüm hakları saklıdır.</p>

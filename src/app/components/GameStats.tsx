@@ -299,7 +299,10 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                             />
                         )}
                     </div>
-                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black md:text-sm text-xs mt-2" onClick={restartGame}>
+
+                </div>
+                <div className={`${isDarkMode ? ' bg-[rgb(17,17,17)]  border-white' : 'bg-white border-black'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 sm:gap-2 gap-1 sm:p-2.5 p-1 items-center `}>
+                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black md:text-sm text-xs" onClick={restartGame}>
                         Tekrar Oyna
                     </Button>
                 </div>
@@ -329,8 +332,9 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                     <div className="question-container visible flex flex-col items-center mt-2 gap-2 justify-center">
                         <Image src={ataturk} alt="Oyun Bitti" className="w-full lg:h-[22rem] rounded-lg" />
                     </div>
-
-                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black md:text-sm text-xs mt-2" onClick={restartGame}>
+                </div>
+                <div className={`${isDarkMode ? ' bg-[rgb(17,17,17)]  border-white' : 'bg-white border-black'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 sm:gap-2 gap-1 sm:p-2.5 p-1 items-center`}>
+                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black md:text-sm text-xs" onClick={restartGame}>
                         Tekrar Oyna
                     </Button>
                 </div>
