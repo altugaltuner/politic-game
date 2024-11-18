@@ -10,6 +10,7 @@ import { events } from "../../database/events";
 import { EventModal } from "./eventModal";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useVolume } from "@/contexts/VolumeContext";
+import { elements } from "../../database/elements";
 
 type GameStatsProps = {
     setSelectedListIDs: (newListID: string) => void;
@@ -50,7 +51,33 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         };
         preloadImages();
     }, []);
-    //asas
+
+    useEffect(() => {
+        // Tüm soruların fotoğraflarını önceden yükleyin
+        const preloadEventImages = () => {
+            events.forEach((event) => {
+                if (typeof event.photo === "string") {
+                    const img = new window.Image();
+                    img.src = event.photo;
+                }
+            });
+        };
+        preloadEventImages();
+    }, []);
+
+    useEffect(() => {
+        // Tüm soruların fotoğraflarını önceden yükleyin
+        const preloadListImages = () => {
+            elements.forEach((element) => {
+                if (typeof element.photo === "string") {
+                    const img = new window.Image();
+                    img.src = element.photo;
+                }
+            });
+        };
+        preloadListImages();
+    }, []);
+
 
     const sounds = [
         "/sound-effects/breaking-news1.wav",
