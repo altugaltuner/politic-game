@@ -284,7 +284,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                             />
                         )}
                     </div>
-                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black md:text-sm text-xs mt-5" onClick={restartGame}>
+                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black md:text-sm text-xs mt-2" onClick={restartGame}>
                         Tekrar Oyna
                     </Button>
                 </div>
@@ -315,7 +315,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                         <Image src={ataturk} alt="Oyun Bitti" className="w-full lg:h-[22rem] rounded-lg" />
                     </div>
 
-                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black md:text-sm text-xs mt-5" onClick={restartGame}>
+                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black md:text-sm text-xs mt-2" onClick={restartGame}>
                         Tekrar Oyna
                     </Button>
                 </div>

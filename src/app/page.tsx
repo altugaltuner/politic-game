@@ -79,7 +79,7 @@ export default function HomePage() {
           <a href="/" className="hover:underline">
             Kullanım Koşulları
           </a>
-          <a href="/" className="hover:underline">
+          <a href="/contact" className="hover:underline">
             İletişim
           </a>
         </div>
