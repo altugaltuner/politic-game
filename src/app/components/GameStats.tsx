@@ -38,6 +38,19 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     const { isDarkMode } = useTheme();
     const [isModalOpen, setIsModalOpen] = useState(false);
 
+    useEffect(() => {
+        // Tüm soruların fotoğraflarını önceden yükleyin
+        const preloadImages = () => {
+            allQuestions.forEach((question) => {
+                if (typeof question.photo === "string") {
+                    const img = new window.Image();
+                    img.src = question.photo;
+                }
+            });
+        };
+        preloadImages();
+    }, []);
+
     const sounds = [
         "/sound-effects/breaking-news1.wav",
         "/sound-effects/breaking-news2.wav",
