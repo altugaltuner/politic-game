@@ -39,44 +39,38 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     const { isDarkMode } = useTheme();
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    useEffect(() => {
-        // Tüm soruların fotoğraflarını önceden yükleyin
-        const preloadImages = () => {
-            allQuestions.forEach((question) => {
-                if (typeof question.photo === "string") {
-                    const img = new window.Image();
-                    img.src = question.photo;
-                }
-            });
-        };
-        preloadImages();
-    }, []);
+    // useEffect(() => {
+    //     // Tüm soruların fotoğraflarını önceden yükleyin
+    //     const preloadImages = () => {
+    //         allQuestions.forEach((question) => {
+    //             if (typeof question.photo === "string") {
+    //                 const img = new window.Image();
+    //                 img.src = question.photo;
+    //             }
+    //         });
+    //     };
+    //     preloadImages();
+    // }, []);
 
     useEffect(() => {
-        // Tüm soruların fotoğraflarını önceden yükleyin
-        const preloadEventImages = () => {
-            events.forEach((event) => {
-                if (typeof event.photo === "string") {
+        const preloadAllImages = () => {
+            const imageUrls = [
+                ...allQuestions.map((question) => question.photo),
+                ...events.map((event) => event.photo),
+                ...elements.map((element) => element.photo),
+            ];
+
+            imageUrls.forEach((photo) => {
+                if (typeof photo === "string") {
                     const img = new window.Image();
-                    img.src = event.photo;
+                    img.src = photo;
                 }
             });
         };
-        preloadEventImages();
+
+        preloadAllImages();
     }, []);
 
-    useEffect(() => {
-        // Tüm soruların fotoğraflarını önceden yükleyin
-        const preloadListImages = () => {
-            elements.forEach((element) => {
-                if (typeof element.photo === "string") {
-                    const img = new window.Image();
-                    img.src = element.photo;
-                }
-            });
-        };
-        preloadListImages();
-    }, []);
 
 
     const sounds = [
