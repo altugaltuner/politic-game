@@ -41,8 +41,8 @@ export const tarimQuestions = [
                 effect: {
                     publicSupport: -15,
                     budget: +20,
-                    agriculturalProduction: -15,
-                    internationalRelations: -10,
+                    agriculturalProduction: -20,
+                    internationalRelations: -20,
                 },
             }
         ],
@@ -56,14 +56,14 @@ export const tarimQuestions = [
             {
                 text: "Yeni yangın helikopterleri alacağız",
                 effect: {
-                    budget: -20,
-                    agriculturalProduction: +15,
+                    budget: -15,
+                    agriculturalProduction: +10,
                 }
             },
             {
                 text: "Yeşil alanlardaki denetimi artıracağız",
                 effect: {
-                    budget: +15,
+                    budget: +10,
                     agriculturalProduction: +10,
                 }
             }
@@ -86,8 +86,8 @@ export const tarimQuestions = [
                 text: "Açığı göçmen işçilerle doldurun",
                 effect: {
                     publicSupport: -20,
-                    agriculturalProduction: +10,
-                    internationalRelations: +10,
+                    agriculturalProduction: +5,
+                    internationalRelations: +5,
                 },
             }
         ],
@@ -110,8 +110,8 @@ export const tarimQuestions = [
                 text: "Mevcut sistemle devam edin",
                 effect: {
                     budget: +15,
-                    agriculturalProduction: -10,
-                    infrastructureAndEnvironment: -5,
+                    agriculturalProduction: -15,
+                    infrastructureAndEnvironment: -10,
                 }
             }
         ],

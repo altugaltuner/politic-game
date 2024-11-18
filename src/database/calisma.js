@@ -30,9 +30,9 @@ export const calismaQuestions = [
             {
                 text: "20% lik zam yapın",
                 effect: {
-                    publicSupport: -10,
+                    publicSupport: -25,
                     budget: +20,
-                    internalSecurity: -10,
+                    internalSecurity: -15,
                     agriculturalProduction: +10,
                 }
             },

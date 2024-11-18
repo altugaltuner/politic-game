@@ -19,7 +19,7 @@ export const ulastirmaQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -5,
-                    infrastructureAndEnvironment: -10,
+                    infrastructureAndEnvironment: -15,
                 }
             }
         ],
@@ -35,7 +35,7 @@ export const ulastirmaQuestions = [
                 effect: {
                     publicSupport: +15,
                     budget: -15,
-                    infrastructureAndEnvironment: +15,
+                    infrastructureAndEnvironment: +10,
                 }
             },
             {

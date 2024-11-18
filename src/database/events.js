@@ -44,6 +44,8 @@ import censor from "../../public/events/journalist-censor.webp";
 import wasteFruit from "../../public/events/waste-fruit.webp";
 import getSick from "../../public/events/hastalandın.webp";
 import illuminati from "../../public/events/france-olympic-ritual.webp";
+import meteor from "../../public/events/meteor.webp";
+import pandemic from "../../public/events/pandemic.webp";
 
 export const events = [
     {
@@ -497,6 +499,27 @@ export const events = [
         description: "Fransa Olimpiyatları'nda yapılan açılış töreninde birbirinden ilginç ve ürkütücü ritüeller gerçekleşti. Bu durum dünya çapında büyük bir tartışma ve gerginlik yarattı.",
         effects: {
             internationalRelations: -15,
+        },
+    },
+    {
+        id: 546,
+        photo: meteor,
+        title: "Pasifik Okyanusuna Dev Göktaşı Düştü!",
+        description: "Bilimadamlarının sadece birkaç saat önce fark ettiği dev göktaşı, Pasifik Okyanusu'na düştü. Dünya çapında büyük bir panik ve endişe yaratan bu olay, bilim insanlarını ve hükümetleri harekete geçirdi. Dünya bu meteorun yarattığı etkilerle baş etmeye çalışıyor.",
+        effects: {
+            internationalRelations: -15,
+            internalSecurity: -15,
+        },
+    },
+    {
+        id: 547,
+        photo: pandemic,
+        title: "Dünya Genelinde Yeni Bir Pandemi!",
+        description: "Dünya genelinde yayılan yeni bir virüs milyonlarca insanın ölümüne sebep oldu. Ülkeler kendi sınırlarını kapatırken, halk sağlık ve güvenlik endişesi yaşıyor.",
+        effects: {
+            internationalRelations: -20,
+            budget: -15,
+            publicSupport: -15,
         },
     },
 ];

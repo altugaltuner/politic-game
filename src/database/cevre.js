@@ -110,7 +110,7 @@ export const cevreQuestions = [
                 text: "Turizmi destekleyeceğiz",
                 effect: {
                     budget: +15,
-                    agriculturalProduction: -15,
+                    agriculturalProduction: -20,
                     internationalRelations: +10,
                 },
                 listID: "cevre3",
@@ -120,7 +120,7 @@ export const cevreQuestions = [
                 effect: {
                     budget: -15,
                     agriculturalProduction: +10,
-                    internationalRelations: -15,
+                    internationalRelations: -20,
                 }
             }
         ],
@@ -153,7 +153,7 @@ export const cevreQuestions = [
     },
     {
         id: 36,
-        question: "Bir maden şirketi ormanlık alanda izinsiz kazı çalışmaları yaparken yakalandı. Bunun için de ormanlık alanda çok sayıda ağaç kesilmiş.",
+        question: "Bir yabancı ortaklı maden şirketi ormanlık alanda izinsiz kazı çalışmaları yaparken yakalandı. Bunun için de ormanlık alanda çok sayıda ağaç kesilmiş.",
         answers: [
             {
                 text: "Devlet şirkete el koymalıdır",
@@ -162,6 +162,7 @@ export const cevreQuestions = [
                     infrastructureAndEnvironment: -20,
                     agriculturalProduction: -10,
                     budget: +20,
+                    internationalRelations: -25,
                 },
                 listID: "",
             },
@@ -171,6 +172,7 @@ export const cevreQuestions = [
                     agriculturalProduction: +10,
                     budget: +10,
                     publicSupport: +5,
+                    internationalRelations: -15,
                 }
             }
         ],
@@ -180,19 +182,19 @@ export const cevreQuestions = [
 ];
 
 // Tüm statların toplamlarını tutacak bir obje
-const totalStats = {};
+// const totalStats = {};
 
-// Döngü ile tüm sorular ve cevaplar üzerinde gez
-cevreQuestions.forEach((question) => {
-    question.answers.forEach((answer) => {
-        for (const [key, value] of Object.entries(answer.effect)) {
-            if (totalStats[key] === undefined) {
-                totalStats[key] = 0; // İlk kez görüyorsak sıfırla başlat
-            }
-            totalStats[key] += value; // Değeri ekle
-        }
-    });
-});
+// // Döngü ile tüm sorular ve cevaplar üzerinde gez
+// cevreQuestions.forEach((question) => {
+//     question.answers.forEach((answer) => {
+//         for (const [key, value] of Object.entries(answer.effect)) {
+//             if (totalStats[key] === undefined) {
+//                 totalStats[key] = 0; // İlk kez görüyorsak sıfırla başlat
+//             }
+//             totalStats[key] += value; // Değeri ekle
+//         }
+//     });
+// });
 
 // // Toplam sonuçları terminale yazdır
 // console.log("Statların toplam değerleri:");

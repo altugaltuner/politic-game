@@ -42,7 +42,7 @@ export const ticaretQuestions = [
                 effect: {
                     internalSecurity: +10,
                     budget: -10,
-                    internationalRelations: -10,
+                    internationalRelations: -15,
                 }
             }
         ],
@@ -59,7 +59,7 @@ export const ticaretQuestions = [
                     internationalRelations: +10,
                     budget: +15,
                     agriculturalProduction: -10,
-                    infrastructureAndEnvironment: +15,
+                    infrastructureAndEnvironment: +10,
                 }
             },
             {
@@ -68,7 +68,7 @@ export const ticaretQuestions = [
                     agriculturalProduction: +10,
                     internationalRelations: -10,
                     budget: -10,
-                    infrastructureAndEnvironment: -10,
+                    infrastructureAndEnvironment: -15,
                     publicSupport: +10,
                 }
             }

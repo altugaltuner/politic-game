@@ -24,6 +24,8 @@ import fastTrain from "../../public/list-photos/super-fast-train.webp";
 import techStartup from "../../public/list-photos/tech-startup.webp";
 import bombMall from "../../public/list-photos/bomb-mall.webp";
 import disabledBomb from "../../public/list-photos/bomb-disabled.webp";
+import istanbulArab from "../../public/list-photos/istanbul-arab.webp";
+import s400 from "../../public/list-photos/s400.webp";
 
 export const elements = [
     {
@@ -207,5 +209,19 @@ export const elements = [
         photo: disabledBomb,
         description: "PlazarInn AVM'de gerçekleşmesi planlanan bombalı terör saldırısı önceden tespit edilerek bomba etkisiz hale getirildi. Güvenlik güçleri olayla ilgili soruşturma başlattı.",
         listID: "savunma2",
+    },
+    {
+        id: 627,
+        title: "İstanbul mu Tahran mı ?",
+        photo: istanbulArab,
+        description: "Liam Neeson'ın yeni filmindeki İstanbul sahneleri kanser etti. İstanbulun alenen ortadoğu şehri gibi gösterildiği filme tepkiler büyüyor.",
+        listID: "liamNeeson",
+    },
+    {
+        id: 628,
+        title: "S-400'ler Türkiye'ye Geldi!",
+        photo: s400,
+        description: "ABD'nin tepkisine rağmen Rusya'dan alınan S-400 hava savunma sistemleri ülkeye geldi. Türkiye dış politikada kararlı duruşunu koruyor!",
+        listID: "S400",
     },
 ];

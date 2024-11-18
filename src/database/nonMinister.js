@@ -1,4 +1,4 @@
-// import developer from "../../public/non-ministers/developer.webp";
+import developer from "../../public/non-ministers/developer.webp";
 import elonMusk from "../../public/non-ministers/elon-musk.webp";
 import emekli from "../../public/non-ministers/emekli.webp";
 // import genelkurmay from "../../public/non-ministers/genelkurmay.webp";
@@ -8,6 +8,7 @@ import trump from "../../public/non-ministers/trump.webp";
 // import tuik from "../../public/non-ministers/TUIK.webp";
 import nebati from "../../public/non-ministers/nureddin-nebati.webp";
 //import rtukBaskan from "../../public/non-ministers/rtuk-baskani.webp";
+import liamNeeson from "../../public/non-ministers/liam-neeson.webp";
 
 // 1 soru var
 export const nonMinisters = [
@@ -50,7 +51,7 @@ export const nonMinisters = [
                 text: "Anlaştık. Altyapıyı kurabilirsin",
                 effect: {
                     budget: +10,
-                    internalSecurity: -15,
+                    internalSecurity: -20,
                     internationalRelations: +10,
                     infrastructureAndEnvironment: +10,
                 },
@@ -113,18 +114,68 @@ export const nonMinisters = [
                     budget: -15,
                     internationalRelations: +15,
                     internalSecurity: +15,
-                }
+                },
+                listID: "S400",
             },
             {
                 text: "Biraz daha düşüneceğiz",
                 effect: {
                     budget: +10,
                     internationalRelations: 0,
-                    internalSecurity: -10,
+                    internalSecurity: -20,
                 },
             }
         ],
         title: "Vladimir Putin",
         photo: putin,
+    },
+    {
+        id: 555,
+        question: "Sayın Erdogan, ülkenizdeki internet sansürü konusunda biraz daha esnek olmanızı rica ediyorum. Bu durum yatırımcılarımızı olumsuz etkiliyor.",
+        answers: [
+            {
+                text: "Halkımızın güvenliği için bu önlemleri alacağız",
+                effect: {
+                    budget: -10,
+                    publicSupport: -10,
+                    internationalRelations: -10,
+                }
+            },
+            {
+                text: "Biraz daha esnek olabiliriz",
+                effect: {
+                    budget: +20,
+                    publicSupport: 0,
+                    internationalRelations: +10,
+                },
+            }
+        ],
+        title: "PixelMind CEO'su",
+        photo: developer,
+    },
+    {
+        id: 556,
+        question: "Merhabalar. İstanbul'da bir film çekimi yapmak istiyoruz. Özellikle Kapalıçarşı'da bir sahne çekmek istiyoruz. Bu hem İstanbul'un tanıtımı için iyi olacak hem de filmimizi ilgi çekici kılacak.",
+        answers: [
+            {
+                text: "Tabi ki, buyrun başlayın",
+                effect: {
+                    budget: +20,
+                    publicSupport: +10,
+                    internationalRelations: -20,
+                },
+                listID: "liamNeeson",
+            },
+            {
+                text: "Buna onay vermeyeceğim",
+                effect: {
+                    budget: -10,
+                    publicSupport: -10,
+                    internationalRelations: +20,
+                },
+            }
+        ],
+        title: "Liam Neeson",
+        photo: liamNeeson,
     },
 ];

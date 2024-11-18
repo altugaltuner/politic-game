@@ -63,7 +63,7 @@ export const icisleriQuestions = [
 
                     budget: -15,
                     internalSecurity: +10,
-                    internationalRelations: -15
+                    internationalRelations: -20
                 }
             },
             {
@@ -93,7 +93,7 @@ export const icisleriQuestions = [
                 text: "Toplu taşımaya teşvik edin",
                 effect: {
                     budget: +10,
-                    publicSupport: -15,
+                    publicSupport: -25,
                 }
             }
         ],

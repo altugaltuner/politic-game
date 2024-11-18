@@ -8,8 +8,8 @@ export const savunmaQuestions = [
             {
                 text: "Yatırımlar yapılacak",
                 effect: {
-                    budget: -20,
-                    internalSecurity: +20,
+                    budget: -15,
+                    internalSecurity: +10,
                 }
             },
             {
@@ -40,7 +40,7 @@ export const savunmaQuestions = [
                 text: "Güvenlik güçlerini bölgeye yönlendirin",
                 effect: {
                     budget: -10,
-                    internalSecurity: +15,
+                    internalSecurity: +10,
                     internationalRelations: +10,
                 },
                 listID: "savunma2",

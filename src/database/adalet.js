@@ -27,8 +27,8 @@ export const adaletQuestions = [
             {
                 text: "Her bölgeye yeni karakollar açılacak",
                 effect: {
-                    internalSecurity: +10,
-                    infrastructureAndEnvironment: +10,
+                    internalSecurity: +5,
+                    infrastructureAndEnvironment: +5,
                     budget: -10,
                 }
             },

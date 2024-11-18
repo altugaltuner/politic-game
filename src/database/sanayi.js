@@ -33,7 +33,7 @@ export const sanayiQuestions = [
                 text: "Bir an önce satışa çıkarılsın",
                 effect: {
                     publicSupport: -10,
-                    budget: +15,
+                    budget: +20,
                     infrastructureAndEnvironment: +5,
                 },
                 listID: "sanayi1",
@@ -58,8 +58,8 @@ export const sanayiQuestions = [
                 text: "Teknoloji startuplarına",
                 effect: {
                     publicSupport: +10,
-                    budget: -10,
-                    infrastructureAndEnvironment: +10,
+                    budget: -5,
+                    infrastructureAndEnvironment: +5,
                 },
                 listID: "sanayi2",
             },
@@ -67,8 +67,8 @@ export const sanayiQuestions = [
                 text: "Büyük sanayi şirketlerine",
                 effect: {
                     publicSupport: +5,
-                    budget: -20,
-                    infrastructureAndEnvironment: +15,
+                    budget: -10,
+                    infrastructureAndEnvironment: +10,
                 }
             }
         ],

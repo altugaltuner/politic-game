@@ -9,7 +9,7 @@ export const turizmQuestions = [
                 text: "İmara açın",
                 effect: {
                     publicSupport: -15,
-                    infrastructureAndEnvironment: +15,
+                    infrastructureAndEnvironment: +10,
                     agriculturalProduction: -15,
                 }
             },

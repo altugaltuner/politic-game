@@ -61,8 +61,8 @@ export const saglikQuestions = [
             {
                 text: "Gizli bir denetim yapılsın",
                 effect: {
-                    internalSecurity: +15,
-                    publicSupport: +15,
+                    internalSecurity: +10,
+                    publicSupport: +10,
                 },
                 listID: "saglik1",
             }

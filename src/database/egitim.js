@@ -16,7 +16,7 @@ export const egitimQuestions = [
             {
                 text: "Köydeki nüfusu şehre taşıyın",
                 effect: {
-                    publicSupport: -10,
+                    publicSupport: -20,
                     budget: +15,
                     internalSecurity: -15,
                 }

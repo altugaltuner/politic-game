@@ -19,7 +19,7 @@ export const genclikQuestions = [
                 effect: {
                     publicSupport: +10,
                     budget: -5,
-                    infrastructureAndEnvironment: +10,
+                    infrastructureAndEnvironment: +5,
                 }
             }
         ],
