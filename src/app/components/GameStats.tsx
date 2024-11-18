@@ -50,6 +50,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         };
         preloadImages();
     }, []);
+    //asas
 
     const sounds = [
         "/sound-effects/breaking-news1.wav",
