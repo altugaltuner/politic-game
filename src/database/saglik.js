@@ -16,7 +16,7 @@ export const saglikQuestions = [
                 text: "Yeni hastaneler inşa edilsin",
                 effect: {
                     budget: -15,
-                    infrastructureAndEnvironment: +15,
+                    infrastructureAndEnvironment: +10,
                 }
             },
         ],

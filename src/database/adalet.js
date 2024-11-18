@@ -4,7 +4,7 @@ import altug from "../../public/ministers/altug.webp";
 export const adaletQuestions = [
     {
         id: 1,
-        question: "Son seçimleri %51 ile sen kazandın! Bu sorumluluğu üstlenmeye hazır mısın?",
+        question: "Son seçimleri %51 ile kazanarak cumhurbaşkanı oldun! Bu sorumluluğu üstlenmeye hazır mısın?",
         answers: [
             {
                 text: "Hazırız, milletimize hizmet için buradayız",
@@ -17,23 +17,27 @@ export const adaletQuestions = [
                 }
             }
         ],
-        title: "Kreatör",
+        title: "Altuğ",
         photo: altug,
     },
     {
         id: 2,
-        question: "İstanbul Sözleşmesi konusunda tartışmalar devam ediyor. Ne düşünüyorsunuz?",
+        question: "İstanbul ve Ankara’da suç oranları arttı, halk güvenlikten endişeli...",
         answers: [
             {
-                text: "Sözleşmeden çekileceğiz",
+                text: "Her bölgeye yeni karakollar açılacak",
                 effect: {
-                    internationalRelations: -15,
-                },
+                    internalSecurity: +10,
+                    infrastructureAndEnvironment: +10,
+                    budget: -10,
+                }
             },
             {
-                text: "Sözleşmeyi imzalayacağız",
+                text: "Polis ekipleri güçlendirilecek",
                 effect: {
-                    internationalRelations: +10,
+                    internalSecurity: +10,
+                    infrastructureAndEnvironment: -15,
+                    budget: -5,
                 }
             }
         ],
@@ -42,39 +46,14 @@ export const adaletQuestions = [
     },
     {
         id: 3,
-        question: "İstanbul ve Ankara’da suç oranları arttı, halk güvenlikten endişeli...",
-        answers: [
-
-            {
-                text: "Her bölgeye yeni karakollar açılacak",
-                effect: {
-                    internalSecurity: +10,
-                    infrastructureAndEnvironment: +10,
-                    budget: -15,
-                }
-            },
-            {
-                text: "Polis ekipleri güçlendirilecek",
-                effect: {
-                    internalSecurity: +10,
-                    infrastructureAndEnvironment: -15,
-                    budget: -10,
-                }
-            }
-        ],
-        title: "Adalet Bakanı",
-        photo: adaletBakanı,
-    },
-    {
-        id: 4,
         question: "Sayın Cumhurbaşkanım, cezaevleri dolup taşıyor. Önerileriniz var mıdır?",
         answers: [
             {
                 text: "Cezaevlerindeki tutukluların sayısı azaltılacak",
                 effect: {
-                    internalSecurity: -15,
-                    budget: +10,
-                    infrastructureAndEnvironment: -10,
+                    internalSecurity: -10,
+                    budget: +15,
+                    infrastructureAndEnvironment: -20,
                 },
                 listID: "adalet2",
             },

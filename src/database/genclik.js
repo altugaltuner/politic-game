@@ -9,7 +9,7 @@ export const genclikQuestions = [
                 text: "Tesis yapımına başlayın",
                 effect: {
                     publicSupport: +10,
-                    budget: -15,
+                    budget: -10,
                     infrastructureAndEnvironment: +10,
                 },
                 listID: "genclik1",
@@ -18,7 +18,7 @@ export const genclikQuestions = [
                 text: "Önce yolları onarın",
                 effect: {
                     publicSupport: +10,
-                    budget: -10,
+                    budget: -5,
                     infrastructureAndEnvironment: +10,
                 }
             }

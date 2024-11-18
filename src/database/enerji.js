@@ -9,14 +9,14 @@ export const enerjiQuestions = [
                 text: "Yerli enerji aramalarına başlayın",
                 effect: {
                     budget: -15,
-                    infrastructureAndEnvironment: +20,
+                    infrastructureAndEnvironment: +15,
                 },
                 listID: "enerji1",
             },
             {
                 text: "Erteleyin, şimdilik maliyet çok yüksek",
                 effect: {
-                    budget: +15,
+                    budget: +20,
                     infrastructureAndEnvironment: -20,
                 }
             }

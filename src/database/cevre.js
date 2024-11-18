@@ -18,8 +18,8 @@ export const cevreQuestions = [
             {
                 text: "Yeşil alanlar korunmalı",
                 effect: {
-                    publicSupport: +10,
-                    budget: +10,
+                    publicSupport: +5,
+                    budget: +15,
                     agriculturalProduction: +10,
                     infrastructureAndEnvironment: -15,
                     internalSecurity: +5,
@@ -47,7 +47,7 @@ export const cevreQuestions = [
                 effect: {
                     publicSupport: +5,
                     budget: -10,
-                    infrastructureAndEnvironment: -10,
+                    infrastructureAndEnvironment: -15,
                     agriculturalProduction: +5,
                 }
             }
@@ -135,7 +135,7 @@ export const cevreQuestions = [
                 text: "Kural tanımayan firmalara el konulsun",
                 effect: {
                     budget: +20,
-                    infrastructureAndEnvironment: -20,
+                    infrastructureAndEnvironment: -25,
                 }
             },
             {
@@ -159,9 +159,9 @@ export const cevreQuestions = [
                 text: "Devlet şirkete el koymalıdır",
                 effect: {
                     publicSupport: -10,
-                    infrastructureAndEnvironment: -10,
-                    agriculturalProduction: -20,
-                    budget: +15,
+                    infrastructureAndEnvironment: -20,
+                    agriculturalProduction: -10,
+                    budget: +20,
                 },
                 listID: "",
             },
@@ -170,7 +170,7 @@ export const cevreQuestions = [
                 effect: {
                     agriculturalProduction: +10,
                     budget: +10,
-                    publicSupport: +10,
+                    publicSupport: +5,
                 }
             }
         ],
@@ -178,3 +178,24 @@ export const cevreQuestions = [
         photo: cevreBakani,
     },
 ];
+
+// Tüm statların toplamlarını tutacak bir obje
+const totalStats = {};
+
+// Döngü ile tüm sorular ve cevaplar üzerinde gez
+cevreQuestions.forEach((question) => {
+    question.answers.forEach((answer) => {
+        for (const [key, value] of Object.entries(answer.effect)) {
+            if (totalStats[key] === undefined) {
+                totalStats[key] = 0; // İlk kez görüyorsak sıfırla başlat
+            }
+            totalStats[key] += value; // Değeri ekle
+        }
+    });
+});
+
+// // Toplam sonuçları terminale yazdır
+// console.log("Statların toplam değerleri:");
+// for (const [stat, total] of Object.entries(totalStats)) {
+//     console.log(`${stat}: ${total}`);
+// }

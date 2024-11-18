@@ -86,14 +86,14 @@ export const elements = [
         id: 609,
         title: "Mülteci Akını Sürüyor",
         photo: refugeePass,
-        description: "Suriye'deki iç savaştan kaçan mülteciler Türkiye'ye akın ediyor. Bu durum halk arasında rahatsızlık yaratıyor. Kontrolsüzce alınan mülteciler ülkenin iç dinamiklerini nasıl etkileyecek?",
+        description: "İç savaştan kaçan mülteciler Türkiye'ye akın ediyor. Bu durum halk arasında rahatsızlık yaratıyor. Kontrolsüzce alınan mülteciler ülkenin iç dinamiklerini nasıl etkileyecek?",
         listID: "disisleri3",
     },
     {
         id: 610,
         title: "Kaçak Göçmene Geçiş Yok",
         photo: protectBorder,
-        description: "Türk askeri sınırını kaçaklara karşı koruyor. Halk bu karardan memnun, ancak bazı insan hakları örgütleri bu durumu eleştiriyor.",
+        description: "Türk askeri sınırını kaçaklara karşı koruyor. Halkın çoğu kesimi bu karardan memnun, ancak bazı insan hakları örgütleri bu durumu eleştiriyor.",
         listID: "disisleri4",
     },
     {
@@ -142,7 +142,7 @@ export const elements = [
         id: 617,
         title: "Doğuda Sığınmacı Krizi",
         photo: refugeeCrisis,
-        description: "Bugün sabah saatlerinde sığınmacı suriyeliler ile halk arasında arbede yaşandı. Çok sayıda yaralı var.",
+        description: "Bugün sabah saatlerinde sığınmacılar ile halk arasında arbede yaşandı. Çok sayıda yaralı var.",
         listID: "icisleri1",
     },
     {

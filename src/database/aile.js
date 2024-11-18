@@ -25,7 +25,7 @@ export const aileQuestions = [
     },
     {
         id: 11,
-        question: "Suriyeden gelen mülteciler kaçak ve sigortasız çalıştırılıyor, tarım sektöründe ucuz işgücü olarak kullanılıyor.",
+        question: "Komşu ülkelerden gelen mülteciler kaçak ve sigortasız çalıştırılıyor, tarım sektöründe ucuz işgücü olarak kullanılıyor.",
         answers: [
             {
                 text: "Mültecileri ülkemizde istihdam edeceğiz",

@@ -19,7 +19,7 @@ export const nonMinisters = [
                 text: "Tabi ki isterim. Yardımın dokunabilir",
                 effect: {
                     publicSupport: -20,
-                    budget: -20,
+                    budget: -25,
                 }
             },
             {

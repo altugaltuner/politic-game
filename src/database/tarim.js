@@ -30,8 +30,8 @@ export const tarimQuestions = [
             {
                 text: "Çiftçiye vergi indirimi yapılacak",
                 effect: {
-                    publicSupport: +10,
-                    budget: -20,
+                    publicSupport: +5,
+                    budget: -10,
                     agriculturalProduction: +10,
                     internationalRelations: +10,
                 },

@@ -15,7 +15,7 @@ export const savunmaQuestions = [
             {
                 text: "Bütçemiz bunu kaldırmaz",
                 effect: {
-                    budget: +20,
+                    budget: +15,
                     internalSecurity: -20,
                 }
             }

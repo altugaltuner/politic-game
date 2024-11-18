@@ -1,5 +1,5 @@
 import hazineBakani from "../../public/ministers/hazine-bakani.webp";
-// 2 soru var
+// 4 soru var
 export const hazineQuestions = [
     {
         id: 80,
@@ -9,7 +9,7 @@ export const hazineQuestions = [
                 text: "Ekonomistler ile görüşülmeli",
                 effect: {
                     publicSupport: +10,
-                    budget: +5,
+                    budget: +10,
                     infrastructureAndEnvironment: +10,
                 },
             },
@@ -35,6 +35,7 @@ export const hazineQuestions = [
                 effect: {
                     publicSupport: +15,
                     budget: -15,
+                    internalSecurity: +10,
                 },
             },
             {
@@ -42,6 +43,7 @@ export const hazineQuestions = [
                 effect: {
                     publicSupport: -15,
                     budget: +15,
+                    internalSecurity: -10,
                 }
             }
         ],
@@ -74,22 +76,20 @@ export const hazineQuestions = [
     },
     {
         id: 83,
-        question: "Vergi borcu milyon dolarları bulmuş 5 şirket tespit ettim. ",
+        question: "Sayın Cumhurbaşkanım, vergi borcu milyon dolarları bulmuş 5 şirket tespit ettik. ",
         answers: [
             {
-                text: "Borcunu sileceğiz",
+                text: "Borçlarını sileceğiz",
                 effect: {
-                    publicSupport: -10,
-                    budget: -10,
-                    internationalRelations: +15,
+                    publicSupport: -15,
+                    budget: -15,
                 },
             },
             {
-                text: "Borcu tahsil edeceğiz",
+                text: "Borçlarını tahsil edeceğiz",
                 effect: {
                     publicSupport: +10,
-                    budget: +15,
-                    internationalRelations: -15,
+                    budget: +10,
                 }
             }
         ],

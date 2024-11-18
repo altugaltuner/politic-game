@@ -135,7 +135,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     };
 
     const oneInTenChance = () => {
-        const boolean = Math.random() < 0.25;
+        const boolean = Math.random() < 0.30;
         return boolean;
     };
 
@@ -269,7 +269,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                 />
                 <div className="question-container visible text-center bg-white sm:p-2 p-2 rounded-lg border-black border-[3px] w-full flex flex-col justify-start items-center">
 
-                    <div className="flex justify-start items-center md:text-base sm:text-sm min-h-[95px] flex-col w-[90%] text-xs gap-2">
+                    <div className="flex justify-start items-center md:text-base sm:text-sm min-h-[75px] flex-col w-[90%] text-xs gap-2">
                         <h1 className="bg-primary text-white py-1 px-2 rounded-md ">{gameOverReason}</h1>
                         <p className="bg-primary text-white py-1 px-2 rounded-md ">Yönetiminde Geçen Gün : <span>{usedQuestions.length - 1}</span> </p>
                     </div>
@@ -346,7 +346,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             {currentQuestion ? (
                 <div className={` ${isDarkMode ? 'border-white bg-[rgb(17,17,17)]' : 'border-black bg-white'} text-center sm:p-2 p-1 rounded-lg relative border-[3px] flex flex-col justify-start items-center w-full`}>
 
-                    <div className={`question-container ${isVisible ? 'visible' : ''}  flex justify-start items-center font-aldrich md:text-base text-sm min-h-[95px] flex-col w-[90%]`}>
+                    <div className={`question-container ${isVisible ? 'visible' : ''}  flex justify-start items-center font-aldrich md:text-base text-sm min-h-[75px] flex-col w-[90%]`}>
                         <ReactTyped
                             strings={[currentQuestion.question]}
                             typeSpeed={10}

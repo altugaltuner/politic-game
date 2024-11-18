@@ -3,10 +3,10 @@ import icisleriBakani from "../../public/ministers/icisleri-bakani.webp";
 export const icisleriQuestions = [
     {
         id: 90,
-        question: "Ülkedeki Suriyeli mülteci sayısı toplumsal tansiyonu artırıyor. Bazı kesimler, mültecilerin geri gönderilmesini istiyor.",
+        question: "Ülkedeki mülteci sayısı toplumsal tansiyonu artırıyor. Halk bu konudan şikayetçi. Ne yapmalıyız? ",
         answers: [
             {
-                text: "Kademeli olarak göndermeye başlayın",
+                text: "Kademeli olarak göndereceğiz",
                 effect: {
                     publicSupport: +15,
                     budget: +10,
@@ -15,7 +15,7 @@ export const icisleriQuestions = [
                 }
             },
             {
-                text: "Entegrasyon projesini başlatın",
+                text: "Entegrasyon projesini başlatacağız",
                 effect: {
                     publicSupport: -15,
                     budget: -15,
@@ -43,8 +43,8 @@ export const icisleriQuestions = [
             {
                 text: "Şimdilik ertelemek zorundayız",
                 effect: {
-                    budget: +15,
-                    infrastructureAndEnvironment: -15,
+                    budget: +20,
+                    infrastructureAndEnvironment: -25,
                     publicSupport: -10
                 },
                 listID: "icisleri2",
@@ -85,7 +85,7 @@ export const icisleriQuestions = [
                 text: "Yeni yollar inşa edilsin",
                 effect: {
                     budget: -10,
-                    infrastructureAndEnvironment: +10,
+                    infrastructureAndEnvironment: +5,
                     publicSupport: +10,
                 }
             },
@@ -117,7 +117,7 @@ export const icisleriQuestions = [
                 effect: {
                     internalSecurity: +15,
                     internationalRelations: -15,
-                    budget: -20,
+                    budget: -15,
                 },
                 listID: "icisleri3",
             },

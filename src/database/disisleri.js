@@ -49,7 +49,7 @@ export const disisleriQuestions = [
     },
     {
         id: 42,
-        question: "Mülteciler konusunda uluslararası bir kriz yaşanıyor. Yüzbinlerce Afgan ve Suriyeli sınırlarımıza dayanmış durumda...",
+        question: "Mülteciler konusunda uluslararası bir kriz yaşanıyor. Yüzbinlercesi sınırlarımıza dayanmış durumda...",
         answers: [
             {
                 text: "Sınır kapılarını açın",

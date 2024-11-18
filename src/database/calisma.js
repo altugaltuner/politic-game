@@ -9,13 +9,14 @@ export const calismaQuestions = [
                 text: "iş bulma programları başlatın",
                 effect: {
                     publicSupport: +10,
-                    infrastructureAndEnvironment: +10,
+                    infrastructureAndEnvironment: +5,
                 }
             },
             {
                 text: "İşverenlere vergi indirimi yapın",
                 effect: {
                     publicSupport: -15,
+                    infrastructureAndEnvironment: +5,
                 }
             }
         ],
@@ -30,7 +31,7 @@ export const calismaQuestions = [
                 text: "20% lik zam yapın",
                 effect: {
                     publicSupport: -10,
-                    budget: +10,
+                    budget: +20,
                     internalSecurity: -10,
                     agriculturalProduction: +10,
                 }

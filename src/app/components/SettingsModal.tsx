@@ -36,9 +36,9 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
     return (
         <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 '>
             <div className={`flex flex-col ${isDarkMode ? 'bg-[rgb(17,17,17)] text-white border-white' : 'bg-white border-black text-black'} sm:p-5 p-3 rounded-lg w-[90%] max-w-lg items-center gap-4 border-[5px]  text-center`}>
-                <h1>Ayarlar</h1>
+                <h1 className='font-semibold text-2xl'>Ayarlar</h1>
                 <div className='flex gap-3 items-center'>
-                    <p className='font-semibold'>Oyun Kullanım Sayacı :</p>
+                    <p className='font-medium'>Tekil Kullanıcı :</p>
                     <VisitorCounter />
                 </div>
                 <div className='flex sm:gap-6 gap-1 w-full justify-center'>
