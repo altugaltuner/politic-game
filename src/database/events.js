@@ -42,6 +42,8 @@ import scholarship from "../../public/events/scholarship.webp";
 import bribeMoney from "../../public/events/bribe-money.webp";
 import censor from "../../public/events/journalist-censor.webp";
 import wasteFruit from "../../public/events/waste-fruit.webp";
+import getSick from "../../public/events/hastalandın.webp";
+import illuminati from "../../public/events/france-olympic-ritual.webp";
 
 export const events = [
     {
@@ -476,6 +478,25 @@ export const events = [
         effects: {
             agriculturalProduction: -15,
             budget: -15,
+        },
+    },
+    {
+        id: 544,
+        photo: getSick,
+        title: "Hastalandın!",
+        description: "Yorucu bir çalışma gününden sonra hastalandın. Evde tedavi oluyorsun. Meydanları boş bıraktığın için halk üzerindeki nüfuzun azalmaya başladı.",
+        effects: {
+            publicSupport: -10,
+            internationalRelations: -10,
+        },
+    },
+    {
+        id: 545,
+        photo: illuminati,
+        title: "Fransa Olimpiyatlarında Korkutan Ritüel!",
+        description: "Fransa Olimpiyatları'nda yapılan açılış töreninde birbirinden ilginç ve ürkütücü ritüeller gerçekleşti. Bu durum dünya çapında büyük bir tartışma ve gerginlik yarattı.",
+        effects: {
+            internationalRelations: -15,
         },
     },
 ];

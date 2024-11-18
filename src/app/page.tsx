@@ -54,28 +54,39 @@ export default function HomePage() {
       </div>
 
       <div className="h-auto md:h-[90%] lg:w-[90%] w-full flex flex-col md:gap-3 gap-2 justify-around items-center bg-white sm:p-3 p-1 rounded-3xl border-[5px] border-black sm:mb-[80px] mb-[80px]">
-
         <h2 className="font-bold xl:text-[45px] lg:text-[32px] text-[30px]">Hemen Başla</h2>
 
         <form className="flex gap-3 sm:flex-row flex-col items-center pb-3" onSubmit={(e) => {
           e.preventDefault();
-          if (username.trim() !== "") {
-            router.push("/game");
-          }
         }}>
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Kullanıcı Adın" className="h-10 border-2 border-black rounded-lg pl-2" />
 
-          <Button onClick={handleSound} className="md:w-40 w-full" type="submit" disabled={username.trim() === ""}>
+          <Button
+            onClick={(e) => {
+              e.preventDefault();
+              handleSound();
+              if (username.trim() !== "") {
+                router.push("/game");
+              }
+            }}
+            className="md:w-40 w-full"
+            type="button"
+            disabled={username.trim() === ""}
+          >
             Başla
           </Button>
-          <Button className="md:w-40 w-full" onClick={() => {
-            handleSound();
-            router.push("/contact");
-          }}>
+          <Button
+            onClick={(e) => {
+              e.preventDefault();
+              handleSound();
+              router.push("/contact");
+            }}
+            className="md:w-40 w-full"
+            type="button"
+          >
             İletişim
           </Button>
         </form>
-
 
       </div>
       <footer className="absolute bottom-0 w-full bg-black text-white text-center sm:p-2 p-1 text-xs sm:text-sm">
@@ -92,7 +103,6 @@ export default function HomePage() {
           </a>
         </div>
       </footer>
-
     </div>
   );
 }
