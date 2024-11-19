@@ -31,7 +31,7 @@ export const nonMinisters = [
                 },
             }
         ],
-        title: "Eski Ekonmi Bakanı",
+        title: "Eski Ekonomi Bakanı",
         photo: nebati,
     },
     {
