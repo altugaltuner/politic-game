@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ToggleLeft, ToggleRight, Volume2, Volume1, Music, VolumeOff } from "lucide-react";
 import { useTheme } from "../../contexts/ThemeContext";
 import { useVolume } from '../../contexts/VolumeContext';
-import VisitorCounter from './VisitorCounter';
-
 
 interface SettingsModalProps {
     modalOpen: boolean;
