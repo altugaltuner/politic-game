@@ -131,7 +131,7 @@ export const nonMinisters = [
     },
     {
         id: 555,
-        question: "Sayın Erdogan, ülkenizdeki internet sansürü konusunda biraz daha esnek olmanızı rica ediyorum. Bu durum yatırımcılarımızı olumsuz etkiliyor.",
+        question: "Sayın Cumhurbaşkanı, ülkenizdeki internet sansürü konusunda biraz daha esnek olmanızı rica ediyorum. Bu durum yatırımcılarımızı olumsuz etkiliyor.",
         answers: [
             {
                 text: "Halkımızın güvenliği için bu önlemleri alacağız",
