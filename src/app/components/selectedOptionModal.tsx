@@ -12,6 +12,12 @@ type Element = {
     photo: StaticImageData;
     description: string;
     listID: string;
+    lastingEffect?: LastingEffect;
+};
+
+type LastingEffect = {
+    stat: string;
+    value: number;
 };
 
 interface SelectedOptionModalProps {
@@ -58,6 +64,12 @@ const SelectedOptionModal: React.FC<SelectedOptionModalProps> = ({ selectedOptio
                         className="w-full rounded-lg"
                     />
                     <p className="text-gray-700 md:text-sm text-xs">{selectedElement.description}</p>
+                    {selectedElement.lastingEffect && (
+                        <div className="text-gray-700">
+                            <h3 className="font-semibold">Lasting Effect:</h3>
+                            <p>{selectedElement.lastingEffect.stat}: {selectedElement.lastingEffect.value}</p>
+                        </div>
+                    )}
                 </div>
                 <Button onClick={() => setSelectedOptionModalOpen(false)}>Kapat</Button>
             </div>

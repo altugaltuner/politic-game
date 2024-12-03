@@ -17,14 +17,14 @@ type GameStatsProps = {
     resetSelectedListIDs: () => void;
     handleSelectedOptionModalOpen: () => void;
     lastingEffects: Effects[]; // Birden fazla etki içeren dizi
+    setLastingEffects: React.Dispatch<
+        React.SetStateAction<
+            {
+                type: string;
+                value: number;
+                stat: string;
+            }[]>>
 };
-
-interface Effect {
-    type: string; // "increase" veya "decrease"
-    value: number; // Etkinin miktarı
-    stat: keyof Effects; // Etkilenen stat ismi
-}
-
 
 interface Effects {
     stat: string;
@@ -38,7 +38,7 @@ interface Effects {
 }
 
 // Component for Game Stats
-export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetSelectedListIDs, handleSelectedOptionModalOpen, lastingEffects, }) => {
+export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetSelectedListIDs, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, }) => {
     const [agriculture, setAgriculture] = useState<number>(50);
     const [infrastructure, setInfrastructure] = useState<number>(50);
     const [internalSecurity, setInternalSecurity] = useState<number>(50);
@@ -302,7 +302,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         setScore(0);
         setDeathStat(null);
         metalButtonSound();
-
+        setLastingEffects([]);
         resetSelectedListIDs(); // Clear the filteredElements in ListElements
     };
 

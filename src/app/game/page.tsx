@@ -34,6 +34,7 @@ export default function GamePage() {
     }
     const [lastingEffects, setLastingEffects] = useState<Effects[]>([]);
 
+
     const playTickSound = () => {
         const audio = new Audio("/sound-effects/button-metal.wav");
         audio.volume = volume;
@@ -63,7 +64,7 @@ export default function GamePage() {
         if (selectedElement && selectedElement.lastingEffect) {
             setLastingEffects((prev) => [
                 ...prev,
-                { ...selectedElement.lastingEffect, stat: selectedElement.lastingEffect.stat }
+                { ...selectedElement.lastingEffect, stat: selectedElement.lastingEffect.stat, type: selectedElement.lastingEffect.type || '' }
             ]);
         }
     };
@@ -76,7 +77,7 @@ export default function GamePage() {
     return (
         <div className={` ${isDarkMode ? 'bg-black bg-opacity-90' : ''} sm:p-2 p-1 flex xl:flex-row flex-col 2xl:gap-5 gap-1 sm:gap-3 w-full items-start justify-center xl:h-[100vh] h-auto`}>
             <GameStats setSelectedListIDs={handleSetSelectedListID} resetSelectedListIDs={resetSelectedListIDs} handleSelectedOptionModalOpen={handleSelectedOptionModalOpen}
-                lastingEffects={lastingEffects} />
+                lastingEffects={lastingEffects} setLastingEffects={setLastingEffects} />
             <div className="flex flex-col sm:gap-2 gap-1 xl:w-[25%] w-full">
                 <SettingsArea handleOpenModal={handleOpenModal} modalOpen={modalOpen} />
                 <ListElements selectedListIDs={selectedListIDs} />
