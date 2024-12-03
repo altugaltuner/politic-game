@@ -29,6 +29,12 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
     const languages = [
         { value: 'en', label: 'English' },
         { value: 'tr', label: 'Türkçe' },
+        { value: 'de', label: 'Deutsch' },
+        { value: 'es', label: 'Español' },
+        { value: 'fr', label: 'Français' },
+        { value: 'pt', label: 'Português' },
+        { value: 'ru', label: 'Русский' },
+        { value: 'zh', label: '中文 (Chinese)' },
     ];
 
     const getVolumeIcon = () => {
