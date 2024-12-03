@@ -29,6 +29,7 @@ export const cevreQuestions = [
         ],
         title: "Çevre ve Şehircilik Bakanı",
         photo: cevreBakani,
+        level: 1,
     },
     {
         id: 31,
@@ -54,6 +55,7 @@ export const cevreQuestions = [
         ],
         title: "Çevre ve Şehircilik Bakanı",
         photo: cevreBakani,
+        level: 1,
     },
     {
         id: 32,
@@ -76,6 +78,7 @@ export const cevreQuestions = [
         ],
         title: "Çevre ve Şehircilik Bakanı",
         photo: cevreBakani,
+        level: 2,
     },
     {
         id: 33,
@@ -101,6 +104,7 @@ export const cevreQuestions = [
         ],
         title: "Çevre ve Şehircilik Bakanı",
         photo: cevreBakani,
+        level: 2,
     },
     {
         id: 34,
@@ -126,6 +130,7 @@ export const cevreQuestions = [
         ],
         title: "Çevre ve Şehircilik Bakanı",
         photo: cevreBakani,
+        level: 3,
     },
     {
         id: 35,
@@ -150,6 +155,7 @@ export const cevreQuestions = [
         ],
         title: "Çevre ve Şehircilik Bakanı",
         photo: cevreBakani,
+        level: 3,
     },
     {
         id: 36,
@@ -178,6 +184,7 @@ export const cevreQuestions = [
         ],
         title: "Çevre ve Şehircilik Bakanı",
         photo: cevreBakani,
+        level: 1,
     },
 ];
 

@@ -24,6 +24,7 @@ export const turizmQuestions = [
         ],
         title: "Kültür ve Turizm Bakanı",
         photo: turizmBakani,
+        level: 1,
     },
     {
         id: 161,
@@ -46,6 +47,7 @@ export const turizmQuestions = [
         ],
         title: "Kültür ve Turizm Bakanı",
         photo: turizmBakani,
+        level: 2,
     },
     {
         id: 162,
@@ -70,5 +72,6 @@ export const turizmQuestions = [
         ],
         title: "Kültür ve Turizm Bakanı",
         photo: turizmBakani,
+        level: 3,
     },
 ];

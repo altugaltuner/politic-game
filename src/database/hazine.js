@@ -25,6 +25,7 @@ export const hazineQuestions = [
         ],
         title: "Hazine ve Maliye Bakanı",
         photo: hazineBakani,
+        level: 1,
     },
     {
         id: 81,
@@ -49,6 +50,7 @@ export const hazineQuestions = [
         ],
         title: "Hazine ve Maliye Bakanı",
         photo: hazineBakani,
+        level: 1,
     },
     {
         id: 82,
@@ -73,6 +75,7 @@ export const hazineQuestions = [
         ],
         title: "Hazine ve Maliye Bakanı",
         photo: hazineBakani,
+        level: 2,
     },
     {
         id: 83,
@@ -95,5 +98,6 @@ export const hazineQuestions = [
         ],
         title: "Hazine ve Maliye Bakanı",
         photo: hazineBakani,
+        level: 2,
     },
 ];

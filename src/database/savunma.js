@@ -22,6 +22,7 @@ export const savunmaQuestions = [
         ],
         title: "Milli Savunma Bakanı",
         photo: savunmaBakani,
+        level: 1,
     },
     {
         id: 121,
@@ -48,5 +49,6 @@ export const savunmaQuestions = [
         ],
         title: "Milli Savunma Bakanı",
         photo: savunmaBakani,
+        level: 2,
     },
 ];

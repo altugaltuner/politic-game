@@ -24,6 +24,7 @@ export const disisleriQuestions = [
         ],
         title: "Dışişleri Bakanı",
         photo: disisleriBakani,
+        level: 1,
     },
     {
         id: 41,
@@ -46,6 +47,7 @@ export const disisleriQuestions = [
         ],
         title: "Dışişleri Bakanı",
         photo: disisleriBakani,
+        level: 2,
     },
     {
         id: 42,
@@ -72,5 +74,6 @@ export const disisleriQuestions = [
         ],
         title: "Dışişleri Bakanı",
         photo: disisleriBakani,
+        level: 2,
     }
 ];

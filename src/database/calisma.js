@@ -22,6 +22,7 @@ export const calismaQuestions = [
         ],
         title: "Çalışma ve Sosyal Güvenlik Bakanı",
         photo: calismaBakani,
+        level: 1,
     },
     {
         id: 21,
@@ -47,6 +48,7 @@ export const calismaQuestions = [
         ],
         title: "Çalışma ve Sosyal Güvenlik Bakanı",
         photo: calismaBakani,
+        level: 2,
     },
     {
         id: 22,
@@ -70,5 +72,6 @@ export const calismaQuestions = [
         ],
         title: "Çalışma ve Sosyal Güvenlik Bakanı",
         photo: calismaBakani,
+        level: 2,
     },
 ];

@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import StatUpdater from "./StatUpdater";
-import { allQuestions, getRandomQuestion, updateStats, checkGameOver } from "./functions";
+import { allQuestions, getRandomQuestionByLevel, updateStats, checkGameOver } from "./functions";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import ataturk from "../../../public/images/ataturk.webp";
@@ -10,14 +10,25 @@ import { events } from "../../database/events";
 import { EventModal } from "./eventModal";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useVolume } from "@/contexts/VolumeContext";
+import LevelChangePage from "./LevelChangePage";
 
 type GameStatsProps = {
     setSelectedListIDs: (newListID: string) => void;
     resetSelectedListIDs: () => void;
     handleSelectedOptionModalOpen: () => void;
+    lastingEffects: Effects[]; // Birden fazla etki içeren dizi
 };
 
+interface Effect {
+    type: string; // "increase" veya "decrease"
+    value: number; // Etkinin miktarı
+    stat: keyof Effects; // Etkilenen stat ismi
+}
+
+
 interface Effects {
+    stat: string;
+    value: number;
     agriculturalProduction?: number;
     infrastructureAndEnvironment?: number;
     internalSecurity?: number;
@@ -27,16 +38,26 @@ interface Effects {
 }
 
 // Component for Game Stats
-export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetSelectedListIDs, handleSelectedOptionModalOpen }) => {
-    const [agriculture, setAgriculture] = useState(50);
-    const [infrastructure, setInfrastructure] = useState(50);
-    const [internalSecurity, setInternalSecurity] = useState(50);
-    const [international, setInternational] = useState(50);
-    const [budget, setBudget] = useState(50);
-    const [publicOpinion, setPublicOpinion] = useState(50);
+export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetSelectedListIDs, handleSelectedOptionModalOpen, lastingEffects, }) => {
+    const [agriculture, setAgriculture] = useState<number>(50);
+    const [infrastructure, setInfrastructure] = useState<number>(50);
+    const [internalSecurity, setInternalSecurity] = useState<number>(50);
+    const [international, setInternational] = useState<number>(50);
+    const [budget, setBudget] = useState<number>(50);
+    const [publicOpinion, setPublicOpinion] = useState<number>(50);
     const [isVisible, setIsVisible] = useState(true);
     const { isDarkMode } = useTheme();
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [currentLevel, setCurrentLevel] = useState(1);
+    const [isLevelChangeVisible, setIsLevelChangeVisible] = useState(false);
+
+    const handleLevelUp = () => {
+        setIsLevelChangeVisible(true);
+        setTimeout(() => {
+            console.log("Level değişimi gizlendi");
+            setIsLevelChangeVisible(false);
+        }, 4000); // 4 saniye sonra gizle
+    };
 
     useEffect(() => {
         // Tüm soruların fotoğraflarını önceden yükleyin
@@ -88,30 +109,9 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         audio.play();
     };
 
-    function closeModal(effects: Effects) {
-        setIsModalOpen(false);
-
-        if (effects) {
-            if (effects.agriculturalProduction !== undefined) {
-                setAgriculture((prev) => prev + (effects.agriculturalProduction ?? 0));
-            }
-            if (effects.infrastructureAndEnvironment !== undefined) {
-                setInfrastructure((prev) => prev + (effects.infrastructureAndEnvironment ?? 0));
-            }
-            if (effects.internalSecurity !== undefined) {
-                setInternalSecurity((prev) => prev + (effects.internalSecurity ?? 0));
-            }
-            if (effects.publicSupport !== undefined) {
-                setPublicOpinion((prev) => prev + (effects.publicSupport ?? 0));
-            }
-            if (effects.budget !== undefined) {
-                setBudget((prev) => prev + (effects.budget ?? 0));
-            }
-            if (effects.internationalRelations !== undefined) {
-                setInternational((prev) => prev + (effects.internationalRelations ?? 0));
-            }
-        }
-    }
+    useEffect(() => {
+        console.log("lastingEffects", lastingEffects);
+    }, [lastingEffects]);
 
     const getRandomEventIndex = () => {
         return Math.floor(Math.random() * events.length);
@@ -134,6 +134,37 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     const [deathStat, setDeathStat] = useState<string | null>(null);
     const [score, setScore] = useState(0);
 
+    useEffect(() => {
+        if (!currentQuestion) return; // Soru yoksa çalıştırma
+
+        console.log("New question triggered lasting effects:", lastingEffects);
+
+        lastingEffects.forEach((effect) => {
+            switch (effect.stat) {
+                case "agriculturalProduction":
+                    setAgriculture((prev) => prev + effect.value);
+                    break;
+                case "infrastructureAndEnvironment":
+                    setInfrastructure((prev) => prev + effect.value);
+                    break;
+                case "internalSecurity":
+                    setInternalSecurity((prev) => prev + effect.value);
+                    break;
+                case "publicSupport":
+                    setPublicOpinion((prev) => prev + effect.value);
+                    break;
+                case "budget":
+                    setBudget((prev) => prev + effect.value);
+                    break;
+                case "internationalRelations":
+                    setInternational((prev) => prev + effect.value);
+                    break;
+                default:
+                    console.warn(`Unknown stat: ${effect.stat}`);
+            }
+        });
+    }, [currentQuestion]); // Soru değiştiğinde lastingEffects yeniden uygulanır
+
     const getRandomEvent = (usedEvents: number[]) => {
         if (usedQuestions.length > 4 && gameOver === false) {
             const availableEvents = events.filter(
@@ -148,6 +179,17 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             return availableEvents[randomIndex];
         }
     };
+
+    useEffect(() => {
+        const calculateLevel = () => Math.floor(score / 10) + 1;
+
+        const newLevel = calculateLevel();
+        if (newLevel !== currentLevel) {
+            setCurrentLevel(newLevel); // Yeni seviyeyi ayarla
+            handleLevelUp(); // Level atlama animasyonunu başlat
+        }
+    }, [score, currentLevel]); // Hem score hem de currentLevel'ı izleyin
+
 
     const oneInTenChance = () => {
         const boolean = Math.random() < 0.30;
@@ -197,6 +239,13 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         }
     }, [publicOpinion, internalSecurity, international, budget, infrastructure, agriculture, score]);
 
+    useEffect(() => {
+        console.log("currentLevel", currentLevel);
+    }, [currentLevel]);
+
+
+
+
     // Function to handle answer selection
     const answerQuestion = (direction: "left" | "right") => {
         metalButtonSound();
@@ -223,16 +272,15 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         setIsVisible(false);
 
         // Get a random next question that hasn't been used
-        const nextQuestion = getRandomQuestion(usedQuestions);
+        const nextQuestion = getRandomQuestionByLevel(usedQuestions, currentLevel);
         if (!gameOver && nextQuestion) {
-
             setScore((prev) => prev + 1);
 
             setTimeout(() => {
                 setCurrentQuestion(nextQuestion);
                 setUsedQuestions((prev) => [...prev, nextQuestion.id]);
-                setIsVisible(true); // Soru görünümünü göster
-            }, 500); // 0.5 saniye bekleyin
+                setIsVisible(true);
+            }, 500);
 
             setTimeout(() => {
 
@@ -342,12 +390,23 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         )
     }
 
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
+
     return (
         <div className="flex flex-col sm:gap-3 gap-1 xl:w-[72%] w-full justify-center items-center rounded-md relative">
 
             {isModalOpen && currentEvent && (
                 <EventModal event={currentEvent} onClose={closeModal} />
             )}
+
+            {
+                isLevelChangeVisible && (
+                    <LevelChangePage
+                        level={currentLevel}
+                        onComplete={() => setIsLevelChangeVisible(false)} />
+                )}
 
 
             <StatUpdater

@@ -24,6 +24,7 @@ export const ticaretQuestions = [
         ],
         title: "Ticaret Bakanı",
         photo: ticaretBakani,
+        level: 1,
     },
     {
         id: 141,
@@ -48,6 +49,7 @@ export const ticaretQuestions = [
         ],
         title: "Ticaret Bakanı",
         photo: ticaretBakani,
+        level: 2,
     },
     {
         id: 142,
@@ -75,5 +77,6 @@ export const ticaretQuestions = [
         ],
         title: "Ticaret Bakanı",
         photo: ticaretBakani,
+        level: 3,
     },
 ];

@@ -33,6 +33,7 @@ export const nonMinisters = [
         ],
         title: "Eski Ekonomi Bakanı",
         photo: nebati,
+        level: 1,
     },
     {
         id: 551,
@@ -59,6 +60,7 @@ export const nonMinisters = [
         ],
         title: "Elon Musk",
         photo: elonMusk,
+        level: 2,
     },
     {
         id: 552,
@@ -81,6 +83,7 @@ export const nonMinisters = [
         ],
         title: "Emekli Vatandaş",
         photo: emekli,
+        level: 2,
     },
     {
         id: 553,
@@ -103,6 +106,7 @@ export const nonMinisters = [
         ],
         title: "Donald Trump",
         photo: trump,
+        level: 1,
     },
     {
         id: 554,
@@ -128,6 +132,7 @@ export const nonMinisters = [
         ],
         title: "Vladimir Putin",
         photo: putin,
+        level: 1,
     },
     {
         id: 555,
@@ -152,6 +157,7 @@ export const nonMinisters = [
         ],
         title: "PixelMind CEO'su",
         photo: developer,
+        level: 2,
     },
     {
         id: 556,
@@ -177,5 +183,6 @@ export const nonMinisters = [
         ],
         title: "Liam Neeson",
         photo: liamNeeson,
+        level: 2,
     },
 ];

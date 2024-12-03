@@ -34,6 +34,11 @@ export const elements = [
         photo: prisonFull,
         description: "Hapishanelerde yer kalmadığı için bazı hafif suçlardan yargılananların serbest bırakılması konuşuluyor. Yetkililerden açıklama bekleniyor.",
         listID: "adalet2",
+        lastingEffect: {
+            type: "decrease",
+            value: -10,
+            stat: "internalSecurity"
+        }
     },
     {
         id: 602,
@@ -41,6 +46,11 @@ export const elements = [
         photo: illegalWorkers,
         description: "Kaçakların ucuza ve sigortasız çalışması, işverenleri mutlu ederken iş arayan Türk halkının hakettiğinden daha azına çalışmasına sebep oluyor. Halk yetkililerden çözüm bekliyor.",
         listID: "aile1",
+        lastingEffect: {
+            type: "decrease",
+            value: -10,
+            stat: "publicSupport"
+        }
     },
     {
         id: 603,
@@ -48,6 +58,11 @@ export const elements = [
         photo: happFarmer,
         description: "Tarımın desteklenmesi köylünün yüzünü güldürdü. Verilen teşvikler ve vergi indirimleri sayesinde gıda krizinin önüne kısa vadede geçilebilir.",
         listID: "calisma1",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "agriculturalProduction"
+        }
     },
     {
         id: 604,
@@ -55,6 +70,11 @@ export const elements = [
         photo: greeningWorks,
         description: "Büyük şehirlerde parklar ve yeşil alanlar artıyor. Yapılan çalışmalar halk tarafından takdirle karşılanıyor.",
         listID: "cevre1",
+        lastingEffect: {
+            type: "increase",
+            value: +5,
+            stat: "agriculturalProduction"
+        }
     },
     {
         id: 605,
@@ -62,6 +82,11 @@ export const elements = [
         photo: renewableEnergy,
         description: "Akdeniz ve Ege gibi bol güneş alan bölgelerde solar panel yatırımları artıyor. Bu yatırımların enerji maliyetlerine olumlu etkisi olacağı düşünülüyor.",
         listID: "cevre2",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "infrastructureAndEnvironment"
+        }
     },
     {
         id: 606,
@@ -69,6 +94,11 @@ export const elements = [
         photo: tourismAttack,
         description: "Yaz sezonuyla birlikte ülkeye turist akını başladı. Turizm sektörü bu yıl rekor kırmayı hedefliyor.",
         listID: "cevre3",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "budget"
+        }
     },
     {
         id: 607,
@@ -76,6 +106,11 @@ export const elements = [
         photo: tradeAgreement,
         description: "Komşu ülkeyle ticaret anlaşması imzalandı. Bu anlaşmanın ülke ekonomisine etkisi olumlu olacak.",
         listID: "disisleri1",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "internationalRelations"
+        }
     },
     {
         id: 608,
@@ -83,6 +118,11 @@ export const elements = [
         photo: defenceTech,
         description: "İHA ve SİHA'larla askeri savunmasını güçlendirerek dünya pazarında daha çok söz sahibi olmak isteyen Türkiye, bu uğurda büyük yatırımlar yapıyor.",
         listID: "disisleri2",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "internalSecurity"
+        }
     },
     {
         id: 609,
@@ -90,6 +130,11 @@ export const elements = [
         photo: refugeePass,
         description: "İç savaştan kaçan mülteciler Türkiye'ye akın ediyor. Bu durum halk arasında rahatsızlık yaratıyor. Kontrolsüzce alınan mülteciler ülkenin iç dinamiklerini nasıl etkileyecek?",
         listID: "disisleri3",
+        lastingEffect: {
+            type: "decrease",
+            value: -10,
+            stat: "internalSecurity"
+        }
     },
     {
         id: 610,
@@ -97,6 +142,11 @@ export const elements = [
         photo: protectBorder,
         description: "Türk askeri sınırını kaçaklara karşı koruyor. Halkın çoğu kesimi bu karardan memnun, ancak bazı insan hakları örgütleri bu durumu eleştiriyor.",
         listID: "disisleri4",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "internalSecurity"
+        }
     },
     {
         id: 611,
@@ -104,6 +154,11 @@ export const elements = [
         photo: woodenJob,
         description: "Mesleki eğitime ilgi büyük oldu! Gençlerin meslek sahibi olması için yapılan çalışmalar hız kesmeden devam ediyor.",
         listID: "egitim1",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "agriculturalProduction"
+        }
     },
     {
         id: 612,
@@ -111,6 +166,11 @@ export const elements = [
         photo: gasExploration,
         description: "Doğal gaz arama faaliyetleri son hızla devam ediyor. Yapılan sondajlar sonucunda önemli rezervlerin bulunduğu açıklandı.",
         listID: "enerji1",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "infrastructureAndEnvironment"
+        }
     },
     {
         id: 613,
@@ -118,6 +178,11 @@ export const elements = [
         photo: greatAgreement,
         description: "Yapılan anlaşma ile komşu ülkelerle enerji ortaklığı kuruldu. Bu anlaşma sayesinde önümüzdeki 10 yılın toplam enerji ihtiyacının %27'si karşılanacak.",
         listID: "enerji2",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "internationalRelations"
+        }
     },
     {
         id: 614,
@@ -125,6 +190,11 @@ export const elements = [
         photo: nuclearThesis,
         description: "Ülkenin nükleer enerji ihtiyacını karşılamak için inşa edilen dev tesisin temeli atıldı. Bu tesisin önümüzdeki 25 yılın enerji ihtiyacını büyük oranda karşılaması bekleniyor.",
         listID: "enerji3",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "infrastructureAndEnvironment"
+        }
     },
     {
         id: 615,
@@ -132,6 +202,11 @@ export const elements = [
         photo: newFootballField,
         description: "Bakanlık, gençlerin daha çok sportif faaliyetlerde bulunabilmesi için yeni sahalar yapılacağını açıkladı. Bu karar spor camiasında memnuniyetle karşılandı.",
         listID: "genclik1",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "publicSupport"
+        }
     },
     {
         id: 616,
@@ -139,6 +214,11 @@ export const elements = [
         photo: turkishLiraLose,
         description: "Cumhurbaşkanının son kararından sonra Türk lirası ciddi değer kaybına uğradı. Ekonomistler tarafından yapılan açıklamalara göre bu karar ülke ekonomisine ağır darbe vuracak.",
         listID: "hazine1",
+        lastingEffect: {
+            type: "decrease",
+            value: -10,
+            stat: "budget"
+        }
     },
     {
         id: 617,
@@ -146,6 +226,11 @@ export const elements = [
         photo: refugeeCrisis,
         description: "Bugün sabah saatlerinde sığınmacılar ile halk arasında arbede yaşandı. Çok sayıda yaralı var.",
         listID: "icisleri1",
+        lastingEffect: {
+            type: "decrease",
+            value: -10,
+            stat: "internalSecurity"
+        }
     },
     {
         id: 618,
@@ -153,6 +238,11 @@ export const elements = [
         photo: istanbulQuake,
         description: "Beklenen İstanbul Depremi dün sabah saatlerinde 7.4 şiddetinde gerçekleşti. Şehir panik içinde, halk yetkililerden yardım bekliyor.",
         listID: "icisleri2",
+        lastingEffect: {
+            type: "decrease",
+            value: -10,
+            stat: "internalSecurity"
+        }
     },
     {
         id: 619,
@@ -160,6 +250,11 @@ export const elements = [
         photo: polices,
         description: "Bu sabah saatlerinde gerçekleştirilen operasyonda 14 terörist etkisiz hale getirildi. Operasyonun detayları hala gizli tutuluyor.",
         listID: "icisleri3",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "internalSecurity"
+        }
     },
     {
         id: 620,
@@ -167,6 +262,11 @@ export const elements = [
         photo: babiesIncubator,
         description: "Alınan karar doğrultusunda çetenin eski faaliyetleri araştırılacak. Halk bu karardan memnun.",
         listID: "saglik1",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "internalSecurity"
+        }
     },
     {
         id: 621,
@@ -174,6 +274,11 @@ export const elements = [
         photo: toggIntroduced,
         description: "Türkiye'nin yerli otomobili yollara çıktı. Kimi fiyatını çok bulurken kimi şimdiden ön siparişini verdi.",
         listID: "sanayi1",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "infrastructureAndEnvironment"
+        }
     },
     {
         id: 622,
@@ -181,6 +286,11 @@ export const elements = [
         photo: techStartup,
         description: "Yerli teknoloji startupları yatırımcıların ilgisini çekmeye devam ediyor. Bu startuplar, ülkenin teknolojik gelişimine katkı sağlayacak.",
         listID: "sanayi2",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "infrastructureAndEnvironment"
+        }
     },
     {
         id: 623,
@@ -188,6 +298,11 @@ export const elements = [
         photo: supermarketPenalty,
         description: "Etiket fiyatlarını her gün güncelleyen dev zincir marketlere ağır cezalar yazıldı. Devletin mücadelesi sürüyor. Zincir marketlerin bundan sonraki aksiyonları merakla bekleniyor.",
         listID: "ticaret1",
+        lastingEffect: {
+            type: "decrease",
+            value: -10,
+            stat: "budget"
+        }
     },
     {
         id: 624,
@@ -195,6 +310,11 @@ export const elements = [
         photo: fastTrain,
         description: "Ankara-İstanbul hızlı tren hattı açıldı. Bu hattın açılmasıyla birlikte ulaşım süresinin yarı yarıya kısaldığı açıklandı.",
         listID: "ulastirma1",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "infrastructureAndEnvironment"
+        }
     },
     {
         id: 625,
@@ -202,6 +322,11 @@ export const elements = [
         photo: bombMall,
         description: "PlazarInn AVM'de gerçekleşen bombalı saldırıda çok sayıda ölü ve yaralı var. Güvenlik güçleri ve sağlık ekipleri olay yerine intikal etti. Olayda şüpheli iki kişi gözaltına alındı.",
         listID: "savunma1",
+        lastingEffect: {
+            type: "decrease",
+            value: -10,
+            stat: "internalSecurity"
+        }
     },
     {
         id: 626,
@@ -209,6 +334,11 @@ export const elements = [
         photo: disabledBomb,
         description: "PlazarInn AVM'de gerçekleşmesi planlanan bombalı terör saldırısı önceden tespit edilerek bomba etkisiz hale getirildi. Güvenlik güçleri olayla ilgili soruşturma başlattı.",
         listID: "savunma2",
+        lastingEffect: {
+            type: "increase",
+            value: +10,
+            stat: "internalSecurity"
+        }
     },
     {
         id: 627,
@@ -216,6 +346,11 @@ export const elements = [
         photo: istanbulArab,
         description: "Liam Neeson'ın yeni filmindeki İstanbul sahneleri kanser etti. İstanbulun alenen ortadoğu şehri gibi gösterildiği filme tepkiler büyüyor.",
         listID: "liamNeeson",
+        lastingEffect: {
+            type: "decrease",
+            value: -10,
+            stat: "publicSupport"
+        }
     },
     {
         id: 628,
@@ -223,5 +358,10 @@ export const elements = [
         photo: s400,
         description: "ABD'nin tepkisine rağmen Rusya'dan alınan S-400 hava savunma sistemleri ülkeye geldi. Türkiye dış politikada kararlı duruşunu koruyor!",
         listID: "S400",
+        lastingEffect: {
+            type: "increase",
+            value: -10,
+            stat: "internalSecurity"
+        }
     },
 ];

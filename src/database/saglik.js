@@ -22,6 +22,7 @@ export const saglikQuestions = [
         ],
         title: "Sağlık Bakanı",
         photo: saglikBakani,
+        level: 2,
     },
     {
         id: 101,
@@ -46,6 +47,7 @@ export const saglikQuestions = [
         ],
         title: "Sağlık Bakanı",
         photo: saglikBakani,
+        level: 2,
     },
     {
         id: 102,
@@ -69,5 +71,6 @@ export const saglikQuestions = [
         ],
         title: "Sağlık Bakanı",
         photo: saglikBakani,
+        level: 2,
     },
 ];

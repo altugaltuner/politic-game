@@ -24,6 +24,7 @@ export const egitimQuestions = [
         ],
         title: "Milli Eğitim Bakanı",
         photo: egitimBakani,
+        level: 1,
     },
     {
         id: 51,
@@ -47,5 +48,6 @@ export const egitimQuestions = [
         ],
         title: "Milli Eğitim Bakanı",
         photo: egitimBakani,
+        level: 2,
     }
 ];

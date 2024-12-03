@@ -25,6 +25,7 @@ export const ulastirmaQuestions = [
         ],
         title: "Ulaştırma Bakanı",
         photo: ulastirmaBakani,
+        level: 1,
     },
     {
         id: 151,
@@ -49,6 +50,7 @@ export const ulastirmaQuestions = [
         ],
         title: "Ulaştırma Bakanı",
         photo: ulastirmaBakani,
+        level: 2,
     },
     {
         id: 152,
@@ -72,6 +74,7 @@ export const ulastirmaQuestions = [
         ],
         title: "Ulaştırma Bakanı",
         photo: ulastirmaBakani,
+        level: 2,
     },
     {
         id: 153,
@@ -96,5 +99,6 @@ export const ulastirmaQuestions = [
         ],
         title: "Ulaştırma Bakanı",
         photo: ulastirmaBakani,
+        level: 3,
     },
 ];

@@ -19,6 +19,7 @@ export const adaletQuestions = [
         ],
         title: "Altuğ",
         photo: altug,
+        level: 1,
     },
     {
         id: 2,
@@ -43,6 +44,7 @@ export const adaletQuestions = [
         ],
         title: "Adalet Bakanı",
         photo: adaletBakanı,
+        level: 1,
     },
     {
         id: 3,
@@ -68,6 +70,7 @@ export const adaletQuestions = [
         ],
         title: "Adalet Bakanı",
         photo: adaletBakanı,
+        level: 2,
     },
     {
         id: 4,
@@ -93,5 +96,6 @@ export const adaletQuestions = [
         ],
         title: "Adalet Bakanı",
         photo: adaletBakanı,
+        level: 2,
     },
 ];

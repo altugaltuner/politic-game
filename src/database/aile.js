@@ -22,6 +22,7 @@ export const aileQuestions = [
         ],
         title: "Aile ve Sosyal Hizmetler Bakanı",
         photo: aileBakanı,
+        level: 1,
     },
     {
         id: 11,
@@ -45,5 +46,6 @@ export const aileQuestions = [
         ],
         title: "Aile ve Sosyal Hizmetler Bakanı",
         photo: aileBakanı,
+        level: 2,
     },
 ];

@@ -27,6 +27,7 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
+        level: 1,
     },
     {
         id: 91,
@@ -52,6 +53,7 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
+        level: 2,
     },
     {
         id: 92,
@@ -76,6 +78,7 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
+        level: 2,
     },
     {
         id: 93,
@@ -99,6 +102,7 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
+        level: 2,
     },
     {
         id: 94,
@@ -124,5 +128,6 @@ export const icisleriQuestions = [
         ],
         title: "İçişleri Bakanı",
         photo: icisleriBakani,
+        level: 1,
     },
 ];

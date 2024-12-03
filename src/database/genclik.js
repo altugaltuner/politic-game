@@ -25,5 +25,6 @@ export const genclikQuestions = [
         ],
         title: "Gençlik ve Spor Bakanı",
         photo: genclikBakani,
+        level: 2,
     },
 ];

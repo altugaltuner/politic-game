@@ -22,6 +22,7 @@ export const tarimQuestions = [
         ],
         title: "Tarım Bakanı",
         photo: tarimBakani,
+        level: 1,
     },
     {
         id: 131,
@@ -48,6 +49,7 @@ export const tarimQuestions = [
         ],
         title: "Tarım Bakanı",
         photo: tarimBakani,
+        level: 1,
     },
     {
         id: 132,
@@ -70,6 +72,7 @@ export const tarimQuestions = [
         ],
         title: "Tarım Bakanı",
         photo: tarimBakani,
+        level: 2,
     },
     {
         id: 133,
@@ -93,6 +96,7 @@ export const tarimQuestions = [
         ],
         title: "Tarım Bakanı",
         photo: tarimBakani,
+        level: 2,
     },
     {
         id: 134,
@@ -117,5 +121,6 @@ export const tarimQuestions = [
         ],
         title: "Tarım Bakanı",
         photo: tarimBakani,
+        level: 3,
     }
 ];

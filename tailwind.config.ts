@@ -9,6 +9,11 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			translate: {
+				'[-100%]': '-100%',
+				'[0]': '0%',
+				'[100%]': '100%',
+			},
 			fontFamily: {
 				aldrich: ["Aldrich", "sans-serif"],
 				times: ['Times New Roman', 'sans-serif'],

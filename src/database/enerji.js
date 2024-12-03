@@ -23,6 +23,7 @@ export const enerjiQuestions = [
         ],
         title: "Enerji ve Tabii Kaynaklar Bakanı",
         photo: enerjiBakani,
+        level: 1,
     },
     {
         id: 61,
@@ -50,5 +51,6 @@ export const enerjiQuestions = [
         ],
         title: "Enerji ve Tabii Kaynaklar Bakanı",
         photo: enerjiBakani,
+        level: 2,
     },
 ];

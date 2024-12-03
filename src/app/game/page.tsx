@@ -8,6 +8,21 @@ import SettingsModal from "../components/SettingsModal";
 import SelectedOptionModal from "../components/selectedOptionModal";
 import { useTheme } from '@/contexts/ThemeContext';
 import { useVolume } from "@/contexts/VolumeContext";
+import { elements } from "@/database/elements";
+
+type Effects = {
+    type: string;
+    stat: string;
+    value: number;
+    agriculturalProduction?: number;
+    infrastructureAndEnvironment?: number;
+    internalSecurity?: number;
+    publicSupport?: number;
+    budget?: number;
+    internationalRelations?: number;
+    [key: string]: number | string | undefined;
+};
+
 
 export default function GamePage() {
     const { volume } = useVolume();
@@ -17,6 +32,7 @@ export default function GamePage() {
     const handleSelectedOptionModalOpen = () => {
         setSelectedOptionModalOpen(true);
     }
+    const [lastingEffects, setLastingEffects] = useState<Effects[]>([]);
 
     const playTickSound = () => {
         const audio = new Audio("/sound-effects/button-metal.wav");
@@ -39,16 +55,28 @@ export default function GamePage() {
 
     const handleSetSelectedListID = (newListID: string) => {
         setSelectedListIDs((prevListIDs) =>
-            prevListIDs.includes(newListID) ? prevListIDs : [newListID, ...prevListIDs,]
+            prevListIDs.includes(newListID) ? prevListIDs : [newListID, ...prevListIDs]
         );
+
+        // Yeni lastingEffect ekleme
+        const selectedElement = elements.find((el) => el.listID === newListID);
+        if (selectedElement && selectedElement.lastingEffect) {
+            setLastingEffects((prev) => [
+                ...prev,
+                { ...selectedElement.lastingEffect, stat: selectedElement.lastingEffect.stat }
+            ]);
+        }
     };
+
+
 
     // Function to reset selectedListIDs
     const resetSelectedListIDs = () => setSelectedListIDs([]);
 
     return (
         <div className={` ${isDarkMode ? 'bg-black bg-opacity-90' : ''} sm:p-2 p-1 flex xl:flex-row flex-col 2xl:gap-5 gap-1 sm:gap-3 w-full items-start justify-center xl:h-[100vh] h-auto`}>
-            <GameStats setSelectedListIDs={handleSetSelectedListID} resetSelectedListIDs={resetSelectedListIDs} handleSelectedOptionModalOpen={handleSelectedOptionModalOpen} />
+            <GameStats setSelectedListIDs={handleSetSelectedListID} resetSelectedListIDs={resetSelectedListIDs} handleSelectedOptionModalOpen={handleSelectedOptionModalOpen}
+                lastingEffects={lastingEffects} />
             <div className="flex flex-col sm:gap-2 gap-1 xl:w-[25%] w-full">
                 <SettingsArea handleOpenModal={handleOpenModal} modalOpen={modalOpen} />
                 <ListElements selectedListIDs={selectedListIDs} />

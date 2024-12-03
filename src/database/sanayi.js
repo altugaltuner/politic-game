@@ -24,6 +24,7 @@ export const sanayiQuestions = [
         ],
         title: "Sanayi ve Teknoloji Bakanı",
         photo: sanayiBakani,
+        level: 2,
     },
     {
         id: 111,
@@ -49,6 +50,7 @@ export const sanayiQuestions = [
         ],
         title: "Sanayi ve Teknoloji Bakanı",
         photo: sanayiBakani,
+        level: 2,
     },
     {
         id: 112,
@@ -74,5 +76,6 @@ export const sanayiQuestions = [
         ],
         title: "Sanayi ve Teknoloji Bakanı",
         photo: sanayiBakani,
+        level: 1,
     },
 ];

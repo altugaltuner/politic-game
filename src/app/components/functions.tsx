@@ -34,6 +34,7 @@ type Question = {
     id: number;
     question: string;
     link?: string;
+    level: number;
     answers: {
         listID?: string | null;
         text: string;
@@ -81,15 +82,16 @@ export const allQuestions: Question[] = [
 
 ].filter((question): question is Question => 'id' in question && question.id !== undefined);
 
-
-// Function to select a random question
-export const getRandomQuestion = (usedQuestions: number[]) => {
+export const getRandomQuestionByLevel = (usedQuestions: number[], currentLevel: number) => {
     const availableQuestions = allQuestions.filter(
-        (q) => q.id !== undefined && !usedQuestions.includes(q.id)
+        (q) =>
+            q.id !== undefined &&
+            !usedQuestions.includes(q.id) &&
+            q.level === currentLevel
     );
 
     if (availableQuestions.length === 0) {
-        return null; // No questions left
+        return null; // Bu seviyede daha fazla soru yok
     }
 
     const randomIndex = Math.floor(Math.random() * availableQuestions.length);
