@@ -52,16 +52,11 @@ const LevelChangePage = ({
 
     return (
         <div
-            className={`fixed top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-1000 ease-in-out ${animationClass}`}
+            className={`fixed top-0 left-0 w-full h-full flex items-center justify-center transition-transform duration-1000 bg-black bg-opacity-70 ease-in-out z-50 ${animationClass}`}
         >
             {currentLevel && (
-                <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-5 border border-black w-[80%] h-[70%]">
-                    <h1 className="text-black text-4xl font-bold">LEVEL {currentLevel.id}</h1>
-                    <img
-                        src={currentLevel.image.src}
-                        alt={`Level ${currentLevel.id}`}
-                        className="w-3/4 md:w-1/2 h-auto border border-black rounded-lg"
-                    />
+                <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-5 w-[50%] h-[50%]">
+                    <h1 className="text-black text-7xl font-bold text-center">LEVEL {currentLevel.id}</h1>
                 </div>
             )}
         </div>

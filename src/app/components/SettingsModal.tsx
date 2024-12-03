@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { ToggleLeft, ToggleRight, Volume2, Volume1, Music, VolumeOff } from "lucide-react";
 import { useTheme } from "../../contexts/ThemeContext";
@@ -13,13 +13,16 @@ interface SettingsModalProps {
 const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFunc }) => {
     const { isDarkMode, toggleTheme } = useTheme();
     const { volume, setVolume } = useVolume(); // Global volume state'i alın
-
+    const [selectedLanguage, setSelectedLanguage] = useState("English");
+    const [dropdownOpen, setDropdownOpen] = useState(false);
     if (!modalOpen) return null;
 
     const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newVolume = parseFloat(e.target.value);
         setVolume(newVolume);
     };
+
+    const languages = ["English", "Türkçe", "Español", "Deutsch", "Français", "中文", "Русский", "日本語", "한국어", "Italiano"];
 
     const getVolumeIcon = () => {
         if (volume === 0) {
@@ -61,6 +64,30 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
                         <p>Müzik</p>
                         <Music size={32} />
                     </div>
+                </div>
+                <div className='relative w-full'>
+                    <div
+                        className={`cursor-pointer p-3 rounded-lg ${isDarkMode ? 'bg-[rgb(17,17,17)] text-white' : 'bg-white text-black'} border`}
+                        onClick={() => setDropdownOpen(!dropdownOpen)}
+                    >
+                        {selectedLanguage}
+                    </div>
+                    {dropdownOpen && (
+                        <div className={`absolute top-12 left-0 w-full max-h-40 overflow-y-scroll rounded-lg shadow-lg border z-10 ${isDarkMode ? 'bg-[rgba(0,0,0,0.8)] text-white border-white' : 'bg-[rgba(255,255,255,1)] text-black border-black'}`}>
+                            {languages.map((language, index) => (
+                                <div
+                                    key={index}
+                                    className='p-2 hover:bg-neutral-300 cursor-pointer'
+                                    onClick={() => {
+                                        setSelectedLanguage(language);
+                                        setDropdownOpen(false);
+                                    }}
+                                >
+                                    {language}
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
                 <Button className={`${isDarkMode ? 'bg-white text-black border-white hover:bg-neutral-400' : ''}`} onClick={() => setModalOpenFunc()}>Kapat</Button>
             </div>

@@ -49,7 +49,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     const { isDarkMode } = useTheme();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [currentLevel, setCurrentLevel] = useState(1);
-    const [isLevelChangeVisible, setIsLevelChangeVisible] = useState(false);
+    const [isLevelChangeVisible, setIsLevelChangeVisible] = useState(true);
 
     const handleLevelUp = () => {
         setIsLevelChangeVisible(true);
@@ -319,7 +319,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     // Oyun bittiyse oyunun son ekranını göster
     if (gameOver) {
         return (
-            <div className="flex flex-col gap-3 xl:w-[72%] w-full justify-center items-center rounded-md relative">
+            <div className="flex flex-col gap-3 xl:w-[70%] w-full justify-center items-center rounded-md relative">
                 <StatUpdater
                     agriculture={agriculture}
                     infrastructure={infrastructure}
@@ -360,7 +360,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
     if (usedQuestions.length === 30) {
         return (
-            <div className="flex flex-col gap-3 xl:w-[72%] w-full justify-center items-center rounded-md relative">
+            <div className="flex flex-col gap-3 xl:w-[70%] w-full justify-center items-center rounded-md relative">
                 <StatUpdater
                     agriculture={agriculture}
                     infrastructure={infrastructure}
@@ -395,7 +395,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     };
 
     return (
-        <div className="flex flex-col sm:gap-3 gap-1 xl:w-[72%] w-full justify-center items-center rounded-md relative">
+        <div className="flex flex-col sm:gap-3 gap-1 xl:w-[70%] w-full justify-center items-center rounded-md relative">
 
             {isModalOpen && currentEvent && (
                 <EventModal event={currentEvent} onClose={closeModal} />
