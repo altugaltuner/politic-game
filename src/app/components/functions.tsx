@@ -59,31 +59,97 @@ const convertPhotoToString = (questions: Question[]): Question[] => {
     }));
 };
 
+export const allQuestionsByLanguage: Record<string, Question[]> = {
+    en: [
+        ...convertPhotoToString(adaletQuestions.en),
+        // ...convertPhotoToString(aileQuestions.en),
+        // ...convertPhotoToString(calismaQuestions.en),
+        // ...convertPhotoToString(cevreQuestions.en),
+        // ...convertPhotoToString(disisleriQuestions.en),
+        // ...convertPhotoToString(egitimQuestions.en),
+        // ...convertPhotoToString(enerjiQuestions.en),
+        // ...convertPhotoToString(genclikQuestions.en),
+        // ...convertPhotoToString(hazineQuestions.en),
+        // ...convertPhotoToString(icisleriQuestions.en),
+        // ...convertPhotoToString(saglikQuestions.en),
+        // ...convertPhotoToString(sanayiQuestions.en),
+        // ...convertPhotoToString(savunmaQuestions.en),
+        // ...convertPhotoToString(tarimQuestions.en),
+        // ...convertPhotoToString(ticaretQuestions.en),
+        // ...convertPhotoToString(ulastirmaQuestions.en),
+        // ...convertPhotoToString(turizmQuestions.en),
+        // ...convertPhotoToString(nonMinisters.en),
+        // Diğer İngilizce sorular
+    ],
+    tr: [
+        ...convertPhotoToString(adaletQuestions.tr),
+        // ...convertPhotoToString(aileQuestions.tr),
+        // ...convertPhotoToString(calismaQuestions.tr),
+        // ...convertPhotoToString(cevreQuestions.tr),
+        // ...convertPhotoToString(disisleriQuestions.tr),
+        // ...convertPhotoToString(egitimQuestions.tr),
+        // ...convertPhotoToString(enerjiQuestions.tr),
+        // ...convertPhotoToString(genclikQuestions.tr),
+        // ...convertPhotoToString(hazineQuestions.tr),
+        // ...convertPhotoToString(icisleriQuestions.tr),
+        // ...convertPhotoToString(saglikQuestions.tr),
+        // ...convertPhotoToString(sanayiQuestions.tr),
+        // ...convertPhotoToString(savunmaQuestions.tr),
+        // ...convertPhotoToString(tarimQuestions.tr),
+        // ...convertPhotoToString(ticaretQuestions.tr),
+        // ...convertPhotoToString(ulastirmaQuestions.tr),
+        // ...convertPhotoToString(turizmQuestions.tr),
+        // ...convertPhotoToString(nonMinisters.tr),
+        // Diğer Türkçe sorular
+    ],
+    de: [
+        ...convertPhotoToString(adaletQuestions.de),
+        // ...convertPhotoToString(aileQuestions.de),
+        // ...convertPhotoToString(calismaQuestions.de),
+        // ...convertPhotoToString(cevreQuestions.de),
+        // ...convertPhotoToString(disisleriQuestions.de),
+        // ...convertPhotoToString(egitimQuestions.de),
+        // ...convertPhotoToString(enerjiQuestions.de),
+        // ...convertPhotoToString(genclikQuestions.de),
+        // ...convertPhotoToString(hazineQuestions.de),
+        // ...convertPhotoToString(icisleriQuestions.de),
+        // ...convertPhotoToString(saglikQuestions.de),
+        // ...convertPhotoToString(sanayiQuestions.de),
+        // ...convertPhotoToString(savunmaQuestions.de),
+        // ...convertPhotoToString(tarimQuestions.de),
+        // ...convertPhotoToString(ticaretQuestions.de),
+        // ...convertPhotoToString(ulastirmaQuestions.de),
+        // ...convertPhotoToString(turizmQuestions.de),
+        // ...convertPhotoToString(nonMinisters.de),
+        // Diğer İngilizce sorular
+    ],
+};
 
-export const allQuestions: Question[] = [
-    ...convertPhotoToString(adaletQuestions),
-    ...convertPhotoToString(aileQuestions),
-    ...convertPhotoToString(calismaQuestions),
-    ...convertPhotoToString(cevreQuestions),
-    ...convertPhotoToString(disisleriQuestions),
-    ...convertPhotoToString(egitimQuestions),
-    ...convertPhotoToString(enerjiQuestions),
-    ...convertPhotoToString(genclikQuestions),
-    ...convertPhotoToString(hazineQuestions),
-    ...convertPhotoToString(icisleriQuestions),
-    ...convertPhotoToString(saglikQuestions),
-    ...convertPhotoToString(sanayiQuestions),
-    ...convertPhotoToString(savunmaQuestions),
-    ...convertPhotoToString(tarimQuestions),
-    ...convertPhotoToString(ticaretQuestions),
-    ...convertPhotoToString(ulastirmaQuestions),
-    ...convertPhotoToString(turizmQuestions),
-    ...convertPhotoToString(nonMinisters),
+// export const allQuestions: Question[] = [
+//     ...convertPhotoToString(adaletQuestions),
+//     ...convertPhotoToString(aileQuestions),
+//     ...convertPhotoToString(calismaQuestions),
+//     ...convertPhotoToString(cevreQuestions),
+//     ...convertPhotoToString(disisleriQuestions),
+//     ...convertPhotoToString(egitimQuestions),
+//     ...convertPhotoToString(enerjiQuestions),
+//     ...convertPhotoToString(genclikQuestions),
+//     ...convertPhotoToString(hazineQuestions),
+//     ...convertPhotoToString(icisleriQuestions),
+//     ...convertPhotoToString(saglikQuestions),
+//     ...convertPhotoToString(sanayiQuestions),
+//     ...convertPhotoToString(savunmaQuestions),
+//     ...convertPhotoToString(tarimQuestions),
+//     ...convertPhotoToString(ticaretQuestions),
+//     ...convertPhotoToString(ulastirmaQuestions),
+//     ...convertPhotoToString(turizmQuestions),
+//     ...convertPhotoToString(nonMinisters),
 
-].filter((question): question is Question => 'id' in question && question.id !== undefined);
+// ].filter((question): question is Question => 'id' in question && question.id !== undefined);
 
-export const getRandomQuestionByLevel = (usedQuestions: number[], currentLevel: number) => {
-    const availableQuestions = allQuestions.filter(
+
+export const getRandomQuestionByLevel = (usedQuestions: number[], currentLevel: number, language: string) => {
+    const availableQuestions = allQuestionsByLanguage[language].filter(
         (q) =>
             q.id !== undefined &&
             !usedQuestions.includes(q.id) &&
@@ -97,6 +163,7 @@ export const getRandomQuestionByLevel = (usedQuestions: number[], currentLevel: 
     const randomIndex = Math.floor(Math.random() * availableQuestions.length);
     return availableQuestions[randomIndex];
 };
+
 
 // Function to update stats based on the selected answer's effects
 

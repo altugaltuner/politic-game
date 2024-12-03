@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import StatUpdater from "./StatUpdater";
-import { allQuestions, getRandomQuestionByLevel, updateStats, checkGameOver } from "./functions";
+import { getRandomQuestionByLevel, updateStats, checkGameOver, allQuestionsByLanguage } from "./functions";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import ataturk from "../../../public/images/ataturk.webp";
@@ -11,6 +11,7 @@ import { EventModal } from "./eventModal";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useVolume } from "@/contexts/VolumeContext";
 import LevelChangePage from "./LevelChangePage";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 type GameStatsProps = {
     setSelectedListIDs: (newListID: string) => void;
@@ -50,6 +51,18 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [currentLevel, setCurrentLevel] = useState(1);
     const [isLevelChangeVisible, setIsLevelChangeVisible] = useState(true);
+    const { language } = useLanguage(); // Dil bilgisi
+    const [allQuestions, setAllQuestions] = useState(allQuestionsByLanguage[language]); // Dil bazlı sorular
+    const [currentQuestion, setCurrentQuestion] = useState(allQuestions[0]);
+
+    useEffect(() => {
+        setAllQuestions(allQuestionsByLanguage[language]); // Dil değişince soruları güncelle
+        setCurrentQuestion(allQuestionsByLanguage[language][0]); // İlk soruyu güncelle
+    }, [language]);
+
+
+
+
 
     const handleLevelUp = () => {
         setIsLevelChangeVisible(true);
@@ -128,7 +141,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
     // Set the first question as fixed
     const [usedQuestions, setUsedQuestions] = useState<number[]>([allQuestions[0].id]);
-    const [currentQuestion, setCurrentQuestion] = useState(allQuestions[0]);
+
     const [gameOver, setGameOver] = useState(false);
     const [gameOverReason, setGameOverReason] = useState("");
     const [deathStat, setDeathStat] = useState<string | null>(null);
@@ -181,7 +194,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     };
 
     useEffect(() => {
-        const calculateLevel = () => Math.floor(score / 10) + 1;
+        const calculateLevel = () => Math.floor(score / 3) + 1;
 
         const newLevel = calculateLevel();
         if (newLevel !== currentLevel) {
@@ -272,7 +285,11 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         setIsVisible(false);
 
         // Get a random next question that hasn't been used
-        const nextQuestion = getRandomQuestionByLevel(usedQuestions, currentLevel);
+        const nextQuestion = getRandomQuestionByLevel(usedQuestions, currentLevel, language);
+
+        if (nextQuestion) {
+            setCurrentQuestion(nextQuestion);
+        }
         if (!gameOver && nextQuestion) {
             setScore((prev) => prev + 1);
 
@@ -319,7 +336,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     // Oyun bittiyse oyunun son ekranını göster
     if (gameOver) {
         return (
-            <div className="flex flex-col gap-3 xl:w-[70%] w-full justify-center items-center rounded-md relative">
+            <div className="flex flex-col gap-3 xl:w-[72%] w-full justify-center items-center rounded-md relative">
                 <StatUpdater
                     agriculture={agriculture}
                     infrastructure={infrastructure}
@@ -360,7 +377,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
     if (usedQuestions.length === 30) {
         return (
-            <div className="flex flex-col gap-3 xl:w-[70%] w-full justify-center items-center rounded-md relative">
+            <div className="flex flex-col gap-3 xl:w-[72%] w-full justify-center items-center rounded-md relative">
                 <StatUpdater
                     agriculture={agriculture}
                     infrastructure={infrastructure}
@@ -395,7 +412,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     };
 
     return (
-        <div className="flex flex-col sm:gap-3 gap-1 xl:w-[70%] w-full justify-center items-center rounded-md relative">
+        <div className="flex flex-col sm:gap-3 gap-1 xl:w-[72%] w-full justify-center items-center rounded-md relative">
 
             {isModalOpen && currentEvent && (
                 <EventModal event={currentEvent} onClose={closeModal} />

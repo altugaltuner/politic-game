@@ -1,8 +1,11 @@
+"use client";
+
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { ToggleLeft, ToggleRight, Volume2, Volume1, Music, VolumeOff } from "lucide-react";
 import { useTheme } from "../../contexts/ThemeContext";
 import { useVolume } from '../../contexts/VolumeContext';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface SettingsModalProps {
     modalOpen: boolean;
@@ -13,16 +16,20 @@ interface SettingsModalProps {
 const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFunc }) => {
     const { isDarkMode, toggleTheme } = useTheme();
     const { volume, setVolume } = useVolume(); // Global volume state'i alın
-    const [selectedLanguage, setSelectedLanguage] = useState("English");
     const [dropdownOpen, setDropdownOpen] = useState(false);
     if (!modalOpen) return null;
+
+    const { language, setLanguage } = useLanguage(); // Dil context'ini kullan
 
     const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newVolume = parseFloat(e.target.value);
         setVolume(newVolume);
     };
 
-    const languages = ["English", "Türkçe", "Español", "Deutsch", "Français", "中文", "Русский", "日本語", "한국어", "Italiano"];
+    const languages = [
+        { value: 'en', label: 'English' },
+        { value: 'tr', label: 'Türkçe' },
+    ];
 
     const getVolumeIcon = () => {
         if (volume === 0) {
@@ -65,29 +72,35 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
                         <Music size={32} />
                     </div>
                 </div>
-                <div className='relative w-full'>
-                    <div
-                        className={`cursor-pointer p-3 rounded-lg ${isDarkMode ? 'bg-[rgb(17,17,17)] text-white' : 'bg-white text-black'} border`}
-                        onClick={() => setDropdownOpen(!dropdownOpen)}
-                    >
-                        {selectedLanguage}
+                <div className='w-full'>
+                    <p className='mb-2'>Select Language</p>
+                    <div className="relative">
+                        <button
+                            className="p-2 border rounded w-full text-left"
+                            onClick={() => setDropdownOpen(!dropdownOpen)}
+                        >
+                            {languages.find((lang) => lang.value === language)?.label || 'Select Language'}
+                        </button>
+                        {dropdownOpen && (
+                            <div
+                                className={`absolute top-12 left-0 w-full max-h-40 overflow-y-scroll rounded-lg shadow-lg border z-10 ${isDarkMode ? 'bg-[rgba(0,0,0,0.8)] text-white' : 'bg-[rgba(255,255,255,1)] text-black'
+                                    }`}
+                            >
+                                {languages.map((lang) => (
+                                    <div
+                                        key={lang.value}
+                                        className="p-2 hover:bg-neutral-300 cursor-pointer"
+                                        onClick={() => {
+                                            setLanguage(lang.value as 'en' | 'tr'); // Dil değiştir
+                                            setDropdownOpen(false);
+                                        }}
+                                    >
+                                        {lang.label}
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
-                    {dropdownOpen && (
-                        <div className={`absolute top-12 left-0 w-full max-h-40 overflow-y-scroll rounded-lg shadow-lg border z-10 ${isDarkMode ? 'bg-[rgba(0,0,0,0.8)] text-white border-white' : 'bg-[rgba(255,255,255,1)] text-black border-black'}`}>
-                            {languages.map((language, index) => (
-                                <div
-                                    key={index}
-                                    className='p-2 hover:bg-neutral-300 cursor-pointer'
-                                    onClick={() => {
-                                        setSelectedLanguage(language);
-                                        setDropdownOpen(false);
-                                    }}
-                                >
-                                    {language}
-                                </div>
-                            ))}
-                        </div>
-                    )}
                 </div>
                 <Button className={`${isDarkMode ? 'bg-white text-black border-white hover:bg-neutral-400' : ''}`} onClick={() => setModalOpenFunc()}>Kapat</Button>
             </div>
