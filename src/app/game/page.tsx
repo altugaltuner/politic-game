@@ -36,14 +36,20 @@ export default function GamePage() {
     }
     const [lastingEffects, setLastingEffects] = useState<Effects[]>([]);
 
-    const [bonusBudget, setBonusBudget] = useState<number>(0);
-    const [bonusPublic, setBonusPublic] = useState<number>(0);
-    const [bonusInternational, setBonusInternational] = useState<number>(0);
-    const [bonusInfrastructure, setBonusInfrastructure] = useState<number>(0);
-    const [bonusSecurity, setBonusSecurity] = useState<number>(0);
-    const [bonusAgricultural, setBonusAgricultural] = useState<number>(0);
+    const [bonusBudget, setBonusBudget] = useState<number>(1);
+    const [bonusPublic, setBonusPublic] = useState<number>(1);
+    const [bonusInternational, setBonusInternational] = useState<number>(1);
+    const [bonusInfrastructure, setBonusInfrastructure] = useState<number>(1);
+    const [bonusSecurity, setBonusSecurity] = useState<number>(1);
+    const [bonusAgricultural, setBonusAgricultural] = useState<number>(1);
 
-    const [bonusHeart, setBonusHeart] = useState<number>(0);
+
+    const [agriculture, setAgriculture] = useState<number>(50);
+    const [infrastructure, setInfrastructure] = useState<number>(50);
+    const [internalSecurity, setInternalSecurity] = useState<number>(50);
+    const [international, setInternational] = useState<number>(50);
+    const [budget, setBudget] = useState<number>(50);
+    const [publicOpinion, setPublicOpinion] = useState<number>(50);
 
     useEffect(() => {
         console.log("Bonus Budget: ", bonusBudget);
@@ -52,8 +58,35 @@ export default function GamePage() {
         console.log("Bonus Infrastructure: ", bonusInfrastructure);
         console.log("Bonus Security: ", bonusSecurity);
         console.log("Bonus Agricultural: ", bonusAgricultural);
-        console.log("Bonus Heart: ", bonusHeart);
-    }, [bonusBudget, bonusPublic, bonusInternational, bonusInfrastructure, bonusSecurity, bonusAgricultural, bonusHeart]);
+
+    }, [bonusBudget, bonusPublic, bonusInternational, bonusInfrastructure, bonusSecurity, bonusAgricultural]);
+
+    const handleBonusEffect = (effect: { type: string; value: number }) => {
+        const fiftyEffect = effect.value * 50;
+        switch (effect.type) {
+            case "agriculture":
+                setAgriculture((prev) => prev + fiftyEffect);
+                break;
+            case "budget":
+                setBudget((prev) => prev + fiftyEffect);
+                break;
+            case "infrastructure":
+                setInfrastructure((prev) => prev + fiftyEffect);
+                break;
+            case "security":
+                setInternalSecurity((prev) => prev + fiftyEffect);
+                break;
+            case "international":
+                setInternational((prev) => prev + fiftyEffect);
+                break;
+            case "public":
+                setPublicOpinion((prev) => prev + fiftyEffect);
+                break;
+            default:
+                break;
+        }
+    }
+
 
     const playTickSound = () => {
         const audio = new Audio("/sound-effects/button-metal.wav");
@@ -102,8 +135,27 @@ export default function GamePage() {
     return (
         <div className={` ${isDarkMode ? 'bg-black bg-opacity-90' : ''} sm:p-2 p-1 flex xl:flex-row flex-col 2xl:gap-5 gap-1 sm:gap-3 w-full items-start justify-center xl:h-[100vh] h-auto`}>
 
-            <GameStats setSelectedListIDs={handleSetSelectedListID} resetSelectedListIDs={resetSelectedListIDs} handleSelectedOptionModalOpen={handleSelectedOptionModalOpen}
-                lastingEffects={lastingEffects} setLastingEffects={setLastingEffects} />
+            <GameStats
+                setSelectedListIDs={handleSetSelectedListID}
+                resetSelectedListIDs={resetSelectedListIDs}
+                handleSelectedOptionModalOpen={handleSelectedOptionModalOpen}
+                lastingEffects={lastingEffects}
+                setLastingEffects={setLastingEffects}
+                agriculture={agriculture}
+                infrastructure={infrastructure}
+                internalSecurity={internalSecurity}
+                international={international}
+                budget={budget}
+                publicOpinion={publicOpinion}
+                setAgriculture={setAgriculture}
+                setBudget={setBudget}
+                setInfrastructure={setInfrastructure}
+                setInternalSecurity={setInternalSecurity}
+                setInternational={setInternational}
+                setPublicOpinion={setPublicOpinion}
+
+
+            />
 
             <div className="flex flex-col sm:gap-2 gap-1 xl:w-[30%] w-full">
 
@@ -130,10 +182,7 @@ export default function GamePage() {
                     setBonusSecurity={setBonusSecurity}
                     bonusSecurity={bonusSecurity}
                     setBonusAgricultural={setBonusAgricultural}
-                    bonusAgricultural={bonusAgricultural}
-                    setBonusHeart={setBonusHeart}
-                    bonusHeart={bonusHeart}
-                />
+                    bonusAgricultural={bonusAgricultural} handleBonusEffect={handleBonusEffect} />
 
             </div>
         </div>

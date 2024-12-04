@@ -14,6 +14,18 @@ import LevelChangePage from "./LevelChangePage";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 type GameStatsProps = {
+    agriculture: number;
+    infrastructure: number;
+    internalSecurity: number;
+    international: number;
+    budget: number;
+    publicOpinion: number;
+    setAgriculture: React.Dispatch<React.SetStateAction<number>>;
+    setInfrastructure: React.Dispatch<React.SetStateAction<number>>;
+    setInternalSecurity: React.Dispatch<React.SetStateAction<number>>;
+    setInternational: React.Dispatch<React.SetStateAction<number>>;
+    setBudget: React.Dispatch<React.SetStateAction<number>>;
+    setPublicOpinion: React.Dispatch<React.SetStateAction<number>>;
     setSelectedListIDs: (newListID: string) => void;
     resetSelectedListIDs: () => void;
     handleSelectedOptionModalOpen: () => void;
@@ -39,13 +51,13 @@ interface Effects {
 }
 
 // Component for Game Stats
-export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetSelectedListIDs, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, }) => {
-    const [agriculture, setAgriculture] = useState<number>(50);
-    const [infrastructure, setInfrastructure] = useState<number>(50);
-    const [internalSecurity, setInternalSecurity] = useState<number>(50);
-    const [international, setInternational] = useState<number>(50);
-    const [budget, setBudget] = useState<number>(50);
-    const [publicOpinion, setPublicOpinion] = useState<number>(50);
+export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetSelectedListIDs, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion }) => {
+    // const [agriculture, setAgriculture] = useState<number>(50);
+    // const [infrastructure, setInfrastructure] = useState<number>(50);
+    // const [internalSecurity, setInternalSecurity] = useState<number>(50);
+    // const [international, setInternational] = useState<number>(50);
+    // const [budget, setBudget] = useState<number>(50);
+    // const [publicOpinion, setPublicOpinion] = useState<number>(50);
     const [isVisible, setIsVisible] = useState(true);
     const { isDarkMode } = useTheme();
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -74,8 +86,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             setCurrentQuestion(updatedQuestions[0]); // ID yoksa ilk soruyu ayarla
         }
     }, [language]);
-
-
 
 
 
