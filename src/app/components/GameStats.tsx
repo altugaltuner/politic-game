@@ -392,7 +392,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
                 </div>
                 <div className={`${isDarkMode ? ' bg-[rgb(17,17,17)]  border-white' : 'bg-white border-black'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 sm:gap-2 gap-1 sm:p-2.5 p-1 items-center `}>
-                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black md:text-sm text-xs" onClick={restartGame}>
+                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black text-md" onClick={restartGame}>
                         Tekrar Oyna
                     </Button>
                 </div>
@@ -415,16 +415,14 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                 />
 
                 <div className={` ${isDarkMode ? 'border-white bg-[rgb(17,17,17)]' : 'border-black bg-white'} text-center sm:p-2 p-1 rounded-lg relative border-[3px] flex flex-col justify-start items-center w-full`}>
-                    <h1 className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-black'} bg-primary py-1 px-2 rounded-md w-[90%] text-sm sm:text-base`}>Başardın! Ülkemizin içinde bulunduğu durumlar ne kadar zor olsa da doğru kararları vererek finale ulaştın.
-                        Gazi Mustafa Kemal Atatürkün de dediği gibi :<br />
-                        &quot;Umutsuz durumlar yoktur umutsuz insanlar vardır, ben hiçbir zaman umudumu yitirmedim.&quot;
+                    <h1 className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-black'} bg-primary py-1 px-2 rounded-md w-[90%] text-md`}>Tebrikler! Oyunu başarıyla tamamladınız.
                     </h1>
                     <div className="question-container visible flex flex-col items-center mt-2 gap-2 justify-center">
                         <Image src={ataturk} alt="Oyun Bitti" className="w-full lg:h-[22rem] rounded-lg" />
                     </div>
                 </div>
                 <div className={`${isDarkMode ? ' bg-[rgb(17,17,17)]  border-white' : 'bg-white border-black'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 sm:gap-2 gap-1 sm:p-2.5 p-1 items-center`}>
-                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black md:text-sm text-xs" onClick={restartGame}>
+                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black text-md" onClick={restartGame}>
                         Tekrar Oyna
                     </Button>
                 </div>
@@ -472,7 +470,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                             typeSpeed={10}
                             showCursor={false}
                             loop={false}
-                            className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-black'} bg-primary py-1 px-2 rounded-md w-full text-sm`}
+                            className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-black'} bg-primary py-1 px-2 rounded-md w-full text-lg`}
                         />
                     </div>
 
@@ -503,7 +501,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             {currentQuestion && (
                 <div className={`${isDarkMode ? ' bg-[rgb(17,17,17)]  border-white' : 'bg-white border-black'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 sm:gap-2 gap-1 sm:p-2.5 p-1 items-center lg:min-h-16 min-h-24 `}>
                     <Button
-                        className={`${isDarkMode ? ' bg-white  border-black text-black' : 'hover:bg-[#555555] active:bg-black'} xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out  md:text-sm text-xs min-h-[44px]`}
+                        className={`${isDarkMode ? ' bg-white  border-black text-black' : 'hover:bg-[#555555] active:bg-black'} xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out  text-md min-h-[44px]`}
                         onClick={() => answerQuestion("left")}
                     >
                         <ReactTyped
@@ -515,7 +513,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
                     </Button>
 
                     <Button
-                        className={`${isDarkMode ? ' bg-white  border-black text-black' : 'hover:bg-[#555555] active:bg-black'} xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out  md:text-sm text-xs min-h-[44px]`}
+                        className={`${isDarkMode ? ' bg-white  border-black text-black' : 'hover:bg-[#555555] active:bg-black'} xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out text-md min-h-[44px]`}
                         onClick={() => answerQuestion("right")}
                     >
                         <ReactTyped

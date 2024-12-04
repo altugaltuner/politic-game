@@ -37,6 +37,21 @@ const SelectedOptionModal: React.FC<SelectedOptionModalProps> = ({ selectedOptio
         audio.volume = volume;
         audio.play();
     };
+
+    const statNames: { [key: string]: string } = {
+        infrastructureAndEnvironment: "Infrastructure",
+        agriculturalProduction: "Agriculture",
+        internalSecurity: "Security",
+        publicSupport: "Public Support",
+        budget: "Budget",
+        internationalRelations: "International Relations",
+    };
+
+    const types: { [key: string]: string } = {
+        increase: "+",
+        decrease: "-",
+    };
+
     useEffect(() => {
         if (selectedOptionModalOpen) {
             playNewspaperSound();
@@ -47,6 +62,7 @@ const SelectedOptionModal: React.FC<SelectedOptionModalProps> = ({ selectedOptio
         if (selectedListIDs.length > 0) {
             const selectedElement = elements.find(element => element.listID === selectedListIDs[0]);
             setSelectedElement(selectedElement || null);
+            console.log(selectedElement);
         }
     }, [selectedListIDs, setSelectedOptionModalOpen]);
 
@@ -67,7 +83,9 @@ const SelectedOptionModal: React.FC<SelectedOptionModalProps> = ({ selectedOptio
                     {selectedElement.lastingEffect && (
                         <div className="text-gray-700">
                             <h3 className="font-semibold">Lasting Effect:</h3>
-                            <p>{selectedElement.lastingEffect.stat}: {selectedElement.lastingEffect.value}</p>
+
+                            <p>{statNames[selectedElement.lastingEffect.stat] || selectedElement.lastingEffect.stat}</p>
+                            <p> {selectedElement.lastingEffect.value}</p>
                         </div>
                     )}
                 </div>

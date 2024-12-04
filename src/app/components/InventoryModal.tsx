@@ -94,10 +94,10 @@ const InventoryModal = ({ setBonusSecurity, setBonusInfrastructure, setBonusInte
     };
 
     const rollDice = () => {
-        const diceNumber = Math.floor(Math.random() * 6) + 1;
+        const diceNumber = Math.floor(Math.random() * 4) + 1;
         console.log("Rolled dice:", diceNumber);
         setDiceLeft((prev) => prev - 1);
-        if (diceNumber === 6) {
+        if (diceNumber === 4) {
             const stats = [
                 setBonusAgricultural,
                 setBonusBudget,
