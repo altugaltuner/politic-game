@@ -56,9 +56,25 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     const [currentQuestion, setCurrentQuestion] = useState(allQuestions[0]);
 
     useEffect(() => {
-        setAllQuestions(allQuestionsByLanguage[language]); // Dil değişince soruları güncelle
-        setCurrentQuestion(allQuestionsByLanguage[language][0]); // İlk soruyu güncelle
+        const currentQuestionId = currentQuestion?.id; // Mevcut sorunun ID'sini alın
+        const updatedQuestions = allQuestionsByLanguage[language]; // Yeni dildeki tüm soruları alın
+
+        setAllQuestions(updatedQuestions); // Soruları güncelle
+
+        if (currentQuestionId) {
+            // Mevcut ID ile eşleşen soruyu bulun
+            const matchingQuestion = updatedQuestions.find(question => question.id === currentQuestionId);
+            if (matchingQuestion) {
+                setCurrentQuestion(matchingQuestion); // Eşleşen soruyu ayarla
+            } else {
+                // Eğer eşleşen soru yoksa, ilk soruyu varsayılan olarak ayarla
+                setCurrentQuestion(updatedQuestions[0]);
+            }
+        } else {
+            setCurrentQuestion(updatedQuestions[0]); // ID yoksa ilk soruyu ayarla
+        }
     }, [language]);
+
 
 
 
@@ -116,7 +132,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
     const playRandomBreakingNewsSound = () => {
         const randomSound = sounds[Math.floor(Math.random() * sounds.length)];
-        // console.log("Çalınan ses:", randomSound);
         const audio = new Audio(randomSound);
         audio.volume = volume;
         audio.play();
@@ -194,7 +209,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     };
 
     useEffect(() => {
-        const calculateLevel = () => Math.floor(score / 3) + 1;
+        const calculateLevel = () => Math.floor(score / 10) + 1;
 
         const newLevel = calculateLevel();
         if (newLevel !== currentLevel) {
@@ -205,7 +220,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
 
     const oneInTenChance = () => {
-        const boolean = Math.random() < 0.30;
+        const boolean = Math.random() < 0.10;
         return boolean;
     };
 

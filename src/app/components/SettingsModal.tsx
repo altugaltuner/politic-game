@@ -9,7 +9,6 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 interface SettingsModalProps {
     modalOpen: boolean;
-    setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
     setModalOpenFunc: () => void;
 }
 
@@ -37,6 +36,72 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
         { value: 'zh', label: '中文 (Chinese)' },
     ];
 
+    const header = {
+        en: 'Settings',
+        tr: 'Ayarlar',
+        de: 'Einstellungen',
+        es: 'Configuraciones',
+        fr: 'Paramètres',
+        pt: 'Configurações',
+        ru: 'Настройки',
+        zh: '设置',
+    };
+
+    const modes = {
+        en: 'Mode',
+        tr: 'Mod',
+        de: 'Modus',
+        es: 'Modo',
+        fr: 'Mode',
+        pt: 'Modo',
+        ru: 'Режим',
+        zh: '模式',
+    };
+
+    const voice = {
+        en: 'Voice',
+        tr: 'Ses',
+        de: 'Stimme',
+        es: 'Voz',
+        fr: 'Voix',
+        pt: 'Voz',
+        ru: 'Голос',
+        zh: '声音',
+    };
+
+    const music = {
+        en: 'Music',
+        tr: 'Müzik',
+        de: 'Musik',
+        es: 'Música',
+        fr: 'Musique',
+        pt: 'Música',
+        ru: 'Музыка',
+        zh: '音乐',
+    };
+
+    const selectLanguage = {
+        en: 'Select Language',
+        tr: 'Dil Seçin',
+        de: 'Sprache auswählen',
+        es: 'Seleccionar idioma',
+        fr: 'Sélectionner la langue',
+        pt: 'Selecione o idioma',
+        ru: 'Выберите язык',
+        zh: '选择语言',
+    };
+
+    const close = {
+        en: 'Close',
+        tr: 'Kapat',
+        de: 'Schließen',
+        es: 'Cerrar',
+        fr: 'Fermer',
+        pt: 'Fechar',
+        ru: 'Закрыть',
+        zh: '关',
+    };
+
     const getVolumeIcon = () => {
         if (volume === 0) {
             return <VolumeOff size={32} />;
@@ -48,18 +113,16 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
     };
 
     return (
-        <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 '>
-            <div className={`flex flex-col ${isDarkMode ? 'bg-[rgb(17,17,17)] text-white border-white' : 'bg-white border-black text-black'} sm:p-5 p-3 rounded-lg w-[90%] max-w-lg items-center gap-4 border-[5px]  text-center`}>
-                <h1 className='font-semibold text-2xl'>Ayarlar</h1>
+        <div onClick={() => setModalOpenFunc()} className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 '>
+            <div onClick={(e) => e.stopPropagation()} className={`flex flex-col ${isDarkMode ? 'bg-[rgb(17,17,17)] text-white border-white' : 'bg-white border-black text-black'} sm:p-5 p-3 rounded-lg w-[90%] max-w-lg items-center gap-4 border-[5px]  text-center`}>
+                <h1 className='font-semibold text-2xl'>{header[language]}</h1>
                 <div className='flex sm:gap-6 gap-1 w-full justify-center'>
                     <div className={`flex gap-1 cursor-pointer min-w-[100px] flex-col items-center border-[2px] rounded-lg ${isDarkMode ? 'bg-[rgb(17,17,17)] text-white border-white' : 'bg-white text-black border-black'} p-2`} onClick={toggleTheme} >
-                        <p>Mod</p>
+                        <p>{modes[language]}</p>
                         {isDarkMode ? <ToggleRight size={40} className="cursor-pointer" /> : <ToggleLeft size={40} className="cursor-pointer" />}
-
-                        <p className='w-[100%]'>{isDarkMode ? "Gece Modu" : "Gündüz Modu"}</p>
                     </div>
                     <div className={`flex gap-1 flex-col items-center border-[2px] rounded-lg ${isDarkMode ? 'bg-[rgb(17,17,17)] text-white border-white' : 'bg-white text-black border-black'} p-2`}>
-                        <p>Sesler</p>
+                        <p>{voice[language]}</p>
                         {getVolumeIcon()}
                         <input
                             type="range"
@@ -73,23 +136,23 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
 
                         <p>{Math.round(volume * 100)}%</p>
                     </div>
-                    <div className={`flex gap-1 flex-col cursor-not-allowed  items-center border-[2px] rounded-lg ${isDarkMode ? 'bg-[rgb(17,17,17)] text-white border-white' : 'bg-[rgb(105,105,105)] text-black border-black'} p-2`}>
-                        <p>Müzik</p>
+                    <div className={`flex gap-1 flex-col items-center border-[2px] rounded-lg ${isDarkMode ? 'bg-[rgb(17,17,17)] text-white border-white' : 'bg-white text-black border-black'} p-2`}>
+                        <p>{music[language]}</p>
                         <Music size={32} />
                     </div>
                 </div>
                 <div className='w-full'>
-                    <p className='mb-2'>Select Language</p>
+                    <p className='mb-2'>{selectLanguage[language]}</p>
                     <div className="relative">
                         <button
-                            className="p-2 border rounded w-full text-left"
+                            className="p-2 border rounded w-[200px] text-left"
                             onClick={() => setDropdownOpen(!dropdownOpen)}
                         >
                             {languages.find((lang) => lang.value === language)?.label || 'Select Language'}
                         </button>
                         {dropdownOpen && (
                             <div
-                                className={`absolute top-12 left-0 w-full max-h-40 overflow-y-scroll rounded-lg shadow-lg border z-10 ${isDarkMode ? 'bg-[rgba(0,0,0,0.8)] text-white' : 'bg-[rgba(255,255,255,1)] text-black'
+                                className={`absolute top-12 left-36 w-[200px] max-h-40 overflow-y-scroll rounded-lg shadow-lg border z-10 ${isDarkMode ? 'bg-[rgba(0,0,0,0.8)] text-white' : 'bg-[rgba(255,255,255,1)] text-black'
                                     }`}
                             >
                                 {languages.map((lang) => (
@@ -108,7 +171,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
                         )}
                     </div>
                 </div>
-                <Button className={`${isDarkMode ? 'bg-white text-black border-white hover:bg-neutral-400' : ''}`} onClick={() => setModalOpenFunc()}>Kapat</Button>
+                <Button className={`${isDarkMode ? 'bg-white text-black border-white hover:bg-neutral-400' : ''}`} onClick={() => setModalOpenFunc()}>{close[language]}</Button>
             </div>
         </div>
     );
