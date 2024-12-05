@@ -10,6 +10,7 @@ import LevelSevenImage from "../../../public/symbols/hephaestus-symbol.webp";
 import LevelEightImage from "../../../public/symbols/law-icon.webp";
 import LevelNineImage from "../../../public/symbols/medicine-symbol.webp";
 import LevelTenImage from "../../../public/symbols/peace-pigeon-symbol.webp";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const LevelChangePage = ({
     onComplete,
@@ -19,6 +20,19 @@ const LevelChangePage = ({
     level: number;
 }) => {
     const [animationClass, setAnimationClass] = useState("translate-x-[-100%]"); // Başlangıç konumu
+
+    const { language } = useLanguage();
+
+    const leveltext = {
+        tr: "SEVİYE",
+        en: "LEVEL",
+        fr: "NIVEAU",
+        de: "NIVEAU",
+        ru: "УРОВЕНЬ",
+        zh: "水平",
+        es: "NIVEL",
+        pt: "NÍVEL",
+    };
 
     const Levels = [
         { id: 1, name: "level1", image: LevelOneImage },
@@ -56,7 +70,7 @@ const LevelChangePage = ({
         >
             {currentLevel && (
                 <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-5 w-[50%] h-[50%]">
-                    <h1 className="text-black text-7xl font-bold text-center">LEVEL {currentLevel.id}</h1>
+                    <h1 className="text-black text-7xl font-bold text-center">{leveltext[language]} {currentLevel.id}</h1>
                 </div>
             )}
         </div>

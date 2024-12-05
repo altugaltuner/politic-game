@@ -55,15 +55,21 @@ const ListElements: React.FC<ListElementsProps> = ({ selectedListIDs }) => {
         internationalRelations: "International Relations",
     };
 
-    const types: { [key: string]: string } = {
-        increase: "+",
-        decrease: "-",
-    };
 
     useEffect(() => {
         console.log("Filtered Elements: ", filteredElements);
     }, [filteredElements]);
 
+    const lastingEffectText = {
+        en: 'Lasting Effect',
+        tr: 'Kalıcı Etki',
+        de: 'Langfristige Wirkung',
+        es: 'Efecto Duradero',
+        fr: 'Effet Durable',
+        pt: 'Efeito Duradouro',
+        ru: 'Долгосрочный эффект',
+        zh: '持久效果',
+    };
 
     return (
         <div ref={scrollRef} className={` ${isDarkMode ? 'border-white bg-[rgb(17,17,17)] text-white' : 'border-black bg-white text-black'} text-center border-[3px] xl:order-2 order-1  rounded-lg sm:p-2 p-1 w-[100%] max-h-[900px] `}>
@@ -82,7 +88,7 @@ const ListElements: React.FC<ListElementsProps> = ({ selectedListIDs }) => {
                             />
                             <p className={` ${isDarkMode ? 'text-white' : 'text-gray-700'}  md:text-sm text-xs`} >{element.description}</p>
                             <div>
-                                <h2>Lasting Effect</h2>
+                                <h2>{lastingEffectText[language]}</h2>
                                 <p>{statNames[element.lastingEffect.stat] || element.lastingEffect.stat}</p>
                                 <p> {element.lastingEffect.value}</p>
                             </div>
