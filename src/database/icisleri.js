@@ -2,7 +2,6 @@ import icisleriBakani from "../../public/ministers/icisleri-bakani.webp";
 // 5 soru var
 export const icisleriQuestions = {
     tr: [
-
         {
             id: 90,
             question: "Ülkedeki mülteci sayısı toplumsal tansiyonu artırıyor. Halk bu konudan şikayetçi. Ne yapmalıyız? ",
@@ -126,6 +125,96 @@ export const icisleriQuestions = {
                         budget: -15,
                     },
                     listID: "icisleri3",
+                },
+            ],
+            title: "İçişleri Bakanı",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //yeni soru
+            id: 95,
+            question: "Eski İçişleri Bakanının ülkeye uyuşturucu soktuğunu ve ticaretini yaptığını tespit ettik. Hala ülkedeyken yakalama kararı çıkartalım mı?",
+            answers: [
+                {
+                    text: "Eski dostuma dokunmayın",
+                    effect: {
+                        internalSecurity: -10,
+                        internationalRelations: -10,
+                    }
+                },
+                {
+                    text: "Derhal yakalayın",
+                    effect: {
+                        internalSecurity: +10,
+                        internationalRelations: +10,
+                    },
+                },
+            ],
+            title: "İçişleri Bakanı",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //yeni soru
+            id: 96,
+            question: "Milli Arama Kurtarma Ekibi kurucusu bir televizyon programında seçim kurumumuz YTR'nin seçimlerde hile yaptığını iddia etti.",
+            answers: [
+                {
+                    text: "Hakkında yasal işlem başlatın",
+                    effect: {
+                        internalSecurity: -10,
+                    }
+                },
+                {
+                    text: "Hapse atın",
+                    effect: {
+                        internalSecurity: -20,
+                        internationalRelations: -20,
+                    },
+                },
+            ],
+            title: "İçişleri Bakanı",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //yeni soru
+            id: 97,
+            question: "Bekçilere üst arama yetkisi verilmesi gündemde.Bunun güvenliği arttıracağını düşünüyorum ancak son söz hakkı sizin...",
+            answers: [
+                {
+                    text: "Yetki verilsin.",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Yetki verilmesin.",
+                    effect: {
+                        publicSupport: +10,
+                    },
+                },
+            ],
+            title: "İçişleri Bakanı",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //yeni soru
+            id: 98,
+            question: "Halk sokak köpeklerinden şikayetçi. Saldırgan bazı köpekler vatandaşlarımızın ölümüne sebep oluyor. Bu konuda düşünce ayrılıkları mevcut",
+            answers: [
+                {
+                    text: "Kısırlaştırma ve barınak projeleri başlatın",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: +10,
+                    }
+                },
+                {
+                    text: "Ekiplerce köpekleri toplayın ve uyutun",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: +10,
+                    },
                 },
             ],
             title: "İçişleri Bakanı",
@@ -263,6 +352,97 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
+        { //new question
+            id: 95,
+            question: "We have determined that the former Minister of Interior smuggled drugs into the country and engaged in trafficking. Should we issue a warrant for his arrest while he is still in the country?",
+            answers: [
+                {
+                    text: "Don't touch my old friend.",
+                    effect: {
+                        internalSecurity: -10,
+                        internationalRelations: -10,
+                    }
+                },
+                {
+                    text: "Arrest him immediately.",
+                    effect: {
+                        internalSecurity: +10,
+                        internationalRelations: +10,
+                    },
+                },
+            ],
+            title: "Minister of Interior",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //new question
+            id: 96,
+            question: "The founder of the National Search and Rescue Team claimed on a television program that our election body, YTR, rigged the elections.",
+            answers: [
+                {
+                    text: "Initiate legal action against him.",
+                    effect: {
+                        internalSecurity: -10,
+                    }
+                },
+                {
+                    text: "Imprison him.",
+                    effect: {
+                        internalSecurity: -20,
+                        internationalRelations: -20,
+                    },
+                },
+            ],
+            title: "Minister of Interior",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //new question
+            id: 97,
+            question: "Granting security guards the authority to conduct searches is on the agenda. I believe this would improve security, but the final decision is yours...",
+            answers: [
+                {
+                    text: "Grant the authority.",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Do not grant the authority.",
+                    effect: {
+                        publicSupport: +10,
+                    },
+                },
+            ],
+            title: "Minister of Interior",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //new question
+            id: 98,
+            question: "The public is complaining about stray dogs. Aggressive dogs are causing the deaths of some citizens. There is a divide in opinions on this matter.",
+            answers: [
+                {
+                    text: "Initiate sterilization and shelter projects.",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: +10,
+                    }
+                },
+                {
+                    text: "Deploy teams to collect and euthanize the dogs.",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: +10,
+                    },
+                },
+            ],
+            title: "Minister of Interior",
+            photo: icisleriBakani,
+            level: 1,
+        },
+
     ],
     de: [
         {
@@ -394,6 +574,97 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
+        { //neue Frage
+            id: 95,
+            question: "Wir haben festgestellt, dass der ehemalige Innenminister Drogen ins Land geschmuggelt und mit ihnen gehandelt hat. Sollen wir einen Haftbefehl gegen ihn erlassen, solange er noch im Land ist?",
+            answers: [
+                {
+                    text: "Fasst meinen alten Freund nicht an.",
+                    effect: {
+                        internalSecurity: -10,
+                        internationalRelations: -10,
+                    }
+                },
+                {
+                    text: "Verhaftet ihn sofort.",
+                    effect: {
+                        internalSecurity: +10,
+                        internationalRelations: +10,
+                    },
+                },
+            ],
+            title: "Innenminister",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //neue Frage
+            id: 96,
+            question: "Der Gründer des Nationalen Such- und Rettungsteams behauptete in einer Fernsehsendung, dass unsere Wahlbehörde YTR die Wahlen manipuliert habe.",
+            answers: [
+                {
+                    text: "Leitet rechtliche Schritte gegen ihn ein.",
+                    effect: {
+                        internalSecurity: -10,
+                    }
+                },
+                {
+                    text: "Werft ihn ins Gefängnis.",
+                    effect: {
+                        internalSecurity: -20,
+                        internationalRelations: -20,
+                    },
+                },
+            ],
+            title: "Innenminister",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //neue Frage
+            id: 97,
+            question: "Die Erteilung von Befugnissen für Sicherheitskräfte, Durchsuchungen durchzuführen, steht auf der Tagesordnung. Ich denke, dies würde die Sicherheit verbessern, aber die endgültige Entscheidung liegt bei Ihnen...",
+            answers: [
+                {
+                    text: "Befugnisse erteilen.",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Keine Befugnisse erteilen.",
+                    effect: {
+                        publicSupport: +10,
+                    },
+                },
+            ],
+            title: "Innenminister",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //neue Frage
+            id: 98,
+            question: "Die Öffentlichkeit beschwert sich über streunende Hunde. Aggressive Hunde verursachen den Tod einiger Bürger. Zu diesem Thema gibt es unterschiedliche Meinungen.",
+            answers: [
+                {
+                    text: "Startet Sterilisierungs- und Tierheimprojekte.",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: +10,
+                    }
+                },
+                {
+                    text: "Lässt die Hunde von Teams einfangen und einschläfern.",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: +10,
+                    },
+                },
+            ],
+            title: "Innenminister",
+            photo: icisleriBakani,
+            level: 1,
+        },
+
     ],
     fr: [
         {
@@ -525,6 +796,97 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
+        { //nouvelle question
+            id: 95,
+            question: "Nous avons découvert que l'ancien ministre de l'Intérieur introduisait des drogues dans le pays et les trafiquait. Devons-nous émettre un mandat d'arrêt pendant qu'il est encore dans le pays ?",
+            answers: [
+                {
+                    text: "Ne touchez pas à mon vieil ami.",
+                    effect: {
+                        internalSecurity: -10,
+                        internationalRelations: -10,
+                    }
+                },
+                {
+                    text: "Arrêtez-le immédiatement.",
+                    effect: {
+                        internalSecurity: +10,
+                        internationalRelations: +10,
+                    },
+                },
+            ],
+            title: "Ministre de l'Intérieur",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //nouvelle question
+            id: 96,
+            question: "Le fondateur de l'Équipe nationale de recherche et de sauvetage a affirmé lors d'une émission télévisée que notre organisme électoral, le YTR, avait truqué les élections.",
+            answers: [
+                {
+                    text: "Engagez des poursuites judiciaires contre lui.",
+                    effect: {
+                        internalSecurity: -10,
+                    }
+                },
+                {
+                    text: "Envoyez-le en prison.",
+                    effect: {
+                        internalSecurity: -20,
+                        internationalRelations: -20,
+                    },
+                },
+            ],
+            title: "Ministre de l'Intérieur",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //nouvelle question
+            id: 97,
+            question: "L'attribution aux gardiens de la capacité d'effectuer des fouilles est à l'ordre du jour. Je pense que cela améliorerait la sécurité, mais la décision finale vous revient...",
+            answers: [
+                {
+                    text: "Attribuez cette capacité.",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Ne donnez pas cette capacité.",
+                    effect: {
+                        publicSupport: +10,
+                    },
+                },
+            ],
+            title: "Ministre de l'Intérieur",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //nouvelle question
+            id: 98,
+            question: "Le public se plaint des chiens errants. Certains chiens agressifs causent la mort de citoyens. Les opinions sur cette question sont divisées.",
+            answers: [
+                {
+                    text: "Lancez des projets de stérilisation et de refuges.",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: +10,
+                    }
+                },
+                {
+                    text: "Faites capturer les chiens par des équipes et euthanasiez-les.",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: +10,
+                    },
+                },
+            ],
+            title: "Ministre de l'Intérieur",
+            photo: icisleriBakani,
+            level: 1,
+        },
+
     ],
     pt: [
         {
@@ -656,6 +1018,97 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
+        { //nova pergunta
+            id: 95,
+            question: "Descobrimos que o ex-ministro do Interior contrabandeava drogas para o país e as comercializava. Devemos emitir um mandado de prisão enquanto ele ainda está no país?",
+            answers: [
+                {
+                    text: "Não mexam com meu velho amigo.",
+                    effect: {
+                        internalSecurity: -10,
+                        internationalRelations: -10,
+                    }
+                },
+                {
+                    text: "Prendam-no imediatamente.",
+                    effect: {
+                        internalSecurity: +10,
+                        internationalRelations: +10,
+                    },
+                },
+            ],
+            title: "Ministro do Interior",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //nova pergunta
+            id: 96,
+            question: "O fundador da Equipe Nacional de Busca e Resgate afirmou em um programa de televisão que nosso órgão eleitoral, YTR, fraudou as eleições.",
+            answers: [
+                {
+                    text: "Inicie um processo legal contra ele.",
+                    effect: {
+                        internalSecurity: -10,
+                    }
+                },
+                {
+                    text: "Prendam-no.",
+                    effect: {
+                        internalSecurity: -20,
+                        internationalRelations: -20,
+                    },
+                },
+            ],
+            title: "Ministro do Interior",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //nova pergunta
+            id: 97,
+            question: "Está em pauta conceder aos guardas o poder de realizar revistas. Acredito que isso aumentaria a segurança, mas a decisão final é sua...",
+            answers: [
+                {
+                    text: "Conceda o poder.",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Não conceda o poder.",
+                    effect: {
+                        publicSupport: +10,
+                    },
+                },
+            ],
+            title: "Ministro do Interior",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //nova pergunta
+            id: 98,
+            question: "O público está reclamando de cães de rua. Alguns cães agressivos estão causando a morte de cidadãos. Há divergências de opinião sobre este assunto.",
+            answers: [
+                {
+                    text: "Inicie projetos de esterilização e construção de abrigos.",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: +10,
+                    }
+                },
+                {
+                    text: "Organize equipes para capturar e sacrificar os cães.",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: +10,
+                    },
+                },
+            ],
+            title: "Ministro do Interior",
+            photo: icisleriBakani,
+            level: 1,
+        },
+
     ],
     zh: [
         {
@@ -787,6 +1240,97 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
+        { //新问题
+            id: 95,
+            question: "我们发现前内政部长将毒品走私到国内并进行贩卖。在他还在国内的时候，我们是否应该发布逮捕令？",
+            answers: [
+                {
+                    text: "不要动我的老朋友。",
+                    effect: {
+                        internalSecurity: -10,
+                        internationalRelations: -10,
+                    }
+                },
+                {
+                    text: "立即逮捕他。",
+                    effect: {
+                        internalSecurity: +10,
+                        internationalRelations: +10,
+                    },
+                },
+            ],
+            title: "内政部长",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //新问题
+            id: 96,
+            question: "国家救援队的创始人在一档电视节目中声称我们的选举机构 YTR 操纵了选举。",
+            answers: [
+                {
+                    text: "对他提起法律诉讼。",
+                    effect: {
+                        internalSecurity: -10,
+                    }
+                },
+                {
+                    text: "将他关进监狱。",
+                    effect: {
+                        internalSecurity: -20,
+                        internationalRelations: -20,
+                    },
+                },
+            ],
+            title: "内政部长",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //新问题
+            id: 97,
+            question: "正在讨论授予保安进行搜身的权力。我认为这将提高安全性，但最终决定权在您手中...",
+            answers: [
+                {
+                    text: "授予权力。",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "不要授予权力。",
+                    effect: {
+                        publicSupport: +10,
+                    },
+                },
+            ],
+            title: "内政部长",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //新问题
+            id: 98,
+            question: "公众对流浪狗提出投诉。一些攻击性的狗导致了公民的死亡。在这个问题上存在分歧。",
+            answers: [
+                {
+                    text: "启动绝育和收容所项目。",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: +10,
+                    }
+                },
+                {
+                    text: "派遣团队捕捉并安乐死这些狗。",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: +10,
+                    },
+                },
+            ],
+            title: "内政部长",
+            photo: icisleriBakani,
+            level: 1,
+        },
+
     ],
     es: [
         {
@@ -918,6 +1462,97 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
+        { //nueva pregunta
+            id: 95,
+            question: "Hemos descubierto que el exministro del Interior introdujo drogas en el país y las traficó. ¿Deberíamos emitir una orden de arresto mientras aún está en el país?",
+            answers: [
+                {
+                    text: "No toquen a mi viejo amigo.",
+                    effect: {
+                        internalSecurity: -10,
+                        internationalRelations: -10,
+                    }
+                },
+                {
+                    text: "Arréstenlo de inmediato.",
+                    effect: {
+                        internalSecurity: +10,
+                        internationalRelations: +10,
+                    },
+                },
+            ],
+            title: "Ministro del Interior",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //nueva pregunta
+            id: 96,
+            question: "El fundador del Equipo Nacional de Búsqueda y Rescate afirmó en un programa de televisión que nuestro organismo electoral, YTR, manipuló las elecciones.",
+            answers: [
+                {
+                    text: "Inicien acciones legales contra él.",
+                    effect: {
+                        internalSecurity: -10,
+                    }
+                },
+                {
+                    text: "Envíenlo a prisión.",
+                    effect: {
+                        internalSecurity: -20,
+                        internationalRelations: -20,
+                    },
+                },
+            ],
+            title: "Ministro del Interior",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //nueva pregunta
+            id: 97,
+            question: "Está en la agenda otorgar a los guardias el poder de realizar registros. Creo que esto mejoraría la seguridad, pero la decisión final es suya...",
+            answers: [
+                {
+                    text: "Otorgue el poder.",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "No otorgue el poder.",
+                    effect: {
+                        publicSupport: +10,
+                    },
+                },
+            ],
+            title: "Ministro del Interior",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //nueva pregunta
+            id: 98,
+            question: "El público se queja de los perros callejeros. Algunos perros agresivos están causando la muerte de ciudadanos. Hay divisiones de opinión sobre este tema.",
+            answers: [
+                {
+                    text: "Inicien proyectos de esterilización y refugios.",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: +10,
+                    }
+                },
+                {
+                    text: "Envíen equipos para capturar y sacrificar a los perros.",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: +10,
+                    },
+                },
+            ],
+            title: "Ministro del Interior",
+            photo: icisleriBakani,
+            level: 1,
+        },
+
     ],
     ru: [
         {
@@ -1049,5 +1684,96 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
+        { //новый вопрос
+            id: 95,
+            question: "Мы выяснили, что бывший министр внутренних дел ввез наркотики в страну и занимался их торговлей. Должны ли мы выдать ордер на его арест, пока он ещё находится в стране?",
+            answers: [
+                {
+                    text: "Не трогайте моего старого друга.",
+                    effect: {
+                        internalSecurity: -10,
+                        internationalRelations: -10,
+                    }
+                },
+                {
+                    text: "Арестуйте его немедленно.",
+                    effect: {
+                        internalSecurity: +10,
+                        internationalRelations: +10,
+                    },
+                },
+            ],
+            title: "Министр внутренних дел",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //новый вопрос
+            id: 96,
+            question: "Основатель Национальной поисково-спасательной команды заявил в телепрограмме, что наша избирательная комиссия YTR сфальсифицировала выборы.",
+            answers: [
+                {
+                    text: "Возбудите против него судебное дело.",
+                    effect: {
+                        internalSecurity: -10,
+                    }
+                },
+                {
+                    text: "Посадите его в тюрьму.",
+                    effect: {
+                        internalSecurity: -20,
+                        internationalRelations: -20,
+                    },
+                },
+            ],
+            title: "Министр внутренних дел",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //новый вопрос
+            id: 97,
+            question: "На повестке дня стоит вопрос о предоставлении охранникам полномочий на проведение обысков. Я считаю, что это повысит уровень безопасности, но окончательное решение за вами...",
+            answers: [
+                {
+                    text: "Предоставить полномочия.",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Не предоставлять полномочия.",
+                    effect: {
+                        publicSupport: +10,
+                    },
+                },
+            ],
+            title: "Министр внутренних дел",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        { //новый вопрос
+            id: 98,
+            question: "Граждане жалуются на бродячих собак. Агрессивные собаки становятся причиной гибели некоторых граждан. По этому вопросу существуют разногласия.",
+            answers: [
+                {
+                    text: "Начните проекты по стерилизации и созданию приютов.",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: +10,
+                    }
+                },
+                {
+                    text: "Организуйте команды для отлова и усыпления собак.",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: +10,
+                    },
+                },
+            ],
+            title: "Министр внутренних дел",
+            photo: icisleriBakani,
+            level: 1,
+        },
+
     ],
 };
