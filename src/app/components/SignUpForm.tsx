@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth"; // Firebase auth'ı import edin
-
-const auth = getAuth();
+import React, { useState } from 'react';
+import { auth } from "@/firebase"; // Firebase auth'ı import edin
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const SignUpForm: React.FC = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
+    const [, setError] = useState('');
     const [success, setSuccess] = useState(false);
     const router = useRouter();
     const { language } = useLanguage();
+
     const handleSignUp = async (e: React.FormEvent) => {
         e.preventDefault();
         setError('');
@@ -32,9 +32,7 @@ const SignUpForm: React.FC = () => {
         const audio = new Audio("/sound-effects/button-metal.wav");
         audio.play();
     }
-    useEffect(() => {
-        if (error) { console.log(error); }
-    }, [error]);
+
 
     const emailHeader = {
         en: 'Email',
