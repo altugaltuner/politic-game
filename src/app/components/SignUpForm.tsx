@@ -8,7 +8,7 @@ const SignUpForm: React.FC = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [, setError] = useState('');
-    const [, setSuccess] = useState(false);
+    const [success, setSuccess] = useState(false);
     const router = useRouter();
     const { language } = useLanguage();
     const handleSignUp = async (e: React.FormEvent) => {
@@ -113,7 +113,7 @@ const SignUpForm: React.FC = () => {
                         onClick={(e) => {
                             e.preventDefault();
                             handleSound();
-                            if (email.trim() !== "") {
+                            if (success) {
                                 router.push("/game");
                             }
                         }}
