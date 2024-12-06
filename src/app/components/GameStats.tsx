@@ -102,8 +102,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         preloadImages();
     }, []);
 
-
-
     const sounds = [
         "/sound-effects/breaking-news1.wav",
         "/sound-effects/breaking-news2.wav",
@@ -296,7 +294,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             agriculture: "你对农业生产的忽视导致了国家的粮食危机。你甚至无法满足人民的基本需求。你的统治结束了！",
         },
     };
-
+    console.log("lalal");
     const playAgain = {
         en: "Play Again",
         tr: "Tekrar Oyna",
