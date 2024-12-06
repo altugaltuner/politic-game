@@ -84,9 +84,9 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     const handleLevelUp = () => {
         setIsLevelChangeVisible(true);
         setTimeout(() => {
-            //console.log("Level değişimi gizlendi");
+
             setIsLevelChangeVisible(false);
-        }, 4000); // 4 saniye sonra gizle
+        }, 4000);
     };
 
     useEffect(() => {
@@ -161,8 +161,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
     useEffect(() => {
         if (!currentQuestion) return; // Soru yoksa çalıştırma
-
-        console.log("New question triggered lasting effects:", lastingEffects);
 
         lastingEffects.forEach((effect) => {
             switch (effect.stat) {
@@ -370,11 +368,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             }
         }
     }, [publicOpinion, internalSecurity, international, budget, infrastructure, agriculture, score]);
-
-    useEffect(() => {
-        console.log("currentLevel", currentLevel);
-    }, [currentLevel]);
-
 
     // Function to handle answer selection
     const answerQuestion = (direction: "left" | "right") => {

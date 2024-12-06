@@ -123,11 +123,6 @@ const ListElements: React.FC<ListElementsProps> = ({ selectedListIDs }) => {
         },
     };
 
-
-    useEffect(() => {
-        console.log("Filtered Elements: ", filteredElements);
-    }, [filteredElements]);
-
     const lastingEffectText = {
         en: 'Lasting Effect',
         tr: 'Kalıcı Etki',

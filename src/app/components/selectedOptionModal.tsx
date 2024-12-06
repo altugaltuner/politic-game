@@ -58,7 +58,6 @@ const SelectedOptionModal: React.FC<SelectedOptionModalProps> = ({ selectedOptio
         if (selectedListIDs.length > 0) {
             const selectedElement = elements.find(element => element.listID === selectedListIDs[0]);
             setSelectedElement(selectedElement || null);
-            console.log(selectedElement);
         }
     }, [selectedListIDs, setSelectedOptionModalOpen]);
 

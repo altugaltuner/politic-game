@@ -56,8 +56,6 @@ const LevelChangePage = ({
 
             setAnimationClass("translate-x-full"); // Sağdan çıkar
             await new Promise((resolve) => setTimeout(resolve, 1000)); // Animasyon süresi
-
-            console.log("Animation completed, hiding LevelChangePage");
             onComplete(); // Bildirim yapılır
         };
 

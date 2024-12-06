@@ -169,7 +169,6 @@ const InventoryModal = ({ setBonusSecurity, setBonusInfrastructure, setBonusInte
 
     const rollDice = () => {
         const diceNumber = Math.floor(Math.random() * 4) + 1;
-        console.log("Rolled dice:", diceNumber);
         setDiceLeft((prev) => prev - 1);
         if (diceNumber === 4) {
             const stats = [
@@ -183,9 +182,9 @@ const InventoryModal = ({ setBonusSecurity, setBonusInfrastructure, setBonusInte
             // Rastgele bir stat seç ve 1 artır
             const randomStat = stats[Math.floor(Math.random() * stats.length)];
             randomStat((prev) => prev + 1);
-            console.log("Stat increased!");
+
         } else {
-            console.log("No stat increased.");
+            //console.log("No stat increased.");
         }
     };
 

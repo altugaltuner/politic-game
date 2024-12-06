@@ -51,16 +51,6 @@ export default function GamePage() {
     const [budget, setBudget] = useState<number>(50);
     const [publicOpinion, setPublicOpinion] = useState<number>(50);
 
-    useEffect(() => {
-        console.log("Bonus Budget: ", bonusBudget);
-        console.log("Bonus Public: ", bonusPublic);
-        console.log("Bonus International: ", bonusInternational);
-        console.log("Bonus Infrastructure: ", bonusInfrastructure);
-        console.log("Bonus Security: ", bonusSecurity);
-        console.log("Bonus Agricultural: ", bonusAgricultural);
-
-    }, [bonusBudget, bonusPublic, bonusInternational, bonusInfrastructure, bonusSecurity, bonusAgricultural]);
-
     const handleBonusEffect = (effect: { type: string; value: number }) => {
         const fiftyEffect = effect.value * 50;
         switch (effect.type) {
