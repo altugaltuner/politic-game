@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Image from "next/image";
 import { elements } from "../../database/elements.js";
