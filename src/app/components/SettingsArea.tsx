@@ -1,9 +1,9 @@
 import React from 'react';
-import { Settings, CircleUserRound } from "lucide-react";
+import { Settings, CircleUserRound, Box } from "lucide-react";
 import { useUser } from "@/contexts/usernameContext";
 import { useTheme } from '@/contexts/ThemeContext';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Box } from 'lucide-react';
+
 interface SettingsAreaProps {
     handleOpenModal: () => void;
     modalOpen: boolean;

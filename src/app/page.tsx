@@ -1,28 +1,25 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { useRouter } from 'next/navigation';
 import president from "../../public/images/be-president.webp";
 import choices from "../../public/images/choice-make.webp";
 import skulls from "../../public/images/skulls-bones.webp";
 import stats from "../../public/images/stats.webp";
 import Image from 'next/image';
-import { useUser } from "@/contexts/usernameContext";
-import { db, auth } from "@/firebase";
 import SignUpForm from "./components/SignUpForm";
 import SettingsArea from "./components/SettingsArea";
 import { useState } from "react";
 import { useVolume } from "@/contexts/VolumeContext";
 import SettingsModal from "./components/SettingsModal";
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useRouter } from 'next/navigation';
 
 
 
 export default function HomePage() {
   const { language } = useLanguage();
   const [modalOpen, setModalOpen] = useState(false);
-  const [openInventoryModal, setOpenInventoryModal] = useState(false);
+  const [, setOpenInventoryModal] = useState(false);
   const { volume } = useVolume();
-
+  const router = useRouter();
   const playTickSound = () => {
     const audio = new Audio("/sound-effects/button-metal.wav");
     audio.volume = volume;

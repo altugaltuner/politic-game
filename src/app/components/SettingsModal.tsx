@@ -16,9 +16,9 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
     const { isDarkMode, toggleTheme } = useTheme();
     const { volume, setVolume } = useVolume(); // Global volume state'i alın
     const [dropdownOpen, setDropdownOpen] = useState(false);
-    if (!modalOpen) return null;
-
     const { language, setLanguage } = useLanguage(); // Dil context'ini kullan
+
+    if (!modalOpen) return null;
 
     const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newVolume = parseFloat(e.target.value);

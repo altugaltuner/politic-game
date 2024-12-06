@@ -7,8 +7,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const SignUpForm: React.FC = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
-    const [success, setSuccess] = useState(false);
+    const [, setError] = useState('');
+    const [, setSuccess] = useState(false);
     const router = useRouter();
     const { language } = useLanguage();
     const handleSignUp = async (e: React.FormEvent) => {
@@ -22,8 +22,8 @@ const SignUpForm: React.FC = () => {
             setEmail('');
             setPassword('');
             router.push('/game');
-        } catch (err: any) {
-            setError(err.message);
+        } catch (err) {
+            setError((err as Error).message);
         }
     };
 
@@ -69,10 +69,10 @@ const SignUpForm: React.FC = () => {
     return (
         <div className="h-auto md:h-[90%] lg:w-[90%] w-full flex flex-col md:gap-3 gap-2 justify-center items-center bg-white sm:p-3 p-1 rounded-3xl border-[5px] border-black">
             <form
-                className="flex gap-3 justify-center items-end w-full"
+                className="flex sm:flex-row flex-col gap-3 justify-center sm:items-end items-center w-full"
                 onSubmit={handleSignUp}
             >
-                <div className="flex flex-col w-[35%]">
+                <div className="flex flex-col gap-2 sm:gap-0 sm:w-[35%] w-full items-center justify-center">
                     <label
                         htmlFor="email"
                         className="text-lg font-semibold mb-1"
@@ -85,11 +85,11 @@ const SignUpForm: React.FC = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        className="h-10 border-2 border-black rounded-lg pl-2"
+                        className="h-10 border-2 border-black rounded-lg pl-2 sm:w-[80%] w-full"
                         placeholder="Enter your email"
                     />
                 </div>
-                <div className="flex flex-col w-[35%]">
+                <div className="flex flex-col gap-2 sm:gap-0 sm:w-[35%] w-full items-center justify-center">
                     <label
                         htmlFor="password"
                         className="text-lg font-semibold mb-1"
@@ -102,14 +102,14 @@ const SignUpForm: React.FC = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
-                        className="h-10 border-2 border-black rounded-lg pl-2"
+                        className="h-10 border-2 border-black rounded-lg pl-2 sm:w-[80%] w-full"
                         placeholder="Enter your password"
                     />
                 </div>
-                <div className="flex flex-col md:flex-row gap-3 w-[18%]">
+                <div className="flex flex-col gap-3 sm:w-[25%] w-full justify-center items-center">
                     <button
                         type="submit"
-                        className="h-10 w-full md:w-40 bg-black text-white rounded-lg hover:bg-gray-800 transition-all"
+                        className="h-10 w-24 md:w-40 p-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-all"
                         onClick={(e) => {
                             e.preventDefault();
                             handleSound();
@@ -120,6 +120,16 @@ const SignUpForm: React.FC = () => {
                     >
                         {signUpHeader[language]}
                     </button>
+                    <div className="flex flex-col md:flex-row gap-3">
+                        <button
+                            type="submit"
+                            className="h-10 w-24 bg-black text-white rounded-lg hover:bg-gray-800 transition-all p-2"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                router.push("/game");
+                            }}> Play
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>

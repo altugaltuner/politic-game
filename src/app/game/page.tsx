@@ -1,6 +1,6 @@
 "use client";
 
-import { SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import GameStats from "../components/GameStats";
 import ListElements from "../components/ListElements";
 import SettingsArea from "../components/SettingsArea";

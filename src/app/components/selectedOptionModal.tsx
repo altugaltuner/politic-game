@@ -48,11 +48,6 @@ const SelectedOptionModal: React.FC<SelectedOptionModalProps> = ({ selectedOptio
         internationalRelations: "International Relations",
     };
 
-    const types: { [key: string]: string } = {
-        increase: "+",
-        decrease: "-",
-    };
-
     useEffect(() => {
         if (selectedOptionModalOpen) {
             playNewspaperSound();

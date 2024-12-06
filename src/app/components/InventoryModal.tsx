@@ -33,7 +33,7 @@ interface InventoryModalProps {
 }
 
 
-const InventoryModal = ({ setBonusSecurity, setBonusInfrastructure, setBonusInternational, setBonusPublic, setBonusBudget, modalOpen, openInventoryModal, setOpenInventoryModal, setBonusAgricultural, bonusBudget, bonusPublic, bonusInternational, bonusInfrastructure, bonusSecurity, bonusAgricultural, handleBonusEffect, }: InventoryModalProps) => {
+const InventoryModal = ({ setBonusSecurity, setBonusInfrastructure, setBonusInternational, setBonusPublic, setBonusBudget, openInventoryModal, setOpenInventoryModal, setBonusAgricultural, bonusBudget, bonusPublic, bonusInternational, bonusInfrastructure, bonusSecurity, bonusAgricultural, handleBonusEffect, }: InventoryModalProps) => {
 
     const { language } = useLanguage(); // Dil context'ini kullan
     const { isDarkMode } = useTheme();
