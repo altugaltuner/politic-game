@@ -5,12 +5,13 @@ import { elements } from "../../database/elements.js";
 import Image, { StaticImageData } from "next/image";
 import { Button } from "@/components/ui/button";
 import { useVolume } from "@/contexts/VolumeContext";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 type Element = {
     id: number;
-    title: string;
+    title: { [language: string]: string };
     photo: StaticImageData;
-    description: string;
+    description: { [language: string]: string };
     listID: string;
     lastingEffect?: LastingEffect;
 };
@@ -28,7 +29,7 @@ interface SelectedOptionModalProps {
 
 
 const SelectedOptionModal: React.FC<SelectedOptionModalProps> = ({ selectedOptionModalOpen, selectedListIDs, setSelectedOptionModalOpen }) => {
-
+    const { language } = useLanguage();
     const [selectedElement, setSelectedElement] = useState<Element | null>(null);
     const { volume } = useVolume();
     const playNewspaperSound = () => {
@@ -72,14 +73,14 @@ const SelectedOptionModal: React.FC<SelectedOptionModalProps> = ({ selectedOptio
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
             <div className="flex flex-col bg-white p-5 rounded-lg w-[90%] max-w-lg items-center gap-4 border-[5px] border-black text-center">
                 <div className="flex flex-col gap-3 p-2 border-[2px] rounded-xl border-black bg-white w-[100%]">
-                    <h2 className="text-xl font-bold mb-4 text-primary">{selectedElement.title}</h2>
+                    <h2 className="text-xl font-bold mb-4 text-primary">{selectedElement.title[language]}</h2>
                     <Image
                         width={1820} height={1024}
                         src={selectedElement.photo.src}
-                        alt={selectedElement.title}
+                        alt="event-photo"
                         className="w-full rounded-lg"
                     />
-                    <p className="text-gray-700 md:text-sm text-xs">{selectedElement.description}</p>
+                    <p className="text-gray-700 md:text-sm text-xs">{selectedElement.description[language]}</p>
                     {selectedElement.lastingEffect && (
                         <div className="text-gray-700">
                             <h3 className="font-semibold">Lasting Effect:</h3>
