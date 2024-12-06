@@ -13,13 +13,35 @@ type KeyLabels = {
     internalSecurity: string;
     publicSupport: string;
     infrastructureAndEnvironment: string;
+    internationalRelations: string;
+    budget: string;
+    agriculturalProduction: string;
     [key: string]: string; // Allow other keys
 };
 
 type Event = {
     id: number;
-    title: string;
-    description: string;
+
+    title: {
+        tr: string;
+        en: string;
+        fr: string;
+        de: string;
+        zh: string;
+        es: string;
+        pt: string;
+        ru: string;
+    };
+    description: {
+        tr: string;
+        en: string;
+        fr: string;
+        de: string;
+        zh: string;
+        es: string;
+        pt: string;
+        ru: string;
+    };
     photo: {
         src: string;
     };
@@ -125,10 +147,10 @@ export const EventModal = ({ event, onClose }: { event: Event, onClose: (paramet
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
             <div className="flex flex-col bg-white p-5 rounded-lg w-[90%] max-w-lg items-center gap-4 border-[5px] border-black text-center">
-                <h2 className="text-xl font-bold mb-4 text-primary">{event.title}</h2>
+                <h2 className="text-xl font-bold mb-4 text-primary">{event.title[language]}</h2>
                 <Image src={event.photo.src} alt="event-photo" width={1820} height={1024} />
-                <p className="text-gray-700">{event.description}</p>
-                {/* Render each effect in the effects object */}
+                <p className="text-gray-700">{event.description[language]}</p>
+
                 <div className="mb-4 text-gray-700">
                     <h3 className="font-semibold">{effect[language]}</h3>
                     <ul>

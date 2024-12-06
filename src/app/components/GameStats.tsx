@@ -52,12 +52,6 @@ interface Effects {
 
 // Component for Game Stats
 export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetSelectedListIDs, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion }) => {
-    // const [agriculture, setAgriculture] = useState<number>(50);
-    // const [infrastructure, setInfrastructure] = useState<number>(50);
-    // const [internalSecurity, setInternalSecurity] = useState<number>(50);
-    // const [international, setInternational] = useState<number>(50);
-    // const [budget, setBudget] = useState<number>(50);
-    // const [publicOpinion, setPublicOpinion] = useState<number>(50);
     const [isVisible, setIsVisible] = useState(true);
     const { isDarkMode } = useTheme();
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -86,9 +80,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             setCurrentQuestion(updatedQuestions[0]); // ID yoksa ilk soruyu ayarla
         }
     }, [language]);
-
-
-
 
     const handleLevelUp = () => {
         setIsLevelChangeVisible(true);
@@ -146,10 +137,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         audio.volume = volume;
         audio.play();
     };
-
-    useEffect(() => {
-        console.log("lastingEffects", lastingEffects);
-    }, [lastingEffects]);
 
     const getRandomEventIndex = () => {
         return Math.floor(Math.random() * events.length);
@@ -387,8 +374,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     useEffect(() => {
         console.log("currentLevel", currentLevel);
     }, [currentLevel]);
-
-
 
 
     // Function to handle answer selection
