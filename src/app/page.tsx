@@ -11,6 +11,7 @@ import { useVolume } from "@/contexts/VolumeContext";
 import SettingsModal from "./components/SettingsModal";
 import { useLanguage } from '@/contexts/LanguageContext';
 import logo from "../../public/images/logo.webp";
+import SignInForm from "./components/SignInForm";
 
 
 export default function HomePage() {
@@ -162,6 +163,7 @@ export default function HomePage() {
       <SettingsModal modalOpen={modalOpen} setModalOpenFunc={setModalOpenFunc} />
       <SettingsArea handleOpenModal={handleOpenModal} modalOpen={modalOpen} handleOpenInventoryModal={handleOpenInventoryModal} />
       <SignUpForm />
+      <SignInForm />
       <div className="h-auto md:h-[90%] lg:w-[90%] w-full flex flex-col md:gap-3 gap-2 justify-around items-center bg-white p-4 rounded-3xl border-[5px] border-black">
         <h2 className="font-bold xl:text-[45px] lg:text-[32px] text-[30px]">{NasılOynanır[language]}</h2>
         <div className="md:flex gap-2 grid sm:grid-cols-2 grid-cols-1 w-full">

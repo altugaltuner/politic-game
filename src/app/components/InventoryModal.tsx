@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTheme } from '@/contexts/ThemeContext';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import agricultureBonus from '/public/bonuses/agricultureBonus.webp';
 import budgetBonus from '/public/bonuses/golds-icon.webp';
@@ -12,32 +12,72 @@ import internalSecBonus from '/public/bonuses/internalSecBonus.webp';
 import internationalBonus from '/public/bonuses/internationalBonus.webp';
 import publicBonus from '/public/bonuses/publicBonus.webp';
 import dice from "/public/bonuses/dice-icon.webp";
+import { auth } from '@/firebase';
 
 interface InventoryModalProps {
-    modalOpen: boolean;
+
     openInventoryModal: boolean;
     setOpenInventoryModal: React.Dispatch<React.SetStateAction<boolean>>;
-    setBonusBudget: React.Dispatch<React.SetStateAction<number>>;
-    setBonusPublic: React.Dispatch<React.SetStateAction<number>>;
-    setBonusInternational: React.Dispatch<React.SetStateAction<number>>;
-    setBonusInfrastructure: React.Dispatch<React.SetStateAction<number>>;
-    setBonusSecurity: React.Dispatch<React.SetStateAction<number>>;
-    setBonusAgricultural: React.Dispatch<React.SetStateAction<number>>;
-    bonusBudget: number;
-    bonusPublic: number;
-    bonusInternational: number;
-    bonusInfrastructure: number;
-    bonusSecurity: number;
-    bonusAgricultural: number;
     handleBonusEffect: (effect: { type: string; value: number }) => void;
+    fetchUserBonuses: (uid: string) => Promise<any>;
+    updateUserBonus: (uid: string, bonusType: string, updatedValue: number) => void;
+    initializeUserBonuses: (uid: string) => void;
 }
 
+type BonusType = 'bonusAgricultural' | 'bonusBudget' | 'bonusInfrastructure' | 'bonusSecurity' | 'bonusInternational' | 'bonusPublic';
 
-const InventoryModal = ({ setBonusSecurity, setBonusInfrastructure, setBonusInternational, setBonusPublic, setBonusBudget, openInventoryModal, setOpenInventoryModal, setBonusAgricultural, bonusBudget, bonusPublic, bonusInternational, bonusInfrastructure, bonusSecurity, bonusAgricultural, handleBonusEffect, }: InventoryModalProps) => {
+interface Bonuses {
+    bonusAgricultural: number;
+    bonusBudget: number;
+    bonusInfrastructure: number;
+    bonusSecurity: number;
+    bonusInternational: number;
+    bonusPublic: number;
+}
+
+const InventoryModal = ({ openInventoryModal,
+    setOpenInventoryModal,
+    fetchUserBonuses,
+    updateUserBonus,
+    handleBonusEffect,
+    initializeUserBonuses }: InventoryModalProps) => {
 
     const { language } = useLanguage(); // Dil context'ini kullan
     const { isDarkMode } = useTheme();
     const [diceLeft, setDiceLeft] = useState(6);
+    console.log(language);
+    const user = auth.currentUser;
+
+    const [bonuses, setBonuses] = useState<Bonuses>({
+        bonusAgricultural: 0,
+        bonusBudget: 0,
+        bonusInfrastructure: 0,
+        bonusSecurity: 0,
+        bonusInternational: 0,
+        bonusPublic: 0,
+    });
+
+    const bonusIcons = {
+        bonusAgricultural: agricultureBonus,
+        bonusBudget: budgetBonus,
+        bonusInfrastructure: infrastructureBonus,
+        bonusSecurity: internalSecBonus,
+        bonusInternational: internationalBonus,
+        bonusPublic: publicBonus,
+    };
+
+
+
+    // Firebase'den bonusları çek
+    useEffect(() => {
+        if (user) {
+            fetchUserBonuses(user.uid).then((userBonuses) => {
+                if (userBonuses) {
+                    setBonuses(userBonuses);
+                }
+            });
+        }
+    }, [user]);
 
     const close = {
         en: 'Close',
@@ -61,51 +101,31 @@ const InventoryModal = ({ setBonusSecurity, setBonusInfrastructure, setBonusInte
         zh: '骰子倒计时 : ',
     };
 
-    const handleUseBonus = (bonusType: string) => {
-        switch (bonusType) {
-            case "agriculture":
-                if (bonusAgricultural > 0) {
-                    setBonusAgricultural((prev) => prev - 1);
-                    handleBonusEffect({ type: "agriculture", value: 1 });
-                }
-                break;
-            case "budget":
-                if (bonusBudget > 0) {
-                    setBonusBudget((prev) => prev - 1);
-                    handleBonusEffect({ type: "budget", value: 1 });
-                }
-                break;
-            case "infrastructure":
-                if (bonusInfrastructure > 0) {
-                    setBonusInfrastructure((prev) => prev - 1);
-                    handleBonusEffect({ type: "infrastructure", value: 1 });
-                }
-                break;
-            case "security":
-                if (bonusSecurity > 0) {
-                    setBonusSecurity((prev) => prev - 1);
-                    handleBonusEffect({ type: "security", value: 1 });
-                }
-                break;
-            case "international":
-                if (bonusInternational > 0) {
-                    setBonusInternational((prev) => prev - 1);
-                    handleBonusEffect({ type: "international", value: 1 });
-                }
-                break;
-            case "public":
-                if (bonusPublic > 0) {
-                    setBonusPublic((prev) => prev - 1);
-                    handleBonusEffect({ type: "public", value: 1 });
-                }
-                break;
-            default:
-                break;
+    const handleUseBonus = async (bonusType: BonusType) => {
+        if (user && bonuses[bonusType] > 0) {
+            const updatedValue = bonuses[bonusType] - 1;
+
+            // Firebase'deki bonusu güncelle
+            await updateUserBonus(user.uid, bonusType, updatedValue);
+
+            // Local state'i güncelle
+            setBonuses((prev) => ({
+                ...prev,
+                [bonusType]: updatedValue,
+            }));
+            console.log("bonusType:", bonusType);
+            console.log("bonusesText[bonusType]:", bonusesText[bonusType as BonusType]);
+            // Bonus etkisini uygula
+            handleBonusEffect({ type: bonusType, value: 1 });
         }
     };
 
-    const bonuses = {
-        agriculture: {
+    if (user) {
+        initializeUserBonuses(user.uid);
+    }
+
+    const bonusesText = {
+        bonusAgricultural: {
             en: "Boost Agriculture",
             tr: "Tarımı Artır",
             de: "Landwirtschaft steigern",
@@ -115,7 +135,7 @@ const InventoryModal = ({ setBonusSecurity, setBonusInfrastructure, setBonusInte
             ru: "Увеличить сельское хозяйство",
             zh: "增加农业",
         },
-        budget: {
+        bonusBudget: {
             en: "Boost Budget",
             tr: "Bütçeyi Artır",
             de: "Budget steigern",
@@ -125,7 +145,7 @@ const InventoryModal = ({ setBonusSecurity, setBonusInfrastructure, setBonusInte
             ru: "Увеличить бюджет",
             zh: "增加预算",
         },
-        infrastructure: {
+        bonusInfrastructure: {
             en: "Boost Infrastructure",
             tr: "Altyapıyı Artır",
             de: "Infrastruktur steigern",
@@ -135,7 +155,7 @@ const InventoryModal = ({ setBonusSecurity, setBonusInfrastructure, setBonusInte
             ru: "Увеличить инфраструктуру",
             zh: "增加基础设施",
         },
-        security: {
+        bonusSecurity: {
             en: "Boost Security",
             tr: "Güvenliği Artır",
             de: "Sicherheit steigern",
@@ -145,7 +165,7 @@ const InventoryModal = ({ setBonusSecurity, setBonusInfrastructure, setBonusInte
             ru: "Увеличить безопасность",
             zh: "增加安全",
         },
-        international: {
+        bonusInternational: {
             en: "Boost  Relations",
             tr: "Politikayı Artır",
             de: "Beziehungen steigern",
@@ -155,7 +175,7 @@ const InventoryModal = ({ setBonusSecurity, setBonusInfrastructure, setBonusInte
             ru: "Увеличить отношения",
             zh: "增加关系",
         },
-        public: {
+        bonusPublic: {
             en: "Boost Support",
             tr: "Destek Artır",
             de: "Unterstützung steigern",
@@ -167,29 +187,28 @@ const InventoryModal = ({ setBonusSecurity, setBonusInfrastructure, setBonusInte
         },
     }
 
-    const rollDice = () => {
-        const diceNumber = Math.floor(Math.random() * 4) + 1;
-        setDiceLeft((prev) => prev - 1);
-        if (diceNumber === 4) {
-            const stats = [
-                setBonusAgricultural,
-                setBonusBudget,
-                setBonusInfrastructure,
-                setBonusSecurity,
-                setBonusInternational,
-                setBonusPublic,
-            ];
-            // Rastgele bir stat seç ve 1 artır
-            const randomStat = stats[Math.floor(Math.random() * stats.length)];
-            randomStat((prev) => prev + 1);
+    const rollDice = async () => {
+        if (user) {
+            const bonusTypes = Object.keys(bonuses) as Array<keyof Bonuses>;
+            const randomBonus = bonusTypes[Math.floor(Math.random() * bonusTypes.length)];
 
-        } else {
-            //console.log("No stat increased.");
+            const updatedValue = bonuses[randomBonus] + 1;
+
+            // Firebase ve local state'i güncelle
+            await updateUserBonus(user.uid, randomBonus, updatedValue);
+            setBonuses((prev) => ({
+                ...prev,
+                [randomBonus]: updatedValue,
+            }));
+
+            setDiceLeft((prev) => prev - 1);
         }
     };
 
-
     if (!openInventoryModal) return null;
+
+    const validBonusTypes = Object.keys(bonusesText);
+
     return (
         <div onClick={() => setOpenInventoryModal(false)} className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 '>
             <div onClick={(e) => e.stopPropagation()} className={`relative flex flex-col ${isDarkMode ? 'bg-[rgb(17,17,17)] text-white border-white' : 'bg-white border-black text-black'} sm:p-5 p-3 rounded-lg w-[80%]  items-center gap-4 border-[5px] text-center `}>
@@ -198,42 +217,29 @@ const InventoryModal = ({ setBonusSecurity, setBonusInfrastructure, setBonusInte
                 </div>
                 <h1 className='text-3xl font-bold'>Bonuses</h1>
                 <div className='flex gap-3 w-full justify-center'>
-                    <div className='flex flex-col gap-2 w-[16%] justify-between items-center'>
-                        <Image width={200} height={200} className=' sm:w-9 lg:w-24 w-5 sm:h-9 lg:h-24 h-5' src={agricultureBonus} alt={'agricultureBonus'} />
-                        <p className='break-after-avoid w-24'>{bonuses.agriculture[language]}</p>
-                        <p className='font-medium text-xl'>{bonusAgricultural}</p>
-                        <Button className={`${isDarkMode ? 'bg-white text-black border-white hover:bg-neutral-400' : ''}`} onClick={() => handleUseBonus("agriculture")} >Use</Button>
-                    </div>
-                    <div className='flex flex-col gap-2 w-[16%] justify-between items-center'>
-                        <Image className=' sm:w-9 lg:w-24 w-5 sm:h-9 lg:h-24 h-5' width={200} height={200} src={budgetBonus} alt={'budgetBonus'} />
-                        <p className='break-after-avoid w-24'>{bonuses.budget[language]}</p>
-                        <p className='font-medium text-xl'>{bonusBudget}</p>
-                        <Button className={`${isDarkMode ? 'bg-white text-black border-white hover:bg-neutral-400' : ''}`} onClick={() => handleUseBonus("budget")}>Use</Button>
-                    </div>
-                    <div className='flex flex-col gap-2 w-[16%] justify-between items-center'>
-                        <Image className=' sm:w-9 lg:w-24 w-5 sm:h-9 lg:h-24 h-5' width={200} height={200} src={infrastructureBonus} alt={'infrastructureBonus'} />
-                        <p className='break-after-avoid w-24'>{bonuses.infrastructure[language]}</p>
-                        <p className='font-medium text-xl'>{bonusInfrastructure}</p>
-                        <Button className={`${isDarkMode ? 'bg-white text-black border-white hover:bg-neutral-400' : ''}`} onClick={() => handleUseBonus("infrastructure")}>Use</Button>
-                    </div>
-                    <div className='flex flex-col gap-2 w-[16%] justify-between items-center'>
-                        <Image className=' sm:w-9 lg:w-24 w-5 sm:h-9 lg:h-24 h-5' width={200} height={200} src={internalSecBonus} alt={'internalSecBonus'} />
-                        <p className='break-after-avoid w-24'>{bonuses.security[language]}</p>
-                        <p className='font-medium text-xl'>{bonusSecurity}</p>
-                        <Button className={`${isDarkMode ? 'bg-white text-black border-white hover:bg-neutral-400' : ''}`} onClick={() => handleUseBonus("security")}>Use</Button>
-                    </div>
-                    <div className='flex flex-col gap-2 w-[16%] justify-between items-center'>
-                        <Image className=' sm:w-9 lg:w-24 w-5 sm:h-9 lg:h-24 h-5' width={200} height={200} src={internationalBonus} alt={'internationalBonus'} />
-                        <p className='break-after-avoid w-24'>{bonuses.international[language]}</p>
-                        <p className='font-medium text-xl'>{bonusInternational}</p>
-                        <Button className={`${isDarkMode ? 'bg-white text-black border-white hover:bg-neutral-400' : ''}`} onClick={() => handleUseBonus("international")}>Use</Button>
-                    </div>
-                    <div className='flex flex-col gap-2 w-[16%] justify-between items-center'>
-                        <Image className=' sm:w-9 lg:w-24 w-5 sm:h-9 lg:h-24 h-5' width={200} height={200} src={publicBonus} alt={'publicBonus'} />
-                        <p className='break-after-avoid w-24'>{bonuses.public[language]}</p>
-                        <p className='font-medium text-xl'>{bonusPublic}</p>
-                        <Button className={`${isDarkMode ? 'bg-white text-black border-white hover:bg-neutral-400' : ''}`} onClick={() => handleUseBonus("public")}>Use</Button>
-                    </div>
+                    {Object.keys(bonuses).filter((bonusType) => validBonusTypes.includes(bonusType)).map((bonusType) => (
+
+                        <div key={bonusType} className="flex flex-col gap-2 w-[16%] justify-between items-center">
+                            <Image
+                                width={200}
+                                height={200}
+                                className="sm:w-9 lg:w-24 w-5 sm:h-9 lg:h-24 h-5"
+                                src={bonusIcons[bonusType as BonusType]}
+                                alt={bonusType}
+                            />
+                            <p className="break-after-avoid w-24">
+                                {bonusesText[bonusType as BonusType]?.[language] || "No text available"}
+                            </p>
+                            <p className="font-medium text-xl">{bonuses[bonusType as keyof typeof bonuses]}</p>
+                            <Button
+                                className={`${isDarkMode ? 'bg-white text-black border-white hover:bg-neutral-400' : ''
+                                    }`}
+                                onClick={() => handleUseBonus(bonusType as keyof typeof bonuses)}
+                            >
+                                Use
+                            </Button>
+                        </div>
+                    ))}
 
                 </div>
                 <div className='flex flex-row gap-3 w-full justify-center items-center'>

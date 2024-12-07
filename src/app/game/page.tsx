@@ -10,6 +10,9 @@ import { useTheme } from '@/contexts/ThemeContext';
 import { useVolume } from "@/contexts/VolumeContext";
 import { elements } from "@/database/elements";
 import InventoryModal from "../components/InventoryModal";
+import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
+import { auth, db } from "@/firebase";
+
 
 type Effects = {
     type: string;
@@ -25,6 +28,26 @@ type Effects = {
 };
 
 
+const fetchUserData = async (uid: string) => {
+    const docRef = doc(db, "users", uid);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+        console.log("User data:", docSnap.data());
+        return docSnap.data(); // Kullanıcı verisi burada döner
+    } else {
+        console.log("No such document!");
+    }
+};
+const user = auth.currentUser;
+if (user) {
+    fetchUserData(user.uid).then((userData) => {
+        console.log("Username:", userData?.username);
+    }).catch((error) => {
+        console.error("Error fetching user data:", error);
+    });
+}
+
 export default function GamePage() {
     const { volume } = useVolume();
     const [modalOpen, setModalOpen] = useState(false);
@@ -35,15 +58,6 @@ export default function GamePage() {
         setSelectedOptionModalOpen(true);
     }
     const [lastingEffects, setLastingEffects] = useState<Effects[]>([]);
-
-    const [bonusBudget, setBonusBudget] = useState<number>(1);
-    const [bonusPublic, setBonusPublic] = useState<number>(1);
-    const [bonusInternational, setBonusInternational] = useState<number>(1);
-    const [bonusInfrastructure, setBonusInfrastructure] = useState<number>(1);
-    const [bonusSecurity, setBonusSecurity] = useState<number>(1);
-    const [bonusAgricultural, setBonusAgricultural] = useState<number>(1);
-
-
     const [agriculture, setAgriculture] = useState<number>(50);
     const [infrastructure, setInfrastructure] = useState<number>(50);
     const [internalSecurity, setInternalSecurity] = useState<number>(50);
@@ -77,6 +91,50 @@ export default function GamePage() {
         }
     }
 
+
+    const initializeUserBonuses = async (uid: string) => {
+        const userDocRef = doc(db, "users", uid);
+
+        // Kullanıcı bonuslarını kontrol et
+        const userDoc = await getDoc(userDocRef);
+        if (!userDoc.exists()) {
+            // Eğer bonuslar yoksa, varsayılan bonusları oluştur
+            await setDoc(userDocRef, {
+                bonusAgricultural: 1,
+                bonusBudget: 1,
+                bonusInfrastructure: 1,
+                bonusSecurity: 1,
+                bonusInternational: 1,
+                bonusPublic: 1,
+            });
+            console.log("User bonuses initialized");
+        } else {
+            console.log("User bonuses already exist");
+        }
+    };
+
+    const fetchUserBonuses = async (uid: string) => {
+        const userDocRef = doc(db, "users", uid);
+        const userDoc = await getDoc(userDocRef);
+
+        if (userDoc.exists()) {
+            console.log("User bonuses:", userDoc.data());
+            return userDoc.data();
+        } else {
+            console.log("No user bonuses found");
+            return null;
+        }
+    };
+
+    const updateUserBonus = async (uid: string, bonusType: string, amount: number) => {
+        const userDocRef = doc(db, "users", uid);
+
+        // Belirli bir bonusu güncelle
+        await updateDoc(userDocRef, {
+            [bonusType]: amount,
+        });
+        console.log(`${bonusType} updated to ${amount}`);
+    };
 
     const playTickSound = () => {
         const audio = new Audio("/sound-effects/button-metal.wav");
@@ -160,19 +218,11 @@ export default function GamePage() {
                 <InventoryModal
                     openInventoryModal={openInventoryModal}
                     setOpenInventoryModal={setOpenInventoryModal}
-                    modalOpen={false}
-                    setBonusBudget={setBonusBudget}
-                    bonusBudget={bonusBudget}
-                    setBonusPublic={setBonusPublic}
-                    bonusPublic={bonusPublic}
-                    setBonusInternational={setBonusInternational}
-                    bonusInternational={bonusInternational}
-                    setBonusInfrastructure={setBonusInfrastructure}
-                    bonusInfrastructure={bonusInfrastructure}
-                    setBonusSecurity={setBonusSecurity}
-                    bonusSecurity={bonusSecurity}
-                    setBonusAgricultural={setBonusAgricultural}
-                    bonusAgricultural={bonusAgricultural} handleBonusEffect={handleBonusEffect} />
+                    updateUserBonus={updateUserBonus}
+                    fetchUserBonuses={fetchUserBonuses}
+                    initializeUserBonuses={initializeUserBonuses}
+                    handleBonusEffect={handleBonusEffect}
+                />
 
             </div>
         </div>
