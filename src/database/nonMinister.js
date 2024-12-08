@@ -541,6 +541,53 @@ export const nonMinisters = {
             photo: merkel,
             level: 2,
         },
+        {
+            id: 571,
+            question: "Canım, yeni bir saray inşa etme vakti gelmedi mi sence de? Bu eski köşke sığamıyoruz.",
+            answers: [
+                {
+                    text: "Haklısın, talimat vereceğim",
+                    effect: {
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "Köşkümüzü seviyorum",
+                    effect: {
+                        budget: +5,
+                        publicSupport: 0,
+                    },
+                }
+            ],
+            title: "Eşiniz Dora",
+            photo: merkel, //değiş
+            level: 2,
+        },
+        {
+            id: 572,
+            question: "Bilimde ilerlemek adına insan deneylerine izin vermenizi sizden istiyorum. Bu, ülkemizin bilim dünyasında rakiplerimizin önüne geçmesini sağlar.",
+            answers: [
+                {
+                    text: "İnsanlık dışı, izin veremem",
+                    effect: {
+                        publicSupport: +10,
+                        infrastructureAndEnvironment: -15,
+                    },
+                },
+                {
+                    text: "Bilim adına yapılacaksa olabilir",
+                    effect: {
+                        infrastructureAndEnvironment: +20,
+                        publicSupport: -30,
+                        internationalRelations: -30,
+                    },
+                }
+            ],
+            title: "Kimya Profesörü Victoria",
+            photo: merkel, //değiş
+            level: 2,
+        },
     ],
     en: [
         {
@@ -1091,7 +1138,55 @@ export const nonMinisters = {
             title: "Angela Merkel",
             photo: merkel,
             level: 2
+        },
+        {
+            id: 571,
+            question: "Darling, don’t you think it’s time to build a new palace? We can’t fit into this old mansion anymore.",
+            answers: [
+                {
+                    text: "You’re right, I’ll give the order",
+                    effect: {
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "I love our mansion",
+                    effect: {
+                        budget: +5,
+                        publicSupport: 0,
+                    },
+                }
+            ],
+            title: "Your Spouse Dora",
+            photo: dora,
+            level: 2,
+        },
+        {
+            id: 572,
+            question: "I ask you to allow human experiments in the name of scientific progress. This will help our country surpass our competitors in the scientific world.",
+            answers: [
+                {
+                    text: "Inhumane, I cannot allow it",
+                    effect: {
+                        publicSupport: +10,
+                        infrastructureAndEnvironment: -15,
+                    },
+                },
+                {
+                    text: "If it’s for the sake of science, it might be acceptable",
+                    effect: {
+                        infrastructureAndEnvironment: +20,
+                        publicSupport: -30,
+                        internationalRelations: -30,
+                    },
+                }
+            ],
+            title: "Chemistry Professor Victoria",
+            photo: victoria,
+            level: 2,
         }
+
 
     ],
     de: [
@@ -1643,7 +1738,56 @@ export const nonMinisters = {
             title: "Angela Merkel",
             photo: merkel,
             level: 2
+        },
+        {
+            id: 571,
+            question: "Liebling, findest du nicht, dass es Zeit ist, einen neuen Palast zu bauen? Wir passen nicht mehr in dieses alte Herrenhaus.",
+            answers: [
+                {
+                    text: "Du hast recht, ich werde den Befehl geben",
+                    effect: {
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "Ich liebe unser Herrenhaus",
+                    effect: {
+                        budget: +5,
+                        publicSupport: 0,
+                    },
+                }
+            ],
+            title: "Ihre Ehefrau Dora",
+            photo: dora,
+            level: 2,
+        },
+        {
+            id: 572,
+            question: "Ich bitte Sie, menschliche Experimente im Namen des wissenschaftlichen Fortschritts zu erlauben. Dies wird unserem Land helfen, unsere Konkurrenten in der Wissenschaftswelt zu übertreffen.",
+            answers: [
+                {
+                    text: "Unmenschlich, ich kann es nicht erlauben",
+                    effect: {
+                        publicSupport: +10,
+                        infrastructureAndEnvironment: -15,
+                    },
+                },
+                {
+                    text: "Wenn es im Namen der Wissenschaft ist, könnte es akzeptabel sein",
+                    effect: {
+                        infrastructureAndEnvironment: +20,
+                        publicSupport: -30,
+                        internationalRelations: -30,
+                    },
+                }
+            ],
+            title: "Chemieprofessorin Victoria",
+            photo: victoria,
+            level: 2,
         }
+
+
 
     ],
     fr: [
@@ -2195,7 +2339,55 @@ export const nonMinisters = {
             title: "Angela Merkel",
             photo: merkel,
             level: 2
+        },
+        {
+            id: 571,
+            question: "Chéri, ne penses-tu pas qu'il est temps de construire un nouveau palais ? Nous ne rentrons plus dans ce vieux manoir.",
+            answers: [
+                {
+                    text: "Tu as raison, je vais donner l'ordre",
+                    effect: {
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "J'adore notre manoir",
+                    effect: {
+                        budget: +5,
+                        publicSupport: 0,
+                    },
+                }
+            ],
+            title: "Votre épouse Dora",
+            photo: dora,
+            level: 2,
+        },
+        {
+            id: 572,
+            question: "Je vous demande d'autoriser des expériences humaines au nom du progrès scientifique. Cela aidera notre pays à dépasser nos concurrents dans le monde scientifique.",
+            answers: [
+                {
+                    text: "Inhumain, je ne peux pas l'autoriser",
+                    effect: {
+                        publicSupport: +10,
+                        infrastructureAndEnvironment: -15,
+                    },
+                },
+                {
+                    text: "Si c'est au nom de la science, cela pourrait être acceptable",
+                    effect: {
+                        infrastructureAndEnvironment: +20,
+                        publicSupport: -30,
+                        internationalRelations: -30,
+                    },
+                }
+            ],
+            title: "Professeure de chimie Victoria",
+            photo: victoria,
+            level: 2,
         }
+
 
     ],
     pt: [
@@ -2722,7 +2914,55 @@ export const nonMinisters = {
             title: "Angela Merkel",
             photo: merkel,
             level: 2
+        },
+        {
+            id: 571,
+            question: "Querido, você não acha que é hora de construir um novo palácio? Não cabemos mais nesta velha mansão.",
+            answers: [
+                {
+                    text: "Você está certo, vou dar a ordem",
+                    effect: {
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "Eu amo nossa mansão",
+                    effect: {
+                        budget: +5,
+                        publicSupport: 0,
+                    },
+                }
+            ],
+            title: "Sua esposa Dora",
+            photo: dora,
+            level: 2,
+        },
+        {
+            id: 572,
+            question: "Peço que permita experimentos humanos em nome do progresso científico. Isso ajudará nosso país a superar nossos concorrentes no mundo científico.",
+            answers: [
+                {
+                    text: "Desumano, não posso permitir",
+                    effect: {
+                        publicSupport: +10,
+                        infrastructureAndEnvironment: -15,
+                    },
+                },
+                {
+                    text: "Se for em nome da ciência, pode ser aceitável",
+                    effect: {
+                        infrastructureAndEnvironment: +20,
+                        publicSupport: -30,
+                        internationalRelations: -30,
+                    },
+                }
+            ],
+            title: "Professora de Química Victoria",
+            photo: victoria,
+            level: 2,
         }
+
 
     ],
     zh: [
@@ -3274,6 +3514,53 @@ export const nonMinisters = {
             title: "安格拉·默克尔",
             photo: merkel,
             level: 2
+        },
+        {
+            id: 571,
+            question: "亲爱的，你不觉得该建一座新宫殿了吗？我们已经无法容纳在这座老宅里了。",
+            answers: [
+                {
+                    text: "你是对的，我会下达命令",
+                    effect: {
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "我喜欢我们的老宅",
+                    effect: {
+                        budget: +5,
+                        publicSupport: 0,
+                    },
+                }
+            ],
+            title: "你的妻子多拉",
+            photo: dora,
+            level: 2,
+        },
+        {
+            id: 572,
+            question: "我请求您以科学进步的名义允许人体实验。这将帮助我们的国家在科学界超越竞争对手。",
+            answers: [
+                {
+                    text: "不人道，我不能允许",
+                    effect: {
+                        publicSupport: +10,
+                        infrastructureAndEnvironment: -15,
+                    },
+                },
+                {
+                    text: "如果是为了科学，可以接受",
+                    effect: {
+                        infrastructureAndEnvironment: +20,
+                        publicSupport: -30,
+                        internationalRelations: -30,
+                    },
+                }
+            ],
+            title: "化学教授维多利亚",
+            photo: victoria,
+            level: 2,
         }
 
     ],
@@ -3801,7 +4088,56 @@ export const nonMinisters = {
             title: "Angela Merkel",
             photo: merkel,
             level: 2
+        },
+        {
+            id: 571,
+            question: "Cariño, ¿no crees que es hora de construir un nuevo palacio? Ya no cabemos en esta vieja mansión.",
+            answers: [
+                {
+                    text: "Tienes razón, daré la orden",
+                    effect: {
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "Amo nuestra mansión",
+                    effect: {
+                        budget: +5,
+                        publicSupport: 0,
+                    },
+                }
+            ],
+            title: "Tu esposa Dora",
+            photo: dora,
+            level: 2,
+        },
+        {
+            id: 572,
+            question: "Le pido que permita experimentos humanos en nombre del progreso científico. Esto ayudará a nuestro país a superar a nuestros competidores en el mundo científico.",
+            answers: [
+                {
+                    text: "Inhumano, no puedo permitirlo",
+                    effect: {
+                        publicSupport: +10,
+                        infrastructureAndEnvironment: -15,
+                    },
+                },
+                {
+                    text: "Si es por el bien de la ciencia, podría ser aceptable",
+                    effect: {
+                        infrastructureAndEnvironment: +20,
+                        publicSupport: -30,
+                        internationalRelations: -30,
+                    },
+                }
+            ],
+            title: "Profesora de Química Victoria",
+            photo: victoria,
+            level: 2,
         }
+
+
 
     ],
     ru: [
@@ -4328,6 +4664,53 @@ export const nonMinisters = {
             title: "Ангела Меркель",
             photo: merkel,
             level: 2
+        },
+        {
+            id: 571,
+            question: "Дорогой, не думаешь ли ты, что пора построить новый дворец? Мы больше не помещаемся в этом старом особняке.",
+            answers: [
+                {
+                    text: "Ты права, я отдам приказ",
+                    effect: {
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "Я люблю наш особняк",
+                    effect: {
+                        budget: +5,
+                        publicSupport: 0,
+                    },
+                }
+            ],
+            title: "Ваша супруга Дора",
+            photo: dora,
+            level: 2,
+        },
+        {
+            id: 572,
+            question: "Я прошу вас разрешить эксперименты на людях во имя научного прогресса. Это поможет нашей стране обогнать конкурентов в научном мире.",
+            answers: [
+                {
+                    text: "Это бесчеловечно, я не могу этого позволить",
+                    effect: {
+                        publicSupport: +10,
+                        infrastructureAndEnvironment: -15,
+                    },
+                },
+                {
+                    text: "Если это ради науки, это может быть допустимо",
+                    effect: {
+                        infrastructureAndEnvironment: +20,
+                        publicSupport: -30,
+                        internationalRelations: -30,
+                    },
+                }
+            ],
+            title: "Профессор химии Виктория",
+            photo: victoria,
+            level: 2,
         }
 
     ],

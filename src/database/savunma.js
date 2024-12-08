@@ -1,5 +1,5 @@
 import savunmaBakani from "../../public/ministers/savunma-bakani.webp";
-// 2 soru var
+// 3 soru var
 export const savunmaQuestions = {
     tr: [
         {
@@ -44,6 +44,33 @@ export const savunmaQuestions = {
                         budget: -10,
                         internalSecurity: +10,
                         internationalRelations: +10,
+                    },
+                    listID: "savunma2",
+                }
+            ],
+            title: "Milli Savunma Bakanı",
+            photo: savunmaBakani,
+            level: 2,
+        },
+        {
+            id: 122,
+            question: "Komşu ülkemiz Bailanda silahlanma bütçesini 4 katına çıkardı. Amaçları bizim gözümüzü korkutmak olabilir.",
+            answers: [
+                {
+                    text: "Silahlanmayı arttırın",
+                    effect: {
+                        budget: -20,
+                        internalSecurity: +20,
+                        internationalRelations: -15,
+                    },
+
+                },
+                {
+                    text: "Diplomat gönderin, istişare etsinler",
+                    effect: {
+                        budget: +20,
+                        internalSecurity: -20,
+                        internationalRelations: +15,
                     },
                     listID: "savunma2",
                 }
@@ -104,6 +131,33 @@ export const savunmaQuestions = {
             photo: savunmaBakani,
             level: 2,
         },
+        {
+            id: 122,
+            question: "Our neighboring country, Bailanda, has quadrupled its military budget. Their goal might be to intimidate us.",
+            answers: [
+                {
+                    text: "Increase armament",
+                    effect: {
+                        budget: -20,
+                        internalSecurity: +20,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Send a diplomat to consult with them",
+                    effect: {
+                        budget: +20,
+                        internalSecurity: -20,
+                        internationalRelations: +15,
+                    },
+                    listID: "defense2",
+                }
+            ],
+            title: "Minister of National Defense",
+            photo: defenseMinister,
+            level: 2,
+        }
+
     ],
     de: [
         {
@@ -156,6 +210,33 @@ export const savunmaQuestions = {
             photo: savunmaBakani,
             level: 2,
         },
+        {
+            id: 122,
+            question: "Unser Nachbarland Bailanda hat sein Militärbudget vervierfacht. Ihr Ziel könnte es sein, uns einzuschüchtern.",
+            answers: [
+                {
+                    text: "Aufrüstung erhöhen",
+                    effect: {
+                        budget: -20,
+                        internalSecurity: +20,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Einen Diplomaten senden, um zu beraten",
+                    effect: {
+                        budget: +20,
+                        internalSecurity: -20,
+                        internationalRelations: +15,
+                    },
+                    listID: "verteidigung2",
+                }
+            ],
+            title: "Verteidigungsminister",
+            photo: defenseMinister,
+            level: 2,
+        }
+
     ],
     fr: [
         {
@@ -208,6 +289,33 @@ export const savunmaQuestions = {
             photo: savunmaBakani,
             level: 2,
         },
+        {
+            id: 122,
+            question: "Notre pays voisin, Bailanda, a quadruplé son budget militaire. Leur objectif pourrait être de nous intimider.",
+            answers: [
+                {
+                    text: "Augmentez l'armement",
+                    effect: {
+                        budget: -20,
+                        internalSecurity: +20,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Envoyez un diplomate pour discuter avec eux",
+                    effect: {
+                        budget: +20,
+                        internalSecurity: -20,
+                        internationalRelations: +15,
+                    },
+                    listID: "défense2",
+                }
+            ],
+            title: "Ministre de la Défense Nationale",
+            photo: defenseMinister,
+            level: 2,
+        }
+
     ],
     pt: [
         {
@@ -260,6 +368,33 @@ export const savunmaQuestions = {
             photo: savunmaBakani,
             level: 2,
         },
+        {
+            id: 122,
+            question: "Nosso país vizinho, Bailanda, quadruplicou seu orçamento militar. O objetivo deles pode ser nos intimidar.",
+            answers: [
+                {
+                    text: "Aumentar o armamento",
+                    effect: {
+                        budget: -20,
+                        internalSecurity: +20,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Envie um diplomata para consultar",
+                    effect: {
+                        budget: +20,
+                        internalSecurity: -20,
+                        internationalRelations: +15,
+                    },
+                    listID: "defesa2",
+                }
+            ],
+            title: "Ministro da Defesa Nacional",
+            photo: defenseMinister,
+            level: 2,
+        }
+
     ],
     zh: [
         {
@@ -312,6 +447,33 @@ export const savunmaQuestions = {
             photo: savunmaBakani,
             level: 2,
         },
+        {
+            id: 122,
+            question: "我们的邻国拜兰达将其军事预算增加了四倍。他们的目标可能是吓唬我们。",
+            answers: [
+                {
+                    text: "增加军备",
+                    effect: {
+                        budget: -20,
+                        internalSecurity: +20,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "派遣一名外交官进行磋商",
+                    effect: {
+                        budget: +20,
+                        internalSecurity: -20,
+                        internationalRelations: +15,
+                    },
+                    listID: "防御2",
+                }
+            ],
+            title: "国防部长",
+            photo: defenseMinister,
+            level: 2,
+        }
+
     ],
     es: [
         {
@@ -364,6 +526,33 @@ export const savunmaQuestions = {
             photo: savunmaBakani,
             level: 2,
         },
+        {
+            id: 122,
+            question: "Nuestro país vecino, Bailanda, ha cuadruplicado su presupuesto militar. Su objetivo podría ser intimidarnos.",
+            answers: [
+                {
+                    text: "Incrementar el armamento",
+                    effect: {
+                        budget: -20,
+                        internalSecurity: +20,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Enviar un diplomático para consultar con ellos",
+                    effect: {
+                        budget: +20,
+                        internalSecurity: -20,
+                        internationalRelations: +15,
+                    },
+                    listID: "defensa2",
+                }
+            ],
+            title: "Ministro de Defensa Nacional",
+            photo: defenseMinister,
+            level: 2,
+        }
+
     ],
     ru: [
         {
@@ -416,5 +605,32 @@ export const savunmaQuestions = {
             photo: savunmaBakani,
             level: 2,
         },
+        {
+            id: 122,
+            question: "Наше соседнее государство, Байланда, увеличило свой военный бюджет в четыре раза. Их цель может заключаться в том, чтобы запугать нас.",
+            answers: [
+                {
+                    text: "Увеличить вооружение",
+                    effect: {
+                        budget: -20,
+                        internalSecurity: +20,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Отправить дипломата для переговоров",
+                    effect: {
+                        budget: +20,
+                        internalSecurity: -20,
+                        internationalRelations: +15,
+                    },
+                    listID: "оборона2",
+                }
+            ],
+            title: "Министр национальной обороны",
+            photo: defenseMinister,
+            level: 2,
+        }
+
     ],
 };

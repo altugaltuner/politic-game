@@ -21,7 +21,10 @@ type GameStatsProps = {
     international: number;
     budget: number;
     publicOpinion: number;
+    level: number;
+    score: number;
     setAgriculture: React.Dispatch<React.SetStateAction<number>>;
+    setScore: React.Dispatch<React.SetStateAction<number>>;
     setInfrastructure: React.Dispatch<React.SetStateAction<number>>;
     setInternalSecurity: React.Dispatch<React.SetStateAction<number>>;
     setInternational: React.Dispatch<React.SetStateAction<number>>;
@@ -52,16 +55,16 @@ interface Effects {
 }
 
 // Component for Game Stats
-export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetSelectedListIDs, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion }) => {
+export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level, resetSelectedListIDs, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion, score, setScore }) => {
 
     const [isVisible, setIsVisible] = useState(true);
     const { isDarkMode } = useTheme();
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [currentLevel, setCurrentLevel] = useState(1);
     const [isLevelChangeVisible, setIsLevelChangeVisible] = useState(true);
     const { language } = useLanguage(); // Dil bilgisi
     const [allQuestions, setAllQuestions] = useState(allQuestionsByLanguage[language]); // Dil bazlı sorular
     const [currentQuestion, setCurrentQuestion] = useState(allQuestions[0]);
+    const [currentLevel, setCurrentLevel] = useState(level);
 
     useEffect(() => {
         const currentQuestionId = currentQuestion?.id; // Mevcut sorunun ID'sini alın
@@ -83,6 +86,21 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         }
     }, [language]);
 
+    // console.log("level dbden gelen", level);
+
+    useEffect(() => {
+        if (currentLevel !== level) {
+            console.log(`Updating current level to match db level: ${level}`);
+            setCurrentLevel(level);
+        }
+    }, []);
+
+    useEffect(() => {
+        console.log(`Current Level after state update: ${currentLevel}`);
+        console.log(`score: ${score}`);
+    }, [currentLevel]);
+
+
     const handleLevelUp = () => {
         setIsLevelChangeVisible(true);
         setTimeout(() => {
@@ -90,6 +108,14 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             setIsLevelChangeVisible(false);
         }, 4000);
     };
+
+    useEffect(() => {
+        if (currentLevel !== level) {
+            console.log(`Updating level from ${currentLevel} to ${level}`);
+            setCurrentLevel(level);
+        }
+    }, [level, currentLevel]);
+
 
     useEffect(() => {
         // Tüm soruların fotoğraflarını önceden yükleyin
@@ -157,7 +183,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
     const [gameOver, setGameOver] = useState(false);
     const [gameOverReason, setGameOverReason] = useState("");
     const [deathStat, setDeathStat] = useState<string | null>(null);
-    const [score, setScore] = useState(0);
+
 
     useEffect(() => {
         if (!currentQuestion) return; // Soru yoksa çalıştırma
@@ -208,6 +234,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
 
         const newLevel = calculateLevel();
         if (newLevel !== currentLevel) {
+            console.log(`Score-based level change to ${newLevel}`);
             setCurrentLevel(newLevel); // Yeni seviyeyi ayarla
             handleLevelUp(); // Level atlama animasyonunu başlat
         }
@@ -426,7 +453,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
         setCurrentQuestion(allQuestions[0]);
         setGameOver(false);
         setGameOverReason("");
-        setScore(0);
+        setScore(score);
         setDeathStat(null);
         metalButtonSound();
         setLastingEffects([]);

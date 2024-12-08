@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GameStats from "../components/GameStats";
 import ListElements from "../components/ListElements";
 import SettingsArea from "../components/SettingsArea";
@@ -27,27 +27,22 @@ type Effects = {
     [key: string]: number | string | undefined;
 };
 
+// Kullanıcı verilerini çekme fonksiyonu
 const fetchUserData = async (uid: string) => {
-    const docRef = doc(db, "users", uid);
-    const docSnap = await getDoc(docRef);
+    try {
+        const docRef = doc(db, "users", uid);
+        const docSnap = await getDoc(docRef);
 
-    if (docSnap.exists()) {
-        console.log("User data:", docSnap.data());
-        return docSnap.data(); // Kullanıcı verisi burada döner
-    } else {
-        console.log("No such document!");
+        if (docSnap.exists()) {
+            return docSnap.data();
+        } else {
+            console.log("No such document!");
+        }
+    } catch (error) {
+        console.error("Error fetching user data:", error);
     }
 };
-const user = auth.currentUser;
 
-
-if (user) {
-    fetchUserData(user.uid).then((userData) => {
-        console.log("Username:", userData?.username);
-    }).catch((error) => {
-        console.error("Error fetching user data:", error);
-    });
-}
 
 export default function GamePage() {
     const { volume } = useVolume();
@@ -65,6 +60,25 @@ export default function GamePage() {
     const [international, setInternational] = useState<number>(50);
     const [budget, setBudget] = useState<number>(50);
     const [publicOpinion, setPublicOpinion] = useState<number>(50);
+    const [level, setLevel] = useState<number | null>(null);
+    const [score, setScore] = useState<number>(0);
+    const user = auth.currentUser;
+
+    useEffect(() => {
+        const fetchData = async () => {
+            if (user) {
+                const userData = await fetchUserData(user.uid);
+                if (userData) {
+                    setLevel(userData.level ?? 1); // Kullanıcı seviyesi
+                    setScore(userData.score ?? 0); // Kullanıcı skoru
+                }
+            }
+        };
+        fetchData();
+    }, [user]);
+
+    console.log("score", score);
+
 
     const handleBonusEffect = (effect: { type: string; value: number }) => {
         const fiftyEffect = effect.value * 50;
@@ -91,8 +105,6 @@ export default function GamePage() {
                 break;
         }
     }
-
-
     const initializeUserBonuses = async (uid: string) => {
         const userDocRef = doc(db, "users", uid);
 
@@ -108,21 +120,21 @@ export default function GamePage() {
                 bonusInternational: 1,
                 bonusPublic: 1,
             });
-            console.log("User bonuses initialized");
         } else {
-            console.log("User bonuses already exist");
+            // console.log("User bonuses already exist");
         }
     };
+    const [selectedListIDs, setSelectedListIDs] = useState<string[]>([]);
 
     const fetchUserBonuses = async (uid: string) => {
         const userDocRef = doc(db, "users", uid);
         const userDoc = await getDoc(userDocRef);
 
         if (userDoc.exists()) {
-            console.log("User bonuses:", userDoc.data());
+            //console.log("User bonuses:", userDoc.data());
             return userDoc.data();
         } else {
-            console.log("No user bonuses found");
+            //console.log("No user bonuses found");
             return null;
         }
     };
@@ -158,7 +170,6 @@ export default function GamePage() {
         setOpenInventoryModal(true);
         playTickSound();
     }
-    const [selectedListIDs, setSelectedListIDs] = useState<string[]>([]);
 
     const handleSetSelectedListID = (newListID: string) => {
         setSelectedListIDs((prevListIDs) =>
@@ -201,8 +212,9 @@ export default function GamePage() {
                 setInternalSecurity={setInternalSecurity}
                 setInternational={setInternational}
                 setPublicOpinion={setPublicOpinion}
-
-
+                level={level ?? 1}
+                score={score}
+                setScore={setScore}
             />
 
             <div className="flex flex-col sm:gap-2 gap-1 xl:w-[30%] w-full">

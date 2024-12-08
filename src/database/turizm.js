@@ -1,5 +1,5 @@
 import turizmBakani from "../../public/ministers/turizm-bakani.webp";
-//3 soru var
+//5 soru var
 export const turizmQuestions = {
     tr: [
         {
@@ -68,6 +68,56 @@ export const turizmQuestions = {
                         internationalRelations: +10,
                         budget: -10,
                         infrastructureAndEnvironment: +5,
+                    }
+                }
+            ],
+            title: "Kültür ve Turizm Bakanı",
+            photo: turizmBakani,
+            level: 3,
+        },
+        {
+            id: 163,
+            question: "Yurtdışına çok fazla kalifiye insan gönderiyoruz. Böyle giderse ülkemizdeki parlak beyinleri bir daha geri getiremeyebiliriz",
+            answers: [
+                {
+                    text: "Yurtdışı çıkış harcını artırın",
+                    effect: {
+                        infrastructureAndEnvironment: -10,
+                        publicSupport: -10,
+                        budget: +15,
+                    }
+                },
+                {
+                    text: "Giderlerse gitsinler",
+                    effect: {
+                        publicSupport: -20,
+                        budget: -15,
+                        infrastructureAndEnvironment: -20,
+                    }
+                }
+            ],
+            title: "Kültür ve Turizm Bakanı",
+            photo: turizmBakani,
+            level: 3,
+        },
+        {
+            id: 164,
+            question: "Başkanım, ilimizde kazı çalışmaları sırasında 3000 yıl önceye ait tarihi eserler bulundu. Bunu nasıl değerlendirmemizi tavsiye edersiniz?",
+            answers: [
+                {
+                    text: "Müzede sergilenmeleri gerek",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        publicSupport: +10,
+                        budget: -5,
+                    }
+                },
+                {
+                    text: "Avrupaya satışını yapabiliriz",
+                    effect: {
+                        publicSupport: -20,
+                        budget: +15,
+                        infrastructureAndEnvironment: -20,
                     }
                 }
             ],
@@ -150,6 +200,56 @@ export const turizmQuestions = {
             photo: turizmBakani,
             level: 3,
         },
+        {
+            id: 163,
+            question: "We are sending too many qualified people abroad. If this continues, we may never be able to bring back the bright minds of our country.",
+            answers: [
+                {
+                    text: "Increase the overseas departure tax",
+                    effect: {
+                        infrastructureAndEnvironment: -10,
+                        publicSupport: -10,
+                        budget: +15,
+                    }
+                },
+                {
+                    text: "If they want to leave, let them",
+                    effect: {
+                        publicSupport: -20,
+                        budget: -15,
+                        infrastructureAndEnvironment: -20,
+                    }
+                }
+            ],
+            title: "Minister of Culture and Tourism",
+            photo: tourismMinister,
+            level: 3,
+        },
+        {
+            id: 164,
+            question: "Mr. President, during excavation work in our province, artifacts dating back 3,000 years were discovered. How do you suggest we handle this?",
+            answers: [
+                {
+                    text: "They should be displayed in a museum",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        publicSupport: +10,
+                        budget: -5,
+                    }
+                },
+                {
+                    text: "We could sell them to Europe",
+                    effect: {
+                        publicSupport: -20,
+                        budget: +15,
+                        infrastructureAndEnvironment: -20,
+                    }
+                }
+            ],
+            title: "Minister of Culture and Tourism",
+            photo: tourismMinister,
+            level: 3,
+        },
     ],
     de: [
         {
@@ -225,6 +325,56 @@ export const turizmQuestions = {
             photo: turizmBakani,
             level: 3,
         },
+        {
+            id: 163,
+            question: "Wir schicken zu viele qualifizierte Menschen ins Ausland. Wenn das so weitergeht, könnten wir die klugen Köpfe unseres Landes nie wieder zurückholen.",
+            answers: [
+                {
+                    text: "Erhöhen Sie die Ausreisesteuer",
+                    effect: {
+                        infrastructureAndEnvironment: -10,
+                        publicSupport: -10,
+                        budget: +15,
+                    }
+                },
+                {
+                    text: "Wenn sie gehen wollen, sollen sie gehen",
+                    effect: {
+                        publicSupport: -20,
+                        budget: -15,
+                        infrastructureAndEnvironment: -20,
+                    }
+                }
+            ],
+            title: "Minister für Kultur und Tourismus",
+            photo: tourismMinister,
+            level: 3,
+        },
+        {
+            id: 164,
+            question: "Herr Präsident, bei Ausgrabungsarbeiten in unserer Provinz wurden 3.000 Jahre alte Artefakte entdeckt. Wie empfehlen Sie, damit umzugehen?",
+            answers: [
+                {
+                    text: "Sie sollten in einem Museum ausgestellt werden",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        publicSupport: +10,
+                        budget: -5,
+                    }
+                },
+                {
+                    text: "Wir könnten sie nach Europa verkaufen",
+                    effect: {
+                        publicSupport: -20,
+                        budget: +15,
+                        infrastructureAndEnvironment: -20,
+                    }
+                }
+            ],
+            title: "Minister für Kultur und Tourismus",
+            photo: tourismMinister,
+            level: 3,
+        }
     ],
     fr: [
         {
@@ -300,6 +450,56 @@ export const turizmQuestions = {
             photo: turizmBakani,
             level: 3,
         },
+        {
+            id: 163,
+            question: "Nous envoyons trop de personnes qualifiées à l'étranger. Si cela continue, nous ne pourrons peut-être jamais ramener les esprits brillants de notre pays.",
+            answers: [
+                {
+                    text: "Augmentez la taxe de départ à l'étranger",
+                    effect: {
+                        infrastructureAndEnvironment: -10,
+                        publicSupport: -10,
+                        budget: +15,
+                    }
+                },
+                {
+                    text: "S'ils veulent partir, qu'ils partent",
+                    effect: {
+                        publicSupport: -20,
+                        budget: -15,
+                        infrastructureAndEnvironment: -20,
+                    }
+                }
+            ],
+            title: "Ministre de la Culture et du Tourisme",
+            photo: tourismMinister,
+            level: 3,
+        },
+        {
+            id: 164,
+            question: "Monsieur le Président, lors de travaux de fouilles dans notre province, des artefacts datant de 3 000 ans ont été découverts. Que nous conseillez-vous de faire à ce sujet ?",
+            answers: [
+                {
+                    text: "Ils devraient être exposés dans un musée",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        publicSupport: +10,
+                        budget: -5,
+                    }
+                },
+                {
+                    text: "Nous pourrions les vendre à l'Europe",
+                    effect: {
+                        publicSupport: -20,
+                        budget: +15,
+                        infrastructureAndEnvironment: -20,
+                    }
+                }
+            ],
+            title: "Ministre de la Culture et du Tourisme",
+            photo: tourismMinister,
+            level: 3,
+        }
     ],
     pt: [
         {
@@ -375,6 +575,56 @@ export const turizmQuestions = {
             photo: turizmBakani,
             level: 3,
         },
+        {
+            id: 163,
+            question: "Estamos enviando muitas pessoas qualificadas para o exterior. Se isso continuar, talvez nunca consigamos trazer de volta os talentos brilhantes de nosso país.",
+            answers: [
+                {
+                    text: "Aumente a taxa de saída para o exterior",
+                    effect: {
+                        infrastructureAndEnvironment: -10,
+                        publicSupport: -10,
+                        budget: +15,
+                    }
+                },
+                {
+                    text: "Se quiserem ir, que vão",
+                    effect: {
+                        publicSupport: -20,
+                        budget: -15,
+                        infrastructureAndEnvironment: -20,
+                    }
+                }
+            ],
+            title: "Ministro da Cultura e Turismo",
+            photo: tourismMinister,
+            level: 3,
+        },
+        {
+            id: 164,
+            question: "Senhor Presidente, durante os trabalhos de escavação em nossa província, foram descobertos artefatos com mais de 3.000 anos. Como você sugere que lidemos com isso?",
+            answers: [
+                {
+                    text: "Eles devem ser exibidos em um museu",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        publicSupport: +10,
+                        budget: -5,
+                    }
+                },
+                {
+                    text: "Poderíamos vendê-los para a Europa",
+                    effect: {
+                        publicSupport: -20,
+                        budget: +15,
+                        infrastructureAndEnvironment: -20,
+                    }
+                }
+            ],
+            title: "Ministro da Cultura e Turismo",
+            photo: tourismMinister,
+            level: 3,
+        }
     ],
     zh: [
         {
@@ -450,6 +700,56 @@ export const turizmQuestions = {
             photo: turizmBakani,
             level: 3,
         },
+        {
+            id: 163,
+            question: "我们向国外输送了太多的高素质人才。如果这种情况继续下去，我们可能再也无法让我们国家的杰出人才回归。",
+            answers: [
+                {
+                    text: "提高出国税",
+                    effect: {
+                        infrastructureAndEnvironment: -10,
+                        publicSupport: -10,
+                        budget: +15,
+                    }
+                },
+                {
+                    text: "如果他们想离开，那就让他们走",
+                    effect: {
+                        publicSupport: -20,
+                        budget: -15,
+                        infrastructureAndEnvironment: -20,
+                    }
+                }
+            ],
+            title: "文化与旅游部长",
+            photo: tourismMinister,
+            level: 3,
+        },
+        {
+            id: 164,
+            question: "总统先生，在我们省的挖掘工作中发现了距今3000年的文物。您建议我们如何处理这些文物？",
+            answers: [
+                {
+                    text: "它们应该在博物馆展出",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        publicSupport: +10,
+                        budget: -5,
+                    }
+                },
+                {
+                    text: "我们可以将它们卖给欧洲",
+                    effect: {
+                        publicSupport: -20,
+                        budget: +15,
+                        infrastructureAndEnvironment: -20,
+                    }
+                }
+            ],
+            title: "文化与旅游部长",
+            photo: tourismMinister,
+            level: 3,
+        }
     ],
     es: [
         {
@@ -525,6 +825,56 @@ export const turizmQuestions = {
             photo: turizmBakani,
             level: 3,
         },
+        {
+            id: 163,
+            question: "Estamos enviando demasiadas personas calificadas al extranjero. Si esto continúa, puede que nunca podamos recuperar las mentes brillantes de nuestro país.",
+            answers: [
+                {
+                    text: "Aumentar el impuesto de salida al extranjero",
+                    effect: {
+                        infrastructureAndEnvironment: -10,
+                        publicSupport: -10,
+                        budget: +15,
+                    }
+                },
+                {
+                    text: "Si quieren irse, que se vayan",
+                    effect: {
+                        publicSupport: -20,
+                        budget: -15,
+                        infrastructureAndEnvironment: -20,
+                    }
+                }
+            ],
+            title: "Ministro de Cultura y Turismo",
+            photo: tourismMinister,
+            level: 3,
+        },
+        {
+            id: 164,
+            question: "Señor Presidente, durante los trabajos de excavación en nuestra provincia, se descubrieron artefactos de hace 3.000 años. ¿Qué sugiere que hagamos al respecto?",
+            answers: [
+                {
+                    text: "Deben ser exhibidos en un museo",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        publicSupport: +10,
+                        budget: -5,
+                    }
+                },
+                {
+                    text: "Podríamos venderlos a Europa",
+                    effect: {
+                        publicSupport: -20,
+                        budget: +15,
+                        infrastructureAndEnvironment: -20,
+                    }
+                }
+            ],
+            title: "Ministro de Cultura y Turismo",
+            photo: tourismMinister,
+            level: 3,
+        }
     ],
     ru: [
         {
@@ -600,5 +950,55 @@ export const turizmQuestions = {
             photo: turizmBakani,
             level: 3,
         },
+        {
+            id: 163,
+            question: "Мы отправляем слишком много квалифицированных людей за границу. Если так будет продолжаться, мы можем никогда больше не вернуть блестящие умы нашей страны.",
+            answers: [
+                {
+                    text: "Повысить налог на выезд за границу",
+                    effect: {
+                        infrastructureAndEnvironment: -10,
+                        publicSupport: -10,
+                        budget: +15,
+                    }
+                },
+                {
+                    text: "Если хотят уехать, пусть уезжают",
+                    effect: {
+                        publicSupport: -20,
+                        budget: -15,
+                        infrastructureAndEnvironment: -20,
+                    }
+                }
+            ],
+            title: "Министр культуры и туризма",
+            photo: tourismMinister,
+            level: 3,
+        },
+        {
+            id: 164,
+            question: "Господин Президент, во время раскопок в нашей провинции были обнаружены артефакты возрастом 3000 лет. Как вы предлагаете нам с этим поступить?",
+            answers: [
+                {
+                    text: "Их следует выставить в музее",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        publicSupport: +10,
+                        budget: -5,
+                    }
+                },
+                {
+                    text: "Мы можем продать их в Европу",
+                    effect: {
+                        publicSupport: -20,
+                        budget: +15,
+                        infrastructureAndEnvironment: -20,
+                    }
+                }
+            ],
+            title: "Министр культуры и туризма",
+            photo: tourismMinister,
+            level: 3,
+        }
     ],
 }

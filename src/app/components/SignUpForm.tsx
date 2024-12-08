@@ -27,7 +27,8 @@ const SignUpForm: React.FC = () => {
                 username: username,
                 email: user.email,
                 level: 1,
-                createdAt: new Date()
+                createdAt: new Date(),
+                score: 0,
             });
             setSuccess(true);
             setEmail('');

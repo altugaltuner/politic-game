@@ -221,6 +221,52 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
+        {
+            id: 99,
+            question: "Katalog suçlar kapsamında sosyal medyadaki muhalif sesleri kısmak istiyoruz. Bu yasanın onaylanma süreci hakkında ne düşünüyorsunuz?",
+            answers: [
+                {
+                    text: "Teklif tasarısını mecliste onaylasınlar",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Veto ediyorum",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                    },
+                },
+            ],
+            title: "İçişleri Bakanı",
+            photo: icisleriBakani,
+            level: 1,
+        },
+        {
+            id: 100,
+            question: "Batı bölgemizde dün sabah saatlerinde 7.4 şiddetinde deprem meydana geldi. Devlet denetiminin eksik olduğu yerlerdeki binaların çoğu yıkılmış. Sosyal medyada hükümetimiz çok ciddi eleştiri alıyor. İlk aksiyonumuz ne olmalı?",
+            answers: [
+                {
+                    text: "Önce sosyal medyaya erişim engeli getirin",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Önce basın açıklaması yapın",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                    },
+                },
+            ],
+            title: "İçişleri Bakanı",
+            photo: icisleriBakani,
+            level: 1,
+        },
     ],
     en: [
         {
@@ -442,7 +488,52 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-
+        {
+            id: 99,
+            question: "We want to suppress dissenting voices on social media under catalog crimes. What do you think about the approval process for this law?",
+            answers: [
+                {
+                    text: "Let the parliament approve the draft bill",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "I veto it",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                    },
+                },
+            ],
+            title: "Minister of Interior",
+            photo: interiorMinister,
+            level: 1,
+        },
+        {
+            id: 100,
+            question: "A 7.4 magnitude earthquake occurred yesterday morning in our western region. Most of the buildings in areas lacking state supervision have collapsed. Our government is receiving serious criticism on social media. What should our first action be?",
+            answers: [
+                {
+                    text: "First, block access to social media",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "First, issue a press statement",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                    },
+                },
+            ],
+            title: "Minister of Interior",
+            photo: interiorMinister,
+            level: 1,
+        },
     ],
     de: [
         {
@@ -664,7 +755,52 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-
+        {
+            id: 99,
+            question: "Wir möchten abweichende Stimmen in sozialen Medien im Rahmen von Katalogstraftaten unterdrücken. Was halten Sie vom Genehmigungsprozess für dieses Gesetz?",
+            answers: [
+                {
+                    text: "Lassen Sie das Parlament den Gesetzentwurf genehmigen",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Ich lege ein Veto ein",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                    },
+                },
+            ],
+            title: "Innenminister",
+            photo: interiorMinister,
+            level: 1,
+        },
+        {
+            id: 100,
+            question: "Gestern Morgen ereignete sich ein Erdbeben der Stärke 7,4 in unserer westlichen Region. Die meisten Gebäude in Bereichen ohne staatliche Aufsicht sind eingestürzt. Unsere Regierung erhält ernsthafte Kritik in den sozialen Medien. Was sollte unsere erste Maßnahme sein?",
+            answers: [
+                {
+                    text: "Zuerst den Zugang zu sozialen Medien blockieren",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Zuerst eine Presseerklärung abgeben",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                    },
+                },
+            ],
+            title: "Innenminister",
+            photo: interiorMinister,
+            level: 1,
+        },
     ],
     fr: [
         {
@@ -886,7 +1022,52 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-
+        {
+            id: 99,
+            question: "Nous souhaitons réprimer les voix dissidentes sur les réseaux sociaux dans le cadre des crimes catalogués. Que pensez-vous du processus d'approbation de cette loi ?",
+            answers: [
+                {
+                    text: "Laissez le parlement approuver le projet de loi",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Je mets mon veto",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                    },
+                },
+            ],
+            title: "Ministre de l'Intérieur",
+            photo: interiorMinister,
+            level: 1,
+        },
+        {
+            id: 100,
+            question: "Un tremblement de terre de magnitude 7,4 s'est produit hier matin dans notre région occidentale. La plupart des bâtiments situés dans des zones sans supervision de l'État se sont effondrés. Notre gouvernement reçoit de graves critiques sur les réseaux sociaux. Quelle devrait être notre première action ?",
+            answers: [
+                {
+                    text: "Bloquez d'abord l'accès aux réseaux sociaux",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Publiez d'abord un communiqué de presse",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                    },
+                },
+            ],
+            title: "Ministre de l'Intérieur",
+            photo: interiorMinister,
+            level: 1,
+        },
     ],
     pt: [
         {
@@ -1108,7 +1289,52 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-
+        {
+            id: 99,
+            question: "Queremos reprimir as vozes dissidentes nas redes sociais sob o pretexto de crimes catalogados. O que você acha do processo de aprovação desta lei?",
+            answers: [
+                {
+                    text: "Deixe o parlamento aprovar o projeto de lei",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Eu veto",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                    },
+                },
+            ],
+            title: "Ministro do Interior",
+            photo: interiorMinister,
+            level: 1,
+        },
+        {
+            id: 100,
+            question: "Um terremoto de magnitude 7,4 ocorreu ontem de manhã na nossa região oeste. A maioria dos prédios em áreas sem supervisão estatal desabou. Nosso governo está recebendo críticas sérias nas redes sociais. Qual deve ser nossa primeira ação?",
+            answers: [
+                {
+                    text: "Primeiro, bloqueie o acesso às redes sociais",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Primeiro, faça um comunicado à imprensa",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                    },
+                },
+            ],
+            title: "Ministro do Interior",
+            photo: interiorMinister,
+            level: 1,
+        }
     ],
     zh: [
         {
@@ -1330,7 +1556,52 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-
+        {
+            id: 99,
+            question: "我们希望在目录罪行范围内压制社交媒体上的反对声音。您如何看待该法案的批准过程？",
+            answers: [
+                {
+                    text: "让议会批准该法案",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "我否决",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                    },
+                },
+            ],
+            title: "内政部长",
+            photo: interiorMinister,
+            level: 1,
+        },
+        {
+            id: 100,
+            question: "昨天早晨，我国西部地区发生了7.4级地震。在缺乏国家监管的地区，大多数建筑物倒塌。我们的政府在社交媒体上受到了严重批评。我们的第一步行动应该是什么？",
+            answers: [
+                {
+                    text: "首先，限制访问社交媒体",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "首先，发布新闻声明",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                    },
+                },
+            ],
+            title: "内政部长",
+            photo: interiorMinister,
+            level: 1,
+        }
     ],
     es: [
         {
@@ -1552,7 +1823,52 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-
+        {
+            id: 99,
+            question: "Queremos suprimir las voces disidentes en las redes sociales bajo el marco de crímenes catalogados. ¿Qué opina del proceso de aprobación de esta ley?",
+            answers: [
+                {
+                    text: "Dejen que el parlamento apruebe el proyecto de ley",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Yo veto",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                    },
+                },
+            ],
+            title: "Ministro del Interior",
+            photo: interiorMinister,
+            level: 1,
+        },
+        {
+            id: 100,
+            question: "Un terremoto de magnitud 7,4 ocurrió ayer por la mañana en nuestra región occidental. La mayoría de los edificios en áreas sin supervisión estatal se han derrumbado. Nuestro gobierno está recibiendo serias críticas en las redes sociales. ¿Cuál debería ser nuestra primera acción?",
+            answers: [
+                {
+                    text: "Primero, bloqueen el acceso a las redes sociales",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Primero, hagan un comunicado de prensa",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                    },
+                },
+            ],
+            title: "Ministro del Interior",
+            photo: interiorMinister,
+            level: 1,
+        }
     ],
     ru: [
         {
@@ -1774,6 +2090,51 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-
+        {
+            id: 99,
+            question: "Мы хотим подавить несогласные голоса в социальных сетях в рамках каталогизированных преступлений. Что вы думаете о процессе одобрения этого закона?",
+            answers: [
+                {
+                    text: "Пусть парламент одобрит законопроект",
+                    effect: {
+                        internalSecurity: -10,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Я накладываю вето",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                    },
+                },
+            ],
+            title: "Министр внутренних дел",
+            photo: interiorMinister,
+            level: 1,
+        },
+        {
+            id: 100,
+            question: "Вчера утром в нашем западном регионе произошло землетрясение магнитудой 7,4. Большинство зданий в районах без государственного надзора обрушились. Наше правительство получает серьезную критику в социальных сетях. Какое действие нам следует предпринять в первую очередь?",
+            answers: [
+                {
+                    text: "Сначала заблокируйте доступ к социальным сетям",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: -10,
+                    }
+                },
+                {
+                    text: "Сначала выпустите заявление для прессы",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                    },
+                },
+            ],
+            title: "Министр внутренних дел",
+            photo: interiorMinister,
+            level: 1,
+        }
     ],
 };

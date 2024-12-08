@@ -1,5 +1,5 @@
 import aileBakanı from "../../public/ministers/aile-bakani.webp";
-//2 soru var
+//3 soru var
 export const aileQuestions = {
     tr: [
         {
@@ -42,6 +42,32 @@ export const aileQuestions = {
                     effect: {
                         publicSupport: +10,
                         agriculturalProduction: -10,
+                    },
+                }
+            ],
+            title: "Aile ve Sosyal Hizmetler Bakanı",
+            photo: aileBakanı,
+            level: 2,
+        },
+        {
+            id: 12,
+            question: "Başkanım, ailevi değerlerimizi korumak için cinsel içerikli sitelere erişim engeli getirmemiz gerekiyor.",
+            answers: [
+                {
+                    text: "Engeli getirelim",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        budget: -10,
+                    },
+                },
+                {
+                    text: "Erişim serbest bırakılacak",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        budget: +10,
+
                     },
                 }
             ],
@@ -98,6 +124,32 @@ export const aileQuestions = {
             photo: aileBakanı,
             level: 2,
         },
+        {
+            id: 12,
+            question: "Mr. President, we need to impose access restrictions on adult content websites to protect our family values.",
+            answers: [
+                {
+                    text: "Implement the restriction",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        budget: -10,
+                    },
+                },
+                {
+                    text: "Access will remain unrestricted",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        budget: +10,
+                    },
+                }
+            ],
+            title: "Minister of Family and Social Services",
+            photo: aileBakanı,
+            level: 2,
+        }
+
     ],
     de: [
         {
@@ -147,6 +199,32 @@ export const aileQuestions = {
             photo: aileBakanı,
             level: 2,
         },
+        {
+            id: 12,
+            question: "Herr Präsident, wir müssen den Zugang zu Websites mit Erwachseneninhalt einschränken, um unsere Familienwerte zu schützen.",
+            answers: [
+                {
+                    text: "Beschränkung umsetzen",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        budget: -10,
+                    },
+                },
+                {
+                    text: "Zugang bleibt unbeschränkt",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        budget: +10,
+                    },
+                }
+            ],
+            title: "Minister für Familie und Soziales",
+            photo: aileBakanı,
+            level: 2,
+        }
+
     ],
     fr: [
         {
@@ -196,6 +274,32 @@ export const aileQuestions = {
             photo: aileBakanı,
             level: 2,
         },
+        {
+            id: 12,
+            question: "Monsieur le Président, nous devons imposer des restrictions d'accès aux sites à contenu adulte pour protéger nos valeurs familiales.",
+            answers: [
+                {
+                    text: "Mettre en œuvre la restriction",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        budget: -10,
+                    },
+                },
+                {
+                    text: "L'accès restera non restreint",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        budget: +10,
+                    },
+                }
+            ],
+            title: "Ministre de la Famille et des Services Sociaux",
+            photo: aileBakanı,
+            level: 2,
+        }
+
     ],
     pt: [
         {
@@ -245,6 +349,33 @@ export const aileQuestions = {
             photo: aileBakanı,
             level: 2,
         },
+        {
+            id: 12,
+            question: "Senhor Presidente, precisamos impor restrições de acesso a sites com conteúdo adulto para proteger nossos valores familiares.",
+            answers: [
+                {
+                    text: "Implementar a restrição",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        budget: -10,
+                    },
+                    listID: "familia1",
+                },
+                {
+                    text: "O acesso permanecerá irrestrito",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        budget: +10,
+                    },
+                }
+            ],
+            title: "Ministro da Família e dos Serviços Sociais",
+            photo: aileBakanı,
+            level: 2,
+        }
+
     ],
     zh: [
         {
@@ -294,6 +425,32 @@ export const aileQuestions = {
             photo: aileBakanı,
             level: 2,
         },
+        {
+            id: 12,
+            question: "总统先生，我们需要限制访问成人内容网站，以保护我们的家庭价值观。",
+            answers: [
+                {
+                    text: "实施限制",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        budget: -10,
+                    },
+                },
+                {
+                    text: "访问将保持不受限制",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        budget: +10,
+                    },
+                }
+            ],
+            title: "家庭和社会服务部长",
+            photo: aileBakanı,
+            level: 2,
+        }
+
     ],
     es: [
         {
@@ -343,6 +500,32 @@ export const aileQuestions = {
             photo: aileBakanı,
             level: 2,
         },
+        {
+            id: 12,
+            question: "Señor Presidente, necesitamos imponer restricciones de acceso a sitios de contenido para adultos para proteger nuestros valores familiares.",
+            answers: [
+                {
+                    text: "Implementar la restricción",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        budget: -10,
+                    },
+                },
+                {
+                    text: "El acceso seguirá siendo libre",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        budget: +10,
+                    },
+                }
+            ],
+            title: "Ministro de Familia y Servicios Sociales",
+            photo: aileBakanı,
+            level: 2,
+        }
+
     ],
     ru: [
         {
@@ -392,5 +575,31 @@ export const aileQuestions = {
             photo: aileBakanı,
             level: 2,
         },
+        {
+            id: 12,
+            question: "Господин Президент, нам нужно ввести ограничения на доступ к сайтам с контентом для взрослых, чтобы защитить наши семейные ценности.",
+            answers: [
+                {
+                    text: "Ввести ограничение",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        budget: -10,
+                    },
+                },
+                {
+                    text: "Доступ останется без ограничений",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        budget: +10,
+                    },
+                }
+            ],
+            title: "Министр семьи и социальных услуг",
+            photo: aileBakanı,
+            level: 2,
+        }
+
     ],
 };

@@ -1,5 +1,5 @@
 import saglikBakani from "../../public/ministers/saglik-bakani.webp";
-// 3 soru var
+// 4 soru var
 export const saglikQuestions = {
     tr: [
         {
@@ -68,6 +68,29 @@ export const saglikQuestions = {
                         publicSupport: +10,
                     },
                     listID: "saglik1",
+                }
+            ],
+            title: "Sağlık Bakanı",
+            photo: saglikBakani,
+            level: 2,
+        },
+        {
+            id: 103,
+            question: "Ülkemizde obezite oranları hızla artıyor. Bu konuda ne yapmalıyız?",
+            answers: [
+                {
+                    text: "Fastfood zincirleri kapatılsın",
+                    effect: {
+                        internationalRelations: -20,
+                        publicSupport: -15,
+                    }
+                },
+                {
+                    text: "Spor salonları ücretsiz hale getirilsin",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: +10,
+                    },
                 }
             ],
             title: "Sağlık Bakanı",
@@ -148,6 +171,30 @@ export const saglikQuestions = {
             photo: saglikBakani,
             level: 2,
         },
+        {
+            id: 103,
+            question: "The obesity rate in our country is increasing rapidly. What should we do about this?",
+            answers: [
+                {
+                    text: "Close fast-food chains",
+                    effect: {
+                        internationalRelations: -20,
+                        publicSupport: -15,
+                    }
+                },
+                {
+                    text: "Make gyms free of charge",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: +10,
+                    },
+                }
+            ],
+            title: "Minister of Health",
+            photo: healthMinister,
+            level: 2,
+        }
+
     ],
     de: [
         {
@@ -222,6 +269,30 @@ export const saglikQuestions = {
             photo: saglikBakani,
             level: 2,
         },
+        {
+            id: 103,
+            question: "Die Fettleibigkeitsrate in unserem Land steigt rapide an. Was sollen wir dagegen tun?",
+            answers: [
+                {
+                    text: "Fast-Food-Ketten schließen",
+                    effect: {
+                        internationalRelations: -20,
+                        publicSupport: -15,
+                    }
+                },
+                {
+                    text: "Fitnessstudios kostenlos machen",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: +10,
+                    },
+                }
+            ],
+            title: "Gesundheitsminister",
+            photo: healthMinister,
+            level: 2,
+        }
+
     ],
     fr: [
         {
@@ -296,6 +367,30 @@ export const saglikQuestions = {
             photo: saglikBakani,
             level: 2,
         },
+        {
+            id: 103,
+            question: "Le taux d'obésité dans notre pays augmente rapidement. Que devrions-nous faire à ce sujet ?",
+            answers: [
+                {
+                    text: "Fermez les chaînes de restauration rapide",
+                    effect: {
+                        internationalRelations: -20,
+                        publicSupport: -15,
+                    }
+                },
+                {
+                    text: "Rendez les salles de sport gratuites",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: +10,
+                    },
+                }
+            ],
+            title: "Ministre de la Santé",
+            photo: healthMinister,
+            level: 2,
+        }
+
     ],
     pt: [
         {
@@ -370,6 +465,30 @@ export const saglikQuestions = {
             photo: saglikBakani,
             level: 2,
         },
+        {
+            id: 103,
+            question: "A taxa de obesidade em nosso país está aumentando rapidamente. O que devemos fazer sobre isso?",
+            answers: [
+                {
+                    text: "Fechar redes de fast-food",
+                    effect: {
+                        internationalRelations: -20,
+                        publicSupport: -15,
+                    }
+                },
+                {
+                    text: "Tornar as academias gratuitas",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: +10,
+                    },
+                }
+            ],
+            title: "Ministro da Saúde",
+            photo: healthMinister,
+            level: 2,
+        }
+
     ],
     zh: [
         {
@@ -444,6 +563,30 @@ export const saglikQuestions = {
             photo: saglikBakani,
             level: 2,
         },
+        {
+            id: 103,
+            question: "我国的肥胖率正在迅速上升。我们应该怎么做？",
+            answers: [
+                {
+                    text: "关闭快餐连锁店",
+                    effect: {
+                        internationalRelations: -20,
+                        publicSupport: -15,
+                    }
+                },
+                {
+                    text: "让健身房免费",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: +10,
+                    },
+                }
+            ],
+            title: "卫生部长",
+            photo: healthMinister,
+            level: 2,
+        }
+
     ],
     es: [
         {
@@ -518,6 +661,30 @@ export const saglikQuestions = {
             photo: saglikBakani,
             level: 2,
         },
+        {
+            id: 103,
+            question: "La tasa de obesidad en nuestro país está aumentando rápidamente. ¿Qué deberíamos hacer al respecto?",
+            answers: [
+                {
+                    text: "Cerrar las cadenas de comida rápida",
+                    effect: {
+                        internationalRelations: -20,
+                        publicSupport: -15,
+                    }
+                },
+                {
+                    text: "Hacer que los gimnasios sean gratuitos",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: +10,
+                    },
+                }
+            ],
+            title: "Ministro de Salud",
+            photo: healthMinister,
+            level: 2,
+        }
+
     ],
     ru: [
         {
@@ -592,5 +759,29 @@ export const saglikQuestions = {
             photo: saglikBakani,
             level: 2,
         },
+        {
+            id: 103,
+            question: "Уровень ожирения в нашей стране быстро растет. Что нам с этим делать?",
+            answers: [
+                {
+                    text: "Закрыть сети фастфуда",
+                    effect: {
+                        internationalRelations: -20,
+                        publicSupport: -15,
+                    }
+                },
+                {
+                    text: "Сделать тренажерные залы бесплатными",
+                    effect: {
+                        internalSecurity: -20,
+                        publicSupport: +10,
+                    },
+                }
+            ],
+            title: "Министр здравоохранения",
+            photo: healthMinister,
+            level: 2,
+        }
+
     ],
 };

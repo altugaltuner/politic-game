@@ -1,5 +1,5 @@
 import sanayiBakani from "../../public/ministers/sanayi-bakani.webp";
-// 3 soru var
+// 4 soru var
 export const sanayiQuestions = {
     tr: [
         {
@@ -72,6 +72,33 @@ export const sanayiQuestions = {
                         publicSupport: +5,
                         budget: -10,
                         infrastructureAndEnvironment: +10,
+                    }
+                }
+            ],
+            title: "Sanayi ve Teknoloji Bakanı",
+            photo: sanayiBakani,
+            level: 1,
+        },
+        {
+            id: 113,
+            question: "Aylardır komşusunu bombalayan Folkistan, Türkiye'den silah talep ediyor. Burada nasıl bir politika izlemeliyiz?",
+            answers: [
+                {
+                    text: "Ticaret devam etmeli",
+                    effect: {
+                        publicSupport: -10,
+                        budget: +25,
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Ambargo koyulmalı",
+                    effect: {
+                        publicSupport: +15,
+                        budget: -25,
+                        infrastructureAndEnvironment: -10,
+                        internationalRelations: +15,
                     }
                 }
             ],
@@ -158,6 +185,34 @@ export const sanayiQuestions = {
             photo: sanayiBakani,
             level: 1,
         },
+        {
+            id: 113,
+            question: "Folkistan, which has been bombing its neighbor for months, is requesting weapons from Turkey. What policy should we follow here?",
+            answers: [
+                {
+                    text: "Trade should continue",
+                    effect: {
+                        publicSupport: -10,
+                        budget: +25,
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "An embargo should be imposed",
+                    effect: {
+                        publicSupport: +15,
+                        budget: -25,
+                        infrastructureAndEnvironment: -10,
+                        internationalRelations: +15,
+                    }
+                }
+            ],
+            title: "Minister of Industry and Technology",
+            photo: industryMinister,
+            level: 1,
+        }
+
     ],
     de: [
         {
@@ -237,6 +292,34 @@ export const sanayiQuestions = {
             photo: sanayiBakani,
             level: 1,
         },
+        {
+            id: 113,
+            question: "Folkistan, das seinen Nachbarn seit Monaten bombardiert, fordert Waffen von der Türkei. Welche Politik sollten wir hier verfolgen?",
+            answers: [
+                {
+                    text: "Der Handel sollte fortgesetzt werden",
+                    effect: {
+                        publicSupport: -10,
+                        budget: +25,
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Ein Embargo sollte verhängt werden",
+                    effect: {
+                        publicSupport: +15,
+                        budget: -25,
+                        infrastructureAndEnvironment: -10,
+                        internationalRelations: +15,
+                    }
+                }
+            ],
+            title: "Minister für Industrie und Technologie",
+            photo: industryMinister,
+            level: 1,
+        }
+
     ],
     fr: [
         {
@@ -316,6 +399,34 @@ export const sanayiQuestions = {
             photo: sanayiBakani,
             level: 1,
         },
+        {
+            id: 113,
+            question: "Folkistan, qui bombarde son voisin depuis des mois, demande des armes à la Turquie. Quelle politique devrions-nous adopter ici ?",
+            answers: [
+                {
+                    text: "Le commerce doit continuer",
+                    effect: {
+                        publicSupport: -10,
+                        budget: +25,
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Un embargo doit être imposé",
+                    effect: {
+                        publicSupport: +15,
+                        budget: -25,
+                        infrastructureAndEnvironment: -10,
+                        internationalRelations: +15,
+                    }
+                }
+            ],
+            title: "Ministre de l'Industrie et de la Technologie",
+            photo: industryMinister,
+            level: 1,
+        }
+
     ],
     pt: [
         {
@@ -395,6 +506,34 @@ export const sanayiQuestions = {
             photo: sanayiBakani,
             level: 1,
         },
+        {
+            id: 113,
+            question: "Folkistan, que está bombardeando seu vizinho há meses, está solicitando armas à Turquia. Qual política devemos seguir aqui?",
+            answers: [
+                {
+                    text: "O comércio deve continuar",
+                    effect: {
+                        publicSupport: -10,
+                        budget: +25,
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Um embargo deve ser imposto",
+                    effect: {
+                        publicSupport: +15,
+                        budget: -25,
+                        infrastructureAndEnvironment: -10,
+                        internationalRelations: +15,
+                    }
+                }
+            ],
+            title: "Ministro da Indústria e Tecnologia",
+            photo: industryMinister,
+            level: 1,
+        }
+
     ],
     zh: [
         {
@@ -474,6 +613,34 @@ export const sanayiQuestions = {
             photo: sanayiBakani,
             level: 1,
         },
+        {
+            id: 113,
+            question: "福克斯坦已经连续数月轰炸其邻国，现在请求从土耳其获得武器。我们应该采取什么政策？",
+            answers: [
+                {
+                    text: "贸易应继续",
+                    effect: {
+                        publicSupport: -10,
+                        budget: +25,
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "应施加禁运",
+                    effect: {
+                        publicSupport: +15,
+                        budget: -25,
+                        infrastructureAndEnvironment: -10,
+                        internationalRelations: +15,
+                    }
+                }
+            ],
+            title: "工业与技术部长",
+            photo: industryMinister,
+            level: 1,
+        }
+
     ],
     es: [
         {
@@ -553,6 +720,34 @@ export const sanayiQuestions = {
             photo: sanayiBakani,
             level: 1,
         },
+        {
+            id: 113,
+            question: "Folkistan, que lleva meses bombardeando a su vecino, está solicitando armas a Turquía. ¿Qué política deberíamos seguir aquí?",
+            answers: [
+                {
+                    text: "El comercio debe continuar",
+                    effect: {
+                        publicSupport: -10,
+                        budget: +25,
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Se debe imponer un embargo",
+                    effect: {
+                        publicSupport: +15,
+                        budget: -25,
+                        infrastructureAndEnvironment: -10,
+                        internationalRelations: +15,
+                    }
+                }
+            ],
+            title: "Ministro de Industria y Tecnología",
+            photo: industryMinister,
+            level: 1,
+        }
+
     ],
     ru: [
         {
@@ -632,5 +827,33 @@ export const sanayiQuestions = {
             photo: sanayiBakani,
             level: 1,
         },
+        {
+            id: 113,
+            question: "Фолкистан, который уже несколько месяцев бомбит своего соседа, запрашивает оружие у Турции. Какую политику нам следует провести в этом случае?",
+            answers: [
+                {
+                    text: "Торговля должна продолжаться",
+                    effect: {
+                        publicSupport: -10,
+                        budget: +25,
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Следует ввести эмбарго",
+                    effect: {
+                        publicSupport: +15,
+                        budget: -25,
+                        infrastructureAndEnvironment: -10,
+                        internationalRelations: +15,
+                    }
+                }
+            ],
+            title: "Министр промышленности и технологий",
+            photo: industryMinister,
+            level: 1,
+        }
+
     ],
 }

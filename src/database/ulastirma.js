@@ -1,5 +1,5 @@
 import ulastirmaBakani from "../../public/ministers/ulasim-bakani.webp";
-// 4 soru var
+// 5 soru var
 export const ulastirmaQuestions = {
     tr: [
         {
@@ -95,6 +95,29 @@ export const ulastirmaQuestions = {
                         publicSupport: +10,
                         budget: -15,
                         infrastructureAndEnvironment: +10,
+                    },
+                }
+            ],
+            title: "Ulaştırma Bakanı",
+            photo: ulastirmaBakani,
+            level: 3,
+        },
+        {
+            id: 154,
+            question: "Yolcu geçiş garantisi verdiğimiz köprülerden zarar etmeye başladık. Böyle giderse borçlarımızı ödememiz zorlaşacak",
+            answers: [
+                {
+                    text: "Köprü geçişlerine zam yapın",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -10,
+                    }
+                },
+                {
+                    text: "Köprü geçişlerine indirim yapın",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -15,
                     },
                 }
             ],
@@ -204,6 +227,29 @@ export const ulastirmaQuestions = {
             photo: ulastirmaBakani,
             level: 3,
         },
+        {
+            id: 154,
+            question: "We have started incurring losses from the bridges for which we provided passenger guarantees. If this continues, it will become difficult to repay our debts.",
+            answers: [
+                {
+                    text: "Increase bridge tolls",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -10,
+                    }
+                },
+                {
+                    text: "Lower bridge tolls",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -15,
+                    },
+                }
+            ],
+            title: "Minister of Transport",
+            photo: transportMinister,
+            level: 3,
+        },
     ],
     de: [
         {
@@ -306,6 +352,29 @@ export const ulastirmaQuestions = {
             photo: ulastirmaBakani,
             level: 3,
         },
+        {
+            id: 154,
+            question: "Wir haben begonnen, Verluste bei den Brücken zu verzeichnen, für die wir Passagiergarantien gegeben haben. Wenn dies so weitergeht, wird es schwierig, unsere Schulden zurückzuzahlen.",
+            answers: [
+                {
+                    text: "Erhöhen Sie die Brückengebühren",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -10,
+                    }
+                },
+                {
+                    text: "Senkung der Brückengebühren",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -15,
+                    },
+                }
+            ],
+            title: "Verkehrsminister",
+            photo: transportMinister,
+            level: 3,
+        }
     ],
     fr: [
         {
@@ -408,6 +477,29 @@ export const ulastirmaQuestions = {
             photo: ulastirmaBakani,
             level: 3,
         },
+        {
+            id: 154,
+            question: "Nous avons commencé à subir des pertes sur les ponts pour lesquels nous avons garanti un passage de passagers. Si cela continue, il deviendra difficile de rembourser nos dettes.",
+            answers: [
+                {
+                    text: "Augmentez les péages des ponts",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -10,
+                    }
+                },
+                {
+                    text: "Réduisez les péages des ponts",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -15,
+                    },
+                }
+            ],
+            title: "Ministre des Transports",
+            photo: transportMinister,
+            level: 3,
+        }
     ],
     pt: [
         {
@@ -510,6 +602,29 @@ export const ulastirmaQuestions = {
             photo: ulastirmaBakani,
             level: 3,
         },
+        {
+            id: 154,
+            question: "Começamos a ter prejuízos nas pontes para as quais fornecemos garantias de passageiros. Se isso continuar, será difícil pagar nossas dívidas.",
+            answers: [
+                {
+                    text: "Aumente os pedágios das pontes",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -10,
+                    }
+                },
+                {
+                    text: "Reduza os pedágios das pontes",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -15,
+                    },
+                }
+            ],
+            title: "Ministro dos Transportes",
+            photo: transportMinister,
+            level: 3,
+        }
     ],
     zh: [
         {
@@ -610,6 +725,29 @@ export const ulastirmaQuestions = {
             ],
             title: "交通部长",
             photo: ulastirmaBakani,
+            level: 3,
+        },
+        {
+            id: 154,
+            question: "我们在提供乘客担保的桥梁上开始出现亏损。如果这种情况继续下去，偿还我们的债务将变得困难。",
+            answers: [
+                {
+                    text: "提高桥梁通行费",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -10,
+                    }
+                },
+                {
+                    text: "降低桥梁通行费",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -15,
+                    },
+                }
+            ],
+            title: "交通部长",
+            photo: transportMinister,
             level: 3,
         },
     ],
@@ -714,6 +852,29 @@ export const ulastirmaQuestions = {
             photo: ulastirmaBakani,
             level: 3,
         },
+        {
+            id: 154,
+            question: "Hemos comenzado a incurrir en pérdidas en los puentes para los que ofrecimos garantías de paso de pasajeros. Si esto continúa, será difícil pagar nuestras deudas.",
+            answers: [
+                {
+                    text: "Aumentar los peajes de los puentes",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -10,
+                    }
+                },
+                {
+                    text: "Reducir los peajes de los puentes",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -15,
+                    },
+                }
+            ],
+            title: "Ministro de Transporte",
+            photo: transportMinister,
+            level: 3,
+        }
     ],
     ru: [
         {
@@ -816,5 +977,28 @@ export const ulastirmaQuestions = {
             photo: ulastirmaBakani,
             level: 3,
         },
+        {
+            id: 154,
+            question: "Мы начали нести убытки на мостах, для которых предоставили гарантии пассажиропотока. Если это продолжится, нам будет трудно выплатить наши долги.",
+            answers: [
+                {
+                    text: "Повысить плату за проезд по мосту",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -10,
+                    }
+                },
+                {
+                    text: "Снизить плату за проезд по мосту",
+                    effect: {
+                        publicSupport: +10,
+                        budget: -15,
+                    },
+                }
+            ],
+            title: "Министр транспорта",
+            photo: transportMinister,
+            level: 3,
+        }
     ],
 }

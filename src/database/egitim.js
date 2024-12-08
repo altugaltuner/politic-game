@@ -1,5 +1,5 @@
 import egitimBakani from "../../public/ministers/egitim-bakani.webp";
-//2 soru var
+//4 soru var
 export const egitimQuestions = {
     tr: [
         {
@@ -44,6 +44,54 @@ export const egitimQuestions = {
                     effect: {
                         agriculturalProduction: -15,
                         infrastructureAndEnvironment: +10,
+                    }
+                }
+            ],
+            title: "Milli Eğitim Bakanı",
+            photo: egitimBakani,
+            level: 2,
+        },
+        {
+            id: 52,
+            question: "Ülkemizde popüler olan Borcaq oyunu pedofiliyi teşvik ediyor. Bu oyunun yasaklanması gerektiğini düşünüyorum.",
+            answers: [
+                {
+                    text: "Engelleyin",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        internationalRelations: -10,
+                    },
+                },
+                {
+                    text: "Serbest bırakın",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        internationalRelations: +10,
+                    }
+                }
+            ],
+            title: "Milli Eğitim Bakanı",
+            photo: egitimBakani,
+            level: 2,
+        },
+        {
+            id: 53,
+            question: "Evrim teorisinin dinimize aykırı olduğunu düşünüyorum. Okullarda bu konunun öğretilmesini yasaklamalıyız.",
+            answers: [
+                {
+                    text: "Haklısın, yasaklansın",
+                    effect: {
+                        infrastructureAndEnvironment: -20,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Bilimi kısıtlamayacağız",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: +10,
                     }
                 }
             ],
@@ -102,6 +150,56 @@ export const egitimQuestions = {
             photo: egitimBakani,
             level: 2,
         },
+        {
+            id: 52,
+            question: "The game Borcaq, which is popular in our country, promotes pedophilia. I believe it should be banned.",
+            answers: [
+                {
+                    text: "Ban it",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        internationalRelations: -10,
+                    },
+                },
+                {
+                    text: "Allow it",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        internationalRelations: +10,
+                    }
+                }
+            ],
+            title: "Minister of National Education",
+            photo: egitimBakani,
+            level: 2,
+        },
+        {
+            id: 53,
+            question: "I believe the theory of evolution contradicts our religion. We should ban teaching this subject in schools.",
+            answers: [
+                {
+                    text: "You’re right, ban it",
+                    effect: {
+                        infrastructureAndEnvironment: -20,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "We will not restrict science",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: +10,
+                    }
+                }
+            ],
+            title: "Minister of National Education",
+            photo: egitimBakani,
+            level: 2,
+        }
+
+
     ],
     de: [
         {
@@ -153,6 +251,54 @@ export const egitimQuestions = {
             photo: egitimBakani,
             level: 2,
         },
+        {
+            id: 52,
+            question: "Das Spiel Borcaq, das in unserem Land beliebt ist, fördert Pädophilie. Ich glaube, es sollte verboten werden.",
+            answers: [
+                {
+                    text: "Verbieten",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        internationalRelations: -10,
+                    },
+                },
+                {
+                    text: "Erlauben",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        internationalRelations: +10,
+                    }
+                }
+            ],
+            title: "Minister für Bildung",
+            photo: egitimBakani,
+            level: 2,
+        },
+        {
+            id: 53,
+            question: "Ich glaube, dass die Evolutionstheorie unserer Religion widerspricht. Wir sollten das Unterrichten dieses Themas in Schulen verbieten.",
+            answers: [
+                {
+                    text: "Du hast recht, verbieten wir es",
+                    effect: {
+                        infrastructureAndEnvironment: -20,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Wir werden die Wissenschaft nicht einschränken",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: +10,
+                    }
+                }
+            ],
+            title: "Minister für Bildung",
+            photo: egitimBakani,
+            level: 2,
+        }
     ],
     fr: [
         {
@@ -204,6 +350,55 @@ export const egitimQuestions = {
             photo: egitimBakani,
             level: 2,
         },
+        {
+            id: 52,
+            question: "Le jeu Borcaq, populaire dans notre pays, encourage la pédophilie. Je pense qu'il devrait être interdit.",
+            answers: [
+                {
+                    text: "Interdisez-le",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        internationalRelations: -10,
+                    },
+                },
+                {
+                    text: "Autorisez-le",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        internationalRelations: +10,
+                    }
+                }
+            ],
+            title: "Ministre de l'Éducation Nationale",
+            photo: egitimBakani,
+            level: 2,
+        },
+        {
+            id: 53,
+            question: "Je pense que la théorie de l'évolution contredit notre religion. Nous devrions interdire l'enseignement de ce sujet dans les écoles.",
+            answers: [
+                {
+                    text: "Tu as raison, interdisons-le",
+                    effect: {
+                        infrastructureAndEnvironment: -20,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Nous ne restreindrons pas la science",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: +10,
+                    }
+                }
+            ],
+            title: "Ministre de l'Éducation Nationale",
+            photo: egitimBakani,
+            level: 2,
+        }
+
     ],
     pt: [
         {
@@ -255,6 +450,56 @@ export const egitimQuestions = {
             photo: egitimBakani,
             level: 2,
         },
+        {
+            id: 52,
+            question: "O jogo Borcaq, popular em nosso país, promove a pedofilia. Eu acredito que ele deve ser proibido.",
+            answers: [
+                {
+                    text: "Proíba-o",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        internationalRelations: -10,
+                    },
+                },
+                {
+                    text: "Permita-o",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        internationalRelations: +10,
+                    }
+                }
+            ],
+            title: "Ministro da Educação Nacional",
+            photo: egitimBakani,
+            level: 2,
+        },
+        {
+            id: 53,
+            question: "Acredito que a teoria da evolução contradiz nossa religião. Devemos proibir o ensino desse assunto nas escolas.",
+            answers: [
+                {
+                    text: "Você está certo, proíba",
+                    effect: {
+                        infrastructureAndEnvironment: -20,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Não vamos restringir a ciência",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: +10,
+                    }
+                }
+            ],
+            title: "Ministro da Educação Nacional",
+            photo: egitimBakani,
+            level: 2,
+        }
+
+
     ],
     zh: [
         {
@@ -306,6 +551,56 @@ export const egitimQuestions = {
             photo: egitimBakani,
             level: 2,
         },
+        {
+            id: 52,
+            question: "在我国很受欢迎的游戏Borcaq助长了恋童癖。我认为它应该被禁止。",
+            answers: [
+                {
+                    text: "禁止",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        internationalRelations: -10,
+                    },
+                },
+                {
+                    text: "允许",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        internationalRelations: +10,
+                    }
+                }
+            ],
+            title: "国家教育部长",
+            photo: egitimBakani,
+            level: 2,
+        },
+        {
+            id: 53,
+            question: "我认为进化论与我们的宗教相矛盾。我们应该禁止在学校教授这个主题。",
+            answers: [
+                {
+                    text: "你是对的，禁止吧",
+                    effect: {
+                        infrastructureAndEnvironment: -20,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "我们不会限制科学",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: +10,
+                    }
+                }
+            ],
+            title: "国家教育部长",
+            photo: egitimBakani,
+            level: 2,
+        }
+
+
     ],
     es: [
         {
@@ -357,6 +652,56 @@ export const egitimQuestions = {
             photo: egitimBakani,
             level: 2,
         },
+        {
+            id: 52,
+            question: "El juego Borcaq, que es popular en nuestro país, fomenta la pedofilia. Creo que debería prohibirse.",
+            answers: [
+                {
+                    text: "Prohíbelo",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        internationalRelations: -10,
+                    },
+                },
+                {
+                    text: "Permítelo",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        internationalRelations: +10,
+                    }
+                }
+            ],
+            title: "Ministro de Educación Nacional",
+            photo: egitimBakani,
+            level: 2,
+        },
+        {
+            id: 53,
+            question: "Creo que la teoría de la evolución contradice nuestra religión. Deberíamos prohibir la enseñanza de este tema en las escuelas.",
+            answers: [
+                {
+                    text: "Tienes razón, prohíbelo",
+                    effect: {
+                        infrastructureAndEnvironment: -20,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "No vamos a restringir la ciencia",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: +10,
+                    }
+                }
+            ],
+            title: "Ministro de Educación Nacional",
+            photo: egitimBakani,
+            level: 2,
+        }
+
+
     ],
     ru: [
         {
@@ -405,6 +750,54 @@ export const egitimQuestions = {
                 }
             ],
             title: "Министр национального образования",
+            photo: egitimBakani,
+            level: 2,
+        },
+        {
+            id: 52,
+            question: "Игра Borcaq, популярная в нашей стране, продвигает педофилию. Я считаю, что она должна быть запрещена.",
+            answers: [
+                {
+                    text: "Запретить",
+                    effect: {
+                        publicSupport: +10,
+                        internalSecurity: +10,
+                        internationalRelations: -10,
+                    },
+                },
+                {
+                    text: "Разрешить",
+                    effect: {
+                        publicSupport: -10,
+                        internalSecurity: -10,
+                        internationalRelations: +10,
+                    }
+                }
+            ],
+            title: "Министр национального образования",
+            photo: egitimBakani,
+            level: 2,
+        },
+        {
+            id: 53,
+            question: "Я считаю, что теория эволюции противоречит нашей религии. Мы должны запретить преподавание этой темы в школах.",
+            answers: [
+                {
+                    text: "Вы правы, запретим это",
+                    effect: {
+                        infrastructureAndEnvironment: -20,
+                        internationalRelations: -15,
+                    },
+                },
+                {
+                    text: "Мы не будем ограничивать науку",
+                    effect: {
+                        infrastructureAndEnvironment: +10,
+                        internationalRelations: +10,
+                    }
+                }
+            ],
+            title: "Министр образования",
             photo: egitimBakani,
             level: 2,
         },

@@ -1,6 +1,6 @@
 import adaletBakanı from "../../public/ministers/adalet-bakani.webp";
 import altug from "../../public/ministers/altug.webp";
-//4 soru var
+//5 soru var
 export const adaletQuestions = {
     tr: [
         {
@@ -92,6 +92,31 @@ export const adaletQuestions = {
                         internalSecurity: +10,
                         budget: +5,
                         infrastructureAndEnvironment: -10,
+                    }
+                }
+            ],
+            title: "Adalet Bakanı",
+            photo: adaletBakanı,
+            level: 2,
+        },
+        {
+            id: 5,
+            question: "Başkanım, sosyal medyadan kara para aklayan ünlü isim Sergei Oliver, son mahkemesinde beraat etti. Bunun arkasında ne olduğunu araştırmak istiyorum.",
+            answers: [
+                {
+                    text: "Savcıyı görevden alın",
+                    effect: {
+                        internalSecurity: +10,
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "Mal varlığına el koyun",
+                    effect: {
+                        internalSecurity: -10,
+                        budget: +15,
+                        publicSupport: +10,
                     }
                 }
             ],
@@ -197,6 +222,32 @@ export const adaletQuestions = {
             photo: adaletBakanı,
             level: 2,
         },
+        {
+            id: 5,
+            question: "Mr. President, a famous individual accused of money laundering, Sergei Oliver, was acquitted in his last trial. I want to investigate what’s behind this.",
+            answers: [
+                {
+                    text: "Dismiss the prosecutor",
+                    effect: {
+                        internalSecurity: +10,
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "Seize his assets",
+                    effect: {
+                        internalSecurity: -10,
+                        budget: +15,
+                        publicSupport: +10,
+                    }
+                }
+            ],
+            title: "Minister of Justice",
+            photo: adaletBakanı,
+            level: 2,
+        }
+
     ],
     de: [
         {
@@ -295,6 +346,32 @@ export const adaletQuestions = {
             photo: adaletBakanı,
             level: 2,
         },
+        {
+            id: 5,
+            question: "Herr Präsident, der berühmte Geldwäscheverdächtige Sergei Oliver wurde in seinem letzten Prozess freigesprochen. Ich möchte herausfinden, was dahintersteckt.",
+            answers: [
+                {
+                    text: "Entlassen Sie den Staatsanwalt",
+                    effect: {
+                        internalSecurity: +10,
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "Beschlagnahmen Sie sein Vermögen",
+                    effect: {
+                        internalSecurity: -10,
+                        budget: +15,
+                        publicSupport: +10,
+                    }
+                }
+            ],
+            title: "Justizminister",
+            photo: adaletBakanı,
+            level: 2,
+        }
+
     ],
     fr: [
         {
@@ -393,6 +470,32 @@ export const adaletQuestions = {
             photo: adaletBakanı,
             level: 2,
         },
+        {
+            id: 5,
+            question: "Monsieur le Président, la célébrité accusée de blanchiment d'argent, Sergei Oliver, a été acquittée lors de son dernier procès. Je veux enquêter sur ce qui se cache derrière.",
+            answers: [
+                {
+                    text: "Révoquez le procureur",
+                    effect: {
+                        internalSecurity: +10,
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "Saisissez ses biens",
+                    effect: {
+                        internalSecurity: -10,
+                        budget: +15,
+                        publicSupport: +10,
+                    }
+                }
+            ],
+            title: "Ministre de la Justice",
+            photo: adaletBakanı,
+            level: 2,
+        }
+
     ],
     pt: [
         {
@@ -491,6 +594,32 @@ export const adaletQuestions = {
             photo: adaletBakanı,
             level: 2,
         },
+        {
+            id: 5,
+            question: "Senhor Presidente, a famosa figura acusada de lavagem de dinheiro, Sergei Oliver, foi absolvida em seu último julgamento. Quero investigar o que está por trás disso.",
+            answers: [
+                {
+                    text: "Demita o procurador",
+                    effect: {
+                        internalSecurity: +10,
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "Confisque seus bens",
+                    effect: {
+                        internalSecurity: -10,
+                        budget: +15,
+                        publicSupport: +10,
+                    }
+                }
+            ],
+            title: "Ministro da Justiça",
+            photo: adaletBakanı,
+            level: 2,
+        }
+
     ],
     zh: [
         {
@@ -589,6 +718,32 @@ export const adaletQuestions = {
             photo: adaletBakanı,
             level: 2,
         },
+        {
+            id: 5,
+            question: "总统先生，一位涉嫌洗钱的名人谢尔盖·奥利弗在最后一次审判中被判无罪。我想调查背后的真相。",
+            answers: [
+                {
+                    text: "撤职检察官",
+                    effect: {
+                        internalSecurity: +10,
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "查封他的财产",
+                    effect: {
+                        internalSecurity: -10,
+                        budget: +15,
+                        publicSupport: +10,
+                    }
+                }
+            ],
+            title: "司法部长",
+            photo: adaletBakanı,
+            level: 2,
+        }
+
     ],
     es: [
         {
@@ -687,6 +842,32 @@ export const adaletQuestions = {
             photo: adaletBakanı,
             level: 2,
         },
+        {
+            id: 5,
+            question: "Señor Presidente, el famoso acusado de lavado de dinero, Sergei Oliver, fue absuelto en su último juicio. Quiero investigar qué hay detrás de esto.",
+            answers: [
+                {
+                    text: "Destituya al fiscal",
+                    effect: {
+                        internalSecurity: +10,
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "Confisque sus bienes",
+                    effect: {
+                        internalSecurity: -10,
+                        budget: +15,
+                        publicSupport: +10,
+                    }
+                }
+            ],
+            title: "Ministro de Justicia",
+            photo: adaletBakanı,
+            level: 2,
+        }
+
     ],
     ru: [
         {
@@ -785,5 +966,31 @@ export const adaletQuestions = {
             photo: adaletBakanı,
             level: 2,
         },
+        {
+            id: 5,
+            question: "Господин Президент, известная личность, обвиняемая в отмывании денег, Сергей Оливер, была оправдана на последнем суде. Я хочу расследовать, что за этим стоит.",
+            answers: [
+                {
+                    text: "Уволить прокурора",
+                    effect: {
+                        internalSecurity: +10,
+                        budget: -20,
+                        publicSupport: -10,
+                    },
+                },
+                {
+                    text: "Конфисковать его имущество",
+                    effect: {
+                        internalSecurity: -10,
+                        budget: +15,
+                        publicSupport: +10,
+                    }
+                }
+            ],
+            title: "Министр юстиции",
+            photo: adaletBakanı,
+            level: 2,
+        }
+
     ],
 };
