@@ -45,7 +45,6 @@ const InventoryModal = ({ openInventoryModal,
     const { language } = useLanguage(); // Dil context'ini kullan
     const { isDarkMode } = useTheme();
     const [diceLeft, setDiceLeft] = useState(6);
-    console.log(language);
     const user = auth.currentUser;
 
     const [bonuses, setBonuses] = useState<Bonuses>({
@@ -113,10 +112,17 @@ const InventoryModal = ({ openInventoryModal,
                 ...prev,
                 [bonusType]: updatedValue,
             }));
-            console.log("bonusType:", bonusType);
-            console.log("bonusesText[bonusType]:", bonusesText[bonusType as BonusType]);
             // Bonus etkisini uygula
-            handleBonusEffect({ type: bonusType, value: 1 });
+
+            const typeMapping: { [key in BonusType]: string } = {
+                bonusAgricultural: "agriculture",
+                bonusBudget: "budget",
+                bonusInfrastructure: "infrastructure",
+                bonusSecurity: "security",
+                bonusInternational: "international",
+                bonusPublic: "public",
+            };
+            handleBonusEffect({ type: typeMapping[bonusType], value: 1 });
         }
     };
 

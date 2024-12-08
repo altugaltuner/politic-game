@@ -20,7 +20,6 @@ const LevelChangePage = ({
     level: number;
 }) => {
     const [animationClass, setAnimationClass] = useState("translate-x-[-100%]"); // Başlangıç konumu
-
     const { language } = useLanguage();
 
     const leveltext = {

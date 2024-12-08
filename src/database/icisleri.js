@@ -1,5 +1,5 @@
 import icisleriBakani from "../../public/ministers/icisleri-bakani.webp";
-// 5 soru var
+// 9 soru var
 export const icisleriQuestions = {
     tr: [
         {

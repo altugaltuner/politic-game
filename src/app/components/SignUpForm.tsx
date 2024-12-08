@@ -26,6 +26,7 @@ const SignUpForm: React.FC = () => {
             await setDoc(doc(db, "users", user.uid), {
                 username: username,
                 email: user.email,
+                level: 1,
                 createdAt: new Date()
             });
             setSuccess(true);

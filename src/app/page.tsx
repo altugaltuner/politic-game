@@ -6,19 +6,30 @@ import stats from "../../public/images/stats.webp";
 import Image from 'next/image';
 import SignUpForm from "./components/SignUpForm";
 import SettingsArea from "./components/SettingsArea";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useVolume } from "@/contexts/VolumeContext";
 import SettingsModal from "./components/SettingsModal";
 import { useLanguage } from '@/contexts/LanguageContext';
 import logo from "../../public/images/logo.webp";
 import SignInForm from "./components/SignInForm";
-
+import { usePathname } from "next/navigation";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "@/firebase";
 
 export default function HomePage() {
   const { language } = useLanguage();
   const [modalOpen, setModalOpen] = useState(false);
   const [, setOpenInventoryModal] = useState(false);
   const { volume } = useVolume();
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (analytics) {
+      logEvent(analytics, "page_view", {
+        page_path: pathname,
+      });
+    }
+  }, [pathname]);
 
   const playTickSound = () => {
     const audio = new Audio("/sound-effects/button-metal.wav");

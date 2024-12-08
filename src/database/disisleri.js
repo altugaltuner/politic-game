@@ -1,5 +1,5 @@
 import disisleriBakani from "../../public/ministers/disisleri-bakani.webp";
-// 4 soru var
+// 3 soru var
 export const disisleriQuestions = {
     tr: [
         {

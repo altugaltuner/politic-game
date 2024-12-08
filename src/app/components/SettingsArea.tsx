@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Settings, CircleUserRound, Box } from "lucide-react";
-import { useUser } from "@/contexts/usernameContext";
 import { useTheme } from '@/contexts/ThemeContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { doc, getDoc } from "firebase/firestore";
@@ -15,7 +14,8 @@ interface SettingsAreaProps {
 const SettingsArea: React.FC<SettingsAreaProps> = ({ handleOpenModal, modalOpen, handleOpenInventoryModal }) => {
     const { language } = useLanguage();
     const { isDarkMode } = useTheme();
-    const [username, setUsername] = useState<string | null>(null); // Kullanıcı adını tutan state
+    const [username, setUsername] = useState<string>(""); // Kullanıcı adı
+
     const [loading, setLoading] = useState<boolean>(true); // Yüklenme durumu
 
 
@@ -35,21 +35,18 @@ const SettingsArea: React.FC<SettingsAreaProps> = ({ handleOpenModal, modalOpen,
         }
     };
 
-
-    // Bileşen yüklendiğinde kullanıcı verisini çekmek için useEffect
     useEffect(() => {
-        const user = auth.currentUser;
-        if (user) {
-            fetchUserData(user.uid)
-                .then((userData) => {
-                    setUsername(userData?.username || "Guest"); // Kullanıcı adı varsa set et, yoksa "Guest"
-                })
-                .finally(() => {
-                    setLoading(false); // Yüklenme durumu tamamlandı
-                });
-        } else {
-            setLoading(false); // Kullanıcı yoksa yüklenme durumu tamamlandı
-        }
+        const unsubscribe = auth.onAuthStateChanged(async (user) => {
+            if (user) {
+                const userData = await fetchUserData(user.uid);
+                setUsername(userData?.username || "Guest");
+            } else {
+                setUsername("Guest");
+            }
+            setLoading(false); // Yüklenme durumu tamamlandı
+        });
+
+        return () => unsubscribe(); // Aboneliği temizle
     }, []);
 
     const profilim = {

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { UserProvider } from "@/contexts/usernameContext";
+import { UserProvider } from "@/contexts/UserContext";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { VolumeProvider } from "@/contexts/VolumeContext";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -26,6 +26,7 @@ export default function RootLayout({
           backgroundRepeat: 'repeat'
         }}
       >
+
         <LanguageProvider>
           <VolumeProvider>
             <ThemeProvider>

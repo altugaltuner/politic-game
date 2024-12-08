@@ -13,7 +13,8 @@ import chiefAdvisor from "../../public/non-ministers/chief-advisor.webp";
 import czechElci from "../../public/non-ministers/cek-buyukelci.webp";
 import islamicLeader from "../../public/non-ministers/islamic-cult-leader.webp";
 import vasilLevski from "../../public/non-ministers/vasil-levski.webp";
-
+import merkel from "../../public/non-ministers/angela-merkel.webp";
+//21 soru
 export const nonMinisters = {
     tr: [
         {
@@ -512,6 +513,32 @@ export const nonMinisters = {
             ],
             title: "TV Denetleme Kurulu Başkanı",
             photo: rtukBaskan, //değiştir
+            level: 2,
+        },
+        {
+            id: 570,
+            question: "Eğer ülkemizden haftada 500 sığınmacı almayı kabul ederseniz size vize kolaylığı sağlarız. Ne dersiniz?",
+            answers: [
+                {
+                    text: "Ekstra 4 milyar euro gerekir",
+                    effect: {
+                        budget: +20,
+                        publicSupport: +10,
+                        internationalRelations: -20,
+                    },
+                },
+                {
+                    text: "Gerek yok, teşekkürler",
+                    effect: {
+                        budget: +20,
+                        publicSupport: -10,
+                        internationalRelations: -10,
+                    },
+                    listID: "kazıklanmak",
+                }
+            ],
+            title: "Angela Merkel",
+            photo: merkel,
             level: 2,
         },
     ],
@@ -1039,6 +1066,33 @@ export const nonMinisters = {
             photo: rtukBaskan, //değiştir
             level: 2,
         },
+        {
+            id: 570,
+            question: "If you agree to accept 500 refugees per week from our country, we will ease visa procedures for you. What do you say?",
+            answers: [
+                {
+                    text: "We need an extra 4 billion euros",
+                    effect: {
+                        budget: +20,
+                        publicSupport: +10,
+                        internationalRelations: -20
+                    }
+                },
+                {
+                    text: "No need, thank you",
+                    effect: {
+                        budget: +20,
+                        publicSupport: -10,
+                        internationalRelations: -10
+                    },
+                    listID: "kazıklanmak"
+                }
+            ],
+            title: "Angela Merkel",
+            photo: merkel,
+            level: 2
+        }
+
     ],
     de: [
         {
@@ -1564,6 +1618,33 @@ export const nonMinisters = {
             photo: rtukBaskan,
             level: 2,
         },
+        {
+            id: 570,
+            question: "Wenn Sie zustimmen, wöchentlich 500 Flüchtlinge aus unserem Land aufzunehmen, werden wir die Visabestimmungen erleichtern. Was meinen Sie?",
+            answers: [
+                {
+                    text: "Zusätzliche 4 Milliarden Euro werden benötigt",
+                    effect: {
+                        budget: +20,
+                        publicSupport: +10,
+                        internationalRelations: -20
+                    }
+                },
+                {
+                    text: "Nicht nötig, danke",
+                    effect: {
+                        budget: +20,
+                        publicSupport: -10,
+                        internationalRelations: -10
+                    },
+                    listID: "kazıklanmak"
+                }
+            ],
+            title: "Angela Merkel",
+            photo: merkel,
+            level: 2
+        }
+
     ],
     fr: [
         {
@@ -2086,9 +2167,36 @@ export const nonMinisters = {
                 }
             ],
             title: "Président de l’Autorité de Régulation de la Télévision",
-            photo: rtukBaskan, //değiştir
+            photo: rtukBaskan,
             level: 2,
         },
+        {
+            id: 570,
+            question: "Si vous acceptez d'accueillir 500 réfugiés par semaine provenant de notre pays, nous vous faciliterons l'obtention des visas. Qu'en dites-vous ?",
+            answers: [
+                {
+                    text: "Il nous faut 4 milliards d'euros supplémentaires",
+                    effect: {
+                        budget: +20,
+                        publicSupport: +10,
+                        internationalRelations: -20
+                    }
+                },
+                {
+                    text: "Pas besoin, merci",
+                    effect: {
+                        budget: +20,
+                        publicSupport: -10,
+                        internationalRelations: -10
+                    },
+                    listID: "kazıklanmak"
+                }
+            ],
+            title: "Angela Merkel",
+            photo: merkel,
+            level: 2
+        }
+
     ],
     pt: [
         {
@@ -2586,9 +2694,36 @@ export const nonMinisters = {
                 }
             ],
             title: "Chefe da Autoridade Reguladora de TV",
-            photo: rtukBaskan, //değiştir
+            photo: rtukBaskan,
             level: 2,
         },
+        {
+            id: 570,
+            question: "Se aceitarem receber 500 refugiados por semana do nosso país, facilitaremos o visto. O que acham?",
+            answers: [
+                {
+                    text: "Precisamos de 4 bilhões de euros extras",
+                    effect: {
+                        budget: +20,
+                        publicSupport: +10,
+                        internationalRelations: -20
+                    }
+                },
+                {
+                    text: "Não é necessário, obrigado",
+                    effect: {
+                        budget: +20,
+                        publicSupport: -10,
+                        internationalRelations: -10
+                    },
+                    listID: "kazıklanmak"
+                }
+            ],
+            title: "Angela Merkel",
+            photo: merkel,
+            level: 2
+        }
+
     ],
     zh: [
         {
@@ -3111,9 +3246,36 @@ export const nonMinisters = {
                 }
             ],
             title: "电视监管局局长",
-            photo: rtukBaskan, //değiştir
+            photo: rtukBaskan,
             level: 2,
         },
+        {
+            id: 570,
+            question: "如果你们同意每周接收500名来自我们国家的难民，我们将简化签证程序。你们怎么看？",
+            answers: [
+                {
+                    text: "需要额外的40亿欧元",
+                    effect: {
+                        budget: +20,
+                        publicSupport: +10,
+                        internationalRelations: -20
+                    }
+                },
+                {
+                    text: "不需要，谢谢",
+                    effect: {
+                        budget: +20,
+                        publicSupport: -10,
+                        internationalRelations: -10
+                    },
+                    listID: "kazıklanmak"
+                }
+            ],
+            title: "安格拉·默克尔",
+            photo: merkel,
+            level: 2
+        }
+
     ],
     es: [
         {
@@ -3614,6 +3776,33 @@ export const nonMinisters = {
             photo: rtukBaskan, //değiştir
             level: 2,
         },
+        {
+            id: 570,
+            question: "Si aceptan recibir 500 refugiados por semana de nuestro país, les facilitaremos la visa. ¿Qué opinan?",
+            answers: [
+                {
+                    text: "Se necesitan 4 mil millones de euros adicionales",
+                    effect: {
+                        budget: +20,
+                        publicSupport: +10,
+                        internationalRelations: -20
+                    }
+                },
+                {
+                    text: "No es necesario, gracias",
+                    effect: {
+                        budget: +20,
+                        publicSupport: -10,
+                        internationalRelations: -10
+                    },
+                    listID: "kazıklanmak"
+                }
+            ],
+            title: "Angela Merkel",
+            photo: merkel,
+            level: 2
+        }
+
     ],
     ru: [
         {
@@ -4114,5 +4303,32 @@ export const nonMinisters = {
             photo: rtukBaskan, //değiştir
             level: 2,
         },
+        {
+            id: 570,
+            question: "Если вы согласитесь принимать 500 беженцев в неделю из нашей страны, мы облегчим получение визы. Что скажете?",
+            answers: [
+                {
+                    text: "Потребуется дополнительно 4 миллиарда евро",
+                    effect: {
+                        budget: +20,
+                        publicSupport: +10,
+                        internationalRelations: -20
+                    }
+                },
+                {
+                    text: "Нет необходимости, спасибо",
+                    effect: {
+                        budget: +20,
+                        publicSupport: -10,
+                        internationalRelations: -10
+                    },
+                    listID: "kazıklanmak"
+                }
+            ],
+            title: "Ангела Меркель",
+            photo: merkel,
+            level: 2
+        }
+
     ],
 };

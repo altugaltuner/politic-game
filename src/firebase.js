@@ -1,6 +1,7 @@
 import { initializeApp, getApps } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
+import { getAnalytics } from "firebase/analytics";
 
 // Firebase yapılandırması
 const firebaseConfig = {
@@ -15,7 +16,16 @@ const firebaseConfig = {
 
 // Firebase uygulamasını yalnızca bir kez başlat
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApps()[0];
+// Analytics'i başlat
+const analytics = typeof window !== "undefined" ? getAnalytics(app) : null;
 
+export { analytics };
 // Firebase servislerini başlat
 export const db = getFirestore(app); // Firestore
 export const auth = getAuth(app); // Authentication
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 import turizmBakani from "../../public/ministers/turizm-bakani.webp";
-//1 soru var
+//3 soru var
 export const turizmQuestions = {
     tr: [
         {

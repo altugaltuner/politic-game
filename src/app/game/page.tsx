@@ -27,7 +27,6 @@ type Effects = {
     [key: string]: number | string | undefined;
 };
 
-
 const fetchUserData = async (uid: string) => {
     const docRef = doc(db, "users", uid);
     const docSnap = await getDoc(docRef);
@@ -40,6 +39,8 @@ const fetchUserData = async (uid: string) => {
     }
 };
 const user = auth.currentUser;
+
+
 if (user) {
     fetchUserData(user.uid).then((userData) => {
         console.log("Username:", userData?.username);
@@ -157,7 +158,6 @@ export default function GamePage() {
         setOpenInventoryModal(true);
         playTickSound();
     }
-
     const [selectedListIDs, setSelectedListIDs] = useState<string[]>([]);
 
     const handleSetSelectedListID = (newListID: string) => {

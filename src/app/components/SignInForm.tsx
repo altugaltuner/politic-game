@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { auth } from "@/firebase"; // Firebase auth'ı import edin
+import { auth, db } from "@/firebase"; // Firebase auth'ı import edin
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { doc, getDoc } from "firebase/firestore";
+import { useUser } from '@/contexts/UserContext'; // UserContext'i kullanın
 
 const SignInForm: React.FC = () => {
     const [email, setEmail] = useState('');
@@ -10,6 +12,7 @@ const SignInForm: React.FC = () => {
     const [error, setError] = useState('');
     const router = useRouter();
     const { language } = useLanguage();
+    const { setUser } = useUser(); // Kullanıcı bilgilerini ayarlamak için setUser
 
     const handleSignIn = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -17,8 +20,26 @@ const SignInForm: React.FC = () => {
 
         try {
             // Firebase ile kullanıcı giriş işlemi
-            await signInWithEmailAndPassword(auth, email, password);
-            console.log("User signed in successfully");
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+
+            const userRef = doc(db, "users", user.uid);
+
+            const userSnap = await getDoc(userRef);
+
+            if (userSnap.exists()) {
+                const userData = userSnap.data();
+                setUser({
+                    id: user.uid,
+                    email: userData.email,
+                    username: userData.username,
+                    level: userData.level,
+                });
+                console.log("User signed in successfully:", userData);
+            } else {
+                console.error("No user data found!");
+            }
+
             router.push('/game'); // Başarılı giriş sonrası yönlendirme
         } catch (err) {
             setError((err as Error).message);

@@ -868,4 +868,34 @@ export const elements = [
             stat: "internalSecurity"
         }
     },
+    {
+        id: 629,
+        title: {
+            tr: "Sabıkalı Mülteciler Ülkeye Davet Ediliyor",
+            en: "Criminal Refugees Invited to the Country",
+            fr: "Les Réfugiés Criminels Invités dans le Pays",
+            de: "Kriminelle Flüchtlinge ins Land Eingeladen",
+            zh: "犯罪难民被邀请到该国",
+            es: "Refugiados Criminales Invitados al País",
+            pt: "Refugiados Criminosos Convidados para o País",
+            ru: "Преступные беженцы приглашены в страну"
+        },
+        photo: s400, //degistir
+        description: {
+            tr: "Almanya başbakanı Merkel ile yapılan anlaşma sonucunda ülkeye sabıkalı mültecilerin kabul edilmesi kararlaştırıldı. Ülkede iç güvenlik endişeleri artıyor.",
+            en: "As a result of the agreement with German Chancellor Merkel, it was decided to accept criminal refugees into the country. Internal security concerns are increasing.",
+            fr: "Suite à l'accord avec la chancelière allemande Merkel, il a été décidé d'accepter les réfugiés criminels dans le pays. Les préoccupations en matière de sécurité intérieure augmentent.",
+            de: "Aufgrund der Vereinbarung mit der deutschen Kanzlerin Merkel wurde beschlossen, kriminelle Flüchtlinge ins Land aufzunehmen. Die Bedenken hinsichtlich der inneren Sicherheit nehmen zu.",
+            zh: "由于与德国总理默克尔的协议，决定接纳犯罪难民进入该国。内部安全担忧正在增加。",
+            es: "Como resultado del acuerdo con la canciller alemana Merkel, se decidió aceptar refugiados criminales en el país. Las preocupaciones de seguridad interna están aumentando.",
+            pt: "Como resultado do acordo com a chanceler alemã Merkel, foi decidido aceitar refugiados criminosos no país. As preocupações com a segurança interna estão aumentando.",
+            ru: "В результате соглашения с канцлером Германии Меркель было решено принять преступных беженцев в страну. Растут опасения по поводу внутренней безопасности."
+        },
+        listID: "kazıklanmak",
+        lastingEffect: {
+            type: "decrease",
+            value: -10,
+            stat: "internalSecurity"
+        }
+    },
 ];

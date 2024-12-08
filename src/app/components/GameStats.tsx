@@ -13,6 +13,7 @@ import { useVolume } from "@/contexts/VolumeContext";
 import LevelChangePage from "./LevelChangePage";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+
 type GameStatsProps = {
     agriculture: number;
     infrastructure: number;
@@ -52,6 +53,7 @@ interface Effects {
 
 // Component for Game Stats
 export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetSelectedListIDs, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion }) => {
+
     const [isVisible, setIsVisible] = useState(true);
     const { isDarkMode } = useTheme();
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -294,7 +296,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, resetS
             agriculture: "你对农业生产的忽视导致了国家的粮食危机。你甚至无法满足人民的基本需求。你的统治结束了！",
         },
     };
-    console.log("lalal");
+
     const playAgain = {
         en: "Play Again",
         tr: "Tekrar Oyna",
