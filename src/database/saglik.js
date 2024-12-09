@@ -191,7 +191,7 @@ export const saglikQuestions = {
                 }
             ],
             title: "Minister of Health",
-            photo: healthMinister,
+            photo: saglikBakani,
             level: 2,
         }
 
@@ -289,7 +289,7 @@ export const saglikQuestions = {
                 }
             ],
             title: "Gesundheitsminister",
-            photo: healthMinister,
+            photo: saglikBakani,
             level: 2,
         }
 
@@ -387,7 +387,7 @@ export const saglikQuestions = {
                 }
             ],
             title: "Ministre de la Santé",
-            photo: healthMinister,
+            photo: saglikBakani,
             level: 2,
         }
 
@@ -485,7 +485,7 @@ export const saglikQuestions = {
                 }
             ],
             title: "Ministro da Saúde",
-            photo: healthMinister,
+            photo: saglikBakani,
             level: 2,
         }
 
@@ -583,7 +583,7 @@ export const saglikQuestions = {
                 }
             ],
             title: "卫生部长",
-            photo: healthMinister,
+            photo: saglikBakani,
             level: 2,
         }
 
@@ -681,7 +681,7 @@ export const saglikQuestions = {
                 }
             ],
             title: "Ministro de Salud",
-            photo: healthMinister,
+            photo: saglikBakani,
             level: 2,
         }
 
@@ -779,7 +779,7 @@ export const saglikQuestions = {
                 }
             ],
             title: "Министр здравоохранения",
-            photo: healthMinister,
+            photo: saglikBakani,
             level: 2,
         }
 

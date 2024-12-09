@@ -1,5 +1,5 @@
 import icisleriBakani from "../../public/ministers/icisleri-bakani.webp";
-// 9 soru var
+// 11 soru var
 export const icisleriQuestions = {
     tr: [
         {
@@ -508,7 +508,7 @@ export const icisleriQuestions = {
                 },
             ],
             title: "Minister of Interior",
-            photo: interiorMinister,
+            photo: icisleriBakani,
             level: 1,
         },
         {
@@ -531,7 +531,7 @@ export const icisleriQuestions = {
                 },
             ],
             title: "Minister of Interior",
-            photo: interiorMinister,
+            photo: icisleriBakani,
             level: 1,
         },
     ],
@@ -775,7 +775,7 @@ export const icisleriQuestions = {
                 },
             ],
             title: "Innenminister",
-            photo: interiorMinister,
+            photo: icisleriBakani,
             level: 1,
         },
         {
@@ -798,7 +798,7 @@ export const icisleriQuestions = {
                 },
             ],
             title: "Innenminister",
-            photo: interiorMinister,
+            photo: icisleriBakani,
             level: 1,
         },
     ],
@@ -1042,7 +1042,7 @@ export const icisleriQuestions = {
                 },
             ],
             title: "Ministre de l'Intérieur",
-            photo: interiorMinister,
+            photo: icisleriBakani,
             level: 1,
         },
         {
@@ -1065,7 +1065,7 @@ export const icisleriQuestions = {
                 },
             ],
             title: "Ministre de l'Intérieur",
-            photo: interiorMinister,
+            photo: icisleriBakani,
             level: 1,
         },
     ],
@@ -1309,7 +1309,7 @@ export const icisleriQuestions = {
                 },
             ],
             title: "Ministro do Interior",
-            photo: interiorMinister,
+            photo: icisleriBakani,
             level: 1,
         },
         {
@@ -1332,7 +1332,7 @@ export const icisleriQuestions = {
                 },
             ],
             title: "Ministro do Interior",
-            photo: interiorMinister,
+            photo: icisleriBakani,
             level: 1,
         }
     ],
@@ -1576,7 +1576,7 @@ export const icisleriQuestions = {
                 },
             ],
             title: "内政部长",
-            photo: interiorMinister,
+            photo: icisleriBakani,
             level: 1,
         },
         {
@@ -1599,7 +1599,7 @@ export const icisleriQuestions = {
                 },
             ],
             title: "内政部长",
-            photo: interiorMinister,
+            photo: icisleriBakani,
             level: 1,
         }
     ],
@@ -1843,7 +1843,7 @@ export const icisleriQuestions = {
                 },
             ],
             title: "Ministro del Interior",
-            photo: interiorMinister,
+            photo: icisleriBakani,
             level: 1,
         },
         {
@@ -1866,7 +1866,7 @@ export const icisleriQuestions = {
                 },
             ],
             title: "Ministro del Interior",
-            photo: interiorMinister,
+            photo: icisleriBakani,
             level: 1,
         }
     ],
@@ -2110,7 +2110,7 @@ export const icisleriQuestions = {
                 },
             ],
             title: "Министр внутренних дел",
-            photo: interiorMinister,
+            photo: icisleriBakani,
             level: 1,
         },
         {
@@ -2133,7 +2133,7 @@ export const icisleriQuestions = {
                 },
             ],
             title: "Министр внутренних дел",
-            photo: interiorMinister,
+            photo: icisleriBakani,
             level: 1,
         }
     ],

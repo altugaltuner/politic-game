@@ -209,7 +209,7 @@ export const sanayiQuestions = {
                 }
             ],
             title: "Minister of Industry and Technology",
-            photo: industryMinister,
+            photo: sanayiBakani,
             level: 1,
         }
 
@@ -316,7 +316,7 @@ export const sanayiQuestions = {
                 }
             ],
             title: "Minister für Industrie und Technologie",
-            photo: industryMinister,
+            photo: sanayiBakani,
             level: 1,
         }
 
@@ -423,7 +423,7 @@ export const sanayiQuestions = {
                 }
             ],
             title: "Ministre de l'Industrie et de la Technologie",
-            photo: industryMinister,
+            photo: sanayiBakani,
             level: 1,
         }
 
@@ -530,7 +530,7 @@ export const sanayiQuestions = {
                 }
             ],
             title: "Ministro da Indústria e Tecnologia",
-            photo: industryMinister,
+            photo: sanayiBakani,
             level: 1,
         }
 
@@ -637,7 +637,7 @@ export const sanayiQuestions = {
                 }
             ],
             title: "工业与技术部长",
-            photo: industryMinister,
+            photo: sanayiBakani,
             level: 1,
         }
 
@@ -744,7 +744,7 @@ export const sanayiQuestions = {
                 }
             ],
             title: "Ministro de Industria y Tecnología",
-            photo: industryMinister,
+            photo: sanayiBakani,
             level: 1,
         }
 
@@ -851,7 +851,7 @@ export const sanayiQuestions = {
                 }
             ],
             title: "Министр промышленности и технологий",
-            photo: industryMinister,
+            photo: sanayiBakani,
             level: 1,
         }
 

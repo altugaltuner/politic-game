@@ -14,7 +14,7 @@ import czechElci from "../../public/non-ministers/cek-buyukelci.webp";
 import islamicLeader from "../../public/non-ministers/islamic-cult-leader.webp";
 import vasilLevski from "../../public/non-ministers/vasil-levski.webp";
 import merkel from "../../public/non-ministers/angela-merkel.webp";
-//21 soru
+//23 soru
 export const nonMinisters = {
     tr: [
         {
@@ -1159,7 +1159,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Your Spouse Dora",
-            photo: dora,
+            photo: putin, //değiş
             level: 2,
         },
         {
@@ -1183,7 +1183,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Chemistry Professor Victoria",
-            photo: victoria,
+            photo: putin, //değiş
             level: 2,
         }
 
@@ -1759,7 +1759,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Ihre Ehefrau Dora",
-            photo: dora,
+            photo: putin, //değiş
             level: 2,
         },
         {
@@ -1783,7 +1783,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Chemieprofessorin Victoria",
-            photo: victoria,
+            photo: putin, //değiş
             level: 2,
         }
 
@@ -2360,7 +2360,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Votre épouse Dora",
-            photo: dora,
+            photo: putin, //değiş
             level: 2,
         },
         {
@@ -2384,7 +2384,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Professeure de chimie Victoria",
-            photo: victoria,
+            photo: putin, //değiş
             level: 2,
         }
 
@@ -2935,7 +2935,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Sua esposa Dora",
-            photo: dora,
+            photo: putin, //değiş
             level: 2,
         },
         {
@@ -2959,7 +2959,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Professora de Química Victoria",
-            photo: victoria,
+            photo: putin, //değiş
             level: 2,
         }
 
@@ -3535,7 +3535,7 @@ export const nonMinisters = {
                 }
             ],
             title: "你的妻子多拉",
-            photo: dora,
+            photo: putin, //değiş
             level: 2,
         },
         {
@@ -3559,7 +3559,7 @@ export const nonMinisters = {
                 }
             ],
             title: "化学教授维多利亚",
-            photo: victoria,
+            photo: putin, //değiş
             level: 2,
         }
 
@@ -4109,7 +4109,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Tu esposa Dora",
-            photo: dora,
+            photo: putin, //değiş
             level: 2,
         },
         {
@@ -4133,7 +4133,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Profesora de Química Victoria",
-            photo: victoria,
+            photo: putin, //değiş
             level: 2,
         }
 
@@ -4685,7 +4685,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Ваша супруга Дора",
-            photo: dora,
+            photo: putin, //değiş
             level: 2,
         },
         {
@@ -4709,7 +4709,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Профессор химии Виктория",
-            photo: victoria,
+            photo: putin, //değiş
             level: 2,
         }
 

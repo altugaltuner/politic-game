@@ -154,7 +154,7 @@ export const savunmaQuestions = {
                 }
             ],
             title: "Minister of National Defense",
-            photo: defenseMinister,
+            photo: savunmaBakani,
             level: 2,
         }
 
@@ -233,7 +233,7 @@ export const savunmaQuestions = {
                 }
             ],
             title: "Verteidigungsminister",
-            photo: defenseMinister,
+            photo: savunmaBakani,
             level: 2,
         }
 
@@ -312,7 +312,7 @@ export const savunmaQuestions = {
                 }
             ],
             title: "Ministre de la Défense Nationale",
-            photo: defenseMinister,
+            photo: savunmaBakani,
             level: 2,
         }
 
@@ -391,7 +391,7 @@ export const savunmaQuestions = {
                 }
             ],
             title: "Ministro da Defesa Nacional",
-            photo: defenseMinister,
+            photo: savunmaBakani,
             level: 2,
         }
 
@@ -470,7 +470,7 @@ export const savunmaQuestions = {
                 }
             ],
             title: "国防部长",
-            photo: defenseMinister,
+            photo: savunmaBakani,
             level: 2,
         }
 
@@ -549,7 +549,7 @@ export const savunmaQuestions = {
                 }
             ],
             title: "Ministro de Defensa Nacional",
-            photo: defenseMinister,
+            photo: savunmaBakani,
             level: 2,
         }
 
@@ -628,7 +628,7 @@ export const savunmaQuestions = {
                 }
             ],
             title: "Министр национальной обороны",
-            photo: defenseMinister,
+            photo: savunmaBakani,
             level: 2,
         }
 

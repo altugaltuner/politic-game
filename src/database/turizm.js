@@ -222,7 +222,7 @@ export const turizmQuestions = {
                 }
             ],
             title: "Minister of Culture and Tourism",
-            photo: tourismMinister,
+            photo: turizmBakani,
             level: 3,
         },
         {
@@ -247,7 +247,7 @@ export const turizmQuestions = {
                 }
             ],
             title: "Minister of Culture and Tourism",
-            photo: tourismMinister,
+            photo: turizmBakani,
             level: 3,
         },
     ],
@@ -347,7 +347,7 @@ export const turizmQuestions = {
                 }
             ],
             title: "Minister für Kultur und Tourismus",
-            photo: tourismMinister,
+            photo: turizmBakani,
             level: 3,
         },
         {
@@ -372,7 +372,7 @@ export const turizmQuestions = {
                 }
             ],
             title: "Minister für Kultur und Tourismus",
-            photo: tourismMinister,
+            photo: turizmBakani,
             level: 3,
         }
     ],
@@ -472,7 +472,7 @@ export const turizmQuestions = {
                 }
             ],
             title: "Ministre de la Culture et du Tourisme",
-            photo: tourismMinister,
+            photo: turizmBakani,
             level: 3,
         },
         {
@@ -497,7 +497,7 @@ export const turizmQuestions = {
                 }
             ],
             title: "Ministre de la Culture et du Tourisme",
-            photo: tourismMinister,
+            photo: turizmBakani,
             level: 3,
         }
     ],
@@ -597,7 +597,7 @@ export const turizmQuestions = {
                 }
             ],
             title: "Ministro da Cultura e Turismo",
-            photo: tourismMinister,
+            photo: turizmBakani,
             level: 3,
         },
         {
@@ -622,7 +622,7 @@ export const turizmQuestions = {
                 }
             ],
             title: "Ministro da Cultura e Turismo",
-            photo: tourismMinister,
+            photo: turizmBakani,
             level: 3,
         }
     ],
@@ -722,7 +722,7 @@ export const turizmQuestions = {
                 }
             ],
             title: "文化与旅游部长",
-            photo: tourismMinister,
+            photo: turizmBakani,
             level: 3,
         },
         {
@@ -747,7 +747,7 @@ export const turizmQuestions = {
                 }
             ],
             title: "文化与旅游部长",
-            photo: tourismMinister,
+            photo: turizmBakani,
             level: 3,
         }
     ],
@@ -847,7 +847,7 @@ export const turizmQuestions = {
                 }
             ],
             title: "Ministro de Cultura y Turismo",
-            photo: tourismMinister,
+            photo: turizmBakani,
             level: 3,
         },
         {
@@ -872,7 +872,7 @@ export const turizmQuestions = {
                 }
             ],
             title: "Ministro de Cultura y Turismo",
-            photo: tourismMinister,
+            photo: turizmBakani,
             level: 3,
         }
     ],
@@ -972,7 +972,7 @@ export const turizmQuestions = {
                 }
             ],
             title: "Министр культуры и туризма",
-            photo: tourismMinister,
+            photo: turizmBakani,
             level: 3,
         },
         {
@@ -997,7 +997,7 @@ export const turizmQuestions = {
                 }
             ],
             title: "Министр культуры и туризма",
-            photo: tourismMinister,
+            photo: turizmBakani,
             level: 3,
         }
     ],

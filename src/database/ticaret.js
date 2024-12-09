@@ -1,5 +1,5 @@
 import ticaretBakani from "../../public/ministers/ticaret-bakani.webp";
-// 4 soru var
+// 7 soru var
 export const ticaretQuestions = {
     tr: [
         {
@@ -276,7 +276,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Minister of Trade",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -297,7 +297,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Minister of Trade",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -322,7 +322,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Minister of Trade",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -345,7 +345,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Minister of Trade",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
     ],
@@ -450,7 +450,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Handelsminister",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -471,7 +471,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Handelsminister",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -496,7 +496,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Handelsminister",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -519,7 +519,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Handelsminister",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
     ],
@@ -624,7 +624,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Ministre du Commerce",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -645,7 +645,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Ministre du Commerce",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -670,7 +670,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Ministre du Commerce",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -693,7 +693,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Ministre du Commerce",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
     ],
@@ -798,7 +798,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Ministro do Comércio",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -819,7 +819,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Ministro do Comércio",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -844,7 +844,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Ministro do Comércio",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -867,7 +867,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Ministro do Comércio",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
     ],
@@ -972,7 +972,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "贸易部长",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -993,7 +993,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "贸易部长",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -1018,7 +1018,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "贸易部长",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -1041,7 +1041,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "贸易部长",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
     ],
@@ -1146,7 +1146,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Ministro de Comercio",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -1167,7 +1167,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Ministro de Comercio",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -1192,7 +1192,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Ministro de Comercio",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -1215,7 +1215,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Ministro de Comercio",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
     ],
@@ -1320,7 +1320,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Министр торговли",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -1341,7 +1341,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Министр торговли",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -1366,7 +1366,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Министр торговли",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
         {
@@ -1389,7 +1389,7 @@ export const ticaretQuestions = {
                 }
             ],
             title: "Министр торговли",
-            photo: tradeMinister,
+            photo: ticaretBakani,
             level: 3,
         },
     ],

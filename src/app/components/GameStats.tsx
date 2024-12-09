@@ -12,7 +12,8 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { useVolume } from "@/contexts/VolumeContext";
 import LevelChangePage from "./LevelChangePage";
 import { useLanguage } from "@/contexts/LanguageContext";
-
+import { doc, updateDoc } from "firebase/firestore";
+import { db, auth } from "@/firebase";
 
 type GameStatsProps = {
     agriculture: number;
@@ -93,7 +94,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
             console.log(`Updating current level to match db level: ${level}`);
             setCurrentLevel(level);
         }
-    }, []);
+    }, [level]);
 
     useEffect(() => {
         console.log(`Current Level after state update: ${currentLevel}`);
@@ -129,6 +130,22 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         };
         preloadImages();
     }, []);
+
+    useEffect(() => {
+        const updateScoreInDatabase = async () => {
+            if (auth.currentUser && score !== undefined) {
+                const userDocRef = doc(db, "users", auth.currentUser.uid);
+                try {
+                    await updateDoc(userDocRef, { score });
+                    console.log("Score successfully updated in Firebase:", score);
+                } catch (error) {
+                    console.error("Error updating score in Firebase:", error);
+                }
+            }
+        };
+
+        updateScoreInDatabase();
+    }, [score]); // Sadece "score" değiştiğinde çalışır
 
     const sounds = [
         "/sound-effects/breaking-news1.wav",
@@ -238,7 +255,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
             setCurrentLevel(newLevel); // Yeni seviyeyi ayarla
             handleLevelUp(); // Level atlama animasyonunu başlat
         }
-    }, [score, currentLevel]); // Hem score hem de currentLevel'ı izleyin
+    }, [level]); // Hem score hem de currentLevel'ı izleyin
 
 
     const oneInTenChance = () => {

@@ -247,7 +247,7 @@ export const ulastirmaQuestions = {
                 }
             ],
             title: "Minister of Transport",
-            photo: transportMinister,
+            photo: ulastirmaBakani,
             level: 3,
         },
     ],
@@ -372,7 +372,7 @@ export const ulastirmaQuestions = {
                 }
             ],
             title: "Verkehrsminister",
-            photo: transportMinister,
+            photo: ulastirmaBakani,
             level: 3,
         }
     ],
@@ -497,7 +497,7 @@ export const ulastirmaQuestions = {
                 }
             ],
             title: "Ministre des Transports",
-            photo: transportMinister,
+            photo: ulastirmaBakani,
             level: 3,
         }
     ],
@@ -622,7 +622,7 @@ export const ulastirmaQuestions = {
                 }
             ],
             title: "Ministro dos Transportes",
-            photo: transportMinister,
+            photo: ulastirmaBakani,
             level: 3,
         }
     ],
@@ -747,7 +747,7 @@ export const ulastirmaQuestions = {
                 }
             ],
             title: "交通部长",
-            photo: transportMinister,
+            photo: ulastirmaBakani,
             level: 3,
         },
     ],
@@ -872,7 +872,7 @@ export const ulastirmaQuestions = {
                 }
             ],
             title: "Ministro de Transporte",
-            photo: transportMinister,
+            photo: ulastirmaBakani,
             level: 3,
         }
     ],
@@ -997,7 +997,7 @@ export const ulastirmaQuestions = {
                 }
             ],
             title: "Министр транспорта",
-            photo: transportMinister,
+            photo: ulastirmaBakani,
             level: 3,
         }
     ],
