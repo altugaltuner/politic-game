@@ -5,10 +5,8 @@ import skulls from "../../public/images/skulls-bones.webp";
 import stats from "../../public/images/stats.webp";
 import Image from 'next/image';
 import SignUpForm from "./components/SignUpForm";
-import SettingsArea from "./components/SettingsArea";
 import { useEffect, useState } from "react";
 import { useVolume } from "@/contexts/VolumeContext";
-import SettingsModal from "./components/SettingsModal";
 import { useLanguage } from '@/contexts/LanguageContext';
 import logo from "../../public/images/logo.webp";
 import SignInForm from "./components/SignInForm";
@@ -18,8 +16,6 @@ import { analytics } from "@/firebase";
 
 export default function HomePage() {
   const { language } = useLanguage();
-  const [modalOpen, setModalOpen] = useState(false);
-  const [, setOpenInventoryModal] = useState(false);
   const { volume } = useVolume();
   const pathname = usePathname();
 
@@ -30,28 +26,6 @@ export default function HomePage() {
       });
     }
   }, [pathname]);
-
-  const playTickSound = () => {
-    const audio = new Audio("/sound-effects/button-metal.wav");
-    audio.volume = volume;
-    audio.onerror = () => console.error("Failed to load victory sound");
-    audio.play();
-  }
-
-  const setModalOpenFunc = () => {
-    setModalOpen(false);
-    playTickSound();
-  }
-
-  const handleOpenModal = () => {
-    setModalOpen(true);
-    playTickSound();
-  }
-
-  const handleOpenInventoryModal = () => {
-    setOpenInventoryModal(true);
-    playTickSound();
-  }
 
   const headerText = {
     tr: 'Cumhurbaşkanı ol ve ülkeyi yönet! Karşına çıkan sorunları çöz ve ülkeni ayakta tut!',
@@ -171,8 +145,6 @@ export default function HomePage() {
         <p className="text-sm sm:text-base">{headerText[language]}
         </p>
       </div>
-      <SettingsModal modalOpen={modalOpen} setModalOpenFunc={setModalOpenFunc} />
-      <SettingsArea handleOpenModal={handleOpenModal} modalOpen={modalOpen} handleOpenInventoryModal={handleOpenInventoryModal} />
       <SignUpForm />
       <SignInForm />
       <div className="h-auto md:h-[90%] lg:w-[90%] w-full flex flex-col md:gap-3 gap-2 justify-around items-center bg-white p-4 rounded-3xl border-[5px] border-black">

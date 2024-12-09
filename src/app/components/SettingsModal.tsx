@@ -112,6 +112,27 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
         }
     };
 
+    const resetGame = {
+        en: 'Reset Game',
+        tr: 'Oyunu Sıfırla',
+        de: 'Spiel zurücksetzen',
+        es: 'Restablecer juego',
+        fr: 'Réinitialiser le jeu',
+        pt: 'Redefinir jogo',
+        ru: 'Сбросить игру',
+        zh: '重置游戏',
+    }
+    const reset = {
+        en: 'Reset',
+        tr: 'Sıfırla',
+        de: 'Zurücksetzen',
+        es: 'Reiniciar',
+        fr: 'Réinitialiser',
+        pt: 'Redefinir',
+        ru: 'Сбросить',
+        zh: '重置',
+    }
+
     return (
         <div onClick={() => setModalOpenFunc()} className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 '>
             <div onClick={(e) => e.stopPropagation()} className={`flex flex-col ${isDarkMode ? 'bg-[rgb(17,17,17)] text-white border-white' : 'bg-white border-black text-black'} sm:p-5 p-3 rounded-lg w-[90%] max-w-lg items-center gap-4 border-[5px]  text-center`}>
@@ -141,9 +162,10 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
                         <Music size={32} />
                     </div>
                 </div>
-                <div className='w-full'>
-                    <p className='mb-2'>{selectLanguage[language]}</p>
+                <div className='w-full flex gap-5 justify-center items-end'>
+
                     <div className="relative">
+                        <p className='mb-2'>{selectLanguage[language]}</p>
                         <button
                             className="p-2 border rounded w-[200px] text-left"
                             onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -170,6 +192,11 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
                             </div>
                         )}
                     </div>
+                    <div className='h-full flex flex-col gap-2'>
+                        <p>{resetGame[language]}</p>
+                        <Button>{reset[language]}</Button>
+                    </div>
+
                 </div>
                 <Button className={`${isDarkMode ? 'bg-white text-black border-white hover:bg-neutral-400' : ''}`} onClick={() => setModalOpenFunc()}>{close[language]}</Button>
             </div>

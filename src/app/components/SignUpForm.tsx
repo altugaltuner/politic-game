@@ -140,16 +140,6 @@ const SignUpForm: React.FC = () => {
                     >
                         {signUpHeader[language]}
                     </button>
-                    <div className="flex flex-col md:flex-row gap-3">
-                        <button
-                            type="submit"
-                            className="h-10 w-24 bg-black text-white rounded-lg hover:bg-gray-800 transition-all p-2"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                router.push("/game");
-                            }}> Play
-                        </button>
-                    </div>
                 </div>
             </form>
         </div>

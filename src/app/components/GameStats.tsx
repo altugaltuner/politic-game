@@ -24,6 +24,7 @@ type GameStatsProps = {
     publicOpinion: number;
     level: number;
     score: number;
+    setLevel: React.Dispatch<React.SetStateAction<number>>;
     setAgriculture: React.Dispatch<React.SetStateAction<number>>;
     setScore: React.Dispatch<React.SetStateAction<number>>;
     setInfrastructure: React.Dispatch<React.SetStateAction<number>>;
@@ -56,7 +57,7 @@ interface Effects {
 }
 
 // Component for Game Stats
-export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level, resetSelectedListIDs, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion, score, setScore }) => {
+export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level, setLevel, resetSelectedListIDs, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion, score, setScore }) => {
 
     const [isVisible, setIsVisible] = useState(true);
     const { isDarkMode } = useTheme();
@@ -92,14 +93,26 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
     useEffect(() => {
         if (currentLevel !== level) {
             console.log(`Updating current level to match db level: ${level}`);
-            setCurrentLevel(level);
+            setLevel(currentLevel);
         }
-    }, [level]);
+    }, [level, currentLevel]);
+
+    const updateLevelInDatabase = async () => {
+        if (auth.currentUser) {
+            const userDocRef = doc(db, "users", auth.currentUser.uid);
+            try {
+                await updateDoc(userDocRef, { level: currentLevel });
+                console.log("Level successfully updated in Firebase:", currentLevel);
+            } catch (error) {
+                console.error("Error updating level in Firebase:", error);
+            }
+        }
+    };
 
     useEffect(() => {
-        console.log(`Current Level after state update: ${currentLevel}`);
-        console.log(`score: ${score}`);
+        updateLevelInDatabase();
     }, [currentLevel]);
+
 
 
     const handleLevelUp = () => {
@@ -109,14 +122,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
             setIsLevelChangeVisible(false);
         }, 4000);
     };
-
-    useEffect(() => {
-        if (currentLevel !== level) {
-            console.log(`Updating level from ${currentLevel} to ${level}`);
-            setCurrentLevel(level);
-        }
-    }, [level, currentLevel]);
-
 
     useEffect(() => {
         // Tüm soruların fotoğraflarını önceden yükleyin
@@ -245,6 +250,13 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
             return availableEvents[randomIndex];
         }
     };
+    useEffect(() => {
+        console.log("currentLevel", currentLevel);
+    }, [usedQuestions]);
+
+    useEffect(() => {
+        console.log("level", level);
+    }, [usedQuestions]);
 
     useEffect(() => {
         const calculateLevel = () => Math.floor(score / 10) + 1;
@@ -252,10 +264,11 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         const newLevel = calculateLevel();
         if (newLevel !== currentLevel) {
             console.log(`Score-based level change to ${newLevel}`);
-            setCurrentLevel(newLevel); // Yeni seviyeyi ayarla
-            handleLevelUp(); // Level atlama animasyonunu başlat
+            //newlevel 2 oldu burada, ilk önce bu
+            setCurrentLevel(newLevel);
+            handleLevelUp();
         }
-    }, [level]); // Hem score hem de currentLevel'ı izleyin
+    }, [level, score]);
 
 
     const oneInTenChance = () => {
@@ -459,7 +472,8 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         }
     };
 
-    const restartGame = () => {
+    const restartGame = async () => {
+        const newScore = (level - 1) * 10;
         setAgriculture(50);
         setInfrastructure(50);
         setInternalSecurity(50);
@@ -470,11 +484,38 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         setCurrentQuestion(allQuestions[0]);
         setGameOver(false);
         setGameOverReason("");
-        setScore(score);
+        setScore(newScore);
         setDeathStat(null);
         metalButtonSound();
         setLastingEffects([]);
         resetSelectedListIDs(); // Clear the filteredElements in ListElements
+
+        // Firebase'de skor güncellemesi
+        if (auth.currentUser) {
+            const userDocRef = doc(db, "users", auth.currentUser.uid);
+            try {
+                await updateDoc(userDocRef, { score: newScore }); // Firebase'e yaz
+                console.log("Score updated in Firebase:", newScore);
+            } catch (error) {
+                console.error("Error updating score in Firebase:", error);
+            }
+        }
+
+        //firebasede level güncellemesi
+
+        if (auth.currentUser) {
+            const userDocRef = doc(db, "users", auth.currentUser.uid);
+            try {
+                await updateDoc(userDocRef, { level: currentLevel }); // Firebase'e yaz
+                console.log("Level updated in Firebase:", currentLevel);
+            } catch (error) {
+                console.error("Error updating level in Firebase:", error);
+            }
+        }
+
+
+
+        metalButtonSound();
     };
 
     useEffect(() => {

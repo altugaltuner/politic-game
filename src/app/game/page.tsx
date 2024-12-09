@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import GameStats from "../components/GameStats";
 import ListElements from "../components/ListElements";
 import SettingsArea from "../components/SettingsArea";
@@ -11,8 +11,8 @@ import { useVolume } from "@/contexts/VolumeContext";
 import { elements } from "@/database/elements";
 import InventoryModal from "../components/InventoryModal";
 import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
-import { auth, db } from "@/firebase";
-
+import { db, auth } from "@/firebase";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 type Effects = {
     type: string;
@@ -26,23 +26,6 @@ type Effects = {
     internationalRelations?: number;
     [key: string]: number | string | undefined;
 };
-
-// Kullanıcı verilerini çekme fonksiyonu
-const fetchUserData = async (uid: string) => {
-    try {
-        const docRef = doc(db, "users", uid);
-        const docSnap = await getDoc(docRef);
-
-        if (docSnap.exists()) {
-            return docSnap.data();
-        } else {
-            console.log("No such document!");
-        }
-    } catch (error) {
-        console.error("Error fetching user data:", error);
-    }
-};
-
 
 export default function GamePage() {
     const { volume } = useVolume();
@@ -60,25 +43,37 @@ export default function GamePage() {
     const [international, setInternational] = useState<number>(50);
     const [budget, setBudget] = useState<number>(50);
     const [publicOpinion, setPublicOpinion] = useState<number>(50);
-    const [level, setLevel] = useState<number | null>(null);
+    const [level, setLevel] = useState<number>(1);
     const [score, setScore] = useState<number>(0);
-    const user = auth.currentUser;
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const fetchData = async () => {
-            if (user) {
-                const userData = await fetchUserData(user.uid);
-                if (userData) {
-                    setLevel(userData.level ?? 1); // Kullanıcı seviyesi
-                    setScore(userData.score ?? 0); // Kullanıcı skoru
+        const fetchUserData = async () => {
+            if (auth.currentUser) {
+                const userDocRef = doc(db, "users", auth.currentUser.uid);
+                try {
+                    const userDoc = await getDoc(userDocRef);
+                    if (userDoc.exists()) {
+                        const userData = userDoc.data();
+                        console.log("User data:", userData);
+                        setLevel(userData.level ?? 1); // Varsayılan olarak 1
+                        setScore(userData.score ?? 0); // Varsayılan olarak 0
+                    } else {
+                        console.log("User data not found.");
+                    }
+                } catch (error) {
+                    console.error("Error fetching user data:", error);
+                } finally {
+                    setLoading(false); // Veriler yüklendi
+                    console.log("User data:", auth.currentUser);
                 }
+            } else {
+                setLoading(false); // Kullanıcı oturum açmamışsa
             }
         };
-        fetchData();
-    }, [user]);
 
-    console.log("score", score);
-
+        fetchUserData();
+    }, []);
 
     const handleBonusEffect = (effect: { type: string; value: number }) => {
         const fiftyEffect = effect.value * 50;
@@ -186,10 +181,13 @@ export default function GamePage() {
         }
     };
 
-
-
     // Function to reset selectedListIDs
     const resetSelectedListIDs = () => setSelectedListIDs([]);
+
+
+    if (loading) {
+        return <LoadingSpinner />; // Veriler yüklenene kadar yüklenme animasyonu göster
+    }
 
     return (
         <div className={` ${isDarkMode ? 'bg-black bg-opacity-90' : ''} sm:p-2 p-1 flex xl:flex-row flex-col 2xl:gap-5 gap-1 sm:gap-3 w-full items-start justify-center xl:h-[100vh] h-auto`}>
@@ -213,6 +211,7 @@ export default function GamePage() {
                 setInternational={setInternational}
                 setPublicOpinion={setPublicOpinion}
                 level={level ?? 1}
+                setLevel={setLevel}
                 score={score}
                 setScore={setScore}
             />
