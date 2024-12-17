@@ -35,7 +35,7 @@ const SignInForm: React.FC = () => {
                     username: userData.username,
                     level: userData.level,
                 });
-                console.log("User signed in successfully:", userData);
+                //console.log("User signed in successfully:", userData);
             } else {
                 console.error("No user data found!");
             }

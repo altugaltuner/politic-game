@@ -33,7 +33,7 @@ const SignUpForm: React.FC = () => {
             setSuccess(true);
             setEmail('');
             setPassword('');
-            console.log("User signed up successfully");
+            //console.log("User signed up successfully");
             router.push('/game');
         } catch (err) {
             setError((err as Error).message);

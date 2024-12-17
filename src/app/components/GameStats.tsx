@@ -92,7 +92,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
 
     useEffect(() => {
         if (currentLevel !== level) {
-            console.log(`Updating current level to match db level: ${level}`);
+            //console.log(`Updating current level to match db level: ${level}`);
             setLevel(currentLevel);
         }
     }, [level, currentLevel]);
@@ -102,9 +102,9 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
             const userDocRef = doc(db, "users", auth.currentUser.uid);
             try {
                 await updateDoc(userDocRef, { level: currentLevel });
-                console.log("Level successfully updated in Firebase:", currentLevel);
+                //console.log("Level successfully updated in Firebase:", currentLevel);
             } catch (error) {
-                console.error("Error updating level in Firebase:", error);
+                //console.error("Error updating level in Firebase:", error);
             }
         }
     };
@@ -140,9 +140,9 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                 const userDocRef = doc(db, "users", auth.currentUser.uid);
                 try {
                     await updateDoc(userDocRef, { score });
-                    console.log("Score successfully updated in Firebase:", score);
+                    //console.log("Score successfully updated in Firebase:", score);
                 } catch (error) {
-                    console.error("Error updating score in Firebase:", error);
+                    //console.error("Error updating score in Firebase:", error);
                 }
             }
         };
@@ -248,20 +248,20 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
             return availableEvents[randomIndex];
         }
     };
-    useEffect(() => {
-        console.log("currentLevel", currentLevel);
-    }, [usedQuestions]);
+    // useEffect(() => {
+    //     console.log("currentLevel", currentLevel);
+    // }, [usedQuestions]);
 
-    useEffect(() => {
-        console.log("level", level);
-    }, [usedQuestions]);
+    // useEffect(() => {
+    //     console.log("level", level);
+    // }, [usedQuestions]);
 
     useEffect(() => {
         const calculateLevel = () => Math.floor(score / 10) + 1;
 
         const newLevel = calculateLevel();
         if (newLevel !== currentLevel) {
-            console.log(`Score-based level change to ${newLevel}`);
+            //console.log(`Score-based level change to ${newLevel}`);
             //newlevel 2 oldu burada, ilk önce bu
             setCurrentLevel(newLevel);
             handleLevelUp();
@@ -493,9 +493,9 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
             const userDocRef = doc(db, "users", auth.currentUser.uid);
             try {
                 await updateDoc(userDocRef, { score: newScore }); // Firebase'e yaz
-                console.log("Score updated in Firebase:", newScore);
+                //console.log("Score updated in Firebase:", newScore);
             } catch (error) {
-                console.error("Error updating score in Firebase:", error);
+                //console.error("Error updating score in Firebase:", error);
             }
         }
 
@@ -505,9 +505,9 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
             const userDocRef = doc(db, "users", auth.currentUser.uid);
             try {
                 await updateDoc(userDocRef, { level: currentLevel }); // Firebase'e yaz
-                console.log("Level updated in Firebase:", currentLevel);
+                //console.log("Level updated in Firebase:", currentLevel);
             } catch (error) {
-                console.error("Error updating level in Firebase:", error);
+                //console.error("Error updating level in Firebase:", error);
             }
         }
 

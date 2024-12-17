@@ -64,7 +64,7 @@ export default function GamePage() {
                     const userDoc = await getDoc(userDocRef);
                     if (userDoc.exists()) {
                         const userData = userDoc.data();
-                        console.log("User data:", userData);
+                        //console.log("User data:", userData);
                         setLevel(userData.level ?? 1); // Varsayılan olarak 1
                         setScore(userData.score ?? 0); // Varsayılan olarak 0
                     } else {
@@ -74,7 +74,7 @@ export default function GamePage() {
                     console.error("Error fetching user data:", error);
                 } finally {
                     setLoading(false); // Veriler yüklendi
-                    console.log("User data:", auth.currentUser);
+                    //console.log("User data:", auth.currentUser);
                 }
             } else {
                 setLoading(false); // Kullanıcı oturum açmamışsa
