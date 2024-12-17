@@ -104,7 +104,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                 await updateDoc(userDocRef, { level: currentLevel });
                 //console.log("Level successfully updated in Firebase:", currentLevel);
             } catch (error) {
-                //console.error("Error updating level in Firebase:", error);
+                console.error("Error updating level in Firebase:", error);
             }
         }
     };
@@ -142,7 +142,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                     await updateDoc(userDocRef, { score });
                     //console.log("Score successfully updated in Firebase:", score);
                 } catch (error) {
-                    //console.error("Error updating score in Firebase:", error);
+                    console.error("Error updating score in Firebase:", error);
                 }
             }
         };
@@ -495,7 +495,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                 await updateDoc(userDocRef, { score: newScore }); // Firebase'e yaz
                 //console.log("Score updated in Firebase:", newScore);
             } catch (error) {
-                //console.error("Error updating score in Firebase:", error);
+                console.error("Error updating score in Firebase:", error);
             }
         }
 
@@ -507,7 +507,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                 await updateDoc(userDocRef, { level: currentLevel }); // Firebase'e yaz
                 //console.log("Level updated in Firebase:", currentLevel);
             } catch (error) {
-                //console.error("Error updating level in Firebase:", error);
+                console.error("Error updating level in Firebase:", error);
             }
         }
 
