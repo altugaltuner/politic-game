@@ -174,7 +174,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
                         </button>
                         {dropdownOpen && (
                             <div
-                                className={`absolute top-12 left-36 w-[200px] max-h-40 overflow-y-scroll rounded-lg shadow-lg border z-10 ${isDarkMode ? 'bg-[rgba(0,0,0,0.8)] text-white' : 'bg-[rgba(255,255,255,1)] text-black'
+                                className={`absolute top-16 left-0 w-[200px] max-h-40 overflow-y-scroll rounded-lg shadow-lg border z-10 ${isDarkMode ? 'bg-[rgba(0,0,0,0.8)] text-white' : 'bg-[rgba(255,255,255,1)] text-black'
                                     }`}
                             >
                                 {languages.map((lang) => (

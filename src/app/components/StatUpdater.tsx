@@ -40,8 +40,6 @@ const StatUpdater: React.FC<Props> = ({
     const [currencyColor, setCurrencyColor] = useState("#000000");
     const [publicSupportColor, setPublicSupportColor] = useState("#000000");
 
-
-
     // Renk geçişi fonksiyonu
     const handleColorChange = (stat: string, value: number, prevValue: number) => {
         const newColor = value > prevValue ? "#4caf50" : "#d2190b"; // Artış: yeşil, düşüş: kırmızı

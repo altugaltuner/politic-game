@@ -27,6 +27,15 @@ type Effects = {
     [key: string]: number | string | undefined;
 };
 
+interface Bonuses {
+    bonusAgricultural: number;
+    bonusBudget: number;
+    bonusInfrastructure: number;
+    bonusSecurity: number;
+    bonusInternational: number;
+    bonusPublic: number;
+}
+
 export default function GamePage() {
     const { volume } = useVolume();
     const [modalOpen, setModalOpen] = useState(false);
@@ -121,16 +130,16 @@ export default function GamePage() {
     };
     const [selectedListIDs, setSelectedListIDs] = useState<string[]>([]);
 
-    const fetchUserBonuses = async (uid: string) => {
+    const fetchUserBonuses = async (uid: string): Promise<Bonuses | undefined> => {
         const userDocRef = doc(db, "users", uid);
         const userDoc = await getDoc(userDocRef);
 
         if (userDoc.exists()) {
             //console.log("User bonuses:", userDoc.data());
-            return userDoc.data();
+            return userDoc.data() as Bonuses;
         } else {
             //console.log("No user bonuses found");
-            return null;
+            return undefined;
         }
     };
 

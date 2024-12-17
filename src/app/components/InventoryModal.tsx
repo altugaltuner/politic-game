@@ -19,7 +19,7 @@ interface InventoryModalProps {
     openInventoryModal: boolean;
     setOpenInventoryModal: React.Dispatch<React.SetStateAction<boolean>>;
     handleBonusEffect: (effect: { type: string; value: number }) => void;
-    fetchUserBonuses: (uid: string) => Promise<any>;
+    fetchUserBonuses: (uid: string) => Promise<Bonuses | undefined>;
     updateUserBonus: (uid: string, bonusType: string, updatedValue: number) => void;
     initializeUserBonuses: (uid: string) => void;
 }

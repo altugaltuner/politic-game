@@ -5,8 +5,7 @@ import skulls from "../../public/images/skulls-bones.webp";
 import stats from "../../public/images/stats.webp";
 import Image from 'next/image';
 import SignUpForm from "./components/SignUpForm";
-import { useEffect, useState } from "react";
-import { useVolume } from "@/contexts/VolumeContext";
+import { useEffect } from "react";
 import { useLanguage } from '@/contexts/LanguageContext';
 import logo from "../../public/images/logo.webp";
 import SignInForm from "./components/SignInForm";
@@ -16,7 +15,6 @@ import { analytics } from "@/firebase";
 
 export default function HomePage() {
   const { language } = useLanguage();
-  const { volume } = useVolume();
   const pathname = usePathname();
 
   useEffect(() => {
@@ -140,7 +138,7 @@ export default function HomePage() {
   return (
     <div className="w-full flex flex-col justify-center items-center text-center h-auto sm:p-3 p-1 relative gap-1">
       <div className="h-auto md:h-[90%] lg:w-[90%] w-full flex flex-col md:gap-3 gap-2 justify-around items-center bg-white p-4 rounded-3xl border-[5px] border-black">
-        <h1 className="font-bold xl:text-[60px] lg:text-[45px] text-[30px]">Leaders Dilemma</h1>
+        <h1 className="font-bold xl:text-[60px] lg:text-[45px] text-[30px]">President Simulator</h1>
         <Image className="w-60 h-60" width={1440} height={1440} src={logo} alt="logo" />
         <p className="text-sm sm:text-base">{headerText[language]}
         </p>

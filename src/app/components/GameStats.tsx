@@ -113,8 +113,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         updateLevelInDatabase();
     }, [currentLevel]);
 
-
-
     const handleLevelUp = () => {
         setIsLevelChangeVisible(true);
         setTimeout(() => {
