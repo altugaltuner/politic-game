@@ -71,7 +71,7 @@ export default function GamePage() {
                         // console.log("User data not found.");
                     }
                 } catch (error) {
-                    //console.error("Error fetching user data:", error);
+                    console.error("Error fetching user data:", error);
                 } finally {
                     setLoading(false); // Veriler yüklendi
                     //console.log("User data:", auth.currentUser);
