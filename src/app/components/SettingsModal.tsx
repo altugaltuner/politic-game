@@ -194,7 +194,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
                     </div>
                     <div className='h-full flex flex-col gap-2'>
                         <p>{resetGame[language]}</p>
-                        <Button>{reset[language]}</Button>
+                        <Button disabled>{reset[language]}</Button>
                     </div>
 
                 </div>
