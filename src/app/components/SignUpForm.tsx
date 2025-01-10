@@ -70,8 +70,8 @@ const SignUpForm: React.FC = () => {
         zh: '密码',
     };
     const signUpHeader = {
-        en: 'Sign Up and Play',
-        tr: 'Kayıt Ol ve Oyna',
+        en: 'Sign Up',
+        tr: 'Kayıt Ol',
         de: 'Anmelden',
         es: 'Regístrate',
         fr: 'S\'inscrire',

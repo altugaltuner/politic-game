@@ -4,14 +4,13 @@ import choices from "../../public/images/choice-make.webp";
 import skulls from "../../public/images/skulls-bones.webp";
 import stats from "../../public/images/stats.webp";
 import Image from 'next/image';
-import SignUpForm from "./components/SignUpForm";
 import { useEffect } from "react";
 import { useLanguage } from '@/contexts/LanguageContext';
 import logo from "../../public/images/logo.webp";
-import SignInForm from "./components/SignInForm";
 import { usePathname } from "next/navigation";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "@/firebase";
+import { Button } from "@/components/ui/button";
 
 export default function HomePage() {
   const { language } = useLanguage();
@@ -135,6 +134,10 @@ export default function HomePage() {
     zh: "最终",
   };
 
+  const gotoGame = () => {
+    window.location.href = "/game";
+  }
+
   return (
     <div className="w-full flex flex-col justify-center items-center text-center h-auto sm:p-3 p-1 relative gap-1">
       <div className="h-auto md:h-[90%] lg:w-[90%] w-full flex flex-col md:gap-3 gap-2 justify-around items-center bg-white p-4 rounded-3xl border-[5px] border-black">
@@ -142,9 +145,15 @@ export default function HomePage() {
         <Image className="w-60 h-60" width={1440} height={1440} src={logo} alt="logo" />
         <p className="text-sm sm:text-base">{headerText[language]}
         </p>
+        <div>
+          <Button className="w-40" onClick={gotoGame}>PLAY</Button>
+        </div>
       </div>
-      <SignUpForm />
-      <SignInForm />
+      <div className="flex gap-5">
+        {/* <SignUpForm />
+        <SignInForm /> */}
+
+      </div>
       <div className="h-auto md:h-[90%] lg:w-[90%] w-full flex flex-col md:gap-3 gap-2 justify-around items-center bg-white p-4 rounded-3xl border-[5px] border-black">
         <h2 className="font-bold xl:text-[45px] lg:text-[32px] text-[30px]">{NasılOynanır[language]}</h2>
         <div className="md:flex gap-2 grid sm:grid-cols-2 grid-cols-1 w-full">

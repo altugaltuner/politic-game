@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Settings, CircleUserRound, Box } from "lucide-react";
+import { Settings, CircleUserRound } from "lucide-react";
 import { useTheme } from '@/contexts/ThemeContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { doc, getDoc } from "firebase/firestore";
@@ -8,10 +8,9 @@ import { auth, db } from "@/firebase";
 interface SettingsAreaProps {
     handleOpenModal: () => void;
     modalOpen: boolean;
-    handleOpenInventoryModal: () => void;
 }
 
-const SettingsArea: React.FC<SettingsAreaProps> = ({ handleOpenModal, modalOpen, handleOpenInventoryModal }) => {
+const SettingsArea: React.FC<SettingsAreaProps> = ({ handleOpenModal, modalOpen }) => {
     const { language } = useLanguage();
     const { isDarkMode } = useTheme();
     const [username, setUsername] = useState<string>(""); // Kullanıcı adı
@@ -88,9 +87,9 @@ const SettingsArea: React.FC<SettingsAreaProps> = ({ handleOpenModal, modalOpen,
             <button className={`${modalOpen ? 'visible' : ''} absolute top-2 right-2 cursor-pointer`} onClick={handleOpenModal} aria-label="Open settings">
                 <Settings size={48} />
             </button>
-            <button className={`${modalOpen ? 'visible' : ''} absolute top-2 right-12 cursor-pointer`} onClick={handleOpenInventoryModal} aria-label="Open settings">
+            {/* <button className={`${modalOpen ? 'visible' : ''} absolute top-2 right-12 cursor-pointer`} onClick={handleOpenInventoryModal} aria-label="Open settings">
                 <Box size={48} />
-            </button>
+            </button> */}
         </div>
     )
 }

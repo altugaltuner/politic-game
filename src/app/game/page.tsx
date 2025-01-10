@@ -68,10 +68,10 @@ export default function GamePage() {
                         setLevel(userData.level ?? 1); // Varsayılan olarak 1
                         setScore(userData.score ?? 0); // Varsayılan olarak 0
                     } else {
-                        console.log("User data not found.");
+                        // console.log("User data not found.");
                     }
                 } catch (error) {
-                    console.error("Error fetching user data:", error);
+                    //console.error("Error fetching user data:", error);
                 } finally {
                     setLoading(false); // Veriler yüklendi
                     //console.log("User data:", auth.currentUser);
@@ -150,7 +150,7 @@ export default function GamePage() {
         await updateDoc(userDocRef, {
             [bonusType]: amount,
         });
-        console.log(`${bonusType} updated to ${amount}`);
+        // console.log(`${bonusType} updated to ${amount}`);
     };
 
     const playTickSound = () => {
@@ -167,11 +167,6 @@ export default function GamePage() {
 
     const handleOpenModal = () => {
         setModalOpen(true);
-        playTickSound();
-    }
-
-    const handleOpenInventoryModal = () => {
-        setOpenInventoryModal(true);
         playTickSound();
     }
 
@@ -227,7 +222,7 @@ export default function GamePage() {
 
             <div className="flex flex-col sm:gap-2 gap-1 xl:w-[30%] w-full">
 
-                <SettingsArea handleOpenModal={handleOpenModal} modalOpen={modalOpen} handleOpenInventoryModal={handleOpenInventoryModal} />
+                <SettingsArea handleOpenModal={handleOpenModal} modalOpen={modalOpen} />
 
                 <ListElements selectedListIDs={selectedListIDs} />
 
