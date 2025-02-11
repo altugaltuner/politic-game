@@ -135,13 +135,13 @@ const ListElements: React.FC<ListElementsProps> = ({ selectedListIDs }) => {
     };
 
     return (
-        <div ref={scrollRef} className={` ${isDarkMode ? 'border-white bg-[rgb(17,17,17)] text-white' : 'border-black bg-white text-black'} text-center border-[3px] xl:order-2 order-1  rounded-lg sm:p-2 p-1 w-[100%] max-h-[900px] `}>
+        <div ref={scrollRef} className={` ${isDarkMode ? 'border-white bg-[#0b1d2f] text-white' : 'border-[#0b1d2f] bg-white text-[#0b1d2f]'} text-center border-[3px] xl:order-2 order-1  rounded-lg sm:p-2 p-1 w-[100%] max-h-[900px] `}>
             <h2 className="md:text-xl text-lg font-semibold md:mb-4 mb-2">{gazeteAdı[language]}</h2>
             {/* <p>Toplam Etkiler : </p> */}
             <ScrollArea className="w-full rounded-md md:p-2 p-0 max-h-[615px] overflow-y-auto xl:flex xl:flex-row xl:gap-5">
                 {filteredElements.length > 0 ? (
                     filteredElements.map(element => (
-                        <div key={element.id} className={` ${isDarkMode ? 'border-white bg-[rgb(17,17,17)]' : 'border-black bg-white'} flex flex-col gap-2 p-2 border-[2px] rounded-xl  mb-3 w-[100%]`}>
+                        <div key={element.id} className={` ${isDarkMode ? 'border-white bg-[#0b1d2f]' : 'border-[#0b1d2f] bg-white'} flex flex-col gap-2 p-2 border-[2px] rounded-xl  mb-3 w-[100%]`}>
                             <h3 className="text-base font-bold">{element.title[language]}</h3>
                             <Image
                                 width={1820} height={1024}

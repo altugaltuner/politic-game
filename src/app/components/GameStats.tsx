@@ -270,7 +270,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
 
 
     const oneInTenChance = () => {
-        const boolean = Math.random() < 0.10;
+        const boolean = Math.random() < 0.80;
         return boolean;
     };
 
@@ -630,7 +630,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
 
             {/* Question display */}
             {currentQuestion ? (
-                <div className={` ${isDarkMode ? 'border-white bg-[rgb(17,17,17)]' : 'border-black bg-white'} text-center sm:p-2 p-1 rounded-lg relative border-[3px] flex flex-col justify-start items-center w-full`}>
+                <div className={` ${isDarkMode ? 'border-white bg-[#0b1d2f]' : 'border-black bg-white'} text-center sm:p-2 p-1 rounded-lg relative border-[3px] border-[#0b1d2f] flex flex-col justify-start items-center w-full`}>
 
                     <div className={`question-container ${isVisible ? 'visible' : ''}  flex justify-start items-center font-aldrich md:text-base text-sm min-h-[75px] flex-col w-[90%]`}>
                         <ReactTyped
@@ -638,7 +638,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                             typeSpeed={10}
                             showCursor={false}
                             loop={false}
-                            className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-black'} bg-primary py-1 px-2 rounded-md w-full text-lg`}
+                            className={`${isDarkMode ? ' bg-white text-[#0b1d2f]' : 'text-white bg-[#0b1d2f]'} bg-primary py-1 px-2 rounded-md w-full md:text-lg text-base sm:min-h-[50px] min-h-[170px]`}
                         />
                     </div>
 
@@ -657,7 +657,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                                 alt={currentQuestion.title}
                                 className="lg:w-full sm:w-[70%] w-[90%] lg:h-[22rem] rounded-lg"
                             />
-                            <p className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-black'} font-medium md:text-xl text-sm bg-primary  px-2 rounded-lg`}>{currentQuestion.title}</p>
+                            <p className={`${isDarkMode ? ' bg-white text-[#0b1d2f]' : 'text-white bg-[#0b1d2f]'} font-medium md:text-xl text-sm bg-primary  px-2 rounded-lg`}>{currentQuestion.title}</p>
                         </div>
                     )}
                 </div>
@@ -667,9 +667,9 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
 
             {/* Answer buttons */}
             {currentQuestion && (
-                <div className={`${isDarkMode ? ' bg-[rgb(17,17,17)]  border-white' : 'bg-white border-black'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 sm:gap-2 gap-1 sm:p-2.5 p-1 items-center lg:min-h-16 min-h-24 `}>
+                <div className={`${isDarkMode ? ' bg-[rgb(17,17,17)]  border-white' : 'bg-white border-[#0b1d2f]'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 sm:gap-2 gap-1 sm:p-2.5 p-1 items-center lg:min-h-16 min-h-24 `}>
                     <Button
-                        className={`${isDarkMode ? ' bg-white  border-black text-black' : 'hover:bg-[#555555] active:bg-black'} xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out  text-md min-h-[44px]`}
+                        className={`${isDarkMode ? ' bg-white  border-[#0b1d2f] text-[#0b1d2f]' : 'hover:bg-[#06111c] active:bg-black bg-[#0b1d2f] '} xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out  text-md min-h-[44px]`}
                         onClick={() => answerQuestion("left")}
                     >
                         <ReactTyped
@@ -681,7 +681,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                     </Button>
 
                     <Button
-                        className={`${isDarkMode ? ' bg-white  border-black text-black' : 'hover:bg-[#555555] active:bg-black'} xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out text-md min-h-[44px]`}
+                        className={`${isDarkMode ? ' bg-white  border-[#0b1d2f] text-[#0b1d2f]' : 'hover:bg-[#06111c] active:bg-black bg-[#0b1d2f] '} xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out text-md min-h-[44px]`}
                         onClick={() => answerQuestion("right")}
                     >
                         <ReactTyped
