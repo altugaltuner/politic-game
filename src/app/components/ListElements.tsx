@@ -4,20 +4,8 @@ import Image from "next/image";
 import { elements } from "../../database/elements.js";
 import { useTheme } from '@/contexts/ThemeContext';
 import { useLanguage } from '@/contexts/LanguageContext';
-
-type ListElementsProps = {
-    selectedListIDs: string[];
-};
-
-type KeyLabels = {
-    internalSecurity: string;
-    publicSupport: string;
-    infrastructureAndEnvironment: string;
-    internationalRelations: string;
-    budget: string;
-    agriculturalProduction: string;
-    [key: string]: string; // Allow other keys
-};
+import { gazeteAdı, noNewsYet, statNames, lastingEffectText } from '../exportedTexts/translatedTexts';
+import { ListElementsProps, ListElementsKeyLabels } from '../types/types';
 
 const ListElements: React.FC<ListElementsProps> = ({ selectedListIDs }) => {
     const scrollRef = useRef<HTMLDivElement>(null);
@@ -34,105 +22,7 @@ const ListElements: React.FC<ListElementsProps> = ({ selectedListIDs }) => {
         }
     }, [selectedListIDs]);
 
-    const gazeteAdı = {
-        en: 'National Newspaper',
-        tr: 'Ulus Gazetesi',
-        de: 'Nationale Zeitung',
-        es: 'Periódico Nacional',
-        fr: 'Journal National',
-        pt: 'Jornal Nacional',
-        ru: 'Национальная газета',
-        zh: '全国报纸',
-    };
-
-    const noNewsYet = {
-        en: 'No news yet...',
-        tr: 'Henüz bir haber yok...',
-        de: 'Noch keine Nachrichten...',
-        es: '¡Todavía no hay noticias...',
-        fr: 'Pas encore de nouvelles...',
-        pt: 'Ainda sem notícias...',
-        ru: 'Пока нет новостей...',
-        zh: '还没有新闻...',
-    };
-
-    const statNames: { [language: string]: KeyLabels } = {
-        en: {
-            infrastructureAndEnvironment: "Infrastructure",
-            agriculturalProduction: "Agriculture",
-            internalSecurity: "Security",
-            publicSupport: "Support",
-            budget: "Budget",
-            internationalRelations: "Politics",
-        },
-        tr: {
-            infrastructureAndEnvironment: "Altyapı",
-            agriculturalProduction: "Tarım",
-            internalSecurity: "Güvenlik",
-            publicSupport: "Destek",
-            budget: "Bütçe",
-            internationalRelations: "Politika",
-        },
-        de: {
-            infrastructureAndEnvironment: "Infrastruktur",
-            agriculturalProduction: "Landwirtschaft",
-            internalSecurity: "Sicherheit",
-            publicSupport: "Unterstützung",
-            budget: "Budget",
-            internationalRelations: "Politik",
-        },
-        es: {
-            infrastructureAndEnvironment: "Infraestructura",
-            agriculturalProduction: "Agricultura",
-            internalSecurity: "Seguridad",
-            publicSupport: "Apoyo",
-            budget: "Presupuesto",
-            internationalRelations: "Política",
-        },
-        fr: {
-            infrastructureAndEnvironment: "Infrastructure",
-            agriculturalProduction: "Agriculture",
-            internalSecurity: "Sécurité",
-            publicSupport: "Soutien",
-            budget: "Budget",
-            internationalRelations: "Politique",
-        },
-        pt: {
-            infrastructureAndEnvironment: "Infraestrutura",
-            agriculturalProduction: "Agricultura",
-            internalSecurity: "Segurança",
-            publicSupport: "Apoio",
-            budget: "Orçamento",
-            internationalRelations: "Política",
-        },
-        ru: {
-            infrastructureAndEnvironment: "Инфраструктура",
-            agriculturalProduction: "Сельское хозяйство",
-            internalSecurity: "Безопасность",
-            publicSupport: "Поддержка",
-            budget: "Бюджет",
-            internationalRelations: "Политика",
-        },
-        zh: {
-            infrastructureAndEnvironment: "基础设施",
-            agriculturalProduction: "农业",
-            internalSecurity: "安全",
-            publicSupport: "支持",
-            budget: "预算",
-            internationalRelations: "政治",
-        },
-    };
-
-    const lastingEffectText = {
-        en: 'Lasting Effect',
-        tr: 'Kalıcı Etki',
-        de: 'Langfristige Wirkung',
-        es: 'Efecto Duradero',
-        fr: 'Effet Durable',
-        pt: 'Efeito Duradouro',
-        ru: 'Долгосрочный эффект',
-        zh: '持久效果',
-    };
+    
 
     return (
         <div ref={scrollRef} className={` ${isDarkMode ? 'border-white bg-[#0b1d2f] text-white' : 'border-[#0b1d2f] bg-white text-[#0b1d2f]'} text-center border-[3px] xl:order-2 order-1  rounded-lg sm:p-2 p-1 w-[100%] max-h-[900px] `}>

@@ -11,7 +11,7 @@ import LevelEightImage from "../../../public/symbols/law-icon.webp";
 import LevelNineImage from "../../../public/symbols/medicine-symbol.webp";
 import LevelTenImage from "../../../public/symbols/peace-pigeon-symbol.webp";
 import { useLanguage } from "@/contexts/LanguageContext";
-
+import { leveltext } from '../exportedTexts/translatedTexts';
 const LevelChangePage = ({
     onComplete,
     level,
@@ -21,17 +21,6 @@ const LevelChangePage = ({
 }) => {
     const [animationClass, setAnimationClass] = useState("translate-x-[-100%]"); // Başlangıç konumu
     const { language } = useLanguage();
-
-    const leveltext = {
-        tr: "SEVİYE",
-        en: "LEVEL",
-        fr: "NIVEAU",
-        de: "NIVEAU",
-        ru: "УРОВЕНЬ",
-        zh: "水平",
-        es: "NIVEL",
-        pt: "NÍVEL",
-    };
 
     const Levels = [
         { id: 1, name: "level1", image: LevelOneImage },

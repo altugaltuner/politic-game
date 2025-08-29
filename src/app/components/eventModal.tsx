@@ -1,146 +1,12 @@
 import { Button } from "@/components/ui/button";
 import Image from 'next/image';
 import { useLanguage } from "@/contexts/LanguageContext";
-
-type Effects = {
-    internalSecurity?: number;
-    publicSupport?: number;
-    infrastructureAndEnvironment?: number;
-    [key: string]: number | undefined; // Allow other keys
-};
-
-type KeyLabels = {
-    internalSecurity: string;
-    publicSupport: string;
-    infrastructureAndEnvironment: string;
-    internationalRelations: string;
-    budget: string;
-    agriculturalProduction: string;
-    [key: string]: string; // Allow other keys
-};
-
-type Event = {
-    id: number;
-
-    title: {
-        tr: string;
-        en: string;
-        fr: string;
-        de: string;
-        zh: string;
-        es: string;
-        pt: string;
-        ru: string;
-    };
-    description: {
-        tr: string;
-        en: string;
-        fr: string;
-        de: string;
-        zh: string;
-        es: string;
-        pt: string;
-        ru: string;
-    };
-    photo: {
-        src: string;
-    };
-    effects: Effects;
-};
+import { Event, KeyLabels } from "../types/types";
+import { keyLabels, close, effect } from "../exportedTexts/translatedTexts";
 
 export const EventModal = ({ event, onClose }: { event: Event, onClose: (parameters: object) => void }) => {
 
     const { language } = useLanguage();
-
-    const keyLabels: { [language: string]: KeyLabels } = {
-        tr: {
-            internalSecurity: "Güvenlik",
-            publicSupport: "Destek",
-            infrastructureAndEnvironment: "Altyapı",
-            internationalRelations: "Politika",
-            budget: "Bütçe",
-            agriculturalProduction: "Tarım",
-        },
-        en: {
-            internalSecurity: "Security",
-            publicSupport: "Support",
-            infrastructureAndEnvironment: "Infrastructure",
-            internationalRelations: "Policy",
-            budget: "Budget",
-            agriculturalProduction: "Agriculture",
-        },
-        fr: {
-            internalSecurity: "Sécurité",
-            publicSupport: "Soutien",
-            infrastructureAndEnvironment: "Infrastructure",
-            internationalRelations: "Politique",
-            budget: "Budget",
-            agriculturalProduction: "Agriculture",
-        },
-        de: {
-            internalSecurity: "Sicherheit",
-            publicSupport: "Unterstützung",
-            infrastructureAndEnvironment: "Infrastruktur",
-            internationalRelations: "Politik",
-            budget: "Haushalt",
-            agriculturalProduction: "Landwirtschaft",
-        },
-        es: {
-            internalSecurity: "Seguridad",
-            publicSupport: "Apoyo",
-            infrastructureAndEnvironment: "Infraestructura",
-            internationalRelations: "Política",
-            budget: "Presupuesto",
-            agriculturalProduction: "Agricultura",
-        },
-        pt: {
-            internalSecurity: "Segurança",
-            publicSupport: "Apoio",
-            infrastructureAndEnvironment: "Infraestrutura",
-            internationalRelations: "Política",
-            budget: "Orçamento",
-            agriculturalProduction: "Agricultura",
-        },
-        ru: {
-            internalSecurity: "Безопасность",
-            publicSupport: "Поддержка",
-            infrastructureAndEnvironment: "Инфраструктура",
-            internationalRelations: "Политика",
-            budget: "Бюджет",
-            agriculturalProduction: "Сельское хозяйство",
-        },
-        zh: {
-            internalSecurity: "安全",
-            publicSupport: "支持",
-            infrastructureAndEnvironment: "基础设施",
-            internationalRelations: "政策",
-            budget: "预算",
-            agriculturalProduction: "农业",
-        },
-    };
-
-    const close = {
-        tr: "Kapat",
-        en: "Close",
-        fr: "Fermer",
-        de: "Schließen",
-        es: "Cerrar",
-        pt: "Fechar",
-        ru: "Закрыть",
-        zh: "关闭",
-    }
-
-    const effect = {
-        tr: "Etkisi:",
-        en: "Effect:",
-        fr: "Effet:",
-        de: "Wirkung:",
-        es: "Efecto:",
-        pt: "Efeito:",
-        ru: "Эффект:",
-        zh: "效果:",
-    };
-
     const labels = keyLabels[language] || keyLabels.en;
 
     if (!event) return null;
@@ -156,7 +22,7 @@ export const EventModal = ({ event, onClose }: { event: Event, onClose: (paramet
                     <ul>
                         {Object.entries(event.effects).map(([key, value]) => (
                             <li key={key}>
-                                {labels[key] || key}: {value}
+                                {(labels as KeyLabels)[key] || key}: {value}
                             </li>
                         ))}
                     </ul>

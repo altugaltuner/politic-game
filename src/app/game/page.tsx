@@ -9,43 +9,18 @@ import SelectedOptionModal from "../components/selectedOptionModal";
 import { useTheme } from '@/contexts/ThemeContext';
 import { useVolume } from "@/contexts/VolumeContext";
 import { elements } from "@/database/elements";
-import InventoryModal from "../components/InventoryModal";
-import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
-import { db, auth } from "@/firebase";
 import LoadingSpinner from "../components/LoadingSpinner";
-
-type Effects = {
-    type: string;
-    stat: string;
-    value: number;
-    agriculturalProduction?: number;
-    infrastructureAndEnvironment?: number;
-    internalSecurity?: number;
-    publicSupport?: number;
-    budget?: number;
-    internationalRelations?: number;
-    [key: string]: number | string | undefined;
-};
-
-interface Bonuses {
-    bonusAgricultural: number;
-    bonusBudget: number;
-    bonusInfrastructure: number;
-    bonusSecurity: number;
-    bonusInternational: number;
-    bonusPublic: number;
-}
+import { PageEffects } from "../types/types";
 
 export default function GamePage() {
     const { volume } = useVolume();
     const [modalOpen, setModalOpen] = useState(false);
-    const [openInventoryModal, setOpenInventoryModal] = useState(false);
     const [selectedOptionModalOpen, setSelectedOptionModalOpen] = useState(false);
     const { isDarkMode } = useTheme();
     const handleSelectedOptionModalOpen = () => {
         setSelectedOptionModalOpen(true);
     }
-    const [lastingEffects, setLastingEffects] = useState<Effects[]>([]);
+    const [lastingEffects, setLastingEffects] = useState<PageEffects[]>([]);
     const [agriculture, setAgriculture] = useState<number>(50);
     const [infrastructure, setInfrastructure] = useState<number>(50);
     const [internalSecurity, setInternalSecurity] = useState<number>(50);
@@ -55,103 +30,8 @@ export default function GamePage() {
     const [level, setLevel] = useState<number>(1);
     const [score, setScore] = useState<number>(0);
     const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        const fetchUserData = async () => {
-            if (auth.currentUser) {
-                const userDocRef = doc(db, "users", auth.currentUser.uid);
-                try {
-                    const userDoc = await getDoc(userDocRef);
-                    if (userDoc.exists()) {
-                        const userData = userDoc.data();
-                        //console.log("User data:", userData);
-                        setLevel(userData.level ?? 1); // Varsayılan olarak 1
-                        setScore(userData.score ?? 0); // Varsayılan olarak 0
-                    } else {
-                        // console.log("User data not found.");
-                    }
-                } catch (error) {
-                    console.error("Error fetching user data:", error);
-                } finally {
-                    setLoading(false); // Veriler yüklendi
-                    //console.log("User data:", auth.currentUser);
-                }
-            } else {
-                setLoading(false); // Kullanıcı oturum açmamışsa
-            }
-        };
-
-        fetchUserData();
-    }, []);
-
-    const handleBonusEffect = (effect: { type: string; value: number }) => {
-        const fiftyEffect = effect.value * 50;
-        switch (effect.type) {
-            case "agriculture":
-                setAgriculture((prev) => prev + fiftyEffect);
-                break;
-            case "budget":
-                setBudget((prev) => prev + fiftyEffect);
-                break;
-            case "infrastructure":
-                setInfrastructure((prev) => prev + fiftyEffect);
-                break;
-            case "security":
-                setInternalSecurity((prev) => prev + fiftyEffect);
-                break;
-            case "international":
-                setInternational((prev) => prev + fiftyEffect);
-                break;
-            case "public":
-                setPublicOpinion((prev) => prev + fiftyEffect);
-                break;
-            default:
-                break;
-        }
-    }
-    const initializeUserBonuses = async (uid: string) => {
-        const userDocRef = doc(db, "users", uid);
-
-        // Kullanıcı bonuslarını kontrol et
-        const userDoc = await getDoc(userDocRef);
-        if (!userDoc.exists()) {
-            // Eğer bonuslar yoksa, varsayılan bonusları oluştur
-            await setDoc(userDocRef, {
-                bonusAgricultural: 1,
-                bonusBudget: 1,
-                bonusInfrastructure: 1,
-                bonusSecurity: 1,
-                bonusInternational: 1,
-                bonusPublic: 1,
-            });
-        } else {
-            // console.log("User bonuses already exist");
-        }
-    };
+   
     const [selectedListIDs, setSelectedListIDs] = useState<string[]>([]);
-
-    const fetchUserBonuses = async (uid: string): Promise<Bonuses | undefined> => {
-        const userDocRef = doc(db, "users", uid);
-        const userDoc = await getDoc(userDocRef);
-
-        if (userDoc.exists()) {
-            //console.log("User bonuses:", userDoc.data());
-            return userDoc.data() as Bonuses;
-        } else {
-            //console.log("No user bonuses found");
-            return undefined;
-        }
-    };
-
-    const updateUserBonus = async (uid: string, bonusType: string, amount: number) => {
-        const userDocRef = doc(db, "users", uid);
-
-        // Belirli bir bonusu güncelle
-        await updateDoc(userDocRef, {
-            [bonusType]: amount,
-        });
-        // console.log(`${bonusType} updated to ${amount}`);
-    };
 
     const playTickSound = () => {
         const audio = new Audio("/sound-effects/button-metal.wav");
@@ -188,6 +68,15 @@ export default function GamePage() {
     // Function to reset selectedListIDs
     const resetSelectedListIDs = () => setSelectedListIDs([]);
 
+    // Component mount olduktan sonra loading'i kapat
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 100); 
+
+        return () => clearTimeout(timer);
+    }, []);
+
 
     if (loading) {
         return <LoadingSpinner />; // Veriler yüklenene kadar yüklenme animasyonu göster
@@ -221,24 +110,10 @@ export default function GamePage() {
             />
 
             <div className="flex flex-col sm:gap-2 gap-1 xl:w-[30%] w-full">
-
                 <SettingsArea handleOpenModal={handleOpenModal} modalOpen={modalOpen} />
-
                 <ListElements selectedListIDs={selectedListIDs} />
-
                 <SettingsModal modalOpen={modalOpen} setModalOpenFunc={setModalOpenFunc} />
-
                 <SelectedOptionModal selectedListIDs={selectedListIDs} selectedOptionModalOpen={selectedOptionModalOpen} setSelectedOptionModalOpen={setSelectedOptionModalOpen} />
-
-                <InventoryModal
-                    openInventoryModal={openInventoryModal}
-                    setOpenInventoryModal={setOpenInventoryModal}
-                    updateUserBonus={updateUserBonus}
-                    fetchUserBonuses={fetchUserBonuses}
-                    initializeUserBonuses={initializeUserBonuses}
-                    handleBonusEffect={handleBonusEffect}
-                />
-
             </div>
         </div>
     );

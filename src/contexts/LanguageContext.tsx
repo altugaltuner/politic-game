@@ -12,7 +12,7 @@ interface LanguageContextProps {
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [language, setLanguage] = useState<Language>('en'); // Varsayılan dil İngilizce
+    const [language, setLanguage] = useState<Language>('tr'); // Varsayılan dil Türkçe
 
     return (
         <LanguageContext.Provider value={{ language, setLanguage }}>

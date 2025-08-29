@@ -2,50 +2,19 @@
 
 import React, { useState, useEffect } from 'react';
 import { elements } from "../../database/elements.js";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useVolume } from "@/contexts/VolumeContext";
 import { useLanguage } from "@/contexts/LanguageContext";
-
-type Element = {
-    id: number;
-    title: { [language: string]: string };
-    photo: StaticImageData;
-    description: { [language: string]: string };
-    listID: string;
-    lastingEffect?: LastingEffect;
-};
-
-type LastingEffect = {
-    stat: string;
-    value: number;
-};
-
-interface SelectedOptionModalProps {
-    selectedListIDs: string[];
-    selectedOptionModalOpen: boolean;
-    setSelectedOptionModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
+import { Element, SelectedOptionModalProps } from "../types/types";
+import { close } from '../exportedTexts/translatedTexts';
 
 const SelectedOptionModal: React.FC<SelectedOptionModalProps> = ({ selectedOptionModalOpen, selectedListIDs, setSelectedOptionModalOpen }) => {
     const { language } = useLanguage();
     const [selectedElement, setSelectedElement] = useState<Element | null>(null);
     const { volume } = useVolume();
 
-    const close = {
-        tr: "Kapat",
-        en: "Close",
-        fr: "Fermer",
-        de: "Schließen",
-        es: "Cerrar",
-        pt: "Fechar",
-        ru: "Закрыть",
-        zh: "关闭",
-    }
-
     const playNewspaperSound = () => {
-
         const audio = new Audio("/sound-effects/newspaper.wav");
         audio.volume = volume;
         audio.play();
