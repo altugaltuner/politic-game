@@ -18,7 +18,7 @@ export const adaletQuestions = {
                     }
                 }
             ],
-            title: "Yaratıcı",
+            title: "Oyun Kurucu",
             photo: altug,
             level: 1,
         },

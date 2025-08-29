@@ -1,6 +1,5 @@
 import { StaticImageData } from "next/image";
 
-
 export type SetFunctions = {
     setAgriculture: React.Dispatch<React.SetStateAction<number>>;
     setInfrastructure: React.Dispatch<React.SetStateAction<number>>;
@@ -90,7 +89,7 @@ export type Effects = {
     internalSecurity?: number;
     publicSupport?: number;
     infrastructureAndEnvironment?: number;
-    [key: string]: number | undefined; // Allow other keys
+    [key: string]: number | undefined;
 };
 
 export type Event = {
@@ -128,7 +127,7 @@ export type KeyLabels = {
     internationalRelations: string;
     budget: string;
     agriculturalProduction: string;
-    [key: string]: string; // Allow other keys
+    [key: string]: string;
 };
 
 export type GameStatsProps = {
@@ -151,7 +150,7 @@ export type GameStatsProps = {
     setSelectedListIDs: (newListID: string) => void;
     resetSelectedListIDs: () => void;
     handleSelectedOptionModalOpen: () => void;
-    lastingEffects: LastingEffects[]; // Birden fazla etki içeren dizi
+    lastingEffects: LastingEffects[];
     setLastingEffects: React.Dispatch<
         React.SetStateAction<
             {
@@ -172,7 +171,6 @@ interface LastingEffects {
     internationalRelations?: number;
 }
 
-
 export type ListElementsProps = {
     selectedListIDs: string[];
 };
@@ -184,5 +182,5 @@ export type ListElementsKeyLabels = {
     internationalRelations: string;
     budget: string;
     agriculturalProduction: string;
-    [key: string]: string; // Allow other keys
+    [key: string]: string;
 };

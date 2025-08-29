@@ -19,7 +19,7 @@ const LevelChangePage = ({
     onComplete: () => void;
     level: number;
 }) => {
-    const [animationClass, setAnimationClass] = useState("translate-x-[-100%]"); // Başlangıç konumu
+    const [animationClass, setAnimationClass] = useState("translate-x-[-100%]");
     const { language } = useLanguage();
 
     const Levels = [
@@ -39,12 +39,12 @@ const LevelChangePage = ({
 
     useEffect(() => {
         const startAnimation = async () => {
-            setAnimationClass("translate-x-0"); // Ortaya gelir
-            await new Promise((resolve) => setTimeout(resolve, 3000)); // 3 saniye kalır
+            setAnimationClass("translate-x-0");
+            await new Promise((resolve) => setTimeout(resolve, 3000));
 
-            setAnimationClass("translate-x-full"); // Sağdan çıkar
-            await new Promise((resolve) => setTimeout(resolve, 1000)); // Animasyon süresi
-            onComplete(); // Bildirim yapılır
+            setAnimationClass("translate-x-full");
+            await new Promise((resolve) => setTimeout(resolve, 1000));
+            onComplete();
         };
 
         startAnimation();

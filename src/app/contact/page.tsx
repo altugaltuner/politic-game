@@ -14,7 +14,6 @@ const Contactpage = () => {
 
     return (
         <div className='flex w-full justify-center sm:p-3 p-1'>
-
             <div className='h-auto sm:w-[90%] w-[95%] flex flex-col items-center bg-white sm:p-5 p-2 rounded-3xl border-[5px] border-black gap-3'>
                 <h1 className="font-bold xl:text-[50px] lg:text-[40px] text-[30px]">İletişim</h1>
                 <div className='flex lg:flex-row flex-col-reverse sm:gap-4 gap-2 w-full'>
@@ -43,7 +42,6 @@ const Contactpage = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }

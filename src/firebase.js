@@ -3,7 +3,6 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
 
-// Firebase yapılandırması - Geçici olarak devre dışı
 const firebaseConfig = {
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "dummy-api-key",
     authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || "dummy-auth-domain",
@@ -14,7 +13,6 @@ const firebaseConfig = {
     measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID || "dummy-measurement-id",
 };
 
-// Firebase uygulamasını yalnızca bir kez başlat
 let app;
 let analytics;
 let db;
@@ -22,14 +20,11 @@ let auth;
 
 try {
     app = !getApps().length ? initializeApp(firebaseConfig) : getApps()[0];
-    // Analytics'i başlat
     analytics = typeof window !== "undefined" ? getAnalytics(app) : null;
-    // Firebase servislerini başlat
-    db = getFirestore(app); // Firestore
-    auth = getAuth(app); // Authentication
+    db = getFirestore(app);
+    auth = getAuth(app);
 } catch (error) {
     console.warn("Firebase başlatılamadı:", error.message);
-    // Firebase olmadan da çalışabilmesi için dummy değerler
     app = null;
     analytics = null;
     db = null;
@@ -39,9 +34,3 @@ try {
 export { analytics };
 export { db };
 export { auth };
-
-
-
-
-
-

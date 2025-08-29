@@ -28,7 +28,7 @@ export const EventModal = ({ event, onClose }: { event: Event, onClose: (paramet
                     </ul>
                 </div>
                 <Button
-                    onClick={() => onClose(event.effects)} // Pass the effects as parameters
+                    onClick={() => onClose(event.effects)}
                     className=" text-white px-4 py-2 rounded-lg transition bg-[#0b1d2f]"
                 >
                     {close[language]}

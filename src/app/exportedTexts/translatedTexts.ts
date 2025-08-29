@@ -22,7 +22,6 @@ export const header = {
     zh: '设置',
 };
 
-
 export const resetGame = {
     en: 'Reset Game',
     tr: 'Oyunu Sıfırla',
@@ -329,7 +328,7 @@ export const playAgain = {
     zh: "再玩一次",
 }
 
-export const yonetimdeGecenGun = {
+export const daysInOffice = {
     en: "Days in Office",
     tr: "Yönetimde Geçen Gün",
     de: "Tage im Amt",
@@ -351,7 +350,7 @@ export const victoryMessage = {
     zh: "恭喜！您已成功完成任务。您是最棒的！",
 };
 
-export const gazeteAdı = {
+export const newsName = {
     en: 'National Newspaper',
     tr: 'Ulus Gazetesi',
     de: 'Nationale Zeitung',
@@ -440,7 +439,7 @@ export const statNames: { [language: string]: ListElementsKeyLabels } = {
     },
 };
 
-export const profilim = {
+export const myProfile = {
     en: 'My Profile',
     tr: 'Profilim',
     de: 'Mein Profil',
@@ -451,7 +450,7 @@ export const profilim = {
     zh: '我的个人资料',
 };
 
-export const cumhurbaskanı = {
+export const president = {
     en: 'President',
     tr: 'Cumhurbaşkanı',
     de: 'Präsident',
@@ -473,7 +472,6 @@ export const lastingEffectText = {
     zh: '持久效果',
 };
 
-
 export const headerText = {
     tr: 'Cumhurbaşkanı ol ve ülkeyi yönet! Karşına çıkan sorunları çöz ve ülkeni ayakta tut!',
     de: 'Werde Präsident und führe das Land! Löse die auftretenden Probleme und halte dein Land am Leben!',
@@ -485,7 +483,7 @@ export const headerText = {
     zh: '成为总统并领导国家！解决面临的问题，让你的国家屹立不倒！',
   };
 
-export const NasılOynanır = {
+export const howToPlay = {
     tr: 'Nasıl Oynanır',
     de: 'Wie spielt man?',
     en: 'How to Play',

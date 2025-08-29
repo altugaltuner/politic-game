@@ -13,46 +13,42 @@ import { useVolume } from "@/contexts/VolumeContext";
 import LevelChangePage from "./LevelChangePage";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { GameStatsProps } from "../types/types";
-import { gameOverMessages, playAgain, yonetimdeGecenGun, victoryMessage } from "../exportedTexts/translatedTexts";
+import { gameOverMessages, playAgain, daysInOffice, victoryMessage } from "../exportedTexts/translatedTexts";
 
-
-// Component for Game Stats
 export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level, setLevel, resetSelectedListIDs, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion, score, setScore }) => {
 
     const [isVisible, setIsVisible] = useState(true);
     const { isDarkMode } = useTheme();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isLevelChangeVisible, setIsLevelChangeVisible] = useState(true);
-    const { language } = useLanguage(); // Dil bilgisi
-    const [allQuestions, setAllQuestions] = useState(allQuestionsByLanguage[language]); // Dil bazlı sorular
+    const { language } = useLanguage();
+    const [allQuestions, setAllQuestions] = useState(allQuestionsByLanguage[language]);
     const [currentQuestion, setCurrentQuestion] = useState(allQuestions[0]);
     const [currentLevel, setCurrentLevel] = useState(level);
 
     useEffect(() => {
-        const currentQuestionId = currentQuestion?.id; // Mevcut sorunun ID'sini alın
-        const updatedQuestions = allQuestionsByLanguage[language]; // Yeni dildeki tüm soruları alın
+        const currentQuestionId = currentQuestion?.id;
+        const updatedQuestions = allQuestionsByLanguage[language];
 
-        setAllQuestions(updatedQuestions); // Soruları güncelle
+        setAllQuestions(updatedQuestions);
 
         if (currentQuestionId) {
-            // Mevcut ID ile eşleşen soruyu bulun
             const matchingQuestion = updatedQuestions.find(question => question.id === currentQuestionId);
             if (matchingQuestion) {
-                setCurrentQuestion(matchingQuestion); // Eşleşen soruyu ayarla
+                setCurrentQuestion(matchingQuestion);
             } else {
-                // Eğer eşleşen soru yoksa, ilk soruyu varsayılan olarak ayarla
                 setCurrentQuestion(updatedQuestions[0]);
             }
         } else {
-            setCurrentQuestion(updatedQuestions[0]); // ID yoksa ilk soruyu ayarla
+            setCurrentQuestion(updatedQuestions[0]);
         }
-    }, [language]);
+    }, [language, currentQuestion?.id]);
 
     useEffect(() => {
         if (currentLevel !== level) {
             setLevel(currentLevel);
         }
-    }, [level, currentLevel]);
+    }, [level, setLevel, currentLevel]);
 
     const handleLevelUp = () => {
         setIsLevelChangeVisible(true);
@@ -106,9 +102,8 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         if (isModalOpen) {
             playRandomBreakingNewsSound();
         }
-    }, [isModalOpen]);
+    }, [isModalOpen,playRandomBreakingNewsSound]);
 
-    // Set the first question as fixed
     const [usedQuestions, setUsedQuestions] = useState<number[]>([allQuestions[0].id]);
 
     const [gameOver, setGameOver] = useState(false);
@@ -117,7 +112,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
 
 
     useEffect(() => {
-        if (!currentQuestion) return; // Soru yoksa çalıştırma
+        if (!currentQuestion) return;
 
         lastingEffects.forEach((effect) => {
             switch (effect.stat) {
@@ -143,7 +138,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                     console.warn(`Unknown stat: ${effect.stat}`);
             }
         });
-    }, [currentQuestion]); // Soru değiştiğinde lastingEffects yeniden uygulanır
+    }, [currentQuestion]);
 
     const getRandomEvent = (usedEvents: number[]) => {
         if (usedQuestions.length > 4 && gameOver === false) {
@@ -187,7 +182,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         }
     }, [currentQuestion]);
 
-    // Statlar güncellendiğinde oyunun bitip bitmediğini kontrol eden useEffect
     useEffect(() => {
         const isGameOver = checkGameOver(publicOpinion, internalSecurity, international, budget, infrastructure, agriculture);
         let reason = "";
@@ -226,7 +220,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         }
     }, [publicOpinion, internalSecurity, international, budget, infrastructure, agriculture, score]);
 
-    // Function to handle answer selection
     const answerQuestion = (direction: "left" | "right") => {
         metalButtonSound();
 
@@ -243,15 +236,12 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
             setPublicOpinion,
             setBudget
         });
-
         if (answer.listID) {
-            setSelectedListIDs(answer.listID); // Add new listID to the array
-            handleSelectedOptionModalOpen(); // Open the selected option modal
+            setSelectedListIDs(answer.listID);
+            handleSelectedOptionModalOpen();
         }
 
         setIsVisible(false);
-
-        // Get a random next question that hasn't been used
         const nextQuestion = getRandomQuestionByLevel(usedQuestions, currentLevel, language);
 
         if (nextQuestion) {
@@ -259,16 +249,13 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         }
         if (!gameOver && nextQuestion) {
             setScore((prev) => prev + 1);
-
             setTimeout(() => {
                 setCurrentQuestion(nextQuestion);
                 setUsedQuestions((prev) => [...prev, nextQuestion.id]);
                 setIsVisible(true);
             }, 500);
-
             setTimeout(() => {
-
-            }, 1000); // 1 saniye bekleyin
+            }, 1000);
         }
     };
 
@@ -288,7 +275,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         setDeathStat(null);
         metalButtonSound();
         setLastingEffects([]);
-        resetSelectedListIDs(); // Clear the filteredElements in ListElements
+        resetSelectedListIDs();
         metalButtonSound();
     };
 
@@ -302,7 +289,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         playVictorySound();
     }
 
-    // Oyun bittiyse oyunun son ekranını göster
     if (gameOver) {
         return (
             <div className="flex flex-col gap-3 xl:w-[72%] w-full justify-center items-center rounded-md relative">
@@ -320,7 +306,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
 
                     <div className="flex justify-start items-center md:text-base sm:text-sm min-h-[75px] flex-col w-[90%] text-xs gap-2">
                         <h1 className="bg-primary text-white py-1 px-2 rounded-md ">{gameOverReason}</h1>
-                        <p className="bg-primary text-white py-1 px-2 rounded-md ">{yonetimdeGecenGun[language]} : <span>{usedQuestions.length - 1}</span> </p>
+                        <p className="bg-primary text-white py-1 px-2 rounded-md ">{daysInOffice[language]} : <span>{usedQuestions.length - 1}</span> </p>
                     </div>
                     <div className="flex flex-col items-center mt-2 gap-2 justify-center">
                         {deathStat && (
@@ -404,7 +390,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                 deathLayerStat={null}
             />
 
-            {/* Question display */}
             {currentQuestion ? (
                 <div className={` ${isDarkMode ? 'border-white bg-[#0b1d2f]' : 'border-black bg-white'}  text-center sm:p-2 p-1 rounded-lg relative border-[3px] border-[#0b1d2f] flex flex-col justify-start items-center w-full`}>
 
@@ -441,7 +426,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                 <div className="text-center bg-white rounded-lg">All questions answered!</div>
             )}
 
-            {/* Answer buttons */}
             {currentQuestion && (
                 <div className={`${isDarkMode ? ' bg-[rgb(17,17,17)]  border-white' : 'bg-white border-[#0b1d2f]'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 sm:gap-2 gap-1 sm:p-2.5 p-1 items-center lg:min-h-16 min-h-24 `}>
                     <Button

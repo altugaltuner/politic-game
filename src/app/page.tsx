@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import logo from "../../public/images/logo.webp";
 import { Button } from "@/components/ui/button";
-import { headerText, NasılOynanır, startHeader, decisionHeader, Sources, sourceText, finalHeader, finalText, startingText, answerText } from './exportedTexts/translatedTexts';
+import { headerText, howToPlay, startHeader, decisionHeader, Sources, sourceText, finalHeader, finalText, startingText, answerText } from './exportedTexts/translatedTexts';
 
 export default function HomePage() {
   const { language } = useLanguage();
@@ -30,7 +30,7 @@ export default function HomePage() {
       <div className="flex gap-5">
       </div>
       <div className="h-auto md:h-[90%] lg:w-[90%] w-full flex flex-col md:gap-3 gap-2 justify-around items-center bg-white p-4 rounded-3xl border-[5px] border-black">
-        <h2 className="font-bold xl:text-[45px] lg:text-[32px] text-[30px]">{NasılOynanır[language]}</h2>
+        <h2 className="font-bold xl:text-[45px] lg:text-[32px] text-[30px]">{howToPlay[language]}</h2>
         <div className="md:flex gap-2 grid sm:grid-cols-2 grid-cols-1 w-full">
           <div className="md:w-[24%] w-full flex flex-col gap-2 justify-start items-center text-start border-2 border-black p-2 rounded-xl">
             <h3 className="lg:text-lg text-base font-semibold text-center">{startHeader[language]}</h3>

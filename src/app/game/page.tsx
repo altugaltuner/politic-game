@@ -30,7 +30,6 @@ export default function GamePage() {
     const [level, setLevel] = useState<number>(1);
     const [score, setScore] = useState<number>(0);
     const [loading, setLoading] = useState(true);
-   
     const [selectedListIDs, setSelectedListIDs] = useState<string[]>([]);
 
     const playTickSound = () => {
@@ -55,7 +54,6 @@ export default function GamePage() {
             prevListIDs.includes(newListID) ? prevListIDs : [newListID, ...prevListIDs]
         );
 
-        // Yeni lastingEffect ekleme
         const selectedElement = elements.find((el) => el.listID === newListID);
         if (selectedElement && selectedElement.lastingEffect) {
             setLastingEffects((prev) => [
@@ -64,11 +62,8 @@ export default function GamePage() {
             ]);
         }
     };
-
-    // Function to reset selectedListIDs
     const resetSelectedListIDs = () => setSelectedListIDs([]);
 
-    // Component mount olduktan sonra loading'i kapat
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
@@ -79,7 +74,7 @@ export default function GamePage() {
 
 
     if (loading) {
-        return <LoadingSpinner />; // Veriler yüklenene kadar yüklenme animasyonu göster
+        return <LoadingSpinner />;
     }
 
     return (
