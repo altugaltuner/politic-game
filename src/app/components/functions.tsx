@@ -1,5 +1,3 @@
-// components/functions.ts
-import { StaticImageData } from "next/image";
 import { adaletQuestions } from "../../database/adalet";
 import { aileQuestions } from "../../database/aile";
 import { calismaQuestions } from "../../database/calisma";
@@ -18,43 +16,13 @@ import { ticaretQuestions } from "../../database/ticaret";
 import { ulastirmaQuestions } from "../../database/ulastirma";
 import { nonMinisters } from "../../database/nonMinister.js";
 import { turizmQuestions } from "../../database/turizm";
-
-type SetFunctions = {
-    setAgriculture: React.Dispatch<React.SetStateAction<number>>;
-    setInfrastructure: React.Dispatch<React.SetStateAction<number>>;
-    setInternalSecurity: React.Dispatch<React.SetStateAction<number>>;
-    setInternational: React.Dispatch<React.SetStateAction<number>>;
-    setBudget: React.Dispatch<React.SetStateAction<number>>;
-    setPublicOpinion: React.Dispatch<React.SetStateAction<number>>;
-};
-
-type Question = {
-    photo: string | File | StaticImageData;
-    title: string;
-    id: number;
-    question: string;
-    link?: string;
-    level: number;
-    answers: {
-        listID?: string | null;
-        text: string;
-        effect: {
-            publicSupport?: number;
-            budget?: number;
-            internalSecurity?: number;
-            agriculturalProduction?: number;
-            infrastructureAndEnvironment?: number;
-            internationalRelations?: number;
-            [key: string]: number | undefined;
-        };
-    }[];
-};
+import { Question, SetFunctions } from "../types/types";
 
 const convertPhotoToString = (questions: Question[]): Question[] => {
     return questions.map(question => ({
         ...question,
         photo: (typeof question.photo === 'object' && 'src' in question.photo)
-            ? question.photo.src // StaticImageData'yı string'e dönüştürüyoruz
+            ? question.photo.src
             : question.photo
     }));
 };
@@ -231,15 +199,13 @@ export const getRandomQuestionByLevel = (usedQuestions: number[], currentLevel: 
     );
 
     if (availableQuestions.length === 0) {
-        return null; // Bu seviyede daha fazla soru yok
+        return null;
     }
 
     const randomIndex = Math.floor(Math.random() * availableQuestions.length);
     return availableQuestions[randomIndex];
 };
 
-
-// Function to update stats based on the selected answer's effects
 
 export const updateStats = (
     effect: {

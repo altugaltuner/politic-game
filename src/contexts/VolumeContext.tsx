@@ -11,7 +11,7 @@ interface VolumeContextType {
 const VolumeContext = createContext<VolumeContextType | undefined>(undefined);
 
 export const VolumeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [volume, setVolume] = useState(0.3); // Varsayılan ses seviyesi %50
+    const [volume, setVolume] = useState(0.3);
 
     return (
         <VolumeContext.Provider value={{ volume, setVolume }}>
@@ -20,7 +20,6 @@ export const VolumeProvider: React.FC<{ children: ReactNode }> = ({ children }) 
     );
 };
 
-// useVolume hook'u doğrudan bileşenlerde veya başka bir hook'ta çağırılmalıdır.
 export const useVolume = (): VolumeContextType => {
     const context = useContext(VolumeContext);
     if (!context) {

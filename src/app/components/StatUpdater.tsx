@@ -9,18 +9,8 @@ import Image from "next/image";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useEffect, useState } from "react";
-
-
-type Props = {
-    agriculture: number;
-    infrastructure: number;
-    internalSecurity: number;
-    international: number;
-    currency: number;
-    publicSupport: number;
-    score: number;
-    deathLayerStat: string | null; // Sıfırlanan stat
-};
+import { Props } from "../types/types";
+import { statNames2 } from "../exportedTexts/translatedTexts";
 
 const StatUpdater: React.FC<Props> = ({
     agriculture,
@@ -32,7 +22,6 @@ const StatUpdater: React.FC<Props> = ({
     score,
     deathLayerStat,
 }) => {
-    // Renk yönetimi için state'ler
     const [agricultureColor, setAgricultureColor] = useState("#0b1d2f");
     const [infrastructureColor, setInfrastructureColor] = useState("#0b1d2f");
     const [internalSecurityColor, setInternalSecurityColor] = useState("#0b1d2f");
@@ -40,15 +29,14 @@ const StatUpdater: React.FC<Props> = ({
     const [currencyColor, setCurrencyColor] = useState("#0b1d2f");
     const [publicSupportColor, setPublicSupportColor] = useState("#0b1d2f");
 
-    // Renk geçişi fonksiyonu
     const handleColorChange = (stat: string, value: number, prevValue: number) => {
-        const newColor = value > prevValue ? "#4caf50" : "#d2190b"; // Artış: yeşil, düşüş: kırmızı
-        const resetColor = "#0b1d2f"; // Varsayılan siyah renk
+        const newColor = value > prevValue ? "#4caf50" : "#d2190b";
+        const resetColor = "#0b1d2f";
 
         switch (stat) {
             case "agriculture":
                 setAgricultureColor(newColor);
-                setTimeout(() => setAgricultureColor(resetColor), 1000); // 1 saniye sonra siyaha dön
+                setTimeout(() => setAgricultureColor(resetColor), 1000);
                 break;
             case "infrastructure":
                 setInfrastructureColor(newColor);
@@ -102,7 +90,6 @@ const StatUpdater: React.FC<Props> = ({
             handleColorChange("publicSupport", publicSupport, prevValues.publicSupport);
         }
 
-        // Güncel değerleri sakla
         setPrevValues({
             agriculture,
             infrastructure,
@@ -120,7 +107,6 @@ const StatUpdater: React.FC<Props> = ({
         publicSupport,
     ]);
 
-    // Stat barı için stil fonksiyonu
     const getBarStyle = (value: number, color: string) => ({
         height: `${value}%`,
         backgroundColor: color,
@@ -137,85 +123,14 @@ const StatUpdater: React.FC<Props> = ({
     const { isDarkMode } = useTheme();
     const { language } = useLanguage();
 
-    const statNames = {
-        agriculture: {
-            en: "Agriculture",
-            tr: "Tarım",
-            de: "Landwirtschaft",
-            es: "Agricultura",
-            fr: "Agriculture",
-            pt: "Agricultura",
-            ru: "Сельское хозяйство",
-            zh: "农业",
-        },
-        infrastructure: {
-            en: "Structure",
-            tr: "Altyapı",
-            de: "Infrastruktur",
-            es: "Infraestructura",
-            fr: "Infrastructure",
-            pt: "Infraestrutura",
-            ru: "Инфраструктура",
-            zh: "基础设施",
-        },
-        internalSecurity: {
-            en: " Security",
-            tr: " Güvenlik",
-            de: "Sicherheit",
-            es: "Seguridad",
-            fr: "Sécurité",
-            pt: "Segurança",
-            ru: "Безопасность",
-            zh: "内部安全",
-        },
-        international: {
-            en: "Politics",
-            tr: "Politika",
-            de: "Politik",
-            es: "Política",
-            fr: "Politique",
-            pt: "Política",
-            ru: "Политика",
-            zh: "政治",
-        },
-        budget: {
-            en: "Budget",
-            tr: "Bütçe",
-            de: "Haushalt",
-            es: "Presupuesto",
-            fr: "Budget",
-            pt: "Orçamento",
-            ru: "Бюджет",
-            zh: "预算",
-        },
-        publicSupport: {
-            en: "Support",
-            tr: "Destek",
-            de: "Unterstützung",
-            es: "Apoyo",
-            fr: "Soutien",
-            pt: "Apoio",
-            ru: "Поддержка",
-            zh: "支持",
-        },
-        rule: {
-            en: "Rule",
-            tr: "Yönetim",
-            de: "Regel",
-            es: "Regla",
-            fr: "Règle",
-            pt: "Regra",
-            ru: "Правило",
-            zh: "规则",
-        },
-    };
+    
 
     return (
         <div className={` ${isDarkMode ? 'bg-[#0b1d2f] border-white' : 'bg-white border-[#0b1d2f]'} flex w-full xl:gap-2 gap-1 md:rounded-t-lg justify-between sm:p-2 p-[2px]  border-[3px] md:rounded-xl rounded`}>
 
-            <div className={` ${isDarkMode ? ' text-white bg-[#0b1d2f] border-white' : ' text-[#0b1d2f] bg-[#eaeaea] border-black'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[146px] h-[55px]`}>
+            <div className={` ${isDarkMode ? ' text-white bg-[#0b1d2f] border-white' : ' text-[#0b1d2f] bg-[#eaeaea] border-black'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[130px] h-[55px]`}>
 
-                <span className={`${isDarkMode ? ' text-white' : ' text-[#0b1d2f]'}  md:text-xs xl:text-sm md:block hidden`}>{statNames.agriculture[language]}</span>
+                <span className={`${isDarkMode ? ' text-white' : ' text-[#0b1d2f]'}  md:text-xs xl:text-sm md:block hidden`}>{statNames2.agriculture[language]}</span>
 
                 <div className={`${isDarkMode ? ' border-white' : ' border-[#0b1d2f] '} flex bg-[#717f95] w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center   border-[1px] rounded-sm`}>
 
@@ -231,8 +146,8 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className={` ${isDarkMode ? ' text-white bg-[#0b1d2f] border-white' : ' text-[#0b1d2f] bg-[#eaeaea] border-[#0b1d2f]'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[146px] h-[55px]`}>
-                <span className={`${isDarkMode ? ' text-white' : ' text-[#0b1d2f]'}  md:text-xs xl:text-sm md:block hidden`}>{statNames.infrastructure[language]}</span>
+            <div className={` ${isDarkMode ? ' text-white bg-[#0b1d2f] border-white' : ' text-[#0b1d2f] bg-[#eaeaea] border-[#0b1d2f]'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[130px] h-[55px]`}>
+                <span className={`${isDarkMode ? ' text-white' : ' text-[#0b1d2f]'}  md:text-xs xl:text-sm md:block hidden`}>{statNames2.infrastructure[language]}</span>
                 <div className={`${isDarkMode ? ' border-white' : ' border-[#0b1d2f] '} flex bg-[#717f95] w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center   border-[1px] rounded-sm`}>
 
                     <animated.p className="md:block hidden absolute z-10 bottom-0 right-0 text-white bg-[#0b1d2f] p-[2px] rounded border-[1px] white lg:text-base md:text-sm">{animatedInfrastructure.number.to(n => n.toFixed(0))}</animated.p>
@@ -246,8 +161,8 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className={` ${isDarkMode ? ' text-white bg-[#0b1d2f] border-white' : ' text-[#0b1d2f] bg-[#eaeaea] border-[#0b1d2f]'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[146px] h-[55px]`}>
-                <span className={`${isDarkMode ? ' text-white' : ' text-[#0b1d2f]'}  md:text-xs xl:text-sm md:block hidden`}>{statNames.internalSecurity[language]}</span>
+            <div className={` ${isDarkMode ? ' text-white bg-[#0b1d2f] border-white' : ' text-[#0b1d2f] bg-[#eaeaea] border-[#0b1d2f]'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[130px] h-[55px]`}>
+                <span className={`${isDarkMode ? ' text-white' : ' text-[#0b1d2f]'}  md:text-xs xl:text-sm md:block hidden`}>{statNames2.internalSecurity[language]}</span>
                 <div className={`${isDarkMode ? ' border-white' : ' border-[#0b1d2f] '} flex bg-[#717f95] w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center   border-[1px] rounded-sm`}>
                     <animated.p className="md:block hidden absolute z-10 bottom-0 right-0 text-white bg-[#0b1d2f] p-[2px] rounded border-[1px] white lg:text-base md:text-sm">{animatedInternalSecurity.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "internalSecurity" && (
@@ -260,8 +175,8 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className={` ${isDarkMode ? ' text-white bg-[#0b1d2f] border-white' : ' text-[#0b1d2f] bg-[#eaeaea] border-[#0b1d2f]'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[146px] h-[55px]`}>
-                <span className={`${isDarkMode ? ' text-white' : ' text-[#0b1d2f]'}  md:text-xs xl:text-sm md:block hidden`}>{statNames.international[language]}</span>
+            <div className={` ${isDarkMode ? ' text-white bg-[#0b1d2f] border-white' : ' text-[#0b1d2f] bg-[#eaeaea] border-[#0b1d2f]'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[130px] h-[55px]`}>
+                <span className={`${isDarkMode ? ' text-white' : ' text-[#0b1d2f]'}  md:text-xs xl:text-sm md:block hidden`}>{statNames2.international[language]}</span>
                 <div className={`${isDarkMode ? ' border-white' : ' border-[#0b1d2f] '} flex bg-[#717f95] w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center   border-[1px] rounded-sm`}>
                     <animated.p className="md:block hidden absolute z-10 bottom-0 right-0 text-white bg-[#0b1d2f] p-[2px] rounded border-[1px] white lg:text-base md:text-sm">{animatedInternational.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "international" && (
@@ -274,8 +189,8 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className={` ${isDarkMode ? ' text-white bg-[#0b1d2f] border-white' : ' text-[#0b1d2f] bg-[#eaeaea] border-[#0b1d2f]'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[146px] h-[55px]`}>
-                <span className={`${isDarkMode ? ' text-white' : ' text-[#0b1d2f]'}  md:text-xs xl:text-sm md:block hidden`}>{statNames.budget[language]}</span>
+            <div className={` ${isDarkMode ? ' text-white bg-[#0b1d2f] border-white' : ' text-[#0b1d2f] bg-[#eaeaea] border-[#0b1d2f]'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[130px] h-[55px]`}>
+                <span className={`${isDarkMode ? ' text-white' : ' text-[#0b1d2f]'}  md:text-xs xl:text-sm md:block hidden`}>{statNames2.budget[language]}</span>
                 <div className={`${isDarkMode ? ' border-white' : ' border-[#0b1d2f] '} flex bg-[#717f95] w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center   border-[1px] rounded-sm`}>
                     <animated.p className="md:block hidden absolute z-10 bottom-0 right-0 text-white bg-[#0b1d2f] p-[2px] rounded border-[1px] white lg:text-base md:text-sm">{animatedCurrency.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "budget" && (
@@ -288,8 +203,8 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className={` ${isDarkMode ? ' text-white bg-[#0b1d2f] border-white' : ' text-[#0b1d2f] bg-[#eaeaea] border-[#0b1d2f]'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[146px] h-[55px]`}>
-                <span className={`${isDarkMode ? ' text-white' : ' text-[#0b1d2f]'}  md:text-xs xl:text-sm md:block hidden`}>{statNames.publicSupport[language]}</span>
+            <div className={` ${isDarkMode ? ' text-white bg-[#0b1d2f] border-white' : ' text-[#0b1d2f] bg-[#eaeaea] border-[#0b1d2f]'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[130px] h-[55px]`}>
+                <span className={`${isDarkMode ? ' text-white' : ' text-[#0b1d2f]'}  md:text-xs xl:text-sm md:block hidden`}>{statNames2.publicSupport[language]}</span>
                 <div className={`${isDarkMode ? ' border-white' : ' border-[#0b1d2f] '} flex bg-[#717f95] w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center   border-[1px] rounded-sm`}>
                     <animated.p className="md:block hidden absolute z-10 bottom-0 right-0 text-white bg-[#0b1d2f] p-[2px] rounded border-[1px] white lg:text-base md:text-sm">{animatedPublicSupport.number.to(n => n.toFixed(0))}</animated.p>
                     {deathLayerStat === "publicOpinion" && (
@@ -302,8 +217,8 @@ const StatUpdater: React.FC<Props> = ({
                 </div>
             </div>
 
-            <div className={` ${isDarkMode ? ' text-white bg-[#0b1d2f] border-white' : ' text-[#0b1d2f] bg-[#eaeaea] border-[#0b1d2f]'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[146px] h-[55px]`}>
-                <span className={`${isDarkMode ? ' text-white' : ' text-[#0b1d2f]'}  md:text-xs xl:text-sm md:block hidden`}>{statNames.rule[language]}</span>
+            <div className={` ${isDarkMode ? ' text-white bg-[#0b1d2f] border-white' : ' text-[#0b1d2f] bg-[#eaeaea] border-[#0b1d2f]'} flex flex-col items-center justify-between md:p-2 md:border-solid border-hidden md:border-[2px] md:rounded-xl w-[13%] text-center  md:h-[130px] h-[55px]`}>
+                <span className={`${isDarkMode ? ' text-white' : ' text-[#0b1d2f]'}  md:text-xs xl:text-sm md:block hidden`}>{statNames2.rule[language]}</span>
                 <div className={`${isDarkMode ? ' border-white' : ' border-[#0b1d2f] '} flex bg-[#717f95] w-full h-20 relative md:border-[2px] overflow-hidden md:mt-2 md:rounded justify-center items-center   border-[1px] rounded-sm`}>
                     <div className="absolute bottom-0 left-0 w-full" />
                     <animated.p className="z-10 md:w-[110px] md:h-[55px] w-8 h-8 flex items-center justify-center text-white lg:text-2xl md:text-base text-sm">{animatedScore.number.to(n => `${(n).toFixed(0)} / 100`)}</animated.p>

@@ -9,43 +9,24 @@ import SelectedOptionModal from "../components/selectedOptionModal";
 import { useTheme } from '@/contexts/ThemeContext';
 import { useVolume } from "@/contexts/VolumeContext";
 import { elements } from "@/database/elements";
+<<<<<<< HEAD
 import InventoryModal from "../components/InventoryModal";
 import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 // import { db, auth } from "@/firebase";
+=======
+>>>>>>> 68287370593facc3815c1be4983db4e083c474d3
 import LoadingSpinner from "../components/LoadingSpinner";
-
-type Effects = {
-    type: string;
-    stat: string;
-    value: number;
-    agriculturalProduction?: number;
-    infrastructureAndEnvironment?: number;
-    internalSecurity?: number;
-    publicSupport?: number;
-    budget?: number;
-    internationalRelations?: number;
-    [key: string]: number | string | undefined;
-};
-
-interface Bonuses {
-    bonusAgricultural: number;
-    bonusBudget: number;
-    bonusInfrastructure: number;
-    bonusSecurity: number;
-    bonusInternational: number;
-    bonusPublic: number;
-}
+import { PageEffects } from "../types/types";
 
 export default function GamePage() {
     const { volume } = useVolume();
     const [modalOpen, setModalOpen] = useState(false);
-    const [openInventoryModal, setOpenInventoryModal] = useState(false);
     const [selectedOptionModalOpen, setSelectedOptionModalOpen] = useState(false);
     const { isDarkMode } = useTheme();
     const handleSelectedOptionModalOpen = () => {
         setSelectedOptionModalOpen(true);
     }
-    const [lastingEffects, setLastingEffects] = useState<Effects[]>([]);
+    const [lastingEffects, setLastingEffects] = useState<PageEffects[]>([]);
     const [agriculture, setAgriculture] = useState<number>(50);
     const [infrastructure, setInfrastructure] = useState<number>(50);
     const [internalSecurity, setInternalSecurity] = useState<number>(50);
@@ -55,6 +36,7 @@ export default function GamePage() {
     const [level, setLevel] = useState<number>(1);
     const [score, setScore] = useState<number>(0);
     const [loading, setLoading] = useState(true);
+<<<<<<< HEAD
 
     // useEffect(() => {
     //     const fetchUserData = async () => {
@@ -153,6 +135,10 @@ export default function GamePage() {
     //     // console.log(`${bonusType} updated to ${amount}`);
     // };
 
+=======
+    const [selectedListIDs, setSelectedListIDs] = useState<string[]>([]);
+
+>>>>>>> 68287370593facc3815c1be4983db4e083c474d3
     const playTickSound = () => {
         const audio = new Audio("/sound-effects/button-metal.wav");
         audio.volume = volume;
@@ -175,6 +161,7 @@ export default function GamePage() {
     //         prevListIDs.includes(newListID) ? prevListIDs : [newListID, ...prevListIDs]
     //     );
 
+<<<<<<< HEAD
     //     // Yeni lastingEffect ekleme
     //     const selectedElement = elements.find((el) => el.listID === newListID);
     //     if (selectedElement && selectedElement.lastingEffect) {
@@ -187,10 +174,29 @@ export default function GamePage() {
 
     // // Function to reset selectedListIDs
     // const resetSelectedListIDs = () => setSelectedListIDs([]);
+=======
+        const selectedElement = elements.find((el) => el.listID === newListID);
+        if (selectedElement && selectedElement.lastingEffect) {
+            setLastingEffects((prev) => [
+                ...prev,
+                { ...selectedElement.lastingEffect, stat: selectedElement.lastingEffect.stat, type: selectedElement.lastingEffect.type || '' }
+            ]);
+        }
+    };
+    const resetSelectedListIDs = () => setSelectedListIDs([]);
+>>>>>>> 68287370593facc3815c1be4983db4e083c474d3
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false);
+        }, 100); 
+
+        return () => clearTimeout(timer);
+    }, []);
 
 
     if (loading) {
-        return <LoadingSpinner />; // Veriler yüklenene kadar yüklenme animasyonu göster
+        return <LoadingSpinner />;
     }
 
     return (
@@ -223,12 +229,17 @@ export default function GamePage() {
                 }} />
 
             <div className="flex flex-col sm:gap-2 gap-1 xl:w-[30%] w-full">
-
                 <SettingsArea handleOpenModal={handleOpenModal} modalOpen={modalOpen} />
+<<<<<<< HEAD
 
 
                 <SettingsModal modalOpen={modalOpen} setModalOpenFunc={setModalOpenFunc} />
 
+=======
+                <ListElements selectedListIDs={selectedListIDs} />
+                <SettingsModal modalOpen={modalOpen} setModalOpenFunc={setModalOpenFunc} />
+                <SelectedOptionModal selectedListIDs={selectedListIDs} selectedOptionModalOpen={selectedOptionModalOpen} setSelectedOptionModalOpen={setSelectedOptionModalOpen} />
+>>>>>>> 68287370593facc3815c1be4983db4e083c474d3
             </div>
         </div>
     );
