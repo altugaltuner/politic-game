@@ -1,7 +1,7 @@
 "use client";
 
 import React, { createContext, useState, useEffect, useContext, ReactNode } from 'react';
-import { auth, db } from "@/firebase";
+// import { auth, db } from "@/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
 
@@ -22,31 +22,31 @@ const UserContext = createContext<UserContextProps | undefined>(undefined);
 export const UserProvider = ({ children }: { children: ReactNode }) => {
     const [user, setUser] = useState<User | null>(null);
 
-    useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-            if (currentUser) {
-                // Firebase Firestore'dan kullanıcı bilgilerini al
-                const docRef = doc(db, "users", currentUser.uid);
-                const docSnap = await getDoc(docRef);
+    // useEffect(() => {
+    //     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+    //         if (currentUser) {
+    //             // Firebase Firestore'dan kullanıcı bilgilerini al
+    //             const docRef = doc(db, "users", currentUser.uid);
+    //             const docSnap = await getDoc(docRef);
 
-                if (docSnap.exists()) {
-                    const userData = docSnap.data();
-                    setUser({
-                        id: currentUser.uid,
-                        email: userData.email,
-                        username: userData.username,
-                        level: userData.level,
-                    });
-                } else {
-                    console.error("No such user document!");
-                }
-            } else {
-                setUser(null);
-            }
-        });
+    //             if (docSnap.exists()) {
+    //                 const userData = docSnap.data();
+    //                 setUser({
+    //                     id: currentUser.uid,
+    //                     email: userData.email,
+    //                     username: userData.username,
+    //                     level: userData.level,
+    //                 });
+    //             } else {
+    //                 console.error("No such user document!");
+    //             }
+    //         } else {
+    //             setUser(null);
+    //         }
+    //     });
 
-        return () => unsubscribe();
-    }, []);
+    //     return () => unsubscribe();
+    // }, []);
 
     return (
         <UserContext.Provider value={{ user, setUser }}>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { auth, db } from "@/firebase"; // Firebase auth'ı import edin
+// import { auth, db } from "@/firebase"; // Firebase auth'ı import edin
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -14,38 +14,38 @@ const SignInForm: React.FC = () => {
     const { language } = useLanguage();
     const { setUser } = useUser(); // Kullanıcı bilgilerini ayarlamak için setUser
 
-    const handleSignIn = async (e: React.FormEvent) => {
-        e.preventDefault();
-        setError('');
+    // const handleSignIn = async (e: React.FormEvent) => {
+    //     e.preventDefault();
+    //     setError('');
 
-        try {
-            // Firebase ile kullanıcı giriş işlemi
-            const userCredential = await signInWithEmailAndPassword(auth, email, password);
-            const user = userCredential.user;
+    //     try {
+    //         // Firebase ile kullanıcı giriş işlemi
+    //         const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    //         const user = userCredential.user;
 
-            const userRef = doc(db, "users", user.uid);
+    //         const userRef = doc(db, "users", user.uid);
 
-            const userSnap = await getDoc(userRef);
+    //         const userSnap = await getDoc(userRef);
 
-            if (userSnap.exists()) {
-                const userData = userSnap.data();
-                setUser({
-                    id: user.uid,
-                    email: userData.email,
-                    username: userData.username,
-                    level: userData.level,
-                });
-                //console.log("User signed in successfully:", userData);
-            } else {
-                console.error("No user data found!");
-            }
+    //         if (userSnap.exists()) {
+    //             const userData = userSnap.data();
+    //             setUser({
+    //                 id: user.uid,
+    //                 email: userData.email,
+    //                 username: userData.username,
+    //                 level: userData.level,
+    //             });
+    //             //console.log("User signed in successfully:", userData);
+    //         } else {
+    //             console.error("No user data found!");
+    //         }
 
-            router.push('/game'); // Başarılı giriş sonrası yönlendirme
-        } catch (err) {
-            setError((err as Error).message);
-            console.error("Error during sign-in:", err);
-        }
-    };
+    //         router.push('/game'); // Başarılı giriş sonrası yönlendirme
+    //     } catch (err) {
+    //         setError((err as Error).message);
+    //         console.error("Error during sign-in:", err);
+    //     }
+    // };
 
     const emailHeader = {
         en: 'Email',
@@ -84,7 +84,7 @@ const SignInForm: React.FC = () => {
         <div className="h-auto md:h-[90%] lg:w-[90%] w-full flex flex-col md:gap-3 gap-2 justify-center items-center bg-white sm:p-3 p-1 rounded-3xl border-[5px] border-black">
             <form
                 className="flex sm:flex-row flex-col gap-3 justify-center sm:items-end items-center w-full"
-                onSubmit={handleSignIn}
+            // onSubmit={handleSignIn}
             >
                 <div className="flex flex-col gap-2 sm:gap-0 sm:w-[35%] w-full items-center justify-center">
                     <label

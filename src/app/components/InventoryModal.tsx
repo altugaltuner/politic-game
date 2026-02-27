@@ -12,7 +12,7 @@ import internalSecBonus from '/public/bonuses/internalSecBonus.webp';
 import internationalBonus from '/public/bonuses/internationalBonus.webp';
 import publicBonus from '/public/bonuses/publicBonus.webp';
 import dice from "/public/bonuses/dice-icon.webp";
-import { auth } from '@/firebase';
+// import { auth } from '@/firebase';
 
 interface InventoryModalProps {
 
@@ -45,7 +45,7 @@ const InventoryModal = ({ openInventoryModal,
     const { language } = useLanguage(); // Dil context'ini kullan
     const { isDarkMode } = useTheme();
     const [diceLeft, setDiceLeft] = useState(6);
-    const user = auth.currentUser;
+    // const user = auth.currentUser;
 
     const [bonuses, setBonuses] = useState<Bonuses>({
         bonusAgricultural: 0,
@@ -67,16 +67,16 @@ const InventoryModal = ({ openInventoryModal,
 
 
 
-    // Firebase'den bonusları çek
-    useEffect(() => {
-        if (user) {
-            fetchUserBonuses(user.uid).then((userBonuses) => {
-                if (userBonuses) {
-                    setBonuses(userBonuses);
-                }
-            });
-        }
-    }, [user]);
+    // // Firebase'den bonusları çek
+    // useEffect(() => {
+    //     if (user) {
+    //         fetchUserBonuses(user.uid).then((userBonuses) => {
+    //             if (userBonuses) {
+    //                 setBonuses(userBonuses);
+    //             }
+    //         });
+    //     }
+    // }, [user]);
 
     const close = {
         en: 'Close',
@@ -100,35 +100,35 @@ const InventoryModal = ({ openInventoryModal,
         zh: '骰子倒计时 : ',
     };
 
-    const handleUseBonus = async (bonusType: BonusType) => {
-        if (user && bonuses[bonusType] > 0) {
-            const updatedValue = bonuses[bonusType] - 1;
+    // const handleUseBonus = async (bonusType: BonusType) => {
+    //     if (user && bonuses[bonusType] > 0) {
+    //         const updatedValue = bonuses[bonusType] - 1;
 
-            // Firebase'deki bonusu güncelle
-            await updateUserBonus(user.uid, bonusType, updatedValue);
+    //         // Firebase'deki bonusu güncelle
+    //         await updateUserBonus(user.uid, bonusType, updatedValue);
 
-            // Local state'i güncelle
-            setBonuses((prev) => ({
-                ...prev,
-                [bonusType]: updatedValue,
-            }));
-            // Bonus etkisini uygula
+    //         // Local state'i güncelle
+    //         setBonuses((prev) => ({
+    //             ...prev,
+    //             [bonusType]: updatedValue,
+    //         }));
+    //         // Bonus etkisini uygula
 
-            const typeMapping: { [key in BonusType]: string } = {
-                bonusAgricultural: "agriculture",
-                bonusBudget: "budget",
-                bonusInfrastructure: "infrastructure",
-                bonusSecurity: "security",
-                bonusInternational: "international",
-                bonusPublic: "public",
-            };
-            handleBonusEffect({ type: typeMapping[bonusType], value: 1 });
-        }
-    };
+    //         const typeMapping: { [key in BonusType]: string } = {
+    //             bonusAgricultural: "agriculture",
+    //             bonusBudget: "budget",
+    //             bonusInfrastructure: "infrastructure",
+    //             bonusSecurity: "security",
+    //             bonusInternational: "international",
+    //             bonusPublic: "public",
+    //         };
+    //         handleBonusEffect({ type: typeMapping[bonusType], value: 1 });
+    //     }
+    // };
 
-    if (user) {
-        initializeUserBonuses(user.uid);
-    }
+    // if (user) {
+    //     initializeUserBonuses(user.uid);
+    // }
 
     const bonusesText = {
         bonusAgricultural: {
@@ -193,23 +193,23 @@ const InventoryModal = ({ openInventoryModal,
         },
     }
 
-    const rollDice = async () => {
-        if (user) {
-            const bonusTypes = Object.keys(bonuses) as Array<keyof Bonuses>;
-            const randomBonus = bonusTypes[Math.floor(Math.random() * bonusTypes.length)];
+    // const rollDice = async () => {
+    //     if (user) {
+    //         const bonusTypes = Object.keys(bonuses) as Array<keyof Bonuses>;
+    //         const randomBonus = bonusTypes[Math.floor(Math.random() * bonusTypes.length)];
 
-            const updatedValue = bonuses[randomBonus] + 1;
+    //         const updatedValue = bonuses[randomBonus] + 1;
 
-            // Firebase ve local state'i güncelle
-            await updateUserBonus(user.uid, randomBonus, updatedValue);
-            setBonuses((prev) => ({
-                ...prev,
-                [randomBonus]: updatedValue,
-            }));
+    //         // Firebase ve local state'i güncelle
+    //         await updateUserBonus(user.uid, randomBonus, updatedValue);
+    //         setBonuses((prev) => ({
+    //             ...prev,
+    //             [randomBonus]: updatedValue,
+    //         }));
 
-            setDiceLeft((prev) => prev - 1);
-        }
-    };
+    //         setDiceLeft((prev) => prev - 1);
+    //     }
+    // };
 
     if (!openInventoryModal) return null;
 
@@ -240,7 +240,7 @@ const InventoryModal = ({ openInventoryModal,
                             <Button
                                 className={`${isDarkMode ? 'bg-white text-black border-white hover:bg-neutral-400' : ''
                                     }`}
-                                onClick={() => handleUseBonus(bonusType as keyof typeof bonuses)}
+                            // onClick={() => handleUseBonus(bonusType as keyof typeof bonuses)}
                             >
                                 Use
                             </Button>
@@ -251,7 +251,7 @@ const InventoryModal = ({ openInventoryModal,
                 <div className='flex flex-row gap-3 w-full justify-center items-center'>
                     <Button
                         className={`${diceLeft === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
-                        onClick={rollDice}
+                        // onClick={rollDice}
                         disabled={diceLeft === 0}
                     >
                         <p>Roll Dice for: {diceLeft}</p>

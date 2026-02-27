@@ -13,7 +13,7 @@ import { useVolume } from "@/contexts/VolumeContext";
 import LevelChangePage from "./LevelChangePage";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { doc, updateDoc } from "firebase/firestore";
-import { db, auth } from "@/firebase";
+// import { db, auth } from "@/firebase";
 
 type GameStatsProps = {
     agriculture: number;
@@ -57,7 +57,7 @@ interface Effects {
 }
 
 // Component for Game Stats
-export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level, setLevel, resetSelectedListIDs, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion, score, setScore }) => {
+export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion, score, setScore }) => {
 
     const [isVisible, setIsVisible] = useState(true);
     const { isDarkMode } = useTheme();
@@ -97,21 +97,21 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         }
     }, [level, currentLevel]);
 
-    const updateLevelInDatabase = async () => {
-        if (auth.currentUser) {
-            const userDocRef = doc(db, "users", auth.currentUser.uid);
-            try {
-                await updateDoc(userDocRef, { level: currentLevel });
-                //console.log("Level successfully updated in Firebase:", currentLevel);
-            } catch (error) {
-                console.error("Error updating level in Firebase:", error);
-            }
-        }
-    };
+    // const updateLevelInDatabase = async () => {
+    //     if (auth.currentUser) {
+    //         const userDocRef = doc(db, "users", auth.currentUser.uid);
+    //         try {
+    //             await updateDoc(userDocRef, { level: currentLevel });
+    //             //console.log("Level successfully updated in Firebase:", currentLevel);
+    //         } catch (error) {
+    //             console.error("Error updating level in Firebase:", error);
+    //         }
+    //     }
+    // };
 
-    useEffect(() => {
-        updateLevelInDatabase();
-    }, [currentLevel]);
+    // useEffect(() => {
+    //     updateLevelInDatabase();
+    // }, [currentLevel]);
 
     const handleLevelUp = () => {
         setIsLevelChangeVisible(true);
@@ -134,21 +134,21 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         preloadImages();
     }, []);
 
-    useEffect(() => {
-        const updateScoreInDatabase = async () => {
-            if (auth.currentUser && score !== undefined) {
-                const userDocRef = doc(db, "users", auth.currentUser.uid);
-                try {
-                    await updateDoc(userDocRef, { score });
-                    //console.log("Score successfully updated in Firebase:", score);
-                } catch (error) {
-                    console.error("Error updating score in Firebase:", error);
-                }
-            }
-        };
+    // useEffect(() => {
+    //     const updateScoreInDatabase = async () => {
+    //         if (auth.currentUser && score !== undefined) {
+    //             const userDocRef = doc(db, "users", auth.currentUser.uid);
+    //             try {
+    //                 await updateDoc(userDocRef, { score });
+    //                 //console.log("Score successfully updated in Firebase:", score);
+    //             } catch (error) {
+    //                 console.error("Error updating score in Firebase:", error);
+    //             }
+    //         }
+    //     };
 
-        updateScoreInDatabase();
-    }, [score]); // Sadece "score" değiştiğinde çalışır
+    //     updateScoreInDatabase();
+    // }, [score]); // Sadece "score" değiştiğinde çalışır
 
     const sounds = [
         "/sound-effects/breaking-news1.wav",
@@ -443,7 +443,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         });
 
         if (answer.listID) {
-            setSelectedListIDs(answer.listID); // Add new listID to the array
+            // setSelectedListIDs(answer.listID); // Add new listID to the array
             handleSelectedOptionModalOpen(); // Open the selected option modal
         }
 
@@ -486,30 +486,30 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         setDeathStat(null);
         metalButtonSound();
         setLastingEffects([]);
-        resetSelectedListIDs(); // Clear the filteredElements in ListElements
+        // resetSelectedListIDs(); // Clear the filteredElements in ListElements
 
         // Firebase'de skor güncellemesi
-        if (auth.currentUser) {
-            const userDocRef = doc(db, "users", auth.currentUser.uid);
-            try {
-                await updateDoc(userDocRef, { score: newScore }); // Firebase'e yaz
-                //console.log("Score updated in Firebase:", newScore);
-            } catch (error) {
-                console.error("Error updating score in Firebase:", error);
-            }
-        }
+        // if (auth.currentUser) {
+        //     const userDocRef = doc(db, "users", auth.currentUser.uid);
+        //     try {
+        //         await updateDoc(userDocRef, { score: newScore }); // Firebase'e yaz
+        //         //console.log("Score updated in Firebase:", newScore);
+        //     } catch (error) {
+        //         console.error("Error updating score in Firebase:", error);
+        //     }
+        // }
 
         //firebasede level güncellemesi
 
-        if (auth.currentUser) {
-            const userDocRef = doc(db, "users", auth.currentUser.uid);
-            try {
-                await updateDoc(userDocRef, { level: currentLevel }); // Firebase'e yaz
-                //console.log("Level updated in Firebase:", currentLevel);
-            } catch (error) {
-                console.error("Error updating level in Firebase:", error);
-            }
-        }
+        // if (auth.currentUser) {
+        //     const userDocRef = doc(db, "users", auth.currentUser.uid);
+        //     try {
+        //         await updateDoc(userDocRef, { level: currentLevel }); // Firebase'e yaz
+        //         //console.log("Level updated in Firebase:", currentLevel);
+        //     } catch (error) {
+        //         console.error("Error updating level in Firebase:", error);
+        //     }
+        // }
 
 
 

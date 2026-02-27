@@ -3,7 +3,7 @@ import { Settings, CircleUserRound } from "lucide-react";
 import { useTheme } from '@/contexts/ThemeContext';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { doc, getDoc } from "firebase/firestore";
-import { auth, db } from "@/firebase";
+// import { auth, db } from "@/firebase";
 
 interface SettingsAreaProps {
     handleOpenModal: () => void;
@@ -18,35 +18,35 @@ const SettingsArea: React.FC<SettingsAreaProps> = ({ handleOpenModal, modalOpen 
     const [loading, setLoading] = useState<boolean>(true); // Yüklenme durumu
 
 
-    const fetchUserData = async (uid: string) => {
-        try {
-            const docRef = doc(db, "users", uid);
-            const docSnap = await getDoc(docRef);
+    // const fetchUserData = async (uid: string) => {
+    //     try {
+    //         const docRef = doc(db, "users", uid);
+    //         const docSnap = await getDoc(docRef);
 
-            if (docSnap.exists()) {
-                //console.log("User data:", docSnap.data());
-                return docSnap.data(); // Kullanıcı verisini döndürür
-            } else {
-                console.log("No such document!");
-            }
-        } catch (error) {
-            console.error("Error fetching user data:", error);
-        }
-    };
+    //         if (docSnap.exists()) {
+    //             //console.log("User data:", docSnap.data());
+    //             return docSnap.data(); // Kullanıcı verisini döndürür
+    //         } else {
+    //             console.log("No such document!");
+    //         }
+    //     } catch (error) {
+    //         console.error("Error fetching user data:", error);
+    //     }
+    // };
 
-    useEffect(() => {
-        const unsubscribe = auth.onAuthStateChanged(async (user) => {
-            if (user) {
-                const userData = await fetchUserData(user.uid);
-                setUsername(userData?.username || "Guest");
-            } else {
-                setUsername("Guest");
-            }
-            setLoading(false); // Yüklenme durumu tamamlandı
-        });
+    // useEffect(() => {
+    //     const unsubscribe = auth.onAuthStateChanged(async (user) => {
+    //         if (user) {
+    //             const userData = await fetchUserData(user.uid);
+    //             setUsername(userData?.username || "Guest");
+    //         } else {
+    //             setUsername("Guest");
+    //         }
+    //         setLoading(false); // Yüklenme durumu tamamlandı
+    //     });
 
-        return () => unsubscribe(); // Aboneliği temizle
-    }, []);
+    //     return () => unsubscribe(); // Aboneliği temizle
+    // }, []);
 
     const profilim = {
         en: 'My Profile',
