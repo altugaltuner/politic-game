@@ -1,24 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Settings, CircleUserRound } from "lucide-react";
 import { useTheme } from '@/contexts/ThemeContext';
 import { useLanguage } from '@/contexts/LanguageContext';
-<<<<<<< HEAD
 import { doc, getDoc } from "firebase/firestore";
 // import { auth, db } from "@/firebase";
+import { myProfile, president } from '../exportedTexts/translatedTexts';
 
 interface SettingsAreaProps {
     handleOpenModal: () => void;
     modalOpen: boolean;
 }
-=======
-import { SettingsAreaProps } from '../types/types';
-import { myProfile, president } from '../exportedTexts/translatedTexts';
->>>>>>> 68287370593facc3815c1be4983db4e083c474d3
 
 const SettingsArea: React.FC<SettingsAreaProps> = ({ handleOpenModal, modalOpen }) => {
     const { language } = useLanguage();
     const { isDarkMode } = useTheme();
-<<<<<<< HEAD
     const [username, setUsername] = useState<string>(""); // Kullanıcı adı
 
     const [loading, setLoading] = useState<boolean>(true); // Yüklenme durumu
@@ -79,11 +74,9 @@ const SettingsArea: React.FC<SettingsAreaProps> = ({ handleOpenModal, modalOpen 
     if (loading) {
         return <div>Loading...</div>; // Yüklenme sırasında gösterilecek mesaj
     }
-=======
->>>>>>> 68287370593facc3815c1be4983db4e083c474d3
 
     return (
-        <div className={` ${isDarkMode ? 'border-white bg-[#0b1d2f] text-white' : 'border-[#0b1d2f] bg-white text-[#0b1d2f]'} text-start relative border-[3px] xl:order-1 order-2  rounded-lg sm:p-3 p-2 min-h-[150px]  w-full`}>
+        <div className={` ${isDarkMode ? 'border-white bg-black text-white' : 'border-black bg-white text-black'} text-start relative border-[3px] xl:order-1 order-2  rounded-lg sm:p-3 p-2 min-h-[150px]  w-full`}>
             <h2 className="text-xl font-semibold sm:mb-4 mb-2">{myProfile[language]}</h2>
             <div className='flex gap-2'>
                 <CircleUserRound size={75} />

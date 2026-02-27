@@ -135,7 +135,7 @@ const SignUpForm: React.FC = () => {
                 <div className="flex flex-col gap-3 sm:w-[25%] w-full justify-center items-center">
                     <button
                         type="submit"
-                        className="h-10 w-24 md:w-40 p-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-all"
+                        className="h-10 w-24 md:w-40 p-2 bg-primary text-white rounded-lg hover:bg-gray-800 transition-all"
                         onClick={handleSound}
                     >
                         {signUpHeader[language]}

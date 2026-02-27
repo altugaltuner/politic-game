@@ -1,13 +1,9 @@
 "use client";
-<<<<<<< HEAD
 
 import React, { createContext, useState, useEffect, useContext, ReactNode } from 'react';
 // import { auth, db } from "@/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
-=======
-import React, { createContext, useState, useContext, ReactNode } from 'react';
->>>>>>> 68287370593facc3815c1be4983db4e083c474d3
 
 interface User {
     id: string;
@@ -26,7 +22,6 @@ const UserContext = createContext<UserContextProps | undefined>(undefined);
 export const UserProvider = ({ children }: { children: ReactNode }) => {
     const [user, setUser] = useState<User | null>(null);
 
-<<<<<<< HEAD
     // useEffect(() => {
     //     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
     //         if (currentUser) {
@@ -53,8 +48,6 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     //     return () => unsubscribe();
     // }, []);
 
-=======
->>>>>>> 68287370593facc3815c1be4983db4e083c474d3
     return (
         <UserContext.Provider value={{ user, setUser }}>
             {children}

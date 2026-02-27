@@ -216,7 +216,7 @@ const InventoryModal = ({ openInventoryModal,
     const validBonusTypes = Object.keys(bonusesText);
 
     return (
-        <div onClick={() => setOpenInventoryModal(false)} className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 '>
+        <div onClick={() => setOpenInventoryModal(false)} className='fixed inset-0 flex items-center justify-center bg-primary bg-opacity-50 z-50 '>
             <div onClick={(e) => e.stopPropagation()} className={`relative flex flex-col ${isDarkMode ? 'bg-[rgb(17,17,17)] text-white border-white' : 'bg-white border-black text-black'} sm:p-5 p-3 rounded-lg w-[80%]  items-center gap-4 border-[5px] text-center `}>
                 <div className='absolute top-2 right-2'>
                     <p>{DiceCountdown[language]} 550NOT DI</p>

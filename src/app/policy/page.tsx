@@ -112,7 +112,7 @@ const PrivacyPolicy = () => {
                     If you have any questions about this Privacy Policy, You can contact us:
                 </p>
                 <ul className="list-disc list-inside text-gray-600 mt-4">
-                    <li>By email: <a href="mailto:altugaltuner6@gmail.com" className="text-blue-600 underline">altugaltuner6@gmail.com</a></li>
+                    <li>By email: <a href="mailto:altugaltuner6@gmail.com" className="text-black underline">altugaltuner6@gmail.com</a></li>
                 </ul>
             </div>
         </div>

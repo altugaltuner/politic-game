@@ -45,10 +45,10 @@ const SelectedOptionModal: React.FC<SelectedOptionModalProps> = ({ selectedOptio
     if (!selectedOptionModalOpen || !selectedElement) return null;
 
     return (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-            <div className="flex flex-col bg-white md:p-5 p-2 rounded-lg w-[90%] max-w-lg items-center gap-3 border-[5px] border-[#0b1d2f] text-center">
-                <div className="flex flex-col gap-3 p-2 border-[2px] rounded-xl border-[#0b1d2f] bg-white w-[100%] justify-center items-center">
-                    <h2 className="text-xl text-[#0b1d2f] font-bold mb-4 text-primary">{selectedElement.title[language]}</h2>
+        <div className="fixed inset-0 flex items-center justify-center bg-primary bg-opacity-50 z-50">
+            <div className="flex flex-col bg-white md:p-5 p-2 rounded-lg w-[90%] max-w-lg items-center gap-3 border-[5px] border-black text-center">
+                <div className="flex flex-col gap-3 p-2 border-[2px] rounded-xl border-black bg-white w-[100%] justify-center items-center">
+                    <h2 className="text-xl text-black font-bold mb-4">{selectedElement.title[language]}</h2>
                     <Image
                         width={1820} height={1024}
                         src={selectedElement.photo.src}
@@ -65,7 +65,7 @@ const SelectedOptionModal: React.FC<SelectedOptionModalProps> = ({ selectedOptio
                         </div>
                     )}
                 </div>
-                <Button className='bg-[#0b1d2f]' onClick={() => setSelectedOptionModalOpen(false)}>{close[language]}</Button>
+                <Button className='bg-primary' onClick={() => setSelectedOptionModalOpen(false)}>{close[language]}</Button>
             </div>
         </div>
     );

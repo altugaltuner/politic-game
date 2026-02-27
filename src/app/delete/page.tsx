@@ -12,7 +12,7 @@ const DeleteAccount = () => {
                     Send your account deletion request to:
                 </p>
                 <a href="mailto:altugaltuner6@gmail.com"
-                    className="text-blue-600 font-medium underline hover:text-blue-800"
+                    className="text-black font-medium underline hover:text-black"
                 >
                     altugaltuner6@gmail.com
                 </a>

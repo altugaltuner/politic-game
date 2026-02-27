@@ -12,8 +12,8 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { useVolume } from "@/contexts/VolumeContext";
 import LevelChangePage from "./LevelChangePage";
 import { useLanguage } from "@/contexts/LanguageContext";
-<<<<<<< HEAD
 import { doc, updateDoc } from "firebase/firestore";
+import { gameOverMessages, playAgain, daysInOffice, victoryMessage } from "../exportedTexts/translatedTexts";
 // import { db, auth } from "@/firebase";
 
 type GameStatsProps = {
@@ -59,12 +59,6 @@ interface Effects {
 
 // Component for Game Stats
 export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion, score, setScore }) => {
-=======
-import { GameStatsProps } from "../types/types";
-import { gameOverMessages, playAgain, daysInOffice, victoryMessage } from "../exportedTexts/translatedTexts";
-
-export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level, setLevel, resetSelectedListIDs, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion, score, setScore }) => {
->>>>>>> 68287370593facc3815c1be4983db4e083c474d3
 
     const [isVisible, setIsVisible] = useState(true);
     const { isDarkMode } = useTheme();
@@ -97,7 +91,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         if (currentLevel !== level) {
             setLevel(currentLevel);
         }
-<<<<<<< HEAD
     }, [level, currentLevel]);
 
     // const updateLevelInDatabase = async () => {
@@ -115,9 +108,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
     // useEffect(() => {
     //     updateLevelInDatabase();
     // }, [currentLevel]);
-=======
-    }, [level, setLevel, currentLevel]);
->>>>>>> 68287370593facc3815c1be4983db4e083c474d3
 
     const handleLevelUp = () => {
         setIsLevelChangeVisible(true);
@@ -126,7 +116,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         }, 4000);
     };
 
-<<<<<<< HEAD
     useEffect(() => {
         // Tüm soruların fotoğraflarını önceden yükleyin
         const preloadImages = () => {
@@ -156,8 +145,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
     //     updateScoreInDatabase();
     // }, [score]); // Sadece "score" değiştiğinde çalışır
 
-=======
->>>>>>> 68287370593facc3815c1be4983db4e083c474d3
     const sounds = [
         "/sound-effects/breaking-news1.wav",
         "/sound-effects/breaking-news2.wav",
@@ -203,13 +190,14 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         if (isModalOpen) {
             playRandomBreakingNewsSound();
         }
-    }, [isModalOpen,playRandomBreakingNewsSound]);
+    }, [isModalOpen, playRandomBreakingNewsSound]);
 
     const [usedQuestions, setUsedQuestions] = useState<number[]>([allQuestions[0].id]);
 
     const [gameOver, setGameOver] = useState(false);
     const [gameOverReason, setGameOverReason] = useState("");
     const [deathStat, setDeathStat] = useState<string | null>(null);
+    const [deathImageSrc, setDeathImageSrc] = useState("/images/logo.webp");
 
 
     useEffect(() => {
@@ -321,6 +309,12 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         }
     }, [publicOpinion, internalSecurity, international, budget, infrastructure, agriculture, score]);
 
+    useEffect(() => {
+        if (deathStat) {
+            setDeathImageSrc(`/images/${deathStat}.webp`);
+        }
+    }, [deathStat]);
+
     const answerQuestion = (direction: "left" | "right") => {
         metalButtonSound();
 
@@ -338,13 +332,8 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
             setBudget
         });
         if (answer.listID) {
-<<<<<<< HEAD
             // setSelectedListIDs(answer.listID); // Add new listID to the array
             handleSelectedOptionModalOpen(); // Open the selected option modal
-=======
-            setSelectedListIDs(answer.listID);
-            handleSelectedOptionModalOpen();
->>>>>>> 68287370593facc3815c1be4983db4e083c474d3
         }
 
         setIsVisible(false);
@@ -381,7 +370,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
         setDeathStat(null);
         metalButtonSound();
         setLastingEffects([]);
-<<<<<<< HEAD
         // resetSelectedListIDs(); // Clear the filteredElements in ListElements
 
         // Firebase'de skor güncellemesi
@@ -409,9 +397,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
 
 
 
-=======
-        resetSelectedListIDs();
->>>>>>> 68287370593facc3815c1be4983db4e083c474d3
         metalButtonSound();
     };
 
@@ -441,24 +426,25 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                 <div className="question-container visible text-center bg-white sm:p-2 p-2 rounded-lg border-black border-[3px] w-full flex flex-col justify-start items-center">
 
                     <div className="flex justify-start items-center md:text-base sm:text-sm min-h-[75px] flex-col w-[90%] text-xs gap-2">
-                        <h1 className="bg-primary text-white py-1 px-2 rounded-md ">{gameOverReason}</h1>
-                        <p className="bg-primary text-white py-1 px-2 rounded-md ">{daysInOffice[language]} : <span>{usedQuestions.length - 1}</span> </p>
+                        <h1 className="bg-black text-white py-1 px-2 rounded-md ">{gameOverReason}</h1>
+                        <p className="bg-black text-white py-1 px-2 rounded-md ">{daysInOffice[language]} : <span>{usedQuestions.length - 1}</span> </p>
                     </div>
                     <div className="flex flex-col items-center mt-2 gap-2 justify-center">
                         {deathStat && (
                             <Image
-                                src={`/images/${deathStat}.webp`}
+                                src={deathImageSrc}
                                 width={1820}
                                 height={1024}
                                 alt="Oyun Bitti"
                                 className="w-full lg:h-[22rem] rounded-lg"
+                                onError={() => setDeathImageSrc("/images/logo.webp")}
                             />
                         )}
                     </div>
 
                 </div>
-                <div className={`${isDarkMode ? ' bg-[rgb(17,17,17)]  border-white' : 'bg-white border-black'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 sm:gap-2 gap-1 sm:p-2.5 p-1 items-center `}>
-                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-[#555555] active:bg-black text-md" onClick={restartGame}>
+                <div className={`${isDarkMode ? ' bg-primary  border-white' : 'bg-white border-black'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 sm:gap-2 gap-1 sm:p-2.5 p-1 items-center `}>
+                    <Button className="w-44 h-auto transform transition duration-300 ease-in-out hover:bg-black active:bg-black text-md" onClick={restartGame}>
                         {playAgain[language]}
                     </Button>
                 </div>
@@ -480,8 +466,8 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                     deathLayerStat={null}
                 />
 
-                <div className={` ${isDarkMode ? 'border-white bg-[rgb(17,17,17)]' : 'border-black bg-white'} text-center sm:p-2 p-1 rounded-lg relative border-[3px] flex flex-col justify-start items-center w-full`}>
-                    <h1 className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-black'} bg-primary py-1 px-2 rounded-md w-[90%] text-md`}>{victoryMessage[language]}
+                <div className={` ${isDarkMode ? 'border-white bg-primary' : 'border-black bg-white'} text-center sm:p-2 p-1 rounded-lg relative border-[3px] flex flex-col justify-start items-center w-full`}>
+                    <h1 className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-primary'} bg-primary py-1 px-2 rounded-md w-[90%] text-md`}>{victoryMessage[language]}
                     </h1>
                     <div className="question-container visible flex flex-col items-center mt-2 gap-2 justify-center">
                         <Image src={ataturk} alt="Oyun Bitti" className="w-full lg:h-[22rem] rounded-lg" />
@@ -527,7 +513,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
             />
 
             {currentQuestion ? (
-                <div className={` ${isDarkMode ? 'border-white bg-[#0b1d2f]' : 'border-black bg-white'}  text-center sm:p-2 p-1 rounded-lg relative border-[3px] border-[#0b1d2f] flex flex-col justify-start items-center w-full`}>
+                <div className={` ${isDarkMode ? 'border-white bg-primary' : 'border-black bg-white'}  text-center sm:p-2 p-1 rounded-lg relative border-[3px] border-black flex flex-col justify-start items-center w-full`}>
 
                     <div className={`question-container ${isVisible ? 'visible' : ''}  flex justify-start items-center font-aldrich md:text-base text-sm min-h-[75px] flex-col w-[90%]`}>
                         <ReactTyped
@@ -535,7 +521,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                             typeSpeed={10}
                             showCursor={false}
                             loop={false}
-                            className={`${isDarkMode ? ' bg-white text-[#0b1d2f]' : 'text-white bg-[#0b1d2f]'} bg-primary py-1 px-2 rounded-md w-full md:text-lg text-base sm:min-h-[50px]`}
+                            className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-primary'}  py-1 px-2 rounded-md w-full md:text-lg text-base sm:min-h-[50px]`}
                         />
                     </div>
 
@@ -554,7 +540,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                                 alt={currentQuestion.title}
                                 className="lg:w-full sm:w-[70%] w-[90%] lg:h-[22rem] rounded-lg"
                             />
-                            <p className={`${isDarkMode ? ' bg-white text-[#0b1d2f]' : 'text-white bg-[#0b1d2f]'} font-medium md:text-xl text-sm bg-primary  px-2 rounded-lg`}>{currentQuestion.title}</p>
+                            <p className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-primary'} font-medium md:text-xl text-sm bg-primary  px-2 rounded-lg`}>{currentQuestion.title}</p>
                         </div>
                     )}
                 </div>
@@ -563,9 +549,9 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
             )}
 
             {currentQuestion && (
-                <div className={`${isDarkMode ? ' bg-[rgb(17,17,17)]  border-white' : 'bg-white border-[#0b1d2f]'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 sm:gap-2 gap-1 sm:p-2.5 p-1 items-center lg:min-h-16 min-h-24 `}>
+                <div className={`${isDarkMode ? ' bg-primary  border-white' : 'bg-white border-black'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 sm:gap-2 gap-1 sm:p-2.5 p-1 items-center lg:min-h-16 min-h-24 `}>
                     <Button
-                        className={`${isDarkMode ? ' bg-white  border-[#0b1d2f] text-[#0b1d2f]' : 'hover:bg-[#06111c] active:bg-black bg-[#0b1d2f] '} xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out  text-md min-h-[44px]`}
+                        className={`${isDarkMode ? ' bg-white  border-black text-black' : 'hover:bg-black active:bg-black bg-primary '} xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out  text-md min-h-[44px]`}
                         onClick={() => answerQuestion("left")}
                     >
                         <ReactTyped
@@ -577,7 +563,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ setSelectedListIDs, level,
                     </Button>
 
                     <Button
-                        className={`${isDarkMode ? ' bg-white  border-[#0b1d2f] text-[#0b1d2f]' : 'hover:bg-[#06111c] active:bg-black bg-[#0b1d2f] '} xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out text-md min-h-[44px]`}
+                        className={`${isDarkMode ? ' bg-white  border-black text-black' : 'hover:bg-black active:bg-black bg-primary '} xl:w-[90%] w-full h-auto transform transition duration-300 ease-in-out text-md min-h-[44px]`}
                         onClick={() => answerQuestion("right")}
                     >
                         <ReactTyped
