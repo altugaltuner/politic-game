@@ -33,68 +33,72 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
     };
 
     return (
-        <div onClick={() => setModalOpenFunc()} className='fixed inset-0 flex items-center justify-center bg-primary bg-opacity-50 z-50 '>
-            <div onClick={(e) => e.stopPropagation()} className={`flex flex-col ${isDarkMode ? 'bg-black text-white border-white' : 'bg-white border-black text-black'} sm:p-5 p-3 rounded-lg w-[90%] max-w-lg items-center gap-4 border-[5px]  text-center`}>
-                <h1 className='font-semibold text-2xl'>{header[language]}</h1>
-                <div className='flex sm:gap-6 gap-1 w-full justify-center'>
-                    <div className={`flex gap-1 flex-col items-center border-[2px] rounded-lg ${isDarkMode ? 'bg-black text-white border-white' : 'bg-white text-black border-black'} p-2`}>
-                        <p>{voice[language]}</p>
-                        {getVolumeIcon()}
-                        <input
-                            type="range"
-                            min="0"
-                            max="1"
-                            step="0.01"
-                            value={volume}
-                            onChange={handleVolumeChange}
-                            className="w-16 mt-2 cursor-pointer"
-                        />
+        <div className='fixed inset-0 flex items-center justify-center bg-primary bg-opacity-50 z-50 '>
+            <button onClick={() => setModalOpenFunc()}>
+                <div className={`flex flex-col ${isDarkMode ? 'bg-black text-white border-white' : 'bg-white border-black text-black'} sm:p-5 p-3 rounded-lg w-[90%] max-w-lg items-center gap-4 border-[5px]  text-center`}>
+                    <button onClick={(e) => e.stopPropagation()}>
+                        <h1 className='font-semibold text-2xl'>{header[language]}</h1>
+                        <div className='flex sm:gap-6 gap-1 w-full justify-center'>
+                            <div className={`flex gap-1 flex-col items-center border-[2px] rounded-lg ${isDarkMode ? 'bg-black text-white border-white' : 'bg-white text-black border-black'} p-2`}>
+                                <p>{voice[language]}</p>
+                                {getVolumeIcon()}
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="1"
+                                    step="0.01"
+                                    value={volume}
+                                    onChange={handleVolumeChange}
+                                    className="w-16 mt-2 cursor-pointer"
+                                />
 
-                        <p>{Math.round(volume * 100)}%</p>
-                    </div>
-                    <div className={`flex gap-1 flex-col items-center border-[2px] rounded-lg ${isDarkMode ? 'bg-black text-white border-white' : 'bg-white text-black border-black'} p-2`}>
-                        <p>{music[language]}</p>
-                        <Music size={32} />
-                    </div>
-                </div>
-                <div className='w-full flex gap-5 justify-center items-end'>
-
-                    <div className="relative">
-                        <p className='mb-2'>{selectLanguage[language]}</p>
-                        <button
-                            className="p-2 border rounded w-[200px] text-left"
-                            onClick={() => setDropdownOpen(!dropdownOpen)}
-                        >
-                            {languages.find((lang) => lang.value === language)?.label || 'Select Language'}
-                        </button>
-                        {dropdownOpen && (
-                            <div
-                                className={`absolute top-16 left-0 w-[200px] max-h-40 overflow-y-scroll rounded-lg shadow-lg border z-10 ${isDarkMode ? 'bg-black text-white' : 'bg-[rgba(255,255,255,1)] text-black'
-                                    }`}
-                            >
-                                {languages.map((lang) => (
-                                    <div
-                                        key={lang.value}
-                                        className="p-2 hover:bg-neutral-300 cursor-pointer"
-                                        onClick={() => {
-                                            setLanguage(lang.value as 'en' | 'tr');
-                                            setDropdownOpen(false);
-                                        }}
-                                    >
-                                        {lang.label}
-                                    </div>
-                                ))}
+                                <p>{Math.round(volume * 100)}%</p>
                             </div>
-                        )}
-                    </div>
-                    <div className='h-full flex flex-col gap-2'>
-                        <p>{resetGame[language]}</p>
-                        <Button disabled>{reset[language]}</Button>
-                    </div>
+                            <div className={`flex gap-1 flex-col items-center border-[2px] rounded-lg ${isDarkMode ? 'bg-black text-white border-white' : 'bg-white text-black border-black'} p-2`}>
+                                <p>{music[language]}</p>
+                                <Music size={32} />
+                            </div>
+                        </div>
+                        <div className='w-full flex gap-5 justify-center items-end'>
 
+                            <div className="relative">
+                                <p className='mb-2'>{selectLanguage[language]}</p>
+                                <button
+                                    className="p-2 border rounded w-[200px] text-left"
+                                    onClick={() => setDropdownOpen(!dropdownOpen)}
+                                >
+                                    {languages.find((lang) => lang.value === language)?.label || 'Select Language'}
+                                </button>
+                                {dropdownOpen && (
+                                    <div
+                                        className={`absolute top-16 left-0 w-[200px] max-h-40 overflow-y-scroll rounded-lg shadow-lg border z-10 ${isDarkMode ? 'bg-black text-white' : 'bg-[rgba(255,255,255,1)] text-black'
+                                            }`}
+                                    >
+                                        {languages.map((lang) => (
+                                            <div
+                                                key={lang.value}
+                                                className="p-2 hover:bg-neutral-300 cursor-pointer"
+                                                onClick={() => {
+                                                    setLanguage(lang.value as 'en' | 'tr');
+                                                    setDropdownOpen(false);
+                                                }}
+                                            >
+                                                {lang.label}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                            <div className='h-full flex flex-col gap-2'>
+                                <p>{resetGame[language]}</p>
+                                <Button disabled>{reset[language]}</Button>
+                            </div>
+
+                        </div>
+                        <Button className={`${isDarkMode ? 'bg-white text-black border-white hover:bg-neutral-400' : 'bg-black'}`} onClick={() => setModalOpenFunc()}>{close[language]}</Button>
+                    </button>
                 </div>
-                <Button className={`${isDarkMode ? 'bg-white text-black border-white hover:bg-neutral-400' : 'bg-black'}`} onClick={() => setModalOpenFunc()}>{close[language]}</Button>
-            </div>
+            </button>
         </div>
     );
 };

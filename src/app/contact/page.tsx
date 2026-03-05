@@ -5,7 +5,7 @@ const Contactpage = () => {
 
     const info = {
         name: 'Altuğ Altuner',
-        location: 'Düzce, Türkiye',
+        location: 'İstanbul, Türkiye',
         email: 'altugaltuner6@gmail.com',
         linkedin: 'https://www.linkedin.com/in/altug-altuner/',
         github: "https://github.com/altugaltuner",
@@ -15,23 +15,23 @@ const Contactpage = () => {
     return (
         <div className='flex w-full justify-center sm:p-3 p-1'>
             <div className='h-auto sm:w-[90%] w-[95%] flex flex-col items-center bg-white sm:p-5 p-2 rounded-3xl border-[5px] border-black gap-3'>
-                <h1 className="font-bold xl:text-[50px] lg:text-[40px] text-[30px]">İletişim</h1>
+                <h1 className="font-bold xl:text-[50px] lg:text-[40px] text-[30px]">Contact</h1>
                 <div className='flex lg:flex-row flex-col-reverse sm:gap-4 gap-2 w-full'>
                     <div className='flex flex-col items-start h-full lg:w-[50%] w-full bg-white sm:p-5 p-2 rounded-3xl border-[3px] border-black sm:gap-3 gap-1'>
                         <div className='bg-white  p-2 rounded-xl border-[2px] border-black'>
-                            <p className='sm:text-base text-sm'><b>Oyunun Kurucusu :</b> {info.name}</p>
+                            <p className='sm:text-base text-sm'><b>Game Founder :</b> {info.name}</p>
                         </div>
                         <div className='bg-white p-2 rounded-xl border-[2px] border-black'>
-                            <p className='sm:text-base text-sm'><b>Konum : </b>{info.location}</p>
+                            <p className='sm:text-base text-sm'><b>Location : </b>{info.location}</p>
                         </div>
                         <div className='bg-white p-2 rounded-xl border-[2px] border-black'>
                             <p className='sm:text-base text-sm'><b>E-mail : </b>{info.email}</p>
                         </div>
                         <div className='bg-white p-2 rounded-xl border-[2px] border-black'>
-                            <a className='sm:text-base text-sm whitespace-normal break-all overflow-hidden' href='https://www.linkedin.com/in/altug-altuner/' target="_blank"><b>Linkedin : </b>{info.linkedin}</a>
+                            <a className='sm:text-base text-sm whitespace-normal break-all overflow-hidden' href='https://www.linkedin.com/in/altug-altuner/' target="_blank"><b>LinkedIn : </b>{info.linkedin}</a>
                         </div>
                         <div className='bg-white p-2 rounded-xl border-[2px] border-black'>
-                            <a className='sm:text-base text-sm  whitespace-normal break-all overflow-hidden' href='https://github.com/altugaltuner' target="_blank"><b>Github : </b>{info.github}</a>
+                            <a className='sm:text-base text-sm  whitespace-normal break-all overflow-hidden' href='https://github.com/altugaltuner' target="_blank"><b>GitHub : </b>{info.github}</a>
                         </div>
                         <div className='bg-white p-2 rounded-xl border-[2px] border-black'>
                             <a className='sm:text-base text-sm  whitespace-normal break-all overflow-hidden' href='https://www.instagram.com/altugaltuner/' target="_blank"><b>Instagram : </b>{info.instagram}</a>

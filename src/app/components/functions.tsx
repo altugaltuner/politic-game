@@ -27,171 +27,49 @@ const convertPhotoToString = (questions: Question[]): Question[] => {
     }));
 };
 
-export const allQuestionsByLanguage: Record<string, Question[]> = {
-    en: [
-        ...convertPhotoToString(adaletQuestions.en),
-        ...convertPhotoToString(aileQuestions.en),
-        ...convertPhotoToString(calismaQuestions.en),
-        ...convertPhotoToString(cevreQuestions.en),
-        ...convertPhotoToString(disisleriQuestions.en),
-        ...convertPhotoToString(egitimQuestions.en),
-        ...convertPhotoToString(enerjiQuestions.en),
-        ...convertPhotoToString(genclikQuestions.en),
-        ...convertPhotoToString(hazineQuestions.en),
-        ...convertPhotoToString(icisleriQuestions.en),
-        ...convertPhotoToString(saglikQuestions.en),
-        ...convertPhotoToString(sanayiQuestions.en),
-        ...convertPhotoToString(savunmaQuestions.en),
-        ...convertPhotoToString(tarimQuestions.en),
-        ...convertPhotoToString(ticaretQuestions.en),
-        ...convertPhotoToString(ulastirmaQuestions.en),
-        ...convertPhotoToString(turizmQuestions.en),
-        ...convertPhotoToString(nonMinisters.en),
-    ],
-    tr: [
-        ...convertPhotoToString(adaletQuestions.tr),
-        ...convertPhotoToString(aileQuestions.tr),
-        ...convertPhotoToString(calismaQuestions.tr),
-        ...convertPhotoToString(cevreQuestions.tr),
-        ...convertPhotoToString(disisleriQuestions.tr),
-        ...convertPhotoToString(egitimQuestions.tr),
-        ...convertPhotoToString(enerjiQuestions.tr),
-        ...convertPhotoToString(genclikQuestions.tr),
-        ...convertPhotoToString(hazineQuestions.tr),
-        ...convertPhotoToString(icisleriQuestions.tr),
-        ...convertPhotoToString(saglikQuestions.tr),
-        ...convertPhotoToString(sanayiQuestions.tr),
-        ...convertPhotoToString(savunmaQuestions.tr),
-        ...convertPhotoToString(tarimQuestions.tr),
-        ...convertPhotoToString(ticaretQuestions.tr),
-        ...convertPhotoToString(ulastirmaQuestions.tr),
-        ...convertPhotoToString(turizmQuestions.tr),
-        ...convertPhotoToString(nonMinisters.tr),
-    ],
-    de: [
-        ...convertPhotoToString(adaletQuestions.de),
-        ...convertPhotoToString(aileQuestions.de),
-        ...convertPhotoToString(calismaQuestions.de),
-        ...convertPhotoToString(cevreQuestions.de),
-        ...convertPhotoToString(disisleriQuestions.de),
-        ...convertPhotoToString(egitimQuestions.de),
-        ...convertPhotoToString(enerjiQuestions.de),
-        ...convertPhotoToString(genclikQuestions.de),
-        ...convertPhotoToString(hazineQuestions.de),
-        ...convertPhotoToString(icisleriQuestions.de),
-        ...convertPhotoToString(saglikQuestions.de),
-        ...convertPhotoToString(sanayiQuestions.de),
-        ...convertPhotoToString(savunmaQuestions.de),
-        ...convertPhotoToString(tarimQuestions.de),
-        ...convertPhotoToString(ticaretQuestions.de),
-        ...convertPhotoToString(ulastirmaQuestions.de),
-        ...convertPhotoToString(turizmQuestions.de),
-        ...convertPhotoToString(nonMinisters.de),
-    ],
-    fr: [
-        ...convertPhotoToString(adaletQuestions.fr),
-        ...convertPhotoToString(aileQuestions.fr),
-        ...convertPhotoToString(calismaQuestions.fr),
-        ...convertPhotoToString(cevreQuestions.fr),
-        ...convertPhotoToString(disisleriQuestions.fr),
-        ...convertPhotoToString(egitimQuestions.fr),
-        ...convertPhotoToString(enerjiQuestions.fr),
-        ...convertPhotoToString(genclikQuestions.fr),
-        ...convertPhotoToString(hazineQuestions.fr),
-        ...convertPhotoToString(icisleriQuestions.fr),
-        ...convertPhotoToString(saglikQuestions.fr),
-        ...convertPhotoToString(sanayiQuestions.fr),
-        ...convertPhotoToString(savunmaQuestions.fr),
-        ...convertPhotoToString(tarimQuestions.fr),
-        ...convertPhotoToString(ticaretQuestions.fr),
-        ...convertPhotoToString(ulastirmaQuestions.fr),
-        ...convertPhotoToString(turizmQuestions.fr),
-        ...convertPhotoToString(nonMinisters.fr),
-    ],
-    pt: [
-        ...convertPhotoToString(adaletQuestions.pt),
-        ...convertPhotoToString(aileQuestions.pt),
-        ...convertPhotoToString(calismaQuestions.pt),
-        ...convertPhotoToString(cevreQuestions.pt),
-        ...convertPhotoToString(disisleriQuestions.pt),
-        ...convertPhotoToString(egitimQuestions.pt),
-        ...convertPhotoToString(enerjiQuestions.pt),
-        ...convertPhotoToString(genclikQuestions.pt),
-        ...convertPhotoToString(hazineQuestions.pt),
-        ...convertPhotoToString(icisleriQuestions.pt),
-        ...convertPhotoToString(saglikQuestions.pt),
-        ...convertPhotoToString(sanayiQuestions.pt),
-        ...convertPhotoToString(savunmaQuestions.pt),
-        ...convertPhotoToString(tarimQuestions.pt),
-        ...convertPhotoToString(ticaretQuestions.pt),
-        ...convertPhotoToString(ulastirmaQuestions.pt),
-        ...convertPhotoToString(turizmQuestions.pt),
-        ...convertPhotoToString(nonMinisters.pt),
-    ],
-    zh: [
-        ...convertPhotoToString(adaletQuestions.zh),
-        ...convertPhotoToString(aileQuestions.zh),
-        ...convertPhotoToString(calismaQuestions.zh),
-        ...convertPhotoToString(cevreQuestions.zh),
-        ...convertPhotoToString(disisleriQuestions.zh),
-        ...convertPhotoToString(egitimQuestions.zh),
-        ...convertPhotoToString(enerjiQuestions.zh),
-        ...convertPhotoToString(genclikQuestions.zh),
-        ...convertPhotoToString(hazineQuestions.zh),
-        ...convertPhotoToString(icisleriQuestions.zh),
-        ...convertPhotoToString(saglikQuestions.zh),
-        ...convertPhotoToString(sanayiQuestions.zh),
-        ...convertPhotoToString(savunmaQuestions.zh),
-        ...convertPhotoToString(tarimQuestions.zh),
-        ...convertPhotoToString(ticaretQuestions.zh),
-        ...convertPhotoToString(ulastirmaQuestions.zh),
-        ...convertPhotoToString(turizmQuestions.zh),
-        ...convertPhotoToString(nonMinisters.zh),
-    ],
-    es: [
-        ...convertPhotoToString(adaletQuestions.es),
-        ...convertPhotoToString(aileQuestions.es),
-        ...convertPhotoToString(calismaQuestions.es),
-        ...convertPhotoToString(cevreQuestions.es),
-        ...convertPhotoToString(disisleriQuestions.es),
-        ...convertPhotoToString(egitimQuestions.es),
-        ...convertPhotoToString(enerjiQuestions.es),
-        ...convertPhotoToString(genclikQuestions.es),
-        ...convertPhotoToString(hazineQuestions.es),
-        ...convertPhotoToString(icisleriQuestions.es),
-        ...convertPhotoToString(saglikQuestions.es),
-        ...convertPhotoToString(sanayiQuestions.es),
-        ...convertPhotoToString(savunmaQuestions.es),
-        ...convertPhotoToString(tarimQuestions.es),
-        ...convertPhotoToString(ticaretQuestions.es),
-        ...convertPhotoToString(ulastirmaQuestions.es),
-        ...convertPhotoToString(turizmQuestions.es),
-        ...convertPhotoToString(nonMinisters.es),
-    ],
-    ru: [
-        ...convertPhotoToString(adaletQuestions.ru),
-        ...convertPhotoToString(aileQuestions.ru),
-        ...convertPhotoToString(calismaQuestions.ru),
-        ...convertPhotoToString(cevreQuestions.ru),
-        ...convertPhotoToString(disisleriQuestions.ru),
-        ...convertPhotoToString(egitimQuestions.ru),
-        ...convertPhotoToString(enerjiQuestions.ru),
-        ...convertPhotoToString(genclikQuestions.ru),
-        ...convertPhotoToString(hazineQuestions.ru),
-        ...convertPhotoToString(icisleriQuestions.ru),
-        ...convertPhotoToString(saglikQuestions.ru),
-        ...convertPhotoToString(sanayiQuestions.ru),
-        ...convertPhotoToString(savunmaQuestions.ru),
-        ...convertPhotoToString(tarimQuestions.ru),
-        ...convertPhotoToString(ticaretQuestions.ru),
-        ...convertPhotoToString(ulastirmaQuestions.ru),
-        ...convertPhotoToString(turizmQuestions.ru),
-        ...convertPhotoToString(nonMinisters.ru),
-    ],
+const SUPPORTED_LANGUAGES = ["en", "tr", "de", "fr", "pt", "zh", "es", "ru"] as const;
+
+type QuestionsByLanguageSource = Record<string, Question[]>;
+
+const QUESTION_SOURCES: QuestionsByLanguageSource[] = [
+    adaletQuestions,
+    aileQuestions,
+    calismaQuestions,
+    cevreQuestions,
+    disisleriQuestions,
+    egitimQuestions,
+    enerjiQuestions,
+    genclikQuestions,
+    hazineQuestions,
+    icisleriQuestions,
+    saglikQuestions,
+    sanayiQuestions,
+    savunmaQuestions,
+    tarimQuestions,
+    ticaretQuestions,
+    ulastirmaQuestions,
+    turizmQuestions,
+    nonMinisters,
+];
+
+const buildQuestionsByLanguage = (): Record<string, Question[]> => {
+    const result: Record<string, Question[]> = {};
+
+    SUPPORTED_LANGUAGES.forEach((language) => {
+        result[language] = QUESTION_SOURCES.flatMap((source) =>
+            convertPhotoToString(source[language] ?? [])
+        );
+    });
+
+    return result;
 };
 
+export const allQuestionsByLanguage: Record<string, Question[]> = buildQuestionsByLanguage();
+
 export const getRandomQuestionByLevel = (usedQuestions: number[], currentLevel: number, language: string) => {
-    const availableQuestions = allQuestionsByLanguage[language].filter(
+    const questionsForLanguage = allQuestionsByLanguage[language] ?? allQuestionsByLanguage.en;
+
+    const availableQuestions = questionsForLanguage.filter(
         (q) =>
             q.id !== undefined &&
             !usedQuestions.includes(q.id) &&
@@ -207,6 +85,33 @@ export const getRandomQuestionByLevel = (usedQuestions: number[], currentLevel: 
 };
 
 
+type EffectKey =
+    | "publicSupport"
+    | "internalSecurity"
+    | "internationalRelations"
+    | "budget"
+    | "infrastructureAndEnvironment"
+    | "agriculturalProduction";
+
+type SetterKey =
+    | "setPublicOpinion"
+    | "setInternalSecurity"
+    | "setInternational"
+    | "setBudget"
+    | "setInfrastructure"
+    | "setAgriculture";
+
+const clamp = (value: number) => Math.min(100, Math.max(0, value));
+
+const EFFECT_TO_SETTER: Array<{ effectKey: EffectKey; setterKey: SetterKey }> = [
+    { effectKey: "publicSupport", setterKey: "setPublicOpinion" },
+    { effectKey: "internalSecurity", setterKey: "setInternalSecurity" },
+    { effectKey: "internationalRelations", setterKey: "setInternational" },
+    { effectKey: "budget", setterKey: "setBudget" },
+    { effectKey: "infrastructureAndEnvironment", setterKey: "setInfrastructure" },
+    { effectKey: "agriculturalProduction", setterKey: "setAgriculture" },
+];
+
 export const updateStats = (
     effect: {
         publicSupport?: number;
@@ -219,24 +124,13 @@ export const updateStats = (
     },
     setFunctions: SetFunctions
 ) => {
-    if (typeof effect.publicSupport === "number") {
-        setFunctions.setPublicOpinion((prev) => Math.min(100, Math.max(0, prev + (effect.publicSupport ?? 0))));
-    }
-    if (typeof effect.internalSecurity === "number") {
-        setFunctions.setInternalSecurity((prev) => Math.min(100, Math.max(0, prev + (effect.internalSecurity ?? 0))));
-    }
-    if (typeof effect.internationalRelations === "number") {
-        setFunctions.setInternational((prev) => Math.min(100, Math.max(0, prev + (effect.internationalRelations ?? 0))));
-    }
-    if (typeof effect.budget === "number") {
-        setFunctions.setBudget((prev) => Math.min(100, Math.max(0, prev + (effect.budget ?? 0))));
-    }
-    if (typeof effect.infrastructureAndEnvironment === "number") {
-        setFunctions.setInfrastructure((prev) => Math.min(100, Math.max(0, prev + (effect.infrastructureAndEnvironment ?? 0))));
-    }
-    if (typeof effect.agriculturalProduction === "number") {
-        setFunctions.setAgriculture((prev) => Math.min(100, Math.max(0, prev + (effect.agriculturalProduction ?? 0))));
-    }
+    EFFECT_TO_SETTER.forEach(({ effectKey, setterKey }) => {
+        const delta = effect[effectKey];
+        if (typeof delta !== "number") return;
+
+        const setter = setFunctions[setterKey];
+        setter((prev) => clamp(prev + delta));
+    });
 };
 
 export const checkGameOver = (

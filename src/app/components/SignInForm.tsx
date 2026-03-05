@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useUser } from '@/contexts/UserContext'; // UserContext'i kullanın
+import { useUser } from '@/contexts/UserContext';
+import { emailHeader, passwordHeader, signInHeader } from '../exportedTexts/translatedTexts';
 
 const SignInForm: React.FC = () => {
     const [email, setEmail] = useState('');
@@ -9,46 +10,12 @@ const SignInForm: React.FC = () => {
     const [error,] = useState('');
     useRouter();
     const { language } = useLanguage();
-    useUser(); // Kullanıcı bilgilerini ayarlamak için setUser
-
-    const emailHeader = {
-        en: 'Email',
-        tr: 'E-Posta',
-        de: 'E-Mail',
-        es: 'Correo electrónico',
-        fr: 'Email',
-        pt: 'O email',
-        ru: 'Электронная почта',
-        zh: '电子邮件',
-    };
-
-    const passwordHeader = {
-        en: 'Password',
-        tr: 'Şifre',
-        de: 'Passwort',
-        es: 'Contraseña',
-        fr: 'Mot de passe',
-        pt: 'Senha',
-        ru: 'Пароль',
-        zh: '密码',
-    };
-
-    const signInHeader = {
-        en: 'Sign In',
-        tr: 'Giriş Yap',
-        de: 'Einloggen',
-        es: 'Iniciar sesión',
-        fr: 'Se connecter',
-        pt: 'Entrar',
-        ru: 'Войти',
-        zh: '登录',
-    };
+    useUser();
 
     return (
         <div className="h-auto md:h-[90%] lg:w-[90%] w-full flex flex-col md:gap-3 gap-2 justify-center items-center bg-white sm:p-3 p-1 rounded-3xl border-[5px] border-black">
             <form
                 className="flex sm:flex-row flex-col gap-3 justify-center sm:items-end items-center w-full"
-
             >
                 <div className="flex flex-col gap-2 sm:gap-0 sm:w-[35%] w-full items-center justify-center">
                     <label

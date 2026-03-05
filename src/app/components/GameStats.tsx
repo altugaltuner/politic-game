@@ -13,10 +13,11 @@ import { useVolume } from "@/contexts/VolumeContext";
 import LevelChangePage from "./LevelChangePage";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { gameOverMessages, playAgain, daysInOffice, victoryMessage } from "../exportedTexts/translatedTexts";
+import { playDefeatSound, playMetalButtonSound, playRandomBreakingNewsSound, playVictorySoundEffect } from "@/lib/soundEffects";
 import type { GameStatsProps } from "../types/types";
 
 // Component for Game Stats
-export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventShown, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion, score, setScore }) => {
+export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventShown, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion, score, setScore }) => {
 
     const [isVisible, setIsVisible] = useState(true);
     const { isDarkMode } = useTheme();
@@ -26,7 +27,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
     const [allQuestions, setAllQuestions] = useState(allQuestionsByLanguage[language]);
     const [currentQuestion, setCurrentQuestion] = useState(allQuestions[0]);
     const [currentLevel, setCurrentLevel] = useState(level);
-
 
     let currentQuestionPhotoSrc: string | undefined;
 
@@ -75,39 +75,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
         }, 4000);
     };
 
-    const sounds = [
-        "/sound-effects/breaking-news1.wav",
-        "/sound-effects/breaking-news2.wav",
-        "/sound-effects/important-news.wav",
-    ];
     const { volume } = useVolume();
-
-    const playdeathSound = () => {
-        const audio = new Audio("/sound-effects/defeat.wav");
-        audio.volume = volume;
-        audio.play();
-    }
-
-    const playVictorySound = () => {
-        const audio = new Audio("/sound-effects/victory.wav");
-        audio.volume = volume;
-        audio.onerror = () => console.error("Failed to load victory sound");
-        audio.play();
-    }
-
-    const metalButtonSound = () => {
-        const audio = new Audio("/sound-effects/button-metal.wav");
-        audio.volume = volume;
-        audio.onerror = () => console.error("Failed to load metal sound");
-        audio.play();
-    }
-
-    const playRandomBreakingNewsSound = () => {
-        const randomSound = sounds[Math.floor(Math.random() * sounds.length)];
-        const audio = new Audio(randomSound);
-        audio.volume = volume;
-        audio.play();
-    };
 
     const getRandomEventIndex = () => {
         return Math.floor(Math.random() * events.length);
@@ -118,9 +86,9 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
 
     useEffect(() => {
         if (isModalOpen) {
-            playRandomBreakingNewsSound();
+            playRandomBreakingNewsSound(volume);
         }
-    }, [isModalOpen, playRandomBreakingNewsSound]);
+    }, [isModalOpen, volume]);
 
     const [usedQuestions, setUsedQuestions] = useState<number[]>([allQuestions[0].id]);
 
@@ -185,13 +153,13 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
     }, [level, score]);
 
 
-    const oneInTenChance = () => {
-        const boolean = Math.random() < 0.80;
+    const eventChance = () => {
+        const boolean = Math.random() < 0.2;
         return boolean;
     };
 
     useEffect(() => {
-        if (oneInTenChance()) {
+        if (eventChance()) {
             const nextEvent = getRandomEvent(usedEvents);
             if (nextEvent && !gameOver) {
                 setCurrentEvent(nextEvent);
@@ -247,7 +215,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
     }, [deathStat]);
 
     const answerQuestion = (direction: "left" | "right") => {
-        metalButtonSound();
+        playMetalButtonSound(volume);
 
         const answer =
             direction === "left"
@@ -262,9 +230,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
             setPublicOpinion,
             setBudget
         });
-        if (answer.listID) {
-            handleSelectedOptionModalOpen(); // Open the selected option modal
-        }
 
         setIsVisible(false);
         const nextQuestion = getRandomQuestionByLevel(usedQuestions, currentLevel, language);
@@ -293,19 +258,19 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
         setGameOverReason("");
         setScore(newScore);
         setDeathStat(null);
-        metalButtonSound();
+        playMetalButtonSound(volume);
         setLastingEffects([]);
-        metalButtonSound();
+        playMetalButtonSound(volume);
     };
 
     useEffect(() => {
         if (gameOver) {
-            playdeathSound();
+            playDefeatSound(volume);
         }
-    }, [gameOver]);
+    }, [gameOver, volume]);
 
     if (usedQuestions.length === 30) {
-        playVictorySound();
+        playVictorySoundEffect(volume);
     }
 
     if (gameOver) {

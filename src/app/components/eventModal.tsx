@@ -5,7 +5,6 @@ import { Event, KeyLabels } from "../types/types";
 import { keyLabels, close, effect } from "../exportedTexts/translatedTexts";
 
 export const EventModal = ({ event, onClose }: { event: Event, onClose: (parameters: object) => void }) => {
-
     const { language } = useLanguage();
     const labels = keyLabels[language] || keyLabels.en;
 

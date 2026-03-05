@@ -12,11 +12,10 @@ interface SettingsAreaProps {
 const SettingsArea: React.FC<SettingsAreaProps> = ({ handleOpenModal, modalOpen }) => {
     const { language } = useLanguage();
     const { isDarkMode } = useTheme();
-
-    const [loading,] = useState<boolean>(true); // Yüklenme durumu
+    const [loading,] = useState<boolean>(true);
 
     if (loading) {
-        return <div>Loading...</div>; // Yüklenme sırasında gösterilecek mesaj
+        return <div>Loading...</div>;
     }
 
     return (

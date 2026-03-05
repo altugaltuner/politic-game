@@ -250,6 +250,50 @@ export const keyLabels = {
     },
 };
 
+export const signUpHeader = {
+    en: 'Sign Up',
+    tr: 'Kayıt Ol',
+    de: 'Anmelden',
+    es: 'Regístrate',
+    fr: 'S\'inscrire',
+    pt: 'Inscrever-se',
+    ru: 'Регистрация',
+    zh: '注册',
+};
+
+export const emailHeader = {
+    en: 'Email',
+    tr: 'E-Posta',
+    de: 'E-Mail',
+    es: 'Correo electrónico',
+    fr: 'Email',
+    pt: 'O email',
+    ru: 'Электронная почта',
+    zh: '电子邮件',
+};
+
+export const passwordHeader = {
+    en: 'Password',
+    tr: 'Şifre',
+    de: 'Passwort',
+    es: 'Contraseña',
+    fr: 'Mot de passe',
+    pt: 'Senha',
+    ru: 'Пароль',
+    zh: '密码',
+};
+
+export const signInHeader = {
+    en: 'Sign In',
+    tr: 'Giriş Yap',
+    de: 'Einloggen',
+    es: 'Iniciar sesión',
+    fr: 'Se connecter',
+    pt: 'Entrar',
+    ru: 'Войти',
+    zh: '登录',
+};
+
 export const gameOverMessages = {
     en: {
         publicOpinion: "You lost the trust and support of the people. You were removed from office in the first opportunity for early elections. Your administration has ended!",
@@ -481,7 +525,7 @@ export const headerText = {
     pt: 'Torne-se presidente e lidere o país! Resolva os problemas que enfrentar e mantenha sua nação de pé.',
     ru: 'Станьте президентом и управляйте страной! Решайте проблемы, с которыми вы сталкиваетесь, и держите свою страну на плаву!',
     zh: '成为总统并领导国家！解决面临的问题，让你的国家屹立不倒！',
-  };
+};
 
 export const howToPlay = {
     tr: 'Nasıl Oynanır',
@@ -492,7 +536,7 @@ export const howToPlay = {
     pt: 'Como Jogar',
     ru: 'Как играть',
     zh: '怎么玩',
-  };
+};
 
 export const startingText = {
     tr: "Cumhurbaşkanı olarak başlıyorsun. Amacın 4 sene iktidarda kalmak ve bu sürede ülkeni ayakta tutabilmek.",
@@ -503,9 +547,9 @@ export const startingText = {
     pt: "Você começa como presidente. Seu objetivo é permanecer no poder por 4 anos e manter seu país de pé durante esse período.",
     ru: "Вы начинаете как президент. Ваша цель - оставаться у власти 4 года и удерживать страну на плаву в это время.",
     zh: "你以总统身份开始。你的目标是在4年内保持执政，并在此期间让你的国家屹立不倒。",
-  };
+};
 
-  export const answerText = {
+export const answerText = {
     tr: "Her sorunun iki cevabı ve her cevabın farklı etkileri var. Vereceğin cevaplar istatistikleri etkileyecek. Ayrıca bazı olayların uzun vadeli sonuçları da olabilir.",
     de: "Jedes Problem hat zwei Antworten und jede Antwort hat unterschiedliche Auswirkungen. Deine Antworten beeinflussen die Statistiken. Einige Ereignisse können auch langfristige Auswirkungen haben.",
     en: "Each problem has two answers and each answer has different effects. Your answers will affect the statistics. Some events may also have long-term consequences.",
@@ -514,9 +558,9 @@ export const startingText = {
     pt: "Cada problema tem duas respostas e cada resposta tem diferentes efeitos. Suas respostas afetarão as estatísticas. Alguns eventos também podem ter consequências a longo prazo.",
     ru: "У каждой проблемы два ответа, и каждый ответ имеет разные последствия. Ваши ответы повлияют на статистику. Некоторые события также могут иметь долгосрочные последствия.",
     zh: "每个问题都有两个答案，每个答案都有不同的影响。你的答案将影响统计数据。有些事件也可能会产生长期后果。",
-  };
+};
 
-  export const startHeader = {
+export const startHeader = {
     tr: "Başlangıç",
     de: "Anfang",
     en: "Start",
@@ -525,9 +569,9 @@ export const startingText = {
     pt: "Começo",
     ru: "Начало",
     zh: "开始",
-  }
+}
 
-  export const decisionHeader = {
+export const decisionHeader = {
     tr: "Karar",
     de: "Entscheidung",
     en: "Decision",
@@ -536,9 +580,9 @@ export const startingText = {
     pt: "Decisão",
     ru: "Решение",
     zh: "决定",
-  };
+};
 
-  export const Sources = {
+export const Sources = {
     tr: "Kaynaklar",
     de: "Quellen",
     en: "Sources",
@@ -547,9 +591,9 @@ export const startingText = {
     pt: "Fontes",
     ru: "Источники",
     zh: "资源",
-  };
+};
 
-  export const sourceText = {
+export const sourceText = {
     tr: " Kaynakları sıfırın üstünde tutmaya çalışmalısın. Bu sırada iraden dışında gelişen olaylar da kaynakları doğrudan etkileyecek.",
     de: " Du solltest die Ressourcen über Null halten. In dieser Zeit werden auch Ereignisse außerhalb deines Willens die Ressourcen direkt beeinflussen.",
     en: " You should try to keep the resources above zero. During this time, events beyond your control will also directly affect the resources.",
@@ -558,9 +602,9 @@ export const startingText = {
     pt: " Você deve tentar manter os recursos acima de zero. Durante este tempo, eventos fora de seu controle também afetarão diretamente os recursos.",
     ru: " Вы должны попытаться держать ресурсы выше нуля. В это время события вне вашего контроля также будут непосредственно влиять на ресурсы.",
     zh: " 你应该尽量保持资源在零以上。在此期间，超出你控制范围的事件也将直接影响资源。",
-  };
+};
 
-  export const finalText = {
+export const finalText = {
     tr: "Eğer bir kaynağın değeri sıfırın altına düşerse iktidarın sona erer. Hadi, ülkenin başına geçme zamanı!",
     de: "Wenn der Wert einer Ressource unter Null fällt, endet die Herrschaft. Los geht's, es ist Zeit, das Land zu führen!",
     en: "If the value of a resource falls below zero, the rule ends. Come on, it's time to lead the country!",
@@ -569,9 +613,9 @@ export const startingText = {
     pt: "Se o valor de um recurso cair abaixo de zero, a regra termina. Vamos lá, é hora de liderar o país!",
     ru: "Если значение ресурса упадет ниже нуля, правление закончится. Давай, пришло время возглавить страну!",
     zh: "如果某种资源的价值低于零，统治就会结束。来吧，是时候领导这个国家了！",
-  };
+};
 
-  export const finalHeader = {
+export const finalHeader = {
     tr: "Final",
     de: "Finale",
     en: "Final",
@@ -580,4 +624,4 @@ export const startingText = {
     pt: "Final",
     ru: "Финал",
     zh: "最终",
-  };
+};

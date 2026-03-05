@@ -147,10 +147,7 @@ export type GameStatsProps = {
     setInternational: React.Dispatch<React.SetStateAction<number>>;
     setBudget: React.Dispatch<React.SetStateAction<number>>;
     setPublicOpinion: React.Dispatch<React.SetStateAction<number>>;
-    setSelectedListIDs: (newListID: string) => void;
-    resetSelectedListIDs: () => void;
     onEventShown?: (eventId: number) => void;
-    handleSelectedOptionModalOpen: () => void;
     lastingEffects: LastingEffects[];
     setLastingEffects: React.Dispatch<
         React.SetStateAction<
@@ -186,4 +183,3 @@ export type ListElementsKeyLabels = {
     agriculturalProduction: string;
     [key: string]: string;
 };
-

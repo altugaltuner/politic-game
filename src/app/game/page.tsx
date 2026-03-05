@@ -13,11 +13,7 @@ import ListElements from "../components/ListElements";
 
 export default function GamePage() {
     const { language } = useLanguage();
-    const [, setSelectedOptionModalOpen] = useState(false);
     const { isDarkMode } = useTheme();
-    const handleSelectedOptionModalOpen = () => {
-        setSelectedOptionModalOpen(true);
-    }
     const [lastingEffects, setLastingEffects] = useState<PageEffects[]>([]);
     const [agriculture, setAgriculture] = useState<number>(50);
     const [infrastructure, setInfrastructure] = useState<number>(50);
@@ -64,7 +60,6 @@ export default function GamePage() {
                 urls.add(element.photo.src);
             }
         });
-
         const allUrls = Array.from(urls);
         let cancelled = false;
         let cursor = 0;
@@ -74,23 +69,19 @@ export default function GamePage() {
             if (cancelled || cursor >= allUrls.length) return;
             const url = allUrls[cursor];
             cursor += 1;
-
             const img = new globalThis.Image();
             img.decoding = "async";
             img.onload = preloadNext;
             img.onerror = preloadNext;
             img.src = url;
         };
-
         for (let i = 0; i < Math.min(concurrency, allUrls.length); i += 1) {
             preloadNext();
         }
-
         return () => {
             cancelled = true;
         };
     }, [language]);
-
 
     if (loading) {
         return <LoadingSpinner />;
@@ -99,7 +90,6 @@ export default function GamePage() {
     return (
         <div className={` ${isDarkMode ? 'bg-primary bg-opacity-90' : ''} sm:p-2 p-1 flex xl:flex-row flex-col 2xl:gap-5 gap-1 sm:gap-3 w-full items-start justify-center xl:h-[100vh] h-auto`}>
             <GameStats
-                handleSelectedOptionModalOpen={handleSelectedOptionModalOpen}
                 lastingEffects={lastingEffects}
                 setLastingEffects={setLastingEffects}
                 agriculture={agriculture}
@@ -121,11 +111,7 @@ export default function GamePage() {
                 onEventShown={(eventId) => {
                     setShownEventIDs((prev) => (prev.includes(eventId) ? prev : [eventId, ...prev]));
                 }}
-                setSelectedListIDs={function (): void {
-                    throw new Error("Function not implemented.");
-                }} resetSelectedListIDs={function (): void {
-                    throw new Error("Function not implemented.");
-                }} />
+            />
 
             <div className="flex flex-col sm:gap-2 gap-1 xl:w-[30%] w-full">
                 <ListElements selectedListIDs={[]} shownEventIDs={shownEventIDs} />

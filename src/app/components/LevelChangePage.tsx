@@ -12,15 +12,18 @@ import LevelNineImage from "../../../public/symbols/medicine-symbol.webp";
 import LevelTenImage from "../../../public/symbols/peace-pigeon-symbol.webp";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { leveltext } from '../exportedTexts/translatedTexts';
-const LevelChangePage = ({
-    onComplete,
-    level,
-}: {
+
+const MAX_LEVEL = 10;
+
+type Props = {
     onComplete: () => void;
     level: number;
-}) => {
+};
+
+const LevelChangePage = ({ onComplete, level }: Props) => {
     const [animationClass, setAnimationClass] = useState("translate-x-[-100%]");
     const { language } = useLanguage();
+    const safeLevel = Math.min(Math.max(level, 1), MAX_LEVEL);
 
     const Levels = [
         { id: 1, name: "level1", image: LevelOneImage },
@@ -37,17 +40,23 @@ const LevelChangePage = ({
 
     const currentLevel = Levels.find((l) => l.id === level);
 
+
     useEffect(() => {
-        const startAnimation = async () => {
+        let cancelled = false;
+
+        const run = async () => {
             setAnimationClass("translate-x-0");
-            await new Promise((resolve) => setTimeout(resolve, 3000));
+            await new Promise((r) => setTimeout(r, 3000));
+            if (cancelled) return;
 
             setAnimationClass("translate-x-full");
-            await new Promise((resolve) => setTimeout(resolve, 1000));
-            onComplete();
+            await new Promise((r) => setTimeout(r, 1000));
+            if (!cancelled) onComplete();
         };
-
-        startAnimation();
+        run();
+        return () => {
+            cancelled = true;
+        };
     }, [level, onComplete]);
 
     return (
@@ -56,7 +65,9 @@ const LevelChangePage = ({
         >
             {currentLevel && (
                 <div className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-5 sm:w-[50%] sm:h-[50%] h-[25%] w-[90%]">
-                    <h1 className=" text-7xl font-bold text-center">{leveltext[language]} {currentLevel.id}</h1>
+                    <h1 className=" text-7xl font-bold text-center">
+                        {leveltext[language]} {safeLevel}
+                    </h1>
                 </div>
             )}
         </div>

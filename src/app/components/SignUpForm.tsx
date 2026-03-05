@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { emailHeader, passwordHeader, signUpHeader } from '../exportedTexts/translatedTexts';
 
 const SignUpForm: React.FC = () => {
     const [email, setEmail] = useState('');
@@ -12,36 +13,6 @@ const SignUpForm: React.FC = () => {
         const audio = new Audio("/sound-effects/button-metal.wav");
         audio.play();
     }
-    const emailHeader = {
-        en: 'Email',
-        tr: 'E-Posta',
-        de: 'E-Mail',
-        es: 'Correo electrónico',
-        fr: 'Email',
-        pt: 'O email',
-        ru: 'Электронная почта',
-        zh: '电子邮件',
-    };
-    const passwordHeader = {
-        en: 'Password',
-        tr: 'Şifre',
-        de: 'Passwort',
-        es: 'Contraseña',
-        fr: 'Mot de passe',
-        pt: 'Senha',
-        ru: 'Пароль',
-        zh: '密码',
-    };
-    const signUpHeader = {
-        en: 'Sign Up',
-        tr: 'Kayıt Ol',
-        de: 'Anmelden',
-        es: 'Regístrate',
-        fr: 'S\'inscrire',
-        pt: 'Inscrever-se',
-        ru: 'Регистрация',
-        zh: '注册',
-    };
 
     return (
         <div className="h-auto md:h-[90%] lg:w-[90%] w-full flex flex-col md:gap-3 gap-2 justify-center items-center bg-white sm:p-3 p-1 rounded-3xl border-[5px] border-black">
