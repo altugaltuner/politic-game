@@ -1,4 +1,5 @@
 import type { StaticImageData } from "next/image";
+import type { SpringValue } from "@react-spring/web";
 
 export type StatKey =
     | "agriculture"
@@ -21,7 +22,7 @@ export type StatCardConfig = {
     key: StatKey;
     labelKey: LabelKey;
     value: number;
-    animatedValue: any;
+    animatedValue: { number: SpringValue<number> };
     color: string;
     icon: StaticImageData;
     iconAlt: string;
@@ -38,7 +39,7 @@ type IconConfig = {
 
 type CreateStatCardsInput = {
     values: Record<StatKey, number>;
-    animatedValues: Record<StatKey, any>;
+    animatedValues: Record<StatKey, { number: SpringValue<number> }>;
     statColors: Record<StatKey, string>;
     icons: Record<StatKey, IconConfig>;
 };
