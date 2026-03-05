@@ -13,7 +13,7 @@ export default function HomePage() {
   const { language } = useLanguage();
 
   const gotoGame = () => {
-    window.location.href = "/game";
+    globalThis.location.href = "/game";
   }
 
   return (

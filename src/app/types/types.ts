@@ -149,6 +149,7 @@ export type GameStatsProps = {
     setPublicOpinion: React.Dispatch<React.SetStateAction<number>>;
     setSelectedListIDs: (newListID: string) => void;
     resetSelectedListIDs: () => void;
+    onEventShown?: (eventId: number) => void;
     handleSelectedOptionModalOpen: () => void;
     lastingEffects: LastingEffects[];
     setLastingEffects: React.Dispatch<
@@ -173,6 +174,7 @@ interface LastingEffects {
 
 export type ListElementsProps = {
     selectedListIDs: string[];
+    shownEventIDs?: number[];
 };
 
 export type ListElementsKeyLabels = {
@@ -184,3 +186,4 @@ export type ListElementsKeyLabels = {
     agriculturalProduction: string;
     [key: string]: string;
 };
+

@@ -12,53 +12,11 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { useVolume } from "@/contexts/VolumeContext";
 import LevelChangePage from "./LevelChangePage";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { doc, updateDoc } from "firebase/firestore";
 import { gameOverMessages, playAgain, daysInOffice, victoryMessage } from "../exportedTexts/translatedTexts";
-// import { db, auth } from "@/firebase";
-
-type GameStatsProps = {
-    agriculture: number;
-    infrastructure: number;
-    internalSecurity: number;
-    international: number;
-    budget: number;
-    publicOpinion: number;
-    level: number;
-    score: number;
-    setLevel: React.Dispatch<React.SetStateAction<number>>;
-    setAgriculture: React.Dispatch<React.SetStateAction<number>>;
-    setScore: React.Dispatch<React.SetStateAction<number>>;
-    setInfrastructure: React.Dispatch<React.SetStateAction<number>>;
-    setInternalSecurity: React.Dispatch<React.SetStateAction<number>>;
-    setInternational: React.Dispatch<React.SetStateAction<number>>;
-    setBudget: React.Dispatch<React.SetStateAction<number>>;
-    setPublicOpinion: React.Dispatch<React.SetStateAction<number>>;
-    setSelectedListIDs: (newListID: string) => void;
-    resetSelectedListIDs: () => void;
-    handleSelectedOptionModalOpen: () => void;
-    lastingEffects: Effects[]; // Birden fazla etki içeren dizi
-    setLastingEffects: React.Dispatch<
-        React.SetStateAction<
-            {
-                type: string;
-                value: number;
-                stat: string;
-            }[]>>
-};
-
-interface Effects {
-    stat: string;
-    value: number;
-    agriculturalProduction?: number;
-    infrastructureAndEnvironment?: number;
-    internalSecurity?: number;
-    publicSupport?: number;
-    budget?: number;
-    internationalRelations?: number;
-}
+import type { GameStatsProps } from "../types/types";
 
 // Component for Game Stats
-export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion, score, setScore }) => {
+export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventShown, handleSelectedOptionModalOpen, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion, score, setScore }) => {
 
     const [isVisible, setIsVisible] = useState(true);
     const { isDarkMode } = useTheme();
@@ -68,6 +26,23 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, handleSel
     const [allQuestions, setAllQuestions] = useState(allQuestionsByLanguage[language]);
     const [currentQuestion, setCurrentQuestion] = useState(allQuestions[0]);
     const [currentLevel, setCurrentLevel] = useState(level);
+
+
+    let currentQuestionPhotoSrc: string | undefined;
+
+    if (currentQuestion?.photo instanceof File) {
+        currentQuestionPhotoSrc = URL.createObjectURL(currentQuestion.photo);
+    } else if (
+        currentQuestion?.photo &&
+        typeof currentQuestion.photo === "object" &&
+        "src" in currentQuestion.photo
+    ) {
+        currentQuestionPhotoSrc = currentQuestion.photo.src;
+    } else if (typeof currentQuestion?.photo === "string") {
+        currentQuestionPhotoSrc = currentQuestion.photo;
+    } else {
+        currentQuestionPhotoSrc = undefined;
+    }
 
     useEffect(() => {
         const currentQuestionId = currentQuestion?.id;
@@ -93,57 +68,12 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, handleSel
         }
     }, [level, currentLevel]);
 
-    // const updateLevelInDatabase = async () => {
-    //     if (auth.currentUser) {
-    //         const userDocRef = doc(db, "users", auth.currentUser.uid);
-    //         try {
-    //             await updateDoc(userDocRef, { level: currentLevel });
-    //             //console.log("Level successfully updated in Firebase:", currentLevel);
-    //         } catch (error) {
-    //             console.error("Error updating level in Firebase:", error);
-    //         }
-    //     }
-    // };
-
-    // useEffect(() => {
-    //     updateLevelInDatabase();
-    // }, [currentLevel]);
-
     const handleLevelUp = () => {
         setIsLevelChangeVisible(true);
         setTimeout(() => {
             setIsLevelChangeVisible(false);
         }, 4000);
     };
-
-    useEffect(() => {
-        // Tüm soruların fotoğraflarını önceden yükleyin
-        const preloadImages = () => {
-            allQuestions.forEach((question) => {
-                if (typeof question.photo === "string") {
-                    const img = new window.Image();
-                    img.src = question.photo;
-                }
-            });
-        };
-        preloadImages();
-    }, []);
-
-    // useEffect(() => {
-    //     const updateScoreInDatabase = async () => {
-    //         if (auth.currentUser && score !== undefined) {
-    //             const userDocRef = doc(db, "users", auth.currentUser.uid);
-    //             try {
-    //                 await updateDoc(userDocRef, { score });
-    //                 //console.log("Score successfully updated in Firebase:", score);
-    //             } catch (error) {
-    //                 console.error("Error updating score in Firebase:", error);
-    //             }
-    //         }
-    //     };
-
-    //     updateScoreInDatabase();
-    // }, [score]); // Sadece "score" değiştiğinde çalışır
 
     const sounds = [
         "/sound-effects/breaking-news1.wav",
@@ -266,6 +196,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, handleSel
             if (nextEvent && !gameOver) {
                 setCurrentEvent(nextEvent);
                 setUsedEvents((prev) => [...prev, nextEvent.id]);
+                onEventShown?.(nextEvent.id);
                 setIsModalOpen(true);
             }
         }
@@ -332,25 +263,19 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, handleSel
             setBudget
         });
         if (answer.listID) {
-            // setSelectedListIDs(answer.listID); // Add new listID to the array
             handleSelectedOptionModalOpen(); // Open the selected option modal
         }
 
         setIsVisible(false);
         const nextQuestion = getRandomQuestionByLevel(usedQuestions, currentLevel, language);
 
-        if (nextQuestion) {
-            setCurrentQuestion(nextQuestion);
-        }
         if (!gameOver && nextQuestion) {
+            setCurrentQuestion(nextQuestion);
+            setUsedQuestions((prev) => [...prev, nextQuestion.id]);
             setScore((prev) => prev + 1);
-            setTimeout(() => {
-                setCurrentQuestion(nextQuestion);
-                setUsedQuestions((prev) => [...prev, nextQuestion.id]);
+            requestAnimationFrame(() => {
                 setIsVisible(true);
-            }, 500);
-            setTimeout(() => {
-            }, 1000);
+            });
         }
     };
 
@@ -370,33 +295,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, handleSel
         setDeathStat(null);
         metalButtonSound();
         setLastingEffects([]);
-        // resetSelectedListIDs(); // Clear the filteredElements in ListElements
-
-        // Firebase'de skor güncellemesi
-        // if (auth.currentUser) {
-        //     const userDocRef = doc(db, "users", auth.currentUser.uid);
-        //     try {
-        //         await updateDoc(userDocRef, { score: newScore }); // Firebase'e yaz
-        //         //console.log("Score updated in Firebase:", newScore);
-        //     } catch (error) {
-        //         console.error("Error updating score in Firebase:", error);
-        //     }
-        // }
-
-        //firebasede level güncellemesi
-
-        // if (auth.currentUser) {
-        //     const userDocRef = doc(db, "users", auth.currentUser.uid);
-        //     try {
-        //         await updateDoc(userDocRef, { level: currentLevel }); // Firebase'e yaz
-        //         //console.log("Level updated in Firebase:", currentLevel);
-        //     } catch (error) {
-        //         console.error("Error updating level in Firebase:", error);
-        //     }
-        // }
-
-
-
         metalButtonSound();
     };
 
@@ -470,7 +368,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, handleSel
                     <h1 className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-primary'} bg-primary py-1 px-2 rounded-md w-[90%] text-md`}>{victoryMessage[language]}
                     </h1>
                     <div className="question-container visible flex flex-col items-center mt-2 gap-2 justify-center">
-                        <Image src={ataturk} alt="Oyun Bitti" className="w-full lg:h-[22rem] rounded-lg" />
+                        <Image src={ataturk} alt="Oyun Bitti" className="w-[60%] lg:h-[22rem] rounded-lg" />
                     </div>
                 </div>
                 <div className={`${isDarkMode ? ' bg-[rgb(17,17,17)]  border-white' : 'bg-white border-black'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 sm:gap-2 gap-1 sm:p-2.5 p-1 items-center`}>
@@ -492,14 +390,12 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, handleSel
             {isModalOpen && currentEvent && (
                 <EventModal event={currentEvent} onClose={closeModal} />
             )}
-
             {
                 isLevelChangeVisible && (
                     <LevelChangePage
                         level={currentLevel}
                         onComplete={() => setIsLevelChangeVisible(false)} />
                 )}
-
 
             <StatUpdater
                 agriculture={agriculture}
@@ -526,19 +422,11 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, handleSel
                     </div>
 
                     {currentQuestion.photo && currentQuestion.title && (
-                        <div className={`question-container ${isVisible ? 'visible' : ''} flex flex-col items-center mt-2 gap-2 justify-center`}>
+                        <div className="question-container visible flex flex-col items-center mt-2 gap-2 justify-center w-[65%]">
                             <Image
-                                priority
                                 width={1820} height={1024}
-                                src={
-                                    currentQuestion.photo instanceof File
-                                        ? URL.createObjectURL(currentQuestion.photo)
-                                        : typeof currentQuestion.photo === 'object' && 'src' in currentQuestion.photo
-                                            ? currentQuestion.photo.src
-                                            : currentQuestion.photo
-                                }
-                                alt={currentQuestion.title}
-                                className="lg:w-full sm:w-[70%] w-[90%] lg:h-[22rem] rounded-lg"
+                                src={currentQuestionPhotoSrc ?? "/images/fallback.webp"}
+                                alt={currentQuestion?.title ?? "Question image"}
                             />
                             <p className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-primary'} font-medium md:text-xl text-sm bg-primary  px-2 rounded-lg`}>{currentQuestion.title}</p>
                         </div>

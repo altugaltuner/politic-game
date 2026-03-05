@@ -2,23 +2,18 @@
 
 import { useState, useEffect } from "react";
 import GameStats from "../components/GameStats";
-import ListElements from "../components/ListElements";
-import SettingsArea from "../components/SettingsArea";
-import SettingsModal from "../components/SettingsModal";
-import SelectedOptionModal from "../components/selectedOptionModal";
 import { useTheme } from '@/contexts/ThemeContext';
-import { useVolume } from "@/contexts/VolumeContext";
 import { elements } from "@/database/elements";
-import InventoryModal from "../components/InventoryModal";
-import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
-// import { db, auth } from "@/firebase";
+import { events } from "@/database/events";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { PageEffects } from "../types/types";
+import { allQuestionsByLanguage } from "../components/functions";
+import { useLanguage } from "@/contexts/LanguageContext";
+import ListElements from "../components/ListElements";
 
 export default function GamePage() {
-    const { volume } = useVolume();
-    const [modalOpen, setModalOpen] = useState(false);
-    const [selectedOptionModalOpen, setSelectedOptionModalOpen] = useState(false);
+    const { language } = useLanguage();
+    const [, setSelectedOptionModalOpen] = useState(false);
     const { isDarkMode } = useTheme();
     const handleSelectedOptionModalOpen = () => {
         setSelectedOptionModalOpen(true);
@@ -33,138 +28,7 @@ export default function GamePage() {
     const [level, setLevel] = useState<number>(1);
     const [score, setScore] = useState<number>(0);
     const [loading, setLoading] = useState(true);
-
-    // useEffect(() => {
-    //     const fetchUserData = async () => {
-    //         if (auth.currentUser) {
-    //             const userDocRef = doc(db, "users", auth.currentUser.uid);
-    //             try {
-    //                 const userDoc = await getDoc(userDocRef);
-    //                 if (userDoc.exists()) {
-    //                     const userData = userDoc.data();
-    //                     //console.log("User data:", userData);
-    //                     setLevel(userData.level ?? 1); // Varsayılan olarak 1
-    //                     setScore(userData.score ?? 0); // Varsayılan olarak 0
-    //                 } else {
-    //                     // console.log("User data not found.");
-    //                 }
-    //             } catch (error) {
-    //                 console.error("Error fetching user data:", error);
-    //             } finally {
-    //                 setLoading(false); // Veriler yüklendi
-    //                 //console.log("User data:", auth.currentUser);
-    //             }
-    //         } else {
-    //             setLoading(false); // Kullanıcı oturum açmamışsa
-    //         }
-    //     };
-
-    //     fetchUserData();
-    // }, []);
-
-    const handleBonusEffect = (effect: { type: string; value: number }) => {
-        const fiftyEffect = effect.value * 50;
-        switch (effect.type) {
-            case "agriculture":
-                setAgriculture((prev) => prev + fiftyEffect);
-                break;
-            case "budget":
-                setBudget((prev) => prev + fiftyEffect);
-                break;
-            case "infrastructure":
-                setInfrastructure((prev) => prev + fiftyEffect);
-                break;
-            case "security":
-                setInternalSecurity((prev) => prev + fiftyEffect);
-                break;
-            case "international":
-                setInternational((prev) => prev + fiftyEffect);
-                break;
-            case "public":
-                setPublicOpinion((prev) => prev + fiftyEffect);
-                break;
-            default:
-                break;
-        }
-    }
-    // const initializeUserBonuses = async (uid: string) => {
-    //     const userDocRef = doc(db, "users", uid);
-
-    //     // Kullanıcı bonuslarını kontrol et
-    //     const userDoc = await getDoc(userDocRef);
-    //     if (!userDoc.exists()) {
-    //         // Eğer bonuslar yoksa, varsayılan bonusları oluştur
-    //         await setDoc(userDocRef, {
-    //             bonusAgricultural: 1,
-    //             bonusBudget: 1,
-    //             bonusInfrastructure: 1,
-    //             bonusSecurity: 1,
-    //             bonusInternational: 1,
-    //             bonusPublic: 1,
-    //         });
-    //     } else {
-    //         // console.log("User bonuses already exist");
-    //     }
-    // };
-    // const [selectedListIDs, setSelectedListIDs] = useState<string[]>([]);
-
-    // const fetchUserBonuses = async (uid: string): Promise<Bonuses | undefined> => {
-    //     const userDocRef = doc(db, "users", uid);
-    //     const userDoc = await getDoc(userDocRef);
-
-    //     if (userDoc.exists()) {
-    //         //console.log("User bonuses:", userDoc.data());
-    //         return userDoc.data() as Bonuses;
-    //     } else {
-    //         //console.log("No user bonuses found");
-    //         return undefined;
-    //     }
-    // };
-
-    // const updateUserBonus = async (uid: string, bonusType: string, amount: number) => {
-    //     const userDocRef = doc(db, "users", uid);
-
-    //     // Belirli bir bonusu güncelle
-    //     await updateDoc(userDocRef, {
-    //         [bonusType]: amount,
-    //     });
-    //     // console.log(`${bonusType} updated to ${amount}`);
-    // };
-
-    const playTickSound = () => {
-        const audio = new Audio("/sound-effects/button-metal.wav");
-        audio.volume = volume;
-        audio.onerror = () => console.error("Failed to load victory sound");
-        audio.play();
-    }
-
-    const setModalOpenFunc = () => {
-        setModalOpen(false);
-        playTickSound();
-    }
-
-    const handleOpenModal = () => {
-        setModalOpen(true);
-        playTickSound();
-    }
-
-    // const handleSetSelectedListID = (newListID: string) => {
-    //     setSelectedListIDs((prevListIDs) =>
-    //         prevListIDs.includes(newListID) ? prevListIDs : [newListID, ...prevListIDs]
-    //     );
-
-    //     // Yeni lastingEffect ekleme
-    //     const selectedElement = elements.find((el) => el.listID === newListID);
-    //     if (selectedElement && selectedElement.lastingEffect) {
-    //         setLastingEffects((prev) => [
-    //             ...prev,
-    //             { ...selectedElement.lastingEffect, stat: selectedElement.lastingEffect.stat, type: selectedElement.lastingEffect.type || '' }
-    //         ]);
-    //     }
-    // };
-
-    // // Function to reset selectedListIDs
-    // const resetSelectedListIDs = () => setSelectedListIDs([]);
+    const [shownEventIDs, setShownEventIDs] = useState<number[]>([]);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -174,6 +38,59 @@ export default function GamePage() {
         return () => clearTimeout(timer);
     }, []);
 
+    useEffect(() => {
+        const urls = new Set<string>();
+
+        (allQuestionsByLanguage[language] || []).forEach((question) => {
+            if (typeof question.photo === "string") {
+                urls.add(question.photo);
+            } else if (typeof question.photo === "object" && question.photo && "src" in question.photo) {
+                urls.add(question.photo.src);
+            }
+        });
+
+        events.forEach((event) => {
+            if (typeof event.photo === "string") {
+                urls.add(event.photo);
+            } else if (typeof event.photo === "object" && event.photo && "src" in event.photo) {
+                urls.add(event.photo.src);
+            }
+        });
+
+        elements.forEach((element) => {
+            if (typeof element.photo === "string") {
+                urls.add(element.photo);
+            } else if (typeof element.photo === "object" && element.photo && "src" in element.photo) {
+                urls.add(element.photo.src);
+            }
+        });
+
+        const allUrls = Array.from(urls);
+        let cancelled = false;
+        let cursor = 0;
+        const concurrency = 6;
+
+        const preloadNext = () => {
+            if (cancelled || cursor >= allUrls.length) return;
+            const url = allUrls[cursor];
+            cursor += 1;
+
+            const img = new globalThis.Image();
+            img.decoding = "async";
+            img.onload = preloadNext;
+            img.onerror = preloadNext;
+            img.src = url;
+        };
+
+        for (let i = 0; i < Math.min(concurrency, allUrls.length); i += 1) {
+            preloadNext();
+        }
+
+        return () => {
+            cancelled = true;
+        };
+    }, [language]);
+
 
     if (loading) {
         return <LoadingSpinner />;
@@ -181,9 +98,7 @@ export default function GamePage() {
 
     return (
         <div className={` ${isDarkMode ? 'bg-primary bg-opacity-90' : ''} sm:p-2 p-1 flex xl:flex-row flex-col 2xl:gap-5 gap-1 sm:gap-3 w-full items-start justify-center xl:h-[100vh] h-auto`}>
-
             <GameStats
-
                 handleSelectedOptionModalOpen={handleSelectedOptionModalOpen}
                 lastingEffects={lastingEffects}
                 setLastingEffects={setLastingEffects}
@@ -202,18 +117,18 @@ export default function GamePage() {
                 level={level ?? 1}
                 setLevel={setLevel}
                 score={score}
-                setScore={setScore} setSelectedListIDs={function (newListID: string): void {
+                setScore={setScore}
+                onEventShown={(eventId) => {
+                    setShownEventIDs((prev) => (prev.includes(eventId) ? prev : [eventId, ...prev]));
+                }}
+                setSelectedListIDs={function (): void {
                     throw new Error("Function not implemented.");
                 }} resetSelectedListIDs={function (): void {
                     throw new Error("Function not implemented.");
                 }} />
 
             <div className="flex flex-col sm:gap-2 gap-1 xl:w-[30%] w-full">
-                <SettingsArea handleOpenModal={handleOpenModal} modalOpen={modalOpen} />
-
-
-                <SettingsModal modalOpen={modalOpen} setModalOpenFunc={setModalOpenFunc} />
-
+                <ListElements selectedListIDs={[]} shownEventIDs={shownEventIDs} />
             </div>
         </div>
     );

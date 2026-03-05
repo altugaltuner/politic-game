@@ -18,7 +18,7 @@ const SettingsModal: React.FC<SettingsModalProps> = ({ modalOpen, setModalOpenFu
     if (!modalOpen) return null;
 
     const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const newVolume = parseFloat(e.target.value);
+        const newVolume = Number.parseFloat(e.target.value);
         setVolume(newVolume);
     };
 

@@ -1,50 +1,13 @@
 import React, { useState } from 'react';
-// import { auth, db } from "@/firebase"; // Firebase auth'ı import edin
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { doc, setDoc } from "firebase/firestore";
 
 const SignUpForm: React.FC = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [, setError] = useState('');
-    const [, setSuccess] = useState(false);
-    const router = useRouter();
+    useRouter();
     const { language } = useLanguage();
-    const [username, setUsername] = useState(''); // Kullanıcı ismi için state
-
-    // const handleSignUp = async (e: React.FormEvent) => {
-    //     e.preventDefault();
-    //     setError('');
-    //     setSuccess(false);
-
-    //     try {
-    //         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-    //         const user = userCredential.user;
-    //         // Firestore'a kullanıcı ismini kaydet
-    //         await setDoc(doc(db, "users", user.uid), {
-    //             username: username,
-    //             email: user.email,
-    //             level: 1,
-    //             createdAt: new Date(),
-    //             score: 0,
-    //         });
-    //         setSuccess(true);
-    //         setEmail('');
-    //         setPassword('');
-    //         //console.log("User signed up successfully");
-    //         router.push('/game');
-    //     } catch (err) {
-    //         setError((err as Error).message);
-    //         console.error("Error during sign-up:", err);
-    //     }
-    //     finally {
-    //         setEmail('');
-    //         setPassword('');
-    //     }
-    // };
-
+    const [username, setUsername] = useState('');
     const handleSound = () => {
         const audio = new Audio("/sound-effects/button-metal.wav");
         audio.play();
@@ -84,7 +47,7 @@ const SignUpForm: React.FC = () => {
         <div className="h-auto md:h-[90%] lg:w-[90%] w-full flex flex-col md:gap-3 gap-2 justify-center items-center bg-white sm:p-3 p-1 rounded-3xl border-[5px] border-black">
             <form
                 className="flex sm:flex-row flex-col gap-3 justify-center sm:items-end items-center w-full"
-            // onSubmit={handleSignUp}
+
             >
                 <div className="flex flex-col gap-2 sm:gap-0 sm:w-[35%] w-full items-center justify-center">
                     <label htmlFor="username" className="text-lg font-semibold mb-1">

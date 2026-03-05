@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { Settings, CircleUserRound } from "lucide-react";
 import { useTheme } from '@/contexts/ThemeContext';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { doc, getDoc } from "firebase/firestore";
-// import { auth, db } from "@/firebase";
 import { myProfile, president } from '../exportedTexts/translatedTexts';
 
 interface SettingsAreaProps {
@@ -14,62 +12,8 @@ interface SettingsAreaProps {
 const SettingsArea: React.FC<SettingsAreaProps> = ({ handleOpenModal, modalOpen }) => {
     const { language } = useLanguage();
     const { isDarkMode } = useTheme();
-    const [username, setUsername] = useState<string>(""); // Kullanıcı adı
 
-    const [loading, setLoading] = useState<boolean>(true); // Yüklenme durumu
-
-
-    // const fetchUserData = async (uid: string) => {
-    //     try {
-    //         const docRef = doc(db, "users", uid);
-    //         const docSnap = await getDoc(docRef);
-
-    //         if (docSnap.exists()) {
-    //             //console.log("User data:", docSnap.data());
-    //             return docSnap.data(); // Kullanıcı verisini döndürür
-    //         } else {
-    //             console.log("No such document!");
-    //         }
-    //     } catch (error) {
-    //         console.error("Error fetching user data:", error);
-    //     }
-    // };
-
-    // useEffect(() => {
-    //     const unsubscribe = auth.onAuthStateChanged(async (user) => {
-    //         if (user) {
-    //             const userData = await fetchUserData(user.uid);
-    //             setUsername(userData?.username || "Guest");
-    //         } else {
-    //             setUsername("Guest");
-    //         }
-    //         setLoading(false); // Yüklenme durumu tamamlandı
-    //     });
-
-    //     return () => unsubscribe(); // Aboneliği temizle
-    // }, []);
-
-    const profilim = {
-        en: 'My Profile',
-        tr: 'Profilim',
-        de: 'Mein Profil',
-        es: 'Mi perfil',
-        fr: 'Mon profil',
-        pt: 'Meu perfil',
-        ru: 'Мой профиль',
-        zh: '我的个人资料',
-    };
-
-    const cumhurbaskanı = {
-        en: 'President',
-        tr: 'Cumhurbaşkanı',
-        de: 'Präsident',
-        es: 'Presidente',
-        fr: 'Président',
-        pt: 'Presidente',
-        ru: 'Президент',
-        zh: '总统',
-    };
+    const [loading,] = useState<boolean>(true); // Yüklenme durumu
 
     if (loading) {
         return <div>Loading...</div>; // Yüklenme sırasında gösterilecek mesaj
