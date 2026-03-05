@@ -1,5 +1,7 @@
 # 🎮 President Simulator - Politik Strateji Oyunu
 
+Oyunu buradan oynayabilirsiniz : https://www.govsimulator.com
+
 **President Simulator**, oyuncuların bir ülkenin başkanı olarak kritik kararlar aldığı, strateji tabanlı bir web oyunudur. Oyuncular, tarım, altyapı, iç güvenlik, uluslararası ilişkiler, bütçe ve halk desteği gibi altı farklı istatistiği yöneterek ülkeyi yönetmeye çalışır.
 
 ## 🌟 Oyun Özellikleri
