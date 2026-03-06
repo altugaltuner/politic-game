@@ -16,6 +16,31 @@ import { gameOverMessages, playAgain, daysInOffice, victoryMessage } from "../ex
 import { playDefeatSound, playMetalButtonSound, playRandomBreakingNewsSound, playVictorySoundEffect } from "@/lib/soundEffects";
 import type { GameStatsProps } from "../types/types";
 
+const warmImageCache = new Set<string>();
+
+const getPhotoSrc = (photo: unknown): string | undefined => {
+    if (photo instanceof File) {
+        return URL.createObjectURL(photo);
+    }
+
+    if (photo && typeof photo === "object" && "src" in (photo as Record<string, unknown>)) {
+        const src = (photo as { src?: unknown }).src;
+        return typeof src === "string" ? src : undefined;
+    }
+
+    return typeof photo === "string" ? photo : undefined;
+};
+
+const preloadQuestionPhoto = (photo: unknown) => {
+    const src = getPhotoSrc(photo);
+    if (!src || warmImageCache.has(src)) return;
+
+    warmImageCache.add(src);
+    const img = new globalThis.Image();
+    img.decoding = "async";
+    img.src = src;
+};
+
 export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventShown, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion, score, setScore }) => {
 
     const [isVisible, setIsVisible] = useState(true);
@@ -27,21 +52,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
     const [currentQuestion, setCurrentQuestion] = useState(allQuestions[0]);
     const [currentLevel, setCurrentLevel] = useState(level);
 
-    let currentQuestionPhotoSrc: string | undefined;
-
-    if (currentQuestion?.photo instanceof File) {
-        currentQuestionPhotoSrc = URL.createObjectURL(currentQuestion.photo);
-    } else if (
-        currentQuestion?.photo &&
-        typeof currentQuestion.photo === "object" &&
-        "src" in currentQuestion.photo
-    ) {
-        currentQuestionPhotoSrc = currentQuestion.photo.src;
-    } else if (typeof currentQuestion?.photo === "string") {
-        currentQuestionPhotoSrc = currentQuestion.photo;
-    } else {
-        currentQuestionPhotoSrc = undefined;
-    }
+    const currentQuestionPhotoSrc = getPhotoSrc(currentQuestion?.photo);
 
     useEffect(() => {
         const currentQuestionId = currentQuestion?.id;
@@ -94,7 +105,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
     const [gameOver, setGameOver] = useState(false);
     const [gameOverReason, setGameOverReason] = useState("");
     const [deathStat, setDeathStat] = useState<string | null>(null);
-    const [deathImageSrc, setDeathImageSrc] = useState("/images/logo.webp");
 
 
     useEffect(() => {
@@ -170,6 +180,13 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
     }, [currentQuestion]);
 
     useEffect(() => {
+        const nextQuestion = getRandomQuestionByLevel(usedQuestions, currentLevel, language);
+        if (nextQuestion?.photo) {
+            preloadQuestionPhoto(nextQuestion.photo);
+        }
+    }, [currentQuestion?.id, usedQuestions, currentLevel, language]);
+
+    useEffect(() => {
         const isGameOver = checkGameOver(publicOpinion, internalSecurity, international, budget, infrastructure, agriculture);
         let reason = "";
         if (isGameOver) {
@@ -207,12 +224,6 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
         }
     }, [publicOpinion, internalSecurity, international, budget, infrastructure, agriculture, score]);
 
-    useEffect(() => {
-        if (deathStat) {
-            setDeathImageSrc(`/images/${deathStat}.webp`);
-        }
-    }, [deathStat]);
-
     const answerQuestion = (direction: "left" | "right") => {
         playMetalButtonSound(volume);
 
@@ -234,6 +245,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
         const nextQuestion = getRandomQuestionByLevel(usedQuestions, currentLevel, language);
 
         if (!gameOver && nextQuestion) {
+            preloadQuestionPhoto(nextQuestion.photo);
             setCurrentQuestion(nextQuestion);
             setUsedQuestions((prev) => [...prev, nextQuestion.id]);
             setScore((prev) => prev + 1);
@@ -294,12 +306,11 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
                     <div className="flex flex-col items-center mt-2 gap-2 justify-center">
                         {deathStat && (
                             <Image
-                                src={deathImageSrc}
+                                src={`/images/${deathStat}.webp`}
                                 width={768}
                                 height={432}
                                 alt="Oyun Bitti"
                                 className="w-full lg:h-[22rem] rounded-lg"
-                                onError={() => setDeathImageSrc("/images/logo.webp")}
                             />
                         )}
                     </div>
@@ -388,9 +399,12 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
                     {currentQuestion.photo && currentQuestion.title && (
                         <div className="question-container visible flex flex-col items-center mt-2 gap-2 justify-center w-[65%]">
                             <Image
+                                key={currentQuestion.id}
                                 width={768} height={432}
                                 src={currentQuestionPhotoSrc ?? "/images/fallback.webp"}
                                 alt={currentQuestion?.title ?? "Question image"}
+                                loading="eager"
+                                priority
                             />
                             <p className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-primary'} font-medium md:text-xl text-sm bg-primary  px-2 rounded-lg`}>{currentQuestion.title}</p>
                         </div>

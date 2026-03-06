@@ -35,35 +35,37 @@ export default function GamePage() {
     }, []);
 
     useEffect(() => {
-        const urls = new Set<string>();
+        const questionUrls = new Set<string>();
+        const auxiliaryUrls = new Set<string>();
 
         (allQuestionsByLanguage[language] || []).forEach((question) => {
             if (typeof question.photo === "string") {
-                urls.add(question.photo);
+                questionUrls.add(question.photo);
             } else if (typeof question.photo === "object" && question.photo && "src" in question.photo) {
-                urls.add(question.photo.src);
+                questionUrls.add(question.photo.src);
             }
         });
 
         events.forEach((event) => {
             if (typeof event.photo === "string") {
-                urls.add(event.photo);
+                auxiliaryUrls.add(event.photo);
             } else if (typeof event.photo === "object" && event.photo && "src" in event.photo) {
-                urls.add(event.photo.src);
+                auxiliaryUrls.add(event.photo.src);
             }
         });
 
         elements.forEach((element) => {
             if (typeof element.photo === "string") {
-                urls.add(element.photo);
+                auxiliaryUrls.add(element.photo);
             } else if (typeof element.photo === "object" && element.photo && "src" in element.photo) {
-                urls.add(element.photo.src);
+                auxiliaryUrls.add(element.photo.src);
             }
         });
-        const allUrls = Array.from(urls);
+
+        const allUrls = Array.from(questionUrls).concat(Array.from(auxiliaryUrls));
         let cancelled = false;
         let cursor = 0;
-        const concurrency = 6;
+        const concurrency = 36;
 
         const preloadNext = () => {
             if (cancelled || cursor >= allUrls.length) return;
