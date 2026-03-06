@@ -550,7 +550,7 @@ export const startingText = {
 };
 
 export const answerText = {
-    tr: "Her sorunun iki cevabı ve her cevabın farklı etkileri var. Vereceğin cevaplar istatistikleri etkileyecek. Ayrıca bazı olayların uzun vadeli sonuçları da olabilir.",
+    tr: "Her sorunun iki cevabı ve her cevabın farklı etkileri var. Vereceğin cevaplar istatistikleri etkileyecek.",
     de: "Jedes Problem hat zwei Antworten und jede Antwort hat unterschiedliche Auswirkungen. Deine Antworten beeinflussen die Statistiken. Einige Ereignisse können auch langfristige Auswirkungen haben.",
     en: "Each problem has two answers and each answer has different effects. Your answers will affect the statistics. Some events may also have long-term consequences.",
     es: "Cada problema tiene dos respuestas y cada respuesta tiene diferentes efectos. Tus respuestas afectarán las estadísticas. Algunos eventos también pueden tener consecuencias a largo plazo.",
