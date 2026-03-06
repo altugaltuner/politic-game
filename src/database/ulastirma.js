@@ -1,6 +1,6 @@
 import ulastirmaBakani from "../../public/ministers/ulasim-bakani.webp";
-// 5 soru var
-export const ulastirmaQuestions = {
+
+export const transportQuestions = {
     tr: [
         {
             id: 150,

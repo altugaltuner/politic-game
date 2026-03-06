@@ -1,7 +1,7 @@
 import adaletBakanı from "../../public/ministers/adalet-bakani.webp";
 import altug from "../../public/ministers/altug.webp";
-//5 soru var
-export const adaletQuestions = {
+
+export const justiceQuestions = {
     tr: [
         {
             id: 1,

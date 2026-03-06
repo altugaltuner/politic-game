@@ -1,21 +1,21 @@
-import { adaletQuestions } from "../../database/adalet";
-import { aileQuestions } from "../../database/aile";
-import { calismaQuestions } from "../../database/calisma";
-import { cevreQuestions } from "../../database/cevre";
-import { disisleriQuestions } from "../../database/disisleri";
-import { egitimQuestions } from "../../database/egitim";
-import { enerjiQuestions } from "../../database/enerji";
-import { genclikQuestions } from "../../database/genclik";
-import { hazineQuestions } from "../../database/hazine";
-import { icisleriQuestions } from "../../database/icisleri";
-import { saglikQuestions } from "../../database/saglik";
-import { sanayiQuestions } from "../../database/sanayi";
-import { savunmaQuestions } from "../../database/savunma";
-import { tarimQuestions } from "../../database/tarim";
-import { ticaretQuestions } from "../../database/ticaret";
-import { ulastirmaQuestions } from "../../database/ulastirma";
+import { justiceQuestions } from "../../database/adalet";
+import { familyQuestions } from "../../database/aile";
+import { workQuestions } from "../../database/calisma";
+import { envQuestions } from "../../database/cevre";
+import { foreignQuestions } from "../../database/disisleri";
+import { eduQuestions } from "../../database/egitim";
+import { energyQuestions } from "../../database/enerji";
+import { youthQuestions } from "../../database/genclik";
+import { treasureQuestions } from "../../database/hazine";
+import { internalQuestions } from "../../database/icisleri";
+import { healthQuestions } from "../../database/saglik";
+import { industryQuestions } from "../../database/sanayi";
+import { defenseQuestions } from "../../database/savunma";
+import { farmQuestions } from "../../database/tarim";
+import { tradeQuestions } from "../../database/ticaret";
+import { transportQuestions } from "../../database/ulastirma";
 import { nonMinisters } from "../../database/nonMinister.js";
-import { turizmQuestions } from "../../database/turizm";
+import { tourismQuestions } from "../../database/turizm";
 import { Question, SetFunctions } from "../types/types";
 
 const convertPhotoToString = (questions: Question[]): Question[] => {
@@ -32,23 +32,23 @@ const SUPPORTED_LANGUAGES = ["en", "tr", "de", "fr", "pt", "zh", "es", "ru"] as 
 type QuestionsByLanguageSource = Record<string, Question[]>;
 
 const QUESTION_SOURCES: QuestionsByLanguageSource[] = [
-    adaletQuestions,
-    aileQuestions,
-    calismaQuestions,
-    cevreQuestions,
-    disisleriQuestions,
-    egitimQuestions,
-    enerjiQuestions,
-    genclikQuestions,
-    hazineQuestions,
-    icisleriQuestions,
-    saglikQuestions,
-    sanayiQuestions,
-    savunmaQuestions,
-    tarimQuestions,
-    ticaretQuestions,
-    ulastirmaQuestions,
-    turizmQuestions,
+    justiceQuestions,
+    familyQuestions,
+    workQuestions,
+    envQuestions,
+    foreignQuestions,
+    eduQuestions,
+    energyQuestions,
+    youthQuestions,
+    treasureQuestions,
+    internalQuestions,
+    healthQuestions,
+    industryQuestions,
+    defenseQuestions,
+    farmQuestions,
+    tradeQuestions,
+    transportQuestions,
+    tourismQuestions,
     nonMinisters,
 ];
 

@@ -1,6 +1,6 @@
 import enerjiBakani from "../../public/ministers/enerji-bakani.webp";
-// 2 soru var
-export const enerjiQuestions = {
+
+export const energyQuestions = {
     tr: [
         {
             id: 60,

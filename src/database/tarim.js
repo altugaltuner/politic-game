@@ -1,6 +1,5 @@
 import tarimBakani from "../../public/ministers/tarim-bakani.webp";
-// 5 soru var
-export const tarimQuestions = {
+export const farmQuestions = {
     tr: [
         {
             id: 130,

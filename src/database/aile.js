@@ -1,6 +1,6 @@
 import aileBakanı from "../../public/ministers/aile-bakani.webp";
-//3 soru var
-export const aileQuestions = {
+
+export const familyQuestions = {
     tr: [
         {
             id: 10,

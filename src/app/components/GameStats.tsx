@@ -16,7 +16,6 @@ import { gameOverMessages, playAgain, daysInOffice, victoryMessage } from "../ex
 import { playDefeatSound, playMetalButtonSound, playRandomBreakingNewsSound, playVictorySoundEffect } from "@/lib/soundEffects";
 import type { GameStatsProps } from "../types/types";
 
-// Component for Game Stats
 export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventShown, lastingEffects, setLastingEffects, agriculture, setAgriculture, infrastructure, setInfrastructure, internalSecurity, setInternalSecurity, international, setInternational, budget, setBudget, publicOpinion, setPublicOpinion, score, setScore }) => {
 
     const [isVisible, setIsVisible] = useState(true);

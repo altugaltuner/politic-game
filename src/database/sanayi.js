@@ -1,6 +1,5 @@
 import sanayiBakani from "../../public/ministers/sanayi-bakani.webp";
-// 4 soru var
-export const sanayiQuestions = {
+export const industryQuestions = {
     tr: [
         {
             id: 110,

@@ -1,6 +1,5 @@
 import saglikBakani from "../../public/ministers/saglik-bakani.webp";
-// 4 soru var
-export const saglikQuestions = {
+export const healthQuestions = {
     tr: [
         {
             id: 100,

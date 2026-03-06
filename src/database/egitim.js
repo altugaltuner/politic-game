@@ -1,6 +1,6 @@
 import egitimBakani from "../../public/ministers/egitim-bakani.webp";
-//4 soru var
-export const egitimQuestions = {
+
+export const eduQuestions = {
     tr: [
         {
             id: 50,

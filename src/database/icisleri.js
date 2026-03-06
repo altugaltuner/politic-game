@@ -1,6 +1,6 @@
 import icisleriBakani from "../../public/ministers/icisleri-bakani.webp";
-// 11 soru var
-export const icisleriQuestions = {
+
+export const internalQuestions = {
     tr: [
         {
             id: 90,
@@ -131,7 +131,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //yeni soru
+        {
             id: 95,
             question: "Eski İçişleri Bakanının ülkeye uyuşturucu soktuğunu ve ticaretini yaptığını tespit ettik. Hala ülkedeyken yakalama kararı çıkartalım mı?",
             answers: [
@@ -154,7 +154,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //yeni soru
+        {
             id: 96,
             question: "Milli Arama Kurtarma Ekibi kurucusu bir televizyon programında seçim kurumumuz YTR'nin seçimlerde hile yaptığını iddia etti.",
             answers: [
@@ -176,7 +176,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //yeni soru
+        {
             id: 97,
             question: "Bekçilere üst arama yetkisi verilmesi gündemde.Bunun güvenliği arttıracağını düşünüyorum ancak son söz hakkı sizin...",
             answers: [
@@ -198,7 +198,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //yeni soru
+        {
             id: 98,
             question: "Halk sokak köpeklerinden şikayetçi. Saldırgan bazı köpekler vatandaşlarımızın ölümüne sebep oluyor. Bu konuda düşünce ayrılıkları mevcut",
             answers: [
@@ -398,7 +398,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //new question
+        {
             id: 95,
             question: "We have determined that the former Minister of Interior smuggled drugs into the country and engaged in trafficking. Should we issue a warrant for his arrest while he is still in the country?",
             answers: [
@@ -421,7 +421,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //new question
+        {
             id: 96,
             question: "The founder of the National Search and Rescue Team claimed on a television program that our election body, YTR, rigged the elections.",
             answers: [
@@ -443,7 +443,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //new question
+        {
             id: 97,
             question: "Granting security guards the authority to conduct searches is on the agenda. I believe this would improve security, but the final decision is yours...",
             answers: [
@@ -465,7 +465,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //new question
+        {
             id: 98,
             question: "The public is complaining about stray dogs. Aggressive dogs are causing the deaths of some citizens. There is a divide in opinions on this matter.",
             answers: [
@@ -665,7 +665,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //neue Frage
+        {
             id: 95,
             question: "Wir haben festgestellt, dass der ehemalige Innenminister Drogen ins Land geschmuggelt und mit ihnen gehandelt hat. Sollen wir einen Haftbefehl gegen ihn erlassen, solange er noch im Land ist?",
             answers: [
@@ -688,7 +688,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //neue Frage
+        {
             id: 96,
             question: "Der Gründer des Nationalen Such- und Rettungsteams behauptete in einer Fernsehsendung, dass unsere Wahlbehörde YTR die Wahlen manipuliert habe.",
             answers: [
@@ -710,7 +710,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //neue Frage
+        {
             id: 97,
             question: "Die Erteilung von Befugnissen für Sicherheitskräfte, Durchsuchungen durchzuführen, steht auf der Tagesordnung. Ich denke, dies würde die Sicherheit verbessern, aber die endgültige Entscheidung liegt bei Ihnen...",
             answers: [
@@ -732,7 +732,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //neue Frage
+        {
             id: 98,
             question: "Die Öffentlichkeit beschwert sich über streunende Hunde. Aggressive Hunde verursachen den Tod einiger Bürger. Zu diesem Thema gibt es unterschiedliche Meinungen.",
             answers: [
@@ -932,7 +932,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //nouvelle question
+        {
             id: 95,
             question: "Nous avons découvert que l'ancien ministre de l'Intérieur introduisait des drogues dans le pays et les trafiquait. Devons-nous émettre un mandat d'arrêt pendant qu'il est encore dans le pays ?",
             answers: [
@@ -955,7 +955,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //nouvelle question
+        {
             id: 96,
             question: "Le fondateur de l'Équipe nationale de recherche et de sauvetage a affirmé lors d'une émission télévisée que notre organisme électoral, le YTR, avait truqué les élections.",
             answers: [
@@ -977,7 +977,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //nouvelle question
+        {
             id: 97,
             question: "L'attribution aux gardiens de la capacité d'effectuer des fouilles est à l'ordre du jour. Je pense que cela améliorerait la sécurité, mais la décision finale vous revient...",
             answers: [
@@ -999,7 +999,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //nouvelle question
+        {
             id: 98,
             question: "Le public se plaint des chiens errants. Certains chiens agressifs causent la mort de citoyens. Les opinions sur cette question sont divisées.",
             answers: [
@@ -1199,7 +1199,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //nova pergunta
+        {
             id: 95,
             question: "Descobrimos que o ex-ministro do Interior contrabandeava drogas para o país e as comercializava. Devemos emitir um mandado de prisão enquanto ele ainda está no país?",
             answers: [
@@ -1222,7 +1222,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //nova pergunta
+        {
             id: 96,
             question: "O fundador da Equipe Nacional de Busca e Resgate afirmou em um programa de televisão que nosso órgão eleitoral, YTR, fraudou as eleições.",
             answers: [
@@ -1244,7 +1244,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //nova pergunta
+        {
             id: 97,
             question: "Está em pauta conceder aos guardas o poder de realizar revistas. Acredito que isso aumentaria a segurança, mas a decisão final é sua...",
             answers: [
@@ -1266,7 +1266,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //nova pergunta
+        {
             id: 98,
             question: "O público está reclamando de cães de rua. Alguns cães agressivos estão causando a morte de cidadãos. Há divergências de opinião sobre este assunto.",
             answers: [
@@ -1466,7 +1466,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //新问题
+        {
             id: 95,
             question: "我们发现前内政部长将毒品走私到国内并进行贩卖。在他还在国内的时候，我们是否应该发布逮捕令？",
             answers: [
@@ -1489,7 +1489,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //新问题
+        {
             id: 96,
             question: "国家救援队的创始人在一档电视节目中声称我们的选举机构 YTR 操纵了选举。",
             answers: [
@@ -1511,7 +1511,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //新问题
+        {
             id: 97,
             question: "正在讨论授予保安进行搜身的权力。我认为这将提高安全性，但最终决定权在您手中...",
             answers: [
@@ -1533,7 +1533,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //新问题
+        {
             id: 98,
             question: "公众对流浪狗提出投诉。一些攻击性的狗导致了公民的死亡。在这个问题上存在分歧。",
             answers: [
@@ -1733,7 +1733,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //nueva pregunta
+        {
             id: 95,
             question: "Hemos descubierto que el exministro del Interior introdujo drogas en el país y las traficó. ¿Deberíamos emitir una orden de arresto mientras aún está en el país?",
             answers: [
@@ -1756,7 +1756,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //nueva pregunta
+        {
             id: 96,
             question: "El fundador del Equipo Nacional de Búsqueda y Rescate afirmó en un programa de televisión que nuestro organismo electoral, YTR, manipuló las elecciones.",
             answers: [
@@ -1778,7 +1778,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //nueva pregunta
+        {
             id: 97,
             question: "Está en la agenda otorgar a los guardias el poder de realizar registros. Creo que esto mejoraría la seguridad, pero la decisión final es suya...",
             answers: [
@@ -1800,7 +1800,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //nueva pregunta
+        {
             id: 98,
             question: "El público se queja de los perros callejeros. Algunos perros agresivos están causando la muerte de ciudadanos. Hay divisiones de opinión sobre este tema.",
             answers: [
@@ -2000,7 +2000,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //новый вопрос
+        {
             id: 95,
             question: "Мы выяснили, что бывший министр внутренних дел ввез наркотики в страну и занимался их торговлей. Должны ли мы выдать ордер на его арест, пока он ещё находится в стране?",
             answers: [
@@ -2023,7 +2023,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //новый вопрос
+        {
             id: 96,
             question: "Основатель Национальной поисково-спасательной команды заявил в телепрограмме, что наша избирательная комиссия YTR сфальсифицировала выборы.",
             answers: [
@@ -2045,7 +2045,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //новый вопрос
+        {
             id: 97,
             question: "На повестке дня стоит вопрос о предоставлении охранникам полномочий на проведение обысков. Я считаю, что это повысит уровень безопасности, но окончательное решение за вами...",
             answers: [
@@ -2067,7 +2067,7 @@ export const icisleriQuestions = {
             photo: icisleriBakani,
             level: 1,
         },
-        { //новый вопрос
+        {
             id: 98,
             question: "Граждане жалуются на бродячих собак. Агрессивные собаки становятся причиной гибели некоторых граждан. По этому вопросу существуют разногласия.",
             answers: [

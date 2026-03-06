@@ -1,6 +1,6 @@
 import calismaBakani from "../../public/ministers/calisma-bakani.webp";
-//4 soru var
-export const calismaQuestions = {
+
+export const workQuestions = {
     tr: [
         {
             id: 20,

@@ -1,6 +1,6 @@
 import cevreBakani from "../../public/ministers/cevre-sehir-bakani.webp";
-// 7 soru var
-export const cevreQuestions = {
+
+export const envQuestions = {
     tr: [
         {
             id: 30,

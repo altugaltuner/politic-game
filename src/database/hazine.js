@@ -1,6 +1,6 @@
 import hazineBakani from "../../public/ministers/hazine-bakani.webp";
-// 4 soru var
-export const hazineQuestions = {
+
+export const treasureQuestions = {
     tr: [
         {
             id: 80,

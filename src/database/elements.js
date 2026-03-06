@@ -880,7 +880,7 @@ export const elements = [
             pt: "Refugiados Criminosos Convidados para o País",
             ru: "Преступные беженцы приглашены в страну"
         },
-        photo: s400, //degistir
+        photo: s400,
         description: {
             tr: "Almanya başbakanı Merkel ile yapılan anlaşma sonucunda ülkeye sabıkalı mültecilerin kabul edilmesi kararlaştırıldı. Ülkede iç güvenlik endişeleri artıyor.",
             en: "As a result of the agreement with German Chancellor Merkel, it was decided to accept criminal refugees into the country. Internal security concerns are increasing.",

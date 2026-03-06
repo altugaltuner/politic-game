@@ -1,6 +1,6 @@
 import genclikBakani from "../../public/ministers/genclik-bakani.webp";
-// 1 soru var
-export const genclikQuestions = {
+
+export const youthQuestions = {
     tr: [
         {
             id: 70,

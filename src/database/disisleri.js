@@ -1,6 +1,6 @@
 import disisleriBakani from "../../public/ministers/disisleri-bakani.webp";
-// 3 soru var
-export const disisleriQuestions = {
+
+export const foreignQuestions = {
     tr: [
         {
             id: 40,

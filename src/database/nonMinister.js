@@ -1,20 +1,19 @@
 import developer from "../../public/non-ministers/developer.webp";
 import elonMusk from "../../public/non-ministers/elon-musk.webp";
-import emekli from "../../public/non-ministers/emekli.webp";
-import genelkurmay from "../../public/non-ministers/genelkurmay.webp";
+import retiredCitizen from "../../public/non-ministers/emekli.webp";
+import general from "../../public/non-ministers/genelkurmay.webp";
 import putin from "../../public/non-ministers/putin.webp";
-// import reporter from "../../public/non-ministers/reporter.webp";
 import trump from "../../public/non-ministers/trump.webp";
-// import tuik from "../../public/non-ministers/TUIK.webp";
 import nebati from "../../public/non-ministers/nureddin-nebati.webp";
-import rtukBaskan from "../../public/non-ministers/rtuk-baskani.webp";
+import tvCensor from "../../public/non-ministers/rtuk-baskani.webp";
 import liamNeeson from "../../public/non-ministers/liam-neeson.webp";
 import chiefAdvisor from "../../public/non-ministers/chief-advisor.webp";
-import czechElci from "../../public/non-ministers/cek-buyukelci.webp";
+import czechEnvoy from "../../public/non-ministers/cek-buyukelci.webp";
 import islamicLeader from "../../public/non-ministers/islamic-cult-leader.webp";
 import vasilLevski from "../../public/non-ministers/vasil-levski.webp";
 import merkel from "../../public/non-ministers/angela-merkel.webp";
-//23 soru
+import dora from "../../public/non-ministers/dora.webp";
+
 export const nonMinisters = {
     tr: [
         {
@@ -87,7 +86,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Emekli Vatandaş",
-            photo: emekli,
+            photo: retiredCitizen,
             level: 2,
         },
         {
@@ -212,7 +211,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Genelkurmay Başkanı",
-            photo: genelkurmay,
+            photo: general,
             level: 2,
         },
         {
@@ -262,7 +261,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Prag Büyükelçisi",
-            photo: czechElci,
+            photo: czechEnvoy,
             level: 2,
         },
         {
@@ -387,32 +386,7 @@ export const nonMinisters = {
                 }
             ],
             title: "KERPAL TV Yöneticisi",
-            photo: elonMusk, // burayı değiş
-            level: 2,
-        },
-        {
-            id: 565,
-            question: "Başkanım, meclisteki toplantılar ve ülkenin yükünü çekmek bize zor geliyor. Maaş arttırımı istiyoruz.",
-            answers: [
-                {
-                    text: "Zammı yapacağım",
-                    effect: {
-                        budget: -20,
-                        publicSupport: +10,
-                        internationalRelations: -20,
-                    },
-                },
-                {
-                    text: "Buna bütçe ayıramam",
-                    effect: {
-                        budget: +20,
-                        publicSupport: -10,
-                        internationalRelations: -10,
-                    },
-                }
-            ],
-            title: "Meclis Milletvekilleri",
-            photo: elonMusk, // burayı değiş
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -487,7 +461,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Eşiniz Dora",
-            photo: chiefAdvisor, //değiştir
+            photo: dora,
             level: 2,
         },
         {
@@ -512,7 +486,7 @@ export const nonMinisters = {
                 }
             ],
             title: "TV Denetleme Kurulu Başkanı",
-            photo: rtukBaskan, //değiştir
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -561,31 +535,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Eşiniz Dora",
-            photo: merkel, //değiş
-            level: 2,
-        },
-        {
-            id: 572,
-            question: "Bilimde ilerlemek adına insan deneylerine izin vermenizi sizden istiyorum. Bu, ülkemizin bilim dünyasında rakiplerimizin önüne geçmesini sağlar.",
-            answers: [
-                {
-                    text: "İnsanlık dışı, izin veremem",
-                    effect: {
-                        publicSupport: +10,
-                        infrastructureAndEnvironment: -15,
-                    },
-                },
-                {
-                    text: "Bilim adına yapılacaksa olabilir",
-                    effect: {
-                        infrastructureAndEnvironment: +20,
-                        publicSupport: -30,
-                        internationalRelations: -30,
-                    },
-                }
-            ],
-            title: "Kimya Profesörü Victoria",
-            photo: merkel, //değiş
+            photo: dora,
             level: 2,
         },
     ],
@@ -660,7 +610,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Retired Citizen",
-            photo: emekli,
+            photo: retiredCitizen,
             level: 2,
         },
         {
@@ -785,7 +735,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Chief of General Staff",
-            photo: genelkurmay,
+            photo: general,
             level: 2,
         },
         {
@@ -835,7 +785,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Ambassador to Prague",
-            photo: czechElci,
+            photo: czechEnvoy,
             level: 2,
         },
         {
@@ -960,57 +910,7 @@ export const nonMinisters = {
                 }
             ],
             title: "KERPAL TV Executive",
-            photo: elonMusk, // burayı değiş
-            level: 2,
-        },
-        {
-            id: 565,
-            question: "Mr. President, attending parliamentary meetings and bearing the country’s burden is becoming difficult for us. We want a salary increase.",
-            answers: [
-                {
-                    text: "I will approve the raise.",
-                    effect: {
-                        budget: -20,
-                        publicSupport: +10,
-                        internationalRelations: -20,
-                    },
-                },
-                {
-                    text: "We cannot allocate a budget for this.",
-                    effect: {
-                        budget: +20,
-                        publicSupport: -10,
-                        internationalRelations: -10,
-                    },
-                }
-            ],
-            title: "Members of Parliament",
-            photo: elonMusk, // burayı değiş
-            level: 2,
-        },
-        {
-            id: 565,
-            question: "Mr. President, attending parliamentary meetings and bearing the country’s burden is becoming difficult for us. We want a salary increase.",
-            answers: [
-                {
-                    text: "I will approve the raise.",
-                    effect: {
-                        budget: -20,
-                        publicSupport: +10,
-                        internationalRelations: -20,
-                    },
-                },
-                {
-                    text: "We cannot allocate a budget for this.",
-                    effect: {
-                        budget: +20,
-                        publicSupport: -10,
-                        internationalRelations: -10,
-                    },
-                }
-            ],
-            title: "Members of Parliament",
-            photo: elonMusk, // burayı değiş
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -1085,7 +985,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Your Wife Dora",
-            photo: chiefAdvisor, //değiştir
+            photo: dora,
             level: 2,
         },
         {
@@ -1110,7 +1010,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Head of the TV Regulatory Authority",
-            photo: rtukBaskan, //değiştir
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -1159,35 +1059,9 @@ export const nonMinisters = {
                 }
             ],
             title: "Your Spouse Dora",
-            photo: putin, //değiş
+            photo: dora,
             level: 2,
         },
-        {
-            id: 572,
-            question: "I ask you to allow human experiments in the name of scientific progress. This will help our country surpass our competitors in the scientific world.",
-            answers: [
-                {
-                    text: "Inhumane, I cannot allow it",
-                    effect: {
-                        publicSupport: +10,
-                        infrastructureAndEnvironment: -15,
-                    },
-                },
-                {
-                    text: "If it’s for the sake of science, it might be acceptable",
-                    effect: {
-                        infrastructureAndEnvironment: +20,
-                        publicSupport: -30,
-                        internationalRelations: -30,
-                    },
-                }
-            ],
-            title: "Chemistry Professor Victoria",
-            photo: putin, //değiş
-            level: 2,
-        }
-
-
     ],
     de: [
         {
@@ -1260,7 +1134,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Rentner",
-            photo: emekli,
+            photo: retiredCitizen,
             level: 2,
         },
         {
@@ -1385,10 +1259,10 @@ export const nonMinisters = {
                 }
             ],
             title: "Generalstabschef",
-            photo: genelkurmay,
+            photo: general,
             level: 2,
         },
-        { //yeni
+        {
             id: 558,
             question: "Herr Präsident, der Vorsitzende der größten Oppositionspartei hat im Parlament schlecht über Sie gesprochen und Sie einen Dieb genannt.",
             answers: [
@@ -1413,7 +1287,7 @@ export const nonMinisters = {
             photo: chiefAdvisor,
             level: 2,
         },
-        { //yeni
+        {
             id: 559,
             question: "Wir sind besorgt über die Flüchtlinge in Ihrem Land und Ihre Wirtschaft. Einige Ihrer Studenten wurden an Schulen hier angenommen, aber wir werden keine Visa ausstellen.",
             answers: [
@@ -1435,10 +1309,10 @@ export const nonMinisters = {
                 }
             ],
             title: "Botschafter in Prag",
-            photo: czechElci,
+            photo: czechEnvoy,
             level: 2,
         },
-        { //yeni
+        {
             id: 560,
             question: "Herr Präsident, der ehemalige Premierminister Relani, mit dem Sie zusammengearbeitet haben, droht, alles über Sie preiszugeben.",
             answers: [
@@ -1463,7 +1337,7 @@ export const nonMinisters = {
             photo: chiefAdvisor,
             level: 2,
         },
-        { //yeni
+        {
             id: 561,
             question: "Hallo, Herr Präsident. Wir möchten einige Ketzer, die in unserer Region aktiv sind, bestrafen. Ich rate Ihnen, sich nicht einzumischen.",
             answers: [
@@ -1560,57 +1434,7 @@ export const nonMinisters = {
                 }
             ],
             title: "KERPAL-TV-Manager",
-            photo: elonMusk, // burayı değiş
-            level: 2,
-        },
-        {
-            id: 565,
-            question: "Herr Präsident, die Teilnahme an den Parlamentssitzungen und das Tragen der Last des Landes fällt uns schwer. Wir möchten eine Gehaltserhöhung.",
-            answers: [
-                {
-                    text: "Ich werde die Erhöhung genehmigen.",
-                    effect: {
-                        budget: -20,
-                        publicSupport: +10,
-                        internationalRelations: -20,
-                    },
-                },
-                {
-                    text: "Dafür können wir kein Budget bereitstellen.",
-                    effect: {
-                        budget: +20,
-                        publicSupport: -10,
-                        internationalRelations: -10,
-                    },
-                }
-            ],
-            title: "Abgeordnete des Parlaments",
-            photo: elonMusk, // burayı değiş
-            level: 2,
-        },
-        {
-            id: 565,
-            question: "Herr Präsident, die Teilnahme an den Parlamentssitzungen und das Tragen der Last des Landes fällt uns schwer. Wir möchten eine Gehaltserhöhung.",
-            answers: [
-                {
-                    text: "Ich werde die Erhöhung genehmigen.",
-                    effect: {
-                        budget: -20,
-                        publicSupport: +10,
-                        internationalRelations: -20,
-                    },
-                },
-                {
-                    text: "Dafür können wir kein Budget bereitstellen.",
-                    effect: {
-                        budget: +20,
-                        publicSupport: -10,
-                        internationalRelations: -10,
-                    },
-                }
-            ],
-            title: "Abgeordnete des Parlaments",
-            photo: elonMusk, // burayı değiş
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -1685,7 +1509,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Ihre Frau Dora",
-            photo: chiefAdvisor, //değiştir
+            photo: dora,
             level: 2,
         },
         {
@@ -1710,7 +1534,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Vorsitzender der TV-Aufsichtsbehörde",
-            photo: rtukBaskan,
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -1759,36 +1583,9 @@ export const nonMinisters = {
                 }
             ],
             title: "Ihre Ehefrau Dora",
-            photo: putin, //değiş
+            photo: dora,
             level: 2,
         },
-        {
-            id: 572,
-            question: "Ich bitte Sie, menschliche Experimente im Namen des wissenschaftlichen Fortschritts zu erlauben. Dies wird unserem Land helfen, unsere Konkurrenten in der Wissenschaftswelt zu übertreffen.",
-            answers: [
-                {
-                    text: "Unmenschlich, ich kann es nicht erlauben",
-                    effect: {
-                        publicSupport: +10,
-                        infrastructureAndEnvironment: -15,
-                    },
-                },
-                {
-                    text: "Wenn es im Namen der Wissenschaft ist, könnte es akzeptabel sein",
-                    effect: {
-                        infrastructureAndEnvironment: +20,
-                        publicSupport: -30,
-                        internationalRelations: -30,
-                    },
-                }
-            ],
-            title: "Chemieprofessorin Victoria",
-            photo: putin, //değiş
-            level: 2,
-        }
-
-
-
     ],
     fr: [
         {
@@ -1861,7 +1658,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Citoyen Retraité",
-            photo: emekli,
+            photo: retiredCitizen,
             level: 2,
         },
         {
@@ -1986,10 +1783,10 @@ export const nonMinisters = {
                 }
             ],
             title: "Chef d'État-Major Général",
-            photo: genelkurmay,
+            photo: general,
             level: 2,
         },
-        { //yeni
+        {
             id: 558,
             question: "Monsieur le Président, le chef du principal parti d'opposition a mal parlé de vous au Parlement et vous a traité de voleur.",
             answers: [
@@ -2014,7 +1811,7 @@ export const nonMinisters = {
             photo: chiefAdvisor,
             level: 2,
         },
-        { //yeni
+        {
             id: 559,
             question: "Nous sommes préoccupés par les réfugiés dans votre pays et votre économie. Certains de vos étudiants ont été acceptés dans des écoles ici, mais nous ne délivrerons pas de visas.",
             answers: [
@@ -2036,7 +1833,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Ambassadeur à Prague",
-            photo: czechElci,
+            photo: czechEnvoy,
             level: 2,
         },
         {
@@ -2161,57 +1958,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Directeur de KERPAL TV",
-            photo: elonMusk, // burayı değiş
-            level: 2,
-        },
-        {
-            id: 565,
-            question: "Monsieur le Président, assister aux réunions parlementaires et porter le fardeau du pays devient difficile pour nous. Nous voulons une augmentation de salaire.",
-            answers: [
-                {
-                    text: "J’approuverai l’augmentation.",
-                    effect: {
-                        budget: -20,
-                        publicSupport: +10,
-                        internationalRelations: -20,
-                    },
-                },
-                {
-                    text: "Nous ne pouvons pas allouer de budget à cela.",
-                    effect: {
-                        budget: +20,
-                        publicSupport: -10,
-                        internationalRelations: -10,
-                    },
-                }
-            ],
-            title: "Membres du Parlement",
-            photo: elonMusk, // burayı değiş
-            level: 2,
-        },
-        {
-            id: 565,
-            question: "Monsieur le Président, assister aux réunions parlementaires et porter le fardeau du pays devient difficile pour nous. Nous voulons une augmentation de salaire.",
-            answers: [
-                {
-                    text: "J’approuverai l’augmentation.",
-                    effect: {
-                        budget: -20,
-                        publicSupport: +10,
-                        internationalRelations: -20,
-                    },
-                },
-                {
-                    text: "Nous ne pouvons pas allouer de budget à cela.",
-                    effect: {
-                        budget: +20,
-                        publicSupport: -10,
-                        internationalRelations: -10,
-                    },
-                }
-            ],
-            title: "Membres du Parlement",
-            photo: elonMusk, // burayı değiş
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -2286,7 +2033,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Votre épouse Dora",
-            photo: chiefAdvisor, //değiştir
+            photo: dora,
             level: 2,
         },
         {
@@ -2311,7 +2058,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Président de l’Autorité de Régulation de la Télévision",
-            photo: rtukBaskan,
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -2360,35 +2107,9 @@ export const nonMinisters = {
                 }
             ],
             title: "Votre épouse Dora",
-            photo: putin, //değiş
+            photo: dora,
             level: 2,
         },
-        {
-            id: 572,
-            question: "Je vous demande d'autoriser des expériences humaines au nom du progrès scientifique. Cela aidera notre pays à dépasser nos concurrents dans le monde scientifique.",
-            answers: [
-                {
-                    text: "Inhumain, je ne peux pas l'autoriser",
-                    effect: {
-                        publicSupport: +10,
-                        infrastructureAndEnvironment: -15,
-                    },
-                },
-                {
-                    text: "Si c'est au nom de la science, cela pourrait être acceptable",
-                    effect: {
-                        infrastructureAndEnvironment: +20,
-                        publicSupport: -30,
-                        internationalRelations: -30,
-                    },
-                }
-            ],
-            title: "Professeure de chimie Victoria",
-            photo: putin, //değiş
-            level: 2,
-        }
-
-
     ],
     pt: [
         {
@@ -2461,7 +2182,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Cidadão Aposentado",
-            photo: emekli,
+            photo: retiredCitizen,
             level: 2,
         },
         {
@@ -2586,10 +2307,10 @@ export const nonMinisters = {
                 }
             ],
             title: "Chefe do Estado-Maior General",
-            photo: genelkurmay,
+            photo: general,
             level: 2,
         },
-        { //yeni
+        {
             id: 558,
             question: "Senhor Presidente, o líder do principal partido de oposição falou mal de você no parlamento e chamou você de ladrão.",
             answers: [
@@ -2614,7 +2335,7 @@ export const nonMinisters = {
             photo: chiefAdvisor,
             level: 2,
         },
-        { //yeni
+        {
             id: 559,
             question: "Estamos preocupados com os refugiados no seu país e com a sua economia. Alguns dos seus estudantes foram aceitos em escolas aqui, mas não emitiremos vistos.",
             answers: [
@@ -2636,7 +2357,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Embaixador em Praga",
-            photo: czechElci,
+            photo: czechEnvoy,
             level: 2,
         },
         {
@@ -2761,32 +2482,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Diretor da KERPAL TV",
-            photo: elonMusk, // burayı değiş
-            level: 2,
-        },
-        {
-            id: 565,
-            question: "Senhor Presidente, participar das reuniões parlamentares e carregar o peso do país está se tornando difícil para nós. Queremos um aumento salarial.",
-            answers: [
-                {
-                    text: "Vou aprovar o aumento.",
-                    effect: {
-                        budget: -20,
-                        publicSupport: +10,
-                        internationalRelations: -20,
-                    },
-                },
-                {
-                    text: "Não podemos alocar orçamento para isso.",
-                    effect: {
-                        budget: +20,
-                        publicSupport: -10,
-                        internationalRelations: -10,
-                    },
-                }
-            ],
-            title: "Membros do Parlamento",
-            photo: elonMusk, // burayı değiş
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -2861,7 +2557,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Sua Esposa Dora",
-            photo: chiefAdvisor, //değiştir
+            photo: dora,
             level: 2,
         },
         {
@@ -2886,7 +2582,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Chefe da Autoridade Reguladora de TV",
-            photo: rtukBaskan,
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -2935,35 +2631,9 @@ export const nonMinisters = {
                 }
             ],
             title: "Sua esposa Dora",
-            photo: putin, //değiş
+            photo: dora,
             level: 2,
         },
-        {
-            id: 572,
-            question: "Peço que permita experimentos humanos em nome do progresso científico. Isso ajudará nosso país a superar nossos concorrentes no mundo científico.",
-            answers: [
-                {
-                    text: "Desumano, não posso permitir",
-                    effect: {
-                        publicSupport: +10,
-                        infrastructureAndEnvironment: -15,
-                    },
-                },
-                {
-                    text: "Se for em nome da ciência, pode ser aceitável",
-                    effect: {
-                        infrastructureAndEnvironment: +20,
-                        publicSupport: -30,
-                        internationalRelations: -30,
-                    },
-                }
-            ],
-            title: "Professora de Química Victoria",
-            photo: putin, //değiş
-            level: 2,
-        }
-
-
     ],
     zh: [
         {
@@ -3036,7 +2706,7 @@ export const nonMinisters = {
                 }
             ],
             title: "退休公民",
-            photo: emekli,
+            photo: retiredCitizen,
             level: 2,
         },
         {
@@ -3161,10 +2831,10 @@ export const nonMinisters = {
                 }
             ],
             title: "总参谋长",
-            photo: genelkurmay,
+            photo: general,
             level: 2,
         },
-        { //yeni
+        {
             id: 558,
             question: "总统先生，主要反对党领袖在议会中说您坏话，称您为小偷。",
             answers: [
@@ -3189,7 +2859,7 @@ export const nonMinisters = {
             photo: chiefAdvisor,
             level: 2,
         },
-        { //yeni
+        {
             id: 559,
             question: "我们对贵国的难民和经济感到担忧。一些贵国的学生已被本地学校录取，但我们不会发放签证。",
             answers: [
@@ -3211,7 +2881,7 @@ export const nonMinisters = {
                 }
             ],
             title: "驻布拉格大使",
-            photo: czechElci,
+            photo: czechEnvoy,
             level: 2,
         },
         {
@@ -3336,32 +3006,7 @@ export const nonMinisters = {
                 }
             ],
             title: "KERPAL电视台主管",
-            photo: elonMusk, // burayı değiş
-            level: 2,
-        },
-        {
-            id: 565,
-            question: "总统先生，参加议会会议和承担国家重担对我们来说变得越来越困难。我们想要加薪。",
-            answers: [
-                {
-                    text: "我会批准加薪。",
-                    effect: {
-                        budget: -20,
-                        publicSupport: +10,
-                        internationalRelations: -20,
-                    },
-                },
-                {
-                    text: "我们无法为此分配预算。",
-                    effect: {
-                        budget: +20,
-                        publicSupport: -10,
-                        internationalRelations: -10,
-                    },
-                }
-            ],
-            title: "议会议员",
-            photo: elonMusk, // burayı değiş
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -3386,7 +3031,7 @@ export const nonMinisters = {
                 }
             ],
             title: "议会议员",
-            photo: elonMusk, // burayı değiş
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -3461,7 +3106,7 @@ export const nonMinisters = {
                 }
             ],
             title: "您的妻子多拉",
-            photo: chiefAdvisor, //değiştir
+            photo: dora,
             level: 2,
         },
         {
@@ -3486,7 +3131,7 @@ export const nonMinisters = {
                 }
             ],
             title: "电视监管局局长",
-            photo: rtukBaskan,
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -3535,34 +3180,9 @@ export const nonMinisters = {
                 }
             ],
             title: "你的妻子多拉",
-            photo: putin, //değiş
+            photo: dora,
             level: 2,
         },
-        {
-            id: 572,
-            question: "我请求您以科学进步的名义允许人体实验。这将帮助我们的国家在科学界超越竞争对手。",
-            answers: [
-                {
-                    text: "不人道，我不能允许",
-                    effect: {
-                        publicSupport: +10,
-                        infrastructureAndEnvironment: -15,
-                    },
-                },
-                {
-                    text: "如果是为了科学，可以接受",
-                    effect: {
-                        infrastructureAndEnvironment: +20,
-                        publicSupport: -30,
-                        internationalRelations: -30,
-                    },
-                }
-            ],
-            title: "化学教授维多利亚",
-            photo: putin, //değiş
-            level: 2,
-        }
-
     ],
     es: [
         {
@@ -3635,7 +3255,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Ciudadano Jubilado",
-            photo: emekli,
+            photo: retiredCitizen,
             level: 2,
         },
         {
@@ -3760,7 +3380,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Jefe del Estado Mayor",
-            photo: genelkurmay,
+            photo: general,
             level: 2,
         },
         {
@@ -3788,7 +3408,7 @@ export const nonMinisters = {
             photo: chiefAdvisor,
             level: 2,
         },
-        { //yeni
+        {
             id: 559,
             question: "Estamos preocupados por los refugiados en su país y su economía. Algunos de sus estudiantes han sido aceptados en escuelas aquí, pero no emitiremos visas.",
             answers: [
@@ -3810,7 +3430,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Embajador en Praga",
-            photo: czechElci,
+            photo: czechEnvoy,
             level: 2,
         },
         {
@@ -3935,32 +3555,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Director de KERPAL TV",
-            photo: elonMusk, // burayı değiş
-            level: 2,
-        },
-        {
-            id: 565,
-            question: "Señor Presidente, asistir a las reuniones parlamentarias y soportar la carga del país se está volviendo difícil para nosotros. Queremos un aumento salarial.",
-            answers: [
-                {
-                    text: "Aprobaré el aumento.",
-                    effect: {
-                        budget: -20,
-                        publicSupport: +10,
-                        internationalRelations: -20,
-                    },
-                },
-                {
-                    text: "No podemos asignar presupuesto para esto.",
-                    effect: {
-                        budget: +20,
-                        publicSupport: -10,
-                        internationalRelations: -10,
-                    },
-                }
-            ],
-            title: "Miembros del Parlamento",
-            photo: elonMusk, // burayı değiş
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -4035,7 +3630,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Tu Esposa Dora",
-            photo: chiefAdvisor, //değiştir
+            photo: dora,
             level: 2,
         },
         {
@@ -4060,7 +3655,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Presidente de la Autoridad Reguladora de TV",
-            photo: rtukBaskan, //değiştir
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -4109,36 +3704,9 @@ export const nonMinisters = {
                 }
             ],
             title: "Tu esposa Dora",
-            photo: putin, //değiş
-            level: 2,
-        },
-        {
-            id: 572,
-            question: "Le pido que permita experimentos humanos en nombre del progreso científico. Esto ayudará a nuestro país a superar a nuestros competidores en el mundo científico.",
-            answers: [
-                {
-                    text: "Inhumano, no puedo permitirlo",
-                    effect: {
-                        publicSupport: +10,
-                        infrastructureAndEnvironment: -15,
-                    },
-                },
-                {
-                    text: "Si es por el bien de la ciencia, podría ser aceptable",
-                    effect: {
-                        infrastructureAndEnvironment: +20,
-                        publicSupport: -30,
-                        internationalRelations: -30,
-                    },
-                }
-            ],
-            title: "Profesora de Química Victoria",
-            photo: putin, //değiş
+            photo: dora,
             level: 2,
         }
-
-
-
     ],
     ru: [
         {
@@ -4211,7 +3779,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Пенсионер",
-            photo: emekli,
+            photo: retiredCitizen,
             level: 2,
         },
         {
@@ -4336,7 +3904,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Начальник Генерального штаба",
-            photo: genelkurmay,
+            photo: general,
             level: 2,
         },
         {
@@ -4364,7 +3932,7 @@ export const nonMinisters = {
             photo: chiefAdvisor,
             level: 2,
         },
-        { //yeni
+        {
             id: 559,
             question: "Мы обеспокоены беженцами в вашей стране и вашей экономикой. Некоторые из ваших студентов были приняты в наши школы, но мы не будем выдавать визы.",
             answers: [
@@ -4386,7 +3954,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Посол в Праге",
-            photo: czechElci,
+            photo: czechEnvoy,
             level: 2,
         },
         {
@@ -4511,32 +4079,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Руководитель KERPAL TV",
-            photo: elonMusk, // burayı değiş
-            level: 2,
-        },
-        {
-            id: 565,
-            question: "Господин Президент, участие в заседаниях парламента и несение бремени страны становится для нас затруднительным. Мы хотим повышения зарплаты.",
-            answers: [
-                {
-                    text: "Я одобрю повышение.",
-                    effect: {
-                        budget: -20,
-                        publicSupport: +10,
-                        internationalRelations: -20,
-                    },
-                },
-                {
-                    text: "Мы не можем выделить на это бюджет.",
-                    effect: {
-                        budget: +20,
-                        publicSupport: -10,
-                        internationalRelations: -10,
-                    },
-                }
-            ],
-            title: "Члены парламента",
-            photo: elonMusk, // burayı değiş
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -4611,7 +4154,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Ваша жена Дора",
-            photo: chiefAdvisor, //değiştir
+            photo: dora,
             level: 2,
         },
         {
@@ -4636,7 +4179,7 @@ export const nonMinisters = {
                 }
             ],
             title: "Глава Управления по регулированию телевидения",
-            photo: rtukBaskan, //değiştir
+            photo: tvCensor,
             level: 2,
         },
         {
@@ -4685,33 +4228,8 @@ export const nonMinisters = {
                 }
             ],
             title: "Ваша супруга Дора",
-            photo: putin, //değiş
+            photo: dora,
             level: 2,
         },
-        {
-            id: 572,
-            question: "Я прошу вас разрешить эксперименты на людях во имя научного прогресса. Это поможет нашей стране обогнать конкурентов в научном мире.",
-            answers: [
-                {
-                    text: "Это бесчеловечно, я не могу этого позволить",
-                    effect: {
-                        publicSupport: +10,
-                        infrastructureAndEnvironment: -15,
-                    },
-                },
-                {
-                    text: "Если это ради науки, это может быть допустимо",
-                    effect: {
-                        infrastructureAndEnvironment: +20,
-                        publicSupport: -30,
-                        internationalRelations: -30,
-                    },
-                }
-            ],
-            title: "Профессор химии Виктория",
-            photo: putin, //değiş
-            level: 2,
-        }
-
     ],
 };

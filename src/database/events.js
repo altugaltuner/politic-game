@@ -1,8 +1,6 @@
-// toplamda event sayısı: 47
-
 import arabMoney from "../../public/events/arab-money.webp";
 import angryPolitician from "../../public/events/angry-politician-3.webp";
-import alperGezeravcı from "../../public/events/alper-gezeravci.webp";
+import astronaut from "../../public/events/alper-gezeravci.webp";
 import dataHack from "../../public/events/data-hack.webp";
 import electricalShortcut from "../../public/events/electrical-shortcut.webp";
 import foodCrisis from "../../public/events/food-crisis.webp";
@@ -17,11 +15,11 @@ import peopleProtesting from "../../public/events/people-protesting.webp";
 import shakiraConcert from "../../public/events/shakira-concert.webp";
 import streetElectricalDeath from "../../public/events/street-electrical-death.webp";
 import terroristBusted from "../../public/events/terrorists-busted.webp";
-import tosuncuk from "../../public/events/tosuncuk.webp";
+import scammer from "../../public/events/tosuncuk.webp";
 import waterPipesExploded from "../../public/events/water-pipes-exploded.webp";
 import womenAbuseOnstreet from "../../public/events/women-abuse-onstreet.webp";
 import helaviyeIntervene from "../../public/events/syria-intervention.webp";
-import tbmmFight from "../../public/events/tbmm-fight.webp";
+import councilBrawl from "../../public/events/tbmm-fight.webp";
 import peopleLeavingCountry from "../../public/events/people-leaving-country.webp";
 import droughtLake from "../../public/events/drought-lake.webp";
 import forestFire from "../../public/events/forest-fire-disaster.webp";
@@ -412,7 +410,7 @@ export const events = [
     },
     {
         id: 514,
-        photo: tosuncuk,
+        photo: scammer,
         title: {
             tr: "Gıda Bank Skandalı: Halk Dolandırıldı!",
             en: "Food Bank Scandal: People Defrauded!",
@@ -695,7 +693,7 @@ export const events = [
     },
     {
         id: 524,
-        photo: alperGezeravcı,
+        photo: astronaut,
         title: {
             tr: "Uzaydaki ilk Yerli Astronot!",
             en: "First Local Astronaut in Space!",
@@ -780,7 +778,7 @@ export const events = [
     },
     {
         id: 527,
-        photo: tbmmFight,
+        photo: councilBrawl,
         title: {
             tr: "Meclis Birbirine Girdi!",
             en: "Parliament in Chaos!",

@@ -1,6 +1,5 @@
 import savunmaBakani from "../../public/ministers/savunma-bakani.webp";
-// 3 soru var
-export const savunmaQuestions = {
+export const defenseQuestions = {
     tr: [
         {
             id: 120,

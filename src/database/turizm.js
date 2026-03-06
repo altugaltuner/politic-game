@@ -1,6 +1,6 @@
 import turizmBakani from "../../public/ministers/turizm-bakani.webp";
-//5 soru var
-export const turizmQuestions = {
+
+export const tourismQuestions = {
     tr: [
         {
             id: 160,

@@ -1,6 +1,5 @@
 import ticaretBakani from "../../public/ministers/ticaret-bakani.webp";
-// 7 soru var
-export const ticaretQuestions = {
+export const tradeQuestions = {
     tr: [
         {
             id: 140,
@@ -134,7 +133,7 @@ export const ticaretQuestions = {
                     text: "Legal kumarhaneler kurulmalı",
                     effect: {
                         infrastructureAndEnvironment: +20,
-                        budget: -15, // long term effect artı olucak
+                        budget: -15,
                         internalSecurity: +15,
                     }
                 },
@@ -152,7 +151,7 @@ export const ticaretQuestions = {
             level: 3,
         },
         {
-            id: 146, //çevir
+            id: 146,
             question: "Avrupaya ithal ettiğimiz portakalları bize, içlerinde %5 oranında kanserojen madde bulunduğu için geri iade ettiler. Elimizde tonlarca portakal var.",
             answers: [
                 {
@@ -308,7 +307,7 @@ export const ticaretQuestions = {
                     text: "Establish legal casinos",
                     effect: {
                         infrastructureAndEnvironment: +20,
-                        budget: -15, // long-term effect will be positive
+                        budget: -15,
                         internalSecurity: +15,
                     }
                 },
@@ -482,7 +481,7 @@ export const ticaretQuestions = {
                     text: "Legale Casinos errichten",
                     effect: {
                         infrastructureAndEnvironment: +20,
-                        budget: -15, // langfristig positiver Effekt
+                        budget: -15,
                         internalSecurity: +15,
                     }
                 },
@@ -656,7 +655,7 @@ export const ticaretQuestions = {
                     text: "Établir des casinos légaux",
                     effect: {
                         infrastructureAndEnvironment: +20,
-                        budget: -15, // effet à long terme positif
+                        budget: -15,
                         internalSecurity: +15,
                     }
                 },
@@ -830,7 +829,7 @@ export const ticaretQuestions = {
                     text: "Estabelecer cassinos legais",
                     effect: {
                         infrastructureAndEnvironment: +20,
-                        budget: -15, // efeito positivo a longo prazo
+                        budget: -15,
                         internalSecurity: +15,
                     }
                 },
@@ -1004,7 +1003,7 @@ export const ticaretQuestions = {
                     text: "建立合法赌场",
                     effect: {
                         infrastructureAndEnvironment: +20,
-                        budget: -15, // 长期效应将是积极的
+                        budget: -15,
                         internalSecurity: +15,
                     }
                 },
@@ -1178,7 +1177,7 @@ export const ticaretQuestions = {
                     text: "Establecer casinos legales",
                     effect: {
                         infrastructureAndEnvironment: +20,
-                        budget: -15, // efecto positivo a largo plazo
+                        budget: -15,
                         internalSecurity: +15,
                     }
                 },
@@ -1352,7 +1351,7 @@ export const ticaretQuestions = {
                     text: "Создать легальные казино",
                     effect: {
                         infrastructureAndEnvironment: +20,
-                        budget: -15, // в долгосрочной перспективе эффект будет положительным
+                        budget: -15,
                         internalSecurity: +15,
                     }
                 },
