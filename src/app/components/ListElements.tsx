@@ -39,8 +39,8 @@ const ListElements: React.FC<ListElementsProps> = ({ selectedListIDs, shownEvent
                         <div key={`${item.type}-${item.data.id}`} className={` ${isDarkMode ? 'border-white bg-primary' : 'border-black bg-white'} flex flex-col gap-2 p-2 border-[2px] rounded-xl  mb-3 w-[100%]`}>
                             <h3 className="text-base font-bold">{item.data.title[language]}</h3>
                             <Image
-                                width={1820}
-                                height={1024}
+                                width={768}
+                                height={432}
                                 src={item.data.photo.src}
                                 alt={item.type === "event" ? "event-photo" : "list-photo"}
                                 className="w-full rounded-lg"

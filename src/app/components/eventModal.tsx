@@ -13,7 +13,7 @@ export const EventModal = ({ event, onClose }: { event: Event, onClose: (paramet
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
             <div className="flex flex-col bg-white md:p-5 p-2 rounded-lg w-[90%] max-w-lg items-center gap-3 border-[5px] border-black text-center">
                 <h2 className="text-xl font-bold mb-4 text-black">{event.title[language]}</h2>
-                <Image src={event.photo.src} alt="event-photo" width={1820} height={1024} className="max-w-80 rounded-lg w-[75%]" />
+                <Image src={event.photo.src} alt="event-photo" width={768} height={432} className="max-w-80 rounded-lg w-[75%]" />
                 <p className="text-gray-700">{event.description[language]}</p>
 
                 <div className="mb-4 text-gray-700">

@@ -296,8 +296,8 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
                         {deathStat && (
                             <Image
                                 src={deathImageSrc}
-                                width={1820}
-                                height={1024}
+                                width={768}
+                                height={432}
                                 alt="Oyun Bitti"
                                 className="w-full lg:h-[22rem] rounded-lg"
                                 onError={() => setDeathImageSrc("/images/logo.webp")}
@@ -333,7 +333,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
                     <h1 className={`${isDarkMode ? ' bg-white text-black' : 'text-white bg-primary'} bg-primary py-1 px-2 rounded-md w-[90%] text-md`}>{victoryMessage[language]}
                     </h1>
                     <div className="question-container visible flex flex-col items-center mt-2 gap-2 justify-center">
-                        <Image src={ataturk} alt="Oyun Bitti" className="w-[60%] lg:h-[22rem] rounded-lg" />
+                        <Image src={ataturk} width={768} height={432} alt="Oyun Bitti" className="w-[60%] lg:h-[22rem] rounded-lg" />
                     </div>
                 </div>
                 <div className={`${isDarkMode ? ' bg-[rgb(17,17,17)]  border-white' : 'bg-white border-black'} flex lg:flex-row flex-col justify-center rounded-lg  border-[3px] w-full xl:gap-5 sm:gap-2 gap-1 sm:p-2.5 p-1 items-center`}>
@@ -389,7 +389,7 @@ export const GameStats: React.FC<GameStatsProps> = ({ level, setLevel, onEventSh
                     {currentQuestion.photo && currentQuestion.title && (
                         <div className="question-container visible flex flex-col items-center mt-2 gap-2 justify-center w-[65%]">
                             <Image
-                                width={1820} height={1024}
+                                width={768} height={432}
                                 src={currentQuestionPhotoSrc ?? "/images/fallback.webp"}
                                 alt={currentQuestion?.title ?? "Question image"}
                             />
